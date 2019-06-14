@@ -14,19 +14,93 @@ In order to mint or burn Synthetix needs the user's debt, this requires a call t
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
-Reducing the gas consumption of minting and burning will result in a significantly improved user experience.
+XXX has benn successfully deployed on mainnet but this xxxx is not available yet which makes the feature incomplete
 
 ## Motivation
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
-The gas consumption of a mint/burn transactions is ~2m, this creates a bottleneck in the system as each additional synth adds computational complexity to the transaction. By reading the information from the contract and inserting the precalculated total balances and system debt we can significantly reduce the gas consumption of these calls. This immediately raises a concern of further centralisation, but our view is that given the current implementation of the oracle this does not increase the risks to the system. 
+The change to c ratio and reduction of weeks etc computational complexity to the transaction. By reading the information from the contract and inserting the precalculated total balances Solve xx weeks issue, solve xxxx browser issue, increase security xxxx  
 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
-The technical specification should describe the syntax and semantics of any new feature.
+The technical specification should describe the syntax and semantics of any new feature. New call function xxxxx 
+
+### Solidity
+
+``` /**
+     * @notice The penalty a particular address would incur if its fees were withdrawn right now
+     * @param account The address you want to query the penalty for
+     */
+    function currentPenalty(address account)
+        public
+        view
+        returns (uint)
+    {
+        // Penalty is calculated from ratio % above the target ratio (issuanceRatio).
+        //  0  <  10%:   0% reduction in fees
+        // 10% > above:  100% reduction in fees
+        uint ratio = synthetix.collateralisationRatio(account);
+        uint targetRatio = synthetix.synthetixState().issuanceRatio();
+
+        // no penalty if collateral ratio below target ratio
+        if (ratio < targetRatio) {
+            return 0;
+        }
+
+        // Calculate the threshold for collateral ratio before penalty applies
+        uint ratio_threshold = targetRatio.multiplyDecimal(SafeDecimalMath.unit().add(PENALTY_THRESHOLD));
+
+        // Collateral ratio above threshold attracts max penalty
+        if (ratio > ratio_threshold) {
+            return ONE_HUNDRED_PERCENT;
+        }
+
+        return 0;
+    }
+```
+
+And reverting the transaction if the currentPenalty is larger than 0 (Minters will have to fix their C-ratio to be above the penalty threshold to claim fees)
+
+```     function _claimFees(address claimingAddress, bytes4 currencyKey)
+        internal
+        returns (bool)
+    {
+        require(currentPenalty(claimingAddress) == 0, "C-Ratio below penalty threshold");
+
+        uint availableFees;
+        uint availableRewards;
+        (availableFees, availableRewards) = feesAvailable(claimingAddress, "XDR");
+
+        require(availableFees > 0 || availableRewards > 0, "No fees or rewards available for period, or fees already claimed");
+
+        _setLastFeeWithdrawal(claimingAddress, recentFeePeriods[1].feePeriodId);
+
+        if (availableFees > 0) {
+            // Record the fee payment in our recentFeePeriods
+            uint feesPaid = _recordFeePayment(availableFees);
+
+            // Send them their fees
+            _payFees(claimingAddress, feesPaid, currencyKey);
+
+            emitFeesClaimed(claimingAddress, feesPaid);
+        }
+
+        if (availableRewards > 0) {
+            // Record the reward payment in our recentFeePeriods
+            uint rewardPaid = _recordRewardPayment(availableRewards);
+
+            // Send them their rewards
+            _payRewards(claimingAddress, rewardPaid);
+
+            emitRewardsClaimed(claimingAddress, rewardPaid);
+        }
+
+        return true;
+    }
+```
 
 ## Rationale
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
-The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
+The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.--> tech consultations is feasible xxxxx, strategic supporter of this SIP is xxxx 
 
 ## Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
