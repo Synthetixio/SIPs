@@ -1,7 +1,7 @@
 ---
 sip: <to be assigned>
 title: <secret for now>
-author: Nocturnalsheet (@nocturnalsheet
+author: Nocturnalsheet (@nocturnalsheet)
 discussions-to: https://discord.gg/CDTvjHY
 status: WIP
 created: 2019-06-14
