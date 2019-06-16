@@ -1,6 +1,6 @@
 ---
 sip: <to be assigned>
-title: <Upgrade Delegates Powers>
+title: Upgrade Delegates Powers
 author: Nocturnalsheet (@nocturnalsheet)
 discussions-to: https://discord.gg/CDTvjHY
 status: WIP
