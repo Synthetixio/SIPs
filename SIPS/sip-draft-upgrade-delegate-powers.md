@@ -1,6 +1,6 @@
 ---
 sip: <to be assigned>
-title: Upgrade Delegates Powers
+title: Upgrade Delegate Powers
 author: Nocturnalsheet (@nocturnalsheet)
 discussions-to: https://discord.gg/CDTvjHY
 status: WIP
@@ -18,22 +18,26 @@ What are Delegates and what are their current powers? Delegates are trusted wall
 
 ## Motivation
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
-We expect c-ratio and reduction of rewards period to change from time to time based on governance calls so by adding more powers to delegates, owners can make use their delegates to react to the change in requirements more easily. Using delegates provides higher security as you can now keep your hardware wallet in cold storage with no need to connect it online anymore. We expect delegates to help solve a major pain point for ledger wallet SNX owners with their constant browser support issues as well. More importantly delegates can only claim rewards on behalf only currently and if the owner wallet is in penalty, the delegate will not be able to help fix the penalty and claim for maximum rewards. The upgrade in powers is much needed to complete the potential of what delegates can help their owners to achieve for rewards.   
+We expect c-ratio and reduction of rewards period to change from time to time based on governance calls so by adding more powers to delegates, owners can make use of their delegates in order to react to rewards changes more easily. Using delegates provides higher security as you can now keep your hardware wallet in cold storage with no need to connect it online anymore. We expect delegates to help solve a major pain point for ledger wallet SNX owners with their constant browser support issues as well. More importantly delegates can only claim rewards on behalf currently and if the owner wallet is in penalty, the delegate will not be able to help fix the penalty and claim for maximum rewards. The upgrade in powers is much needed to complete the potential of what delegates can help their owners to achieve for rewards.   
 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 New call functions expected to be added in which allows owner to approve each function individually or all 3 functions of claim, mint and burn with a single contract call
 
 function _mintonbehalf
+
 function _burnonbehlaf
 
 function _approvemintonbehalf
+
 function _approveburnonbehlaf
 
 function _removemintonbehalf
+
 function _removeburnonbehlaf
 
 function _approvealldelegatepowers
+
 function _removealldelegatepowers
 
 ## Rationale
