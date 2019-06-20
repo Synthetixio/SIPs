@@ -14,11 +14,11 @@ This SIP proposes to add the ability for Delegates to mint and burn on their own
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
-What are Delegates and what are their current powers? Delegates are trusted wallet addresses that you can set to claim the weekly rewards on your behalf. This function is already live on SNX mainnet however adoption will likely be limited if Delegates are not able to help their owner in penalty to fix their c ratio before claiming the rewards. By upgrading the current powers of Delegates, we will be able to explore the true potential of this feature and hopefully help SNX minters to have an easier life and less #tech-support issues with their ledger wallet. This will also encourage 3rd party integrations such as building an automated delegate to help claim the weekly rewards
+What are Delegates and what are their current powers? Delegates are trusted wallet addresses that you can set to claim the weekly rewards on your behalf. This function is already live on SNX mainnet however adoption will likely be limited if Delegates are not able to help their owner in penalty to fix their c ratio before claiming the rewards. By upgrading the current powers of Delegates, we will be able to explore the true potential of this feature and hopefully help minters to have an easier life and less #tech-support issues with their ledger wallet. This will also encourage 3rd party integrations such as building an automated delegate to help claim the weekly rewards
 
 ## Motivation
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
-We expect c-ratio and reduction of rewards period to change from time to time based on governance calls so by adding more powers to delegates, owners can make use of their delegates in order to react to rewards changes more easily. Using delegates provides higher security as you can now keep your hardware wallet in cold storage with no need to connect it online anymore. We expect delegates to help solve a major pain point for ledger wallet SNX owners with their constant browser support issues as well. More importantly delegates can only claim rewards on behalf currently and if the owner wallet is in penalty, the delegate will not be able to help fix the penalty and claim for maximum rewards. The upgrade in powers is much needed to complete the potential of what delegates can help their owners to achieve for rewards.   
+We expect c-ratio and reduction of rewards period to change from time to time based on governance calls so by upgrading the powers of delegates, owners can make use of their delegates to help them react to c-ratio and rewards period changes more easily. Using delegates provides higher security as well because now you can keep your hardware wallet in cold storage without needing to connect it online anymore. Also we expect delegates to help solve a major pain point for ledger wallet owners with their constant browser support issues. More importantly delegates currently can only claim rewards on behalf, however if the owner wallet is in penalty, the delegate will not be able to help fix the penalty and claim for maximum rewards. The upgrade in powers is much needed to complete the potential of what delegates can help their owners to achieve for rewards.   
 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
@@ -45,16 +45,18 @@ function _removealldelegatepowers
 
 There should be addtional functions to safeguard against potential rouge delegates after approval hence:
 1) Delegates will only be able to burn sUSD if the owner is in penalty and only up to the point where the penalty will be removed
-2) Delegates will not able to burn sUSD to unlock the owner SNX tokens 
+2) Delegates will not able to burn any sUSD to unlock the owner SNX tokens 
 
-Technical consultation on the feasibility has asked from Clinton & Jackson (SNX core team) and it is feasible 
+Technical consultation has been asked from Clinton & Jackson (SNX core team) and initial feedback is that this is feasible 
 
-Strategic supporter of this SIP is SNX Guardian - gmgh (More Guardians to be added once confirmed with their support)
+Strategic backers for this SIP are SNX Discord Guardians - gmgh & Arthur 
+
+Green light given by Kain to push this SIP forward
 
 Potential uses cases 
-1) SNX in ledger wallet, delegate to your own hot wallet such as metamask wallet to do claim/burn/mint without worrying about broken ledger support on browser ever again
+1) SNX stored in ledger wallet, delegate to your own hot wallet such as metamask wallet to do claim/burn/mint without worrying about broken ledger support on browser ever again
 2) Integration with 3rd party services to automate the weekly rewards claim and ensuring that you can always claim maximum rewards because your delegates can now fix your c ratio if you are in penalty
-3) SNX in hardware wallet, delegate to your own hot wallet such as metamask wallet so that when you are traveling or away from home you will be able to claim rewards easily still
+3) SNX stored in hardware wallet, delegate to your own hot wallet such as metamask/trust wallet so that when you are traveling or away from home you will be still be able to claim for maximum rewards easily
  
 ## Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
