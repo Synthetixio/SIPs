@@ -1,9 +1,9 @@
 ---
-sip: <to be assigned>
+sip: 7
 title: Oracle Trading Locks
-status: WIP
+status: Proposed
 author: Jackson Chan (@jacko125), Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)
-discussions-to: <Discord Channel>
+discussions-to: https://discord.gg/FHPnPk
 
 created: 2019-07-09
 ---
