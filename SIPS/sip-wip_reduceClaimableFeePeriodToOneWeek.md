@@ -9,7 +9,7 @@ created: 2019-07-16
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
-This SIP changes the fee period claimable to one fee period, which aims to address current issues with fee rollover and a providing a clear strategy for stakers in regards to how often they should claim their rewards. Reducing the fee period claimable to one period (currently 1 week) also reduces the complexity and reduces the gas cost of claiming fees for stakers.
+This SIP changes the fee period claimable to one fee period, which aims to address current issues with fees rollover and a providing a clear strategy for stakers in regards to how often they should claim their rewards. Reducing the fee period claimable to one period (currently 1 week) also reduces the complexity and reduces the gas cost of claiming fees for stakers.
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
