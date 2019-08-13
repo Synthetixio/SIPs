@@ -1,10 +1,10 @@
 ---
-sip: <to be assigned>
+sip: 10
 title: Upgrade Delegate Powers
 author: Nocturnalsheet (@nocturnalsheet)
 discussions-to: https://discord.gg/CDTvjHY
-status: WIP
-created: 2019-06-14
+status: Proposed
+created: 2019-07-16
 ---
 
 
