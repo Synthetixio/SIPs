@@ -1,12 +1,10 @@
 ---
-sip: <to be assigned>
+sip: 12
 title: Max gas price for exchange transactions
-status: WIP
-author: Bojan Kiculovic
-discussions-to: <Discord Channel>
-
-created: <2019-06-24>
-requires (*optional): <SIP number(s)>
+status: Proposed
+author: Bojan Kiculovic @kicul88
+discussions-to: https://discordapp.com/invite/kPPKsPb
+created: 2019-06-24
 ---
 
 Max gas price for exchange transactions
