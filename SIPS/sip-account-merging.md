@@ -1,24 +1,18 @@
 ---
 sip: <to be assigned>
-title: <SIP title>
+title: Account Merging
 status: WIP
-author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
-discussions-to: <Discord Channel>
+author: Kain Warwick @kaiynne
+discussions-to: https://discord.gg/CDTvjHY
 
-created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
-requires (*optional): <SIP number(s)>
+created: 2019-08-14
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
-This is the template for SIPs.
-
-Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`.
-
-The title should be 44 characters or less.
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
-If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.
+Staking rewards are currently locked for 52 weeks from the date the are claimed, despite being locked they can still be used as collateral. One of the consequences of this is that a staker who has earned rewards in a wallet is forced to continue to maintain this wallet. The purpose of locking these staking rewards was to ensure that they were not able to be transferred, however, this creates a problem if a wallet is compromised or if a user would like to cycle wallets. This SIP proposes a compromise where a staker can transfer the entire balance of their staking rewards to a different wallet.
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
