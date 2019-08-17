@@ -24,7 +24,7 @@ This functionality is important for several reasons, the first is simple user ex
 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
-A user will be able to sign a transaction assigning the SNX tokens in the Reward Escrow Contract from the signing wallet to a new wallet. The reassignment process will check to ensure that there is no debt against the SNX tokens being transferred. Only the full amount of SNX in escrow will be able to be transferred, partial transfers will not be allowed.
+A user will be able to sign a transaction assigning the SNX tokens in the Reward Escrow Contract from the signing wallet to a new wallet. The reassignment process will check to ensure that there is no debt against the SNX tokens being reassigned. Only the full amount of SNX in escrow will be able to be reassigned, partial reasignments will not be possible.
 
 ## Rationale
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
@@ -36,7 +36,11 @@ Test cases for an implementation are mandatory for SIPs but can be included with
 
 ## Implementation
 <!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
-The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.
+The RewardEscrow contract state will need to be migrated to a new RewardEscrow with the added functionality of allowing users to reassign their escrowed SNX reward balance between wallets that they control. It's completley self service. 
+1. Alice signs a transaction to reassign the Escrowed SNX token balance to a new wallet she ccontrols
+2. Alice signs a transaction to accept the Escrowed SNX token balance reassignment at the new address.
+(optional)3. Alice signs a transaction to confirm the Escrowed SNX token balance reassignment at the new address.
+
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
