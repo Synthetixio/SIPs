@@ -16,13 +16,13 @@ Allows a non-custodial wallet to make trades on behalf of the owner wallet.
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
-Currently only the wallet that also owns the synths can sign synthetix exchange transactions and restricts different trading platforms /automated trading that employee trading strategies from being used on the exchange without exposing the private keys of the wallet that would have ownership of the synths.
+Currently only the wallet that also owns the synths can sign synthetix exchange transactions and restricts different trading platforms /automated trading that employ trading strategies from being used on the exchange without exposing the private keys of the wallet that also have ownership of the synths.
 
 Also allows hardware wallets to utilise an automated service to trade on synthetix exchange as they can delegate a temporary wallet to trade on behalf.
 
 ## Motivation
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
-Currently only the wallet that also owns the synths can sign synthetix exchange transactions and restricts different trading platforms / automated trading that employee trading strategies from being used on the exchange without exposing the private keys of the wallet that would have ownership of the synths.
+Currently only the wallet that also owns the synths can sign synthetix exchange transactions and restricts different trading platforms / automated trading that employ trading strategies from being used on the exchange without exposing the private keys of the wallet that also have ownership of the synths.
 
 Also allows hardware wallets to utilise an automated service to trade on synthetix exchange as they can delegate a temporary wallet to trade on behalf.
 
