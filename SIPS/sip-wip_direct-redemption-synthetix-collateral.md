@@ -38,7 +38,8 @@ As above.
 2. Time delayed liquidation of under-collateralised collateral.
 3. Prevents black swan events where malicious actor quickly dumps a sizeable amount of SNX on CEX’s / exchanges to push the price down suddenly and target liquidation, as there is a time delay for liquidation.
 4. Liquidator able to burn synths in exchange for SNX collateral at discount rate (% of the current value) as a penalty for under-collateralised staker.
-5. Other collateral asset types can have separate liquidation thresholds and time frames for redemption if under-collateralised.
+5. Liquidator pays off debt owed by a minter and minter gets balance of collateral returned minus a discount amount that is rewarded to liquidator.  
+6. Other collateral asset types can have separate liquidation thresholds and time frames for redemption if under-collateralised.
 
 ## Rationale
 
