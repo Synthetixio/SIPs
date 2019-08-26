@@ -15,11 +15,10 @@ This SIP proposes to introduce direct redemption mechanism for synthetix collate
 
 Direct redemption gives holders and issuers of Synthetic synths these benefits:
 
-1. Allows holders of Synths to burn synth debt and redeem underlying collateral.
+1. Allows holders of Synths to burn synth debt on behalf of minter and redeem underlying collateral.
 2. Provides instrinsic value to synth debt for anyone who holds synths as backing it with synthetix collateral that can be redeemed at fair value.
 3. Stakers above the collateral ratio can protect their value in the system by liquidating another staker's collateral that is below the liquidation ratio, to fix network's collateralisation ratio.
 4. Incentive for users to keep network collateral ratio healthy by providing a discount on the liquidated synthetix collateral price.
-5. Multi-asset collateral can be redeemed with synths when collateral below a set ratio.
 
 ## Abstract
 
