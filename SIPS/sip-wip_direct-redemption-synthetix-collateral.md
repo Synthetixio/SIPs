@@ -19,6 +19,7 @@ Direct redemption gives holders and issuers of Synthetic synths these benefits:
 2. Provides instrinsic value to synth debt for anyone who holds synths as backing it with synthetix collateral that can be redeemed at fair value.
 3. Stakers above the collateral ratio can protect their value in the system by liquidating another staker's collateral that is below the liquidation ratio, to fix network's collateralisation ratio.
 4. Incentive for users to keep network collateral ratio healthy by providing a discount on the liquidated synthetix collateral price.
+5. Minters who are being liquidated, can either buy back the synths on market to fix their collateral ratio, or allow others to do so but at a penalty.
 
 ## Abstract
 
