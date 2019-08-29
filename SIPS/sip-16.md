@@ -1,7 +1,7 @@
 ---
-sip:
-title: Improved Upgrades - Utilize Proxies internally
-status: Proposed
+sip: 16
+title: Improved Upgrades - Utilise Proxies internally
+status: WIP
 author: Clinton Ennis (@hav-noms), Jackson Chan (@wacko-jacko)
 discussions-to: https://discord.gg/CDTvjHY
 created: 2019-08-25
