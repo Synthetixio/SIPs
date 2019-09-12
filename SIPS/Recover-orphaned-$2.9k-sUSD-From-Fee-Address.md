@@ -1,7 +1,7 @@
 ---
 sip: <to be assigned>
 title: Recover orphaned $2.9k sUSD from SNX fee address
-author: Nocturnalsheet (@nocturnalsheet)
+author: Nocturnalsheet (@nocturnalsheet), Clinton Ennis (@hav-noms)
 discussions-to: https://discord.gg/CDTvjHY
 status: WIP
 created: 2019-09-02
@@ -33,11 +33,16 @@ The orphaned $2.9k sUSD may be a small amount but it still contributes to the gl
  
 ## Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
-Not required at this stage
+Replicate sending $3K sUSD on KOVAN to the 0xfeefee address and test the recoverFees() function
 
 ## Implementation
 <!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
-Not required at this stage
+Implement a FeePool.recoverFees() public function. 
+- It will burn the balance of sUSD at the 0xfeefee address 
+- then issue the effective value of XDRs at the 0xfeefee address. Essentially the reverse of the _payFees() function.
+- Call the feePaid(XDR, sUSDBalance) function to record the fees to distribute.
+
+
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
