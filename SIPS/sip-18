@@ -1,16 +1,16 @@
 ---
-sip: <to be assigned>
+sip: 18
 title: Recover orphaned $2.9k sUSD from SNX fee address
 author: Nocturnalsheet (@nocturnalsheet), Clinton Ennis (@hav-noms)
 discussions-to: https://discord.gg/CDTvjHY
-status: WIP
+status: Proposed
 created: 2019-09-02
 ---
 
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
-This SIP proposes to recover the $2.9k sUSD that is currently unclaimable by minters in the SNX fee address
+This SIP proposes to recover the $2.9k sUSD that is currently unclaimable by minters in the SNX [fee address](https://etherscan.io/address/0xfeefeefeefeefeefeefeefeefeefeefeefeefeef)
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
@@ -37,7 +37,7 @@ Replicate sending $3K sUSD on KOVAN to the 0xfeefee address and test the recover
 
 ## Implementation
 <!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
-Implement a FeePool.recoverFees() public function. 
+Implement a FeePool.recoverTransferFees() public function. 
 - It will burn the balance of sUSD at the 0xfeefee address 
 - then issue the effective value of XDRs at the 0xfeefee address. Essentially the reverse of the _payFees() function.
 - Call the feePaid(XDR, sUSDBalance) function to record the fees to distribute.
