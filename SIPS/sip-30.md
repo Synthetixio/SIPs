@@ -45,7 +45,7 @@ The ERC223 implementation is causing a significant cumulative gas loss trading t
 
 - Removing ERC223 will no longer show the transfer errors in contract to contract transfers. [etherscan](https://etherscan.io/address/0xe9cf7887b93150d4f2da7dfc6d502b216438f244)
 - This will also save 200K gas per contract to contract transfer. [github code reference](https://github.com/Synthetixio/synthetix/blob/master/contracts/TokenFallbackCaller.sol#L52)
-- Reclaim byte code space for SNX contract deployment
+- Reclaim byte code space for SNX contract deployment by removeing the ERC223 implementation in `ExternStateToken.sol`.
 
 ## Implementation
 
