@@ -25,7 +25,8 @@ The UX for [Mintr](https://mintr.synthetix.io) drove the implementation of ERC22
 - Bloated gas estimations [Issue 243](https://github.com/Synthetixio/synthetix/issues/243)
 - Causing gas loss [Issue 243](https://github.com/Synthetixio/synthetix/issues/243)
 - Perceived errors in SNX and Synth Transfers
-  (https://user-images.githubusercontent.com/799038/69776252-943b6d80-11ef-11ea-97b5-d01f849cff8b.png)
+  ![Although one or more Error Occurred Reverted Contract Execution Completed](https://user-images.githubusercontent.com/799038/69776252-943b6d80-11ef-11ea-97b5-d01f849cff8b.png)
+
   [etherscan](https://etherscan.io/address/0xe9cf7887b93150d4f2da7dfc6d502b216438f244)
 
 There is a lot of Dex activity happening now with SNX [uniswap](https://uniswap.info/token/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f), [Kyber](https://tracker.kyber.network/#/tokens/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f), sUSD [uniswap](https://uniswap.info/token/0x57ab1ec28d129707052df4df418d58a2d46d5f51), [Kyber](https://tracker.kyber.network/#/tokens/0x57ab1ec28d129707052df4df418d58a2d46d5f51) and sETH [uniswap](https://uniswap.info/token/0x5e74c9036fb86bd7ecdcb084a0673efc32ea31cb).
