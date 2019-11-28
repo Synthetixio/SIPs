@@ -2,7 +2,7 @@
 sip: 31
 title: sETH LP rewards contract
 status: WIP
-author: Clinton Ennis (hav-noms), Anton Bukov (k06a) 
+author: Clinton Ennis (@hav-noms), Anton Bukov (@k06a) 
 discussions-to: https://discord.gg/3uJ5rAy
 
 created: 2019-11-04
@@ -19,6 +19,7 @@ Replace the current uniswap sETH Liquidity Provider mechanism with an onchain LP
 ## Abstract
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
+Note: LP = Liquidity Provider
 
 The current deployed solution is inneficient and buggy. There are weekly issues with valid LP's not getting rewards and cheaters getting rewards that should be disqualified. 
 This onchain solution fixes all the issues and can be automated and self serve requiring much less steps than the current solution. 
@@ -63,7 +64,7 @@ The greatest disadvantage to LP's is that they are current automatically sent th
 ## Test Cases
 
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
-
+(https://github.com/k06a/Unipool/blob/master/test/Unipool.js)
 
 
 ## Implementation
