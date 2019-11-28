@@ -21,7 +21,7 @@ Replace the current uniswap sETH Liquidity Provider mechanism with an onchain LP
 <!--A short (~200 word) description of the technical issue being addressed.-->
 Note: LP = Liquidity Provider
 
-The current deployed solution is inneficient and buggy. There are weekly issues with valid LP's not getting rewards and cheaters getting rewards that should be disqualified. 
+The current deployed solution is inefficient and buggy. There are weekly issues with valid LP's not getting rewards and cheaters getting rewards that should be disqualified. 
 This onchain solution fixes all the issues and can be automated and self serve requiring much less steps than the current solution. 
 
 ## Motivation
@@ -33,6 +33,7 @@ This onchain solution fixes all the issues and can be automated and self serve r
 - There are so many LPs now that it takes 2 multi-sig multi-send transactions to send out the LP SNX rewards
 - The co-ordination amongst the 5 multi-sigs signers and overhead each manually verifying is inefficient given this could all be offloaded to a trusted smart contract to calculate on-chain in a trust-less manner. 
 - The [gnosis multi-sig](https://wallet.gnosis.pm/#/wallet/0x53265D3D34c9ECB5685Be3176430366b4e392010) freezes and is very slow to react since the payloads of the transactions are so big 
+- LP providers have noted is that if they withdraw / rebalance any amount of their liquidity from the pool during the week then all their rewards will be forfeited. The python script checks that no withdrawals / transfer of LP tokens have been made from the pool to prevent people from gaming the rewards.
 
 
 ## Specification
