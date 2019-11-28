@@ -41,7 +41,7 @@ This onchain solution fixes all the issues and can be automated and self serve r
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
 Workflow
-1. User adds liquidity to [sETH uniswap exchange] (https://etherscan.io/address/0xe9Cf7887b93150D4F2Da7dFc6D502B216438F244) and receives uniswap uni tokens
+1. User adds liquidity to [sETH uniswap exchange](https://etherscan.io/address/0xe9Cf7887b93150D4F2Da7dFc6D502B216438F244#writeContract) and receives uniswap uni tokens
 2. User then stakes the uni tokens at unipool time staking contract
 3. Anyone can call [Synthetix](http://contracts.synthetix.io/Synthetix).mint() to mint the inflationary supply. This will then be sent to the [RewardsDistribution](https://contracts.synthetix.io/RewardsDistribution) contract where it will send an amount of tokens to the unipool contract. [example transaction](https://etherscan.io/tx/0x88213d8ff5462a0359c98d0365762063ba32e0e0e9f49ecd9af392063e2068b4)
 4. LP stakers will be assigned their % amount of SNX rewards based on their % of staked uni tokens against the pool of LP providers
