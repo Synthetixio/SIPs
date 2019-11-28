@@ -20,21 +20,22 @@ Deprecate [ERC223](https://github.com/ethereum/EIPs/issues/223) from SNX and all
 
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
 
-The UX for [Mintr](https://mintr.synthetix.io) drove the implementation of ERC223 to reduce the number of transactions a user(minter) had to execute to Deposit their sUSD into the Depot FIFO queue to be sold for ETH from 2 to 1 by only eliminating the ERC20 approve transaction prior to calling a ERC20 transferFrom. While this has been a nice UX for mintr users with the [Depot](https://contracts.synthetix.io/Depot)
-
-The benefits of ERC223 transfer have not outweighed the cons on contract to contract transfers;
+The UX for [Mintr](https://mintr.synthetix.io) drove the implementation of ERC223 to reduce the number of transactions a user(minter) had to execute to deposit their sUSD into the Depot FIFO queue to be sold for ETH from 2 to 1 by only eliminating the ERC20 approve transaction prior to calling a ERC20 transferFrom. While this has been a nice UX for mintr users with the [Depot](https://contracts.synthetix.io/Depot) the benefits of ERC223 transfer have not outweighed the cons on contract to contract transfers;
 
 - Bloated gas estimations [Issue 243](https://github.com/Synthetixio/synthetix/issues/243)
 - Causing gas loss [Issue 243](https://github.com/Synthetixio/synthetix/issues/243)
-- Perceived errors in SNX and Synth Transfers 'Although one or more Error Occurred [Reverted] Contract Execution Completed' [etherscan](https://etherscan.io/address/0xe9cf7887b93150d4f2da7dfc6d502b216438f244)
+- Perceived errors in SNX and Synth Transfers
+  (https://user-images.githubusercontent.com/799038/69776252-943b6d80-11ef-11ea-97b5-d01f849cff8b.png)
+  [etherscan](https://etherscan.io/address/0xe9cf7887b93150d4f2da7dfc6d502b216438f244)
 
-There is a lot of Dex activity happening now with SNX [uniswap](https://uniswap.info/token/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f), [Kyber](https://tracker.kyber.network/#/tokens/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f), sUSD [uniswap](https://uniswap.info/token/0x57ab1ec28d129707052df4df418d58a2d46d5f51), [Kyber](https://tracker.kyber.network/#/tokens/0x57ab1ec28d129707052df4df418d58a2d46d5f51) and sETH [uniswap](https://uniswap.info/token/0x5e74c9036fb86bd7ecdcb084a0673efc32ea31cb). The ERC223 implementation is causing a significant cumulative gas loss trading these tokens. We aim to reduce the total gas lost / consumed trading Synthetix tokens.
+There is a lot of Dex activity happening now with SNX [uniswap](https://uniswap.info/token/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f), [Kyber](https://tracker.kyber.network/#/tokens/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f), sUSD [uniswap](https://uniswap.info/token/0x57ab1ec28d129707052df4df418d58a2d46d5f51), [Kyber](https://tracker.kyber.network/#/tokens/0x57ab1ec28d129707052df4df418d58a2d46d5f51) and sETH [uniswap](https://uniswap.info/token/0x5e74c9036fb86bd7ecdcb084a0673efc32ea31cb).
+The ERC223 implementation is causing a significant cumulative gas loss trading these tokens. We aim to reduce the total gas lost / consumed trading Synthetix tokens.
 
 ## Specification
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
-- Removing all ERC223 is a simple code change to ExternStateToken.sol which is inherited by Synthetix.sol and Synth.sol/
+- Removing all ERC223 is a simple code change to `ExternStateToken.sol` which is inherited by `Synthetix.sol` and `Synth.sol`
 - It will require all Synths & SNX to be redeployed but no proxy addresses will change keeping all existing token addresses
 - The current [Depot](https://contracts.synthetix.io/Depot) will no longer be able to accept sUSD deposits effectivly putting it to its end of life
 - A new Depot will be required which will go back to using the original ERC20 approve, transferFrom workflow. This could be an opportunity to makes some additional improvements to the Depot such as making it upgradable. Putting it behind a proxy and giving it an external state contract so its logic can be upgraded.
@@ -45,7 +46,7 @@ There is a lot of Dex activity happening now with SNX [uniswap](https://uniswap.
 
 - Removing ERC223 will no longer show the transfer errors in contract to contract transfers. [etherscan](https://etherscan.io/address/0xe9cf7887b93150d4f2da7dfc6d502b216438f244)
 - This will also save 200K gas per contract to contract transfer. [github code reference](https://github.com/Synthetixio/synthetix/blob/master/contracts/TokenFallbackCaller.sol#L52)
-- Reclaim bytecode space for SNX contract deployment
+- Reclaim byte code space for SNX contract deployment
 
 ## Implementation
 
