@@ -22,11 +22,13 @@ Deprecate [ERC223](https://github.com/ethereum/EIPs/issues/223) from SNX and all
 
 The UX for [Mintr](https://mintr.synthetix.io) drove the implementation of ERC223 to reduce the number of transactions a user(minter) had to execute to Deposit their sUSD into the Depot FIFO queue to be sold for ETH from 2 to 1 by only eliminating the ERC20 approve transaction prior to calling a ERC20 transferFrom. While this has been a nice UX for mintr users with the [Depot](https://contracts.synthetix.io/Depot)
 
-The benefits of ERC223 transfer have not outweighted the cons on contract to contract transfers;
+The benefits of ERC223 transfer have not outweighed the cons on contract to contract transfers;
 
 - Bloated gas estimations [Issue 243](https://github.com/Synthetixio/synthetix/issues/243)
 - Causing gas loss [Issue 243](https://github.com/Synthetixio/synthetix/issues/243)
 - Perceived errors in SNX and Synth Transfers 'Although one or more Error Occurred [Reverted] Contract Execution Completed' [etherscan](https://etherscan.io/address/0xe9cf7887b93150d4f2da7dfc6d502b216438f244)
+
+There is a lot of Dex activity happening now with SNX [uniswap](https://uniswap.info/token/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f), [Kyber](https://tracker.kyber.network/#/tokens/0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f), sUSD [uniswap](https://uniswap.info/token/0x57ab1ec28d129707052df4df418d58a2d46d5f51), [Kyber](https://tracker.kyber.network/#/tokens/0x57ab1ec28d129707052df4df418d58a2d46d5f51) and sETH [uniswap](https://uniswap.info/token/0x5e74c9036fb86bd7ecdcb084a0673efc32ea31cb). The ERC223 implementation is causing a significant cumulative gas loss trading these tokens. We aim to reduce the total gas lost / consumed trading Synthetix tokens.
 
 ## Specification
 
