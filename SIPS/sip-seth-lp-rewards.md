@@ -31,7 +31,7 @@ This onchain solution fixes all the issues and can be automated and self serve r
 - Current solution uses an off-chain [python script](http://18.222.88.2:5000/pool-rewards/8926035/8967962) to determine sETH Liquidity providers between two blocks which are manually entered
 - We must download a CSV and manually verify the addresses and their LP amounts
 - There are so many LPs now that it takes 2 multi-sig multi-send transactions to send out the LP SNX rewards
-- The co-ordination amongst the 5 multi-sigs signers and overhead each manually verifying is inefficient given this could all be offloaded to a trusted smart contract to calculate on-chain in a trust-less manor. 
+- The co-ordination amongst the 5 multi-sigs signers and overhead each manually verifying is inefficient given this could all be offloaded to a trusted smart contract to calculate on-chain in a trust-less manner. 
 - The [gnosis multi-sig](https://wallet.gnosis.pm/#/wallet/0x53265D3D34c9ECB5685Be3176430366b4e392010) freezes and is very slow to react since the payloads of the transactions are so big 
 
 
