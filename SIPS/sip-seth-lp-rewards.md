@@ -1,5 +1,5 @@
 ---
-sip: x
+sip: 31
 title: sETH LP rewards contract
 status: WIP
 author: Clinton Ennis (hav-noms), Anton Bukov (k06a) 
