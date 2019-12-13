@@ -15,7 +15,7 @@ requires: Inflation Smoothing (SIP-23)
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-This proposal will add a perpetual 2.5% annual inflation of SNX starting on August 30, 2023, the 234th week on the SNX inflation schedule.
+This proposal will add a perpetual 2.5% APR annual inflation of SNX starting on September 6, 2023, the 235th week on the SNX inflation schedule.
 
 This SIP is the formal spec successor of deltatiger's [Draft SIP Proposal #36](https://github.com/Synthetixio/SIPs/issues/36), specifically pertaining to terminal inflation.
 
