@@ -1,14 +1,14 @@
 ---
-
 sip: 24
 title: Terminal SNX Inflation
-status: Approved
+status: Implemented
 author: Vance Spencer (@FrameworkVance), Deltatiger (@deltatigernz), Michael Anderson (@meanderson)
 discussions-to: https://github.com/Synthetixio/SIPs/issues/36
 
 created: 2019-10-25
 requires: Inflation Smoothing (SIP-23)
 ---
+
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
 
 ## Simple Summary
