@@ -51,8 +51,11 @@ An abrupt inflation halvening could lead to:
 ## Test Cases
 
 Standard test cases for Solidity contract compiling and deploying onto Ethereum testnets before updating the contract on mainnet.
+
 [SupplySchedule] https://github.com/Synthetixio/synthetix/blob/v2.16.4/test/contracts/SupplySchedule.js
+
 [Synthetix] https://github.com/Synthetixio/synthetix/blob/v2.16.4/test/contracts/Synthetix.js#L2326
+
 [RewardsIntegrationTests] https://github.com/Synthetixio/synthetix/blob/v2.16.4/test/contracts/RewardsIntegrationTests.js
 
 ## Implementation
