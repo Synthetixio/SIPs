@@ -151,7 +151,7 @@ Given the following preconditions:
 
   Then
 
-  - ✅ the transfer succeeds as the prior `settle` invocation sent 2.7% of her exchange amount (0.027) to the fee pool, and transfer detected no _reclaimable_ fees remaining.
+  - ✅ the transfer succeeds as the prior `settle` invocation sent 2.7% of her exchange amount (0.027) to the fee pool, and transfer detected no fees remaining.
 
   ***
 
@@ -187,13 +187,79 @@ Given the following preconditions:
 
   Then
 
-  - ✅ the exchange succeeds and no _reclaimable_ fee is charged
+  - ✅ the exchange succeeds and no fee is charged
+
+  ***
+
+  When
+
+  - she exchanges 100 sUSD into 1 sETH (paying a 30bps fee)
+  - ⏳ and no oracle update for ETHUSD occurs after 3 minutes
+  - ⏳ once 3 minutes from exchange have elapsed she exchanges 1 sETH for sUSD (paying a further 30bps fee)
+  - ⏳ and a minute later the price of ETHUSD goes down to 90:1
+  - ⏳ she burns `50` sUSD
+
+  Then
+
+  - ❌ the burn fails as the waiting period for sUSD is still ongoing
+
+  ***
+
+  When
+
+  - she exchanges 100 sUSD into 1 sETH (paying a 30bps fee)
+  - ⏳ and no oracle update for ETHUSD occurs after 3 minutes
+  - ⏳ once 3 minutes from exchange have elapsed she exchanges 1 sETH for sUSD (paying a further 30bps fee)
+  - ⏳ and a minute later the price of ETHUSD goes down to 90:1
+  - ⏳ and two minutes later 3 minutes have elapsed since her last exchange
+  - ⏳ she burns `50` sUSD
+
+  Then
+
+  - ✅ `9.94009` sUSD is reclaimed from the user (`99.4009 - 89.46081`, which is the amount received in sUSD (`100 * 1/100 * 0.997 * 100 * 0.997`) minus the amount they should have received at the updated rate (`100 * 1/100 * 0.997 * 90 * 0.997`))
+  - and `50` sUSD is burned.
 
 ## Implementation
 
 <!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
 
-TBD.
+- `Synthetix.exchange()` invoked from synth `src` to `dest` by `user` for `amount`
+
+  - _Are we currently within a waiting period for any exchange into `src`?_
+
+    - Yes: ❌ Fail the transaction
+    - No: ✅
+      - Invoke `settle(src)`
+      - Proceed with the `exchange` as per usual
+      - Persist this exchange in the user queue for `dest` synth
+
+- `Synthetix.settle(synth)` invoked with synth `synth` by `user`
+
+  - _Are we currently within a waiting period for any exchange into `synth`?_
+
+    - Yes: ❌ Fail the transaction
+    - No: Sum the `owing` and `owed` amounts on all unsettled `synth` exchanges as `total`
+      - _Is the total > 0_
+        - Yes: ✅ Reclaim the `total` of `synth` from the user to the fee pool
+      - _Is the total < 0_
+        - Yes: ✅ Rebate the absolute value `total` of `synth` to the user from the fee pool
+      - Finally, remove all `synth` exchanges for the user
+
+- `Synth.transfer()` invoked from synth `src` by `user` for `amount`
+
+  - _Are we currently within a waiting period for any exchange into `src`?_
+    - Yes: ❌ Fail the transaction
+    - No: Sum the `owing` and `owed` amounts on all unsettled `synth` exchanges as `total`
+      - _Is the total == 0_
+        - Yes: ✅ Proceed with transfer as usual
+        - No: ❌ Fail the transaction
+
+- `Synth.burnSynths()` invoked by `user` for `amount`
+  - _Are we currently within a waiting period for any exchange into `sUSD`?_
+    - Yes: ❌ Fail the transaction
+    - No: ✅
+      - Invoke `settle(src)`
+      - Proceed with the `burn` as per usual
 
 ## Copyright
 
