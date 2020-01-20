@@ -25,13 +25,13 @@ As [discussed in this issue](https://github.com/Synthetixio/synthetix/issues/293
 
 Our `ExchangeRates` contract (https://contracts.synthetix.io/ExchangeRates) will continue to be fed prices from the decentralized oracle. However, the logic for looking up prices will be extended with a mapping of Chainlink Aggregator contracts for each Synth.
 
+Rather than using Chainlink updates for our inverse Synths, we will simply calculate the inverse Synth rates by using the prices of their partner 'long' Synths. The opposite is true of the 'index' Synths (i.e. sDEFI) — Chainlink oracles will calculate the indexes off-chain and push that single price on-chain rather than pushing each price portion of the index on-chain separately. 
+
 ## Rationale
 
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
 In order to have both the centralized oracle and decentralized oracles work in tandem, we will abstract away the logic in the `ExchangeRates` contract. Fortunately, the current architecture is such that this change is a fairly minimal impact to the Synthetix system.
-
-Rather than using Chainlink updates for our inverse Synths, we will simply calculate the inverse Synth rates by using the prices of their partner 'long' Synths. 
 
 ## Test Cases
 
