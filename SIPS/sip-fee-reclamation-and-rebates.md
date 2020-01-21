@@ -138,7 +138,7 @@ Given the following preconditions:
 
   Then
 
-  - ❌ the transfer fails because she profited 3% - 0.3% = 2.7%.
+  - ❌ the transfer fails because she profited 3% - 0.3% = 2.7%. She must invoke `settle` before being able to transfer the sETH
 
   ***
 
