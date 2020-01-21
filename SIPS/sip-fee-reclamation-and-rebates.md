@@ -38,7 +38,7 @@ By creating a short waiting period after exchanges in which exchanges or transfe
 
 When a user exchanges `src` synth for `dest` synth, the waiting period of _N_ minutes begins. Any `transfer` of `dest` synth will fail during this window, as will an `exchange` from `dest` synth to any other synth, or a burn of `sUSD` if it was the `dest` synth. If another exchange into the same `dest` synth is performed before _N_ minutes expires, the waiting period restarts with _N_ minutes remaining.
 
-Once _N_ minutes has expired, the following `exchange` from the `dest` synth to any other, or a burn of `sUSD`, will invoke `settle` - calculating the difference between the exchanged prices and those at the end of the waiting perid. If the user made profit, it is taken to be front-run profit, and that profit is reclaimed into the fee pool. If the user made a loss, this loss is rebated to them from the fee pool. The `exchange` then continues as normal.
+Once _N_ minutes has expired, the following `exchange` from the `dest` synth to any other, or a burn of `sUSD`, will invoke `settle` - calculating the difference between the exchanged prices and those at the end of the waiting perid. If the user made profit, it is taken to be front-run profit, and the profit is burned from the user's holding of the `dest` synth. If the user made a loss, this loss is issued to them from the `dest` synth. The `exchange` then continues as normal.
 
 In the case of a user trying to `transfer` the `dest` synth after the waiting period has expired - this will always fail. The user has to first invoke `settle` before a synth can be transferred.
 
@@ -60,7 +60,7 @@ Given the following preconditions:
 
 - Jessica has a wallet which holds 100 sUSD and this wallet has never exchanged before,
 - and the price of ETHUSD is 100:1, and BTCUSD is 10000:1
-- and the reclamation fee waiting period (_M_) is set to _3_ minutes.
+- and the waiting period (_M_) is set to _3_ minutes.
 
   ***
 
@@ -151,7 +151,7 @@ Given the following preconditions:
 
   Then
 
-  - ✅ the transfer succeeds as the prior `settle` invocation sent 2.7% of her exchange amount (0.027) to the fee pool, and transfer detected no fees remaining.
+  - ✅ the transfer succeeds as the prior `settle` invocation burned 2.7% of her sETH holdings (0.027), and transfer detected no fees remaining.
 
   ***
 
@@ -163,7 +163,7 @@ Given the following preconditions:
 
   Then
 
-  - ✅ the exchange succeeds, sending 2.7% of her exchange amount (0.027 sETH) to the fee pool, and converting the rest into sBTC (minus the exchange fee).
+  - ✅ the exchange succeeds, burning 2.7% of her exchange amount (0.027 sETH), and converting the rest into sBTC (minus the exchange fee).
 
   ***
 
@@ -175,7 +175,7 @@ Given the following preconditions:
 
   Then
 
-  - ✅ the exchange succeeds, sending her ~5.247% of her exchange amount (0.05247 sETH) from the fee pool, and converting the entire amount into sBTC (minus the exchange fee).
+  - ✅ the exchange succeeds, issuing her ~5.247% of her exchange amount (0.05247 sETH), and converting the entire amount into sBTC (minus the exchange fee).
 
   ***
 
@@ -187,7 +187,7 @@ Given the following preconditions:
 
   Then
 
-  - ✅ the exchange succeeds and no fee is charged
+  - ✅ the exchange succeeds and no rebate or reclamation is required
 
   ***
 
@@ -238,11 +238,11 @@ Given the following preconditions:
   - _Are we currently within a waiting period for any exchange into `synth`?_
 
     - Yes: ❌ Fail the transaction
-    - No: Sum the `owing` and `owed` amounts on all unsettled `synth` exchanges as `total`
-      - _Is the total > 0_
-        - Yes: ✅ Reclaim the `total` of `synth` from the user to the fee pool
+    - No: Sum the `owing` and `owed` amounts on all unsettled `synth` exchanges as `tally`
+      - _Is the tally > 0_
+        - Yes: ✅ Reclaim the `tally` of `synth` from the user by burning it
       - _Is the total < 0_
-        - Yes: ✅ Rebate the absolute value `total` of `synth` to the user from the fee pool
+        - Yes: ✅ Rebate the absolute value `tally` of `synth` to the user by issuing it
       - Finally, remove all `synth` exchanges for the user
 
 - `Synth.transfer()` invoked from synth `src` by `user` for `amount`
