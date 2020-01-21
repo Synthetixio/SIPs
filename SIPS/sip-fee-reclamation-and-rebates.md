@@ -1,7 +1,7 @@
 ---
-sip: <to be assigned>
+sip: 37
 title: Fee Reclamation and Rebate
-status: Proposed
+status: WIP
 author: Justin J Moses (@justinjmoses)
 discussions-to: https://discord.gg/3uJ5rAy
 
