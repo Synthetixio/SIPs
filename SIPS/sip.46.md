@@ -1,5 +1,5 @@
 ---
-sip: <to be assigned>
+sip: 46
 title: Address Resolver Gas Improvements
 status: Proposed
 author: Justin J Moses (@justinjmoses)
