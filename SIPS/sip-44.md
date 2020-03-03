@@ -1,9 +1,9 @@
 ---
-sip: <to be assigned>
+sip: 44
 title: Synthetix & Synth Disabling
 status: Proposed
 author: Justin J Moses (@justinjmoses)
-discussions-to: <Discord Channel>
+discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
 created: 2020-02-28
 ---
@@ -26,7 +26,7 @@ A `SystemStatus` contract can hold various types of state for system events. The
 
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
 
-There are a number of situations that have occurred where the Synthetix system needs to be able to react immediately to any threats. These are as follows:
+There are a number of conditions where the Synthetix system needs to be able to pause. These are as follows:
 
 1. **During upgrades**: `upgrade(bool upgrading)`: Currently we have a workaround to disable the entire protocol by setting `ExchangeRates.rateIsStale` period to `1`. This is fairly rudimentary and needs improvement. Moreover a better reject reason will go a ways towards helping users address concerns during these windows.
 2. **Security meaures**: `disableSynth(bool disable, bytes32)`: There have been occasions where synths have needed to be disabled immediately, such as during the attack on sMKR and iMKR. Moreover, we're continuing to build live monitoring software that can detect and disable synths whenever an attack is launched.
