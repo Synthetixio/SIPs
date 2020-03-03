@@ -54,7 +54,7 @@ After Achernar
 
 The biggest impact is to `exchange()` however that was primarily due to [SIP-37](./sip-37.md) (Fee Reclamation) that was also released in Achernar.
 
-By caching the various required addresses
+By caching the various required addresses, we can reduce these down and not worry about having to write code in each function to limit how often we lookup the addresses required.
 
 ## Specification
 
