@@ -1,5 +1,5 @@
 ---
-sip: <to be assigned>
+sip: 47
 title: Prevent Empty Exchanges
 status: Proposed
 author: Justin J Moses (@justinjmoses)
