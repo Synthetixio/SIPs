@@ -1,11 +1,7 @@
 ---
 sip: 33
 title: Deprecate XDR synth from Synthetix.
-<<<<<<< HEAD
 status: Implemented
-=======
-status: WIP
->>>>>>> master
 author: Nocturnalsheet (@nocturnalsheet), Clinton Ennis (@hav-noms)
 discussions-to: (https://discordapp.com/invite/CDTvjHY)
 
@@ -18,11 +14,7 @@ created: 2019-12-17
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-<<<<<<< HEAD
 Deprecate XDR synth from Synthetix to simplify representation and calculation of claimable fees in fee pool, Gas Optimisations and simplify the system mechanics. 
-=======
-Deprecate XDR synth from Synthetix to simplify representation and calculation of claimable fees in fee pool, Gas Optimisationsa and simplify the system mechanics. 
->>>>>>> master
 
 ## Motivation
 
@@ -30,11 +22,7 @@ Deprecate XDR synth from Synthetix to simplify representation and calculation of
 
 XDR has been used in Synthetix since the beginning as an unit of account, however most people are still not able to understand the purpose and calcuation of XDR and most importantly how the price of XDR is being derived.
 
-<<<<<<< HEAD
 With the implementation of [SIP-29 - Issue, burn and claim only in sUSD](https://sips.synthetix.io/sips/sip-29), XDR is not required to be the unit of account anymore and sUSD can replace the role of XDR as the base unit of account.
-=======
-With the implementation of ([SIP-29 - Issue, burn and claim only in sUSD] (https://sips.synthetix.io/sips/sip-29)), XDR is not required to be the unit of account anymore and sUSD can replace the role of XDR as the base unit of account.
->>>>>>> master
 
 - This will help new users in Synthetix ecosystem to easily understand how fees are collected and distributed
 - Easier onchain checking and verification of current amount of fees claimable sitting inside fee pool
@@ -43,7 +31,6 @@ With the implementation of ([SIP-29 - Issue, burn and claim only in sUSD] (https
 - System optimizations, gas savings on removing XDR from system mechanics
 - Reduce system complexity
 
-<<<<<<< HEAD
 ## Rationale
 
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
@@ -68,22 +55,6 @@ With the implementation of ([SIP-29 - Issue, burn and claim only in sUSD] (https
 ### ExchangeRates Contract
  - Remove XDR Participants and XDR rate storage. 
 
-=======
-
-## Specification
-
-<!--The technical specification should describe the syntax and semantics of any new feature.-->
-
-- sX fees will be collected in sUSD and stored as sUSD in fee pool.
-- Debt Calculations will be in sUSD
-
-## Rationale
-
-<!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
-
-- Reduce the burden of oracle to call and fetch prices for XDR rate
-- Allows for full decentralised oracles in future as XDR price is a niche and likely to be unsupported by most oracles 
->>>>>>> master
 
 ## Implementation
 
