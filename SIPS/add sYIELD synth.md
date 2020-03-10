@@ -1,5 +1,5 @@
 ---
-sip: 48
+sip: to be assigned
 title: Add sYIELD synth
 status: Proposed
 author: Nocturnalsheet (@nocturnalsheet), IanC
