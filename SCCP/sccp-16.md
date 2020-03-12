@@ -1,7 +1,7 @@
 ---
 sccp: 16
-title: Increase Waiting Period to 1 hour
-author: Justin J Moses (@justinjmoses)>
+title: Increase Fee Reclamation Waiting Period to 1 hour
+author: Justin J Moses (@justinjmoses), Kain Warwick (@kaiynne)
 discussions-to: https://discordapp.com/invite/AEdUHzt
 status: Proposed
 created: 2020-03-12
@@ -13,7 +13,7 @@ created: 2020-03-12
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase fee reclamation to an hour.
+Temporarily increase fee reclamation waiting period to an hour.
 
 ## Abstract
 
@@ -25,7 +25,7 @@ Increase fee reclamation waiting period to an hour to accommodate extreme networ
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Network congestion is incredibly high - fast GWEI is around 200. Lowering the waiting period will allow us to reduce the update frequency of the oracle and guarantee exchanges can still get through even with such high congestion.
+Network congestion is currently incredibly high - fast GWEI is around 200. Increasing the waiting period will allow us to reduce the update frequency of the oracle and guarantee exchanges can still get through even with such high congestion.
 
 ## Copyright
 
