@@ -1,5 +1,5 @@
 ---
-sip: <to be assigned>
+sip: 48
 title: Allow Views to Return When Rates Are Stale
 status: Proposed
 author: Justin J Moses (@justinjmoses)
