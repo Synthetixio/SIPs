@@ -3,9 +3,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
-    {% if page.sip %}SIP-{{page.sip}}: {% else if page.sccp
-    %}SCCP-{{page.sccp}}: {% endif %}{% if page.title %}{{page.title }}{% else
-    %}{{ site.homeMetaTitle }}{% endif %}
+    {% if page.sip %}SIP-{{page.sip}}: {% elsif page.sccp %}SCCP-{{page.sccp}}:
+    {% endif %}{% if page.title %}{{page.title }}{% else %}{{ site.homeMetaTitle
+    }}{% endif %}
   </title>
   {%- seo -%} <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url
   }}">
