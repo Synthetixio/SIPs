@@ -1,11 +1,11 @@
 ---
-sip: 47
-title: Prevent Empty Exchanges
-status: Approved
-author: Justin J Moses (@justinjmoses)
+sip: 50
+title: Add sYIELD synth
+status: Proposed
+author: Nocturnalsheet (@nocturnalsheet), IanC
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
-created: 2020-03-05
+created: 2020-03-09
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
@@ -14,37 +14,54 @@ created: 2020-03-05
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-Prevent exchanges, burns and transferAndSettles from succeeding with 0 amounts.
+This SIP proposes to introduce sYIELD, an automatic sUSD which earns interest every block.
 
 ## Abstract
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-Fix an edge-case that was introduced with SIP-37 that reduces exchanges, burns and transferAndSettle invocations down to the user's balance - even if no settlement occurred.
+sYIELD will be similar to other synths, freely traded on synthetix.exchange. Fees should be 0% between sUSD/sYIELD pair. Standard fees for any other sYIELD/sXXX pairs. This will allow traders to move into sYIELD to earn interest, even for short periods of time when they are waiting to re-enter their long/short positions
 
 ## Motivation
 
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
 
-Since [SIP-37](./sip-37.md) exchanges of invalid amounts for the user have been succeeding as `0` exchanges, emitting events. These successful transactions may cause users to think their exchanges have gone through and they also create noise in event monitoring tools such as The Graph.
-
-For example, this user performed the same transaction twice with increasing nonces. The [first succeeded](https://etherscan.io/tx/0xe05e71203c2c703663a5df5d37ea1edd94e111b212de6153020cce9cedba6957) and exchanged `0.003` sBTC into `sUSD` and the [second also succeeded](https://etherscan.io/tx/0x481fbfaab71b15ef97b2830df7ff7601183c2b4a5530233392ce405da8b1e26c) but exchanged `0`.
-
-This proposal is to simply check for any unsettled exchanges and only then to amend the amount, otherwise to treat the amount incoming as before SIP-37 was introduced (that is, revert if the amount is more than the user has).
+Current debt pool has heavy exposure to sETH which is a systemic risk to the SNX minters as the impact of ETH price movement creates an imbalance to debt pool exposure for all SNX minters. Ideally the overall debt pool exposure should be neutral so that SNX minters will profit regardless of how sETH or sBTC prices move.
 
 ## Specification
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
-- `Exchanger.settlementOwing` to return the number of entries in the queue for that synth.
-- `Exchanger.settle` to return the number of entries removed in the settlement as `numEntriesSettled`
-- `Exchanger.exchage`, `Issuer.burnSynths`, `Synth.transferAndSettle` and `Synth.transferFromAndSettle` to all take this `numEntriesSettled` into consideration - if `numEntriesSettled == 0` then the amount to use is what's been given the function - as per the pre-SIP-37 implementation. If `numEntriesSettled > 0` then adjust the amount as per SIP-37.
+An initial annual fixed interest rate of X% (to be determined) will be set and the price of sYIELD will increase automatically at every price oracle update, accruing interest on every block.
+
+Exchange of sUSD <-> sYIELD can be done via synthetix.exchange or an external simple UI (like defizap) which calls the underlying contract function. This swap will incur no fees and no slippage or limitation of size.
+
+Interest rate options on sYIELD:
+
+Fixed rate (recommended): Propose to start with an interest rate of 10-15% APR as a trial to monitor the demand and impact
+
+Variable rate (In future): Rates will increase to neutralise the debt pool if the majority of synths are in long positions. Rates will decrease when the debt pool is balanced with more sUSD/sYIELD than long positions
 
 ## Rationale
 
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
-Admending `settlementOwing` to return `numEntries` prevents any further cross-contract calls, thereby limiting gas.
+sYIELD is a solution which aims to:
+
+1) Encourage traders to hold sYIELD in between trades and keep them in the ecosystem.
+
+
+2) Attract people looking for higher stablecoins yield
+
+
+3) Encourage SNX minters to hold their debt in sYIELD instead of sETH
+
+
+4) Create more demand for sUSD, helping to maintain and restore the peg
+
+
+5) Create more external borrowing and lending markets for sUSD as arbitrageurs will borrow sUSD to place into sYIELD if the interest rate of sYIELD is higher than the borrowing cost of sUSD
+
 
 ## Test Cases
 
