@@ -28,11 +28,11 @@ The trial has been successful for Curve pool and to ensure this mechanism to wor
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 Workflow
 
-User adds liquidity to sETH uniswap exchange or sUSD Curve pool and receives LP tokens
-User then stakes the LP tokens at Unipool or Curvepool time staking contract respectively
-Anyone can call Synthetix.mint() to mint the inflationary supply. This will then be sent to the RewardsDistribution contract where it will send an amount of tokens to the Unipool and Curvepool contract.
-LP stakers will be assigned their % amount of SNX rewards based on their % of staked LP tokens against the pool of LP providers.
-LP stakers will need to come to the Unipool or Curvepool contract or use Mintr UI to claim their SNX rewards anytime.
+- User adds liquidity to sETH uniswap exchange or sUSD Curve pool and receives LP tokens
+- User then stakes the LP tokens at Unipool or Curvepool time staking contract respectively
+- Anyone can call Synthetix.mint() to mint the inflationary supply. This will then be sent to the RewardsDistribution contract where it will send an amount of tokens to the Unipool and Curvepool contract.
+- LP stakers will be assigned their % amount of SNX rewards based on their % of staked LP tokens against the pool of LP providers.
+- LP stakers will need to come to the Unipool or Curvepool contract or use Mintr UI to claim their SNX rewards anytime.
 
 ## Rationale
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
