@@ -1,5 +1,5 @@
 ---
-sip: <to be assigned>
+sip: 52
 title: Add Next Price to Fee Reclamation
 status: Proposed
 author: Justin J Moses (@justinjmoses)
