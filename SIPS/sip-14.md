@@ -3,7 +3,7 @@ sip: 14
 title: Allow delegation of Synthetix Exchange function to another address 
 author: Jackson Chan (@jacko125), Clinton Ennis (@hav-noms)
 discussions-to: https://discord.gg/DQ8ehX4
-status: Approved
+status: Implemented
 created: 2019-08-01
 ---
 
@@ -28,9 +28,11 @@ Also allows hardware wallets to utilise an automated service to trade on synthet
 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
-Approve delegate address to trade on another wallet.
-Remove any delegated address from approval list.
-Only ability to call synthetix.exchange() for an approved wallet.
+
+function approveExchangeOnBehalf: Approve delegate address to trade on another wallet.
+function exchangeOnBehalf: Only ability to call synthetix.exchange() for an approved wallet.
+function removeExchangeOnBehalf: Remove any delegated address from approval list.
+
 
 ## Rationale
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
@@ -41,11 +43,12 @@ Only ability to call synthetix.exchange() for an approved wallet.
 
 ## Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
-Not required at this stage
+https://github.com/Synthetixio/synthetix/blob/v2.21.6/test/contracts/Exchanger.js#L1230
 
 ## Implementation
 <!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
-Not required at this stage
+https://github.com/Synthetixio/synthetix/blob/v2.21.6/contracts/Exchanger.sol#L164
+
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

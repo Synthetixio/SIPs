@@ -3,14 +3,14 @@ sip: 10
 title: Upgrade Delegate Powers
 author: Nocturnalsheet (@nocturnalsheet)
 discussions-to: https://discord.gg/CDTvjHY
-status: Approved
+status: Implemented
 created: 2019-07-16
 ---
 
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
-This SIP proposes to add the ability for Delegates to mint, burn & exchange on their owners behalf. 
+This SIP proposes to add the ability for Delegates to mint & burn on their owners behalf. 
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
@@ -23,28 +23,21 @@ Delegating synthetix.exchange() is to be able to exchange via a mobile DApp brow
 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
-New call functions expected to be added in which allows owner to approve each function individually or all 3 functions of claim, mint and burn with a single contract call
+New call functions expected to be added in which allows owner to approve each function individually or all 3 functions of claim, issue and burn with a single contract call
 
-function mintOnBehalf
+function issueSynthsOnBehalf
+function issueMaxSynthsOnBehalf
 
-function burnOnBehalf
+function burnSynthsOnBehalf
+function burnSynthsToTargetOnBehalf
 
-function exchangeOnBehalf
-
-function approveMintOnBehalf
-
+function approveIssueOnBehalf
 function approveBurnOnBehalf
 
-function approveExchangeOnBehalf
-
-function removeMintOnBehalf
-
+function removeIssueOnBehalf
 function removeBurnOnBehalf
 
-function removeExchangeOnBehalf
-
 function approveAllDelegatePowers (add delegate entries for all of the above including claimFeesOnBehalf)
-
 function removeAllDelegatePowers
 
 ## Rationale
@@ -67,14 +60,14 @@ Potential uses cases
  
 ## Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
-Not required at this stage
-
+  https://github.com/Synthetixio/synthetix/blob/v2.21.6/test/contracts/DelegateApprovals.js
+  https://github.com/Synthetixio/synthetix/blob/v2.21.6/test/contracts/Issuer.js#L1703
+  https://github.com/Synthetixio/synthetix/blob/v2.21.6/test/contracts/Exchanger.js#L1230
+  
 ## Implementation
 <!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
 
 - Deprecate existing `DelegateApprovals` contract that is attached to FeePool and supports only setting delegation for single action/s.
-
-  https://github.com/Synthetixio/synthetix/blob/master/contracts/DelegateApprovals.sol
   
 - Doesn't require associatedState to be set to FeePool contract.
  
@@ -83,6 +76,8 @@ Not required at this stage
 - Synthetix / Issuer and FeePool will read from the `DelegateApprovals` as a single source of truth for the required delegations.
 
 - Add EternalStorage pattern to new `DelegateApprovals` contract to allow adding new delegation powers but also not lose existing approvals that have been set.  
+
+https://github.com/Synthetixio/synthetix/blob/master/contracts/DelegateApprovals.sol
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

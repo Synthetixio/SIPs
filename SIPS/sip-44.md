@@ -1,9 +1,9 @@
 ---
 sip: 44
 title: Synthetix & Synth Disabling
-status: Proposed
+status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: <https://discordapp.com/invite/AEdUHzt>
+discussions-to: https://discordapp.com/invite/AEdUHzt
 
 created: 2020-02-28
 ---
@@ -14,13 +14,13 @@ created: 2020-02-28
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-Add a new `SystemStatus` contract to allow both synth pausing and system upgrades.
+Add a new `SystemStatus` contract to allow both synth pausing and system upgrades, as well as other security measures.
 
 ## Abstract
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-A `SystemStatus` contract can hold various types of state for system events. These include: system upgrades, synths frozen due to inverse limits being hit, synths disabled due to security concerns, synths paused during out-of-trading hours for the underlying asset.
+A `SystemStatus` contract can hold various types of state for system events. These include: system upgrades, issuance and exchange controls, and synths disabled due to security concerns, or in the short term, suspended during out-of-trading hours for the underlying asset.
 
 ## Motivation
 
@@ -28,42 +28,43 @@ A `SystemStatus` contract can hold various types of state for system events. The
 
 There are a number of conditions where the Synthetix system needs to be able to pause. These are as follows:
 
-1. **During upgrades**: `upgrade(bool upgrading)`: Currently we have a workaround to disable the entire protocol by setting `ExchangeRates.rateIsStale` period to `1`. This is fairly rudimentary and needs improvement. Moreover a better reject reason will go a ways towards helping users address concerns during these windows.
-2. **Security meaures**: `disableSynth(bool disable, bytes32)`: There have been occasions where synths have needed to be disabled immediately, such as during the attack on sMKR and iMKR. Moreover, we're continuing to build live monitoring software that can detect and disable synths whenever an attack is launched.
-3. **Freezing inverse synths**: `freezeSynth(bytes32, bool freeze, bool upperLimit)` This functionality, currently in our ExchangeRates contract, is better served here with the other disabling checks.
-4. **Pausing non-crypto synths**: `pauseSynth(bytes32, bool pause)` For when the markets supporting the prices of the underlying assets are closed - such as the weekends for forex and after hours for stocks and equities.
+1. **During upgrades**: Currently we have a workaround to disable the entire protocol by setting `ExchangeRates.rateIsStale` period to `1`. This is fairly rudimentary and needs improvement. Moreover a better reject reason will go a ways towards helping users address concerns during these windows.
+2. **Security meaures**: There have been occasions where synths have needed to be disabled immediately, such as during the attack on sMKR and iMKR (see [SIP-34](./sip-34.md)). This gives the team and community time to investigate the situation and determine the next steps with minimal impact to the rest of the system. Moreover, we're continuing to build live monitoring software that can detect and disable synths whenever an attack is launched.
 
 ## Specification
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
-1. **During upgrades**: All synth and SNX transfers disabled. All exchange, issue, burn, claim and mint functionality disabled. A revert reason of "System being upgraded... please stand by" to be provided. This will be managed by the `owner`.
-2. **Security meaures**: For the synth in question, all transfers and exchanges into or out of disabled. This will be managed by the `owner` and an oracle.
-3. **Freezing inverse synths**: For the synth in question, no more price updates will effect it. This will be performed automatically by an oracle.
-4. **Pausing non-crypto synths**: For the synth in question, all exchanges into and out of disabled. This will be performed automatically by an oracle.
+The following areas can be suspended:
+
+1. **System**: All synth and SNX transfers disabled. All exchange, issue, burn, claim, loan and mint functionality disabled. This is both for system upgrades and under possible emergency situations.
+2. **Issuance**: All sUSD issuance, burning and claiming disabled, along with any loan actions.
+3. **Exchange**: All synth exchanges and settlement.
+4. **Synth**: For the synth in question, all transfers of, settlement of, and exchanges into or out of disabled.
+
+Access to the above controls will be restricted to an `accessControlList`, a whitelist of addresses that for each section above, can `suspend` and/or `resume`. This whitelist will be managed by the `owner`.
+
+Furthermore, each suspension must include a `uint reason`. Apart from the single reason `1` for `SYSTEM_UPGRADE`, these reasons are purely for dApps and scripts to indicate to users why certain parts of the system are unavailable.
+
+> Note: **Exchange** suspension will remove `Exchange.exchangeEnabled` functionality and this SIP will remove it.
 
 ## Rationale
 
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
-On the authorization of disabling and re-enabling:
-
-1. Straightforward.
-2. A multisig owner can perform if users detect anomalies and report them, or automated monitoring tools can trigger this to respond more quickly in emergencies.
-3. Once we migrate to Chainlink completely, we will longer be able to react to changing prices on chainlink (we can only pull them). As such, we will need an oracle solution to invoke the freezing action.
-4. As with #3, we will need an oracle to automate this process.
+The Access Control allows the `owner` to configure the right kind of emergency system pause access to a range of manual and automated protection mechanism if anomalies or exploits are detected.
 
 ## Test Cases
 
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
-TDB
+https://github.com/Synthetixio/synthetix/pull/476
 
 ## Implementation
 
 <!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
 
-TDB
+https://github.com/Synthetixio/synthetix/pull/476
 
 ## Copyright
 
