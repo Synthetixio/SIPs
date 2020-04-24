@@ -139,7 +139,7 @@ P_L := \frac{Q_L}{Q} = \frac{Q_L}{(1 - \phi) (Q_L + Q_S)}
 P_S := \frac{Q_S}{Q} = \frac{Q_S}{(1 - \phi) (Q_L + Q_S)}
 \\]
 
-For example, assuming no fees, if $Q_L = Q_S = 100$, then $P_L = P_S = 0.5$. But if 50 additional tokens are bid on $L$, then $P_L = 0.6$, while $P_S = 0.4$.
+For example, assuming no fees, if $Q_L = Q_S = 100$, then $P_L = P_S = 0.5$. But if $50$ additional tokens are bid on $L$, then $P_L = 0.6$, while $P_S = 0.4$.
 Thus increased demand for options on one side of the market increases the price on that side and reduces it on the other. Larger bids will shift the prices by correspondingly greater amounts.
 
 It is only at the end of the bidding period that the price is finalised, and users receive a pro-rated quantity of options according to the size of their bid. That is, if a user had bid $d$ tokens of the denominating asset $D$ on $L$, they would receive $\frac{d}{P_L}$ options. The case that the user had bid on $S$ is similar.
@@ -158,7 +158,7 @@ Note that, neglecting fees, $P_L + P_S = 1$, reflecting the fact that $L$ and $S
 
 Without fees, the prices can be read off directly as odds, and in fact if the probability of $L$ paying off is $p$, then long options yield an expected profit of $p - P_L$ each. Meanwhile the expected profit on the short side is the exact negative of this: $(1 - p) - P_S = P_L - p$. The expected profit of buying an option is positive whenever its price is lower than its event's probability, so the prices should approach the probabilities.
 
-If the fee is nonzero, then $P_L + P_S = \frac{1}{1 - \phi}$, which somewhat higher than 1. Under these conditions, it will only be rational for market participants to purchase options if they believe the market is mispriced by a margin larger than the fee rate.
+If the fee is nonzero, then $P_L + P_S = \frac{1}{1 - \phi}$, which somewhat higher than $1$. Under these conditions, it will only be rational for market participants to purchase options if they believe the market is mispriced by a margin larger than the fee rate.
 
 #### Options As Synths
 
@@ -189,7 +189,7 @@ For discoverability purposes, the address of each new `BinaryOptionMarket` insta
 
 #### Initial Capital
 
-The market creation functionality of the `BinaryOptionMarketFactory` contract will be public; anyone at all will be able to create a market, provided they can meet the minimum capitalisation requirement ($C$).
+The market creation functionality of the `BinaryOptionMarketFactory` contract will be public; anyone at all will be able to create a market, provided they can meet the minimum capitalisation requirement $C$.
 The initial capital requirement will dissuade users from creating low-liquidity markets flippantly.
 
 Without initial positive values for $Q_L$ and $Q_S$, $P_L$ and $P_S$ are undefined. Therefore the market creator is required to contribute a minimum initial value of $C$ worth of tokens. No constraints are placed upon the initial division of funds between $Q_L$ and $Q_S$, which will determine the specific initial prices, but the sum $Q_L + Q_S$ must be worth more than $C$. The market creator will be awarded options for this initial capital, just like any other bidder.
@@ -258,7 +258,7 @@ During the trading period, each `Option` contract offers full ERC20 functionalit
 
 ### Maturity
 
-Once the maturity date is reached, the oracle must be consulted and the outstanding options resolved to pay out 1 token of $D$ or nothing. At their discretion, any user with a positive balance of options can then exercise them to obtain whatever payout they are owed.
+Once the maturity date is reached, the oracle must be consulted and the outstanding options resolved to pay out $1$ token of $D$ or nothing. At their discretion, any user with a positive balance of options can then exercise them to obtain whatever payout they are owed.
 
 #### Oracle Snapshot
 
@@ -305,11 +305,11 @@ Although this structure has been defined for a binary outcome, it extends easily
 
 If $\Omega$ is an exhaustive set of mutually exclusive outcomes, and $Q_o$ is the quantity bid towards outcome $o \in \Omega$, then $Q := (1 - \phi) \sum_{o \in \Omega}{Q_o}$ is the number of options awarded to each outcome; $n \cdot Q$ options issued altogether, of which $Q$ will pay out. Then the price for outcome $o$ is $P_o := \frac{Q_o}{Q}$.
 
-The binary version is just a special case of this more general structure; notice for example that it posesses the same property that, neglecting fees, the sum of all prices is 1. Further, it still holds that it is expected to be profitable to buy a particular option whenever its price is less than the probability of its associated event occurring. As a result the prices can still be interpreted as the market's prediction of the odds of each event.
+The binary version is just a special case of this more general structure; notice for example that it posesses the same property that, neglecting fees, the sum of all prices is $1$. Further, it still holds that it is expected to be profitable to buy a particular option whenever its price is less than the probability of its associated event occurring. As a result the prices can still be interpreted as the market's prediction of the odds of each event.
 
 These events could be any discrete set of outcomes, such as the results of political elections. Thus the multimodal parimutuel structure can function as a general prediction market, provided that good oracle sources for events of interest can be obtained.
 
-With multimodal markets understood, continuous quantities are also handled by discretising their ranges into buckets. For example, it would be possible for users to participate in a market focusing on the Ethereum price, where the possible outcomes were ETH < \$140, \$140 < ETH < \$150, and \$150 < ETH. In principle any degree of granularity for these buckets is possible.
+With multimodal markets understood, continuous quantities are also handled by discretising their ranges into buckets. For example, it would be possible for users to participate in a market focusing on the Ethereum price, where the possible outcomes were $\\$140$ or less, $\\$140 - \\$150$, and $\\$150$ or more. In principle any degree of granularity for these buckets is possible.
 
 #### Limit Bids
 
@@ -333,8 +333,8 @@ These systems could be implemented as a smart contract or as a front-end overlay
 | $t_b$, $t_m$  | The timestamps for the end of bidding and maturity, respectively, of a given contract. $t_b$ must be later than the contract creation time, and $t_m$ must be later than $t_b$. |
 | $P_U$, $P_U^{target}$ | $P_U$ is the price of $U$ queried from the oracle $O$ at the maturity date $t_m$. $P_U^{target}$ is the target price of $U$ at maturity, against which $P_U$ is compared to assess the maturity condition. |
 | $\phi_{pool}$, $\phi_{creator}$ | The platform fee rate paid to the fee pool and to the market creator respectively. These fees are paid at maturity. |
-| $\phi$ | The overall market fee, which is equal to $\phi_{pool} + \phi_{creator}$. $\phi$ must be between 0 and 1. |
-| $\phi_{refund}$  | The fee rate to refund a bid. Its value must be between 0 and 1. |
+| $\phi$ | The overall market fee, which is equal to $\phi_{pool} + \phi_{creator}$. $\phi$ must in the range $[0, 1]$. |
+| $\phi_{refund}$  | The fee rate to refund a bid. Its value must be in the range $[0, 1]$. |
 | $L$, $S$ | The possible outcomes at maturity. $L$ is the event that $P_U \geq P_U^{target}$; when the "long" side of the market pays out. $S$ is the event that $P_U < P_U^{target}$; when the "short" side of the market pays out. |
 | $Q_L$, $Q_S$ | The total funds on the long and short sides of the market respectively. |
 | $Q$ | The quantity of options awarded to each side of the market; this is equal to $(1 - \phi) (Q_L + Q_S)$. |
@@ -425,11 +425,11 @@ Several potential extensions have been listed above. It should be determined whi
 
 | Symbol | Description |
 | ------ | ----------- |
-| $C$   | The minimum value of the initial capitalisation of a new binary option market. This is a decimal value of USD. |
+| $C$   | The minimum value of the initial capitalisation of a new binary option market. This is a value of USD. |
 | $\gamma$   | The size of the self-destruction deposit. This is a value of the denominating asset $D$. |
-| $\phi_{pool}$   | The platform fee rate paid to the fee pool. This is a decimal number between 0 and 1. |
-| $\phi_{creator}$ | The fee rate paid to the creator of a market. This is a decimal number between 0 and $1 - \phi_{pool}$. |
-| $\phi_{refund}$   | The fee rate to refund a bid. This is a decimal number between 0 and 1. |
+| $\phi_{pool}$   | The platform fee rate paid to the fee pool. This is a decimal number in the range $[0, 1]$. |
+| $\phi_{creator}$ | The fee rate paid to the creator of a market. This is a decimal number in the range $[0, 1]$. |
+| $\phi_{refund}$   | The fee rate to refund a bid. This is a decimal number in the range $[0, 1]$. |
 
 ---
 
