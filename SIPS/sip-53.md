@@ -104,7 +104,7 @@ After the maturity date is reached, users may exercise the options they hold, wh
 
 The smart contract architecture is summarised in the following diagram.
 
-![Architecture](BinaryOptionArchitecture.svg)
+![Architecture](assets/binary-options/smart-contract-architecture.svg)
 
 ---
 
