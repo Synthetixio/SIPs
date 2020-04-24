@@ -121,9 +121,9 @@ We will define $Q_L$ and $Q_S$ to be the quantity of tokens bid on the long and 
 
 At maturity, the entire value of bids from both sides of the market is paid out to the winning side, minus a fee $\phi$ for the market creator and fee pool. One or the other side paying out are mutually exclusive events, with each side of the market awarded $Q$ options, where
 
-$$
+\\[
 Q := (1 - \phi) (Q_L + Q_S)
-$$
+\\]
 
 The total quantity of options minted is $2Q$, but only $Q$ pay out at maturity.
 
@@ -131,13 +131,13 @@ The total quantity of options minted is $2Q$, but only $Q$ pay out at maturity.
 
 The market spent quantities $Q_L$ and $Q_S$ of tokens to exchange into $Q$ options per side, the overall option price is easily computed:
 
-$$
+\\[
 P_L := \frac{Q_L}{Q} = \frac{Q_L}{(1 - \phi) (Q_L + Q_S)}
-$$
+\\]
 
-$$
+\\[
 P_S := \frac{Q_S}{Q} = \frac{Q_S}{(1 - \phi) (Q_L + Q_S)}
-$$
+\\]
 
 For example, assuming no fees, if $Q_L = Q_S = 100$, then $P_L = P_S = 0.5$. But if 50 additional tokens are bid on $L$, then $P_L = 0.6$, while $P_S = 0.4$.
 Thus increased demand for options on one side of the market increases the price on that side and reduces it on the other. Larger bids will shift the prices by correspondingly greater amounts.
