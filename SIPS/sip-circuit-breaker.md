@@ -53,7 +53,7 @@ The circuit breaker will be triggered when either the `src` or `dest` synth have
 - Chainlink aggregators can record and expose the largest % price diff within a time period (ie 3 hours) as an onchain value.
 - On each price update calculate the % price diff between previous roundID and compare with the largest % price diff in the period.
 
-- Only update the update the % price diff value, if the new % price diff is > than largest % price diff in the period.
+- Only update the largest % price diff value, if the new % price diff is > than largest % price diff in the period.
 
 - Rollover the largest % price difference value each time period and reset with the latest price update % diff value.
 
