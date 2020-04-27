@@ -1,9 +1,9 @@
 ---
-sccp: <to be assigned>
+sccp: 18
 title: Temporary iETH limits
 author: Kain Warwick (@kaiynne)
 discussions-to: #sips-wips
-status: WIP
+status: Proposed
 created: 2020-04-27
 ---
 
