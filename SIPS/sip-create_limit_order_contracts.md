@@ -3,7 +3,7 @@ sip: <to be assigned>
 title: Limit Orders
 status: WIP
 author: Tom Howard (@thowar2), Nour Haridy (@nourharidy)
-discussions-to: #sip-wips
+discussions-to: #limit-orders
 
 created: 2020-04-27
 ---
