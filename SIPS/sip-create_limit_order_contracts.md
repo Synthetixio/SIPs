@@ -160,28 +160,16 @@ It is the only contract that is controlled by an `owner` address. It is also res
 ##### Constructor
 
 ```js
-constructor(address initialImplementation, address initialOwner, uint _upgradeTimelockBlocks) public;
+constructor(address initialImplementation, address initialOwner) public;
 ```
 
-The constructor sets the `initialImplementation` address to an internal global variable to be access later by the `getImplementation()` method. It also sets the `initialOwner` address to the `owner` public global variable. It also sets the `_upgradeTimelockBlocks` value to the `upgradeTimelockBlocks` public global variable.
+The constructor sets the `initialImplementation` address to an internal global variable to be access later by the `getImplementation()` method. It also sets the `initialOwner` address to the `owner` public global variable.
 
 ##### Public Variables
 
 ###### owner
 
 An address variable that stores the contract owner address responsible for upgrading the implementation contract address.
-
-###### upgradeTimelockBlocks
-
-An uint256 variable that stores the number of blocks required between calling the `initUpgrade()` function and `finalizeUpgrade()` function.
-
-###### pendingUpgradeAddress
-
-An address variable that stores a contract address that is currently pending to replace the current implementation contract following a call to the `initUpgrade` function. If no upgrade is pending, the value is `address(0)`.
-
-###### pendingUpgradeBlock
-
-An uint256 variable that stores the block where `initUpgrade` in the case of a pending upgrade. If no upgrade is pending, the value is 0.
 
 ---
 
@@ -195,40 +183,18 @@ function changeOwnership(address newOwner) public;
 
 This function allows only the current `owner` address to change the contract owner to a new address. It sets the `owner` global variable to the `newOwner` argument value and emits a `NewOwner` event.
 
-###### initUpgrade
+###### upgrade
 
 ``` js
-function initUpgrade(address newImplementation) public;
-```
-This function allows only the current `owner` address to initiate an upgrade for the implementation contract to a new address. It sets the `pendingUpgradeAddress` global variable to the `newImplementation` argument and the `pendingUpgradeBlock` to the current `block.number` and emits a `StartUpgrade` event.
-
-if there is a an existing pending upgrade, this function replaces it and resets its block.
-
-###### finalizeUpgrade
-
-``` js
-function finalizeUpgrade() public;
+function upgrade(address newImplementation) public;
 ```
 
-This function allows only the current `owner` address to finalize a pending upgrade. It can only be called if `block.number` is larger than `pendingUpgradeBlock + upgradeTimelockBlocks` and `pendingUpgradeAddress` is NOT `address(0)`.
+This function allows only the current `owner` address to upgrade the contract implementation address.
 
-It sets the internal implementation global variable to the `pendingUpgradeAddress`.
-It also resets the `pendingUpgradeAddress` and `pendingUpgradeBlock` global variables.
+It sets the internal implementation global variable to the `newImplementation` global variable.
 
-After and upgrade is finalized, the `Upgraded` event is emitted.
+Following the upgrade, the `Upgraded` event is emitted.
 
-###### cancelUpgrade
-
-``` js
-function cancelUpgrade() public;
-```
-
-This function allows only the current `owner` address to cancel a pending upgrade. It can only be called if `pendingUpgradeAddress` is NOT `address(0)`.
-
-It sets `pendingUpgradeAddress` global variable to `address(0)`
-It sets `pendingUpgradeBlock` global variable to 0.
-
-After and upgrade is cancelled, the `CancelUpgrade` event is emitted.
 
 #### Events
 
@@ -240,15 +206,6 @@ event NewOwner(address newOwner)
 
 This event is emitted when the contract `owner` address is changed.
 
-###### StartUpgrade
-
-``` js
-event StartUpgrade(address newImplementation, uint256 blockNumber)
-```
-
-This event is emitted when `initUpgrade()` is called.
-
-
 ###### Upgraded
 
 ``` js
@@ -256,14 +213,6 @@ event Upgraded(address newImplementation)
 ```
 
 This event is emitted when `finalizeUpgrade()` is called.
-
-###### CancelUpgrade
-
-``` js
-event CancelUpgrade()
-```
-
-This event is emitted when `cancelUpgrade()` is called.
 
 ---
 
@@ -464,7 +413,7 @@ It returns a `Promise<Order[]>` where an `Order` follows the interface above.
 By allowing anyone to run “limit order execution nodes” and compete for limit order execution fees, we achieve order execution reliability and censorship-resistance through permissionless-ness. These are especially important in the context of limit orders, where censorship or execution delays might cause trading losses.
 
 ### Upgradability
-We use an upgradable proxy pattern in order to allow a present owner address to upgrade the core implementation contract at any time. That said, the upgrades are restricted by a timelock duration after an upgrade is initiated by the owner. In this duration, all order submitters are able to cancel any active orders if they wish to opt-out of the new implementation. This restriction enables traders to act in the unlikely scenario where the owner turns malicious or becomes compromised and attempts to create an upgrade that puts their funds at risk.
+We use an upgradable proxy pattern in order to allow a present owner address to upgrade the core implementation contract at any time.
 
 ## Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
