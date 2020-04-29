@@ -55,8 +55,8 @@ function newOrder(bytes32 sourceCurrencyKey, uint sourceAmount, bytes32 destinat
 This function allows a `msg.sender` who has already given the `Proxy` contract an allowance of `sourceCurrencyKey` to submit a new limit order.
 
 1. Transfers `sourceAmount` of the `sourceCurrencyKey` Synth from the `msg.sender` to this contract via `transferFrom`.
-2. Adds a new limit order using `StateStorage.createOrder()` that can only execute on Synthetix exchange if the returned destination amount is more than or equal to `minDestinationAmount`.
-3. Requires a deposited `msg.value` to be more than the `executionFee` in order to refund node operators for their exact gas wei cost in addition to the `executionFee` amount. The remainder is transferred back to the user at the end of the trade.
+2. Adds a new limit order using `StateStorage.createOrder()` that can only execute on Synthetix exchange if the returned destination amount is more than or equal to `minDestinationAmount`. The order's `executed` property is set to `false`.
+3. Requires a deposited `msg.value` to be more than the `executionFee` in order to refund node operators for their exact gas wei cost in addition to the `executionFee` amount. The remainder will be transferred back to the user at the end of the trade.
 4. Emits an `Order` event for node operators including order data and `orderID`.
 5. Returns the `orderID`.
 
@@ -69,9 +69,10 @@ function cancelOrder(uint orderID) public;
 This function cancels a previously submitted and unexecuted order by the same `msg.sender` of the input `orderID`.
 
 1. Requires the order `submitter` property to be equal to `msg.sender` using `StateStorage.getOrder()`
-2. Change the order `active` property to `false` using `StateStorage.setOrder()`
+2. Requires the order `executed` property to be equal to be `false`.
 3. Refunds the order's `sourceAmount` and deposited `msg.value`
-4. Emits a `Cancel` event for node operators including the `orderID`
+4. Deletes the order using `StateStorage.deleteOrder()`
+5. Emits a `Cancel` event for node operators including the `orderID`
 
 ###### executeOrder
 
@@ -79,17 +80,30 @@ This function cancels a previously submitted and unexecuted order by the same `m
 function executeOrder(uint orderID) public;
 ```
 
-This function can be called by anyone using any valid orderID as long as the conditions are met. It fetches the current `Synthetix` contract address from `StateStorage.synthetix` and `ExchangeRates` contract address from `StateStorage.exchangeRates`. Then it attempts to execute the user's order using `Synthetix.exchange()`.
+This function allows a `msg.sender` who has an execualready given the `Proxy` contract an allowance of `sourceCurrencyKey` to submit a new limit order.
 
 It fetches the order data using `StateStorage.getOrder()`, if the amount received is larger than or equal to the order's `minDestinationAmount`:
 
-1. The amount received is forwarded to the order submitter's address. 
-2. This transaction's submitter address is refunded for this transaction's gas cost + the `executionFee` amount from the user's wei deposit.
-3. The remainder of the wei deposit is forwarded to the order submitter's address
-4. The order's `active` property is changed to `false` using `StateStorage.setOrder()`
-5. `Execute` event is emitted with the `orderID` for node operators 
+1. This transaction's submitter address is refunded for this transaction's gas cost + the `executionFee` amount from the user's wei deposit.
+2. The remainder of the wei deposit is forwarded to the order submitter's address
+3. The order's `executed` property is changed to `true`, the `executionTimestamp` property set to `block.timestamp` and `destinationAmount` set to the received amount using `StateStorage.setOrder()`
+4. `Execute` event is emitted with the `orderID` for node operators 
 
 If the amount received is smaller than the order's `minDestinationAmount`, the transaction reverts.
+
+###### withdrawOrders
+
+``` js
+function withdrawOrders(uint[] orderID) public;
+```
+
+This function allows the sender to withdraw funds associated with an array of executed orders as soon as the Synthetix fee reclamation window for each of the order has elapsed.
+
+It fetches each order's data using `StateStorage.getOrder()`, if each order's `submitter` is equal to `msg.sender`, has the `executed` property equal to `true` and `executionTimestamp + 3 minutes > block.timestamp`:
+
+1. The `destinationAmount` of the `destinationCurrencyKey` is transferred to `msg.sender`
+2. The order is deleted using `StateStorage.deleteOrder()`
+3. `Withdraw` event is emitted with the `orderID`.
 
 ###### getAllExecutableOrders
 
@@ -114,7 +128,7 @@ This event is emitted on each new submitted order. Its primary purpose is to ale
 ###### Cancel
 
 ``` js
-event Cancel(uint indexed orderID)
+event Cancel(uint indexed orderID);
 ```
 
 This event is emitted on each cancelled order. Its primary purpose is to alert node operators that a previously submitted order should no longer be watched.
@@ -122,10 +136,18 @@ This event is emitted on each cancelled order. Its primary purpose is to alert n
 ###### Execute
 
 ``` js
-event Execute(uint indexed orderID, address executor)
+event Execute(uint indexed orderID, address executor);
 ```
 
 This event is emitted on each successfully executed order. Its primary purpose is to alert node operators that a previously submitted order should no longer be watched.
+
+###### Withdraw
+
+``` js
+event Withdraw(uint indexed orderID, address indexed submitter);
+```
+
+This event is emitted on each successfully withdrawn order.
 
 ---
 
@@ -201,7 +223,7 @@ Following the upgrade, the `Upgraded` event is emitted.
 ###### NewOwner
 
 ``` js
-event NewOwner(address newOwner)
+event NewOwner(address newOwner);
 ```
 
 This event is emitted when the contract `owner` address is changed.
@@ -209,7 +231,7 @@ This event is emitted when the contract `owner` address is changed.
 ###### Upgraded
 
 ``` js
-event Upgraded(address newImplementation)
+event Upgraded(address newImplementation);
 ```
 
 This event is emitted when `finalizeUpgrade()` is called.
@@ -243,9 +265,12 @@ struct LimitOrder {
     uint256 minDestinationAmount;
     uint256 weiDeposit;
     uint256 executionFee;
-    bool active;
+    uint256 executionTimestamp;
+    uint256 destinationAmount;
+    bool executed;
 }
 ```
+All struct properties are required when an order is first created except `executionTimestamp` and `destinationAmount` which are only required after an order is executed. These two properties are left to their initial values (`0`) when the order is first created.
 
 
 ##### Public Variables
@@ -267,17 +292,27 @@ An address variable that contains the address of the Synthetix `ExchangeRates` c
 ###### setOrder
 
 ```js
-function setOrder(uint orderID, address submitter, bytes32 sourceCurrencyKey, uint sourceAmount, bytes32 destinationCurrencyKey, uint minDestinationAmount, uint weiDeposit, uint executionFee, bool active) public returns;
+function setOrder(uint orderID, address submitter, bytes32 sourceCurrencyKey, uint sourceAmount, bytes32 destinationCurrencyKey, uint minDestinationAmount, uint weiDeposit, uint executionFee, bool executed) public;
 ```
 
 Overwrites an existing `LimitOrder` struct in the internal orders mapping where the key is `orderID`. This method is to be used for modifying existing orders only. If the `orderID` is larger than the `latestID` global variable, it reverts.
 
 This method can only be called by the `Proxy` contract address, otherwise it reverts.
 
+###### deleteOrder
+
+```js
+function deleteOrder(uint orderID) public;
+```
+
+Deletes an existing `LimitOrder` struct in the internal orders mapping where the key is `orderID`. If the `orderID` is larger than the `latestID` global variable, it reverts.
+
+This method can only be called by the `Proxy` contract address, otherwise it reverts.
+
 ###### createOrder
 
 ```js
-function createOrder(address submitter, bytes32 sourceCurrencyKey, uint sourceAmount, bytes32 destinationCurrencyKey, uint minDestinationAmount, uint weiDeposit, uint executionFee, bool active) public returns (uint orderID)
+function createOrder(address submitter, bytes32 sourceCurrencyKey, uint sourceAmount, bytes32 destinationCurrencyKey, uint minDestinationAmount, uint weiDeposit, uint executionFee, bool executed) public returns (uint orderID)
 ```
 
 Creates a new `LimitOrder` struct in the internal orders mapping where the `orderID` (the mapping key) is `latestID + 1` and returns the new `orderID`. It also globally increases the value of `latestID` by 1.
@@ -287,7 +322,7 @@ This method can only be called by the `Proxy` contract address, otherwise it rev
 ###### getOrder
 
 ```js
-function getOrder(uint orderID) view public returns (address submitter, bytes32 sourceCurrencyKey, uint sourceAmount, bytes32 destinationCurrencyKey, uint minDestinationAmount, uint weiDeposit, uint executionFee, bool active);
+function getOrder(uint orderID) view public returns (address submitter, bytes32 sourceCurrencyKey, uint sourceAmount, bytes32 destinationCurrencyKey, uint minDestinationAmount, uint weiDeposit, uint executionFee, bool executed);
 ```
 
 Returns an the values of a `LimitOrder` using the supplied `orderID` from the internal orders mapping.
@@ -366,6 +401,17 @@ This method allows the user to submit a new limit order on the contract by calli
 This method also automatically attempts to sign an ERC20 approve transaction for the `sourceCurrencyKey` token if a sufficient allowance is not already present for the contract.
 
 It returns a `Promise<string>` as soon as the transaction is confirmed where the string contains the new order ID.
+
+##### withdraw
+
+``` js
+await instance.withdraw()
+```
+This method allows the user to withdraw funds from all executed orders on the contract that have passed the fee reclamantion duration.
+
+The method fetches all historical `Executed` events from the contract filtered by the user's address as the `submitter` and queries each order's current state using `StateStorage.getOrder`. If the order's `executed` property is `true` and `executedTimestamp + 3 minutes` is larger than the current timestamp, the order is is added to the array of order IDs sent to the Proxy contract's `withdrawOrders` function.
+
+It returns a `Promise<void>` as soon as the transaction is confirmed.
 
 ##### cancelOrder
 
