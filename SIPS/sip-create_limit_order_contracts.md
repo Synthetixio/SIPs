@@ -1,7 +1,7 @@
 ---
 sip: <to be assigned>
 title: Limit Orders
-status: WIP
+status: Proposal
 author: Tom Howard (@thowar2), Nour Haridy (@nourharidy)
 discussions-to: #limit-orders
 
