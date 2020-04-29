@@ -2,8 +2,8 @@
 sip: 55
 title: Circuit breaker for Synths (Phase One)
 status: Proposed
-author: Jackson Chan (@jacko125)
-discussions-to:
+author: Jackson Chan (@jacko125), Justin J Moses (@justinjmoses)
+discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
 created: 2020-04-24
 ---
@@ -14,13 +14,13 @@ created: 2020-04-24
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-Automated monitoring system to pause individual synths if their prices shift by more than `25%` in a single update.
+Automated system to prevent the exchange or transfer of individual synths if their prices shift by more than `25%` in a single update.
 
 ## Abstract
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-Sythetix uses a mix of decentralised oracle feeds from Chainlink and oracle feeds from different sources for the synthetix exchange. In order to protect the integrity of the system, large abnormal price shifts in price updates of a synth will trigger a circuit breaker so that the synth becomes suspended from exchanging and transferring until it is investigated.
+Sythetix uses a mix of decentralised oracles from Chainlink networks along with our centralized SNX Oracle (to be phased out in [SIP-36](./sip-36.md)). In order to protect the integrity of the system, large abnormal price shifts in price updates of a synth will trigger a circuit breaker so that the synth becomes suspended from exchanging and transferring until it is investigated. Upon investigation by the Protocol DAO, the synth will be resumed following any remediations required.
 
 ## Motivation
 
@@ -48,7 +48,7 @@ Once paused, we have a number of systems in place to alert the protocol DAO in t
 
 **The synth cannot be resumed by the circuit-breaker oracle due to access control restrictions**.
 
-Resumption of a synth when it's suspended by the circuit breaker will be possible by the [Protocol DAO](https://contracts.synthetix.io/ProtocolDAO) after investigating the price shock and confirming oracle feeds are stable.
+Resumption of a synth when it's suspended by the circuit breaker will be possible only by the [Protocol DAO](https://contracts.synthetix.io/ProtocolDAO) (see Rationale below) after investigating the price shock and confirming oracle feeds are stable.
 
 ## Rationale
 
@@ -58,7 +58,7 @@ This phased approach is designed to give us as much protection now as possible w
 
 In order to decentralize the resuming of synths process, work is ongoing to connect an Aragon DAO contract so that SNX stakers are able to vote to resume without the Protocol DAO's intervention (a separate SIP will address this).
 
-The next phase of this circuit breaker (also another SIP) will performed on-chain via the `Synthetix.exchange()` function itself, so that an exchange from / into the synth will pause the synth if there has been a price update above the threshold.
+The next phase of this circuit breaker will be performed on-chain by modifying the exchange functionality within Synthetix (also another SIP). This decentrazlied approach will alleviate the need for the circuit-breaker oracle altogether. Instead of an oracle, the check will performed on-chain via the `Synthetix.exchange()` function itself, so that an exchange from / into the synth will pause the synth if there has been a price update above the threshold. Once the decentralized circuit-breaker is implemented, the circuit-breaker oracle will be deactivated.
 
 ## Test Cases
 
