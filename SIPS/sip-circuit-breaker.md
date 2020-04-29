@@ -1,6 +1,6 @@
 ---
 sip: <to be assigned>
-title: Circuit breaker for Synths exchange
+title: Circuit breaker for Synths
 status: WIP
 author: Jackson Chan (@jacko125)
 discussions-to:
