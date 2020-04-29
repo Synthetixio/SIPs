@@ -12,7 +12,7 @@ created: 2020-04-24
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
-Phase one of circuit breakers for Synthetix exchange. Sythetix uses a mix of decentralised oracle feeds from Chainlink and oracle feeds from different sources for the synthetix exchange. In order to protect the integrity of the system large abnormal price shifts in price updates of a synth would trigger a circuit breaker so that the synth becomes suspended from exchanging until investigated.
+Phase one of circuit breakers for Synthetix exchange. Sythetix uses a mix of decentralised oracle feeds from Chainlink and oracle feeds from different sources for the synthetix exchange. In order to protect the integrity of the system, large abnormal price shifts in price updates of a synth would trigger a circuit breaker so that the synth becomes suspended from exchanging and transferring until it is investigated.
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
@@ -44,28 +44,9 @@ The price oracle will continue to publish the synth prices on chain to the excha
 
 The behaviour would mimic decentralised chainlink oracles which continue updating prices onchain regardless of the status of the synth's traded on synthetix exchange.
 
-2. **Decentralised circuit breaker**
-
-When a user exchanges `src` synth for `dest` synth, each exchange transaction can read and check from chainlink aggregators or exchange rates contract the largest % price difference value between a price update for the `src` and `dest` synths respectively.
-
-The circuit breaker will be triggered when either the `src` or `dest` synth have a % price difference between two updates above the 25% threshold limit and automatically have the synth suspended by the exchange transaction.
-
-- Chainlink aggregators can record and expose the largest % price diff within a time period (ie 3 hours) as an onchain value.
-- On each price update calculate the % price diff between previous roundID and compare with the largest % price diff in the period.
-
-- Only update the largest % price diff value, if the new % price diff is > than largest % price diff in the period.
-
-- Rollover the largest % price difference value each time period and reset with the latest price update % diff value.
-
-- Reduces gas cost by only updating the largest % price diff value within a time period and checking on each price update whether the largest % price diff needs to be updated.
-
-- Each exchange txn will only need to check this rolled up value (largest % price difference in period) instead of reading multiple roundID's and calculate each price differences between the roundID's to check whether a price anomaly occured within the time period.
-
 **Resuming synth**
 
-- Resumption of a synth when it's suspended by the decentralised circuit breaker will be possible by the protocol DAO or Synthetix community voting via Aragon DAO after investigating the price shock.
-
-- Record the RoundID where price shock occured as resolved so the circuit breaker will ignore this on future exchange txn's.
+- Resumption of a synth when it's suspended by the circuit breaker will be possible by the protocol DAO after investigating the price shock and confirming oracle feeds are stable. The Synthetix community / token holders will also be able to vote to resume any paused synths via a community voting mechanism such as Aragaon DAO once that is released.
 
 ## Rationale
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
