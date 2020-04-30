@@ -18,7 +18,7 @@ This configuration change proposes to delete the [ArbRewarder](http://contracts.
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The [ArbRewarder's purpose](https://blog.synthetix.io/snx-arbitrage-pool/) was to fix the sETH/ETH uniswap pools peg. Since then a new [sUSD curve pool](https://blog.synthetix.io/susd-curve-pool-vulnerability-next-steps/) has been created to create a stable synth liquidity pool that keeps the stakers debt pool more netural if ETH price pumps.
+The [ArbRewarder's purpose](https://blog.synthetix.io/snx-arbitrage-pool/) was to fix the sETH/ETH uniswap pools peg. Since then a new [sUSD curve pool](https://blog.synthetix.io/susd-curve-pool-vulnerability-next-steps/) has been created to create a stable synth liquidity pool that keeps the stakers debt pool more netural.
 
 Since the ArbRewarder was found to be manipulated has was paused then deprecated but it has amassed 1M SNX tokens which is a war chest to be used to help maintain pegs for liquidity pools. The SNX will be withdrawn to the Synthetix DAO and used for the [eSNX mechanism](https://blog.synthetix.io/snx-dfusion-trial-and-esnx/) 
 
