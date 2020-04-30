@@ -36,6 +36,8 @@ Phase one will use a continuous monitoring process (an off-chain oracle) to moni
 
 If prices are detected to have moved between a single update of `25%` or more in either direction, the circuit-breaker oracle will set the synth as disabled using the `System.Status.suspendSynth()` function with an assigned `reasonCode`.
 
+If the prices on the associated `AggregatorInterface` contracts from Chainlink deviate from the off-chain oracle price sources by `10%` or more, the circuit-breaker oracle will set the synth as disabled. The lower threshold is based on the volatility of the `Forex, commodities and equities` synths currently on Chainlink compared to the volatility of `crypto` synths.
+
 From SIP-44, synth pausing means that the synth in question:
 
 - Cannot be exchanged into any other synth
