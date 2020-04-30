@@ -36,7 +36,7 @@ Phase one will use a continuous monitoring process (an off-chain oracle) to moni
 
 If prices are detected to have moved between a single update of `25%` or more in either direction, the circuit-breaker oracle will set the synth as disabled using the `System.Status.suspendSynth()` function with an assigned `reasonCode`.
 
-If the prices on the associated `AggregatorInterface` contracts from Chainlink deviate from the off-chain oracle price sources by `10%` or more, the circuit-breaker oracle will set the synth as disabled. The lower threshold is based on the volatility of the `Forex, commodities and equities` synths currently on Chainlink compared to the volatility of `crypto` synths.
+If prices on the associated `AggregatorInterface` contracts from Chainlink deviate from the off-chain oracle price sources by `10%` or more, the circuit-breaker oracle will set the synth as disabled. The lower threshold is based on the volatility of the `Forex, commodities and equities` synths currently on Chainlink compared to the volatility of `crypto` synths.
 
 From SIP-44, synth pausing means that the synth in question:
 
@@ -66,10 +66,11 @@ The next phase of this circuit breaker will be performed on-chain by modifying t
 
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
-1. When the underlying price of any synth, tracked via the ExchangeRates contract, changes by more than `25%` up or down between a single update, then the `SystemStatus.suspendSynth(synth)` function will be automatically invoked by the circuit-breaker oracle
-2. When the `SystemStatus.resumeSynth(synth)` function is invoked by the circuit-breaker, it fails as it does not have access
-3. When the `SystemStatus.resumeSynth(synth)` function is invoked by anyone other than the ProtocolDAO, it fails (until such time as a community vote via token holders can be implemented)
-4. When the `SystemStatus.resumeSynth(synth)` function is invoked by the Protocol DAO, synths are re-enabled.
+1. When the underlying price of any synth, tracked via the ExchangeRates contract, changes by more than `25%` up or down between a single update, then the `SystemStatus.suspendSynth(synth)` function will be automatically invoked by the circuit-breaker oracle.
+2. When the underlying price of any synth, tracked via the Chainlink AggregatorInterface, deviates by more than `10%` from the off-chain oracle price sources, then the `SystemStatus.suspendSynth(synth)` function will be automatically invoked by the circuit-breaker oracle.
+3. When the `SystemStatus.resumeSynth(synth)` function is invoked by the circuit-breaker, it fails as it does not have access
+4. When the `SystemStatus.resumeSynth(synth)` function is invoked by anyone other than the ProtocolDAO, it fails (until such time as a community vote via token holders can be implemented)
+5. When the `SystemStatus.resumeSynth(synth)` function is invoked by the Protocol DAO, synths are re-enabled.
 
 ## Implementation
 
