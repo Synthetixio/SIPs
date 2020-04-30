@@ -14,13 +14,13 @@ created: 2020-04-24
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-Automated system to prevent the exchange or transfer of individual synths if their prices shift by more than `25%` in a single update.
+Automated system to prevent the exchange or transfer of individual synths if their prices shift by more than `25%` (crypto) or `10%` (traditional) in a single update.
 
 ## Abstract
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-Sythetix uses a mix of decentralised oracles from Chainlink networks along with our centralized SNX Oracle (to be phased out in [SIP-36](./sip-36.md)). In order to protect the integrity of the system, large abnormal price shifts in price updates of a synth will trigger a circuit breaker so that the synth becomes suspended from exchanging and transferring until it is investigated. Upon investigation by the Protocol DAO, the synth will be resumed following any remediations required.
+Sythetix uses a mix of decentralised oracles from Chainlink networks (for traditional markets) along with our centralized SNX Oracle (for crypto markets - to be phased out in [SIP-36](./sip-36.md)). In order to protect the integrity of the system, large abnormal price shifts in price updates of a synth will trigger a circuit breaker so that the synth becomes suspended from exchanging and transferring until it is investigated. Upon investigation by the Protocol DAO, the synth will be resumed following any remediations required.
 
 ## Motivation
 
@@ -32,11 +32,11 @@ The primary motivation is security of funds. There have been occasions where syn
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
-Phase one will use a continuous monitoring process (an off-chain oracle) to monitor the prices of assets in both the Synthetix `ExchangeRates` contract and the associated `AggregatorInterface` contracts from Chainlink. This circuit breaker oracle will have the power to suspend any synth at any time via previously implemented via the `SystemStatus` contract in [SIP-44](./sip-44.md)).
+Phase one will use a continuous process (an off-chain oracle) to monitor the prices of assets in both the Synthetix `ExchangeRates` contract and the associated `AggregatorInterface` contracts from Chainlink. This circuit breaker oracle will have the power to suspend any synth at any time via the `SystemStatus` contract which was implemented in [SIP-44](./sip-44.md)).
 
-If prices are detected to have moved between a single update of `25%` or more in either direction, the circuit-breaker oracle will set the synth as disabled using the `System.Status.suspendSynth()` function with an assigned `reasonCode`.
+If crypto prices are detected to have moved between a single update of `25%` or more in either direction, the circuit-breaker oracle will set the synth as suspended using the `System.Status.suspendSynth()` function with an assigned `reasonCode`.
 
-If prices on the associated `AggregatorInterface` contracts from Chainlink deviate from the off-chain oracle price sources by `10%` or more, the circuit-breaker oracle will set the synth as disabled. The lower threshold is based on the volatility of the `Forex, commodities and equities` synths currently on Chainlink compared to the volatility of `crypto` synths.
+If traditional prices (forex, commodities, equities) on the associated `AggregatorInterface` contracts from Chainlink deviate from the off-chain oracle price sources by `10%` or more, the circuit-breaker oracle will set the synth as suspended. The lower threshold for traditional markets compared to crypto is based on the volatility of the `Forex, commodities and equities` synths currently on Chainlink compared to the volatility of `crypto` synths.
 
 From SIP-44, synth pausing means that the synth in question:
 
@@ -50,7 +50,7 @@ Once paused, we have a number of systems in place to alert the protocol DAO in t
 
 **The synth cannot be resumed by the circuit-breaker oracle due to access control restrictions**.
 
-Resumption of a synth when it's suspended by the circuit breaker will be possible only by the [Protocol DAO](https://contracts.synthetix.io/ProtocolDAO) (see Rationale below) after investigating the price shock and confirming oracle feeds are stable.
+Resumption of a synth that has been suspended by the circuit breaker will be possible only by the [Protocol DAO](https://contracts.synthetix.io/ProtocolDAO) (see Rationale below) after investigating the price shock and confirming oracle feeds are stable.
 
 ## Rationale
 
@@ -58,7 +58,7 @@ Resumption of a synth when it's suspended by the circuit breaker will be possibl
 
 This phased approach is designed to give us as much protection now as possible while we still have centralised services yet also planning for the next decentralized phase.
 
-In order to decentralize the resuming of synths process, work is ongoing to connect an Aragon DAO contract so that SNX stakers are able to vote to resume without the Protocol DAO's intervention (a separate SIP will address this).
+In order to decentralize the resuming of synths process, work is ongoing to connect an Aragon DAO contract (or similar token holder voting system) so that SNX stakers are able to vote to resume without the Protocol DAO's intervention (a separate SIP will address this).
 
 The next phase of this circuit breaker will be performed on-chain by modifying the exchange functionality within Synthetix (also another SIP). This decentrazlied approach will alleviate the need for the circuit-breaker oracle altogether. Instead of an oracle, the check will performed on-chain via the `Synthetix.exchange()` function itself, so that an exchange from / into the synth will pause the synth if there has been a price update above the threshold. Once the decentralized circuit-breaker is implemented, the circuit-breaker oracle will be deactivated.
 
@@ -66,11 +66,11 @@ The next phase of this circuit breaker will be performed on-chain by modifying t
 
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
-1. When the underlying price of any synth, tracked via the ExchangeRates contract, changes by more than `25%` up or down between a single update, then the `SystemStatus.suspendSynth(synth)` function will be automatically invoked by the circuit-breaker oracle.
-2. When the underlying price of any synth, tracked via the Chainlink AggregatorInterface, deviates by more than `10%` from the off-chain oracle price sources, then the `SystemStatus.suspendSynth(synth)` function will be automatically invoked by the circuit-breaker oracle.
+1. When the underlying price of any crypto synth, tracked via the `ExchangeRates` contract, changes by more than `25%` up or down between a single update, then the `SystemStatus.suspendSynth(synth)` function will be automatically invoked by the circuit-breaker oracle.
+2. When the underlying price of any traditional synth, tracked via a Chainlink `AggregatorInterface`, deviates by more than `10%` from the off-chain oracle price sources, then the `SystemStatus.suspendSynth(synth)` function will be automatically invoked by the circuit-breaker oracle.
 3. When the `SystemStatus.resumeSynth(synth)` function is invoked by the circuit-breaker, it fails as it does not have access
 4. When the `SystemStatus.resumeSynth(synth)` function is invoked by anyone other than the ProtocolDAO, it fails (until such time as a community vote via token holders can be implemented)
-5. When the `SystemStatus.resumeSynth(synth)` function is invoked by the Protocol DAO, synths are re-enabled.
+5. When the `SystemStatus.resumeSynth(synth)` function is invoked by the Protocol DAO, the synth is successfully re-enabled.
 
 ## Implementation
 
