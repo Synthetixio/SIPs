@@ -24,7 +24,7 @@ Currently there is one universal exchange rate for exchanging synths which is se
 
 Upgrading the `FeePool` to allow an array of Synths exchange rates to be set allowing unique pricing per asset or class.
 
-There could be multiple pricing options TBD.
+There could be multiple pricing options TBD such as;
 
 1. Charge the fee rate of the synth being exchanged into. e.g. If sETH is 1% and sUSD was 0% then it would be free to exchange from sETH to sUSD.
 2. Charge the sum of the pair. e.g. if sETH is .5% and sUSD is .1% the total exchange fee would be 0.6%
@@ -33,7 +33,7 @@ There could be multiple pricing options TBD.
 
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
 
-With a universal exchange fee rate the protocol is limited in it's ability to price markets fairly or apply incentive mechanisms. To deter front runners setting a high exchange rate was used to reduce profiitability affecting all Synth markets and discouraging good actors from trading.
+With a universal exchange fee rate the protocol is limited in its ability to price markets fairly or apply incentive mechanisms. To deter front runners setting a high exchange rate was used to reduce profiitability affecting all Synth markets and discouraging good actors from trading.
 
 Unique pricing per synth would allow potential outcomes such as;
 
