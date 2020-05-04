@@ -78,7 +78,7 @@ As we want to maximise the number and volume of trades, this should not be deduc
 
 ## Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
-###Simple case dolphins
+### Simple case dolphins
 |      | Start balance | End balance | Trading volume | Fees generated | Balance+Fees | Bonus(%) | Gain   |
 |------|---------------|-------------|----------------|----------------|--------------|----------|--------|
 | John | 1000          | 2000        | 9000           | 27             | 2027         | 9        | 111.9% |
@@ -86,7 +86,7 @@ As we want to maximise the number and volume of trades, this should not be deduc
 | Jane | 1000          | 1500        | 1000           | 3              | 1503         | 0        | 50.3%  |
 
 
-###Case with synths added/removed dolphins
+### Case with synths added/removed dolphins
 Lets reuse the example above but imagine John has moved sETH from his wallet during the week.
 At the block in which it was moved, this sETH was worth 200sUSD.
 His starting balance will stay the same, but we will add those 200sUSD to his end balance as to correctly calculate the gain.
