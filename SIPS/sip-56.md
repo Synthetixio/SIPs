@@ -28,6 +28,7 @@ There could be multiple pricing options TBD such as;
 
 1. Charge the fee rate of the synth being exchanged into. e.g. If sETH is 1% and sUSD was 0% then it would be free to exchange from sETH to sUSD.
 2. Charge the sum of the pair. e.g. if sETH is .5% and sUSD is .1% the total exchange fee would be 0.6%
+3. Charge the lowest of the pair. e.g. if sETH is .5% and sUSD is .1% the exchange fee would be 0.1%
 
 ## Motivation
 
@@ -56,20 +57,50 @@ New functions required in the upgradable `FeePool` contract.
 Will allow the protocol DAO to set n number of exchangeFeeRates for n number of synths in one transaction.
 
 **Function signature**
+
 `setExchangeFeeRateForSynths(bytes32 [synthKeys], uint256 [exchangeFeeRates]) onlyOwner`
 
-`bytes32 [synthKeys]`: The array of currencyKeys for the synths to set
+- `bytes32 [synthKeys]`: The array of currencyKeys for the synths to set
+- `uint256 [exchangeFeeRates]`: The array of rates
 
-`uint256 [exchangeFeeRates]`: The array of rates
+### exchangeFeeRateForSynth
+
+Return the exchange fee rate for a synth
+
+**Function signature**
+
+`exchangeFeeForSynth(bytes32 synth) public view returns (uint)`
+
+- `bytes32 synth`: synth key to request the rate for 
 
 ### deleteExchangeFeeRateForSynths (optional)
 
 Will allow the protocol DAO to delete n number of synth rate entries freeing up the storage of removed / deprecated synths
 
 **Function signature**
+
 `deleteExchangeFeeRateForSynths(bytes32 [synthKeys]) onlyOwner`
 
-`bytes32 [synthKeys]`: The array of currencyKeys for the synths to delete
+- `bytes32 [synthKeys]`: The array of currencyKeys for the synths to delete
+
+
+New functions required in the upgradable `Exchanger` contract.
+
+### exchangeFeeForTrade
+
+Returns the exchange fee in sUSD.
+
+Deprecate existing fee view function `FeePool.exchangeFeeIncurred(uint value) public view returns (uint)`
+and move to `Exchanger.feeRateForExchange`
+to accept the Synth trading pair as arguments to determine the exchange fee for the trade. 
+
+**Function signature**
+
+`exchangeFeeForTrade(uint amount, bytes32 source, bytes32 destination) public view returns (uint)`
+
+- `uint amount`: Amount of the source Synth to exchange
+- `bytes32 source`: Synth exchanging from 
+- `bytes32 destination`: Synth to exchange into 
 
 ## Rationale
 
