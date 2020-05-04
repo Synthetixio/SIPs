@@ -13,7 +13,7 @@ created: 2020-05-04
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
-The basic idea is adding weekly trading rewards to attract new traders to https://synthetix.exchange/ as well as to encourage SNX minters to be actively trade their synths on the exchange.
+The basic idea is adding weekly trading rewards to attract new traders to https://synthetix.exchange/ as well as to encourage SNX minters to actively trade their synths on the exchange.
 Ultimately, the goal is constant growth in exchange usage and volume.
 
 ## Abstract
