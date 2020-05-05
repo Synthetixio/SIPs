@@ -67,7 +67,7 @@ If during the week, the wallet adds new synths, their value at the block in whic
 **Wallet end balance** is the value of the synths at the ending weekly block plus the fees the wallet generated during the week (as we dont want to penalize traders in the rewards system).
 If during the week, the wallet moves away some synths, their value at the block in which they were moved is added to the end balance.
 
-The percentage weekly gain is: (endBalance-startBalance+feesGenerated)*tradingQuotient/startBalance. 
+The percentage weekly gain is: ((endBalance+feesGenerated)*tradingQuotient-startBalance)/startBalance. 
 
 
 ## Rationale
@@ -82,11 +82,11 @@ As we want to maximise the number and volume of trades, this should not be deduc
 ## Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 ### Simple case dolphins
-|      | Start balance | End balance | Trading volume | Fees generated | Balance+Fees | Bonus(%) | Gain   |
-|------|---------------|-------------|----------------|----------------|--------------|----------|--------|
-| John | 1000          | 2000        | 9000           | 27             | 2027         | 9        | 111.9% |
-| Paul | 2000          | 3500        | 3000           | 9              | 3509         | 3        | 77.7%  |
-| Jane | 1000          | 1500        | 1000           | 3              | 1503         | 0        | 50.3%  |
+|      | Start balance | End balance | Trading volume | Fees generated | Balance+Fees | Bonus(%) | Balance with bonus| Gain   |
+|------|---------------|-------------|----------------|----------------|--------------|----------|-------------------|--------|
+| John | 1000          | 2000        | 9000           | 27             | 2027         | 9        |    2209.4         | 120.9% |
+| Paul | 2000          | 3500        | 3000           | 9              | 3509         | 3        |    3614.3         | 80.7%  |
+| Jane | 1000          | 1500        | 1000           | 3              | 1503         | 0        |    1503           | 50.3   |
 
 
 ### Case with synths added/removed dolphins
@@ -97,22 +97,22 @@ His starting balance will stay the same, but we will add those 200sUSD to his en
 Lets also imagine Paul has added 100sLink during the week. At the block in which they were added sLink price was 4sUSD, so 400sUSD is added to his starting balance.
 As the price of sLINK has risen and is worth 5sUSD at the end of the week, his ending balance is increased by 500sUSD;
 
-|      | Start balance | End balance | Trading volume | Fees generated | Balance+Fees | Bonus(%) | Gain   |
-|------|---------------|-------------|----------------|----------------|--------------|----------|--------|
-| John | 1000          | 2000        | 9000           | 27             | 2027         | 9        | 111.9% |
-| Paul | 2400          | 4000        | 3000           | 9              | 4009         | 3        | 69.05% |
-| Jane | 1000          | 1500        | 1000           | 3              | 1503         | 0        | 50.3%  |
+|      | Start balance | End balance | Trading volume | Fees generated | Balance+Fees | Bonus(%) | Balance with bonus| Gain   |
+|------|---------------|-------------|----------------|----------------|--------------|----------|-------------------|--------|
+| John | 1000          | 2000        | 9000           | 27             | 2027         | 9        | 		2209.4		 | 120.9% |
+| Paul | 2400          | 4000        | 3000           | 9              | 4009         | 3        | 		4129.3		 | 72.05% |
+| Jane | 1000          | 1500        | 1000           | 3              | 1503         | 0        | 		1503		 | 50.3%  |
 
 
 ### Case with whale winning rewards in dolphin cateogry
 Now if John wanted to continue trading once he reached 9999sUSD trading volume, he might feel discouraged as he loses his current trading bonus.
 This is why all whales will still be considered in the dolphin category, provided that they didnt win any prizes in the whale category.
 
-|      | Start balance | End balance | Trading volume | Fees generated | Balance+Fees | Bonus(%) | Gain   |
-|------|---------------|-------------|----------------|----------------|--------------|----------|--------|
-| John | 1000          | 2000        | 11000          | 33             | 2033         | 10       | 113.63%|
-| Paul | 2400          | 4000        | 3000           | 9              | 4009         | 3        | 69.05% |
-| Jane | 1000          | 1500        | 1000           | 3              | 1503         | 0        | 50.3%  |
+|      | Start balance | End balance | Trading volume | Fees generated | Balance+Fees | Bonus(%) | Balance with bonus| Gain   |
+|------|---------------|-------------|----------------|----------------|--------------|----------|-------------------|--------|
+| John | 1000          | 2000        | 11000          | 33             | 2033         | 10       | 		2236.3		 | 123.6% |
+| Paul | 2400          | 4000        | 3000           | 9              | 4009         | 3        | 		4129.3		 | 72.05% |
+| Jane | 1000          | 1500        | 1000           | 3              | 1503         | 0        | 		1503		 | 50.3%  |
 
 ## Implementation
 <!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
