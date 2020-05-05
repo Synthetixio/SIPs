@@ -52,6 +52,7 @@ Suggested rewards in sUSD per category for first 3  (5 for shrimps) places are:
 * Shrimp:500, 300, 200, 100, 50
 
 Total: 9.35k
+The boost in volume required to justify the funds spent on rewards: 3 million
 
 As already explained, the idea is to have this system working seamlessly for the traders.
 That means that they dont need to worry about disqualifications, as there would be none.
@@ -122,7 +123,7 @@ Rewards distribution can be done manually in the trial period.
 ## Configurable Values (Via SCCP)
 <!--Please list all values configurable via SCCP under this implementation.-->
 * Rewards quantity - suggested 9350 weekly sUSD
-* Rewards source - taken from the weekly fees pool
+* Rewards source - grants DAO
 * Rewards distribution per category
 * Category thresholds
 ## Copyright
