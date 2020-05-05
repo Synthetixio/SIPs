@@ -46,7 +46,7 @@ The only thing that the traders need to do to be eligible for weekly rewards is 
 All whales are eligible for dolphin rewards, if they haven't won any rewards in their primary tier.
 Same applies to dolphins in regards to shrimps.
 
-Suggested rewards in sUSD per category for first 3  (5 for shrimps) places are:
+Suggested rewards in SNX per category for first 3  (5 for shrimps) places are:
 * Whale: 3000, 2000, 1000
 * Dolphin: 1000, 700, 500
 * Shrimp:500, 300, 200, 100, 50
@@ -122,7 +122,7 @@ The effort resides in reading the data correctly off chain and creating the lead
 Rewards distribution can be done manually in the trial period.
 ## Configurable Values (Via SCCP)
 <!--Please list all values configurable via SCCP under this implementation.-->
-* Rewards quantity - suggested 9350 weekly sUSD
+* Rewards quantity - suggested 9350 weekly SNX
 * Rewards source - grants DAO
 * Rewards distribution per category
 * Category thresholds
