@@ -1,6 +1,6 @@
 ---
 sip: TBD
-title: Trading rewards
+title: Automatized weekly trading competition
 status: WIP
 author: Danijel Gornjakovic (@dgornjakovic)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
@@ -43,6 +43,8 @@ We would define three categories for rewards depending on the weekly generated t
 * Shrimp - 100 to 1k
 
 The only thing that the traders need to do to be eligible for weekly rewards is to trade at list 100sUSD worth of weekly volume.
+All whales are eligible for dolphin rewards, if they haven't won any rewards in their primary tier.
+Same applies to dolphins in regards to shrimps.
 
 Suggested rewards in sUSD per category for first 3  (5 for shrimps) places are:
 * Whale: 3000, 2000, 1000
@@ -99,6 +101,18 @@ As the price of sLINK has risen and is worth 5sUSD at the end of the week, his e
 | John | 1000          | 2000        | 9000           | 27             | 2027         | 9        | 111.9% |
 | Paul | 2400          | 4000        | 3000           | 9              | 4009         | 3        | 69.05% |
 | Jane | 1000          | 1500        | 1000           | 3              | 1503         | 0        | 50.3%  |
+
+
+### Case with whale winning rewards in dolphin cateogry
+Now if John wanted to continue trading once he reached 9999sUSD trading volume, he might feel discouraged as he loses his current trading bonus.
+This is why all whales will still be considered in the dolphin category, provided that they didnt win any prizes in the whale category.
+
+|      | Start balance | End balance | Trading volume | Fees generated | Balance+Fees | Bonus(%) | Gain   |
+|------|---------------|-------------|----------------|----------------|--------------|----------|--------|
+| John | 1000          | 2000        | 11000          | 33             | 2033         | 10       | 113.63%|
+| Paul | 2400          | 4000        | 3000           | 9              | 4009         | 3        | 69.05% |
+| Jane | 1000          | 1500        | 1000           | 3              | 1503         | 0        | 50.3%  |
+
 ## Implementation
 <!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
 The SIP is written with the idea to minimize the implementation effort, thus requiring no on-chain computations.
