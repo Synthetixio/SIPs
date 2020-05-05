@@ -68,7 +68,8 @@ If during the week, the wallet adds new synths, their value at the block in whic
 If during the week, the wallet moves away some synths, their value at the block in which they were moved is added to the end balance.
 
 The percentage weekly gain is: ((endBalance+feesGenerated)*tradingQuotient-startBalance)/startBalance. 
-
+Where tradingQuotient=tradeVolume*0.01/tierThreshold+1
+Maximum value of the tradingQuotient is 1.1 (10%).
 
 ## Rationale
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
