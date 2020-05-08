@@ -1,7 +1,7 @@
 ---
 sip: 57
 title: Permanent Read-only Proxy for Address Resolver
-status: WIP
+status: Proposed
 author: Justin J Moses (@justinjmoses)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
