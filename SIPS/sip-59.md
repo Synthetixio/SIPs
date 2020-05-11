@@ -72,7 +72,12 @@ interface IDelegatedMigrator {
 }
 ```
 
+#### Example Migration Contract
+
 ```solidity
+
+import "synthetix/contracts/interfaces/IAddressResolver.sol";
+
 // Example Migration script
 contract AtlairUpgrade is IMigration {
 
@@ -80,13 +85,13 @@ contract AtlairUpgrade is IMigration {
       return 1;
     }
 
-    function migrate(AddressResolver resolver, uint256 index) external {
+    function migrate(IAddressResolver resolver, uint256 index) external {
       require(index < 1, "Invalid migration script index");
 
       migrate0(resolver);
     }
 
-    function migrate0(AddressResolver resolver) internal {
+    function migrate0(IAddressResolver resolver) internal {
       Proxy synthetixProxy = resolver.getAddress("ProxySynthetix");
       synthetixProxy.setTarget(0x00000000000000000000000000000000000000000);
 
