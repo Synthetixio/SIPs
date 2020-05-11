@@ -22,7 +22,7 @@ Emit list of individual fee reclamations and rebates during exchange settlement 
 
 Upgrade the Exchanger `settle()` function to emit individual fee reclaimation / rebate amounts for each trade.
 
-Add an internal function `_calculateSettlementsOwing` that will emit an event `ExchangeEntriesSettled` when `Exchanger.settle()` is invoked.
+Add an internal function `_settlementsOwing` that will emit an event `ExchangeEntriesSettled` when `Exchanger.settle()` is invoked.
 
 Emit a list for each exchange entry with details about the `amountShouldHaveReceived`, the corresponding `amountReceived`, `reclaimAmount`, `rebateAmount`, and `timestamp` of the entry that is settled in the transaction.
 
