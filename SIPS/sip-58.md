@@ -40,7 +40,7 @@ It is important that traders can see on each trade the fee reclamation and rebat
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
-### Exchanger.settle() ###
+### Exchanger.settle ###
 
 Add an internal function `_settlementsOwing` that will emit an event `ExchangeEntryReclaim` for each reclaim and `ExchangeEntryRebate` for each rebate when `Exchanger.settle()` is invoked.
 
@@ -51,8 +51,8 @@ Add an internal function `_settlementsOwing` that will emit an event `ExchangeEn
 Emit an event `ExchangeEntryReclaim` or `ExchangeEntryRebate` for each exchangeEntry within `_settlementsOwing` when `Exchanger.settle()` is invoked.
 
 ```solidity
-event ExchangeEntryReclaim(address indexed from, bytes32 src, uint amount, bytes32 dest, uint reclaimAmount, uint timestamp);
-event ExchangeEntryRebate(address indexed from, bytes32 src, uint amount, bytes32 dest, uint rebateAmount, uint timestamp);
+event ExchangeEntryReclaim(address indexed from, bytes32 src, uint amount, bytes32 dest, uint reclaimAmount, uint srcRoundIdAtPeriodEnd, uint destRoundIdAtPeriodEnd, uint timestamp);
+event ExchangeEntryRebate(address indexed from, bytes32 src, uint amount, bytes32 dest, uint rebateAmount, uint srcRoundIdAtPeriodEnd, uint destRoundIdAtPeriodEnd, uint timestamp);
 ```
 
 ## Rationale
@@ -68,7 +68,8 @@ The decision to add an internal function `_settlementsOwing` that will emit indi
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
 - When `Exchanger.settle()` is invoked, the `_settlementsOwing` function is invoked and returns (uint reclaimAmount, uint rebateAmount, uint numEntries).
-- When `Exchanger.settle()` is invoked, it emits `ExchangeEntriesSettled` event with details about each exchange entry settled.
+- When `Exchanger.settle()` is invoked, it emits `ExchangeEntryReclaim` event with for ecah ExchangeEntry that has a reclaim amount - (`amountReceived > amountShouldHaveReceived`).
+- When `Exchanger.settle()` is invoked, it emits `ExchangeEntryRebate` event with for ecah ExchangeEntry that has a rebate amount - (`amountShouldHaveReceived > amountReceived`).
 
 ## Implementation
 
