@@ -14,17 +14,17 @@ created: 2020-05-11
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-Emit list of individual fee reclamations and rebates during exchange settlement for Dapps and Synthetix Exchange. Fee reclamation was introduced since [SIP-37](./sip-37.md) but did not emit a breakdown of each individual trade's fee reclamation / rebate amounts.
+Emit list of individual fee reclamations and rebates during exchange settlement for Dapps and Synthetix Exchange.
 
 ## Abstract
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
+In order to help users track fees claimed or rebated from individual transactions, emit events during settlement that match each individual exchange being settled with the amount reclaimed or rebated.
+
 Upgrade the Exchanger `settle()` function to emit individual fee reclaimation / rebate amounts for each trade.
 
-Add an internal function `_settlementsOwing` that will emit an event `ExchangeEntriesSettled` when `Exchanger.settle()` is invoked.
-
-Emit a list for each exchange entry with details about the `amountShouldHaveReceived`, the corresponding `amountReceived`, `reclaimAmount`, `rebateAmount`, and `timestamp` of the entry that is settled in the transaction.
+Add an internal function `_settlementsOwing` that will emit an event `ExchangeEntriesReclaim` and `ExchangeEntriesRebate` when `Exchanger.settle()` is invoked.
 
 ## Motivation
 
@@ -32,7 +32,9 @@ Emit a list for each exchange entry with details about the `amountShouldHaveRece
 
 We want to display on Synthetix exchange the corresponding fee reclamation amounts (if any) for each individual exchange made when exchange settlement is invoked.
 
-Currently invoking `settle()` will only emit an event, if any, with the total sum of any fee reclamation or rebate amounts.
+Currently invoking `settle()` will only emit an event, if any, with the total aggregated sum of any fee reclamation or rebate amounts. This makes it difficult and complex for users trying to determine the dividual settlement rates on previous trades they've made.
+
+It is important that traders can see on each trade the fee reclamation and rebates for calculating trading profits and loses based on the amounts and effective price they recieved on each individual trade.
 
 ## Specification
 
@@ -40,23 +42,26 @@ Currently invoking `settle()` will only emit an event, if any, with the total su
 
 ### Exchanger.settle() ###
 
-Add an internal function `_settlementsOwing` that will emit an event `ExchangeEntriesSettled` when `Exchanger.settle()` is invoked.
+Add an internal function `_settlementsOwing` that will emit an event `ExchangeEntryReclaim` for each reclaim and `ExchangeEntryRebate` for each rebate when `Exchanger.settle()` is invoked.
 
 `Exchanger.settle()` will use `_settlementsOwing` to calculate the fee reclamation amounts.
 
 **Event**
 
-Emit an event `ExchangeEntriesSettled` when `Exchanger.settle()` is invoked within `_settlementsOwing`.
+Emit an event `ExchangeEntryReclaim` or `ExchangeEntryRebate` for each exchangeEntry within `_settlementsOwing` when `Exchanger.settle()` is invoked.
 
 ```solidity
-event ExchangeEntriesSettled(address indexed from, bytes32 currencyKey, uint numEntries, uint[] amountReceived, uint[] amountShouldHaveReceived, uint[] reclaim, uint[] rebate, uint[] timestamp);
+event ExchangeEntryReclaim(address indexed from, bytes32 src, uint amount, bytes32 dest, uint reclaimAmount, uint timestamp);
+event ExchangeEntryRebate(address indexed from, bytes32 src, uint amount, bytes32 dest, uint rebateAmount, uint timestamp);
 ```
 
 ## Rationale
 
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
-It is important that traders can see on each trade the fee reclamation and rebates that occur after they make another exchange that invokes `settle()`, for calculating trading profits and loses based on the amount and effective price they recieved on each individual trade.
+The decision to add an internal function `_settlementsOwing` that will emit individual fee reclaim and rebate events when `Exchanger.settle()` is invoked allows the public view function `settlementOwing(address account, bytes32 currencyKey)` to be kept for users to query the total aggregated reclaim and rebate amounts they have to settle.
+
+`_settlementsOwing` will be used for settlements and emit the individual events persisting them onto the blockchain once the transaction is confirmed.
 
 ## Test Cases
 
