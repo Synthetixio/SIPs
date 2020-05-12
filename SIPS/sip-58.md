@@ -68,8 +68,8 @@ The decision to add an internal function `_settlementsOwing` that will emit indi
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
 - When `Exchanger.settle()` is invoked, the `_settlementsOwing` function is invoked and returns (uint reclaimAmount, uint rebateAmount, uint numEntries).
-- When `Exchanger.settle()` is invoked, it emits `ExchangeEntryReclaim` event with for ecah ExchangeEntry that has a reclaim amount - (`amountReceived > amountShouldHaveReceived`).
-- When `Exchanger.settle()` is invoked, it emits `ExchangeEntryRebate` event with for ecah ExchangeEntry that has a rebate amount - (`amountShouldHaveReceived > amountReceived`).
+- When `Exchanger.settle()` is invoked, it emits `ExchangeEntryReclaim` event with for each ExchangeEntry that has a reclaim amount - (`amountReceived > amountShouldHaveReceived`).
+- When `Exchanger.settle()` is invoked, it emits `ExchangeEntryRebate` event with for each ExchangeEntry that has a rebate amount - (`amountShouldHaveReceived > amountReceived`).
 
 ## Implementation
 
