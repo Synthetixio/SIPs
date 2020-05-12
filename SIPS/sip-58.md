@@ -32,7 +32,7 @@ Add an internal function `_settlementsOwing` that will emit an event `ExchangeEn
 
 We want to display on Synthetix exchange the corresponding fee reclamation amounts (if any) for each individual exchange made when exchange settlement is invoked.
 
-Currently invoking `settle()` will only emit an event, if any, with the total aggregated sum of any fee reclamation or rebate amounts. This makes it difficult and complex for users trying to determine the dividual settlement rates on previous trades they've made.
+Currently invoking `settle()` will only emit one event, if any, with the total aggregated sum of any fee reclamation or rebate amounts. This makes it difficult and complex for users trying to determine the dividual settlement rates on previous trades they've made.
 
 It is important that traders can see on each trade the fee reclamation and rebates for calculating trading profits and loses based on the amounts and effective price they recieved on each individual trade.
 
