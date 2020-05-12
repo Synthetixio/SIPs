@@ -2,7 +2,7 @@
 sip: 58
 title: Emit list of individual fee reclamations and rebates during exchange settlement
 status: Proposed
-author: Jackson Chan (@justinjmoses)
+author: Jackson Chan (@jacko125)
 discussions-to: <https://discord.gg/ShGSzny>
 
 created: 2020-05-11
