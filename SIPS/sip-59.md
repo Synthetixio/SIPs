@@ -14,25 +14,27 @@ created: 2020-05-11
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-The Delegated Migrator will enable an improved Synthetix protocol upgrade process.
+The addition of the Delegated Migrator contract to add transparency and community voting on protocol upgrades.
 
 ## Abstract
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-The introduction of the Delegated Migrator contract to perform upgrades on-chain in one or more steps. Migration scripts, once proposed and after a waiting period has elapsed, can be executed by the protocolDAO which will delegate to the migration scdript.
+The introduction of the Delegated Migrator contract to perform upgrades on-chain in one or more steps. Migration scripts, once proposed and after a waiting period has elapsed, can be executed by the protocolDAO which will delegate ownership to the migration contract for the duration of the transaction. However, during the waiting period, the community can vote to reject any proposal.
 
 ## Motivation
 
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
 
-Upgrading the Synthetix protocol currently takes the core contributors a number of hours.
+Synthetix protocol upgrades are currently performed in a faily complex manner. Each release, the core contributors run through the [publisher script](https://docs.synthetix.io/contracts/publisher/) which determines which new contracts need deploying and which owner actions are required to connect them together. The system is suspended by the protocolDAO, the owner actions are staged and executed by the protocolDAO, and then the system is resumed.
 
-A typical upgrade involves replacing the following contract sources: `Synthetix`, `FeePool` and every synth's `Synth` (over 40 at the time of writing), each of which require a change to both their associated proxies (via `setTarget`) and their associated state contracts (via `setAssociatedContract`). There are also changes to populate the `AddressResolver` with the new addresses, and updating each contract that depends on the AddressResolver to sync its cache (thus saving gas for end users).
+There are a number of issues with this approach:
 
-All of the above are tasks performed by the protocolDAO as individual transactions, requiring signing by sufficient pDAO members.
+1. **Opaque**. The upgrade process is hard to reason about - when an upgrade is coming, the community cannot clearly see what on-chain changes are coming in the upcoming release.
+2. **Centralised**. The protocolDAO dictates what changes are coming to the protocol, and the remainder of the community have no agency on-chain with which to approve or reject these changes.
+3. **Slow**. Upgrades require numerous transactions to be performed by the protocolDAO. Not only is this time consuming for the protocolDAO members, it also means more downtime for the protocol itself.
 
-Having a contract perform these upgrades is advantageous because not only does it lead to less downtime and has rollbacks built in, it also paves the way towards atomic upgrades, as future improvements to the protocol require less owner actions.
+As such, in an effort to fully decentralise the Synthetix protocol, this SIP proposes limiting the protocol upgrades to only those performed on-chain by a contract readable by anyone, and with a reasonable time delay for community participants to reject the proposal by on-chain vote.
 
 ## Specification
 
@@ -40,7 +42,7 @@ Having a contract perform these upgrades is advantageous because not only does i
 
 In principle the idea is as follows:
 
-1. A contract is created, called the `DelegatedMigrator`, which becomes the owner of all Synthetix contracts. It implements `IDelegatedMigrator` (interface below)
+1. A contract is created, called the `DelegatedMigrator`, which is nominated and accepts ownership over all Synthetix contracts. It implements `IDelegatedMigrator` (interface below)
 2. The owner of this contract is the [protocolDAO](https://etherscan.io/address/protocoldao.snx.eth)
 3. This migrator then allows the submission of proposals, in the form of a contract address. Each proposal must conform to `IMigration` (see below).
 4. After a waiting period has expired for a proposal, `execute` may be invoked by the protocolDAO sequentially for each step in the migration.
@@ -58,9 +60,6 @@ interface IMigration {
 interface IDelegatedMigrator {
     // Views
     function waitingPeriodSecs() external view returns (uint);
-
-    // Mutative functions
-    function setWaitingPeriod(uint _waitingPeriodSecs) external; // onlyOwner
 
     function propose(bytes32 version, IMigration target) external; // onlyOwner
 
@@ -102,13 +101,15 @@ contract AtlairUpgrade is IMigration {
 }
 ```
 
+In order to integrate with the current Synthetix release process, the aforemented publisher script would be configured to output a migration contract, which would then be committed to mainnet, verified and submitted as a proposal.
+
 ## Rationale
 
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
 There will be a configurable time delay between when a proposal has been accepted and when execution can begin. This time delay exists to allow the network to review the proposed upgrade.
 
-> Note: all migration contracts must have their code verified on Etherscan _before_ proposing so that the community can review them appropriately once proposed.
+> Note: all migration contracts and any associated contracts must be verified on Etherscan _before_ proposing so that the community can review them appropriately once proposed.
 
 If the holders do not agree with the upgrades, they may vote to reject the proposal. Morever, if the proposal is not verified on Etherscan (or some other verified source), then the community should simply reject the proposal.
 
