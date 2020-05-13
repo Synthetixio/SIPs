@@ -1,6 +1,6 @@
 ---
 sip: 58
-title: Emit list of individual fee reclamations and rebates during exchange settlement
+title: Emit every fee reclamation outcome during trade settlement
 status: Proposed
 author: Jackson Chan (@jacko125)
 discussions-to: <https://discord.gg/ShGSzny>
@@ -14,7 +14,7 @@ created: 2020-05-11
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-Emit list of individual fee reclamations and rebates during exchange settlement for Dapps and Synthetix Exchange.
+Emit list of individual fee reclamations and rebates during trade settlement for Dapps and Synthetix Exchange.
 
 ## Abstract
 
