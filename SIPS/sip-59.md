@@ -14,23 +14,23 @@ created: 2020-05-11
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-Make upgrades of Synthetix as seamless as possible
+The Delegated Migrator will enable an improved Synthetix protocol upgrade process.
 
 ## Abstract
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-The introduction of the Delegated Migrator contract to perform upgrades on-chain in one or more steps. Migration scripts, once proposed and after a waiting period has elapsed, can be executed by the ProtocolDAO which will delegate to the migration scdript.
+The introduction of the Delegated Migrator contract to perform upgrades on-chain in one or more steps. Migration scripts, once proposed and after a waiting period has elapsed, can be executed by the protocolDAO which will delegate to the migration scdript.
 
 ## Motivation
 
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
 
-Upgrading the Synthetix protocol currently takes the core contributors a number of hours to run.
+Upgrading the Synthetix protocol currently takes the core contributors a number of hours.
 
 A typical upgrade involves replacing the following contract sources: `Synthetix`, `FeePool` and every synth's `Synth` (over 40 at the time of writing), each of which require a change to both their associated proxies (via `setTarget`) and their associated state contracts (via `setAssociatedContract`). There are also changes to populate the `AddressResolver` with the new addresses, and updating each contract that depends on the AddressResolver to sync its cache (thus saving gas for end users).
 
-All of the above are tasks performed by the ProtocolDAO, which being a mulitisig safe needing signing by hardware keys of sufficient members, requires manual processing.
+All of the above are tasks performed by the protocolDAO as individual transactions, requiring signing by sufficient pDAO members.
 
 Having a contract perform these upgrades is advantageous because not only does it lead to less downtime and has rollbacks built in, it also paves the way towards atomic upgrades, as future improvements to the protocol require less owner actions.
 
@@ -41,10 +41,10 @@ Having a contract perform these upgrades is advantageous because not only does i
 In principle the idea is as follows:
 
 1. A contract is created, called the `DelegatedMigrator`, which becomes the owner of all Synthetix contracts. It implements `IDelegatedMigrator` (interface below)
-2. The owner of this contract is the [ProtocolDAO](https://etherscan.io/address/protocoldao.snx.eth)
+2. The owner of this contract is the [protocolDAO](https://etherscan.io/address/protocoldao.snx.eth)
 3. This migrator then allows the submission of proposals, in the form of a contract address. Each proposal must conform to `IMigration` (see below).
-4. After a waiting period has expired for a proposal, `execute` may be invoked by the ProtocolDAO sequentially for each step in the migration.
-5. If at any point during the waiting period, there is consensus that the proposal is problematic, a token vote can reject the proposal via `reject`. The details of this ownership and voting process are TBD.
+4. After a waiting period has expired for a proposal, `execute` may be invoked by the protocolDAO sequentially for each step in the migration.
+5. If at any point during the waiting period a configurable percentage of token holders vote to veto the upgrade proposal via `reject` it will not proceed. The specific details of this voting process are TBD.
 
 ```solidity
 interface IMigration {
@@ -110,7 +110,7 @@ There will be a configurable time delay between when a proposal has been accepte
 
 > Note: all migration contracts must have their code verified on Etherscan _before_ proposing so that the community can review them appropriately once proposed.
 
-If the holders do not agree with the upgrades, they may vote to reject the proposal. Morever, if the proposal is not verified on Etherscan (or some other verified source), then the community may agree to reject the proposal.
+If the holders do not agree with the upgrades, they may vote to reject the proposal. Morever, if the proposal is not verified on Etherscan (or some other verified source), then the community should simply reject the proposal.
 
 The migration may take multiple steps (in the case where the migration requires more than the 10M block gas limit to complete, meaning in those cases that the migration isn't atomic)
 
