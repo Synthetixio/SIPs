@@ -24,7 +24,7 @@ In order to help users track fees claimed or rebated from individual transaction
 
 Upgrade the Exchanger `settle()` function to emit individual fee reclaimation / rebate amounts for each trade.
 
-Add an internal function `_settlementsOwing` that will emit an event `ExchangeEntriesReclaim` and `ExchangeEntriesRebate` when `Exchanger.settle()` is invoked.
+Emit an extra event on each Exchange to provide information on the source and destination currencyKey RoundID the exchange was executed at.
 
 ## Motivation
 
@@ -35,6 +35,8 @@ We want to display on Synthetix exchange the corresponding fee reclamation amoun
 Currently invoking `settle()` will only emit one event, if any, with the total aggregated sum of any fee reclamation or rebate amounts. This makes it difficult and complex for users trying to determine the dividual settlement rates on previous trades they've made.
 
 It is important that traders can see on each trade the fee reclamation and rebates for calculating trading profits and loses based on the amounts and effective price they recieved on each individual trade.
+
+Vice versa emitting extra information when an exchange transaction occurs such as the RoundID's for the source and destination currencies will allow Dapp's to get effective rate for the pair by querying the ExchangeRates contract.
 
 ## Specification
 
@@ -53,6 +55,14 @@ Emit an event `ExchangeEntryReclaim` or `ExchangeEntryRebate` for each exchangeE
 ```solidity
 event ExchangeEntryReclaim(address indexed from, bytes32 src, uint amount, bytes32 dest, uint reclaimAmount, uint srcRoundIdAtPeriodEnd, uint destRoundIdAtPeriodEnd, uint timestamp);
 event ExchangeEntryRebate(address indexed from, bytes32 src, uint amount, bytes32 dest, uint rebateAmount, uint srcRoundIdAtPeriodEnd, uint destRoundIdAtPeriodEnd, uint timestamp);
+```
+
+### Exchanger.appendExchange ###
+
+Emit an event `ExchangeEntryAppended` for each exchangeEntry created when a user makes an exchange. Capture details such as roundIdForSrc, roundIdForDest for Dapps to calculate the effectiveValue of the exchange at anytime by querying the onchain data.
+
+```solidity
+event ExchangeEntryAppended(address indexed account, bytes32 src, uint amount, bytes32 dest, uint amountReceived, uint exchangeFeeRate, uint roundIdForSrc, uint roundIdForDest, uint timestamp);
 ```
 
 ## Rationale
