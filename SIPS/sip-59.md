@@ -61,11 +61,11 @@ interface IDelegatedMigrator {
     // Views
     function waitingPeriodSecs() external view returns (uint);
 
-    function propose(bytes32 version, IMigration target) external; // onlyOwner
+    function propose(string version, IMigration target) external; // onlyOwner
 
-    function reject(bytes32 version, IMigration target) external; // onlyTokenVote
+    function reject(string version, IMigration target) external; // onlyTokenVote
 
-    function execute(bytes32 version, IMigration target, uint index) external; // onlyOwner
+    function execute(string version, IMigration target, uint index) external; // onlyOwner
 
     // ... Owned functions
 }
