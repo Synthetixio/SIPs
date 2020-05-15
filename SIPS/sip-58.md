@@ -65,6 +65,14 @@ Emit an event `ExchangeEntryAppended` for each exchangeEntry created when a user
 event ExchangeEntryAppended(address indexed account, bytes32 src, uint amount, bytes32 dest, uint amountReceived, uint exchangeFeeRate, uint roundIdForSrc, uint roundIdForDest, uint timestamp);
 ```
 
+### ISynthetixInternal ###
+
+Add to ISynthetixInternal interface external functions for emitting event off Synthetix proxy.
+
+- ExchangeEntryReclaim
+- ExchangeEntryRebate
+- ExchangeEntryAppended
+
 ## Rationale
 
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
