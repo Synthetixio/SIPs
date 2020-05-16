@@ -23,5 +23,6 @@ Other reasons include:
 1) It is important to not consistently overpay when incentivizing the pools, as it effectively a transfer of value from snx minters to pool contributors. The incentive should be calibrated depending on the state of the system to pay the least amount of incentive required that achieves the desired effect of peg stability.
 2) The 64k currently paid was chosen partially based on previous experience on how much is paid on Uniswap. This number is bound to be adjusted as per the state of the system (peg, supply of synths,...). However, given that the assumed price risk is somewhat  lower for stable coins against ETH, it is only normal to pay lower incentives on Curve. This is partially offset thought by the protocol risk of stable coins (versus the less risky protocol risk of ETH). 
 
+
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
