@@ -14,7 +14,7 @@ Decrease SNX incentives to the Curve pool by around 20% to 50,000 SNX per week
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
-64,000 SNX per week from inflation rewards are given to the sUSD pool on curve which incentivizes liquidity provision to the sUSD/ DAI-USDC-USDT-TUSD pool.
+64,000 SNX per week from inflation rewards are given to the sUSD pool on curve which incentivizes liquidity provision to the sUSD/ DAI-USDC-USDT pool.
 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
