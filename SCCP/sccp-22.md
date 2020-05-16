@@ -1,11 +1,11 @@
 ---
 sccp: TBD
-title: Reduce SNX rewards for sUSD/DAI-USDC-USDT-TUSD Curve pool
-author: Kaleb Keny (@KALEB)
-discussions-to: shorturl.at/aklT8
+title: Reduce Rewards On Curve
+status: WIP
+author: <Kaleb Keny (@kaleb-keny)>
+discussions-to: SNX-trading
  
-status: Proposed
-created: 2020-05-15
+created: 2020-05-16
 ---
 
 ## Simple Summary
