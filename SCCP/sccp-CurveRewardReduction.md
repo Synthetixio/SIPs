@@ -10,7 +10,7 @@ created: 2020-05-16
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-Decrease SNX incentives to the Curve pool by around 20% to 50,000 SNX per week
+Decrease SNX incentives to the Curve pool by around 20% to 48,000 SNX per week
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
