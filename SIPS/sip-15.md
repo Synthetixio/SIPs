@@ -37,19 +37,21 @@ Direct redemption (liquidation) gives SNX holders and issuers of Synthetic synth
 
 1. Provide a liquidation contract to mark a SNX staker as being listed for liquidation but give time for them to fix collateral ratio / burn debt by purchasing on market.
 
-2. Time delayed liquidation of under-collateralised collateral. Delay is configurable with an SCCP and is set to 2 weeks initially to provide protection for snx staker to fix their collateral ratio.
+2. Time delayed liquidation of under collateralised collateral. Delay is configurable with an SCCP and is set to 2 weeks initially to provide protection for snx staker to fix their collateral ratio.
 
 3. Time delay prevents black swan events where malicious actor quickly dumps a sizeable amount of SNX on CEX’s / exchanges to push the price down suddenly and target liquidation, as there is a time delay for liquidation.
 
 4. Under collateralised stakers (less than the liquidation ratio set) can be marked for liquidation by any address. Liquidation can be done by any wallet after time delay has expired.
 
-5. Liquidator able to burn synths in exchange for SNX collateral at discount rate (% of the current value based on the liquidation penalty) as a penalty for under-collateralised staker.
+5. Liquidator able to burn synths in exchange for SNX collateral at discount rate (% of the current value based on the liquidation penalty) as a penalty for under collateralised staker.
 
-6. Partial liquidation of an under-collateralised SNX until their collateral ratio is at or above the liquidations cap ratio (300%) again. Multiple liquidations can be made against a SNX staker that has liquidation open until their c-ratio is above the liquidations cap - (300%).
+6. Partial liquidation of an under collateralised SNX until their collateral ratio is at or above the liquidations cap ratio (300%) again. Multiple liquidations can be made against a SNX staker that has liquidation open until their c-ratio is above the liquidations cap - (300%).
 
     Once the staker's collateral ratio is above 300% it will be removed from the liquidations mapping.
 
-7. Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP]() to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator.
+7. Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP]() to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator and appened to the rewardsEscrow.
+
+    In order to unlock all transferrable SNX a minter would have to repay all of their debt and re-issue debt at the issuance ratio (currently 800%).
 
 ## Liquidations Contract
 
@@ -85,7 +87,7 @@ Emit Event `accountFlaggedForLiquidation`
 Helper function for internal contracts to remove account from liquidations if the C-ratio is above the `liquidation target ratio` when:
 
 - a user burns sUSD to fix their debt.
-- liquidation fixes the under-collateralised account above the liquidation target ratio.
+- liquidation fixes the under collateralised account above the liquidation target ratio.
 - Reduces gas consumption as doesn't require recalculating the account's c-ratio if burning / liquidating already calculates the c-ratio after burning.
 
 **Function signature**
@@ -140,7 +142,7 @@ Candidate to move to SCCP variable contract
 
 Update the liquidation c-ratio target where the liquidations of an snx staker is capped to, ie 300%.
 
-Once the under-collateralised account's c-ratio is above the liquidation target ratio it will be removed from the accounts to be liquidated.
+Once the under collateralised account's c-ratio is above the liquidation target ratio it will be removed from the accounts to be liquidated.
 
 Candidate to move to SCCP variable contract
 
@@ -152,13 +154,13 @@ Candidate to move to SCCP variable contract
 
 #### liquidateSynthetix(address account, uint synthAmount) external
 
-External function for liquidation of under-collateralised Synthetix.
+External function for liquidation of under collateralised Synthetix.
 
 Forwards calls to `Issuer.liquidateSynthetix(account, synthAmount, msg.sender)`
 
 ## Issuer contract
 
-Update Issuer contract to allow Synth sUSD holder to liquidate under-collateralised Synthetix up to the Liquidation Target ratio (300%)
+Update Issuer contract to allow Synth sUSD holder to liquidate under collateralised Synthetix up to the Liquidation Target ratio (300%)
 
 #### liquidateSynthetix(address account, uint synthAmount, address redeemer) onlySynthetix
 
@@ -188,7 +190,7 @@ Parameters
 
 When liquidation is flagged on an account and after burning synths, if their c-ratio is now above the `liquidation targer ratio` then we can remove the liquidation flag from the liquidations contract.
 
-The under-collateralised staker has fixed their c-ratio above the liquidation target ratio it should call `removeAccountInLiquidation()`.
+The under collateralised staker has fixed their c-ratio above the liquidation target ratio it should call `removeAccountInLiquidation()`.
 
 ## Rationale
 
