@@ -7,7 +7,7 @@ discussions-to:
 created: 2019-08-20
 ---
 
-Liquidation  Direct Redemption of SNX collateral with synths
+Direct Redemption of SNX collateral with Synths
 
 ## Simple Summary
 
@@ -49,7 +49,7 @@ Direct redemption (liquidation) gives SNX holders and issuers of Synthetic synth
 
     Once the staker's collateral ratio is above 300% it will be removed from the liquidations mapping.
 
-7. Other collateral asset types can have separate liquidation thresholds and time frames for redemption if under-collateralised.
+7. Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP]() to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator.
 
 ## Liquidations Contract
 
@@ -69,6 +69,8 @@ struct liquidation {
 ```
 
 #### flagAccountForLiquidation(address account)
+
+Allows a user to flag an account for liquidation and starts the waiting period. Requires the `account`'s collateral ratio to be below the `liquidation ratio`.
 
 **Function signature**
 
