@@ -51,9 +51,11 @@ Direct redemption (liquidation) gives SNX holders and issuers of Synthetic synth
 
 7. Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP]() to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator and appened to the rewardsEscrow.
 
-   In order to unlock all transferrable SNX a minter would have to repay all of their debt and re-issue debt at the issuance ratio (currently 800%).
+   Mitigating this issue is the fact that in order to unlock all `transferrable` SNX a minter would have to repay all of their debt and re-issue debt at the issuance ratio (currently 800%).
 
 ## Liquidations Contract
+
+---
 
 Storage of the mapping of accounts marked for liquidation and the time marked for liquidation.
 
@@ -148,9 +150,11 @@ Candidate to move to SCCP variable contract
 
 **Function signature**
 
-`setLiquidationRatioCap(uint cap) onlyOwner`
+`setLiquidationTargetRatio(uint target) onlyOwner`
 
 ## Synthetix contract
+
+---
 
 Update Synthetix contract to allow Synth sUSD holder to liquidate under collateralised Synthetix up to the Liquidation Target ratio (300%).
 
@@ -186,11 +190,13 @@ Parameters
 
 ## Issuer contract
 
+---
+
 #### \_internalBurnSynths()
 
-When liquidation is flagged on an account and after burning synths, if their c-ratio is now above the `liquidation targer ratio` then we can remove the liquidation flag from the liquidations contract.
+When liquidation is flagged on an account and after burning synths, if their c-ratio is above the `liquidation targer ratio` after burning synths then we can remove the liquidation flag from the liquidations contract.
 
-If the under collateralised staker has fixed their c-ratio above the liquidation target ratio it should call `liquidations.removeAccountInLiquidation()`.
+If the under collateralised staker has fixed their c-ratio above the `liquidation target ratio` it should call `liquidations.removeAccountInLiquidation()`.
 
 ## Rationale
 
