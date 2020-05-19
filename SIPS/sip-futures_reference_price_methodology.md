@@ -10,7 +10,7 @@ created: 2020-05-18
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
-A mechanism to convert prices from futures markets into a single reference price for Synths.
+A method for converting futures market prices into a single reference price for Synths.
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
@@ -41,6 +41,8 @@ DTE2: Days remaining for the current 2nd month contract
 P0: Orderbook mid-price of the current front month contract
 P1: Orderbook mid-price of the current 2nd month contract
 p2: Orderbook mid-price of the current 3rd month contract
+
+There implications for fee reclamation with this approach, given that futures markets close, these Synths will use the next price fee reclamation mechanism. This requires that during market closures the Chainlink aggregator contract published a stable price. Due to the continuous time aspect of the calculation the reference price will continually update even durng market closures. This requires the node operators to subscribe to a market closure data feed to ensure the published price on-chain does not deviate outside a pre-defined range (likely 5bps) during market closures, which would trigger a next price update and cause all orders to fill at a stale price. There is a further implication for circuit breakers and other out of cycle market closures as these events would not be covered by the market closure data feed, in the case of a circuit breaker or other unscheduled market closure the data providers would continue to publish stale prices requiring these markets to be closed manually via the protocolDAO.
 
 ## Rationale
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
