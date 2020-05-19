@@ -59,7 +59,7 @@ Direct redemption (liquidation) gives SNX holders and issuers of Synthetic synth
 
 Storage of the mapping of accounts marked for liquidation and the time marked for liquidation.
 
-Consider using `eternalStorage` to map the `liquidation` struct values such as the `isFlagged` boolean and `uint` for the `startTime` to allow Liquidations Contract to be upgraded.
+Using `eternalStorage` to map the `liquidation` struct values such as the `isFlagged` as boolean and `uint` for the `startTime` to allow Liquidations Contract to be upgraded.
 
 Mapping for Liquidations - `mapping(address => liquidation) public liquidations`
 
