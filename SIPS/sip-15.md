@@ -190,7 +190,7 @@ Parameters
 
 When liquidation is flagged on an account and after burning synths, if their c-ratio is now above the `liquidation targer ratio` then we can remove the liquidation flag from the liquidations contract.
 
-The under collateralised staker has fixed their c-ratio above the liquidation target ratio it should call `removeAccountInLiquidation()`.
+If the under collateralised staker has fixed their c-ratio above the liquidation target ratio it should call `liquidations.removeAccountInLiquidation()`.
 
 ## Rationale
 
