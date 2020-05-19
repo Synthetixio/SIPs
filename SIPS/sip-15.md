@@ -61,9 +61,9 @@ Storage of the mapping of accounts marked for liquidation and the time marked fo
 
 Consider using `eternalStorage` to map the `liquidation` struct values such as the `isFlagged` boolean and `uint` for the `startTime` to allow Liquidations Contract to be upgraded.
 
-`mapping(address => liquidation) public liquidations`
+Mapping for Liquidations - `mapping(address => liquidation) public liquidations`
 
-Struct to store liquidations
+**Struct to store liquidations**
 
 ```
 struct liquidation {
