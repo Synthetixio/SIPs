@@ -22,6 +22,7 @@ Add new flexible escrow API to SNX escrow contract.
 
 The current SNX [RewardEscrow](https://contracts.synthetix.io/RewardEscrow) contract is limited to escrowing SNX from the FeePool for the SNX rewards distribution from the inflationary supply. It was not designed to be used as a general purpose escrow contract.
 New requirements require flexible escrow entries to be created by anyone as well as supporting the new terminal inflation.
+This will require a migration of all escrowed SNX and escrow entries from [RewardEscrow](https://contracts.synthetix.io/RewardEscrow) to new Escrow contract. 
 
 ## Motivation
 
@@ -44,7 +45,22 @@ Desired features for a general `SynthetixEscrow` contract
 ## Specification
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
-TBD
+```
+interface ISynthetixEscrow {
+    // Views    
+    function checkAccountSchedule(address account) public view returns (uint[520] memory) 
+
+    // Mutative functions
+    function appendVestingEntry(address account, uint quantity, uint escrowLength) external;
+
+    function vest() external;
+    
+    function vestOnBehalf(address account) external;
+}
+```
+### Migration
+1. Synthetix will need to be upgraded to migrate the SNX to the new contract onchain.
+2. During the migration `Vest` needs to be disabled or effectivly fail to ensure integrity of escrow entries and SNX balances beign migrated for all accounts.
 
 ## Test Cases
 
