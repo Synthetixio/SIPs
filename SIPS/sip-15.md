@@ -48,15 +48,19 @@ Liquidation gives SNX holders and issuers of Synthetic synths these benefits:
 
 7. Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP]() to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator and appened to the rewardsEscrow.
 
+   Mitigating this issue is the fact that in order to unlock all `transferrable` SNX a minter would have to repay all of their debt and re-issue debt at the issuance ratio (currently 800%).
+
 ## Liquidations Contract
+
+---
 
 Storage of the mapping of accounts marked for liquidation and the time marked for liquidation.
 
- Consider using `eternalStorage` to map the `liquidation` struct values such as the `isFlagged` boolean and `uint` for the `startTime` to allow Liquidations Contract to be upgraded.
+Using `eternalStorage` to map the `liquidation` struct values such as the `isFlagged` as boolean and `uint` for the `startTime` to allow Liquidations Contract to be upgraded.
 
-`mapping(address => liquidation) public liquidations`
+Mapping for Liquidations - `mapping(address => liquidation) public liquidations`
 
-Struct to store liquidations
+**Struct to store liquidations**
 
 ```
 struct liquidation {
@@ -143,49 +147,53 @@ Candidate to move to SCCP variable contract
 
 **Function signature**
 
-`setLiquidationRatioCap(uint cap) onlyOwner`
+`setLiquidationTargetRatio(uint target) onlyOwner`
 
 ## Synthetix contract
+
+---
+
+Update Synthetix contract to allow Synth sUSD holder to liquidate under collateralised Synthetix up to the Liquidation Target ratio (300%).
 
 #### liquidateSynthetix(address account, uint synthAmount) external
 
 External function for liquidation of under collateralised Synthetix.
 
-Forwards calls to `Issuer.liquidateSynthetix(account, synthAmount, msg.sender)`
-
-## Issuer contract
-
-Update Issuer contract to allow Synth sUSD holder to liquidate under collateralised Synthetix up to the Liquidation Target ratio (300%)
-
-#### liquidateSynthetix(address account, uint synthAmount, address redeemer) onlySynthetix
-
 Any holder of sUSD can use liquidateSynthetix to repay the debt of undercollateralised staker and redeem their SNX collateral.
 
+- ✅ Check `systemStatus().requireSystemActive`.
 - ✅ Check liquidations Contract that `account` is `isOpenForLiquidation()` is true.
 
 - Calculate the maximum amount of debt to burn to reach the liquidation target ratio (ie 300%).
-    - If the `liquidation target ratio` is already reached, remove liquidation flag on `account` and return.
 
-- liquidation target ratio should take into account the liquidation penalty fee that will be paid to `redeemer`.
+  - If the `liquidation target ratio` is already reached, remove liquidation flag on `account` and return.
+
+- liquidation target ratio should take into account the liquidation penalty fee that will be paid to `msg.sender`.
 - Take the `synthAmount` or the `maximum amount` of debt to burn to reach the liquidation target ratio for liquidated account.
-- Burn sUSD from the `redeemer` sUSD balance and reduce the debt from `account` being liquidated.
-- Transfer liquidated Synthetix to the `redeemer` plus the liquidation penalty.
+- Burn sUSD from the `msg.sender` sUSD balance and reduce the debt from `account` being liquidated.
+- `Synth.burn()` will check that `msg.sender` has enough sUSD to burn with SafeMath subtraction.
+- Transfer liquidated Synthetix to the `msg.sender` plus the liquidation penalty. Invoke `_transferByProxy(account, msg.sender, value)` to transfer SNX to liquidator with `value` set to amount of SNX + penalty liquidated.
+
 - Remove liquidation flag on `account` from liquidations contract if the liquidation target ratio has been reached.
 
 **Function signature**
 
-`liquidateSynthetix(address account, uint redemptionAmount, address redeemer) onlySynthetix`
+`liquidateSynthetix(address account, uint synthAmount) external`
 
 Parameters
+
 - `address account`: account to be liquidated
 - `uint synthAmount`: amount of sUSD synth the redeemer wants to redeem against the account
-- `address redeemer`: msg.sender (who is liquidating the adddress) forwarded from Synthetix contract
 
-#### _internalBurnSynths()
+## Issuer contract
 
-When liquidation is flagged on an account and after burning synths, if their c-ratio is now above the `liquidation targer ratio` then we can remove the liquidation flag from the liquidations contract.
+---
 
-If the under collateralised staker has fixed their c-ratio above the liquidation target ratio it should call `liquidations.removeAccountInLiquidation()`.
+#### \_internalBurnSynths()
+
+When liquidation is flagged on an account and after burning synths, if their c-ratio is above the `liquidation targer ratio` after burning synths then we can remove the liquidation flag from the liquidations contract.
+
+If the under collateralised staker has fixed their c-ratio above the `liquidation target ratio` it should call `liquidations.removeAccountInLiquidation()`.
 
 ## Rationale
 
