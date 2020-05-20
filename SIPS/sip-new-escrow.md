@@ -37,7 +37,7 @@ Current limitations of the `RewardEscrow` contract
 New requirements for General `SynthetixEscrow` contract
 
 1. Ability to add arbitrary escrow periods. e.g. 3 months to 2 years.
-2. Public escrowing. Allows anyone or any to contract escrow SNX. Allowing SNX to be escrowed for protocol contributors, investors and funds or contracts that escrow some sort of incentive similar to the Staking Rewards.
+2. Public escrowing. Allows any EOA or any contract to escrow SNX. Allowing SNX to be escrowed for protocol contributors, investors and funds or contracts that escrow some sort of incentive similar to the Staking Rewards.
 3. Update `checkAccountSchedule` to allow for terminal inflation and an unlimited escrow navigation through paging.
 4. Allowing anyone to `vest` an accounts escrowed tokens allows Synthetix network keepers to help support SNX holders and supports the [Liquidation system](sips.synthetix.io/sips/sip-59) to vest an under collateralised accounts vest-able SNX to be paid to the liquidator.
 
