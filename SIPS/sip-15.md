@@ -21,7 +21,7 @@ Instead of instant liquidations for positions below the Liquidation ratio, a del
 
 In a crypto-backed stablecoin system such as Synthetix, the issued stablecoin (synths) tokens should represent a claims on the underlying collateral. The current design of the Synthetix system doesn't allow holders of synths to directly redeem the underlying collateral unless they are burning and unlocking their own SNX collateral. The value of the synths issued in the synthetix system is derived from incentivising minters to be over-collateralised on the debt they have issued and other economic incentives such as exchange fees and SNX rewards.
 
-If a minter's collateral value falls below the required collateral ratio, there is no direct penalty for being under collateralised, even in the unlikely event where the value of their locked synthetix collateral is less than the debt they owe. Stakers and synth holders should be able to liquidate undercollateralised minters at a discounted price to restore the network collateral ratio.
+If a minter's collateral value falls below the required collateral ratio, there is no direct penalty for being under collateralised, even in the unlikely event where the value of their locked collateral (SNX) is less than the debt they owe. Stakers and synth holders should be able to liquidate undercollateralised minters at a discounted price to restore the network collateral ratio.
 
 Liquidation encourages minters to remain above the required collateral ratio and creates strong economic incentives for stakers to burn synths to restore their collateral ratio if they are at risk of being liquidated.
 
@@ -43,7 +43,7 @@ Liquidations contract to mark an SNX staker for liquidation with a time delay to
 
 * `Liquidation Delay`: Time before liquidation of under collateralised collateral.
 * `Liquidation Penalty`: % penalty on SNX collateral liquidated.
-* `Liquidation Ratio`: Collateral Ratio liquidation can be initiated.
+* `Liquidation Ratio`: Collateral ratio liquidation can be initiated.
 * `Liquidation Target Ratio`: Target collateral ratio liquidations are capped at.
 
 #### flagAccountForLiquidation(address account)
