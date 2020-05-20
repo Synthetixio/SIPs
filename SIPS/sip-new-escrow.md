@@ -34,7 +34,7 @@ Current limitations of the `RewardEscrow` contract
 3. The escrow table `checkAccountSchedule` only supports returning up to 5 years of escrow entries from the initial inflationary supply.
 4. `Vest` can only be called by the owner of the SNX.
 
-New requirements for General `SynthetixEscrow` contract
+Desired features for a general `SynthetixEscrow` contract
 
 1. Ability to add arbitrary escrow periods. e.g. 3 months to 2 years.
 2. Public escrowing. Allows any EOA or any contract to escrow SNX. Allowing SNX to be escrowed for protocol contributors, investors and funds or contracts that escrow some sort of incentive similar to the Staking Rewards.
