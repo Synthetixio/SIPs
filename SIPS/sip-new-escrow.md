@@ -20,26 +20,26 @@ Add new flexible escrow API to SNX escrow contract.
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-The current SNX Escrow Contract is limited to escrowing SNX from the FeePool for the SNX rewards distribution from the inflationary supply. It was not designed to be used as a general purpose escrow contract.
-New requirements have arrisn that requires flexible escrow entries to be created as well as supporting the new terminal inflation.
+The current SNX [RewardEscrow](https://contracts.synthetix.io/RewardEscrow) contract is limited to escrowing SNX from the FeePool for the SNX rewards distribution from the inflationary supply. It was not designed to be used as a general purpose escrow contract.
+New requirements require flexible escrow entries to be created by anyone as well as supporting the new terminal inflation.
 
 ## Motivation
 
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
 
-Current limitaions of the `RewardsEscrow` contract
+Current limitations of the `RewardEscrow` contract
 
 1. Only escrows SNX for 12 months.
-2. Only `FeePool` has the autority to create escrow entries.
+2. Only `FeePool` has the authority to create escrow entries.
 3. The escrow table `checkAccountSchedule` only supports returning up to 5 years of escrow entries from the initial inflationary supply.
 4. `Vest` can only be called by the owner of the SNX.
 
-New requirements
+New requirements for General `SynthetixEscrow` contract
 
-1. Ability to add arbitary escrow periods. e.g. 3 months to 2 years.
-2. Public escrowing. Allows anyone or any to contract escrow SNX. Allowing SNX to be escrowed for protocal contributors, investors and funds or contracts that escrow some sort of incentive similar to the Staking Rewards.
-3. Update `checkAccountSchedule` to allow for terminal inflation and an unlimted escrow navigation through paging.
-4. Allowing anyone to `vest` an accounts escrowed tokens allows Synthetix network keepers to help support SNX holders and supports the [Liquidation system](sips.synthetix.io/sips/sip-59) to vest an undercollateralised accounts vestible SNX to be paid to the liquidator.
+1. Ability to add arbitrary escrow periods. e.g. 3 months to 2 years.
+2. Public escrowing. Allows anyone or any to contract escrow SNX. Allowing SNX to be escrowed for protocol contributors, investors and funds or contracts that escrow some sort of incentive similar to the Staking Rewards.
+3. Update `checkAccountSchedule` to allow for terminal inflation and an unlimited escrow navigation through paging.
+4. Allowing anyone to `vest` an accounts escrowed tokens allows Synthetix network keepers to help support SNX holders and supports the [Liquidation system](sips.synthetix.io/sips/sip-59) to vest an under collateralised accounts vest-able SNX to be paid to the liquidator.
 
 ## Specification
 
