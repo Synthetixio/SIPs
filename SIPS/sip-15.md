@@ -40,24 +40,12 @@ Liquidation gives SNX holders and issuers of Synthetic synths these benefits:
 
 Liquidations contract to mark an SNX staker for liquidation with a time delay to allow them to fix their collateral ratio.
 
-### Parameters
+**Parameters**
 
-Time delay for liquidation of under collateralised collateral.
-
-3. Time delay increases the cost to a malicious actor who attempts to manipulate the SNX price to trigger liquidations.
-
-4. Under collateralised stakers (less than the liquidation ratio) can be marked for liquidation by any address. Liquidation can be performed from any address after time delay has elapsed.
-
-5. Liquidator can burn synths in exchange for SNX collateral at discount rate (% of the current value based on the liquidation penalty) to incentivise liquidations.
-
-6. Partial liquidation of an under collateralised SNX can be performed until collateral ratio is at or above the liquidation ratio (300% configurable via SCCP). Multiple liquidations can be made until the collateral ratio is above the liquidation ratio - (300%).
-
-    Once the collateral ratio is above 300% the liquidations mapping is removed.
-
-7. Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP]() to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator and appened to the rewardsEscrow.
-
-   Mitigating this issue is the fact that in order to unlock all `transferrable` SNX a minter would have to repay all of their debt and re-issue debt at the issuance ratio (currently 800%).
-
+* `Liquidation Delay`: Time before liquidation of under collateralised collateral.
+* `Liquidation Penalty`: % penalty on SNX collateral liquidated.
+* `Liquidation Ratio`: Collateral Ratio liquidation can be initiated.
+* `Liquidation Target Ratio`: Target collateral ratio liquidations are capped at.
 
 #### flagAccountForLiquidation(address account)
 
@@ -122,11 +110,25 @@ Parameters
 - `address account`: account to be liquidated
 - `uint synthAmount`: amount of sUSD synth the redeemer wants to redeem against the account
 
+### Escrowed SNX
+---
+Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP]() to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator and appened to the rewardsEscrow.
+
+Mitigating this issue is the fact that in order to unlock all `transferrable` SNX a minter would have to repay all of their debt and re-issue debt at the issuance ratio (currently 800%).
+
 ## Rationale
 
 The reasoning behind the direct redemption approach to liquidations is to provide a mechanism to purge positions for which the primary incentives have failed. Under most circumstances we have observed that the majority of stakers maintain a healthy ratio to ensure they can continue to claim staking rewards or the exit the system completely by burning all debt and selling ther SNX. Even in the case of a major price shock the majority of wallets will have more collateral value than their Synth debt so the optimal strategy is to burn debt and recover the collateral. In the case where this does not happen a fallback incentive to remove these undercollateralised positions is required. However, given that these wallets are likely to be edge cases so long as the collateral ratio remains above 500% it is important to not open an attack vector that would enable a malicious party to attempt to manipulate the price of SNX to liquidate positions. Due to the time delay implemented in the mechanism the cost of attack far exceeds the potential reward making it unlikely that a rational actor would pursue this strategy. The tension in this implementation is therefore between the time it takes to remove an undercollateralised position and the risk that liquidations are used as an attack vector against stakers. The thresholds and delays implemented above err on the side of protecting stakers and can therefore be reduced over time if liquidations are deemed to be too inefficient.
 
-- **Time Delay:** Time delay increases the cost to a malicious actor who attempts to manipulate the SNX price to trigger liquidations.
+The rationale for these liquidation mechanisms are:
+
+* **Time Delay:** A time delay increases the cost to a malicious actor who attempts to manipulate the SNX price to trigger liquidations and reduces the risk of black swan events.
+
+* **Liquidation Penalty:** A liquidation penalty payable to the liquidator provides incentives for liquidators and minters to fix their collateral ratio. Liquidators can burn synths and claim SNX at a discounted rate.
+
+* **Partial liquidations:** Partial liquidation of under collateralised SNX reduces the risk of minter's losing all their staked collateral from liquidation and allows a proportion of their debt to be paid back to fix their collateral ratio. Multiple liquidators can benefit from burning any amount of sUSD synth until the c-ratio is above the liquidation target ratio.
+
+* **Liquidation target ratio:** A liquidation target ratio works alongside partial liquidations allowing a proportion of snx to be liquidated until the staker's collateral ratio reaches above the liquidation target ratio. At this ratio it would provide enough buffer in the collateral to back the debt issued.
 
 ## Test Cases
 
