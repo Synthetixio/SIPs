@@ -88,13 +88,12 @@ Liquidations contract to mark an SNX staker for liquidation with a time delay to
 
 `setLiquidationPenalty(uint penalty) onlyOwner`
 
-- `uint penalty`: 18 decimals representation of a penalty percentage
-
 #### setLiquidationTargetRatio(uint target)
 
 **Function signature**
 
 `setLiquidationTargetRatio(uint target) onlyOwner`
+
 
 ### Synthetix contract
 ---
@@ -112,7 +111,7 @@ Parameters
 
 ### Escrowed SNX
 ---
-Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP]() to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator and appened to the rewardsEscrow.
+Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP]() to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator and appended to the rewardsEscrow.
 
 Mitigating this issue is the fact that in order to unlock all `transferrable` SNX a minter would have to repay all of their debt and re-issue debt at the issuance ratio (currently 800%).
 
