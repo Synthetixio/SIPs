@@ -34,6 +34,7 @@ Current limitations of the `RewardEscrow` contract
 2. Only `FeePool` has the authority to create escrow entries.
 3. The escrow table `checkAccountSchedule` only supports returning up to 5 years of escrow entries from the initial inflationary supply.
 4. `Vest` can only be called by the owner of the SNX.
+5. Cannot support liquidations of escrowed SNX for [sip-15](https://sips.synthetix.io/sips/sip-15).
 
 Desired features for a general `SynthetixEscrow` contract
 
@@ -41,6 +42,8 @@ Desired features for a general `SynthetixEscrow` contract
 2. Public escrowing. Allows any EOA or any contract to escrow SNX. Allowing SNX to be escrowed for protocol contributors, investors and funds or contracts that escrow some sort of incentive similar to the Staking Rewards.
 3. Update `checkAccountSchedule` to allow for terminal inflation and an unlimited escrow navigation through paging.
 4. Allowing anyone to `vest` an accounts escrowed tokens allows Synthetix network keepers to help support SNX holders and supports the [Liquidation system](sips.synthetix.io/sips/sip-59) to vest an under collateralised accounts vest-able SNX to be paid to the liquidator.
+5. If an account being liquidated does not have enough transferable SNX in their account and needs to liquidate escrowed SNX being used as collateral then reassign the escrow amounts to the liquidators wallet to vest.
+TBD: Should the escrowed SNX be liquidated at a larger discount? or vested and transfered to the liquidator at the standard discount?
 
 ## Specification
 
