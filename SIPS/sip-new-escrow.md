@@ -45,16 +45,22 @@ Desired features for a general `SynthetixEscrow` contract
 ## Specification
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
+
 ```
 interface ISynthetixEscrow {
-    // Views    
-    function checkAccountSchedule(address account) public view returns (uint[520] memory) 
+    // Views
+    
+    // Updated to handle paging of 100 escrow entries at a time from a starting vesting index
+    function checkAccountSchedule(address account, uint startIndex) public view returns (uint[100] memory) 
 
     // Mutative functions
+    
+    // Added escrowLength argument allowing any length of escrow period from 1 second to x years
     function appendVestingEntry(address account, uint quantity, uint escrowLength) external;
-
+        
     function vest() external;
     
+    // New function to allow any account vest another account
     function vestOnBehalf(address account) external;
 }
 ```
