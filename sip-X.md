@@ -46,7 +46,7 @@ This is where you explain the reasoning behind how you propose to solve the prob
 
 # Technical Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
-The technical specification should describe the syntax and semantics of any new feature.
+The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones. 
 
 # Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
