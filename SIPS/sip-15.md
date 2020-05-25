@@ -112,8 +112,135 @@ The rationale for these liquidation mechanisms are:
 ## Test Cases
 
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
+Given Alice has issued synths with 800 SNX, with a debt balance of 533.33 sUSD and now has a collateralised ratio of 150% and Bob acts as a liquidator with sUSD,
 
-Test cases for an implementation are mandatory for SIPs but can be included with the implementation.
+Given the following preconditions:
+
+- liquidation ratio is 150%
+- liquidation cap is 300%
+- liquidation penalty is 12%
+- and liqudatiion delay is set to _2_ weeks.
+
+***
+
+When
+
+- Bob flags Alice address for liquidation
+
+Then
+
+- ✅ It succeeds and adds an liquidation Entry for Alice as flagged
+- ✅ It sets deadline as block.timestamp + liquidation delay of _2_ weeks.
+- ✅ It emits an event accountFlaggedForLiquidation(account, deadline)
+
+***
+
+When
+
+- Bob tries to flag Alice address for liquidation again
+
+Then
+
+- ❌ It fails as Alice's address is already flagged
+
+***
+
+When
+
+- Alice does not fix her c ratio by burning sUSD back to the Liquidation Target ratio
+- and two weeks have elapsed
+- and SNX is priced at USD 1.00
+- and bob calls liquidateSynthetix and burns 100 sUSD to liquidate SNX
+
+Then
+
+- ✅ Bob's sUSD balance is reduced by 100 sUSD, and Alice's SNX is transferred to Bob's address. The amount of SNX transferred is:
+- `100 sUSD / Price of SNX` = `100 sUSD / $1 = 100 SNX redeemed` + liquidation penalty `100 * 12% = 112 SNX` transferred to Bob.
+- Alice debt is reduced by 100 sUSD to `433.33 sUSD` and she has `688 SNX` remaining.
+
+***
+
+When
+
+- After Bob's liquidating 100 sUSD worth of SNX, Alice collateral ratio at 158.77% is still below the liquidation target ratio.
+- and Chad tries to liquidate Alice's SNX collateral with 50 sUSD
+- and the result Collateral ratio, after reducing by 50 sUSD, is less than the liquidation target ratio
+
+Then
+
+- ✅ Chad's sUSD balance is reduced by the 50 sUSD
+- `50 SNX + 12% SNX = 56 SNX` is transferred to Chad
+- Alice's debt is reduced by a further 50 sUSD to `383.33 sUSD` and she has `632 SNX` remaining.
+
+***
+
+When
+
+- Bob now tries liquidating a larger amount of sUSD (1000 sUSD) against Alice's debt.
+- 1000 sUSD takes Alice's collateral ratio above the liquidation target ratio (300%)
+
+Then
+
+- ✅ Bob's liquidation transaction only partially liquidates the `1000 sUSD` input.
+- The amount that is burned is calculated from the max of the required debt to bring Alice's collateral ratio to `300%`. Debt balance required to be at `300%` is `210.6666666667 sUSD`. The debt to burn is `383.33 - 210.6666666667 = 172.67 sUSD`
+- Bob's sUSD balance is reduced by `172.67 sUSD` and `172.67 + 10% = 189.937 SNX` is transferred to Bob.
+- Alice's debt balance is reduced to `383.33 - 172.67 sUSD = 210.66 sUSD` and she has `632 - 189.937 = 442.063 SNX` remaining, with a 209.85% collateral ratio.
+
+- ✅ Alice's liquidation entry is removed and returns false
+- ✅ An event is emitted that liquidation flag is removed for her address
+
+---
+
+When
+
+- Alice has been flagged for liquidation
+- and the price of SNX increases so her Collateral ratio is now above the liquidation target ratio
+- and she calls checkAndRemoveAccountInLiquidation
+
+Then
+
+- ✅ Her account is removed from liquidation
+- and the liquidation entry is removed
+
+***
+
+When
+
+- Alice has been flagged for liquidation
+- and the price of SNX doesn't change so she is still below the liquidation target ratio
+- and she calls checkAndRemoveAccountInLiquidation
+
+Then
+
+- ❌ it fails
+
+***
+
+When
+
+- Alice has been flagged for liquidation
+- and the liquidation deadline has passed
+- and her collateral ratio is above the liquidation target ratio
+- and Bob tries to liquidate Alice calling `liquidateSynthetix()`
+
+Then
+
+- ✅ Her account is removed from liquidation within liquidateSynthetix transaction
+- and no sUSD or debt is burned by Bob
+- and no SNX is liquidated and transferred to Bob.
+
+---
+
+When
+
+- Alice has been flagged for liquidation
+- and she burns sUSD debt to fix her collateral ratio above the liquidation target ratio
+
+Then
+
+- ✅ Her account is removed from liquidation within the burn synths transaction
+
+---
 
 ## Implementation
 
