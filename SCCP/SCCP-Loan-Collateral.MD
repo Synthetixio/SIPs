@@ -30,7 +30,7 @@ In other words, the value of the locked ETH needs to exceed the value of the loa
 | Buffer | 4.5% |
 | **Total** | **110%** |
 
-As a side note, it should be mentioned that despite the dilutive impact on earnings because of the loan originations fees that are paid to acquire synths, sETH loans still constitute an attractive proposition for traders who are keen on protecting the value of their principal amount against the protocol risk of Synthetix (risk of un-peg). Furthermore, sETH loans constitute an important part of the Synthetix's eco-system, as it allows synths to be minted by traders directly (instead of going through liquidity pools), therefore testing out the borrowers appetite for synths at different levels collateral requirement will provide the community with information on the elasticity of this demand.
+As a side note, it should be mentioned that despite the dilutive impact on earnings because of the loan origination fees that are paid to acquire synths, sETH loans still constitute an attractive proposition for traders who are keen on protecting the value of their principal amount against the protocol risk of Synthetix (risk of un-peg). Furthermore, sETH loans constitute an important part of the Synthetix's eco-system, as it allows synths to be minted by traders directly (instead of going through liquidity pools), therefore testing out the borrowers appetite for synths at different levels collateral requirement will provide the community with information on the elasticity of this demand.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
