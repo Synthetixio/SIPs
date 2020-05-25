@@ -64,11 +64,13 @@ interface ILiquidations {
     function checkAndRemoveAccountInLiquidation(address account) external;
 
     // owner only
-    function setLiquidationDelay(uint time) external;
+    function setLiquidationDelay(uint _time) external;
 
-    function setLiquidationRatio(uint ratio) external;
+    function setLiquidationRatio(uint _liquidationRatio) external;
 
-    function setLiquidationTargetRatio(uint target) external;
+    function setLiquidationTargetRatio(uint _targetRatio) external;
+
+    function setLiquidationPenalty(uint _penalty) external;
 }
 ```
 
@@ -249,6 +251,7 @@ Please list all values configurable via SCCP under this implementation.
 - liquidationDelay
 - liquidationRatio
 - liquidationTargetRatio
+- liquidationPenalty
 
 ## Implementation
 
