@@ -1,7 +1,7 @@
 ---
 sip: 56
 title: Differential Fees
-status: WIP
+status: Proposed
 author: Clinton Ennis (@hav-noms)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
@@ -26,9 +26,11 @@ Upgrading the `FeePool` to allow an array of Synths exchange rates to be set all
 
 There could be multiple pricing options TBD such as;
 
-1. Charge the fee rate of the synth being exchanged into. e.g. If sETH is 1% and sUSD was 0% then it would be free to exchange from sETH to sUSD.
-2. Charge the sum of the pair. e.g. if sETH is .5% and sUSD is .1% the total exchange fee would be 0.6%
-3. Charge the lowest of the pair. e.g. if sETH is .5% and sUSD is .1% the exchange fee would be 0.1%
+1. Charge the fee rate of the synth being exchanged into.
+2. ~~Charge the sum of the pair.~~
+3. ~~Charge the lowest of the pair.~~
+
+**UPDATE:** The proposed pricing method is 1.
 
 ## Motivation
 
@@ -58,10 +60,10 @@ Will allow the protocol DAO to set n number of exchangeFeeRates for n number of 
 
 **Function signature**
 
-`setExchangeFeeRateForSynths(bytes32 [synthKeys], uint256 [exchangeFeeRates]) onlyOwner`
+`setExchangeFeeRateForSynths(bytes32[] synthKeys, uint256[] exchangeFeeRates) onlyOwner`
 
-- `bytes32 [synthKeys]`: The array of currencyKeys for the synths to set
-- `uint256 [exchangeFeeRates]`: The array of rates
+- `bytes32[] synthKeys`: The array of currencyKeys for the synths to set
+- `uint256[] exchangeFeeRates`: The array of rates
 
 ### exchangeFeeRateForSynth
 
@@ -69,7 +71,7 @@ Return the exchange fee rate for a synth
 
 **Function signature**
 
-`exchangeFeeForSynth(bytes32 synth) public view returns (uint)`
+`exchangeFeeRateForSynth(bytes32 synth) public view returns (uint)`
 
 - `bytes32 synth`: synth key to request the rate for 
 
@@ -91,16 +93,20 @@ New functions required in the upgradable `Exchanger` contract.
 Returns the exchange fee in sUSD.
 
 Deprecate existing fee view function `FeePool.exchangeFeeIncurred(uint value) public view returns (uint)`
-and move to `Exchanger.feeRateForExchange`
-to accept the Synth trading pair as arguments to determine the exchange fee for the trade. 
+and move to `Exchanger.getAmountsForExchange`
+to accept the Synth trading pair as arguments to determine the exchange fee for the trade.
 
 **Function signature**
 
-`exchangeFeeForTrade(uint amount, bytes32 source, bytes32 destination) public view returns (uint)`
-
-- `uint amount`: Amount of the source Synth to exchange
-- `bytes32 source`: Synth exchanging from 
-- `bytes32 destination`: Synth to exchange into 
+`getAmountsForExchange(uint sourceAmount, bytes32 sourceCurrencyKey, bytes32 destinationCurrencyKey) public view returns (uint)`
+Parameters
+- `uint sourceAmount`: Amount of the source Synth to exchange
+- `bytes32 sourceCurrencyKey`: Synth exchanging from
+- `bytes32 destinationCurrencyKey`: Synth to exchange into
+Returns
+- `uint amountReceived`: The amount recieved after exchange fees
+- `uint fee`: The fees payable for the exchange
+- `uint exchangeFeeRate`: The exchange rate applied
 
 ## Rationale
 
@@ -112,7 +118,20 @@ It was considered that a `Synth` should store its own rate by having a setter fo
 
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
-TBD
+### FeePool
+
+1. Given the pDAO needs to set multiple rates. When owner sends an array of x Synths and rates then  store in the `FeePoolEternalStorage` on chain
+2. Given the pDAO needs to set a single rate. When owner sends an array of x Synths and rates that are already stored then the synth rates are updated.
+3. Given the pDAO needs to update multiple rates. When owner sends an array of 1 Synths and rates then  store in the `FeePoolEternalStorage` on chain
+4. Given the pDAO needs to update 1 rate. When owner sends an array of 1 Synths and rates that are already stored then the synth rates are updated.
+5. Given a synthKey, anyone can view the exchange fee rates for the synthKey
+6. When owner sends a rate greater than MAX_EXCHANGE_FEE_RATE then revert
+
+### Exchanger
+
+1. Given I have a balance of Synth A and want to exchange into Synth B then I can view the `exchangeFeeRate`, `fee` and `amountReceived`
+2. Given I exchange Synth A into Synth B and then the exchange fee rate applied should be the rate of Synth B
+3. Given I exchange into a Synth then the exchange rate is stored for fee reclaimation, when I return x seconds later and have a settlement owed to the debt pool or rebate owing to me the exchange fee rate at the time of my exchange is used for settlment and not the current rate in case it has changed.
 
 ## Implementation
 

@@ -16,7 +16,7 @@ This SIP adds limit order functionality to the Synthetix exchange, without modif
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
-To keep the integrity of the core Synthetix contracts in place, we propose the creation of a separate layer of “advanced mode” trading contracts to enable additional functionality. The primary contract is a limit order contract. The exchange users can place limit orders on it and send the order source amount to it. Additionally, they specify the parameters of limit orders, including destination asset price, allowed slippage and execution fees. Limit orders set by the user are executed at the right time by "execution nodes" that recieve the execution fee in exchange.
+To keep the integrity of the core Synthetix contracts in place, we propose the creation of a separate layer of “advanced mode” trading contracts to enable additional functionality. The primary contract is a limit order contract. The exchange users can place limit orders on it and send the order source amount to it. Additionally, they specify the parameters of limit orders, including destination asset price and execution fees. Limit orders set by the user are executed at the right time by "execution nodes" that recieve the execution fee in exchange.
 
 ## Motivation
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
@@ -79,7 +79,7 @@ This function cancels a previously submitted and unexecuted order by the same `m
 function executeOrder(uint orderID) public;
 ```
 
-This function allows a `msg.sender` who has an execualready given the `Proxy` contract an allowance of `sourceCurrencyKey` to submit a new limit order.
+This function allows anyone to execute a limit order.
 
 It fetches the order data using `StateStorage.getOrder()`, if the amount received is larger than or equal to the order's `minDestinationAmount`:
 
