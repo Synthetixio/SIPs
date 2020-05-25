@@ -61,13 +61,16 @@ interface IDelegatedMigrator {
     // Views
     function waitingPeriodSecs() external view returns (uint);
 
+    // Mutative functions
     function propose(string version, IMigration target) external; // onlyOwner
 
     function reject(string version, IMigration target) external; // onlyTokenVote
 
     function execute(string version, IMigration target, uint index) external; // onlyOwner
 
-    // ... Owned functions
+    function setTokenVote(address tokenVote) external; // onlySelf (i.e. only via a migration script)
+
+    function setWaitingPeriodSecs(uint secs) external; // onlySelf (i.e. only via a migration script)
 }
 ```
 
@@ -103,6 +106,11 @@ contract AtlairUpgrade is IMigration {
 
 In order to integrate with the current Synthetix release process, the aforemented publisher script would be configured to output a migration contract, which would then be committed to mainnet, verified and submitted as a proposal.
 
+> ### Future Improvements
+>
+> 1. For the initial phase of this migrator, the suggestion is to limit invocations of `execute()` to the `owner`. This is to prevent any confusions for the core contributors during partial upgrades (which take more than a single transaction). In the future however, we envisage that `execute()` will be callable by anyone.
+> 2. Additionally, the eventual aim is to have `propose()` also callable by anyone. This would then require approval by vote rather than veto by vote as suggested above. This is something to look at in future iterations of the migrator.
+
 ## Rationale
 
 <!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
@@ -113,7 +121,7 @@ There will be a configurable time delay between when a proposal has been accepte
 
 If the holders do not agree with the upgrades, they may vote to reject the proposal. Morever, if the proposal is not verified on Etherscan (or some other verified source), then the community should simply reject the proposal.
 
-The migration may take multiple steps (in the case where the migration requires more than the 10M block gas limit to complete, meaning in those cases that the migration isn't atomic)
+The migration may take multiple steps (in the case where the migration requires more than the 10M block gas limit to complete, meaning in those cases that the migration isn't atomic).
 
 ## Test Cases
 
