@@ -1,8 +1,8 @@
 ---
 sccp: TBD
 title: Reduce Collateral Ratio For sETH Loans
-status: WIP
-author: <Kaleb Keny (@kaleb-keny)>
+status: Proposed
+author: Kaleb Keny (@kaleb-keny)
 discussions-to: sip-35-eth-collateral 
 created: 2020-05-25
 ---
