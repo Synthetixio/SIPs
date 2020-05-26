@@ -42,14 +42,14 @@ Modeling shows that at a liquidation ratio of 200%, if liquidators were to repay
 
 The amount of sUSD required to fix a staker's collateral to the target issuance ratio is calculated based on the formula:
 
-V = Value of SNX
-D = Debt Balance
-t = Target Collateral Ratio
-S = Amount of sUSD debt to burn
-P = Liquidation Penalty %
+- V = Value of SNX
+- D = Debt Balance
+- t = Target Collateral Ratio
+- S = Amount of sUSD debt to burn
+- P = Liquidation Penalty %
 
 \\[
-S := \frac{t * D - V}{t - (1 + P)}
+S = \frac{t * D - V}{t - (1 + P)}
 \\]
 
 ### Liquidations Contract
