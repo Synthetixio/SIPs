@@ -34,6 +34,11 @@ Liquidation gives SNX holders and issuers of Synthetic synths these benefits:
 ## Specification
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
+**Liquidation Target Ratio**
+
+Liquidations are capped at the Liquidation Target ratio which is the current Issuance ratio. This is the ratio SNX collateral can issue debt to provide the system with sufficient capital to buffer price shocks and active stakers are required to keep to claim fees and rewards.
+
+Modeling shows that at a liquidation ratio of 200%, if liquidators were to repay and fix the staker's collateral ratio to 800%, then about 44% of the staker's SNX collateral will be liquidated to pay down the issued debt.
 
 ### Liquidations Contract
 
@@ -44,7 +49,6 @@ Liquidations contract to mark an SNX staker for liquidation with a time delay to
 - `Liquidation Delay`: Time before liquidation of under collateralised collateral.
 - `Liquidation Penalty`: % penalty on SNX collateral liquidated.
 - `Liquidation Ratio`: Collateral ratio liquidation can be initiated.
-- `Liquidation Target Ratio`: Target collateral ratio liquidations are capped at.
 
 **Interface**
 
@@ -73,6 +77,10 @@ interface ILiquidations {
     function setLiquidationPenalty(uint _penalty) external;
 }
 ```
+**Events**
+
+ - `accountFlaggedForLiquidation(address indexed account, uint deadline)`
+ - `accountRemovedFromLiqudation(address indexed account)`
 
 ### Synthetix contract
 
@@ -96,6 +104,13 @@ interface ISynthetix {
 Current escrowed SNX tokens in the RewardsEscrow will require a planned upgrade to the RewardsEscrow contract as per [SIP-60](./sip-60.md) to be included as part of the redeemable SNX when liquidating snx collateral. The escrowed snx tokens will be transferred to the liquidator and appended to the rewardsEscrow.
 
 Mitigating this issue is the fact that in order to unlock all `transferrable` SNX a minter would have to repay all of their debt and re-issue debt at the issuance ratio (currently 800%).
+
+### Insurance fund for liquidations
+---
+
+In the scenario where a staker's Collateral ratio falls below 100% + liquidation penalty, ie (110%) then the staker's collateral will not fully cover the repayment of all their debt and the liquidation penalty. Liquidators should still be able to partially liquidate the debt until there is not enough collateral to repay all the remaining debt and also provide the liquidation penalty incentive.
+
+In the next iteration of Synthetix's liquidation mechanism, an SNX insurance fund would be set up to cover under-collateralised liquidations where any shortfall in SNX collateral will come out of the insurance fund to pay liquidators. This would allow the liquidators to repay all the debt of stakers who have no remaining SNX collateral after being liquidated.
 
 ## Rationale
 
@@ -139,7 +154,7 @@ Then
 
 When
 
-- Bob tries to flag Alice address for liquidation again
+- Bob or anyone else tries to flag Alice address for liquidation again
 
 Then
 
@@ -147,12 +162,14 @@ Then
 
 ***
 
-When
+Given
 
 - Alice does not fix her c ratio by burning sUSD back to the Liquidation Target ratio
 - and two weeks have elapsed
 - and SNX is priced at USD 1.00
-- and bob calls liquidateSynthetix and burns 100 sUSD to liquidate SNX
+
+When
+- bob calls liquidateSynthetix and burns 100 sUSD to liquidate SNX
 
 Then
 
@@ -162,11 +179,13 @@ Then
 
 ***
 
-When
+Given
 
 - After Bob's liquidating 100 sUSD worth of SNX, Alice collateral ratio at 158.77% is still below the liquidation target ratio.
-- and Chad tries to liquidate Alice's SNX collateral with 50 sUSD
-- and the result Collateral ratio, after reducing by 50 sUSD, is less than the liquidation target ratio
+
+When
+- Chad tries to liquidate Alice's SNX collateral with 50 sUSD
+- and the result Collateral ratio, after reducing by 50 sUSD, is less than the target issuance ratio
 
 Then
 
@@ -184,10 +203,6 @@ When
 Then
 
 - ✅ Bob's liquidation transaction only partially liquidates the `1000 sUSD` input.
-- The amount that is burned is calculated from the max of the required debt to bring Alice's collateral ratio to `300%`. Debt balance required to be at `300%` is `210.6666666667 sUSD`. The debt to burn is `383.33 - 210.6666666667 = 172.67 sUSD`
-- Bob's sUSD balance is reduced by `172.67 sUSD` and `172.67 + 10% = 189.937 SNX` is transferred to Bob.
-- Alice's debt balance is reduced to `383.33 - 172.67 sUSD = 210.66 sUSD` and she has `632 - 189.937 = 442.063 SNX` remaining, with a 209.85% collateral ratio.
-
 - ✅ Alice's liquidation entry is removed and returns false
 - ✅ An event is emitted that liquidation flag is removed for her address
 
