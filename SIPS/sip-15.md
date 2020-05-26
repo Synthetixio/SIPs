@@ -72,8 +72,6 @@ interface ILiquidations {
 
     function setLiquidationRatio(uint _liquidationRatio) external;
 
-    function setLiquidationTargetRatio(uint _targetRatio) external;
-
     function setLiquidationPenalty(uint _penalty) external;
 }
 ```
@@ -265,7 +263,6 @@ Please list all values configurable via SCCP under this implementation.
 
 - liquidationDelay
 - liquidationRatio
-- liquidationTargetRatio
 - liquidationPenalty
 
 ## Implementation
