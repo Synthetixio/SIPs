@@ -49,7 +49,7 @@ S = Amount of sUSD debt to burn
 P = Liquidation Penalty %
 
 \\[
-S := \franc{t * D - V}{t - (1 + P)}
+S := \frac{t * D - V}{t - (1 + P)}
 \\]
 
 ### Liquidations Contract
