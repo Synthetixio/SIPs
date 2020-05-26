@@ -40,6 +40,18 @@ Liquidations are capped at the Liquidation Target ratio which is the current Iss
 
 Modeling shows that at a liquidation ratio of 200%, if liquidators were to repay and fix the staker's collateral ratio to 800%, then about 44% of the staker's SNX collateral will be liquidated to pay down the issued debt.
 
+The amount of sUSD required to fix a staker's collateral to the target issuance ratio is calculated based on the formula:
+
+V = Value of SNX
+D = Debt Balance
+t = Target Collateral Ratio
+S = Amount of sUSD debt to burn
+P = Liquidation Penalty %
+
+\\[
+S := \franc{t * D - V}{t - (1 + P)}
+\\]
+
 ### Liquidations Contract
 
 Liquidations contract to mark an SNX staker for liquidation with a time delay to allow staker to fix collateral ratio.
