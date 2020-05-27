@@ -80,17 +80,17 @@ interface ILiquidations {
     function checkAndRemoveAccountInLiquidation(address account) external;
 
     // owner only
-    function setLiquidationDelay(uint _time) external;
+    function setLiquidationDelay(uint time) external;
 
-    function setLiquidationRatio(uint _liquidationRatio) external;
+    function setLiquidationRatio(uint liquidationRatio) external;
 
-    function setLiquidationPenalty(uint _penalty) external;
+    function setLiquidationPenalty(uint penalty) external;
 }
 ```
 **Events**
 
- - `accountFlaggedForLiquidation(address indexed account, uint deadline)`
- - `accountRemovedFromLiqudation(address indexed account)`
+ - `AccountFlaggedForLiquidation(address indexed account, uint deadline)`
+ - `AccountRemovedFromLiqudation(address indexed account)`
 
 ### Synthetix contract
 
