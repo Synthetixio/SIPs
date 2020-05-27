@@ -52,6 +52,10 @@ The amount of sUSD required to fix a staker's collateral to the target issuance 
 S = \frac{t * D - V}{t - (1 + P)}
 \\]
 
+**Liquidation Ratio**
+
+The liquidation ratio to initiate the liquidation process will be set at 200% initially and adjustable by an SCCP. This ensures that there is sufficient buffer for the staker's collateral.
+
 ### Liquidations Contract
 
 Liquidations contract to mark an SNX staker for liquidation with a time delay to allow staker to fix collateral ratio.
