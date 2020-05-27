@@ -1,5 +1,5 @@
 ---
-sip: 59
+sip: 62
 title: Futures reference price methodology
 status: WIP
 author: Bill Mayott <bill.mayott@xbto.com>, Philippe Bekhazi <philippe@xbto.com>, Walton Comer <walton@xbto.com>, Kain Warwick (@kaiynne)
@@ -9,22 +9,21 @@ created: 2020-05-18
 ---
 
 ## Simple Summary
-<!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 A method for converting futures market prices into a single reference price for Synths.
 
 ## Abstract
-<!--A short (~200 word) description of the technical issue being addressed.-->
-This SIP describes a general approach to coverting price data from futures markets into a single reference price, as well as a specific methodology for creating a non-expiring Crude Oil Index based on CME Light Sweet Crude Oil futures prices (Contract Code: CL) for a Synth with ticker symbol sOIL.
+This SIP describes a general approach to converting price data from futures markets into a single reference price, as well as a specific methodology for creating a non-expiring Crude Oil Index based on CME Light Sweet Crude Oil futures prices (Contract Code: CL) for a Synth with ticker symbol sOIL.
 
 ## Motivation
-<!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
 The creation of a single reference price for futures markets that incorporates information from the most liquid futures contracts enables assets like WTI and other commodities to be traded as synthetic assets within Synthetix. There is significant demand for these assets particularly given the liquidity of the underlying markets and the difficulty of access for the average trader. 
  
 ## Specification
-<!--The technical specification should describe the syntax and semantics of any new feature.-->
 There are many markets where price discovery occurs solely or predominantly in the futures markets, these futures markets are made up of individual contracts with varying expiry dates. This presents a problem when attempting to create a single reference price. The solution proposed is to employ a dynamic weighting scheme (in continuous time) of the near two contract months, with emphasis initially given to the near contract.  As expiry approaches, however, weight is progressively shifted out of the near contract in favor of the 2nd month.  Moreover, upon reaching 5 days (configurable via SCCP) prior the last trade time (2:30PM EST on the exchange stipulated Last Trade day), zero weighting in the near contract is achieved, with the weight instead being allocated between the 2nd and 3rd contract months.  Once the front month expires, the next nearest two live contracts become the 1st and 2nd months, and the dynamic weighting process repeats. This weighting methodology is intentionally relatively simple and linear to enable easier reasoning about the likely behaviour of the resulting reference price from various futures contract situations such as contango and backwardation, and specifically super-contango observed in early 2020 due to extreme volatility in the front month expiring WTI contracts resulting in negative futures prices.
 
-The forumla for the reference price is:
+The formula for the reference price is:
+
+<img width="441" alt="Screen Shot 2020-05-27 at 8 41 07 pm" src="https://user-images.githubusercontent.com/1691389/83010063-097ee280-a05b-11ea-9a84-714e0deefa5b.png">
+
 \\[ 
 price = \begin{cases}
 \frac{d_{1} \ - \ X}{d_{1} \ - \ d_{0}} \cdot P_1 \ + \ \frac{d_{0} \ + \ X}{d_{1} \ - \ d_{0}} \cdot P_2 &   \ \mbox{if } \ \ \  X \leq d_1 \\
@@ -33,6 +32,7 @@ price = \begin{cases}
 
 \end{cases}
 \\]
+
 With the inputs below:
 X: # of days prior to expiration to achieve zero weight in in the expiring contract (default of 5 days)
 DTE0: Days since the prior month contract expired
@@ -42,18 +42,15 @@ P0: Orderbook mid-price of the current front month contract
 P1: Orderbook mid-price of the current 2nd month contract
 p2: Orderbook mid-price of the current 3rd month contract
 
-There implications for fee reclamation with this approach, given that futures markets close, these Synths will use the next price fee reclamation mechanism. This requires that during market closures the Chainlink aggregator contract published a stable price. Due to the continuous time aspect of the calculation the reference price will continually update even durng market closures. This requires the node operators to subscribe to a market closure data feed to ensure the published price on-chain does not deviate outside a pre-defined range (likely 5bps) during market closures, which would trigger a next price update and cause all orders to fill at a stale price. There is a further implication for circuit breakers and other out of cycle market closures as these events would not be covered by the market closure data feed, in the case of a circuit breaker or other unscheduled market closure the data providers would continue to publish stale prices requiring these markets to be closed manually via the protocolDAO.
+There implications for fee reclamation with this approach, given that futures markets close, these Synths will use the next price fee reclamation mechanism found here https://sips.synthetix.io/sips/sip-52. This requires that during market closures the Chainlink aggregator contract published a stable price. Due to the continuous time aspect of the calculation the reference price will continually update even durng market closures. This requires the node operators to subscribe to a market closure data feed to ensure the published price on-chain does not deviate outside a pre-defined range (likely 5bps) during market closures, which would trigger a next price update and cause all orders to fill at a stale price. There is a further implication for circuit breakers and other out of cycle market closures as these events would not be covered by the market closure data feed, in the case of a circuit breaker or other unscheduled market closure the data providers would continue to publish stale prices requiring these markets to be closed manually via the protocolDAO.
 
 ## Rationale
-<!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 This method was chosen over other more strictly enforced constant-maturity methods, such as cubic spline best-fit regressions of the futures curve given the added complexity of these methods and the marginal difference in accuracy of the reference price. The goal of this SIP is to enable broader understandability, adoption and redundancy for a variety of assets for which price discovery is predominantly or solely centred around futures contract trading. By providing a straightforward methodology we can construct reference prices for a range of assets that can be published by Chainlink Oracles onto Ethereum bridging TradFi and DeFI. Some potential assets that this methodology can support are Corn, Wheat, Soybeans, Coffee, Sugar, Platinum, Palladium and other more exotic but liquid markets.
 
 ## Test Cases
-<!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 The logic of these reference prices is implemented at the data provider level, with Chainlink node operators consuming this data and publishing it into aggregator contracts. In order to ensure the reliability of this data multiple data providers will be selected to feed the node operators all of which connect dirctly to raw data from the futures markets.
 
 ## Implementation
-<!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
 The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.
 
 ## Configurable Values (Via SCCP)
