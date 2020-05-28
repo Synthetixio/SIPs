@@ -157,7 +157,7 @@ Given the following preconditions:
 
 - liquidation ratio is 200%
 - liquidation cap is 300%
-- liquidation penalty is 12%
+- liquidation penalty is 10%
 - and liqudatiion delay is set to _2_ weeks.
 
 ***
@@ -196,8 +196,8 @@ When
 Then
 
 - ✅ Bob's sUSD balance is reduced by 100 sUSD, and Alice's SNX is transferred to Bob's address. The amount of SNX transferred is:
-- `100 sUSD / Price of SNX` = `100 sUSD / $1 = 100 SNX redeemed` + liquidation penalty `100 * 12% = 112 SNX` transferred to Bob.
-- Alice debt is reduced by 100 sUSD to `433.33 sUSD` and she has `688 SNX` remaining.
+- `100 sUSD / Price of SNX` = `100 sUSD / $1 = 100 SNX redeemed` + liquidation penalty `100 * 10% = 110 SNX` transferred to Bob.
+- Alice debt is reduced by 100 sUSD to `433.33 sUSD` and she has `690 SNX` remaining.
 
 ***
 
@@ -212,8 +212,8 @@ When
 Then
 
 - ✅ Chad's sUSD balance is reduced by the 50 sUSD
-- `50 SNX + 12% SNX = 56 SNX` is transferred to Chad
-- Alice's debt is reduced by a further 50 sUSD to `383.33 sUSD` and she has `632 SNX` remaining.
+- `50 SNX + 10% SNX = 55 SNX` is transferred to Chad
+- Alice's debt is reduced by a further 50 sUSD to `383.33 sUSD` and she has `635 SNX` remaining.
 
 ***
 
