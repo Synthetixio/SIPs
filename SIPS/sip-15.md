@@ -9,7 +9,7 @@ created: 2019-08-20
 
 ## Simple Summary
 
-This SIP proposes a liquidation mechanism for SNX collateral. Synths can be redeemed for staked SNX at a discount if the collateral ratio of a staker falls below the liquidation ratio for a two weeks.
+This SIP proposes a liquidation mechanism for SNX collateral. Synths can be redeemed for staked SNX at a discount if the collateral ratio of a staker falls below the liquidation ratio for two weeks.
 
 ## Abstract
 
@@ -19,7 +19,7 @@ Instead of instant liquidations for positions below the Liquidation ratio, a del
 
 ## Motivation
 
-In a crypto-backed stablecoin system such as Synthetix, the issued stablecoin (synths) tokens should represent a claims on the underlying collateral. The current design of the Synthetix system doesn't allow holders of synths to directly redeem the underlying collateral unless they are burning and unlocking their own SNX collateral. The value of the synths issued in the synthetix system is derived from incentivising minters to be over-collateralised on the debt they have issued and other economic incentives such as exchange fees and SNX rewards.
+In a crypto-backed stablecoin system such as Synthetix, the issued stablecoin (synths) tokens should represent claims on the underlying collateral. The current design of the Synthetix system doesn't allow holders of synths to directly redeem the underlying collateral unless they are burning and unlocking their own SNX collateral. The value of the synths issued in the synthetix system is derived from incentivising minters to be over-collateralised on the debt they have issued and other economic incentives such as exchange fees and SNX rewards.
 
 If a minter's collateral value falls below the required collateral ratio, there is no direct penalty for being under collateralised, even in the unlikely event where the value of their locked collateral (SNX) is less than the debt they owe. Stakers and synth holders should be able to liquidate undercollateralised minters at a discounted price to restore the network collateral ratio.
 
@@ -36,9 +36,9 @@ Liquidation gives SNX holders and issuers of Synthetic synths these benefits:
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 **Liquidation Target Ratio**
 
-Liquidations are capped at the Liquidation Target ratio which is the current Issuance ratio. This is the ratio SNX collateral can issue debt to provide the system with sufficient capital to buffer price shocks and active stakers are required to keep to claim fees and rewards.
+Liquidations are capped at the Liquidation Target ratio which is the current Issuance Ratio. This is the ratio SNX collateral can issue debt to provide the system with sufficient capital to buffer price shocks and active stakers are required to maintain to claim fees and rewards.
 
-Modeling shows that at a liquidation ratio of 200%, if liquidators were to repay and fix the staker's collateral ratio to 800%, then about 44% of the staker's SNX collateral will be liquidated to pay down the issued debt.
+Modeling shows that at a liquidation ratio of 200%, if liquidators were to repay and fix the staker's collateral ratio to 800%, then about 44% of the staker's SNX collateral will be liquidated to repair the undercollateralised position.
 
 The amount of sUSD required to fix a staker's collateral to the target issuance ratio is calculated based on the formula:
 
@@ -54,11 +54,11 @@ S = \frac{t * D - V}{t - (1 + P)}
 
 **Liquidation Ratio**
 
-The liquidation ratio to initiate the liquidation process will be set at `200%` initially and adjustable by an SCCP. This ensures that there is sufficient buffer for the staker's collateral. The lower bound for the liquidation ratio would be `100% + any liquidation penalty` to pay for liquidations.
+The liquidation ratio to initiate the liquidation process will be set at `200%` initially and adjustable by an SCCP. This ensures there is sufficient buffer for the staker's collateral. The lower bound for the liquidation ratio would be `100% + any liquidation penalty` to pay for liquidations.
 
 **Liquidation Penalty**
 
-The liquidation penalty is paid to the liquidator and is paid as a bonus ontop of the SNX amount being redeemed.
+The liquidation penalty is paid to the liquidator and is paid as a bonus on top of the SNX amount being redeemed.
 
 For example, given the liquidation penalty is 10%, when 100 SNX is liquidated, then `110 SNX` is transferred to the liquidator.
 
@@ -132,11 +132,11 @@ Mitigating this issue is the fact that in order to unlock all `transferrable` SN
 
 In the scenario where a staker's Collateral ratio falls below 100% + liquidation penalty, ie (110%) then the staker's collateral will not fully cover the repayment of all their debt and the liquidation penalty. Liquidators should still be able to partially liquidate the debt until there is not enough collateral to repay all the remaining debt and also provide the liquidation penalty incentive.
 
-In the next iteration of Synthetix's liquidation mechanism, an SNX insurance fund would be set up to cover under-collateralised liquidations where any shortfall in SNX collateral will come out of the insurance fund to pay liquidators. This would allow the liquidators to repay all the debt of stakers who have no remaining SNX collateral after being liquidated.
+In the next iteration of Synthetix's liquidation mechanism, an SNX insurance fund will be set up to cover under-collateralised liquidations where any shortfall in SNX collateral will come out of the insurance fund to pay liquidators. This would allow the liquidators to repay all the debt of stakers who have no remaining SNX collateral after being liquidated.
 
 ## Rationale
 
-The reasoning behind implementing a direct redemption liquidation mechanism with a delay function is to provide a mechanism to purge positions for which the primary incentives have failed. Under most circumstances we have observed that the majority of stakers maintain a healthy ratio to ensure they can claim staking rewards or in extreme cases they simply exit the system completely by burning all debt and selling ther SNX. Even in the case of a major price shock the majority of wallets have more collateral value than their Synth debt so the optimal strategy is to burn debt and recover the collateral. In the case where this does not happen a fallback incentive to remove these undercollateralised positions is required. However, given that these wallets are likely to be edge cases so long as the collateral ratio remains above 500% (currently 800%) it is important to not open an attack vector that would enable a malicious party to attempt to manipulate the price of SNX to liquidate positions. Due to the time delay implemented in the mechanism the cost of attack far exceeds the potential reward making it unlikely that a rational actor would pursue this strategy. The tension in this implementation is therefore between the time it takes to remove an undercollateralised position and the risk that liquidations are used as an attack vector against stakers. The default thresholds and delays implemented err on the side of protecting stakers and can therefore be reduced over time if liquidations are deemed too inefficient.
+The reasoning behind implementing a direct redemption liquidation mechanism with a delay function is to provide a mechanism to purge positions for which the primary incentives have failed. Under most circumstances we have observed that the majority of stakers maintain a healthy ratio to ensure they can claim staking rewards or in extreme cases they exit the system by burning all debt and selling their SNX. Even in the case of a major price shock the majority of wallets have more collateral value than their Synth debt so the optimal strategy is stil to burn debt and recover the collateral. In the case where this does not happen a fallback incentive to remove these undercollateralised positions is required. However, given these wallets are likely to be edge cases so long as the collateral ratio remains above 500% (currently 800%) it is important to not open an attack vector that would enable a malicious party to attempt to manipulate the price of SNX to liquidate positions. Due to the time delay implemented in the mechanism the cost of attack far exceeds the potential reward making it unlikely a rational actor would pursue this strategy. The tension in this implementation is therefore between the time it takes to remove an undercollateralised position and the risk that liquidations are used as an attack vector against stakers. The default thresholds and delays implemented err on the side of protecting stakers and can therefore be reduced over time if liquidations are deemed too inefficient.
 
 The rationale for these liquidation mechanisms are:
 
@@ -146,7 +146,7 @@ The rationale for these liquidation mechanisms are:
 
 - **Partial liquidations:** Partial liquidation of under collateralised SNX reduces the risk of minter's losing all their staked collateral from liquidation and allows a proportion of their debt to be paid back to fix their collateral ratio. Multiple liquidators can benefit from burning any amount of sUSD synth until the c-ratio is above the liquidation target ratio.
 
-- **Liquidation target ratio:** A liquidation target ratio works alongside partial liquidations allowing a proportion of snx to be liquidated until the staker's collateral ratio reaches above the liquidation target ratio. At this ratio it would provide enough buffer in the collateral to back the debt issued.
+- **Liquidation target ratio:** A liquidation target ratio works alongside partial liquidations allowing a proportion of snx to be liquidated until the staker's collateral ratio is above the liquidation target ratio. At this ratio it would provide enough buffer in the collateral to again fully back the debt issued.
 
 ## Test Cases
 
@@ -299,8 +299,6 @@ Please list all values configurable via SCCP under this implementation.
 - liquidationPenalty
 
 ## Implementation
-
-<!--The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.-->
 
 The implementations must be completed before any SIP is given status "Implemented", but it need not be completed before the SIP is "Approved". While there is merit to the approach of reaching consensus on the specification and rationale before writing code, the principle of "rough consensus and running code" is still useful when it comes to resolving many discussions of API details.
 
