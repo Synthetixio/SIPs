@@ -54,7 +54,15 @@ S = \frac{t * D - V}{t - (1 + P)}
 
 **Liquidation Ratio**
 
-The liquidation ratio to initiate the liquidation process will be set at 200% initially and adjustable by an SCCP. This ensures that there is sufficient buffer for the staker's collateral.
+The liquidation ratio to initiate the liquidation process will be set at `200%` initially and adjustable by an SCCP. This ensures that there is sufficient buffer for the staker's collateral. The lower bound for the liquidation ratio would be `100% + any liquidation penalty` to pay for liquidations.
+
+**Liquidation Penalty**
+
+The liquidation penalty is paid to the liquidator and is paid as a bonus ontop of the SNX amount being redeemed.
+
+For example, given the liquidation penalty is 10%, when 100 SNX is liquidated, then `110 SNX` is transferred to the liquidator.
+
+The maximum liquidation penalty will be capped at `50%`.
 
 ### Liquidations Contract
 
@@ -94,7 +102,7 @@ interface ILiquidations {
 **Events**
 
  - `AccountFlaggedForLiquidation(address indexed account, uint deadline)`
- - `AccountRemovedFromLiqudation(address indexed account)`
+ - `AccountRemovedFromLiqudation(address indexed account, uint time)`
 
 ### Synthetix contract
 
@@ -147,7 +155,7 @@ Given Alice has issued synths with 800 SNX, with a debt balance of 533.33 sUSD a
 
 Given the following preconditions:
 
-- liquidation ratio is 150%
+- liquidation ratio is 200%
 - liquidation cap is 300%
 - liquidation penalty is 12%
 - and liqudatiion delay is set to _2_ weeks.
@@ -216,7 +224,7 @@ When
 
 Then
 
-- ✅ Bob's liquidation transaction only partially liquidates the `1000 sUSD` input.
+- ✅ Bob's liquidation transaction only partially liquidates the `1000 sUSD` to reach 800% target
 - ✅ Alice's liquidation entry is removed and returns false
 - ✅ An event is emitted that liquidation flag is removed for her address
 
@@ -244,6 +252,15 @@ When
 Then
 
 - ❌ it fails
+
+When
+
+- Alice has not been flagged for liquidation
+- and she calls checkAndRemoveAccountInLiquidation
+
+Then
+
+- ❌ it fails and reverts with error 'Account has no liquidation set'
 
 ***
 
