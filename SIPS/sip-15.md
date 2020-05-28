@@ -115,7 +115,7 @@ pragma solidity >=0.4.24;
 
 interface ISynthetix {
     // Mutative Functions
-    function liquidateSynthetix(address account, uint synthAmount) external;
+    function liquidateDelinquentAccount(address account, uint susdAmount) external returns (bool);
 }
 ```
 
