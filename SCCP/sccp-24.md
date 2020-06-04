@@ -1,11 +1,11 @@
 ---
-sccp: <to be assigned>
+sccp: 24
 title: Setting initial differential fee levels
 author: @Spreek
 status: WIP
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 created: 2020-06-04
-requires (*optional): <SIP/SCCP number(s)>
+requires: [SIP-56](https://github.com/Synthetixio/SIPs/blob/master/SIPS/sip-56.md)
 ---
 
 ## Simple Summary
