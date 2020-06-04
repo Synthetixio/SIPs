@@ -25,7 +25,7 @@ Per [SIP-56](https://github.com/Synthetixio/SIPs/blob/master/SIPS/sip-56.md), ea
 * Inverse crypto: 30bps (0.3%)
 
 ## Motivation
-Fees chosen by vote in discord. Crypto synths deemed to be riskier and generally have higher market fees elsewhere. We also hope that lower fees on forex/commodity/equity synths will spur greater adoption/trading volume.
+Fees chosen by vote in discord. Crypto synths were deemed to be riskier/less efficient as well as having relatively high fees on other exchanges. We chose to lower fees on forex/commodity/equities synths in recognition of the lower spreads/fees in those markets and in hopes of spurring more adoption/trading volume on those synths.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
