@@ -21,7 +21,7 @@ Per [SIP-56](https://github.com/Synthetixio/SIPs/blob/master/SIPS/sip-56.md), ea
 * Forex synths: 5bps (0.05%)
 * Commodity synths: 5bps (0.05%)
 * Equity synths: 5bps (0.05%)
-* Crypto synths: 30bps (0.05%)
+* Crypto synths: 30bps (0.3%)
 * Inverse crypto synths: 30bps (0.3%)
 
 ## Motivation
