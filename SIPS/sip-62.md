@@ -22,25 +22,23 @@ There are many markets where price discovery occurs solely or predominantly in t
 
 The formula for the reference price is:
 
-<img width="441" alt="Screen Shot 2020-05-27 at 8 41 07 pm" src="https://user-images.githubusercontent.com/1691389/83010063-097ee280-a05b-11ea-9a84-714e0deefa5b.png">
-
-\\[ 
+\\[
 price = \begin{cases}
-\frac{d_{1} \ - \ X}{d_{1} \ - \ d_{0}} \cdot P_1 \ + \ \frac{d_{0} \ + \ X}{d_{1} \ - \ d_{0}} \cdot P_2 &   \ \mbox{if } \ \ \  X \leq d_1 \\
-\\
+\frac{d_{1} \ - \ X}{d_{1} \ - \ d_{0}} \cdot P_1 \ + \ \frac{d_{0} \ + \ X}{d_{1} \ - \ d_{0}} \cdot P_2 & \ \mbox{if } \ \ \ X \leq d_1 \\ \\
+\newline
 \frac{d_{2} \ - \ X}{d_{2} \ - \ d_{1}} \cdot P_2 \ + \ \frac{X \ - \ d_{1}}{d_{2} \ - \ d_{1}} \cdot P_3 & \ \mbox{if } \ \ \ 0 \lt d_1 \lt X \\
-
 \end{cases}
 \\]
 
 With the inputs below:
-X: # of days prior to expiration to achieve zero weight in in the expiring contract (default of 5 days)
-DTE0: Days since the prior month contract expired
-DTE1: Days remaining for the current front month contact
-DTE2: Days remaining for the current 2nd month contract
-P0: Orderbook mid-price of the current front month contract
-P1: Orderbook mid-price of the current 2nd month contract
-p2: Orderbook mid-price of the current 3rd month contract
+
+| \\(X\\) | Number of days prior to expiration to achieve zero weight in in the expiring contract (default of 5 days) |
+| \\(d_{0}\\) | Days since the prior month contract expired |
+| \\(d_{1}\\) | Days remaining for the current front month contact |
+| \\(d_{2}\\) | Days remaining for the current 2nd month contract |
+| \\(P_{0}\\) | Orderbook mid-price of the current front month contract |
+| \\(P_{1}\\) | Orderbook mid-price of the current 2nd month contract |
+| \\(P_{2}\\) | Orderbook mid-price of the current 3rd month contract |
 
 There are implications for fee reclamation with this approach, given that futures markets close, these Synths will use the next price fee reclamation mechanism found here [SIP-52](https://sips.synthetix.io/sips/sip-52). This requires that during market closures the Chainlink aggregator contract published a stable price. Due to the continuous time aspect of the calculation the reference price will continually update even durng market closures. This requires the node operators to subscribe to a market closure data feed to ensure the published price on-chain does not deviate outside a pre-defined range (likely 5bps) during market closures, which would trigger a next price update and cause all orders to fill at a stale price. There is a further implication for circuit breakers and other out of cycle market closures as these events would not be covered by the market closure data feed, in the case of a circuit breaker or other unscheduled market closure the data providers would continue to publish stale prices requiring these markets to be closed manually via the protocolDAO.
 
