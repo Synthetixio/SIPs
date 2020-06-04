@@ -18,11 +18,11 @@ Per [SIP-56](https://github.com/Synthetixio/SIPs/blob/master/SIPS/sip-56.md), ea
 
 **New fees**: 
 
-* Forex: 5bps (0.05%)
-* Commodity: 5bps (0.05%)
-* Equities: 5bps (0.05%)
-* Crypto: 30bps (0.05%)
-* Inverse crypto: 30bps (0.3%)
+* Forex synths: 5bps (0.05%)
+* Commodity synths: 5bps (0.05%)
+* Equity synths: 5bps (0.05%)
+* Crypto synths: 30bps (0.05%)
+* Inverse crypto synths: 30bps (0.3%)
 
 ## Motivation
 Fees chosen by vote in discord. Crypto synths were deemed to be riskier/less efficient as well as having relatively high fees on other exchanges. We chose to lower fees on forex/commodity/equities synths in recognition of the lower spreads/fees in those markets and in hopes of spurring more adoption/trading volume on those synths.
