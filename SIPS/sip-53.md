@@ -14,40 +14,38 @@ This SIP proposes to allow the creation of new markets for trading binary option
 ## Abstract
 
 A binary option is a type of option contract which provides a fixed return based on a binary outcome in the future.
-These options pay out on a certain date if the price of a chosen asset is above (or below) a level specified at the creation of the option.
-This allows users to take a position on the price of any asset known to the Synthetix system.
-The proposed implementation uses a parimutuel-style initial bidding period to set the price per option, with one side of the market paying out the other side at maturity.
-This structure removes the necessity of matching counterparties.
+These options pay out on a certain date if the price of a chosen asset is above (or below) a level specified at the
+creation of the option. This allows users to take a position on the price of any asset known to the Synthetix system.
+The proposed implementation uses a parimutuel-style initial bidding period to set the price per option, with one side of
+the market paying out the other side at maturity. This structure removes the necessity of matching counterparties.
 
 ---
 
 ## Table of Contents
 
-* [Abstract](#abstract)
-* [Table of Contents](#table-of-contents)
 * [Motivation](#motivation)
   * [Summary](#summary)
   * [Smart Contracts](#smart-contracts)
   * [Basic Dynamics](#basic-dynamics)
-    * [Option Supply](#option-supply)
-    * [Option Prices](#option-prices)
+    * [Market Resolution](#market-resolution)
     * [Fees](#fees)
-    * [Equilibrium Prices](#equilibrium-prices)
+    * [Option Supply and Prices](#option-prices)
+    * [Market Equilibria](#market-equilibria)
     * [Options As Synths](#options-as-synths)
   * [Market Creation](#market-creation)
     * [Initial Capital](#initial-capital)
     * [Oracles](#oracles)
     * [Incentives](#incentives)
-  * [Bidding Period](#bidding-period)
+  * [Bidding](#bidding)
     * [Bids](#bids)
     * [Refunds](#refunds)
-  * [Trading Period](#trading-period)
+  * [Trading](#trading)
     * [Balances](#balances)
     * [Token Transfers](#token-transfers)
   * [Maturity](#maturity)
     * [Oracle Snapshot](#oracle-snapshot)
     * [Exercising Options](#exercising-options)
-    * [Cleanup](#cleanup)
+  * [Destruction](#destruction)
     * [Oracle Failure](#oracle-failure)
   * [Future Extensions](#future-extensions)
     * [Arbitrary Maturity Predicates](#arbitrary-maturity-predicates)
@@ -63,13 +61,18 @@ This structure removes the necessity of matching counterparties.
 ---
 
 ## Motivation
-Synthetix enhances whatever markets are implemented on top of it, as users can frictionlessly enter and exit in any currency they wish. This effectively allows any instruments to be denominated in any currency – but it requires integration with the Synthetix platform.
+Synthetix enhances whatever markets are implemented on top of it, as users can frictionlessly enter and exit in any
+currency they wish. This effectively allows any instruments to be denominated in any currency – but it requires
+integration with the Synthetix platform.
 
-When it comes to actually setting up a market, stakers take on some of the risk of capitalising these markets, and in providing the infrastructure to allow them to operate: these responsibilities and the labour required to generate binary options markets should be compensated.
-This requires fees to be remitted to the pool, and hence integration with the protocol itself.
-These fees are effectively the price of accessing the network effect that Synthetix provides by listing the market.
+When it comes to actually setting up a market, stakers take on some of the risk of capitalising these markets, and in
+providing the infrastructure to allow them to operate: these responsibilities and the labour required to generate binary
+options markets should be compensated. This requires fees to be remitted to the pool, and hence integration with the
+protocol itself. These fees are effectively the price of accessing the network effect that Synthetix provides by listing
+the market.
 
-Additionally, the maturity condition of a binary option requires integration with trustworthy price oracles, which Synthetix already provides.
+Additionally, the maturity condition of a binary option requires integration with trustworthy price oracles, which
+Synthetix already provides.
 
 ---
 
@@ -77,105 +80,179 @@ Additionally, the maturity condition of a binary option requires integration wit
 
 ### Summary
 
-Over its life cycle, a binary options market transitions through the following states:
+Binary option markets are created by a manager contract, which keeps track of all markets over their lifetime.
 
-#### 1. Market Creation
-
-Each binary option market is created by a factory contract. At the time of creation, a number of parameters are fixed; particularly the target price, underlying asset, and maturity date. The resulting market has two sides, corresponding to the events that the price of the underlying asset is either higher or lower than the specified target price at the maturity date.
+At the time of creation, several market parameters are set by the creator, in particular the target price,
+underlying asset, and maturity date. The resulting market has two sides, corresponding to the events that the price of
+the underlying asset is either higher or lower than the specified target price at the maturity date.
 Ownership and transfer of options on either side of the market is managed by a pair of dedicated ERC20 token contracts.
 
-#### 2. Bidding Period
+Note that in this document, all prices, bids, payoffs, and so on will be denominated in sUSD, but there is no reason
+future markets couldn't be denominated in other Synths.
+
+Over its life cycle, a binary options market transitions through the following states in order:
+
+#### 1. Bidding
 
 In the bidding period, the initial price and supply of options on each side of the market are determined.
-No transfer of options between wallets is possible at this stage.
+No options exist at this point, as their price is indeterminate.
 
-In order to fix the option prices, users commit funds to either side of the market. At the termination of bidding the basic price of each option is fixed.
-At this time, users are awarded a pro-rata quantity of options proportional with the size of their share of the bid on a given side of the market, and no more bids are accepted.
+In order to fix the option prices, users bid to receive options on one or the other side of the market.
+Bids cannot be transferred between wallets, but they can be refunded for a fee.
+At the termination of bidding the basic price of each option is fixed, according to the relative demand on eac
+and no more bids or refunds are accepted.
 
-#### 3. Trading Period
+#### 2. Trading 
 
-In this period, the supply of options does not change, but the options are free to be traded between wallets.
-In this way the market price of each option can still float freely as more information becomes apparent before maturity.
+From the start of the trading period users can claim the options they are owed based on
+the size of their bid and the final option prices.
+Once claimed, the options are free to be traded between wallets, for example on secondary markets.
+In this way the market price of each option can still float freely before the maturity date.
 
-#### 4. Maturity
+#### 3. Maturity
 
-After the maturity date is reached, users may exercise the options they hold, which will destroy them. Each option pays out 1 token if its condition has been met (e.g. the underlying asset's price is higher than the target price), and nothing if its condition has not been met. These returns are paid from the total bids made on both sides during the bidding period. After a time, the market is destroyed.
+After the maturity date is reached, the price of the underlying asset is recorded, and the market
+resolve either long (the underlying asset's price is higher than or equal to the target price),
+or short (the underlying asset's price is lower than the target price).
+
+At this point, users may exercise the options they hold, which will destroy them.
+If the market resolved long, each long option pays out 1 sUSD, and each long option pays out nothing.
+If the market resolved short, each long option pays out nothing, and each short option pays out 1 sUSD.
+
+These returns are paid from the total bids made on both sides during the bidding period.
+
+#### 4. Destruction
+
+After a time period allowing users to exercise their options,
+the market is destroyed. Any fees collected are sent to the market creator
+and the Synthetix fee pool, and the market is removed from its parent manager's
+list of active markets.
 
 ---
 
 ### Smart Contracts
 
-* `BinaryOptionMarketFactory`: Responsible for generating new `BinaryOptionMarket` instances, and maintaining a list of active instances.
-* `BinaryOptionMarket`: Each instance of this contract is responsible for managing the market for a particular asset to be at a certain price on a given date. Many of these could exist simultaneously for different assets, with different target prices, maturity dates, and so on. All funds of the denominating asset will be held in this contract.
-* `Option`: This is an ERC20 token contract which holds each user's quantity of an option. Two of these contracts exist per `BinaryOptionMarket` instance, one per side of the market, called `OptionL` and `OptionS`. The actual wallet balances will be held as a value of the denominating asset a user has bid, and the quantity of options computed from this.
+* `Manager`: Responsible for generating new markets, and maintaining a list of active markets.
+* `Market`: Each `Market` instance provides options for a particular asset to be at a certain price on a given date. Many of these could exist simultaneously for different assets, with different target prices, maturity dates, and so on. All bid funds are held in this contract.
+* `Option`: This is an ERC20 token contract which tracks each user's bids and option balances. Two option tokens exist per market, one long and one short.
 
-The smart contract architecture is summarised in the following diagram.
-
-![Architecture](assets/sip-53/smart-contract-architecture.svg)
+TODO: New diagram
 
 ---
 
 ### Basic Dynamics
 
-#### Option Supply
+#### Market Resolution
 
-If we query the price of an underlying asset \\(U\\) from an oracle at the maturity date, its price at maturity \\(P_U\\) is either above or below the target price \\(P_U^{target}\\). Users bid on each outcome to receive options that pay out in case that event occurs, exchanging tokens with the `BinaryOptionMarket` contract. That is, then events are \\(L\\) and \\(S\\):
+If the price of an underlying asset \\(U\\) is queried from an oracle at the maturity date,
+its price at maturity \\(P_U\\) is either above or below the target price \\(P_U^{target}\\).
+Users bid on each outcome to receive options that pay out in case that event occurs,
+exchanging tokens with the `Market` contract.
 
-* \\(L\\): The event that \\(P_U \geq P_U^{target}\\), when the "long" side of the market pays out.
-* \\(S\\): The event that \\(P_U < P_U^{target}\\), when the "short" side of the market pays out.
+At the maturity date the market resolves into exactly one of these events, which will be denoted \\(L\\) and \\(S\\):
 
-We will define \\(Q_L\\) and \\(Q_S\\) to be the quantity of tokens bid on the long and short sides respectively.
+* \\(L\\): The event that \\(P_U \geq P_U^{target}\\), when long options pay out 1 sUSD each.
+* \\(S\\): The event that \\(P_U < P_U^{target}\\), when short options pay out 1 sUSD each.
 
-At maturity, the entire value of bids from both sides of the market is paid out to the winning side, minus a fee \\(\phi\\) for the market creator and fee pool. One or the other side paying out are mutually exclusive events, with each side of the market awarded \\(Q\\) options, where
-
-\\[
-Q := (1 - \phi) (Q_L + Q_S)
-\\]
-
-The total quantity of options minted is \\(2Q\\), but only \\(Q\\) pay out at maturity.
-
-#### Option Prices
-
-The market spent quantities \\(Q_L\\) and \\(Q_S\\) of tokens to exchange into \\(Q\\) options per side, the overall option price is easily computed:
-
-\\[
-P_L := \frac{Q_L}{Q} = \frac{Q_L}{(1 - \phi) (Q_L + Q_S)}
-\\]
-
-\\[
-P_S := \frac{Q_S}{Q} = \frac{Q_S}{(1 - \phi) (Q_L + Q_S)}
-\\]
-
-For example, assuming no fees, if \\(Q_L = Q_S = 100\\), then \\(P_L = P_S = 0.5\\). But if \\(50\\) additional tokens are bid on \\(L\\), then \\(P_L = 0.6\\), while \\(P_S = 0.4\\).
-Thus increased demand for options on one side of the market increases the price on that side and reduces it on the other. Larger bids will shift the prices by correspondingly greater amounts.
-
-It is only at the end of the bidding period that the price is finalised, and users receive a pro-rated quantity of options according to the size of their bid. That is, if a user had bid \\(d\\) tokens of the denominating asset \\(D\\) on \\(L\\), they would receive \\(\frac{d}{P_L}\\) options. The case that the user had bid on \\(S\\) is similar.
+Further define \\(Q_L\\) and \\(Q_S\\) to be the quantity of tokens bid on the long and short sides respectively.
 
 #### Fees
 
-At the maturity date, \\(Q_L + Q_S\\) Synths will have been exchanged into options, but only \\(Q = (1 - \phi) (Q_L + Q_S)\\) options pay out. The remaining quantity of \\(\phi (Q_L + Q_S)\\) tokens is owed to stakers and the market creator as a service fee.
+During the bidding phase, bids and refunds are made, and fees are charged on these transactions.
 
-There are distinct fee rates for the fee pool (\\(\phi_{pool}\\)) and for the market creator (\\(\phi_{creator}\\)), which are set by the community. The overall fee rate is the sum of these quantities: \\(\phi := \phi_{pool} + \phi_{creator}\\).
+There are two basic fee rates:
 
-These fees should be transferred at maturity (upon invocation of a public function) rather than continuously, as it allows users to recover their full bids in case of an oracle interruption, as described in the Maturity section below.
+* \\(\phi\\): The fee charged on bids, to be paid to the market creator and fee pool.
+* \\(\phi_{refund}\\): The fee rate charged on refunds, which stays in the market, compensating the remaining bidders.
 
-#### Equilibrium Prices
+After the bidding period has concluded, the total funds deposited in the contract is the sum of bids on both sides
+(\\(Q_L + Q_S\\)), plus any accrued refund fees (\\(\rho\\)).
+At maturity, the bidding fee is charged on the total deposits, and these fees are remitted to the market creator and
+fee pool. The remaining funds are paid out to winning option-holders.
 
-Note that, neglecting fees, \\(P_L + P_S = 1\\), reflecting the fact that \\(L\\) and \\(S\\) are complementary events.
+The specific quantities sent to the market creator vs the fee pool are determined by distinct fee rates for the fee pool
+(\\(\phi_{pool}\\)) and for the market creator (\\(\phi_{creator}\\)), and the overall fee rate is their sum:
 
-Without fees, the prices can be read off directly as odds, and in fact if the probability of \\(L\\) paying off is \\(p\\), then long options yield an expected profit of \\(p - P_L\\) each. Meanwhile the expected profit on the short side is the exact negative of this: \\((1 - p) - P_S = P_L - p\\). The expected profit of buying an option is positive whenever its price is lower than its event's probability, so the prices should approach the probabilities, if they are known.
+\\(\phi := \phi_{pool} + \phi_{creator}\\).
 
-If the fee is nonzero, then \\(P_L + P_S = \frac{1}{1 - \phi}\\), which somewhat higher than \\(1\\). Under these conditions, it will only be rational for market participants to purchase options if they believe the market is mispriced by a margin larger than the fee rate.
+Note that fees are transferred at the destruction of the market (upon invocation of a public contract function) rather
+than continuously because the collected fees are used as an incentive for the market creator to clean up the market
+once it is defunct.
 
-#### Options As Synths
+The refund fee is intended to dampen price volatility caused by users exiting their positions too readily, and also to
+disincentivise malicious players from sending toxic price signals to the market, taking a position to affect the price
+intending only to exit part of the position before the close of bidding. It also compensates the remaining market
+participants in case any of these things occurs.
 
-Options are themselves Synths, with some restrictions.
+#### Option Supply and Prices
 
-Bidding on a binary option market is a Synth exchange operation. Bidders convert Synths to a tentative quantity of options, which stabilises at the end of bidding. Refunded bids are just exchanges in the opposite direction, minus a fee. In this way, options are exchangeable during the bidding period. After maturity, the exercise of an option into Synths is also an exchange.
+At the maturity date, a quantity \\((Q_L + Q_S + \rho\\)) sUSD is deposited in the market, of which
+\\(\phi (Q_L + Q_S + \rho)\\) sUSD is deducted as fees. The remaining quantity \\(Q\\) is paid to option holders on the
+winning side of the market, with:
 
-There may be many markets operating simultaneously, and each contributes a value of Synths to the debt pool. In order to ensure that it is still efficient to compute the value of the system debt, the total debt contributed by all binary options will be held in the `BinaryOptionMarketFactory` contact. This debt is equivalent to the sum of bids over all markets. Whenever value is moved in or out of a given `BinaryOptionMarket` contract, the contribution of this movement must be updated with the factory contract.
+\\[
+Q := (1 - \phi) (Q_L + Q_S + \rho)
+\\]
 
-In this way the debt associated with binary option Synths is located in a single place, easily consulted at any time.
+Since each option pays 1 sUSD, and L and S are mutually exclusive events, each side of the market
+must also be awarded \\(Q\\) options. So the total quantity of options minted is \\(2Q\\),
+but only \\(Q\\) mature in the money.
+
+The market spent quantities \\(Q_L\\) and \\(Q_S\\) of tokens to exchange into \\(Q\\) options per side, so the 
+final option prices are easily computed:
+
+\\[
+P_L := \frac{Q_L}{Q} \approx \frac{Q_L}{Q_L + Q_S}
+\\]
+
+\\[
+P_S := \frac{Q_S}{Q} \approx \frac{Q_S}{Q_L + Q_S}
+\\]
+
+Where the rightmost formulae are approximations obtained by neglecting fees, assuming \\(\phi\\) and \\(\rho\\) are
+close to zero.
+
+For example, if \\(Q_L = Q_S = 100\\) sUSD, then \\(P_L = P_S \approx 0.5\\) sUSD per option.
+But if an additional \\(50\\) sUSD is bid on \\(L\\), then \\(P_L \approx 0.6\\), while \\(P_S \approx 0.4\\). Thus
+increased demand for options on one side of the market increases the price on that side and reduces it on the other.
+Larger bids will shift the prices to a correspondingly greater degree.
+
+It is only at the end of the bidding period that the price is finalised, and users can claim their bids.
+The prices are designed such that each bidder will receive a pro-rated quantity of options according to the size of
+their bid. If a user had bid \\(b\\) sUSD on \\(L\\), they would receive \\(\frac{b}{P_L}\\) long options.
+If they had bid instead on \\(S\\), they would receive \\(\frac{b}{P_S}\\) short options.
+
+#### Market Equilibria
+
+If the true probability of \\(L\\) occurring is \\(p\\), then long options yield an expected profit of
+\\(p - P_L\\) each, which is positive whenever the price is lower than the probability that L occurs.
+So, as bidding on an option drives its price up, its price should approach what the market believes
+the probability of its corresponding event is, although a player with an edge may not wish to
+bid the price all the way up to the true probability so as not to communicate their belief to the market.
+
+Since the option prices are effectively estimated probabilities, it should feel natural that
+\\(P_L + P_S \approx 1\\) sUSD per option, as this reflects the fact that \\(L\\) and \\(S\\) are complementary events.
+As \\(S\\) occurs whenever \\(L\\) does not, its probability is \\(1 - p\\), so the expected short profit is
+\\((1 - p) - P_S \approx (1 - p) - (1 - P_L) = P_L - p\\), which is the negative long profit. That is, a binary option
+market is a zero-sum game, and the incentive exists to refund a position whose price is too high as much as one
+exists to bid on an option whose price is too low.
+
+So, modulo fees, each option price can be read off directly as the approximately odds of its event occurring.
+
+##### The Effect of Fees
+
+The presence of fees has a small impact on prices, and thus the odds that the market predicts.
+
+If it is assumed that no refunds have been made (so \\(\rho = 0\\)), then \\(P_L + P_S = \frac{1}{1 - \phi}\\),
+which greater than 1. That is, it will only be rational for market participants to purchase options if they believe
+the market is mispriced relative to the true probabilities by a margin larger than the bidding fee rate. Given that the
+fee rates are close to zero, however, and there is high uncertainty before the maturity date,
+most of the time this will not be a major influence.
+
+If on the other hand, \\(\phi = 0\\) is assumed, and refunds have been made, then
+\\(P_L + P_S = \frac{Q_L + Q_S}{Q_L + Q_S + \rho}\\), which is less than 1. In this case, the prices on both
+sides of the market have been discounted, and there should be extra demand attracted to the market sufficient
+to restore the sum of prices to within \\(\phi\\) of 1.
 
 ---
 
@@ -217,7 +294,7 @@ Without a profit motive there is no reason to expect anyone to risk funds in the
 
 ---
 
-### Bidding Period
+### Bidding
 
 The bidding period commences immediately after the contract is created, terminating at time \\(t_b\\), when the trading period begins.
 During the bidding period, users may add or remove funds on either side of the market, allowing it to equilibrate, ultimately fixing the option prices from time \\(t_b\\) onward.
@@ -245,7 +322,7 @@ If the bidder elects to refund into a Synth other than \\(D\\), the system will 
 
 ---
 
-### Trading Period
+### Trading
 
 At the commencement of the trading period, bidding is disabled and ERC20 token transfer is enabled. As the individual token prices have stabilised, the quantity of options each wallet is awarded can be computed, as it no longer changes.
 
@@ -280,7 +357,7 @@ ERC20 total supply calculations must also account for this.
 
 Users should be able to exercise their options into any flavour of Synth they like, and the exchange should take place automatically. That is, matured options themselves behave like Synths whose value either is that of their denominating asset, or zero, and so that can be traded and exchanged just like any other Synth.
 
-#### Cleanup
+#### Destruction
 
 In order to combat the proliferation of defunct options contracts, `BinaryOptionMarket` instances should implement a self-destruct function which can be invoked a long enough duration after the maturity date. Once this function is invoked, the contract and its two subsidiary `Option` instances will self destruct, and the corresponding entry deleted from the list of markets on the `BinaryOptionMarketFactory` contract.
 
@@ -342,6 +419,7 @@ These systems could be implemented as a smart contract or as a front-end overlay
 | \\(\phi_{pool}\\), \\(\phi_{creator}\\) | The platform fee rate paid to the fee pool and to the market creator respectively. These fees are paid at maturity. |
 | \\(\phi\\) | The overall market fee, which is equal to \\(\phi_{pool} + \phi_{creator}\\). \\(\phi\\) must in the range \\([0, 1]\\). |
 | \\(\phi_{refund}\\)  | The fee rate to refund a bid. Its value must be in the range \\([0, 1]\\). |
+| \\(\rho\\) | The accrued refund fees in a market. |
 | \\(L\\), \\(S\\) | The possible outcomes at maturity. \\(L\\) is the event that \\(P_U \geq P_U^{target}\\); when the "long" side of the market pays out. \\(S\\) is the event that \\(P_U < P_U^{target}\\); when the "short" side of the market pays out. |
 | \\(Q_L\\), \\(Q_S\\) | The total funds on the long and short sides of the market respectively. |
 | \\(Q\\) | The quantity of options awarded to each side of the market; this is equal to \\((1 - \phi) (Q_L + Q_S)\\). |
@@ -420,6 +498,13 @@ It needs to be decided asset prices are appropriate to allow users to build bina
 ### External Integrations
 
 It will be necessary to decide how to filter and display markets on dApps and other interfaces; whether integration with external platforms would be valuable, and which platforms, is another avenue that may be fruitful to investigate.
+
+### Forced Option Exercise
+
+In the current design, at the destruction of a market, the value of any exercised options is 
+given to the market creator. However, in the future it may be useful to allow these wallets 
+to be force-exercised after the maturity period by external parties, who would receive a portion
+of the value owed to these wallets.
 
 ---
 
