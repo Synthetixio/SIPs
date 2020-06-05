@@ -24,7 +24,7 @@ The formula for the reference price is:
 
 \\[
 price = \begin{cases}
-\frac{d_{1} \ - \ X}{d_{1} \ - \ d_{0}} \cdot P_1 \ + \ \frac{d_{0} \ + \ X}{d_{1} \ - \ d_{0}} \cdot P_2 & \ \mbox{if } \ \ \ X \leq d_1 \\ \\
+\frac{d_{1} \ - \ X}{d_{1} \ - \ d_{0}} \cdot P_1 \ + \ \frac{\ X \ - d_{0}}{d_{1} \ - \ d_{0}} \cdot P_2 & \ \mbox{if } \ \ \ X \leq d_1 \\ \\
 \newline
 \frac{d_{2} \ - \ X}{d_{2} \ - \ d_{1}} \cdot P_2 \ + \ \frac{X \ - \ d_{1}}{d_{2} \ - \ d_{1}} \cdot P_3 & \ \mbox{if } \ \ \ 0 \lt d_1 \lt X \\
 \end{cases}
