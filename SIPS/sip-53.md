@@ -21,6 +21,47 @@ This structure removes the necessity of matching counterparties.
 
 ---
 
+## Table of Contents
+
+* [Abstract](#abstract)
+* [Table of Contents](#table-of-contents)
+* [Motivation](#motivation)
+  * [Summary](#summary)
+  * [Smart Contracts](#smart-contracts)
+  * [Basic Dynamics](#basic-dynamics)
+    * [Option Supply](#option-supply)
+    * [Option Prices](#option-prices)
+    * [Fees](#fees)
+    * [Equilibrium Prices](#equilibrium-prices)
+    * [Options As Synths](#options-as-synths)
+  * [Market Creation](#market-creation)
+    * [Initial Capital](#initial-capital)
+    * [Oracles](#oracles)
+    * [Incentives](#incentives)
+  * [Bidding Period](#bidding-period)
+    * [Bids](#bids)
+    * [Refunds](#refunds)
+  * [Trading Period](#trading-period)
+    * [Balances](#balances)
+    * [Token Transfers](#token-transfers)
+  * [Maturity](#maturity)
+    * [Oracle Snapshot](#oracle-snapshot)
+    * [Exercising Options](#exercising-options)
+    * [Cleanup](#cleanup)
+    * [Oracle Failure](#oracle-failure)
+  * [Future Extensions](#future-extensions)
+    * [Arbitrary Maturity Predicates](#arbitrary-maturity-predicates)
+    * [Multimodal Options Markets](#multimodal-options-markets)
+    * [Limit Bids](#limit-bids)
+  * [Summary of Definitions](#summary-of-definitions)
+* [Rationale](#rationale)
+* [Test Cases](#test-cases)
+* [Implementation](#implementation)
+* [Discussion Questions](#discussion-questions)
+* [Configurable Values](#configurable-values-via-sccp)
+
+---
+
 ## Motivation
 Synthetix enhances whatever markets are implemented on top of it, as users can frictionlessly enter and exit in any currency they wish. This effectively allows any instruments to be denominated in any currency – but it requires integration with the Synthetix platform.
 
@@ -33,38 +74,6 @@ Additionally, the maturity condition of a binary option requires integration wit
 ---
 
 ## Specification
-<!--The technical specification should describe the syntax and semantics of any new feature.-->
-
-### Table of Contents
-
-* [Summary](#summary)
-* [Smart Contracts](#smart-contracts)
-* [Basic Dynamics](#basic-dynamics)
-  * [Option Supply](#option-supply)
-  * [Option Prices](#option-prices)
-  * [Fees](#fees)
-  * [Equilibrium Prices](#equilibrium-prices)
-  * [Options As Synths](#options-as-synths)
-* [Market Creation](#market-creation)
-  * [Initial Capital](#initial-capital)
-  * [Oracles](#oracles)
-  * [Incentives](#incentives)
-* [Bidding Period](#bidding-period)
-  * [Bids](#bids)
-  * [Refunds](#refunds)
-* [Trading Period](#trading-period)
-  * [Balances](#balances)
-  * [Token Transfers](#token-transfers)
-* [Maturity](#maturity)
-  * [Oracle Snapshot](#oracle-snapshot)
-  * [Exercising Options](#exercising-options)
-  * [Cleanup](#cleanup)
-  * [Oracle Failure](#oracle-failure)
-* [Future Extensions](#future-extensions)
-  * [Arbitrary Maturity Predicates](#arbitrary-maturity-predicates)
-  * [Multimodal Options Markets](#multimodal-options-markets)
-  * [Limit Bids](#limit-bids)
-* [Summary of Definitions](#summary-of-definitions)
 
 ### Summary
 
@@ -343,7 +352,6 @@ These systems could be implemented as a smart contract or as a front-end overlay
 ---
 
 ## Rationale
-<!--The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
 Binary options themselves represent an unsatisfied latent demand in the crypto/DeFi space; but the necessity of implementing them ultimately can only be proven by success or failure of an actual implementation.
 Successfully implemented, however, a fully-integrated binary options market ecosystem would increase the demand for Synths and increase the diversity of instruments available to the market for hedging and other purposes.
@@ -372,7 +380,7 @@ The implementations must be completed before any SIP is given status "Implemente
 
 ---
 
-## Further Discussion Questions
+## Discussion Questions
 
 There are a number of details which the community will need to decide on for the proposed markets to flourish. For example:
 
@@ -411,10 +419,6 @@ It needs to be decided asset prices are appropriate to allow users to build bina
 ### External Integrations
 
 It will be necessary to decide how to filter and display markets on dApps and other interfaces; whether integration with external platforms would be valuable, and which platforms, is another avenue that may be fruitful to investigate.
-
-### Functional Extensions
-
-Several potential extensions have been listed above. It should be determined which, if any, of these extensions should be pursued.
 
 ---
 
