@@ -35,7 +35,7 @@ the market paying out the other side at maturity. This structure removes the nec
   * [Market Creation](#market-creation)
     * [Initial Capital](#initial-capital)
     * [Oracles](#oracles)
-    * [Incentives](#incentives)
+    * [Further Incentives](#further-incentives)
   * [Bidding](#bidding)
     * [Bids](#bids)
     * [Refunds](#refunds)
@@ -61,6 +61,7 @@ the market paying out the other side at maturity. This structure removes the nec
 ---
 
 ## Motivation
+
 Synthetix enhances whatever markets are implemented on top of it, as users can frictionlessly enter and exit in any
 currency they wish. This effectively allows any instruments to be denominated in any currency – but it requires
 integration with the Synthetix platform.
@@ -82,9 +83,9 @@ Synthetix already provides.
 
 Binary option markets are created by a manager contract, which keeps track of all markets over their lifetime.
 
-At the time of creation, several market parameters are set by the creator, in particular the target price,
+At the time of creation, several market parameters are set by the creator, in particular the strike price,
 underlying asset, and maturity date. The resulting market has two sides, corresponding to the events that the price of
-the underlying asset is either higher or lower than the specified target price at the maturity date.
+the underlying asset is either higher or lower than the specified strike price at the maturity date.
 Ownership and transfer of options on either side of the market is managed by a pair of dedicated ERC20 token contracts.
 
 Note that in this document, all prices, bids, payoffs, and so on will be denominated in sUSD, but there is no reason
@@ -112,8 +113,8 @@ In this way the market price of each option can still float freely before the ma
 #### 3. Maturity
 
 After the maturity date is reached, the price of the underlying asset is recorded, and the market
-resolve either long (the underlying asset's price is higher than or equal to the target price),
-or short (the underlying asset's price is lower than the target price).
+resolves either long (the underlying asset's price is higher than or equal to the strike price),
+or short (the underlying asset's price is lower than the strike price).
 
 At this point, users may exercise the options they hold, which will destroy them.
 If the market resolved long, each long option pays out 1 sUSD, and each long option pays out nothing.
@@ -133,7 +134,7 @@ list of active markets.
 ### Smart Contracts
 
 * `Manager`: Responsible for generating new markets, and maintaining a list of active markets.
-* `Market`: Each `Market` instance provides options for a particular asset to be at a certain price on a given date. Many of these could exist simultaneously for different assets, with different target prices, maturity dates, and so on. All bid funds are held in this contract.
+* `Market`: Each `Market` instance provides options for a particular asset to be at a certain price on a given date. Many of these could exist simultaneously for different assets, with different strike prices, maturity dates, and so on. All bid funds are held in this contract.
 * `Option`: This is an ERC20 token contract which tracks each user's bids and option balances. Two option tokens exist per market, one long and one short.
 
 TODO: New diagram
@@ -145,7 +146,7 @@ TODO: New diagram
 #### Market Resolution
 
 If the price of an underlying asset \\(U\\) is queried from an oracle at the maturity date,
-its price at maturity \\(P_U\\) is either above or below the target price \\(P_U^{target}\\).
+its price at maturity \\(P_U\\) is either above or below the strike price \\(P_U^{target}\\).
 Users bid on each outcome to receive options that pay out in case that event occurs,
 exchanging tokens with the `Market` contract.
 
@@ -233,8 +234,8 @@ bid the price all the way up to the true probability so as not to communicate th
 Since the option prices are effectively estimated probabilities, it should feel natural that
 \\(P_L + P_S \approx 1\\) sUSD per option, as this reflects the fact that \\(L\\) and \\(S\\) are complementary events.
 As \\(S\\) occurs whenever \\(L\\) does not, its probability is \\(1 - p\\), so the expected short profit is
-\\((1 - p) - P_S \approx (1 - p) - (1 - P_L) = P_L - p\\), which is the negative long profit. That is, a binary option
-market is a zero-sum game, and the incentive exists to refund a position whose price is too high as much as one
+\\((1 - p) - P_S \approx (1 - p) - (1 - P_L) = P_L - p\\), which is the negative of the long profit. That is, a binary
+option market is a zero-sum game, and the incentive exists to refund a position whose price is too high as much as one
 exists to bid on an option whose price is too low.
 
 So, modulo fees, each option price can be read off directly as the approximately odds of its event occurring.
@@ -258,117 +259,176 @@ to restore the sum of prices to within \\(\phi\\) of 1.
 
 ### Market Creation
 
-A new options market is generated by the `BinaryOptionMarketFactory`; the contract creator must choose fixed values for:
+A new options market is generated by the `Manager` contract; the contract creator must choose fixed values for:
 
-* \\(D\\): The denominating asset (sUSD for all markets at first);
 * \\(O\\): The price oracle for the underlying asset \\(U\\), which implicitly sets \\(U\\) as well;
 * \\(t_b\\): The end of the bidding period;
 * \\(t_m\\): The maturity date;
-* \\(P_U^{target}\\): the target price of \\(U\\) at maturity;
-* \\(Q_L\\) / \\(Q_S\\): the initial demand on each side of the market;
+* \\(P_U^{target}\\): the strike price of \\(U\\);
+* \\(Q_L\\) / \\(Q_S\\): the initial bid on each side of the market;
 
-A new `BinaryOptionMarket` contract is instantiated with the specified parameters, and two child `Option` instances. ERC20 token transfer by these `Option` instances will initially be frozen, and it will not unlock until the trading period begins.
+A new `Market` contract is instantiated with the specified parameters, and two child `Option` instances.
 
-For discoverability purposes, the address of each new `BinaryOptionMarket` instance will be tracked in a list on the `BinaryOptionMarketFactory` contract until that market is destroyed at the end of its life.
+For discoverability purposes, the address of each new `Market` instance will be tracked in a
+list on the `Manager` contract until that market is destroyed at the end of its life. In addition, the total
+value deposited across all markets is tracked in the `Manager`.
 
 #### Initial Capital
 
-The market creation functionality of the `BinaryOptionMarketFactory` contract will be public; anyone at all will be able to create a market, provided they can meet the minimum capitalisation requirement \\(C\\).
-The initial capital requirement will dissuade users from creating low-liquidity markets flippantly.
+The market creation functionality of the `Manager` contract will be public; anyone at all will be able to create a
+market, provided they can meet the capital requirement \\(C\\). The capital requirement dissuades users from creating
+low-liquidity markets flippantly.
 
-Without initial positive values for \\(Q_L\\) and \\(Q_S\\), \\(P_L\\) and \\(P_S\\) are undefined. Therefore the market creator is required to contribute a minimum initial value of \\(C\\) worth of tokens. No constraints are placed upon the initial division of funds between \\(Q_L\\) and \\(Q_S\\), which will determine the specific initial prices, but the sum \\(Q_L + Q_S\\) must be worth more than \\(C\\). The market creator will be awarded options for this initial capital, just like any other bidder.
+The capital requirement also ensures that the market has initial prices: without positive values for \\(Q_L\\) and
+\\(Q_S\\), \\(P_L\\) and \\(P_S\\) are undefined. No constraints are placed upon the initial division of funds between
+\\(Q_L\\) and \\(Q_S\\), except that they must both be positive, and the sum \\(Q_L + Q_S\\) must be worth more than
+\\(C\\).
 
-Along with setting initial prices, a strong reason that it is necessary to provide this initial liquidity is to ensure that when bids come into a new market, they don't swing the prices too aggressively. In a very thin market, small bids can cause drastic and undesirable shifts in price.
+The particular division of funds between long and short sides of the market determines the initial prices, and reflects
+the market creator's initial belief about the odds. Just like any other bidder, the the market creator will be awarded
+options in return for this initial capital.
 
-The market creator should be able to remove their initial capital as long as the total bids in the market are worth more than \\(C\\). Thus it is important for the author of a given market to carefully select its initial parameters. By selecting a combination of asset, timing, and target price that attracts demand, and by choosing initial prices that are reasonably fair, the market creator minimises their own risk by maximising the market's health.
+A third reason it is necessary to provide this initial liquidity is to ensure that when bids come into a new market,
+the market is liquid enough that the prices don't swing too aggressively.
+In a very thin market, small bids can cause drastic and undesirable shifts in price, and the market's size needs to be
+step-laddered up to achieve a reasonable size.
+
+The market creator may refund part of their initial capital if they provided more than the capital requirement,
+but until the end of bidding, their total bids in the market must be greater than \\(C\\). After the bidding phase,
+the creator may trade or exercise their options, or simply reclaim the capital at market destruction. 
+Thus it is important for the author of a given market to carefully select its initial parameters.
+By selecting a combination of asset, timing, and strike price that attracts demand, and by choosing initial prices that
+are reasonably fair, the market creator minimises their own risk by maximising the market's health.
 
 #### Oracles
 
-The price oracle must be selected from the approved set of data sources available on the Synthetix [`ExchangeRates`](https://docs.synthetix.io/contracts/exchangerates/) contract, which includes a number of [Chainlink Aggregators](https://github.com/smartcontractkit/chainlink/blob/5ab3cd2777590701007cc02941cb94179e79f3ba/evm/contracts/Aggregator.sol).
+The price oracle must be selected from the approved set of data sources available on the
+Synthetix [`ExchangeRates`](https://docs.synthetix.io/contracts/exchangerates/) contract, which includes a number of
+[Chainlink Aggregators](https://github.com/smartcontractkit/chainlink/blob/5ab3cd2777590701007cc02941cb94179e79f3ba/evm/contracts/Aggregator.sol).
 
-Oracles are initially constrained to a trusted set, otherwise there is the strong potential for malicious actors to supply manipulated data feeds, but this could be democratised in the future.
+Oracles are initially constrained to a trusted set, otherwise there is the strong potential for malicious actors to
+supply manipulated data feeds, but this could be democratised in the future.
 
-#### Incentives
+#### Further Incentives
 
-Without a profit motive there is no reason to expect anyone to risk funds in the creation of these markets, and therefore a portion of the overall payout (\\(\phi_{creator}\\)) will go to the market creator at the maturity date. In the initial stages it may be necessary to subsidise the creation of these markets by means of inflationary rewards or other bounties. The implementation of such subsidies is an open question for the community to answer.
+Without a profit motive there is no reason to expect anyone to risk funds in the creation of these markets,
+and therefore a portion of the overall payout (\\(\phi_{creator}\\)) will go to the market creator at the maturity date.
+In the initial stages it may be necessary to subsidise the creation of these markets by means of inflationary rewards or
+other bounties. The implementation of such subsidies is an open question for the community to answer.
 
 ---
 
 ### Bidding
 
-The bidding period commences immediately after the contract is created, terminating at time \\(t_b\\), when the trading period begins.
-During the bidding period, users may add or remove funds on either side of the market, allowing it to equilibrate, ultimately fixing the option prices from time \\(t_b\\) onward.
+The bidding period commences immediately after the contract is created, terminating at time \\(t_b\\), when the trading
+period begins. During the bidding period, users may add or remove funds on either side of the market, allowing it to
+equilibrate, ultimately fixing the option prices from time \\(t_b\\) onward.
 
 The following addresses the long side \\(L\\); the short \\(S\\) case is symmetric.
 
 #### Bids
 
-Users may bid to receive options that will pay out if outcome \\(L\\) occurs. In order to do this, wallet \\(w\\) deposits \\(d\\) tokens of the denominating Synth \\(D\\) with the `BinaryOptionMarket` contract. \\(Q_L\\) and the associated `OptionL` contract's balance for wallet \\(w\\) are both incremented by \\(d\\).
-
-If the user elects to bid with a Synth other than \\(D\\), then the system will perform an automatic conversion to \\(D\\).
+Users may bid to receive options that will pay out if outcome \\(L\\) occurs.
+In order to do this, wallet \\(w\\) deposits \\(b\\) sUSD with the `Market` contract. \\(Q_L\\) and the associated
+long `Option` contract's balance for wallet \\(w\\) are both incremented by \\(b\\).
 
 #### Refunds
 
-If a user has already taken a position, they may refund it. A fee is charged for this to counteract toxic order flow and other manipulations available to actors with private information.
+If a user has already taken a position, they may refund it. A fee is charged for this to counteract toxic order flow
+and other manipulations available to actors with private information.
 
-If the user with wallet \\(w\\) has already bid long \\(d\\) tokens (of the denominating asset \\(D\\)), then they may refund any quantity \\(q \leq d\\), and will receive \\(q (1 - \phi_{refund})\\) tokens. \\(Q_L\\) and the associated `OptionL` contract's balance for wallet \\(w\\) are decremented by \\(d\\). The remaining \\(q \cdot \phi_{refund}\\) tokens are then rebalanced between \\(Q_L\\) and \\(Q_S\\) so that the odds are unaffected, but the fee stays in the pot.
+If the user with wallet \\(w\\) has already bid \\(b\\) sUSD long, then they may refund any quantity \\(q \leq b\\),
+and will receive \\(q (1 - \phi_{refund})\\) sUSD. \\(Q_L\\) and the associated long `Option` contract's balance
+for wallet \\(w\\) are decremented by \\(b\\). The remaining \\(q \cdot \phi_{refund}\\) sUSD remains in the common pot,
+but not allocated to the total bids on either side, and so discounts the prices for both sides, incentivising further
+demand to make up for that which was withdrawn by the refund.
 
-A bidder may wish to refund their position because they have gained new information, or the underlying market conditions have changed. However, recall that placing a bid shifts prices for all existing bidders, so they may also wish to refund their position because the option price has shifted too much or they believe the options are now mispriced.
+A bidder may wish to refund their position because they have gained new information,
+or the underlying market conditions have changed. However, recall that placing a bid shifts prices for all existing
+bidders, so they may also wish to refund their position because the option price has shifted too much or they
+believe the options are now mispriced.
 
-When a bidder exits the market, the part of their bid that they leave behind compensates the market for the incorrect signal they previously transmitted, increasing the payoff for other users who stuck with their position.
-Be aware, however, that although this fee disincentivises churn and market toxicity, it also slightly distorts the market, creating a friction that stands in the way of the most rapid possible price discovery.
-
-If the bidder elects to refund into a Synth other than \\(D\\), the system will perform an automatic conversion from \\(D\\).
+When a bidder exits the market, the part of their bid that they leave behind compensates the market for the incorrect
+signal they previously transmitted, increasing the payoff for other users who stuck with their position.
+Be aware, however, that although this fee disincentivises churn and market toxicity, it also slightly distorts the
+market, creating a friction that stands in the way of the most rapid possible price discovery.
 
 ---
 
 ### Trading
 
-At the commencement of the trading period, bidding is disabled and ERC20 token transfer is enabled. As the individual token prices have stabilised, the quantity of options each wallet is awarded can be computed, as it no longer changes.
+At the commencement of the trading period, bidding is disabled and ERC20 token transfer is enabled. As the individual
+token prices have stabilised, the quantity of options each wallet is owed can be computed, so it is at this point that
+users can claim the options they are owed. 
 
 ### Balances
 
-It may be apparent that the `Option` contracts underlying each option market do not store the actual option balances, but rather store total bid for each wallet. To compute the actual balance of options (for the long side, for example), the value must be divided by \\(P_L\\) before it is returned.
+It may be apparent that the `Option` contracts underlying each option market do not store the actual option balances,
+but rather store total bid for each wallet. To compute the actual balance of options (for the long side, for example),
+the value must be divided by \\(P_L\\) before it is returned.
 
-In this way, no reallocation of options needs to occur at the transition between the bidding and trading period, and users can compute their tentative option balance at current prices even while bidding is still ongoing.
+In this way, no reallocation of options needs to occur at the transition between the bidding and trading period, and
+users can compute their tentative option balance at current prices even while bidding is still ongoing.
 
-The same considerations apply to the computation of the total supply of options, which at all times will evaluate to \\(2Q\\).
+The same considerations apply to the computation of the total supply of options, which at all times will evaluate to
+\\(2Q\\).
 
 ### Token Transfers
 
-During the trading period, each `Option` contract offers full ERC20 functionality, including `transfer`, `approve`, and `transferFrom`, supporting trading tokens on secondary markets. Balances for this functionality should be computed according to the computations described above.
+During the trading period, each `Option` contract offers full ERC20 functionality, including `transfer`, `approve`, and
+`transferFrom`, supporting trading tokens on secondary markets. Balances for this functionality should be computed
+according to the computations described above.
 
 ---
 
 ### Maturity
 
-Once the maturity date is reached, the oracle must be consulted and the outstanding options resolved to pay out \\(1\\) token of \\(D\\) or nothing. At their discretion, any user with a positive balance of options can then exercise them to obtain whatever payout they are owed.
+Once the maturity date is reached, the oracle must be consulted and the outstanding options resolved to pay out \\(1\\)
+token of \\(D\\) or nothing. At their discretion, any user with a positive balance of options can then exercise them to
+obtain whatever payout they are owed.
 
 #### Oracle Snapshot
 
-After the maturity date, any user should be able to instruct the options market contract to query the oracle for the latest price of the underlying asset. This function must have been inoperative before the maturity date. The price snapshot should occur in a timely fashion as whichever side is in the money at maturity has a strong incentive to take the snapshot as rapidly as possible. The options market contract should remember the result to allow users to exercise their options in the future.
+After the maturity date, any user should be able to instruct the options market contract to query the oracle for the
+latest price of the underlying asset. This function must have been inoperative before the maturity date.
+The price snapshot should occur in a timely fashion as whichever side is in the money at maturity has a strong incentive
+to take the snapshot as rapidly as possible. The options market contract should remember the result to allow users to
+exercise their options in the future.
 
 This function should also transfer the collected market fees to the fee pool and market creator.
 
 #### Exercising Options
 
-At maturity, users may exercise the options they hold. The required funds will then be transferred from the `BinaryOptionMarket` contract to the user, and their balances in the underlying `Option` token contracts set to zero, destroying those options so that they cannot be exercised again.
-ERC20 total supply calculations must also account for this.
+At maturity, users may exercise the options they hold. The required funds will then be transferred from the
+`BinaryOptionMarket` contract to the user, and their balances in the underlying `Option` token contracts set to zero,
+destroying those options so that they cannot be exercised again. ERC20 total supply calculations must also account for
+this.
 
-Users should be able to exercise their options into any flavour of Synth they like, and the exchange should take place automatically. That is, matured options themselves behave like Synths whose value either is that of their denominating asset, or zero, and so that can be traded and exchanged just like any other Synth.
+Users should be able to exercise their options into any flavour of Synth they like, and the exchange should take place
+automatically. That is, matured options themselves behave like Synths whose value either is that of their denominating
+asset, or zero, and so that can be traded and exchanged just like any other Synth.
 
 #### Destruction
 
-In order to combat the proliferation of defunct options contracts, `BinaryOptionMarket` instances should implement a self-destruct function which can be invoked a long enough duration after the maturity date. Once this function is invoked, the contract and its two subsidiary `Option` instances will self destruct, and the corresponding entry deleted from the list of markets on the `BinaryOptionMarketFactory` contract.
+In order to combat the proliferation of defunct options contracts, `BinaryOptionMarket` instances should implement a
+self-destruct function which can be invoked a long enough duration after the maturity date. Once this function is
+invoked, the contract and its two subsidiary `Option` instances will self destruct, and the corresponding entry deleted
+from the list of markets on the `BinaryOptionMarketFactory` contract.
 
-In order to incentivise this, the market creator must deposit \\(\gamma\\) tokens into the new contract in addition to the initial capital. When the cleanup function is invoked by the contract creator, the contract will return the deposit along with any unclaimed tokens left in the contract.
+In order to incentivise this, the market creator must deposit \\(\gamma\\) tokens into the new contract in addition to
+the initial capital. When the cleanup function is invoked by the contract creator, the contract will return the deposit
+along with any unclaimed tokens left in the contract.
 
-Initially this function will only be available to the original author, but if after a short period the they do not act, then the deposit will be made available to any user willing to perform the labour of cleaning up.
+Initially this function will only be available to the original author, but if after a short period the they do not act,
+then the deposit will be made available to any user willing to perform the labour of cleaning up.
 
 #### Oracle Failure
 
-If at the maturity date the oracle is not operating, the contract could arrive at a state where options cannot be exercised. In the absence of oracle data for a long enough duration, it should be possible for users to refund their bids without a fee.
-Note the following: first, this duration must perforce be shorter than the contract destruction duration just mentioned; second this must be implemented carefully as it introduces an incentive for users on the losing side of the market to interfere with the oracle.
+If at the maturity date the oracle is not operating, the contract could arrive at a state where options cannot be
+exercised. In the absence of oracle data for a long enough duration, it should be possible for users to refund their
+bids without a fee. Note the following: first, this duration must perforce be shorter than the contract destruction
+duration just mentioned; second this must be implemented carefully as it introduces an incentive for users on the losing
+side of the market to interfere with the oracle.
 
 ---
 
