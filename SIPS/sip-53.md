@@ -8,29 +8,27 @@ discussions-to: https://discord.gg/kPPKsPb
 created: 2020-04-23
 ---
 
-<!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
-
 ## Simple Summary
-<!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
-
-This SIP proposes to allow the creation of new markets for trading binary option Synths.
+This SIP proposes to allow the creation of new markets for trading binary options.
 
 ## Abstract
-<!--A short (~200 word) description of the technical issue being addressed.-->
 
-A binary option is a type of option contract which provides a fixed return based on a binary outcome in the future. These option Synths pay out on a certain date if the price of a chosen asset is above (or below) a level specified at the creation of the option. This allows users to take a position on the price of any asset known to the Synthetix system.
-The proposed options use a parimutuel-style initial bidding period to set the price per option, and where one side of the market pays out the other side at maturity. This removes the necessity of matching counterparties for these options.
+A binary option is a type of option contract which provides a fixed return based on a binary outcome in the future.
+These options pay out on a certain date if the price of a chosen asset is above (or below) a level specified at the creation of the option.
+This allows users to take a position on the price of any asset known to the Synthetix system.
+The proposed implementation uses a parimutuel-style initial bidding period to set the price per option, with one side of the market paying out the other side at maturity.
+This structure removes the necessity of matching counterparties.
 
 ---
 
 ## Motivation
-<!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
-
 Synthetix enhances whatever markets are implemented on top of it, as users can frictionlessly enter and exit in any currency they wish. This effectively allows any instruments to be denominated in any currency – but it requires integration with the Synthetix platform.
 
-When it comes to actually setting up a market, stakers take on some of the risk of capitalising these markets, and in providing the infrastructure to allow them to operate: these responsibilities and the labour required to generate binary options markets should be compensated. This requires fees to be remitted to the pool, and hence integration with the protocol itself.
+When it comes to actually setting up a market, stakers take on some of the risk of capitalising these markets, and in providing the infrastructure to allow them to operate: these responsibilities and the labour required to generate binary options markets should be compensated.
+This requires fees to be remitted to the pool, and hence integration with the protocol itself.
+These fees are effectively the price of accessing the network effect that Synthetix provides by listing the market.
 
-Finally, the maturity condition of a binary option requires integration with trustworthy price oracles, which Synthetix already provides.
+Additionally, the maturity condition of a binary option requires integration with trustworthy price oracles, which Synthetix already provides.
 
 ---
 
