@@ -46,8 +46,7 @@ The table shows that there is around 20 times the risk that SNX prices will fall
 We can also infer from the table above that the proposed decrease in the liquidation grace period from 2-weeks to 3 days will significantly bolster the protection of the system.
 
 #### Disclaimer:
-**justwanttoknowathing - SNX phD**
-Past performance doesn't guarantee future results. In other words, this parameter might need to be revisited (relaxed or maybe tightened) if the distribution of returns of SNX varies significantly.
+As **justwanttoknowathing - SNX phD** mentioned, past performance doesn't guarantee future results. In other words, this parameter might need to be revisited (relaxed or maybe tightened) if the distribution of returns of SNX varies significantly.
 
 
 #### Sources:
