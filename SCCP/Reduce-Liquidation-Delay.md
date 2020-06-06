@@ -42,7 +42,7 @@ Modelling the probability distribution (with a Gaussian Mixture Model) we can in
 |  **1W**  |  38% |  24% |  14% |
 |  **2W**  |  42% |  41% |  40% |
 
-The table shows that there is around 20 times the risk that SNX prices will fall by 50% during a 2-week period, as compared to 1-day horizon.
+The table shows that there is around 20 times the risk that SNX prices will fall by 50% during a 2-week period, as compared to a 1-day horizon.
 We can also infer from the table above that the proposed decrease in the liquidation grace period from 2-weeks to 3 days will significantly bolster the protection of the system.
 
 #### Disclaimer:
