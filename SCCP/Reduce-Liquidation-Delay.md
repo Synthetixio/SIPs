@@ -51,10 +51,10 @@ Past performance doesn't guarantee future results. In other words, this paramete
 
 
 #### Sources:
-[Correlation SNX-ETH](SCCP/asset/liquidation_delay/snx-eth-corr.png)
-[Jupyter Notebook](SCCP/asset/liquidation_delay/SNX_RETURNS_PROB.ipynb)
-[SNX Return Probability Distribution](SCCP/asset/liquidation_delay/returns-plot.png)
-[Data.csv](SCCP/asset/liquidation_delay/returns.csv)
+- [Correlation SNX-ETH](asset/liquidation_delay/snx-eth-corr.png)
+- [Jupyter Notebook](asset/liquidation_delay/SNX_RETURNS_PROB.ipynb)
+- [SNX Return Probability Distribution](asset/liquidation_delay/returns-plot.png)
+- [Data.csv](asset/liquidation_delay/returns.csv)
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
