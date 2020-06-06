@@ -29,7 +29,7 @@ Having that in mind, and the fact that liquidation grace period starts when the 
 | Debt | 500 | -20%| 400
 | **C-Ratio** | **200%** || **100%**
 
-From the above table, as well as adding other idiosyncratic events on the price of SNX (due to its low liquidity relative to ETH), we can deduce that a  price-shock of 30% to 50% could severely increase the risk that a wallet becomes under-collateralized (if it was near `Liquidation-Collateral-Ratio` at the begining of a shock). 
+From the above table, as well as taking into account other idiosyncratic events on the price of SNX (due to its low liquidity relative to ETH), we can deduce that a  price-shock of 30% to 50% could severely increase the risk that a wallet becomes under-collateralized (if it was near `Liquidation-Collateral-Ratio` at the begining of a shock). 
 
 #### Probability Inference:
 Using a target SNX price shock of 30% to 50%, we can infer the probabilities of such an event taking place using the probability  distribution of  returns of SNX inferred from historical prices. As can be expected, the longer the time horizon involved (i.e. the longer the grace period), the higher the volatility that can be expected of returns and therefore the greater the risk that a wallet becoming under uncollateralized.
