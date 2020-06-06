@@ -29,10 +29,10 @@ Having that in mind, and the fact that liquidation grace period starts when the 
 | Debt | 500 | -20%| 400
 | **C-Ratio** | **200%** || **100%**
 
-From the above table, as well as adding other idiosyncratic events on the price of SNX (due to its low liquidity relative to ETH), we can deduce that a  price-shock of 30% to 50% could severely increase the risk of a wallet that is near the `Liquidation-Collateral-Ratio` of 200% to breach the 100% level. 
+From the above table, as well as adding other idiosyncratic events on the price of SNX (due to its low liquidity relative to ETH), we can deduce that a  price-shock of 30% to 50% could severely increase the under-collateralization risk of a wallet, that was near the `Liquidation-Collateral-Ratio` at the begining of a shock. 
 
 #### Probability Inference:
-Having in mind a target SNX price shock of 30% to 50%, we can infer the probabilities of such an event taking place , given the probability  distribution of  returns of SNX inferred from historical prices. As can be expected, the longer the time horizon involved (i.e. the longer the grace period), the higher the volatility that can be expected of returns and therefore the greater the risk that a wallet becomes under uncollateralized.
+Using a target SNX price shock of 30% to 50%, we can infer the probabilities of such an event taking place using the probability  distribution of  returns of SNX inferred from historical prices. As can be expected, the longer the time horizon involved (i.e. the longer the grace period), the higher the volatility that can be expected of returns and therefore the greater the risk that a wallet becoming under uncollateralized.
 
 Modelling the probability distribution (with a Gaussian Mixture Model) we can infer the respective probabilities to different prices shocks across different time horizons:
 | Time\Shock | -30% | -40% | -50% |
@@ -42,12 +42,12 @@ Modelling the probability distribution (with a Gaussian Mixture Model) we can in
 |  **1W**  |  38% |  24% |  14% |
 |  **2W**  |  42% |  41% |  40% |
 
-The table shows that there is 20 times the risk that SNX prices will fall by 50% during  2-week period, as compared to 1-day horizon.
+The table shows that there is around 20 times the risk that SNX prices will fall by 50% during a 2-week period, as compared to 1-day horizon.
 We can also infer from the table above that the proposed decrease in the liquidation grace period from 2-weeks to 3 days will significantly bolster the protection of the system.
 
 #### Disclaimer:
 **justwanttoknowathing - SNX phD**
-Past performance doesn't guarantee future results. In other words, this parameter might need to be revisited (relaxed or maybe tightened) if the distribution of returns of SNX vary across time.
+Past performance doesn't guarantee future results. In other words, this parameter might need to be revisited (relaxed or maybe tightened) if the distribution of returns of SNX varies significantly.
 
 
 #### Sources:
