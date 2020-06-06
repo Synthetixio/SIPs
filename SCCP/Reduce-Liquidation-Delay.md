@@ -13,7 +13,7 @@ Proposing to lower the liquidation delay `liquidationDelay` variable from 2 week
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
-The initial parameters set at implementation of [SIP-15](https://sips.synthetix.io/sips/sip-15) gave users a 2 week grace period to raise their c-ratio, before bots and other users are able to liquidate them. The reason behind the grace period is to provide users with an opportunity to fix their c-ratio and avoid the scenario of bad actors manipulating SNX prices temporarily and sharply in order to liquidate wallets of minters. However, a long time delay exposes the system to the risk of having to fund an uncollateralized wallet if a sharp decrease in SNX prices persists.
+The initial parameters set at implementation of [SIP-15](https://sips.synthetix.io/sips/sip-15) gave users a 2 week grace period to raise their c-ratio, before bots and other users are able to liquidate them. The reason behind the grace period is to provide users with an opportunity to fix their c-ratio and avoid the scenario of bad actors manipulating SNX prices temporarily in order to liquidate wallets of minters. However, a long time delay exposes the system to the risk of having to fund an uncollateralized wallet if a sharp decrease in SNX prices persists.
 This SCCP proposes to lower the grace period (`liquidationDelay`)  to 3 days, in order to bolster the protection of the system against the threat of undercollateralized wallets.
 
 ## Motivation
