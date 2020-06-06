@@ -1,4 +1,3 @@
-
 ---
 sccp: TBD
 title: Reduce Liquidation Time Delay
