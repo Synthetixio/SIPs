@@ -131,11 +131,11 @@ list of active markets.
 
 ### Smart Contracts
 
+![Architecture](assets/sip-53/smart-contract-architecture.svg){: .center-image }
+
 * `Manager`: Responsible for generating new markets, and maintaining a list of active markets.
 * `Market`: Each `Market` instance provides options for a particular asset to be at a certain price on a given date. Many of these could exist simultaneously for different assets, with different strike prices, maturity dates, and so on. All bid funds are held in this contract.
 * `Option`: This is an ERC20 token contract which tracks each user's bids and option balances. Two option tokens exist per market, one long and one short.
-
-TODO: New diagram
 
 ---
 
