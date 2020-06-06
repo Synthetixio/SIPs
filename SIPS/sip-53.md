@@ -598,14 +598,14 @@ of the value owed to these wallets.
 
 | Symbol | Initial Value | Description |
 | ------ | ------------- |----------- |
-| \\(C\\) | TODO | The minimum value of the initial capitalisation of a new binary option market. This is a value of USD. |
-| \\(\phi_{pool}\\) | TODO | The platform fee rate paid to the fee pool. This is a decimal number in the range \\([0, 1]\\). |
-| \\(\phi_{creator}\\) | TODO | The fee rate paid to the creator of a market. This is a decimal number in the range \\([0, 1]\\). |
-| \\(\phi_{refund}\\) | TODO | The fee rate to refund a bid. This is a decimal number in the range \\([0, 1]\\). |
-| max oracle price age | TODO | The oldest a price update can be to be considered acceptable for resolving a market. |
-| exercise duration | TODO |How long options can be exercised before their market is eligible to be destroyed. |
-| creator destruction duration | TODO | How long the market creator has exclusive rights to destroy the markets they have created. |
-| max time to maturity | TODO | A safety constraint that limits how far in the future a maturity date can be set at market creation. |
+| \\(C\\) | 1000 sUSD | The minimum value of the initial capitalisation of a new binary option market. This is a value of USD. |
+| \\(\phi_{pool}\\) | 0.8% | The platform fee rate paid to the fee pool. This is a decimal number in the range \\([0, 1]\\). |
+| \\(\phi_{creator}\\) | 0.2% | The fee rate paid to the creator of a market. This is a decimal number in the range \\([0, 1]\\). |
+| \\(\phi_{refund}\\) | 5% | The fee rate to refund a bid. This is a decimal number in the range \\([0, 1]\\). |
+| max oracle price age | 2 hours | The oldest a price update can be to be considered acceptable for resolving a market. |
+| exercise duration | 2 weeks |How long options can be exercised before their market is eligible to be destroyed. |
+| creator destruction duration | 1 week | How long the market creator has exclusive rights to destroy the markets they have created. |
+| max time to maturity | 1 year | A safety constraint that limits how far in the future a maturity date can be set at market creation. |
 
 ---
 
