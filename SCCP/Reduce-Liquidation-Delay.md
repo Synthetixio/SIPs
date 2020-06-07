@@ -38,7 +38,7 @@ Modelling the probability distribution (with a Gaussian Mixture Model) we can in
 | Time\Shock | -30% | -40% | -50% |
 |:----:|:----:|:----:|:----:|
 |  **1D**  |  10% |  5%  |  2%  |
-|  **3D**  |  6%  |  4%  |  6%  |
+|  **3D**  |  19%  |  12%  |  6%  |
 |  **1W**  |  38% |  24% |  14% |
 |  **2W**  |  42% |  41% |  40% |
 
