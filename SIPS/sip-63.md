@@ -34,7 +34,7 @@ This fee balance will be used to calculate the distribution of the SNX during th
 
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
-We considered a number of approaches to this problem, including minting fee tokens and paying incentives immediately on each trade. There are several benefits to this approach over the alternatives considered. The first is that users can accumulate as many fees as they want before claiming reducing gas costs and allowing even small traders to wait until they have sufficient fees to justify a withdrawal. Secondly this negates the requirement of handling fee period rollovers or unclaimed fees as trading incentives are not dependent on fee periods. Each week the balanance of fees paid is wiped when the new SNX deposit is made ensuring all traders start each fee period with an equal chance to earn fees.
+We considered a number of approaches to this problem, including minting fee tokens and paying incentives immediately on each trade. There are several benefits to this approach over the alternatives considered. The first is that users can accumulate as many fees as they want before claiming reducing gas costs and allowing even small traders to wait until they have sufficient fees to justify a withdrawal. Secondly this negates the requirement of handling fee period rollovers or unclaimed fees as trading incentives are not dependent on feepool periods. Each week the balanance of fees paid is wiped when the new SNX deposit is made ensuring all traders start each fee period with an equal chance to earn fees.
 
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
@@ -93,7 +93,11 @@ A function to allow trading incentives to be recorded against any `address` inst
 - When an exchange is made, if the account last made a trade in a previous period, it will store their `totalFeesInPeriod` for the previous period and reset the value for the current period.
 - When an exchange is made, if an address is passed in to record the trading incentives for, then it will store the total fees against that address.
 - When notifyRewards is called, if the SNX balance is already transferred to the contract, then it passes. The transaction will record the `totalFeesInPeriod` for the current period and reset it. It will also increment the `periodID`.
+
+**Reward Claiming**
+
 - When a user claim their rewards, their reward will be calculated as a proportion of the fees they generated against the total fees of that period and the period is marked claimed for the user.
+- When a user claim their rewards, if the claim is successful, it will record the final `totalFeesInPeriod` for the last  reward period if the period is closed, and reset their current `totalFeesInPeriod`. 
 - When a user claim their rewards, if the claim is successful, it will increase the `totalRewardsClaimed` amount which ensures the contract has enough SNX to pay the rewards (on notifyRewards it will check the contract balance less `totalRewardsClaimed`.   
 - When a user claim their rewards, if the period they provide has no fees generated, then it will fail.
 - When a user claim their rewards, if the period they provide is already claimed, then it will fail.
