@@ -37,7 +37,7 @@ Currently the `EternalStorage` contract pattern is useful as storage for a singl
 4. Test Cases
 -->
 
-# Overview
+### Overview
 
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
@@ -54,7 +54,7 @@ All getters and setters from `EternalStorage` will be used, yet with an extra in
 >
 >     2. A potentially better solution (though it could get ugly) is having an available contract mapping. Initially the mapping is empty but it could be added to by a contract that allows other named contracts in the `AddressResolver` to set/get on its behalf. So for the above example, `Issuer` would have something added to itself that says `Storage.addContractMapping("Issuer", "Burner")` that would allow `Burner` to pass through `Issuer` as a key and still have write access to that space. This isn't great because then `Burner` needs to keep a reference to the `"Issuer"` storage key, but is manageable. Any other suggestions?
 
-# Rationale
+### Rationale
 
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
@@ -64,7 +64,7 @@ Unfortunately, there's no easy solution to generalizing the storage of structs. 
 
 Additionally, there will be a slightly higher gas cost when persisting storage now as each contract will need to do a cross-contract call both a) to the new `Storage` contract and then b) from the new `Storage` contract to the `AddressResolver` to ascertain if `msg.sender` is indeed the address it expects from the `AddressResolver`. This second step cannot be alleviated by having `Storage` use `MixinResolver` as other Synthetix contracts do because `Storage` is not an upgradable contract, and thus we can't hard-code the names of the contracts it needs to store in its cache.
 
-# Technical Specification
+### Technical Specification
 
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
@@ -101,13 +101,36 @@ interface IContractStorage {
 
 Additionally, contracts now need to know their own `contractName`. To solve this, we can add another constructor argument to `MixinResolver` with the contract's name added to itself as a public property, which it can then use for getting and setting storage. Though this may be superceded if a refactor occurs - see [Question](#questions) 2 above.
 
-# Test Cases
+#### Proposed Usages
+
+- The list of [`synths`](https://docs.synthetix.io/contracts/source/contracts/synthetix/#synths) currently managed by `Synthetix` (currently being migrated to `Issuer` in [SIP-48](sip-48.md)).
+- All SCCP configurable settings, managed by a new contract `SystemSetting`. This contract will be owned specifically by the `protocolDAO` in order to expedite any SCCP change without requiring a migration contract (from [SIP-59](https://github.com/Synthetixio/SIPs/pull/127)).
+
+
+| Contract         | Property                                                                                                  | Type                          | Notes                                                                                                                 |
+| ---------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `Depot`          | [`fundsWallet`](https://docs.synthetix.io/contracts/source/contracts/Depot#fundswallet)                   | `address`                     | Requires replacing the current `Depot` implementation contract                                                        |
+| `Depot`          | [`maxEthPurchase`](https://docs.synthetix.io/contracts/source/contracts/Depot#maxethpurchase)             | `uint`                        | *(ibid)*                                                                                                              |
+| `Depot`          | [`minimumDepositAmount`](https://docs.synthetix.io/contracts/source/contracts/Depot#minimumdepositamount) | `uint`                        | *(ibid)*                                                                                                              |
+| `Exchanger`      | [`waitingPeriodSecs`](https://docs.synthetix.io/contracts/source/contracts/Exchanger#waitingperiodsecs)   | `uint`                        |                                                                                                                       |
+| `Exchanger`      | `exchangeFeeRateForSynths`                                                                                | `mapping(bytes32 => uint)`    | (currently on [`FeePool`](https://docs.synthetix.io/contracts/source/contracts/feepool/#setexchangefeerateforsynths)) |
+| `ExchangeRates`  | [`rateStalePeriod`](https://docs.synthetix.io/contracts/source/contracts/ExchangeRates#ratestaleperiod)   | `uint`                        |                                                                                                                       |
+| `ExchangeRates`  | [`aggregators`](https://docs.synthetix.io/contracts/source/contracts/ExchangeRates#aggregators)           | `mapping(bytes32 => address)` |                                                                                                                       |
+| `FeePool`        | [`feePeriodDuration`](https://docs.synthetix.io/contracts/source/contracts/feepool/#feeperiodduration)    | `uint`                        |                                                                                                                       |
+| `FeePool`        | [`targetThreshold`](https://docs.synthetix.io/contracts/source/contracts/feepool/#targetthreshold)        | `uint`                        |                                                                                                                       |
+| `Issuer`         | [`minimumStakeTime`](https://docs.synthetix.io/contracts/source/contracts/issuer/#minimumstaketime)       | `uint`                        |                                                                                                                       |
+| `SynthetixState` | [`issuanceRatio`](https://docs.synthetix.io/contracts/source/contracts/synthetixstate/#issuanceratio)     | `uint`                        | Cannot be modified directly, so all references need to be updated instead                                             |
+
+
+
+
+### Test Cases
 
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
 Test cases for an implementation are mandatory for SIPs but can be included with the implementation.
 
-## Configurable Values (Via SCCP)
+### Configurable Values (Via SCCP)
 
 <!--Please list all values configurable via SCCP under this implementation.-->
 
