@@ -1,5 +1,5 @@
 ---
-sip: <to be assigned>
+sip: 64
 title: Flexible Contract Storage
 status: WIP
 author: Justin J Moses (@justinjmoses)
