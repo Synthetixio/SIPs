@@ -9,7 +9,7 @@ created: 2020-05-25
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-Reduce the collateral ratio on ETH backed loans from 150% to 110% in the second trial.
+Reduce the collateral ratio on ETH backed loans from 150% to 125% in the second trial.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
