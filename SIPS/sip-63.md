@@ -93,6 +93,7 @@ Referrals - A function to allow trading incentives to be recorded against any `a
 - When an exchange is made, the exchange fee is added to the `totalExchangeFees` for the account, a value accumulated for the period until it is closed. 
 - When an exchange is made, if the account last made a trade in a previous period, it will store their `totalFeesInPeriod` for the previous period and reset the value for the current period.
 - When an exchange is made, if an address is passed in to record the trading incentives for, then it will store the total fees against that address.
+- Given a referral address is sent in an exchange, the referral address will be recorded on the trading incentives contract and the exchange fees attributed to it.
 
 - When notifyRewards is called, if the SNX balance is already transferred to the contract, then it passes. The transaction will record the `totalFeesInPeriod` for the current period and reset it. It will also increment the `periodID`.
 
