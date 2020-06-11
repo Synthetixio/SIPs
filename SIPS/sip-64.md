@@ -107,7 +107,7 @@ Additionally, contracts now need to know their own `contractName`. To solve this
 
 #### Proposed Usages
 
-- The list of [`synths`](https://docs.synthetix.io/contracts/source/contracts/synthetix/#synths) currently managed by `Synthetix` (currently being migrated to `Issuer` in [SIP-48](sip-48.md)).
+- The list of [`synths`](https://docs.synthetix.io/contracts/source/contracts/synthetix/#synths) managed by `Issuer` (previously in `Synthetix` until [SIP-48](sip-48.md)).
 - `IssuanceEternalStorage` can be replaced by wholesale by this
 - `FeePoolEternalStorage` can be replaced by this by additionally storing the data from fee periods into this as well as `FeePoolEternalStorage` during the transition period (two week claim window). The following upgrade can then remove this.
 - All SCCP configurable settings, managed by a new contract `SystemSetting`. This contract will be owned specifically by the `protocolDAO` in order to expedite any SCCP change without requiring a migration contract (from [SIP-59](https://github.com/Synthetixio/SIPs/pull/127)).
