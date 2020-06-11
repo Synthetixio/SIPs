@@ -1,5 +1,5 @@
 ---
-sccp: TBD
+sccp: 27
 title: Reduce Collateral Ratio For sETH Loans
 status: Proposed
 author: Kaleb Keny (@kaleb-keny)
