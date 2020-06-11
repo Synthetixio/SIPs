@@ -1,7 +1,7 @@
 ---
 sip: 64
 title: Flexible Contract Storage
-status: WIP
+status: Proposed
 author: Justin J Moses (@justinjmoses)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
@@ -45,14 +45,18 @@ This SIP proposes to create a new version of the `EternalStorage` contract that 
 
 All getters and setters from `EternalStorage` will be used, yet with an extra initial parameter, `contractName`. This property will be the mapping for the storage entries. For any setter function, the `msg.sender` must match the address that the Synthetix `AddressResolver` has for it. As such, this storage contract must manage a reference to the `AddressResolver` (and this can be done one-time using the `ReadProxyAddressResolver`).
 
-## Questions
+## Resolved Questions
 
 > 1.  **Should the getters be limited to only be read the contract as well?** This would prevent other internal Synthetix contracts from reading directly from the storage contract on behalf of another contract and would prevent third party contracts from reading these values on-chain. The cost is that this limitation may have unforeseen consequences for integrations down the line, moreover it is slightly more gas efficint to look up the storage directly, whereas the benefit is that the contracts themselves are the abstraction for viewing storage, and it could be problematic to allow third party contracts to expect the storage to be formatted a certain way, and break those expectations in future releases.
+>     - Decision: No. This would add unnecessary friction to the process.
+
 > 2.  **How to handle future refactoring of contracts?** If we were to store data for `Issuer` say, and then we split out burning from `Issuer` into `Burner`, how could we reuse storage from `Issuer` in `Burner`?
 >
 >     1. Use contract-auth calls to migrate the data over to the new mapping, one key at a time. This is manageable in the case of settings and properties, but much more onerous for address-based keys such as how [Issuer uses EternalStorage](https://github.com/Synthetixio/synthetix/blob/v2.21.15/contracts/Issuer.sol#L104).
 >
 >     2. A potentially better solution (though it could get ugly) is having an available contract mapping. Initially the mapping is empty but it could be added to by a contract that allows other named contracts in the `AddressResolver` to set/get on its behalf. So for the above example, `Issuer` would have something added to itself that says `Storage.addContractMapping("Issuer", "Burner")` that would allow `Burner` to pass through `Issuer` as a key and still have write access to that space. This isn't great because then `Burner` needs to keep a reference to the `"Issuer"` storage key, but is manageable. Any other suggestions?
+
+> - Decision: A version of #2 based off the proposal by @zyzek. The key to the entry can be stored in a mapping and if a migration is allowed then an additional mapping entry is created for the new contract to the old one.
 
 ### Rationale
 
@@ -104,30 +108,28 @@ Additionally, contracts now need to know their own `contractName`. To solve this
 #### Proposed Usages
 
 - The list of [`synths`](https://docs.synthetix.io/contracts/source/contracts/synthetix/#synths) currently managed by `Synthetix` (currently being migrated to `Issuer` in [SIP-48](sip-48.md)).
+- `IssuanceEternalStorage` can be replaced by wholesale by this
+- `FeePoolEternalStorage` can be replaced by this by additionally storing the data from fee periods into this as well as `FeePoolEternalStorage` during the transition period (two week claim window). The following upgrade can then remove this.
 - All SCCP configurable settings, managed by a new contract `SystemSetting`. This contract will be owned specifically by the `protocolDAO` in order to expedite any SCCP change without requiring a migration contract (from [SIP-59](https://github.com/Synthetixio/SIPs/pull/127)).
 
-
-| Contract         | Property                                                                                                  | Type                          | Notes                                                                                                                 |
-| ---------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `Depot`                    | [`fundsWallet`](https://docs.synthetix.io/contracts/source/contracts/Depot#fundswallet)                   | `address`                     | Requires replacing the current `Depot` implementation contract                                                        |
-| `Depot`                    | [`maxEthPurchase`](https://docs.synthetix.io/contracts/source/contracts/Depot#maxethpurchase)             | `uint`                        | *(ibid)*                                                                                                              |
-| `Depot`                    | [`minimumDepositAmount`](https://docs.synthetix.io/contracts/source/contracts/Depot#minimumdepositamount) | `uint`                        | *(ibid)*                                                                                                              |
-| `Exchanger`                | [`waitingPeriodSecs`](https://docs.synthetix.io/contracts/source/contracts/Exchanger#waitingperiodsecs)   | `uint`                        |                                                                                                                       |
-| `Exchanger`                | `exchangeFeeRateForSynths`                                                                                | `mapping(bytes32 => uint)`    | (currently on [`FeePool`](https://docs.synthetix.io/contracts/source/contracts/feepool/#setexchangefeerateforsynths)) |
-| `ExchangeRates`            | [`rateStalePeriod`](https://docs.synthetix.io/contracts/source/contracts/ExchangeRates#ratestaleperiod)   | `uint`                        |                                                                                                                       |
-| `ExchangeRates`            | [`aggregators`](https://docs.synthetix.io/contracts/source/contracts/ExchangeRates#aggregators)           | `mapping(bytes32 => address)` |                                                                                                                       |
-| `FeePool`                  | [`feePeriodDuration`](https://docs.synthetix.io/contracts/source/contracts/feepool/#feeperiodduration)    | `uint`                        |                                                                                                                       |
-| `FeePool`                  | [`targetThreshold`](https://docs.synthetix.io/contracts/source/contracts/feepool/#targetthreshold)        | `uint`                        |                                                                                                                       |
-| `Issuer`                   | [`minimumStakeTime`](https://docs.synthetix.io/contracts/source/contracts/issuer/#minimumstaketime)       | `uint`                        |                                                                                                                       |
-| `SynthetixState`           | [`issuanceRatio`](https://docs.synthetix.io/contracts/source/contracts/synthetixstate/#issuanceratio)     | `uint`                        | Cannot be modified directly, so all references need to be updated instead                                             |
-| `BinaryOptionMarketManager`| [`capitalRequirement`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R101) | `uint`    | Proposed in SIP 53; not yet deployed. |
-| `BinaryOptionMarketManager`| [`fees.poolFee`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R118)       | `uint`    | *(ibid)* |
-| `BinaryOptionMarketManager`| [`fees.creatorFee`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R118)    | `uint`    | *(ibid)* |
-| `BinaryOptionMarketManager`| [`fees.poolFee`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R118)       | `uint`    | *(ibid)* |
-| `BinaryOptionMarketManager`| [`durations.maxOraclePriceAge`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R109)          | `uint`    | *(ibid)* |
-| `BinaryOptionMarketManager`| [`durations.exerciseDuration`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R109)           | `uint`    | *(ibid)* |
-| `BinaryOptionMarketManager`| [`durations.creatorDestructionDuration`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R109) | `uint`    | *(ibid)* |
-| `BinaryOptionMarketManager`| [`durations.maxTimeToMaturity`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R109)          | `uint`    | *(ibid)* |
+| Contract                    | Property                                                                                                                                        | Type                          | Notes                                                                                                                 |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `BinaryOptionMarketManager` | [`capitalRequirement`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R101)                   | `uint`                        | Proposed in SIP 53; not yet deployed.                                                                                 |
+| `BinaryOptionMarketManager` | [`fees.poolFee`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R118)                         | `uint`                        | _(ibid)_                                                                                                              |
+| `BinaryOptionMarketManager` | [`fees.creatorFee`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R118)                      | `uint`                        | _(ibid)_                                                                                                              |
+| `BinaryOptionMarketManager` | [`fees.poolFee`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R118)                         | `uint`                        | _(ibid)_                                                                                                              |
+| `BinaryOptionMarketManager` | [`durations.maxOraclePriceAge`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R109)          | `uint`                        | _(ibid)_                                                                                                              |
+| `BinaryOptionMarketManager` | [`durations.exerciseDuration`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R109)           | `uint`                        | _(ibid)_                                                                                                              |
+| `BinaryOptionMarketManager` | [`durations.creatorDestructionDuration`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R109) | `uint`                        | _(ibid)_                                                                                                              |
+| `BinaryOptionMarketManager` | [`durations.maxTimeToMaturity`](https://github.com/Synthetixio/synthetix-docs/pull/16/files#diff-b7ffd5d7634602ea6c8b51ee03a19734R109)          | `uint`                        | _(ibid)_                                                                                                              |
+| `Exchanger`                 | [`waitingPeriodSecs`](https://docs.synthetix.io/contracts/source/contracts/Exchanger#waitingperiodsecs)                                         | `uint`                        |                                                                                                                       |
+| `Exchanger`                 | `exchangeFeeRateForSynths`                                                                                                                      | `mapping(bytes32 => uint)`    | (currently on [`FeePool`](https://docs.synthetix.io/contracts/source/contracts/feepool/#setexchangefeerateforsynths)) |
+| `ExchangeRates`             | [`rateStalePeriod`](https://docs.synthetix.io/contracts/source/contracts/ExchangeRates#ratestaleperiod)                                         | `uint`                        |                                                                                                                       |
+| `ExchangeRates`             | [`aggregators`](https://docs.synthetix.io/contracts/source/contracts/ExchangeRates#aggregators)                                                 | `mapping(bytes32 => address)` |                                                                                                                       |
+| `FeePool`                   | [`feePeriodDuration`](https://docs.synthetix.io/contracts/source/contracts/feepool/#feeperiodduration)                                          | `uint`                        |                                                                                                                       |
+| `FeePool`                   | [`targetThreshold`](https://docs.synthetix.io/contracts/source/contracts/feepool/#targetthreshold)                                              | `uint`                        |                                                                                                                       |
+| `Issuer`                    | [`minimumStakeTime`](https://docs.synthetix.io/contracts/source/contracts/issuer/#minimumstaketime)                                             | `uint`                        |                                                                                                                       |
+| `SynthetixState`            | [`issuanceRatio`](https://docs.synthetix.io/contracts/source/contracts/synthetixstate/#issuanceratio)                                           | `uint`                        | Cannot be modified directly, so all references need to be updated instead                                             |
 
 ### Test Cases
 
