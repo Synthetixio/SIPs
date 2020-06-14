@@ -18,7 +18,7 @@ Decrease SNX incentives to the Curve pool to 32,000 SNX per week
 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
-After we reduced the incentive paid on Curve pool, we did not notice any decrease in the amount staked. Rather, the amount staked increased slightly to reach 13 million in recent days. In addition, the current recovery in SNX prices means that users are now getting an APY of 22% in USD terms, higher than the 15% they were earning (before the decrease to SNX 48k). Another motive is the peg, which has been more resilient recently. Please see the [chart](asset/curve_decrease_32/charts.PNG) for reference.
+After we reduced the incentive paid on Curve pool, we did not notice any decrease in the amount staked. Rather, the amount staked increased slightly to reach 13 million in recent days. In addition, the current recovery in SNX prices means that users are now getting an APY of 22% in USD terms (equivalent to the APY pre-decrease to SNX 48k). Another motive is the peg, which has been more resilient recently. Please see the [chart](asset/curve_decrease_32/charts.PNG) for reference.
 
 Other reasons to decrease the incentive, as noted in the previous SCCP:
 1) It is important to not consistently overpay when incentivizing the pools, as it is effectively a transfer of value from snx minters to pool contributors. The incentive should be calibrated depending on the state of the system to pay the least amount of incentive required that achieves the desired effect of peg stability.
