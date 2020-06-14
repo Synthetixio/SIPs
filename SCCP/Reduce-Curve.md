@@ -3,7 +3,7 @@ sccp: TBA
 title: Reduce Rewards On Curve - SNX 32,000
 status: WIP
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: SNX-trading
+discussions-to: Governance
  
 created: 2020-06-14
 ---
