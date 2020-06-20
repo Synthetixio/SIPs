@@ -1,7 +1,7 @@
 ---
 sip: 65
 title: Decentralized Circuit Breaker
-status: WIP
+status: Proposed
 author: Justin J Moses (@justinjmoses)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
@@ -54,6 +54,8 @@ Every time an exchange occurs, we will check that both the source and destinatio
 
 Additionally the function to check and potentially suspend will be publicly available, so that anyone may invoke it without needing to attempt an `exchange`.
 
+Finally, as the suspension is limited to the synth, even in a case of a false positive - where a synth is suspended when it shouldn't be - the only concern is increased downtime for any user to exchange or transfer that synth. It will be on the protocolDAO to investigate and resume the synth after a thorough investigation.
+
 ### Rationale
 
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
@@ -95,11 +97,51 @@ In order to save gas, each time a new `exchange` occurs, the price of both the `
 
 Additionally, `Exchanger.exchange` will be amended to perform `suspendInvalidSynth(currencyKey)` for either (or both) source or destination synth when `isSynthPricingInvalid(currencyKey)` is `true`.
 
+### Workflow
+
+- `Synthetix.exchange(onBehalf)?` invoked from synth `src` to `dest` by `user` for `amount`
+  - For both `src` and `dest` synths:
+    - _Is there a previous rate for the synth?_
+      - Yes:
+        - _Is the absolute % difference in rate now compared to the previous rate >= `priceDeviationThreshold`?_
+          - Yes: ✅🔚 Suspend the synth and return immediately.
+          - No: Persist the current rate as the last
+      - No:
+        - For each of the last `3` rounds,
+          - _Is the absolute % difference in rate now compared to the rate at current round >= `priceDeviationThreshold`?_
+            - Yes: ✅🔚 Suspend the synth and return immediately.
+            - No: Persist the current rate as the last
+  - Then
+    - ✅ Continue with exchange
+
 ### Test Cases
 
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
-TBD.
+#### Preconditions
+
+- Given the `priceDeviationThreshold` is set to `50%`
+
+#### Common cases
+
+- Given there was previously an exchange for `sUSD` (or any synth) to `sETH`, recording the last sETH price as `200`
+  - And the current market price of `sETH` is returning `500`
+    - When a user attempts to exchange `sBTC` (or any other synth) into `sETH` (or from any synth into `sETH`)
+      - Then as `500` is more than `50%` away from `200` (i.e. it's more than `300`), `sETH` will be suspended, and the exchange will be prevented.
+  - And the current market price of `sETH` is returning `105`
+    - When a user attempts to exchange `sBTC` (or any other synth) into `sETH`
+      - Then as `105` is less than `50%` away from `200` (i.e. it's above `100`), then the exchange will continue, and `105` will be persisted as the last price.
+
+#### Edge cases
+
+- Given there is no previous exchange recorded for `sETH`
+  - And the protocol upgrades `Exchanger` contract
+    - And there are 10 previous rates for `sETH` price, all within 1% of each other
+      - When a user attempts to exchange `sETH` for `sUSD`,
+        - Then the current rate will be within 1% of the previous three rates, and the exchange will continue, persisting the current rate
+  - And the protocol upgrades `ExchangeRates` contract or a Chainlink `Aggregator` is replaced for a price
+    - And there is no previous rates for `sETH`
+      - Then the exchange will continue, persisting the current rate
 
 ### Configurable Values (Via SCCP)
 
