@@ -107,7 +107,7 @@ Additionally, `Exchanger.exchange` will be amended to perform `suspendInvalidSyn
     - _Is there a previous rate for the synth?_
       - Yes:
         - _Is the absolute % difference in rate now compared to the previous rate >= `priceDeviationThreshold`?_
-          - Yes: ✅🔚 Suspend the synth and return immediately.
+          - Yes: ✅🔚 Settle any unsettled trades into `src` as per usual (if `src` was the breach, then settle with no reclaim or rebate - see below), then suspend the synth and return immediately.
           - No: Persist the current rate as the last
       - No:
         - For each of the last `3` rounds,
