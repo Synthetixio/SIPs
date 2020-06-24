@@ -18,9 +18,9 @@ End the SNX incentives for sETH/ETH Uniswap pool, currently rewards stand at 4,0
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 Given the low amount of incentive currently being contributed to the sETH/ETH pool, removing the rest of the rewards is not expected to have a material impact, due to the utility of these tokens in other farming opportunities (AAVE).
-Furthermore, looking at the [chart](asset/uniswap_seth_end/chart.PNG) of staked tokens against SNX reward reveals that although rewards have decreased considerably (by around 95%) the amount staked has only halved. This provides support that on the lack of need for these SNX rewards.
+Furthermore, looking at the [chart](asset/uniswap_seth_end/chart.PNG) of staked tokens against SNX reward amount shows that although rewards have decreased considerably (by around 95%) the amount staked has only halved. This provides support that on the lack of need for these SNX rewards.
 
-Finally, it is worth mentioning that these "permanent" rewards essentially serve the purpose of peg maintenance, with the recent stability of the peg this program could be unwound safely.
+Finally, it is worth mentioning that rewards from the inflation pool that have no pre-determined end-date essentially serve the purpose of peg maintenance, with the recent stability of the peg these rewards could be unwound safely.
 
 ## Source
 - [data](asset/uniswap_seth_end/data.xlsx)
