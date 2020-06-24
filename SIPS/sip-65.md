@@ -56,6 +56,8 @@ The function to check and potentially suspend will be publicly available, so tha
 
 In addition, we need to handle the settlement of a trade (see [SIP-37](./sip-37.md) for more details on trade settlement). Because settlement is called to process some past event (i.e. how much is owed when the price of the oracle after the waiting period ends is taken into account) - we cannot nor would not want to do any suspension during settlement. However, we also cannot leave the trade in an unsettled state and block future user exchanges. As such, we propose to waive any reclaims or rebates in the event that the amount received deviates from the amount that should have been received by more than the `priceDeviationThreshold`.
 
+> There is a remote possibility that an exchange gets in before a spike, fronrunning a real rate change, but by the time the waiting period expires `N` minutes later, a spike occurs, and the exchange is settled with no fee reclaim. As such, the `protocolDAO`, when investigating suspended synths via price spikes, must also look through the unsettled exchanges performed right before the spike and determine the necessary course of action before resuming the synth in question.
+
 Finally, as the suspension is limited to the synth, even in a case of a false positive - where a synth is suspended when it shouldn't be - the only concern is increased downtime for any user to exchange or transfer that synth. It will be on the protocolDAO to investigate and resume the synth after a thorough investigation.
 
 ### Rationale
