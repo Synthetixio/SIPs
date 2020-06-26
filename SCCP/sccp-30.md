@@ -3,7 +3,7 @@ sccp: 30
 title: Lower c-ratio to 700%
 author: SynthAman (@SNXified)
 discussions-to: TBC
-status: Implemented
+status: Proposed
 created: 2020-06-26
 ---
 
