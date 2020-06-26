@@ -8,14 +8,14 @@ created: 2020-06-26
 ---
 
 ## Simple Summary
-Increase the fees on commidities to 30 bp in order to make front-running less likely.
+Increase the fees on commodities to 30 bp in order to make front-running less likely.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
 As per [sip-56](https://github.com/Synthetixio/SIPs/blob/master/SIPS/sip-56.md) each synth can now have its own fee levels. This SCCP suggest to raise the fees on commodity synths back to 30 bp.
 
 ## Motivation
-Fees were configured recently in [sccp-24](https://sips.synthetix.io/sccp/sccp-24) however analysis of the data showed that front-running oppurtunties more accessible. Increasing fees to 30 bp, should decrease the chance of front-running temporarily until [sip-52](https://sips.synthetix.io/sips/sip-52) is implimented.
+Fees were configured recently in [sccp-24](https://sips.synthetix.io/sccp/sccp-24) however analysis of the data showed that front-running opportunities more accessible. Increasing fees to 30 bp, should decrease the chance of front-running temporarily until [sip-52](https://sips.synthetix.io/sips/sip-52) is implemented.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
