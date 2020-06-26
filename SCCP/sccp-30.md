@@ -11,7 +11,7 @@ created: 2020-06-26
 Decrease the target Collateralisation Ratio for SNX stakers to 700%
 
 ## Abstract
-There is currently a a potential deficit of Synths is coming to Synthetix platform. Decreasing the target Collateralisation Ratio will cause some SNX stakers to increase amount of synths minted.
+There is currently a potential deficit of Synths that is coming to Synthetix platform. Decreasing the target Collateralisation Ratio will cause some SNX stakers to increase amount of synths minted.
 
 ## Motivation
 1. Current peg is holding up great due to Curve. This can be seen from data collected since lowering it to 700% in SCCP-26.
