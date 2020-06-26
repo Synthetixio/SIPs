@@ -26,8 +26,6 @@ to capture more value
 6. Synthetix platform will be able to potentially showcase the ability to deliver rapid iterations
 7. Increased amount of SNX holders that will come to the platform will be able to see upcoming updates such as
 Synthetic Futures, sOIL, Limit Orders and Binary Options.
-8. This will increase chances getting Coinbase, but I am sure most of the holders, including me are indifferent
-to this argument.
-9. It will allow us to further collect data on stability of the peg and allow precipitate the deamand.
+8. It will allow us to further collect data on stability of the peg and allow precipitate the deamand.
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
