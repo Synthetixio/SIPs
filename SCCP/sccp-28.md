@@ -17,7 +17,7 @@ Decrease SNX incentives on the sUSD Curve pool by 50% to 24,000 SNX per week
 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
-The recent growth in the size of the sUSD pool on Curve is mainly driven by forthcoming distribution of CRV tokens. This allows us to lower the rewards we pay from the inflation fool while avoiding any material impact on the peg.
+The recent growth in the size of the sUSD pool on Curve is mainly driven by forthcoming distribution of CRV tokens. This allows us to lower the rewards we pay from the inflation pool while avoiding any material impact on the peg.
 
 Other reasons to decrease the incentive, as noted in the previous SCCP:
 1) It is important to not consistently overpay when incentivizing the pools, as it is effectively a transfer of value from snx minters to pool contributors. The incentive should be calibrated depending on the state of the system to pay the least amount of incentive required that achieves the desired effect of peg stability.
