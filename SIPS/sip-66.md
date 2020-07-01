@@ -44,7 +44,7 @@ Checking the total size of the debt pool involves looping over every synth in Sy
 
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
-Add a check in `Synthetix.transfer` and `Synthetix.transferFrom` to only check `Issuer.transferableSynthetixAndAnyRateIsStale` when there is no debt for the account.
+Add a check in `Synthetix.transfer` and `Synthetix.transferFrom` to only check `Issuer.transferableSynthetixAndAnyRateIsStale` when there is debt for the account.
 
 ### Rationale
 
