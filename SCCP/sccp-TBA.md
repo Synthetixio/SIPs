@@ -1,6 +1,6 @@
 ---
 sccp: TBA
-title: Increase Fees on Stock Synths Trades
+title: Increase Fees on Stock Synths
 author: Kaleb Keny (@kaleb-keny)
 status: WIP
 discussions-to: <https://discord.gg/XzQjCf>
@@ -8,7 +8,7 @@ created: 2020-07-03
 ---
 
 ## Simple Summary
-Increase the fees on stock synths trades to 30 bp in order to make front-running less likely.
+Increase the fees on trades of stock synths to 30 bp.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
