@@ -8,7 +8,7 @@ created: 2020-07-03
 ---
 
 ## Simple Summary
-Increase the fees on trades of stock synths to 30 bp.
+Increase the fees on trades into stock synths to 30 bp.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
