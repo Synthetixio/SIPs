@@ -24,7 +24,7 @@ There would be three bidding phases, automatically created on the creation of th
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 With the current system for Binary Options it makes sense for bidder to wait until the last possbile moment:
 1. They will have a clear picture on the final odds
-2. They mitigate the withdrawal need and can use their funds in different places until the big gets to final stages
+2. They mitigate the withdrawal need and can use their funds in different places until the bid gets to final stages
 3. So finally they have no reason to lock their funds early in a bid
 
 For this reason currently only markets with shortterm bid windows make sense.
@@ -65,7 +65,7 @@ Markets already created will keep their default configuration.
 John Doe create a market with bid deadline in 72h:
 1. Early bird phase is until hour 24, with 0.5% bidding fee. Everyone who joined on the bid phase has 3% withdrawal fee until the end of the bid deadline.
 2. Standard phase is 1% fee. Everyone who joined in the standard phase has 5% withdrawal fee until the end of the bid deadline.
-3. Later Risers phase is from hour 48 till hour 72, with 2% fee and 7% withdrawal fee.
+3. Late Riser phase is from hour 48 till hour 72, with 2% fee and 7% withdrawal fee.
 
 ### Configurable Values (Via SCCP)
 <!--Please list all values configurable via SCCP under this implementation.-->
