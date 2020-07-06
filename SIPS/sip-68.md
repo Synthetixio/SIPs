@@ -29,7 +29,7 @@ Enhancements include;
 
 ## Motivation
 
-<!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
+<!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 
 ### Recover airdropped rewards tokens from other protocols such as BAL & CRV
 
@@ -39,13 +39,13 @@ This would include a `recoverERC20` function that is accessible by the owner onl
 
 ### Update the rewards duration
 
-Synthetix often runs trials on Liquidity Mining. Right now the Rewards duration is 7 days hard coded. Allowing a configurable `rewardsDuration` means the sDAO can set the duration and supply the total durations rewards for the trial with out having to send the rewards manually each week. i.e. the curve renBTC/sBTC/wBTC pool gets 10 BPT per week. where the trial is 10 weeks we could have set the duration to 10 weeks and send all 100 BPT upfront and it will distribute for the full term of the trial.
+Synthetix often runs trials on Liquidity Mining. Right now the Rewards duration is 7 days hard coded. Allowing a configurable `rewardsDuration` means the sDAO can set the duration and supply the total duration rewards for the trial without having to send the rewards manually each week. i.e. the curve renBTC/sBTC/wBTC pool gets 10 BPT per week. where the trial is 10 weeks we could have set the duration to 10 weeks and send all 100 BPT upfront and it will distribute for the full term of the trial.
 
-When a trial is complete the contract can either be shut down or wired into the Synthetix Inflationary supply via the Rewards Distribution contract where the `rewardsDuration` can be set back to 7 days and automatically recieve SNX weekly. Similar to current LP SNX rewards incentives.
+When a trial is complete the contract can either be shut down or wired into the Synthetix Inflationary supply via the Rewards Distribution contract where the `rewardsDuration` can be set back to 7 days and automatically receive SNX weekly. Similar to current LP SNX rewards incentives.
 
 ### Remove the redundant LPToken Wrapper
 
-The LPToken Wrapper added additional complexity to the code without adding any additional benefits. To simplfy the code we propose to remove it.
+The LPToken Wrapper added additional complexity to the code without adding any additional benefits. To simplify the code we propose to remove it.
 
 
 ### Refactor to set rewards and staking tokens via the constructor on deployment
