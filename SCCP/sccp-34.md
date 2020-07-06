@@ -1,6 +1,6 @@
 ---
-sccp: <to be assigned>
-title: BO fees distribution
+sccp: 34
+title: Binary Options fees distribution
 author: dgornjakovic
 discussions-to: https://discord.gg/e9c5Cs
 status: WIP
