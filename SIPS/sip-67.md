@@ -1,6 +1,6 @@
 ---
-sip: <to be assigned>
-title: Bid phases
+sip: 67
+title: Binary Options bid phases
 status: WIP
 author: dgornjakovic
 discussions-to: https://discord.gg/e9c5Cs
