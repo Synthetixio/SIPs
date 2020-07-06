@@ -1,8 +1,8 @@
 ---
-sip: TBD
-title: Automatized weekly trading competition
+sip: 68
+title: Automated weekly trading competition
 status: WIP
-author: Danijel Gornjakovic (@dgornjakovic)
+author: Danijel (@dgornjakovic)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
 created: 2020-05-04
