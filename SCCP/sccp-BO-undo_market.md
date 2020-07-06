@@ -1,6 +1,6 @@
 ---
-sccp: <to be assigned>
-title: Undo BO Market
+sccp: 33
+title: Binary Options market undo
 author: dgornjakovic
 discussions-to: https://discord.gg/e9c5Cs
 status: WIP
