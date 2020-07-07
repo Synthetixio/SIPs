@@ -39,7 +39,7 @@ This would include a `recoverERC20` function that is accessible by the owner onl
 
 ### Update the rewards duration
 
-Synthetix often runs trials on Liquidity Mining. Right now the Rewards duration is 7 days hard coded. Allowing a configurable `rewardsDuration` means the sDAO can set the duration and supply the total duration rewards for the trial without having to send the rewards manually each week. i.e. the curve renBTC/sBTC/wBTC pool gets 10 BPT per week. where the trial is 10 weeks we could have set the duration to 10 weeks and send all 100 BPT upfront and it will distribute for the full term of the trial.
+Synthetix often runs trials on Liquidity Mining. Right now the Rewards duration is 7 days hard coded. Allowing a configurable `rewardsDuration` means the sDAO can set the duration and supply the total duration rewards for the trial without having to send the rewards manually each week. i.e. the curve renBTC/sBTC/wBTC pool gets 10 BPT per week. Where the trial is 10 weeks we could have set the duration to 10 weeks and send all 100 BPT upfront and it will distribute for the full term of the trial.
 
 When a trial is complete the contract can either be shut down or wired into the Synthetix Inflationary supply via the Rewards Distribution contract where the `rewardsDuration` can be set back to 7 days and automatically receive SNX weekly. Similar to current LP SNX rewards incentives.
 
