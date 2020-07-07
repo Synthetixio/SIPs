@@ -31,7 +31,7 @@ These Synths will both be indices implemented in much the same way as the sCEX/i
 For sDeFi;
 The current Proposed V2 index comprises of COMP(Compound), MKR (Maker),  KNC (Kyber Network),SNX (Synthetix), ZRX (0x),REP (Augur), LEND (AAVE),  REN (Ren Protocol), UMA (UMA), LRC (Loopring), BNT (Bancor)
 For sCEX;
-The current proposed V2 Index comprises of BNB (Binance), CRO (Crypto.com), OKB (OKex), LEO (Bitfinex), HT (Huobi), FTT (FTX), KSC (Kucoin)
+The current proposed V2 Index comprises of BNB (Binance), CRO (Crypto.com), OKB (OKex), LEO (Bitfinex), HT (Huobi), FTT (FTX), KCS (Kucoin)
 
 
 ## Test Cases
@@ -43,25 +43,25 @@ s/iDeFi and s/iCEX already exists and are a clear example of how custom Synth in
 Announce the new index and weightages and migrate after a minimum 2 week period. Done by normalising the new price to the old price and restart the index contract.
 
 Here are the weightings for the s/iDEFI Synths: 
-1.11 of COMP (Compound), 
-0.34 of MKR (Maker), 
-68.1 of KNC (Kyber Network), 
-40.76 of SNX (Synthetix), 
-262.65 of ZRX (0x), 
-4.13 of REP (Augur), 
-471.5 of LEND (AAVE), 
-327.69 of REN (REN), 
-19.57 of UMA (UMA), 
-440.20 of LRC (Loopring), 
-24.58 of BNT (Bancor),
-2.33 of BAL (Balancer).
+1.06 of COMP (Compound), 
+0.31 of MKR (Maker), 
+63.23 of KNC (Kyber Network),
+243.77 of ZRX (0x), 
+37.70 of SNX (Synthetix), 
+437.08 of LEND (AAVE), 
+3.83 of REP (Augur), 
+305.36 of REN (REN), 
+415.03 of LRC (Loopring),
+18.14 of UMA (UMA), 
+23.00 of BNT (Bancor),
+2.17 of BAL (Balancer).
 
 Here are the weightings for the s/iCEX Synths: 
-18.94 of BNB (Binance), 
-1936.68 of CRO (Crypto.com), 
+17.36 of BNB (Binance), 
+1804.01 of CRO (Crypto.com), 
 33.67 of OKB (OKex), 
 107.35 of LEO (Bitfinex), 
-28.76 of HT (Huobi), 
+28.35 of HT (Huobi), 
 11.98 of FTX (FTX), 
 9.82 of KCS (Kucoin).
 
