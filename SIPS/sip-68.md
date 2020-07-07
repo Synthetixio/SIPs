@@ -14,17 +14,17 @@ created: 2020-07-06
 
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-The StakingRewards contracts for Liquidity mining need some minor enhancements.
+The `StakingRewards` contracts for liquidity mining need some minor enhancements.
 
 ## Abstract
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-Enhancements include;
+Enhancements include:
 
 - Recover airdropped rewards tokens from other protocols such as BAL & CRV
 - Ability to update the rewards duration
-- Remove the redundant LPToken Wrapper
+- Remove the redundant `LPTokenWrapper`
 - Refactor to set rewards and staking tokens via the constructor on deployment
 
 ## Motivation
@@ -33,9 +33,9 @@ Enhancements include;
 
 ### Recover airdropped rewards tokens from other protocols such as BAL & CRV
 
-When providing liquidity to Balancer or Curve.fi and you stake your LP tokens in the Synthetix StakingRewards contract. You will also be eligible for BAL and CRV Liquidity Mining rewards also and potentially other AMMs in the future.
+When providing liquidity to [Balancer](https://pools.balancer.exchange/#/) or [Curve.fi](https://www.curve.fi/susdv2/deposit) and you stake your LP tokens in the Synthetix `StakingRewards` contract you will also be eligible for BAL and CRV Liquidity Mining rewards also and potentially other AMMs in the future.
 
-This would include a `recoverERC20` function that is accessible by the owner only (protocol DAO) and can recover any ERC20 except the staking and rewards tokens to protect the stakers that their LP tokens and their rewards tokens are not accessible by the owner.
+This would include a `recoverERC20` function that is accessible by the owner only, the [protocolDAO](https://etherscan.io/address/protocoldao.snx.eth) and can recover any ERC20 except the staking and rewards tokens to protect the stakers that their LP tokens and their rewards tokens are not accessible by the owner. These additional LP rewards will then be distributed to the LP providers.
 
 ### Update the rewards duration
 
@@ -45,12 +45,12 @@ When a trial is complete the contract can either be shut down or wired into the 
 
 ### Remove the redundant LPToken Wrapper
 
-The LPToken Wrapper added additional complexity to the code without adding any additional benefits. To simplify the code we propose to remove it.
+The `LPTokenWrapper` added additional complexity to the code without adding any additional benefits. To simplify the code we propose to remove it.
 
 
 ### Refactor to set rewards and staking tokens via the constructor on deployment
 
-The staking and rewards tokens were hard coded addresses in each contract. Now that there are many of these on MAINNET and deploying almost 1 a week. instead of having to edit the code directly it is prefered to send the staking and rewards tokens as arguments to the constructor on contract creation.
+The staking and rewards tokens were hard coded addresses in each contract. Now that there are many of these on MAINNET and deploying almost 1 a week, instead of having to edit the code directly it is prefered to send the staking and rewards tokens as arguments to the constructor on contract creation.
 
 
 ### Technical Specification
@@ -61,7 +61,7 @@ Add  `recoverERC20` and `setRewardsDuration` that have `onlyOwner` modifiers.
 
 `constructor` to take `_rewardsToken` & `_stakingToken` as arguments
 
-Refactor to remove the `LPTokenWrapper` contract. The Original implementation to not include this.
+Refactor to remove the `LPTokenWrapper` contract. The original implementation to not include this.
 
 
 ### Test Cases
