@@ -3,7 +3,7 @@ sip: 70
 title: Add sDeCon Synth
 status: WIP
 author: Troy Murray (@danny_desert)
-discussions-to: ()
+discussions-to: (https://discord.gg/7kFMs7w)
 
 created: 2020-07-09
 ---
