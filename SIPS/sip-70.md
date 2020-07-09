@@ -1,7 +1,7 @@
 ---
 sip: 70
 title: Add sDeCon Synth
-status: Implemented
+status: WIP
 author: Troy Murray (@danny_desert)
 discussions-to: ()
 
