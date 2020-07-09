@@ -16,7 +16,7 @@ Add sDeCon/iDeCon Index Synths that track an index of DeCon tokens.
 
 ## Motivation
 <!--The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing protocol specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.-->
-The DeCon ecosystem is growing in maturity and awareness, and adding long/short exposure to a basket of DeCon tokens will allow traders to speculate on the value of some of the better-known utility tokens in the emerging ecosystem. s/iDeCOn also demonstrates how the Synthetix protocol can support new, custom kinds of assets to serve a particular purpose. 
+The Decentralized Content (DeCon) ecosystem is growing in maturity and awareness, and adding long/short exposure to a basket of DeCon tokens will allow traders to speculate on the value of some of the better-known utility tokens in the emerging ecosystem. s/iDeCOn also demonstrates how the Synthetix protocol can support new, custom kinds of assets to serve a particular purpose. 
 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
