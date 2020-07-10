@@ -1,5 +1,5 @@
 ---
-sip: 68
+sip: 70
 title: Automated weekly trading competition
 status: WIP
 author: Danijel (@dgornjakovic)
