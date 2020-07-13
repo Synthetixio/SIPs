@@ -18,11 +18,9 @@ The binary option market manager and factory will be replaced, and existing mark
 
 * Allow market creators to disable bid withdrawals at market creation
 * Remove the pool fee charge for market creators
-* Allow market creators to cancel a market if no bids have been placed on it yet
+* Allow market creators to cancel a market if no bids have been placed on it yet (supercedes [SCCP-33](../SCCP/sccp-33.md))
 * Emit bid events upon market creation for the initial capital
 * Fix a bug that prevents creators from exercising their options before expiry under certain circumstances
-
-Note that this supercedes [SCCP-33](../SCCP/sccp-33.md).
 
 ## Motivation
 
