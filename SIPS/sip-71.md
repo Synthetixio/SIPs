@@ -1,5 +1,5 @@
 ---
-sip: <to be assigned>
+sip: 71
 title: Binary Options v1.1
 status: WIP
 author: Anton Jurisevic <@zyzek>, Danijel <@dgornjakovic>
