@@ -3,7 +3,6 @@ sip: 71
 title: Binary Options v1.1
 status: WIP
 author: Anton Jurisevic <@zyzek>, Danijel <@dgornjakovic>
-discussions-to: <Discord Channel>
 
 created: 2020-07-13
 ---
