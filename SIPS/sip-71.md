@@ -3,6 +3,7 @@ sip: 71
 title: Binary Options v1.1
 status: WIP
 author: Anton Jurisevic <@zyzek>, Danijel <@dgornjakovic>
+discussions-to: <Discord Channel>
 
 created: 2020-07-13
 ---
@@ -40,10 +41,36 @@ Some users have pointed out that allowing bids to be withdrawn disincentivises u
 
 #### Fix Losing-Side Exercise Bug
 
-If a user has bid on both sides of the market, they have not claimed their options before the maturity date, and their claimable supply of options on the losing side of the market exceeds the remaining sUSD deposited in the market, their funds will be trapped until expiry of the contract. The problem lies inside the BinaryOption contract, where the value of exercisable sUSD falls in proportion with the number of options on the winning side being exercised. The intended fix will report the deposited exercisable value to the losing BinaryOption instance as zero. In consequence, the claimable option balance of bidders on the losing side will fall to zero at maturity. This has no fiscal consequences, as these options pay out nothing upon
-exercise.
+If a user has bid on both sides of the market, they have not claimed their options before the maturity date, and their claimable supply of options on the losing side of the market exceeds the remaining sUSD deposited in the market, their funds will be trapped until expiry of the contract. This problem mainly affects market creators.
 
-When this problem was discovered, market creation was immediately disabled on synthetix.exchange. Restoring the intended functionality will allow market creation to be reenabled.
+The problem lies inside the BinaryOption contract ([`BinaryOption.sol:L68`](https://github.com/Synthetixio/synthetix/blob/ea2f032e432516b13c49ba946994ae6253346821/contracts/BinaryOption.sol#L68)).
+Whenever a user is owed more than the remaining claimable supply of sUSD, the transaction reverts on the supposition that this should be impossible; there is a minimum bid size which is vastly larger than the few wei worth of error that could ever be introduced due to rounding errors.
+
+However, this supposition only holds on the winning side of the market, since the value of exercisable sUSD falls in proportion with the number of options on the winning side being exercised; but this logic breaks down on the losing side.
+
+Most of the time this is harmless since it only results in a revert if the options being claimed are worthless. However, in the following case, funds can be trapped for certain users:
+
+* The market is in the maturity phase;
+* The user has bids on both sides of the market;
+* The user has not already claimed their options;
+* The user's owed balance of losing options exceeds their owed balance of winning options;
+* Sufficiently-many other participants in the market have exercised winning options to bring the market's total sUSD deposited below the user's owed losing option balance.
+
+When these conditions are satisfied, then such a user attempting to claim or exercise their options will find that the transaction reverts, so their funds will remain in the contract.
+
+Since this only affects both-side bidders, and it's likelier to occur with larger bid sizes, it will predominantly affects market creators. However, the funds are recoverable once the option markets are
+expired.
+
+The intended fix will be as follows:
+
+* Report the deposited exercisable value to the losing BinaryOption instance as zero when claimable balances are computed;
+* Remove the assert statement that causes the transaction to revert;
+* Only claim winning-side options when exercising.
+* Once all unaffected options have been exercised, migrate any affected markets to a separate manager contract so that they can be expired in a controlled way to recover the funds.
+
+In consequence of these changes, the claimable option balance of losing bids will fall to zero at maturity. This has no fiscal consequences, as these options pay out nothing when exercised in any case.
+
+When this problem was discovered, market creation was immediately disabled on synthetix.exchange. Once the intended functionality is restored, market creation can be reenabled.
 
 #### Remove Pool Fee Charge For Creators
 
