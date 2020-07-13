@@ -39,7 +39,7 @@ At market creation, the creator will be allowed to disabled bid withdrawals for 
 
 Some users have pointed out that allowing bids to be withdrawn disincentivises users from participating in binary option markets since it decreases the available pay out and can significantly change the odds late in the bidding phase. Decreasing the uncertainty confronting bidders enhances the market's utility, which should attract higher volume, derisking the market creator.
 
-#### Fix Exercise Bid
+#### Fix Losing-Side Exercise Bug
 
 If a user has bid on both sides of the market, they have not claimed their options before the maturity date, and their claimable supply of options on the losing side of the market exceeds the remaining sUSD deposited in the market, their funds will be trapped until expiry of the contract. The problem lies inside the BinaryOption contract, where the value of exercisable sUSD falls in proportion with the number of options on the winning side being exercised. The intended fix will report the deposited exercisable value to the losing BinaryOption instance as zero. In consequence, the claimable option balance of bidders on the losing side will fall to zero at maturity. This has no fiscal consequences, as these options pay out nothing upon
 exercise.
