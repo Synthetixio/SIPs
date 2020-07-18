@@ -46,7 +46,9 @@ The keeper contract would be able to allocate an amount of SNX / token rewards c
 
 Rewards paid in SNX will utilise the `exchangeRates` contract to get the USD value of SNX and the rewards paid will be based in USD value. This will ensure that a fair amount of SNX reward is given to keepers to compensate them.
 
-If it is observed that the USD rewards allocated is sufficient / insufficient to have keeper actions completed within a specific time frame, then it would be possible to update the USD rewards to ensure actions are completed. There is an expectation that if the reward is more than the gas cost + running costs of completing the action, then in an efficient market keepers would continue performing the actions.
+The keeper rewards would target a specific gas price (in gwei) that the keeper actions will be executed at. When the gas price fluctuates above the target gas price then we would expect keepers to cap their gas price for executing the keeper functions.
+
+If it is observed that the USD rewards allocated is sufficient / insufficient to have keeper actions completed within a specific time frame, then it would be possible to update the USD rewards to ensure actions are completed. If the reward is more than the marginal gas cost + running costs of completing the action, then in an efficient market keepers would continue performing the actions.
 
 ### Settlement of Exchange Entries
 
@@ -68,6 +70,10 @@ An `exchange` transaction costs ~8x the amount of gas of `settle`, so given that
 Refer to configurable SCCP values for proposed USD amount reward for calling `settle()` function.
 
 An edge case where the keeper reward is less than the cost of settling exchange entries (due to gas price costs and congestion) then this could be covered by the protocol which can settle the remaining entries.
+
+### Freeze Inverse Synths
+
+The reward for freezing inverse synths at their upper or lower limits can be higher than the actual transaction cost to encourage faster execution. This is also because Inverse synths are expected to be frozen less frequently than other common keeper functions such as settling exchange entries.
 
 ### Requesting / pulling next price update from Chainlink Oracles
 
@@ -132,6 +138,7 @@ Each action that a keeper could perform will have a configurable amount of USD v
 |--------|--------------|-----------|------------|------------|
 | 1. FreezeSynths for iSynths | 42000| 35 gwei/gas | 0.34545 | 5.0 |
 | 2. Settle Exchange 1x entry | 51860 | 35 gwei/gas | 0.4265485 | 0.80 |
+| 2a. Settle Exchange 2x entries | 98886 | 35 gwei/gas | 0.81333735 | 1.60 |
 | 3. Requesting next price update from Chainlink | TBA - X of LINK | 35 gwei/gas | N/A | N/A |
 | 4. Binary Options ResolveMarket | 242194 | 35 gwei/gas | 1.99204565 | 4.0 |
 | 5. Binary Options expireMarkets | 114098 | 35 gwei/gas | 0.93845605 | 4.0 |
