@@ -22,8 +22,8 @@ Despite the recent  price run up of SNX, accompanied usually by an increases in 
 1) Farming purposes (CRV, foundation led incentives...)
 2) Increase in exchange activity
 
-It should be mentioned that although many have been asking for a c-ratio change to stabilize the peg, the discussion under this [research post](https://research.synthetix.io/t/decreasing-c-ratio-vs-decreasing-snx-rewards/91), outline the pros and cons of doing this.
-The main reasons as to why decrease these incentive, is to put SNX on a more sustainable long-term footing and decrease the leakage of value from minters, to the minimum required that achieves a stable peg.
+It should be mentioned that although many have been asking for a c-ratio change to stabilize the peg, the discussion under this [research post](https://research.synthetix.io/t/decreasing-c-ratio-vs-decreasing-snx-rewards/91), outlines the pros and cons of doing this.
+The main argument for reducing incentives ahead of any c-ratio cut is to set SNX on a more sustainable long-term footing and decrease the leakage of value from minters, to the minimum required that achieves a stable peg.
 
 
 ## Copyright
