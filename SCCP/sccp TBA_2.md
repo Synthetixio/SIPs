@@ -20,7 +20,7 @@ Analysis of on-chain data showed that front-running opportunities were more acce
 | Synth | Old Fees (bp) | New Fees (bp) |
 |:-----:|:-------------:|:-------------:|
 |  sXAG |       30      |       50      |
-| sFTSE |       30      |       15      |
+| sFTSE |       30      |       50      |
 |  sAUD |       5       |       15      |
 |  sGBP |       5       |       15      |
 |  sCHF |       5       |       15      |
