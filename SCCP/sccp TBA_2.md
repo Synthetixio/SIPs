@@ -3,7 +3,7 @@ sccp: TBA
 title: Increase Fees on Synths
 author: Kaleb Keny (@kaleb-keny)
 status: Proposed
-discussions-to: <Governance-Channel>
+discussions-to: <Governance-Discord>
 created: <2020-07-18>
 ---
 
@@ -21,7 +21,7 @@ Analysis of on-chain data showed that front-running opportunities were more acce
 | Synth | New Fee (bp) |
 |-------|-----------|
 | sXAG  | 50        |
-| sFTSE | 15        |
+| sFTSE | 50        |
 | sAUD  | 15        |
 | sGBP  | 15        |
 | sCHF  | 15        |
