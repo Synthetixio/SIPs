@@ -17,17 +17,13 @@ Decrease SNX incentives on the sUSD Curve pool to 24,000 SNX per week
 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
-The consistent 5% premium on the sUSD peg on Curve calls for taking action as traders feel a disincentive to pay a premium for sUSD. 
-Despite the increase in the price of SNX which is accompanied by minting, which  naturally increases supply of synths, the premium remains, due to two main contributors: 
+The recent premium on the sUSD peg on Curve calls for taking action as traders feel a disincentive to pay it to buy synths. 
+Despite the recent  price run up of SNX, accompanied usually by an increases in supply of synths, the premium has remained, possibly due to two main contributors: 
 1) Farming purposes (CRV, foundation led incentives...)
-2) Increase in exchange volume
+2) Increase in exchange activity
 
-It should be noted that although cutting the c-ratio could help stabilize the peg, for reasons outlined in this [research post](https://research.synthetix.io/t/decreasing-c-ratio-vs-decreasing-snx-rewards/91), cutting rewards first would decrease the leakage of value from minters. In addition,  user growth is being propped up by foundation driven incentives as well as new products being introduced which further the point of reducing leakage and help putting SNX on a more sustainable long-term path.
-
-Other reasons to decrease the incentive, as noted in the previous SCCP:
-1) It is important to not consistently overpay when incentivizing the pools, as it is effectively a transfer of value from snx minters to pool contributors. The incentive should be calibrated depending on the state of the system to pay the least amount of incentive required that achieves the desired effect of peg stability.
-2) The 32k previously proposed was bound to be recalibrated as per the state of the system (peg, supply of synths...).
-
+It should be mentioned that although many have been asking for a c-ratio change to stabilize the peg, the discussion under this [research post](https://research.synthetix.io/t/decreasing-c-ratio-vs-decreasing-snx-rewards/91), outline the pros and cons of doing this.
+The main reasons as to why decrease these incentive, is to put SNX on a more sustainable long-term footing and decrease the leakage of value from minters, to the minimum required that achieves a stable peg.
 
 
 ## Copyright
