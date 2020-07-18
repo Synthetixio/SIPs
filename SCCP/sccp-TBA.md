@@ -1,4 +1,3 @@
-
 ---
 sccp: TBA
 title: Reduce Rewards On Curve - SNX 24,000
