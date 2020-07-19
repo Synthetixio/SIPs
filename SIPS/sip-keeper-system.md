@@ -2,10 +2,10 @@
 sip: 72
 title: Synthetix Keeper System
 status: WIP
-author: Justin Moses (@justinjmoses), Jackson Chan (@jacko125)
+author: Jackson Chan (@jacko125)
 discussions-to: https://discord.gg/kPPKsPb
 
-created: 2020-07-07
+created: 2020-07-14
 ---
 
 ## Simple Summary
@@ -37,6 +37,7 @@ There are a number of core functions on Synthetix protocol that require keepers 
 3. Resolving Binary option markets
 4. Requesting the next price update from Chainlink Oracles
 5. Executing / clearing virtual Synth tokens
+6. Synthetix Futures keepers and liquidation
 
 ### Keeper Incentives
 
@@ -67,7 +68,9 @@ SNX incentive to be paid out proportional to the `trade amount size and exchange
 
 An `exchange` transaction costs ~8x the amount of gas of `settle`, so given that the keeper's reward for settling exchange entries is less than multiples of the gas costs for `settle()`, it would incentivise genuine keepers to settle exchanges.
 
-For exchange entries with $0 fee paid, these will not earn any keeper rewards if settled. In the case where the keeper reward is less than the cost of settling exchange entries (due to gas price costs and congestion) then this could be covered by the protocol which can settle the remaining entries.
+For exchange entries with $0 fee paid, these will not earn any keeper rewards if settled.
+
+In the case where the keeper reward is less than the cost of settling exchange entries (due to gas price costs and congestion) then this could be covered by the protocol which can settle the remaining entries.
 
 Refer to configurable SCCP values for proposed USD amount reward for calling `settle()` function.
 
@@ -98,11 +101,21 @@ Virtual Tokens are a proposed mechanism for representing ownership of a synth ex
 
 Virtual tokens representing a claim on un-settled synths after an exchange would benefit from keepers executing them and claiming them for the end user.
 
-This would improve the UX of users who trade with virtual tokens such that if they hold vDAI after exchanging from `sETH -> sUSD -> vDAI`, that the keeper can execute the `vDAI` exchange after the fee relcamation waiting period into DAI directly. For the user they would not have to worry about finalising the redemption of the `vDAI` into DAI as that will be completed by keepers and the gas paid for.
+This would improve the UX of users who trade with virtual tokens such that if they hold vDAI after exchanging from `sETH -> sUSD -> vDAI`, that the keeper can execute the `vDAI` exchange after the fee relcamation waiting period into DAI directly.
 
-### Reward Claiming
+For the user the UX of finalising the redemption of the `vDAI` into `DAI` as that will be completed by keepers and the gas paid for them. The execution of the exchange would be happen after the oracle update waiting period is expired.
 
-The SNX / token rewards keepers will get for executing each keeper function will be recorded in the `Rewards Keeper contract` as a balance against their address for withdrawal.
+### Synthetix Futures keepers and liquidation
+
+Keepers will play an important role in managing the Synthetix Futures system. The keepers will be incentivised to perform functions as required to maintain trader's positions and fee reclamation settlement for these positions.
+
+**Liquidations**
+
+A `Liquidation Fee` is paid to keepers, from the trader's maintenance margin, as a strong incentive to liquidate positions that have been liquidated. Synthetix futures positions that have gone below their liquidation price / maintenance margin would require keepers to liquidate them in a timely manner.
+
+### Rollup Reward Claiming
+
+The SNX / token rewards keepers get for executing each keeper function will be recorded in the `Rewards Keeper contract` and a balance rolledup against their address for withdrawal.
 
 The total rewards can be withdrawn by the keeper at anytime instead of having the rewards transferred each time to reduce the gas costs of the actual operation. Keepers can also claim and withdraw their reward balance within the same transaction if they wish to utilise the reward as soon as possible.
 
@@ -137,8 +150,8 @@ Each action that a keeper could perform will have a configurable amount of USD v
 | Action | Est Gas Cost | Gas Price | $USD Cost | $USD Reward |
 |--------|--------------|-----------|------------|------------|
 | 1. FreezeSynths for iSynths | 42000| 35 gwei/gas | 0.34545 | 5.0 |
-| 2. Settle Exchange 1x entry | 51860 | 35 gwei/gas | 0.4265485 | 0.80 |
-| 2a. Settle Exchange 2x entries | 98886 | 35 gwei/gas | 0.81333735 | 1.60 |
+| 2. Settle Exchange 1x entry | 51860 | 35 gwei/gas | 0.4265485 | 0.75 |
+| 2a. Settle Exchange 2x entries | 98886 | 35 gwei/gas | 0.81333735 | 1.50 |
 | 3. Requesting next price update from Chainlink | TBA - X of LINK | 35 gwei/gas | N/A | N/A |
 | 4. Binary Options ResolveMarket | 242194 | 35 gwei/gas | 1.99204565 | 4.0 |
 | 5. Binary Options expireMarkets | 114098 | 35 gwei/gas | 0.93845605 | 4.0 |
