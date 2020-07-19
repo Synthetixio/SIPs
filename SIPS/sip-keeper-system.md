@@ -113,6 +113,8 @@ Keepers will play an important role in managing the Synthetix Futures system. Th
 
 A `Liquidation Fee` is paid to keepers, from the trader's maintenance margin, as a strong incentive to liquidate positions that have been liquidated. Synthetix futures positions that have gone below their liquidation price / maintenance margin would require keepers to liquidate them in a timely manner.
 
+The keeper system wouldn't be required to pay a reward to cover the cost of liquidating futures position.
+
 ### Rollup Reward Claiming
 
 The SNX / token rewards keepers get for executing each keeper function will be recorded in the `Rewards Keeper contract` and a balance rolledup against their address for withdrawal.
