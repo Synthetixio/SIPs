@@ -67,13 +67,13 @@ SNX incentive to be paid out proportional to the `trade amount size and exchange
 
 An `exchange` transaction costs ~8x the amount of gas of `settle`, so given that the keeper's reward for settling exchange entries is less than multiples of the gas costs for `settle()`, it would incentivise genuine keepers to settle exchanges.
 
-Refer to configurable SCCP values for proposed USD amount reward for calling `settle()` function.
+For exchange entries with $0 fee paid, these will not earn any keeper rewards if settled. In the case where the keeper reward is less than the cost of settling exchange entries (due to gas price costs and congestion) then this could be covered by the protocol which can settle the remaining entries.
 
-An edge case where the keeper reward is less than the cost of settling exchange entries (due to gas price costs and congestion) then this could be covered by the protocol which can settle the remaining entries.
+Refer to configurable SCCP values for proposed USD amount reward for calling `settle()` function.
 
 ### Freeze Inverse Synths
 
-The reward for freezing inverse synths at their upper or lower limits can be higher than the actual transaction cost to encourage faster execution. This is also because Inverse synths are expected to be frozen less frequently than other common keeper functions such as settling exchange entries.
+The reward for freezing inverse synths at their upper or lower limits can be higher than the actual transaction cost to encourage faster execution. Also, Inverse synths are expected to be frozen less frequently than other common keeper functions such as settling exchange entries.
 
 ### Requesting / pulling next price update from Chainlink Oracles
 
