@@ -115,14 +115,6 @@ A `Liquidation Fee` is paid to keepers, from the trader's maintenance margin, as
 
 The keeper system wouldn't be required to pay a reward to cover the cost of liquidating futures position.
 
-### Rollup Reward Claiming
-
-The SNX / token rewards keepers get for executing each keeper function will be recorded in the `Rewards Keeper contract` and a balance rolledup against their address for withdrawal.
-
-The total rewards can be withdrawn by the keeper at anytime instead of having the rewards transferred each time to reduce the gas costs of the actual operation. Keepers can also claim and withdraw their reward balance within the same transaction if they wish to utilise the reward as soon as possible.
-
-The gas costs of transferring the SNX rewards to the keeper per action can become prohiitively expensive and add to the costs of the keeper system.
-
 # Rationale
 
 
@@ -138,6 +130,14 @@ The Keeper system contract will be upgradeable to allow for fine-tuning and upgr
 This will mean that the accumulated rewards of each keeper will be stored separetlely from the keeper contract and the reward tokens held separately from the Synthetix keeper contract.
 
 Each keeper action will have an `allocation` of SNX / token rewards that will be allocated and topped up by the funding address or contract that provides the incentives for the keepr system. When the allocation for an action is depleted it will no longer be incentivising the particular action.
+
+### Rollup Reward Claiming
+
+The SNX / token rewards keepers get for executing each keeper function will be recorded in the `Rewards Keeper contract` and a balance rolledup against their address for withdrawal.
+
+The total rewards can be withdrawn by the keeper at anytime instead of having the rewards transferred each time to reduce the gas costs of the actual operation. Keepers can also claim and withdraw their reward balance within the same transaction if they wish to utilise the reward as soon as possible.
+
+The gas costs of transferring the SNX rewards to the keeper per action can become prohiitively expensive and add to the costs of the keeper system.
 
 # Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
