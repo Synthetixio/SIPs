@@ -43,7 +43,7 @@ There are a number of core functions on Synthetix protocol that require keepers 
 
 Keepers would be able to consume emitted events and different technologies off-chain to check which keeper functions can be processed and manage the system efficiently.
 
-The keeper contract would be able to allocate an amount of SNX / token rewards cap for each action to prevent abuse of the incentives.
+The keeper contract would be able to allocate an amount of SNX / token rewards for each action to prevent abuse of the incentives.
 
 Rewards paid in SNX will utilise the `exchangeRates` contract to get the USD value of SNX and the rewards paid will be based in USD value. This will ensure that a fair amount of SNX reward is given to keepers to compensate them.
 
