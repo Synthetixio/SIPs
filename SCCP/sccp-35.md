@@ -1,6 +1,6 @@
 ---
-sccp: TBA
-title: Reduce Rewards On Curve - SNX 24,000
+sccp: 35
+title: Reduce Rewards On Curve to 24,000 SNX
 status: Proposed
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: https://discord.gg/B3PtpY
