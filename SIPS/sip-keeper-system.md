@@ -82,7 +82,7 @@ The reward for freezing inverse synths at their upper or lower limits can be hig
 
 When Next Price Fullfilment for fee reclamation is introduced in [SIP-52](./sip-52.md)), it would be possible to have a hybrid price oracle model for Synthetix where Chainlink oracles continue pushing price updates based on 0.5% / 1.0% price deviation metrics and also support a pull mechanism where a keeper requests for a price to be updated (and is paying for the gas costs / LINK tokens).
 
-This would allow price updates to be less than 0.5% / 1.0% for Synthetix exchanges and futures that require faster updates and less slippage if the notional value of settlements / exchanges that are waiting for the next price update can be requested from the Chainlink oracles.
+This would allow price updates to be less than 0.5% / 1.0% for Synthetix exchanges and futures that require faster updates and less slippage when there is a large notional value of settlements / exchanges that are waiting for the next price update, keepers can request an update from the Chainlink oracles.
 
 For example, if there is a $1m exchange into sXAU that is waiting for settlement (next price update), rather than waiting for the next Chainlink price update when a 1.0% deviation is detected, the keeper could request for a price update earlier.
 
