@@ -85,6 +85,7 @@ The intended fix will be as follows:
 * After maturity, report the deposited exercisable value to the losing `BinaryOption` instance as zero when claimable balances are computed.
 * Replace the assert statement that caused the transaction to revert with a more-informative require statement.
 
+
 In consequence of these changes, the claimable option balance of losing bids will fall to zero at maturity, so that only winning options can be claimed. This has no fiscal consequences, as these options pay out nothing when exercised in any case. Options on both sides will still be claimable before maturity.
 
 When this problem was discovered, market creation was immediately disabled on synthetix.exchange. Once the intended functionality is restored, market creation can be reenabled.
@@ -94,9 +95,6 @@ On existing markets, although most users will be unaffected, market creators sho
 * On affected markets that are still bidding: place bids on each side from separate wallets, sufficient to cover any affected balances. These can be exercised once other users have exercised their positions.
 * On affected markets no longer bidding: Once all unaffected options have been exercised, migrate any affected markets to a separate manager contract, so that the funds can be recovered in a controlled way at expiry.
 
-### Test Cases
-
-TBD
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
