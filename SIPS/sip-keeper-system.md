@@ -84,7 +84,7 @@ When Next Price Fullfilment for fee reclamation is introduced in [SIP-52](./sip-
 
 This would allow price updates to be less than 0.5% / 1.0% for Synthetix exchanges and futures that require faster updates and less slippage when there is a large notional value of settlements / exchanges that are waiting for the next price update, keepers can request an update from the Chainlink oracles.
 
-For example, if there is a $1m exchange into sXAU that is waiting for settlement (next price update), rather than waiting for the next Chainlink price update when a 1.0% deviation is detected, the keeper could request for a price update earlier.
+For example, if there is a $`1m exchange into sXAU` that is waiting for settlement (next price update), rather than waiting for the next Chainlink price update when a 1.0% deviation is detected, the keeper could request for a price update earlier.
 
 The current Chainlink oracles work on a 0.5% / 1.0% deviation due to practical limitations such as block time, gas costs of multiple nodes publishing prices on chain and the cost of LINK required to pay for smaller deviations. Covering the costs of pulling a next price update on chain would allow for a quicker price updates. The price update can also be consumed by other consumers of the Chainlink oracles as per normal update.
 
@@ -101,9 +101,9 @@ Virtual Tokens are a proposed mechanism for representing ownership of a synth ex
 
 Virtual tokens representing a claim on un-settled synths after an exchange would benefit from keepers executing them and claiming them for the end user.
 
-This would improve the UX of users who trade with virtual tokens such that if they hold vDAI after exchanging from `sETH -> sUSD -> vDAI`, that the keeper can execute the `vDAI` exchange after the fee relcamation waiting period into DAI directly.
+This would improve the UX of users who trade with virtual tokens such that if they hold vDAI after exchanging from `sETH -> sUSD -> vDAI`, the keeper will execute the `vDAI` exchange after the fee relcamation waiting period into DAI directly.
 
-For the user the UX of finalising the redemption of the `vDAI` into `DAI` as that will be completed by keepers and the gas paid for them. The execution of the exchange would be happen after the oracle update waiting period is expired.
+For the user the UX of finalising the redemption of the `vDAI` into `DAI` would be seamless as it will be completed by keepers and the gas paid for them. The execution of the exchange would be happen after the oracle update waiting period is expired.
 
 ### Synthetix Futures keepers and liquidation
 
