@@ -9,7 +9,7 @@ created: 2020-07-14
 ---
 
 ## Simple Summary
-A generalised Synthetix keeper contract will be able to incentivise certain functions in the Synthetix protocol to be managed in a decentralised manner. The rewards, which can be SNX or other tokens / ether will be held in the keeper contract and the rewards schedule managed by the keeper contract.
+A generalised Synthetix keeper contract will be able to incentivise certain functions in the Synthetix protocol to be managed in a decentralised manner. The rewards, which can be SNX or other tokens / ether will be held in the keeper contract.
 
 ## Abstract
 This SIP proposes a generalised Synthetix keeper contract to reward keeper functions like Exchange settlement, iSynth freezing, Chainlink pull request for prices and Binary option market resolutions.
@@ -19,15 +19,16 @@ The reason for a generalised keeper system / contract is to provide reward incen
 
 As the platform moves towards using decentralized oracle feeds from Chainlink, it will require keepers to manage the freezing and purging of iSynths (as per [SIP-61](./sip-61.md)).
 
-Another important function that requires keepers is to settle fee reclamation Exchange entries if they are not settled during the oridinary exchange process of a user's trading. Unsettled fee reclamations create an in-determinate state on the system's debt pool once they can be settled after the waiting period or next price is available.
+Another important function that requires keepers is to settle fee reclamation for exchange entries if they are not settled during the oridinary exchange process of a user's trading. Unsettled fee reclamations create an indeterminate state on the system's debt pool, once they can be settled after the waiting period or next price is available.
 
-Fee clamation can also be broken in the case that Chainlink's aggregators upgrade their contracts and the `roundID` values are reset, so that the efficient settlement of exchanges ensure that the debt pool is up to date and won't cause
+Fee reclamation can also be broken in the case that Chainlink's aggregators upgrade their contracts and the `roundID` values are reset, so that the efficient settlement of exchanges ensure that the debt pool is up to date and won't cause
 
 The reward incentives should cover the gas costs of executing the transaction in an efficient timely manner, ie using a 'fast' gas price to execute the transaction and be profitable for the keeper to continue operating.
 
 ## Specification
 
-# Overview
+### Overview
+
 There are a number of core functions on Synthetix protocol that require keepers to perform and execute in a decentralised manner. In order to incentivise these keeper functions and cover the gas costs for the on-chain transactions, a generalised keeper rewards contract will provide reward incentives to keepers.
 
 ### Actions
@@ -64,7 +65,7 @@ SNX incentive to be paid out proportional to the `trade amount size and exchange
 | Action   | Gas Cost |
 |----------|----------|
 | Exchange | 405,865  |
-| Settle   | 51860    |
+| Settle   | 5,1860   |
 
 An `exchange` transaction costs ~8x the amount of gas of `settle`, so given that the keeper's reward for settling exchange entries is less than multiples of the gas costs for `settle()`, it would incentivise genuine keepers to settle exchanges.
 
@@ -115,10 +116,10 @@ A `Liquidation Fee` is paid to keepers, from the trader's maintenance margin, as
 
 The keeper system wouldn't be required to pay a reward to cover the cost of liquidating futures position.
 
-# Rationale
+## Rationale
 
 
-# Technical Specification
+## Technical Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
 ### Synthetix Keeper System Contract
@@ -139,7 +140,7 @@ The total rewards can be withdrawn by the keeper at anytime instead of having th
 
 The gas costs of transferring the SNX rewards to the keeper per action can become prohiitively expensive and add to the costs of the keeper system.
 
-# Test Cases
+## Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 Test cases for an implementation are mandatory for SIPs but can be included with the implementation.
 
@@ -151,12 +152,12 @@ Each action that a keeper could perform will have a configurable amount of USD v
 
 | Action | Est Gas Cost | Gas Price | $USD Cost | $USD Reward |
 |--------|--------------|-----------|------------|------------|
-| 1. FreezeSynths for iSynths | 42000| 35 gwei/gas | 0.34545 | 5.0 |
-| 2. Settle Exchange 1x entry | 51860 | 35 gwei/gas | 0.4265485 | 0.75 |
-| 2a. Settle Exchange 2x entries | 98886 | 35 gwei/gas | 0.81333735 | 1.50 |
-| 3. Requesting next price update from Chainlink | TBA - X of LINK | 35 gwei/gas | N/A | N/A |
-| 4. Binary Options ResolveMarket | 242194 | 35 gwei/gas | 1.99204565 | 4.0 |
-| 5. Binary Options expireMarkets | 114098 | 35 gwei/gas | 0.93845605 | 4.0 |
+| 1. FreezeSynths for iSynths | 42,000| 35 gwei/gas | 0.34545 | 5.0 |
+| 2. Settle Exchange 1x entry | 51,860 | 35 gwei/gas | 0.4265485 | 0.75 |
+| 2a. Settle Exchange 2x entries | 98,886 | 35 gwei/gas | 0.81333735 | 1.50 |
+| 3. Requesting next price update from Chainlink | TBA - LINK | 35 gwei/gas | N/A | N/A |
+| 4. Binary Options ResolveMarket | 242,194 | 35 gwei/gas | 1.99204565 | 4.0 |
+| 5. Binary Options expireMarkets | 11,4098 | 35 gwei/gas | 0.93845605 | 4.0 |
 | 6. Executing virtual Synth tokens | TBA | 35 gwei/gas | TBA | TBA |
 
 ## Copyright
