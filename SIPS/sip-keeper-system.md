@@ -23,7 +23,7 @@ Another important function that requires keepers is to settle fee reclamation fo
 
 Fee reclamation can also be broken in the case that Chainlink's aggregators upgrade their contracts and the `roundID` values are reset, so that the efficient settlement of exchanges ensure that the debt pool is up to date and won't cause
 
-The reward incentives should cover the gas costs of executing the transaction in an efficient timely manner, ie using a 'fast' gas price to execute the transaction and be profitable for the keeper to continue operating.
+The reward incentives should cover the gas costs of executing the transaction in an efficient timely manner, i.e using a 'fast' gas price to execute the transaction and be profitable for the keeper to continue operating.
 
 ## Specification
 
