@@ -65,7 +65,7 @@ SNX incentive to be paid out proportional to the `trade amount size and exchange
 | Action   | Gas Cost |
 |----------|----------|
 | Exchange | 405,865  |
-| Settle   | 5,1860   |
+| Settle   | 51,860   |
 
 An `exchange` transaction costs ~8x the amount of gas of `settle`, so given that the keeper's reward for settling exchange entries is less than multiples of the gas costs for `settle()`, it would incentivise genuine keepers to settle exchanges.
 
@@ -118,19 +118,20 @@ The keeper system wouldn't be required to pay a reward to cover the cost of liqu
 
 ## Rationale
 
+The rationale for a Central Keeper system contract is so that multiple contracts within the Synthetix platform requiring keepers can delegate the allocation of rewards and tracking to a single contract. Keepers also benefit from being able to track the reward payable from a single contract instead of checking all the Synthetix platform's contract for keeper functions.
+
+The Keeper system contract will be upgradeable to allow for fine-tuning and upgrading how the rewards will calculated for each keeper function. To enable this, the accumulated rewards of each keeper will be stored separetlely in eternal storage from the keeper contract implementation and the reward tokens held separately from the Synthetix keeper contract.
+
+Each keeper action will have an `allocation` of SNX / token rewards that will be allocated and topped up by the funding address or contract that provides the incentives for the keepr system. When the allocation for an action is depleted it will no longer be incentivising the particular action.
 
 ## Technical Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
 ### Synthetix Keeper System Contract
 
-List of Synthetix internal contracts have permission to notify the Keeper Incentives contract to record the keeper's address and what the performed function was to calculate and record the correct amount of token rewards.
-
 The Keeper system contract will be upgradeable to allow for fine-tuning and upgrading how the rewards will calculated for each keeper function.
 
-This will mean that the accumulated rewards of each keeper will be stored separetlely from the keeper contract and the reward tokens held separately from the Synthetix keeper contract.
-
-Each keeper action will have an `allocation` of SNX / token rewards that will be allocated and topped up by the funding address or contract that provides the incentives for the keepr system. When the allocation for an action is depleted it will no longer be incentivising the particular action.
+A list of Synthetix internal contracts will have permission to notify the Keeper Incentives contract to record the keeper's address and what the performed function was to calculate and record the correct amount of token rewards.
 
 ### Rollup Reward Claiming
 
