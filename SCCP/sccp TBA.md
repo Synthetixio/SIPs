@@ -3,7 +3,7 @@ sccp: TBA
 title: Increase Fees on Stock Synths 50 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Proposed
-discussions-to: [research post](https://research.synthetix.io/t/increase-fees-on-stock-synths-50-bp/103)
+discussions-to: <https://research.synthetix.io/t/increase-fees-on-stock-synths-50-bp/103>
 created: <2020-07-18>
 ---
 
