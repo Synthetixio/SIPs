@@ -153,7 +153,7 @@ Each action that a keeper could perform will have a configurable amount of USD v
 
 | Action | Est Gas Cost | Gas Price | $USD Cost | $USD Reward |
 |--------|--------------|-----------|------------|------------|
-| 1. FreezeSynths for iSynths | 42,000| 35 gwei/gas | 0.34545 | 5.0 |
+| 1. FreezeSynths for iSynths | 42,000| 35 gwei/gas | 0.34545 | 50.0 |
 | 2. Settle Exchange 1x entry | 51,860 | 35 gwei/gas | 0.4265485 | 0.75 |
 | 2a. Settle Exchange 2x entries | 98,886 | 35 gwei/gas | 0.81333735 | 1.50 |
 | 3. Requesting next price update from Chainlink | TBA - LINK | 35 gwei/gas | N/A | N/A |
