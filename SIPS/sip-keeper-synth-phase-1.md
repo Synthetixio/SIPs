@@ -35,7 +35,7 @@ For Phase 1, the address that calls FreezeSynth successfully will be emitted as 
 # Rationale
 Moving to Chainlink oracles means that iSynths prices won't be frozen on `ExchangeRates.updateRates()` and would require a keeper to freeze them when the price is at the upper or lower bounds.
 
-Until the generalised keeper system is implemented, when a keeper calls `ExchangeRates.freezeInverse()` the `msg.sender` will be emitted for manual payment of the reward. This should be updated when the generalised keeper system is implemented.
+Until the generalised keeper system is implemented, when a keeper calls `ExchangeRates.freezeSynth()` the `msg.sender` will be emitted for manual payment of the reward. This should be updated when the generalised keeper system is implemented.
 
 # Technical Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
@@ -51,11 +51,11 @@ interface IExchangeRates {
     function isInverseFrozen(bytes32 currencKey) external view returns (bool);
 
     // Mutative Functions
-    function freezeInverse(bytes32 currencyKey) external;
+    function freezeSynth(bytes32 currencyKey) external;
 }
 ```
 
-`freezeInverse()` will check the current exchange rate for the Synth being frozen from the `ExchangeRates` contract (whether it is from Chainlink oracles or being updated from Synthetix oracle) to determine if the inverse synth is able to be frozen.
+`freezeSynth()` will check the current exchange rate for the Synth being frozen from the `ExchangeRates` contract (whether it is from Chainlink oracles or being updated from Synthetix oracle) to determine if the inverse synth is able to be frozen.
 
 # Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
@@ -63,14 +63,14 @@ Test cases for an implementation are mandatory for SIPs but can be included with
 
 Given iETH on `ExchangeRates` is above the upper limit
 
-- When a user calls `ExchangeRates.freezeInverse(iETH)`
+- When a user calls `ExchangeRates.freezeSynth(iETH)`
     - iETH is frozen at the upper limit
     - `msg.sender` is emitted as the address who froze the iSynth
     - The `InversePricing.frozen` is set to true
 
 Given iETH on 'ExchangeRates' is below the upper limit and above the lower limit
 
-- When a user calls `ExchangeRates.freezeInverse(iETH)`
+- When a user calls `ExchangeRates.freezeSynth(iETH)`
     - It should revert
 
 ## Configurable Values (Via SCCP)
