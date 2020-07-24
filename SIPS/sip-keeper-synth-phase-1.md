@@ -28,31 +28,52 @@ Phase 1 of the Keeper synths will be creating a public function to freezeSynths.
 
 FreezeSynth - Currently the oracle is responsible for freezing the iSynth when the price limits are hit, as an aside this is also problematic for our transition to chainlink as the CL oracles do not have the ability to call FreezeSynth based on a price limit being hit. Rather than relying on a centralised service to freeze iSynths we will instead make this a public function any address can call. This function will require that the current price of the underlying Synth is outside the defined price bands. If it is the synth will be frozen, if not the call will fail.
 
-The fee in SNX for freezing an iSynth will initially be set to 25 SNX. This fee is deliberately set high to ensure there are sufficient incentives to ensure competition to quickly freeze iSynths. For Phase 1, the address that calls FreezeSynth successfully will be emitted as part of the `InversePriceFrozen()` event.
+The fee in SNX for freezing an iSynth will initially be set to 20 SNX. This fee is deliberately set high to ensure there are sufficient incentives to ensure competition to quickly freeze iSynths.
 
-The protocol DAO will reimburse the address that
+For Phase 1, the address that calls FreezeSynth successfully will be emitted as part of the `InversePriceFrozen()` event. The protocol DAO will reimburse the address that calls the function manually.
 
 # Rationale
-The first attack is possible because you can currently trade into a frozen synth. An attacker could repeatedly trade into a frozen iSynth and purge themselves providing the payment was higher than the gas cost to purge the address. The solution to this to introduce a check on exchange to disallow trading into a frozen iSynth.
+Moving to Chainlink oracles means that iSynths prices won't be frozen on `ExchangeRates.updateRates()` and would require a keeper to freeze them when the price is at the upper or lower bounds.
 
-The second attack relies on exchanging into iSynths then splitting the value across a number of accounts and then purging them to capture the SNX incentive. If there is no limit on the size of an address that can be purged and the SNX incentive was sufficiently large it could be profitable to exchange into thousands of accounts with dust as long as the marginal cost of the roundtrip exchange fees and gas costs of trade into and purge out of each wallet was less than the incentive. The current MinPurgeAmount is configurable (currently $0.01). It could still be profitable to split into addresses with values above $0.01 however this requires more funds at risk as another keeper could capture the incentive.
+Until the generalised keeper system is implemented, when a keeper calls `ExchangeRates.freezeInverse()` the `msg.sender` will be emitted for manual payment of the reward. This should be updated when the generalised keeper system is implemented.
 
 # Technical Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.
 
+**Interface**
+
+```
+pragma solidity >=0.4.24;
+
+interface IExchangeRates {
+    // Views
+    function isInverseFrozen(bytes32 currencKey) external view returns (bool);
+
+    // Mutative Functions
+    function freezeInverse(bytes32 currencyKey) external;
+}
+```
+
+`freezeInverse()` will check the current exchange rate for the Synth being frozen from the `ExchangeRates` contract (whether it is from Chainlink oracles or being updated from Synthetix oracle) to determine if the inverse synth is able to be frozen.
+
 # Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 Test cases for an implementation are mandatory for SIPs but can be included with the implementation.
 
+Given iETH on `ExchangeRates` is above the upper limit
+
+- When a user calls `ExchangeRates.freezeInverse(iETH)`
+    - iETH is frozen at the upper limit
+    - `msg.sender` is emitted as the address who froze the iSynth
+    - The `InversePricing.frozen` is set to true
+
+Given iETH on 'ExchangeRates' is below the upper limit and above the lower limit
+
+- When a user calls `ExchangeRates.freezeInverse(iETH)`
+    - It should revert
+
 ## Configurable Values (Via SCCP)
-MinBalance - This is the minimum value measured in sUSD that can be purged (1c)
-
-MaxValue - This is the maximum total value across all unpurged holders before resetPricing can be called ($10)
-
-FreezeIncentive - The amount of SNX paid to the caller of FreezeSynth
-
-PurgeIncentive - The amount of SNX paid to the caller of purge cycle
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
