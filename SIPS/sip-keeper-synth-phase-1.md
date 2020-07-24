@@ -35,7 +35,7 @@ For Phase 1, the address that calls FreezeSynth successfully will be emitted as 
 # Rationale
 Moving to Chainlink oracles means that iSynths prices won't be frozen on `ExchangeRates.updateRates()` and would require a keeper to freeze them when the price is at the upper or lower bounds.
 
-Until the generalised keeper system is implemented, when a keeper calls `ExchangeRates.freezeSynth()` the `msg.sender` will be emitted for manual payment of the reward. This should be updated when the generalised keeper system is implemented.
+Until the generalised keeper system is implemented, when a keeper calls `ExchangeRates.freezeSynth()`, if the iSynth is frozen, the `msg.sender` will be emitted for manual payment of the reward. This should be updated when the generalised keeper system is implemented.
 
 # Technical Specification
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
