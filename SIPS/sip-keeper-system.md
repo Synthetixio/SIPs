@@ -21,7 +21,7 @@ As the platform moves towards using decentralized oracle feeds from Chainlink, i
 
 Another important function that requires keepers is to settle fee reclamation for exchange entries if they are not settled during the oridinary exchange process of a user's trading. Unsettled fee reclamations create an indeterminate state on the system's debt pool, once they can be settled after the waiting period or next price is available.
 
-Fee reclamation can also be broken in the case that Chainlink's aggregators upgrade their contracts and the `roundID` values are reset, so that the efficient settlement of exchanges ensure that the debt pool is up to date and won't cause
+Fee reclamation can also be broken in the case that Chainlink's aggregators upgrade their contracts and the `roundID` values are reset, so that the efficient settlement of exchanges ensure that the debt pool is up to date and won't cause user's to have frozen exchanges (if settlement is broken).
 
 The reward incentives should cover the gas costs of executing the transaction in an efficient timely manner, i.e using a 'fast' gas price to execute the transaction and be profitable for the keeper to continue operating.
 
