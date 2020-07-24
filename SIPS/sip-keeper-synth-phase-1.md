@@ -68,7 +68,7 @@ Given iETH on `ExchangeRates` is above the upper limit
     - `msg.sender` is emitted as the address who froze the iSynth
     - The `InversePricing.frozen` is set to true
 
-Given iETH on 'ExchangeRates' is below the upper limit and above the lower limit
+Given iETH on `ExchangeRates` is below the upper limit and above the lower limit
 
 - When a user calls `ExchangeRates.freezeSynth(iETH)`
     - It should revert
