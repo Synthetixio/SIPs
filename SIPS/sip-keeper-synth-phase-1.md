@@ -52,10 +52,21 @@ interface IExchangeRates {
 
     // Mutative Functions
     function freezeSynth(bytes32 currencyKey) external;
+
+    // Struct
+    struct InversePricing {
+        uint entryPoint;
+        uint upperLimit;
+        uint lowerLimit;
+        bool frozenUpperLimit;
+        bool frozenLowerLimit;
+    }
 }
 ```
 
 `freezeSynth()` will check the current exchange rate for the Synth being frozen from the `ExchangeRates` contract (whether it is from Chainlink oracles or being updated from Synthetix oracle) to determine if the inverse synth is able to be frozen.
+
+InversePricing will require two new fields, `frozenUpperLimit` and `frozenLowerLimit` to record at which bound the inverse synth was frozen at.
 
 # Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
@@ -66,12 +77,20 @@ Given iETH on `ExchangeRates` is above the upper limit
 - When a user calls `ExchangeRates.freezeSynth(iETH)`
     - iETH is frozen at the upper limit
     - `msg.sender` is emitted as the address who froze the iSynth
-    - The `InversePricing.frozen` is set to true
+    - The `InversePricing.frozenUpperLimit` is set to true
+
+
+Given iETH on `ExchangeRates` is below the lower limit
+
+- When a user calls `ExchangeRates.freezeSynth(iETH)`
+    - iETH is frozen at the lower limit
+    - `msg.sender` is emitted as the address who froze the iSynth
+    - The `InversePricing.frozenLowerLimit` is set to true
 
 Given iETH on `ExchangeRates` is below the upper limit and above the lower limit
 
 - When a user calls `ExchangeRates.freezeSynth(iETH)`
-    - It should revert
+    - It should revert.
 
 ## Configurable Values (Via SCCP)
 
