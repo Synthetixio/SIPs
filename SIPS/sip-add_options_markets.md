@@ -3,7 +3,7 @@ sip: <to be assigned>
 title: Add More Assets to the Binary Options Markets
 status: WIP
 author: psybull (https://github.com/psybull)
-discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here> 
+discussions-to: https://research.synthetix.io/t/sip-add-more-binary-options-markets/116
 
 created: 2020-07-25
 requires (*optional): N/A
