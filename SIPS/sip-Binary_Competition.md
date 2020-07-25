@@ -26,7 +26,7 @@ Sometimes we might not want to bet on a strike price but rather that one coin wo
 E.g. We could bet that SNX will outperform LINK on 01.01.2021.  
 
 While for some coins it makes sense to compare them 1 to 1, for others that would be meaningless due to different supply, market cap, etc...  
-That's why we should include a weight factor on a market creation. This actually allows as to replace the strike price in sUSD with options such as: Will 30 SNX be worth more than 1 ETH at 09.01.2021?
+That's why we should include a weight factor on a market creation. This actually allows as to replace the strike price in sUSD with options such as: Will 30 SNX be worth more than 1 ETH at 09.01.2021, thus actually allowing indirect bet on SNX price in ETH.
 
 ## Specification
 <!--The specification should describe the syntax and semantics of any new feature, there are five sections
