@@ -44,7 +44,11 @@ By expanding the asset list available to the Binary Options market creators in t
 
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
-The general rationale is that by adding assets in some key sectors, we can target underserved demand in the trading market.  The rationale behind specific sectors is as follows:
+The general rationale is that by adding assets in some key sectors, we can target underserved demand in the trading market.  
+
+One overarching point to add, is that while, due to the nature of the system, SNX mintrs are not at risk, the markets themselves are still easily manipulated, and thus the Binary Options participants will be at risk of fraud.  This is not easily mitigated, so as a precautionary measure I would recommend that total market sizes be capped at some fraction of overall asset marketcap or volume metric, but without deeper analysis I would say no more than 25,000 sUSD should be able to be bet on any individual market listed here, until such a time as a more objective cap can be determined.
+
+The rationale behind specific sectors is as follows:
 
 ### DeFi Farming/Governance
 
@@ -67,6 +71,8 @@ Suggested assets in this class: [ AMPL ]
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 Same technical spec as added for the COMP/LEND/KNC/REN addition, but for AKRO/AMPL/BAL/BZRX/MTA/RUNE/SWTH/YFI (couldnt find SIP for this to emulate, though)
+
+As an added technical requirement, capping all markets listed here at 25,000 sUSD total value.
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
