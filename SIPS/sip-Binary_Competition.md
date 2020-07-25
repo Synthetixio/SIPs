@@ -14,7 +14,7 @@ requires (*optional): <SIP number(s)>
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
-So far we can only created and bid markets betting on a strike price at a certain date.  
+So far we could only create and bid on markets betting on a strike price at a certain date.  
 It would be useful and attractive to bet one coin against another from the offered list of coins.
 
 ## Abstract
@@ -22,8 +22,10 @@ It would be useful and attractive to bet one coin against another from the offer
 
 ## Motivation
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
-Sometimes we might not want to bet on a strike price but rather that one coin would outperform another 1 to 1.  
-E.g. We could bet that SNX will outperform LINK on 01.01.2021.
+Sometimes we might not want to bet on a strike price but rather that one coin would outperform another.  
+E.g. We could bet that SNX will outperform LINK on 01.01.2021.  
+This SIP assumes the simplest implementation of betting the coins 1 to 1, e.g. 1 SNX against 1 LINK.  
+Section [SCCP](#configurable-values-via-sccp) elaborates on including weight factors and market caps as options for comparison.
 
 ## Specification
 <!--The specification should describe the syntax and semantics of any new feature, there are five sections
@@ -36,9 +38,12 @@ E.g. We could bet that SNX will outperform LINK on 01.01.2021.
 
 ### Overview
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
-The sip would allow users to bit who dont want to speculate on exact price, but rather on coin performance one against another.
+The sip would allow users to bet that one coin will outperform the other at a certain date without thinking about strike prices.
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
+As betting only on a strike price has its limitation, because the whole crypto market is still drived by BTC and ETH marketcaps, it would be useful to let bidders bet on how one coin will perform against another.  
+With this someone can simultaneously long one coin while shorting the other.  
+
 Some popular choices were already thrown in discord, e.g. Will YFI outperform BTC 1 to 1?
 Of course YFI would have to be added as an BO options first. New assets for Binary Options were proposed in a SIP by @PSYBULL
 
