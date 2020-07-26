@@ -14,20 +14,17 @@ requires (*optional): <SIP number(s)>
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
-So far binary market creators and bidders had to rely and strike price in sUSD to create their market or place their bids.  
-By allowing markets to be created with two coins, betting one against the other, we increase the number of options for creators, and make markets more attractive to a wider range of bidders. 
+Up to now, Binary market Creators and Bidders had to rely on the strike price in sUSD to create their market or place their bids.  
+By allowing markets to be created with two coins, betting one against the other, we increase the number of options for creators, and make markets more attractive to a wider range of bidders.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-
+Allow for a new type of Binary Option to be created where the performance of two crypto assets are tracked over a period of time. The winning Bet is the asset that performed best.
 ## Motivation
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
-Sometimes we might not want to bet on a strike price but rather that one coin would outperform another.  
-E.g. We could bet that SNX will outperform LINK on 01.01.2021.  
-
-While for some coins it makes sense to compare them 1 to 1, for others that would be meaningless due to different supply, market cap, etc...  
-That's why we should include a weight factor on a market creation. This actually allows as to replace the strike price in sUSD with options such as: Will 30 SNX be worth more than 1 ETH at 09.01.2021, thus actually allowing indirect bet on SNX price in ETH.
-
+Betting on a specific price outcome could stop people participating who are overall, more risk averse. However the general performance between two crypto assets is more of a personal belief in their (bags) project and related fundamentals and “pumpanomics” and could get a lot more people to participate.
+And sometimes people just don’t want to bet on a strike price but rather that one coin would outperform another.  
+E.g. We could bet that SNX will outperform LINK on 01.01.2021.   
 ## Specification
 <!--The specification should describe the syntax and semantics of any new feature, there are five sections
 1. Overview
@@ -36,7 +33,7 @@ That's why we should include a weight factor on a market creation. This actually
 4. Test Cases
 5. Configurable Values
 -->
-
+The sip would allow users to bet that one coin/token will outperform the other at a certain date without thinking about strike prices.
 ### Overview
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 The sip would allow users to bet that one coin will outperform the other at a certain date without thinking about strike prices.
@@ -44,9 +41,7 @@ The sip would allow users to bet that one coin will outperform the other at a ce
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 As betting only on a strike price has its limitation, because the whole crypto market is still driven by BTC and ETH marketcaps, it would be useful to let bidders bet on how one coin will perform against another.  
 With this someone can simultaneously long one coin while shorting the other.  
-
-Some popular choices were already thrown in discord, e.g. Will YFI outperform BTC 1 to 1?
-Of course YFI would have to be added as an BO options first. New assets for Binary Options were proposed in a SIP by @PSYBULL
+Some popular choices were already thrown in discord, e.g. Will YFI outperform BTC 1 to 1? Of course YFI would have to be added as an BO option first. New assets for Binary Options were proposed in a SIP by @PSYBULL
 
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
@@ -67,8 +62,6 @@ BTC>YFI @01.09.2020.
 As comparing coins 1 to 1 may be limited to only coins with similar values, we could allow a much broader usage by included a weight factor.    
 This means the market created would need to specify weight for one coin, e.g.:  
 5*ETH>BTC@01.01.2021.
-
-One more option is to not compare value of the coins 1 to 1, but allow their marketcaps to be compared, either 1 to 1, or with weight factors as explained in the aforementioned example.  
 
 
 ## Copyright
