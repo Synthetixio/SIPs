@@ -44,12 +44,13 @@ It would be the responsibility of the Market creator to create a question that w
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 Allow a free text question to be entered on market creation. Bidding date and Maturity date mechanisms are kept.
 
-#### Resolving free text markets
-As this would not be possible to do using price feeds and the curent mechanism, the proposed solution is to formulate a governance for resolving custom questions.  
+#### Resolving custom markets
+As resolving such custom markets is not feasible using price feeds and the curent mechanism, the proposed solution is to formulate a governance for resolving custom questions.  
 * We would define 10 addresses allowed to resolve a binary market with a custom question.  
 * The votes can be cast only after maturity date  
 * if 7 governance votes have been cast for a single outcome, the market is resolved
-* The addresses should be those of the core team or volunteering guardians 
+* The addresses should be those of the core team and volunteering guardians
+ 
  
 #### Dealing with cases where the market can not be resolved
 Some question may depend on unpredictable circumstance, such as elections being cancelled due to Covid situation. 
