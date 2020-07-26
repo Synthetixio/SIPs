@@ -54,7 +54,7 @@ Set ‘Start’ date = the “Bidding Date End”
 Set ‘Maturity’ date  
 
 On ‘maturity’ the % growth in USD will be calculated for each asset and compared. If the ‘start’ date price is available to be retrieved at this point, then there is no need to capture and store it on ‘start’ date.   
-* In the future this could be enhanced to track growth against $BTC or $ETH instead of only USD.  
+*In the future this could be enhanced to track growth against $BTC or $ETH instead of only USD.  
 
 ### Model 2 - Weighted coin values
 This model compares factored values of coins at the maturity date.  
