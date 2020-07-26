@@ -57,10 +57,10 @@ On ‘maturity’ the % growth in USD will be calculated for each asset and comp
 * In the future this could be enhanced to track growth against $BTC or $ETH instead of only USD.  
 
 ### Model 2 - Weighted coin values
-This model compare factored values of coins.  
-The market creator selects two coins and the multiplier for each coin. There are no other changed to the mechanism (bidding date, maturity date).  
-Default multiplier is one, e.g. SNX>LINK@01.01.2021. -> a single SNX coin will be worth more than a single LINK coin at the maturity date.  
-A case with multiplier could be: 30xSNX>ETH@01.01.2021. -> SNX coin value multiplied by 30 will be worth more than 1 EHT at the maturity date.
+This model compares factored values of coins at the maturity date.  
+The market creator selects two coins and the multiplier for each coin. There are no other changes to the current mechanism (bidding date, maturity date).  
+Default multiplier is **one**, e.g. **SNX>LINK@01.01.2021.** -> a single SNX coin will be worth more than a single LINK coin at the maturity date.  
+A case with multiplier set could be: **30xSNX>ETH@01.01.2021.** -> SNX coin value multiplied by 30 will be worth more than 1 EHT at the maturity date.
 
 For both cases UI should be updated to show the both coins on the chart in the BO detailed view.  
 
