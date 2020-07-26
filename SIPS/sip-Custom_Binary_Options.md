@@ -15,7 +15,7 @@ requires (*optional): <SIP number(s)>
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 So far Binary Markets can only be created on asset strike prices on a certain date.  
-It would be very attractive to be able to create custom markets, such as: "Will ETH 2.0. be releases in 2020?"
+It would be very attractive to be able to create custom markets, such as: "Will ETH 2.0. be released in 2020?"
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 Allow for Markets to be created with a custom binary question.  
@@ -55,6 +55,12 @@ As this would not be possible to do using price feeds and the curent mechanism, 
 Some question may depend on unpredictable circumstance, such as elections being cancelled due to Covid situation. 
 To deal with such cases these markets should have a contract function allowing the governance addresses to cancel it.  
 The cancelation would mean all bidders can reclaim their bids (get refunds), minus the gas costs.
+
+In summary, it means every custom market will have three potential outcomes:
+* Yes
+* No
+* Cancelled  
+The same rule for number of governance votes apply to any of those: Minimum 7 votes needed.
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
