@@ -45,24 +45,36 @@ Some popular choices were already thrown in discord, e.g. Will YFI outperform BT
 
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
-The implementation should not require much overhead as the price feeds are already there. Changes to the contracts are intended to be minimal.  
-UI should support users to choose whether they want an asset to bet against a strike priced or against another asset with a provided weight factor, defaulting to 1.  
-UI charts would need to be adapted to show both coins in the market.
+We are proposing 2 models here, which either one or both could be implemented with this specific “Performance” based Binary Option.  
+ 
+### Model 1 - Direct Percentage Growth
+This model will track the ‘direct’ percentage growth of two competing crypto assets over a period of time. At the end of the period the asset with the largest % growth in USD* value will be the “winner”. The mechanism will be as follows (within the current BO framework):
+Select the 2 competing assets (Select from available list of assets i.e. $BTC, $ETH or $YFI etc)
+Set ‘Start’ date = the “Bidding Date End”
+Set ‘Maturity’ date  
+
+On ‘maturity’ the % growth in USD will be calculated for each asset and compared. If the ‘start’ date price is available to be retrieved at this point, then there is no need to capture and store it on ‘start’ date.   
+* In the future this could be enhanced to track growth against $BTC or $ETH instead of only USD.  
+
+### Model 2 - Weighted coin values
+This model compare factored values of coins.  
+The market creator selects two coins and the multiplier for each coin. There are no other changed to the mechanism (bidding date, maturity date).  
+Default multiplier is one, e.g. SNX>LINK@01.01.2021. -> a single SNX coin will be worth more than a single LINK coin at the maturity date.  
+A case with multiplier could be: 30xSNX>ETH@01.01.2021. -> SNX coin value multiplied by 30 will be worth more than 1 EHT at the maturity date.
+
+For both cases UI should be updated to show the both coins on the chart in the BO detailed view.  
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
-Some ideas would be:  
-SNX>LINK @01.01.2021.  
-BTC>YFI @01.09.2020.   
-2xCOMP>ETH @01.10.2020.   
-5xLEND>SNX @01.01.2021.
+* Model 1  
+    * SNX % growth will outperform ETH % growth from 1.10.2020. till 1.11.2020.
+    
+* Model 2
+    * SNX>LINK@01.01.2021.->   a single SNX coin will be worth more than a single LINK coin at the maturity date.
+    * 30xSNX>ETH@01.01.2021. -> SNX coin value multiplied by 30 will be worth more than 1 EHT at the maturity date.
 
 ### Configurable Values (Via SCCP)
 <!--Please list all values configurable via SCCP under this implementation.-->
-As comparing coins 1 to 1 may be limited to only coins with similar values, we could allow a much broader usage by included a weight factor.    
-This means the market created would need to specify weight for one coin, e.g.:  
-5*ETH>BTC@01.01.2021.
-
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
