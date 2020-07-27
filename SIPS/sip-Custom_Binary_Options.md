@@ -2,7 +2,7 @@
 sip: <to be assigned>
 title: Binary Markets with custom questions
 status: WIP
-author: @Danijel
+author: @Danijel, @farmwell
 discussions-to: https://research.synthetix.io/t/sip-custom-binary-options/118
 
 created: 2020-07-25
