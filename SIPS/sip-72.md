@@ -1,5 +1,5 @@
 ---
-sip: <to be assigned>
+sip: 72
 title: Add More Assets to the Binary Options Markets
 status: WIP
 author: psybull (https://github.com/psybull)
