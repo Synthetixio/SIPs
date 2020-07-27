@@ -1,8 +1,8 @@
 ---
-sip: <to be assigned>
+sip: 73
 title: Binary Market Competition
 status: WIP
-author: @CryptoToit (FarmerT), @Danijel
+author: CryptoToit (@FarmerT), Danijel (@Danijel)
 discussions-to: https://discord.gg/gYqvG7
 
 created: 2020-07-25
