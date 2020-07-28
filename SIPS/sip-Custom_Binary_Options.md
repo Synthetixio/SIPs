@@ -24,6 +24,12 @@ Introduce a mechanism to resolve such markets.
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 Binary Markets are risk free profit for stakers. With that in mind we want to attract as many bidders as possible.  
 Bidding on asset prices has attracted a good portion of bidders, but having the possibility to bet on anything you can think of will surely attract many more bidders.
+* Expand product offering in prediction markets
+* Demonstrate reach of Synthetix's decentralized liquidity protocol
+* Zero-downside channel for generating protocol revenue
+* Gauge general market interest in Custom Binary Options
+* Quick win: Coding logic to build Custom Binary Options is not a huge lift
+* Cheap Convexity for Synthetix: fixed initial premium to launch product with uncapped upside
 ## Specification
 <!--The specification should describe the syntax and semantics of any new feature, there are five sections
 1. Overview
@@ -65,8 +71,9 @@ The same rule for number of governance votes apply to any of those: Minimum 7 vo
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
-* Will ETH 2.0. be released 2020.?
+* Will ETH 2.0. be released 2020?
 * Will Trump win the next presidential elections?
+ * The U.S. General Election Option resolves Yes if and only if Republican Donald Trump wins the 03 November 2020 Election, as measured by winning 270 or more Electoral College votes. This can be determined by general consensus as soon as it is available. The U.S. General Election resolves No if and only if Democrat Joe Biden wins 270 or more Electoral College Votes on the 03 November 2020 election. Any other outcomes will resolve via cancellation.
 
 ### Configurable Values (Via SCCP)
 <!--Please list all values configurable via SCCP under this implementation.-->
