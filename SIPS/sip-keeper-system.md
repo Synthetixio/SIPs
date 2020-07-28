@@ -39,6 +39,7 @@ There are a number of core functions on Synthetix protocol that require keepers 
 4. Requesting the next price update from Chainlink Oracles
 5. Executing / clearing virtual Synth tokens
 6. Synthetix Futures keepers and liquidation
+7. Feepool period closure
 
 ### Keeper Incentives
 
@@ -75,6 +76,10 @@ https://research.synthetix.io/t/sip-keeper-function-executing-and-claiming-virtu
 ### Synthetix Futures keepers and liquidation
 
 https://research.synthetix.io/t/sip-keeper-function-synthetix-futures-keepers-and-liquidation/113
+
+### Feepool period closure
+
+https://research.synthetix.io/t/sip-keeper-function-feepool-close-current-fee-period/122
 
 ## Rationale
 
