@@ -2,7 +2,7 @@
 sip: 68
 title: Minor enhancements to StakingRewards.sol
 status: Proposed
-author: Clinton Ennis (@hav-noms)
+author: Clinton Ennis (@hav-noms), Anton Jurisevic (@zyzek)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
 created: 2020-07-06
@@ -26,6 +26,7 @@ Enhancements include:
 - Ability to update the rewards duration
 - Remove the redundant `LPTokenWrapper`
 - Refactor to set rewards and staking tokens via the constructor on deployment
+- Fix a potential overflow bug in the reward notification function
 
 ## Motivation
 
@@ -52,16 +53,90 @@ The `LPTokenWrapper` added additional complexity to the code without adding any 
 
 The staking and rewards tokens were hard coded addresses in each contract. Now that there are many of these on MAINNET and deploying almost 1 a week, instead of having to edit the code directly it is prefered to send the staking and rewards tokens as arguments to the constructor on contract creation.
 
+### Potential overflow bug fix
+
+#### Summary
+
+There is a multiplication overflow that can occur inside the rewardPerToken function, on [line 66](https://github.com/Synthetixio/synthetix/blob/c4dd4413cbbd3c0b40dfee2f9119af2dcb6a82e5/contracts/StakingRewards.sol#L66):
+
+```lastTimeRewardApplicable().sub(lastUpdateTime).mul(rewardRate).mul(1e18).div(_totalSupply)```
+    
+An overflow occurs whenever `rewardRate >= 2^256 / (10^18 * (lastTimeRewardApplicable() - lastUpdateTime))`.
+
+This can happen when the updateReward modifier is invoked, which will cause the following functions to revert:
+
+  * earned
+  * stake
+  * withdraw
+  * getReward
+  * exit
+  * notifyRewardAmount
+
+The reward rate is set inside `notifyRewardAmount`, on L114/118, if a value that is too large is provided to the function.
+Of particular note is that `notifyRewardAmount` is itself affected by this problem, which means that if the provided
+reward is incorrect, then the problem is unrecoverable.
+
+#### Solution
+
+The `notifyRewardAmount` transaction should be reverted if a value greater than `2^256 / 10^18` is provided.
+As an additional safety mechanism, this value will be required to be no greater than the remaining
+balance of the rewards token in the contract. This will both prevent the overflow, and also provide an additional check
+that the reward rate is being set to a value in the appropriate range (for example, no extra/missing zeroes).
+
+#### Details
+
+Specifically, this problem occurs when rewardRate is too high; it is set inside the `notifyRewardAmount` function on
+lines [114](https://github.com/Synthetixio/synthetix/blob/c4dd4413cbbd3c0b40dfee2f9119af2dcb6a82e5/contracts/StakingRewards.sol#L114) and [118](https://github.com/Synthetixio/synthetix/blob/c4dd4413cbbd3c0b40dfee2f9119af2dcb6a82e5/contracts/StakingRewards.sol#L118).
+
+```rewardRate = floor(reward / rewardsDuration) = (reward - k) / rewardsDuration```
+
+for some `0 <= k < rewardsDuration`.
+
+For the bug to occur, we need:
+
+```
+(reward - k) / rewardsDuration >= 2^256 / (10^18 * (lastTimeRewardApplicable - lastUpdateTime))
+reward                         >= rewardsDuration * 2^256 / (10^18 * (lastTimeRewardApplicable - lastUpdateTime)) + k
+```
+
+Hence, we can ensure the bug does not occur if we force:
+
+```
+reward < rewardsDuration * 2^256 / (10^18 * (lastTimeRewardApplicable - lastUpdateTime))
+```
+
+So we should constrain `reward` to be less than the minimum value of the RHS.
+
+The smallest possible value of `lastUpdateTime` is the block timestamp when `notifyRewardAmount` was last called. 
+The largest possible value of `lastTimeRewardApplicable` is `periodFinish`,
+and `periodFinish = notificationBlock.timestamp + rewardsDuration` ([line 121](https://github.com/Synthetixio/synthetix/blob/c4dd4413cbbd3c0b40dfee2f9119af2dcb6a82e5/contracts/StakingRewards.sol#L121)).
+Putting these together we have:
+
+```
+(lastTimeRewardApplicable - lastUpdateTime) <= rewardsDuration
+```
+
+Ergo, we need:
+
+```
+reward < rewardsDuration * 2^256 / (10^18 * rewardsDuration)
+	                     = 2^256 / 10^18
+```
+
+So the problem will not emerge whenever we require
+
+```
+    reward < uint(-1) / UNIT
+```
 
 ### Technical Specification
 
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 
-Add  `recoverERC20` and `setRewardsDuration` that have `onlyOwner` modifiers.
-
-`constructor` to take `_rewardsToken` & `_stakingToken` as arguments
-
-Refactor to remove the `LPTokenWrapper` contract. The original implementation to not include this.
+* Add  `recoverERC20` and `setRewardsDuration` that have `onlyOwner` modifiers.
+* `constructor` to take `_rewardsToken` & `_stakingToken` as arguments
+* Refactor to remove the `LPTokenWrapper` contract. The original implementation to not include this.
+* Revert the `notifyRewardAmount` transaction if the computer reward rate would pay out more than the balance of the contract over the reward period.
 
 
 ### Test Cases
