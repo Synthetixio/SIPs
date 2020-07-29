@@ -172,7 +172,11 @@ So the problem will not emerge whenever we require
   - should staking token on constructor
 - Pausable
   - should revert when stake is called when paused is true
-
+- Overflow bugfix
+  - should revert `notifyRewardAmount` if reward is greater than the contract balance
+  - should revert `notifyRewardAmount` if reward plus any leftover from the previous period is greater than the contract balance
+  - should not revert `notifyRewardAmount` if reward is equal to the contract balance
+  
 ### Configurable Values (Via SCCP)
 
 <!--Please list all values configurable via SCCP under this implementation.-->
