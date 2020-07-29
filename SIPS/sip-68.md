@@ -65,7 +65,9 @@ Adding `Pausable.sol` and modifier `notPaused` to `stake()` will allow the admin
 
 There is a multiplication overflow that can occur inside the rewardPerToken function, on [line 66](https://github.com/Synthetixio/synthetix/blob/c4dd4413cbbd3c0b40dfee2f9119af2dcb6a82e5/contracts/StakingRewards.sol#L66):
 
-```lastTimeRewardApplicable().sub(lastUpdateTime).mul(rewardRate).mul(1e18).div(_totalSupply)```
+```
+lastTimeRewardApplicable().sub(lastUpdateTime).mul(rewardRate).mul(1e18).div(_totalSupply)
+```
     
 An overflow occurs whenever `rewardRate >= 2^256 / (10^18 * (lastTimeRewardApplicable() - lastUpdateTime))`.
 
@@ -94,7 +96,9 @@ that the reward rate is being set to a value in the appropriate range (for examp
 Specifically, this problem occurs when rewardRate is too high; it is set inside the `notifyRewardAmount` function on
 lines [114](https://github.com/Synthetixio/synthetix/blob/c4dd4413cbbd3c0b40dfee2f9119af2dcb6a82e5/contracts/StakingRewards.sol#L114) and [118](https://github.com/Synthetixio/synthetix/blob/c4dd4413cbbd3c0b40dfee2f9119af2dcb6a82e5/contracts/StakingRewards.sol#L118).
 
-```rewardRate = floor(reward / rewardsDuration) = (reward - k) / rewardsDuration```
+```
+rewardRate = floor(reward / rewardsDuration) = (reward - k) / rewardsDuration
+```
 
 for some `0 <= k < rewardsDuration`.
 
