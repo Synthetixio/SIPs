@@ -26,6 +26,7 @@ Enhancements include:
 - Ability to update the rewards duration
 - Remove the redundant `LPTokenWrapper`
 - Refactor to set rewards and staking tokens via the constructor on deployment
+- Adding `Pausable` and `notPaused` to stake() to prevent staking into deprecated pools
 - Fix a potential overflow bug in the reward notification function
 
 ## Motivation
@@ -53,6 +54,11 @@ The `LPTokenWrapper` added additional complexity to the code without adding any 
 
 The staking and rewards tokens were hard coded addresses in each contract. Now that there are many of these on MAINNET and deploying almost 1 a week, instead of having to edit the code directly it is prefered to send the staking and rewards tokens as arguments to the constructor on contract creation.
 
+### Pause stake when rewards completed
+
+When a `StakingRewards` campaign has completed the contract needs to prevent anyone from staking into it. They won't accrue rewards and can cause blocking issues with inverse Synths that need to be rebalanced which need to be purged.
+Adding `Pausable.sol` and modifier `notPaused` to `stake()` will allow the admin to set `paused` to `true` preventing anyone from staking. `SelfDestructible` has not been implemented and given the amount of value in these contracts probably best not to implement. 
+
 ### Potential overflow bug fix
 
 #### Summary
@@ -65,12 +71,12 @@ An overflow occurs whenever `rewardRate >= 2^256 / (10^18 * (lastTimeRewardAppli
 
 This can happen when the updateReward modifier is invoked, which will cause the following functions to revert:
 
-  * earned
-  * stake
-  * withdraw
-  * getReward
-  * exit
-  * notifyRewardAmount
+  * `earned`
+  * `stake`
+  * `withdraw`
+  * `getReward`
+  * `exit`
+  * `notifyRewardAmount`
 
 The reward rate is set inside `notifyRewardAmount`, on L114/118, if a value that is too large is provided to the function.
 Of particular note is that `notifyRewardAmount` is itself affected by this problem, which means that if the provided
@@ -138,6 +144,8 @@ So the problem will not emerge whenever we require
 * Refactor to remove the `LPTokenWrapper` contract. The original implementation to not include this.
 * Revert the `notifyRewardAmount` transaction if the computer reward rate would pay out more than the balance of the contract over the reward period.
 
+Inherit the `Pausable.sol` contract and add modifier `notPaused` to `stake()` 
+
 
 ### Test Cases
 
@@ -159,7 +167,8 @@ So the problem will not emerge whenever we require
 - Constructor & Settings
   - should set rewards token on constructor
   - should staking token on constructor
-
+- Pausable
+  - should revert when stake is called when paused is true
 
 ### Configurable Values (Via SCCP)
 
