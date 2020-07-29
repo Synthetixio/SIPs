@@ -78,7 +78,7 @@ This can happen when the updateReward modifier is invoked, which will cause the 
   * `exit`
   * `notifyRewardAmount`
 
-The reward rate is set inside `notifyRewardAmount`, on L114/118, if a value that is too large is provided to the function.
+The reward rate is set inside `notifyRewardAmount`, if a value that is too large is provided to the function.
 Of particular note is that `notifyRewardAmount` is itself affected by this problem, which means that if the provided
 reward is incorrect, then the problem is unrecoverable.
 
@@ -143,8 +143,7 @@ So the problem will not emerge whenever we require
 * `constructor` to take `_rewardsToken` & `_stakingToken` as arguments
 * Refactor to remove the `LPTokenWrapper` contract. The original implementation to not include this.
 * Revert the `notifyRewardAmount` transaction if the computer reward rate would pay out more than the balance of the contract over the reward period.
-
-Inherit the `Pausable.sol` contract and add modifier `notPaused` to `stake()` 
+* Inherit the `Pausable.sol` contract and add modifier `notPaused` to `stake()` 
 
 
 ### Test Cases
