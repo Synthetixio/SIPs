@@ -13,7 +13,7 @@ created: 2020-07-29
 
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-Setup a Curve pool  which omits DAI and a new staking contract for the new Curve pool staking contract. Incentivize synth holders to shift to the new Curve pool by shifting the rewards to the new staking contract.
+Setup a Curve pool  which omits DAI and a new staking contract for the new Curve pool staking contract. Incentivize synth holders to shift to the new Curve pool by shifting the SNX rewards to the new staking contract.
 
 ## Abstract
 
@@ -26,19 +26,23 @@ Much of the debate has already happened under the pre-SIP [research post](https:
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 
 #### Arguments In Favor of Keeping the Curve Pool Intact:
-- Lower trading fees for LPs, a lower APY should be expected and that could result in a lower pool size in case LP's favor a higher APY over the lower risk.
+- Lower trading fees for LPs, a lower APY should be expected and that could result in a lower pool size, in case LP's favor a higher APY over the lower risk.
 - More  slippage/inconvenience to exchange sUSD into other stable coins. 
-- Currently DAI is widely known in the Ethereum space and some consider MKR to be the stable coin OG. Removing could deter some users, as they are keen on retaining ownership of DAI.
+- Currently DAI is widely known in the Ethereum space and some consider DAI to be the original stable coin. Removing it could deter some users, as they are keen on having DAI as part of the pool.
 - Current arguments on peg stability could be resolved in the future, as MKR is working on minting fresh DAI against deposit of stable coins (USDC) at a rate close to 1 (PSM).
 - There are caps on how much each DAI can be minted for collateral category. 
 
 #### Arguments in Favor of Create a new Curve Pool ex-DAI:
 - The first argument rests on DAI not being pegged to USD, in case the value of DAI depreciates considerably LP participants will be holding more DAI and will lose a significant portion of their investment. The following risks could result in DAI breaking the peg negatively:
+
 a) DAI is currently having issues with scaling which is causing a premium to persist. As a result, MKR has proposed the PSM, which allows to circumvent the cap on centralized stable coins to an extent. MKR plans to increasingly lean on USDC to ensure that DAI is pegged, which will increase the centralization related risks (i.e. freezing the USDC collateral that is backing DAI).
+
 b) In order to fight the scaling issue, MKR has also allowed more tokens to be considered as eligible collateral, some of which are more volatile and expose the system to instability and risk of insolvency.
-c) The MKR protocol is essentially controlled by the foundation and Andreessen Horowitz (A16z). Therefore, important functions such as triggering the system shutdown are centralized and are not expected to be shifted to a keeper function any time soon.
+
+c) The MKR protocol is essentially controlled by the MKR foundation and Andreessen Horowitz (A16z). Therefore, important functions such as triggering the system shutdown are centralized and are not expected to be shifted to a keeper function any time soon.
+
 - DAI being a competitor in the space is benefiting from the SNX subsidy by being included in the Curve pool.
-- As can be seen on Curve, DAI is less available on that pool and potentially is not able to scale with increasing demand. Therefore, the lack of liquidity of the coin negatively affects the demand for it.
+- As can be seen on Curve, DAI is less available on that pool and potentially is not able to scale with increasing demand. Therefore, the lack of liquidity is an issue worth considering.
 
 ## Specification
 
@@ -72,7 +76,7 @@ To be specified by the SNX Core developer team.
 
 <!--Please list all values configurable via SCCP under this implementation.-->
 
-The same variables used to configure the current staking contracts.
+The same variables used to configure the current staking and Curve contracts.
 
 ## Copyright
 
