@@ -27,7 +27,7 @@ Much of the debate has already happened under the pre-SIP [research post](https:
 
 #### Arguments In Favor of Keeping the Curve Pool Intact:
 - Lower trading fees for LPs, a lower APY should be expected and that could result in a lower pool size, in case LP's favor a higher APY over the lower risk.
-- More  slippage/inconvenience to exchange sUSD into other stable coins. 
+- More slippage/inconvenience when exchanging sUSD to DAI, as we would need to go through USDT/USDC then to DAI on another pool. 
 - Currently DAI is widely known in the Ethereum space and some consider DAI to be the original stable coin. Removing it could deter some users, as they are keen on having DAI as part of the pool.
 - Current arguments on peg stability could be resolved in the future, as MKR is working on minting fresh DAI against deposit of stable coins (USDC) at a rate close to 1 (PSM).
 - There are caps on how much each DAI can be minted for collateral category. 
