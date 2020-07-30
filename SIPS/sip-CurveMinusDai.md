@@ -32,7 +32,7 @@ Much of the debate has already happened under the pre-SIP [research post](https:
 - Current arguments on peg stability could be resolved in the future, as MKR is working on minting fresh DAI against deposit of stable coins (USDC) at a rate close to 1 (PSM).
 - There are caps on how much each DAI can be minted for collateral category. 
 
-#### Arguments in Favor of Create a new Curve Pool ex-DAI:
+#### Arguments in Favor of Creating a new Curve Pool ex-DAI:
 - The first argument rests on DAI not being pegged to USD, in case the value of DAI depreciates considerably LP participants will be holding more DAI and will lose a significant portion of their investment. The following risks could result in DAI breaking the peg negatively:
 
 a) DAI is currently having issues with scaling which is causing a premium to persist. As a result, MKR has proposed the PSM, which allows to circumvent the cap on centralized stable coins to an extent. MKR plans to increasingly lean on USDC to ensure that DAI is pegged, which will increase the centralization related risks (i.e. freezing the USDC collateral that is backing DAI).
