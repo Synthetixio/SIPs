@@ -13,7 +13,7 @@ created: 2020-07-29
 
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-Setup a Curve pool  which omits DAI and a new staking contract for the new Curve pool staking contract. Incentivize synth holders to shift to the new Curve pool by shifting the SNX rewards to the new staking contract.
+Setup a Curve pool  which omits DAI and a new staking contract for the new Curve pool. Incentivize synth holders to shift to the new Curve pool by shifting the SNX rewards to the new staking contract.
 
 ## Abstract
 
