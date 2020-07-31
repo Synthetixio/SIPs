@@ -42,8 +42,8 @@ As such, in an effort to fully decentralise the Synthetix protocol, this SIP pro
 
 In principle the idea is as follows:
 
-1. A contract is created, called the `DelegatedMigrator`, which is nominated and accepts ownership over all Synthetix contracts. It implements `IDelegatedMigrator` (interface below)
-2. The owner of this contract is the [protocolDAO](https://etherscan.io/address/protocoldao.snx.eth)
+1. A contract is created, called the `DelegatedMigrator`, which is nominated and accepts ownership over all Synthetix contracts. It implements `IDelegatedMigrator` (interface below). The sole exception is the `SystemSettings` contract from [SIP-64](./sip-64.md), it will remain owned by the protocolDAO to continue to perform SCCP updates without requiring the use of the Delegated Migrator .
+2. The owner of this `IDelegateMigrator` contract is the [protocolDAO](https://etherscan.io/address/protocoldao.snx.eth)
 3. This migrator then allows the submission of proposals, in the form of a contract address. Each proposal must conform to `IMigration` (see below).
 4. After a waiting period has expired for a proposal, `execute` may be invoked by the protocolDAO sequentially for each step in the migration.
 5. If at any point during the waiting period a configurable percentage of token holders vote to veto the upgrade proposal via `reject` it will not proceed. The specific details of this voting process are TBD.
