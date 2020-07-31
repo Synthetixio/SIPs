@@ -3,7 +3,7 @@ sip: 1
 title: SIP Purpose and Guidelines
 status: Implemented
 author: Kain Warwick (@kaiynne)
-discussions-to: https://discord.gg/aApjG26
+discussions-to: https://research.synthetix.io/
 created: 2019-06-10
 updated: N/A
 ---
@@ -26,14 +26,14 @@ An SIP or SCCP must meet certain minimum criteria. It must be a clear and comple
 
 ## SIP Work Flow
 
-Parties involved in the process are the *author*, the [*SIP editors*](#sip-editors), and the [Synthetix Engineering Team].
+Parties involved in the process are the *author*, the [*SIP editors*](#sip-editors), the [Synthetix Core Contributors] and the Synthetix community.
 
 :warning: Before you begin, vet your idea, this will save you time. Ask the Synthetix community first if an idea is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will have the intend effect. The appropriate public forum to gauge interest around your SIP or SCCP is [the Synthetix Discord].
 
 Your role as the champion is to write the SIP using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea. Following is the process that a successful SIP will move along:
 
 ```
-[ WIP ] -> [ PROPOSED ] -> [ APPROVED ] -> [ IMPLEMENTED ]
+[ WIP ] -> [ PROPOSED ] -> [ APPROVED ] -> [ IMPLEMENTED ] X [ REJECTED ] 
 ```
 
 Each status change is requested by the SIP author and reviewed by the SIP editors. Use a pull request to update the status. Please include a link to where people should continue discussing your SIP. The SIP editors will process these requests as per the conditions below.
@@ -43,6 +43,8 @@ Each status change is requested by the SIP author and reviewed by the SIP editor
 * **Approved** -- This SIP has passed community governance and is now being prioritised for development.
   
 * **Implemented** -- This SIP has been implemented and deployed to mainnet.
+
+* **Rejected** -- This SIP has failed to reach community consensus.
 
 ## What belongs in a successful SIP?
 
@@ -72,7 +74,7 @@ Each SIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style
 
 ` author:` <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s). Details are below.>
 
-` * discussions-to:` \<a url pointing to the official discussion thread\>
+` * discussions-to:` \<a url pointing to the official discussion thread at research.synthetix.io\>
 
 ` status:` < WIP | PROPOSED | APPROVED | IMPLEMENTED >
 
@@ -106,7 +108,7 @@ if the email address is not given.
 
 #### `discussions-to` header
 
-While an SIP is in WIP or Proposed status, a `discussions-to` header will indicate the mailing list or URL where the SIP is being discussed.
+While an SIP is in WIP or Proposed status, a `discussions-to` header will indicate the URL at [research.synthetix.io](https://research.synthetix.io/) where the SIP is being discussed.
 
 #### `created` header
 
