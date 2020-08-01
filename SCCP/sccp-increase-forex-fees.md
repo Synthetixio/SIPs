@@ -1,9 +1,9 @@
 ---
 sccp: <to be assigned>
-title: <(Temporarily) increase forex fees>
-author: <Spreek>
-discussions-to: <#governance channel>
-status: <WIP>
+title: <Increase Forex Fees>
+author: <@Spreek>
+discussions-to: <Governance discord channel>
+status: WIP
 created: <2020-08-01>
 requires (*optional): <SIP/SCCP number(s)>
 ---
