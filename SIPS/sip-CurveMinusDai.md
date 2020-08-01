@@ -19,7 +19,7 @@ Setup a Curve pool  which omits DAI and a new staking contract for the new Curve
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-Much of the debate has already happened under the pre-SIP [research post](https://research.synthetix.io/t/should-dai-be-removed-from-the-curve-pool/27/30). This purpose of this SIP is  put together the different arguments from opposing camps into one document and proposes the new pool so that it can voted on by the SNX community.
+Much of the debate has already happened under the pre-SIP [research post](https://research.synthetix.io/t/should-dai-be-removed-from-the-curve-pool/27/30). The purpose of this SIP is  put together the different arguments from opposing camps into one document and proposes the new pool so that it can voted on by the SNX community.
 
 ## Motivation
 
