@@ -19,7 +19,7 @@ As per [sip-56](https://github.com/Synthetixio/SIPs/blob/master/SIPS/sip-56.md) 
 
 ## Motivation
 
-Analysis of on-chain data showed that front-running opportunities were more accessible for the commodities. Increasing the fees to 100 bp should make front-running quasi-impossible because of the update frequency of the chainlink oracles. That said when [sip-52](https://sips.synthetix.io/sips/sip-52) is implemented we should be able to lower these fees back to previous levels.
+Analysis of on-chain data showed that front-running opportunities were more accessible for commodities. Increasing the fees to 100 bp should make front-running quasi-impossible because of the update frequency of the chainlink oracles. That said when [sip-52](https://sips.synthetix.io/sips/sip-52) is implemented we should be able to lower these fees back to previous levels.
 
 ## Copyright
 
