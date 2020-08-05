@@ -1,6 +1,6 @@
 ---
 sip: <to be assigned>
-title: Integrate Control Flags to Disable Transactions
+title: Integrate Warning Flags to Disable Transactions
 status: WIP
 author: Justin J. Moses <@justinjmoses>
 discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here>
@@ -14,19 +14,19 @@ created: 2020-08-05
 
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-Integrate Chainlink's control flags contract into Synthetix to prevent any mutative action against a synth that has its price feed flagged.
+Integrate Chainlink’s warning flags contract into Synthetix to prevent any mutative action against a synth that has its price feed flagged.
 
 ## Abstract
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-Chainlink have prepared a flags contract which gives them to power to indicate if there's an issue with a given `Aggregator`. During an `exchange` of `src` to `dest` synth, if the corresponding `Aggregator` is flagged, then the `exchange` will fail. In addition, all issuance functions (`issue`, `burn`, `claim`) also need to be prevented as these require the calculation of the entire debt pool, which cannot be done if any synth has an invalid price.
+Chainlink have prepared a flags contract which allows them to indicate if there's an issue with a given `Aggregator`. During an `exchange` of `src` to `dest` synth, if the corresponding `Aggregator` is flagged, then the `exchange` will fail. In addition, all issuance functions (`issue`, `burn`, `claim`) also need to be prevented as these require the calculation of the entire debt pool, which cannot be done if any synth has an invalid price.
 
 ## Motivation
 
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 
-As the Synthetix protocol migrates to Chainlink feeds for all remaining prices (in the upcoming [SIP-36](./sip-36.md)), the primary responsibility of monitoring and maintenance shifts from Synthetix to Chainlink. Having a flags contract controlled by Chainlink allows their monitoring teams to flip a switch in the case of any outage and prevents spurious actions on the Synthetix protocol taking advantage of incorrect pricing.
+As the Synthetix protocol migrates to Chainlink feeds for all remaining prices (in the upcoming [SIP-36](./sip-36.md)), the primary responsibility of monitoring and maintenance shifts from Synthetix to Chainlink. Having a flags contract controlled by the Chainlink team allows their monitoring teams to flip a warning switch in the case of any outage and prevents spurious actions on the Synthetix protocol taking advantage of incorrect pricing.
 
 ## Specification
 
