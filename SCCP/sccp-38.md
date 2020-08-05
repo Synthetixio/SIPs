@@ -1,5 +1,5 @@
 ---
-sccp: TBA
+sccp: 38
 title: Increase Fees on Silver and Gold to 100 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Proposed
