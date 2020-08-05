@@ -15,7 +15,7 @@ Increase the fees on trades into sXAG and sXAU to 100 bp.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-As per [sip-56](https://github.com/Synthetixio/SIPs/blob/master/SIPS/sip-56.md) each synth can now have its own fee levels. This SCCP suggest to raise the fees on sXAG and sXAU to 100 bp.
+As per [sip-56](https://github.com/Synthetixio/SIPs/blob/master/SIPS/sip-56.md) each synth can now have its own fee levels. This SCCP suggests to raise the fees on sXAG and sXAU to 100 bp.
 
 ## Motivation
 
