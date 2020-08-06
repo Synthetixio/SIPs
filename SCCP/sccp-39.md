@@ -1,5 +1,5 @@
 ---
-sccp: <to be assigned>
+sccp: <39>
 title: <Increase Forex Fees>
 author: <@Spreek>
 discussions-to: <Governance discord channel>
