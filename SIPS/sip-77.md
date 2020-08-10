@@ -1,7 +1,7 @@
 ---
 sip: 77
-title: StakingRewards Bug Fix's and Pausable Stake
-status: Implemented
+title: StakingRewards bug fix's and Pausable stake()
+status: Proposed
 author: Clinton Ennis (@hav-noms), Anton Jurisevic (@zyzek)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
@@ -14,7 +14,7 @@ created: 2020-08-06
 
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-The `StakingRewards` contract for liquidity mining has a critical overflow defect to be fixed and stake needs to be pausable for completed incentives.
+`stake()` needs to be pausable for completed incentives and two bug fixes. 
 
 ## Abstract
 
