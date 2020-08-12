@@ -1,7 +1,7 @@
 ---
 sip: 68
 title: Minor enhancements to StakingRewards.sol
-status: Proposed
+status: Implemented
 author: Clinton Ennis (@hav-noms), Anton Jurisevic (@zyzek)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
@@ -164,8 +164,8 @@ So the problem will not emerge whenever we require
   - should emit RewardsDurationUpdated event
 - setRewardsDuration
   - should increase rewards duration
-  - should emit Recovered event
-  - Revert when setting setRewardsDuration before the period has finished
+  - should emit RewardsDurationUpdated event
+  - should revert when setting setRewardsDuration before the period has finished
   - should distribute rewards
 - Constructor & Settings
   - should set rewards token on constructor
