@@ -4,7 +4,6 @@ title: Integrate Warning Flags to Disable Transactions
 status: Proposed
 author: Justin J Moses <@justinjmoses>
 discussions-to: https://research.synthetix.io/t/sip-76-chainlink-warning-flags/167
-
 created: 2020-08-05
 ---
 

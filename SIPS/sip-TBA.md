@@ -3,7 +3,7 @@ sip: TBA
 title: Incentivizing an sForex Liquidity Pool 
 status: WIP
 author: MoonRocks <@MoonRocks>
-discussions-to: https://research.synthetix.io/
+discussions-to: <https://research.synthetix.io/>
 
 created: 2020-08-11
 ---
