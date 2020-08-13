@@ -22,7 +22,7 @@ created: 2020-08-06
 
 Enhancements include:
 
-- Inheriting `Pausable` contract and add `notPaused` modifer to stake() to prevent staking into deprecated pools
+- Inheriting `Pausable` contract and add `notPaused` modifer to `stake()` to prevent staking into deprecated pools
 - Fix a potential overflow bug in the reward notification function reported by samcsun
 - Fix to `setRewardsDuration` to allow `rewardsDuration` to be updated after the initial setting
 
@@ -32,7 +32,7 @@ Enhancements include:
 
 ### Pause stake when rewards completed
 
-When a `StakingRewards` campaign has completed the contract needs to prevent anyone from staking into it. They staker will not accrue any rewards and can cause blocking issues with inverse Synths that need to be purged so that they can be relanced.
+When a `StakingRewards` campaign has completed the contract needs to prevent anyone from staking into it. The staker will not accrue any rewards and can cause blocking issues with inverse Synths that need to be purged so that they can be relanced.
 Adding `Pausable.sol` and modifier `notPaused` to `stake()` will allow the admin to set `paused` to `true` preventing anyone from staking. `SelfDestructible` has not been implemented and given the amount of value in these contracts probably best not to implement.
 
 ### Potential overflow bug fix
@@ -69,7 +69,7 @@ that the reward rate is being set to a value in the appropriate range (for examp
 
 #### Details
 
-Specifically, this problem occurs when rewardRate is too high; it is set inside the `notifyRewardAmount` function on
+Specifically, this problem occurs when `rewardRate` is too high; it is set inside the `notifyRewardAmount` function on
 lines [114](https://github.com/Synthetixio/synthetix/blob/c4dd4413cbbd3c0b40dfee2f9119af2dcb6a82e5/contracts/StakingRewards.sol#L114) and [118](https://github.com/Synthetixio/synthetix/blob/c4dd4413cbbd3c0b40dfee2f9119af2dcb6a82e5/contracts/StakingRewards.sol#L118).
 
 ```
@@ -117,7 +117,7 @@ So the problem will not emerge whenever we require
 
 ### Fix to setRewardsDuration to allow updates after the initial setting
 
-`setRewardsDuration` was intended to allow the `rewardsDuration` to be set after theduration had completed. However a flaw in the require meant it could be changed after the initial setting.
+`setRewardsDuration` was intended to allow the `rewardsDuration` to be set after the duration had completed. However a flaw in the require meant it could be changed after the initial setting.
 
 Current code
 
@@ -128,7 +128,7 @@ require(periodFinish == 0 || block.timestamp > periodFinish);
 Proposed change
 
 ```
-require(periodFinish == 0 && block.timestamp > periodFinish);
+require(block.timestamp > periodFinish);
 ```
 
 ### Technical Specification
@@ -137,7 +137,7 @@ require(periodFinish == 0 && block.timestamp > periodFinish);
 
 - Inherit the `Pausable.sol` contract and add modifier `notPaused` to `stake()`
 - Revert the `notifyRewardAmount` transaction if the computer reward rate would pay out more than the balance of the contract over the reward period.
-- Change the require in `setRewardsDuration` to use AND instead of OR
+- Change the `require` in `setRewardsDuration` to only check the period has finished
 
 ### Test Cases
 
