@@ -18,7 +18,7 @@ The constraint on the supply of synth needs to be lifted in order to decrease th
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 The recent premium on the sUSD peg on Curve calls for taking action as traders feel a disincentive to pay the premium to partake in trading on the platform. 
-The premium has been consistently high for the last month as can be seen [here]([https://www.curve.fi/trade/susdv2/SUSD-USDC/1d](https://www.curve.fi/trade/susdv2/SUSD-USDC/1d)). The main underlying reasons are as follows: 
+The premium has been consistently high for the last month as can be seen [here](https://www.curve.fi/trade/susdv2/SUSD-USDC/1d). The main underlying reasons are as follows: 
 1) Yam and other protocols that offer governance tokens for SNX (hence less SNX being staked and synth in circulation).
 2) BASED that is offering high interest for sUSD
 3) CRV governance tokens being farmed
