@@ -22,7 +22,7 @@ The premium has been consistently high for the last month as can be seen [here](
 1) Yam and other protocols that offer governance tokens for SNX (hence less SNX being staked and synth in circulation).
 2) BASED and other platforms that are offering a high interest rate for capturing sUSD
 3) CRV governance tokens being farmed
-4) Consistently increasing snx prices which encourage people to trade SNX for price appreciation, rather then for inflationary returns.
+4) SNX prices which are encouraging more trading of SNX, rather then staking for inflationary returns
 4) High gas prices, high cost of doing transactions on SNX contracts, which is discouraging those with low amounts of SNX from managing their wallets and taking advantage of the recent run up in SNX prices
 
 I believe it is important to protect the sUSD peg against USD, whether in premium or discount as it helps gives confidence to traders on the unit of account that keep  synth flavors aligned with their underlyings. 
