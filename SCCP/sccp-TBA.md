@@ -20,7 +20,7 @@ The constraint on the supply of synth needs to be lifted in order to decrease th
 The recent premium on the sUSD peg on Curve calls for taking action as traders feel a disincentive to pay the premium to partake in trading on the platform. 
 The premium has been consistently high for the last month as can be seen [here](https://www.curve.fi/trade/susdv2/SUSD-USDC/1d). The main underlying reasons are as follows: 
 1) Yam and other protocols that offer governance tokens for SNX (hence less SNX being staked and synth in circulation).
-2) BASED that is offering high interest for sUSD
+2) BASED and other platforms that are offering a high interest rate for capturing sUSD
 3) CRV governance tokens being farmed
 4) Consistently increasing snx prices which encourage people to trade SNX for price appreciation, rather then for inflationary returns.
 4) High gas prices, high cost of doing transactions on SNX contracts, which is discouraging those with low amounts of SNX from managing their wallets and taking advantage of the recent run up in SNX prices
