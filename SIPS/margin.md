@@ -2,11 +2,10 @@
 sip: 77
 title: Pooled Margin Trading
 status: WIP
-author: TODO
+author: TBD
 discussions-to: Create a new thread on https://research.synthetix.io and drop the link here
 created: 2020-08-06
 ---
-
 
 ## Simple Summary
 
@@ -19,7 +18,8 @@ With the Synthetix debt pool as counterparty, users can gain leveraged exposure 
 without holding the asset. PnL and liquidation calculations are simplified by denominating the margin in sUSD,
 which can be minted and burnt as required, Therefore using Synthetix, users will not be exposed to volatility
 in the value of their margin, and they will always be liquidated when their margin is completely exhausted,
-with no requirement for a maintenance margin.
+with no requirement for a maintenance margin or deleveraging mechanisms. For similar reasons, no separate insurance
+fund is necessary under this design.
 
 However, as the counterparty to all orders, the SNX debt pool takes on the risk of any skew in the market.
 If the number of long and short contracts is balanced, then a fall in one is compensated by a rise in
@@ -53,14 +53,17 @@ TBD
 
 ### Technical Specification
 
-#### Basic Contract Parameters
+#### Basic Contract and Market Parameters
 
 A position, opened on a specific market, may be either long or short.
 If it's long, then it gains value as the underlying asset appreciates.
-If it's short, it gains value as the underlying asset depreciates. A particular account will not be able to open more
-than one contract: instead it must modify its existing position.
+If it's short, it gains value as the underlying asset depreciates.
+As all contracts are opened against the pooled counterparty, the price of this exchange is
+determined by the spot rate read from an on-chain oracle.
 
-A contract is defined by several basic parameters.
+A contract is defined by several basic parameters, noting that a particular account will not be able to open more than
+one contract at a time: instead it must modify its existing position.
+
 We will use a superscript to indicate that a value is associated with a particular contract. For example \\(q^c\\)
 corresponds to the size of contract \\(c\\). If the superscript is omitted, the symbol is understood to refer to
 an arbitrary contract.
@@ -72,10 +75,6 @@ an arbitrary contract.
 | \\(p\\) | Base asset spot price | - | We also define \\(p^c_e\\), the spot price when contract \\(c\\) was entered. |
 | \\(v\\) | Notional value | \\(v \ := \ q \ p\\) | This is the dollar value of the base currency units on a contract. In addition to the spot notional value, we also define the entry notional value \\(v_e := q \ p_e\\). |
 | \\(r\\) | Profit / loss | \\(r \ := \ s \ (v - v_e)\\) | The profit in a position is the change in its notional value since entry. Note that short profit is the negative of long profit, \\(r_L = v - v_e\\) and \\(r_S = -r_L\\). |
-
----
-
-#### Basic Market Parameters
 
 Each market, implemented by a specific smart contract, is differentiated primarily by its base asset and the contracts
 open on that market. Additional parameters control the leverage offered on a particular market.
@@ -199,12 +198,11 @@ funding on every position, but it is always receiving more than it is paying. SN
 receive \\(i \ K\\) in funding: this is a positive value which will be paid into the fee pool.
 
 This funding flow increases directly as the skew increases, and also as the funding rate
-increases, which itself increases linearly with the skew (up to \\(W_max\\)). As the fee pool
+increases, which itself increases linearly with the skew (up to \\(W_{max}\\)). As the fee pool
 is party to \\(Q_L + Q_S\\) in open contracts, its percentage return from funding is
 \\(\frac{i K}{Q_L + Q_S} \propto W^2\\), so it grows with the square of the proportional skew.
 This provides accelerating compensation as the risk increases.
 
----
 
 #### Accrued Funding Calculation
 
@@ -255,7 +253,7 @@ Funding will be settled whenever a contract is closed or modified.
 | \\(t_{last}\\) | Skew last modified | - | The timestamp of the last skew-modifying event in seconds. |
 | \\(F_{last}\\) | Unrecorded funding | \\[F_{last} \ := \ i \ p \ (now - t_{last})\\] | The funding per base unit accumulated since \\(t_{last}\\). |
 | \\(F\\) | Accumulated funding sequence | \\[F_0 \ := \ 0\\] | \\(F_i\\) denotes the i'th entry in the sequence of accumulated funding per base unit. \\(F_n\\) will be taken to be the latest entry. |
-| \\(j\\) | Last-modified index | \\(j \leftarrow 0\\) at initialisation. | The index into \\(F\\) corresponding to the event that a contract was opened or modified. |
+| \\(j\\) | Last-modified index | \\[j \leftarrow 0\\] at initialisation. | The index into \\(F\\) corresponding to the event that a contract was opened or modified. |
 | \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline s^c \ q^c \ (F_n + F_{last} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
 
 Then any time a contract \\(c\\) is modified, first update the accumulated funding sequence:
