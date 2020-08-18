@@ -280,8 +280,8 @@ The overall market debt is the sum of the remaining margin in all contracts.
 As funding is merely transferred between accounts, it has no impact on the debt, and can be neglected.
 The possibility of negative remaining margin will also be neglected in the following computations,
 as such contributions can exist only transiently while contracts are awaiting liquidation.
-So long as insolvent contracts are liquidated within the 24-hour time lock, the risk of a
-front-minting attack is minimal.
+So long as insolvent contracts are liquidated within the 24-hour time lock specified in [SIP 40](sip-40.md), 
+the risk of a front-minting attack is minimal.
 These affordances will simplify calculations, and for the purposes of aggregated debt, 
 the remaining margin will be taken to be \\(m = m_e + r\\).
 
