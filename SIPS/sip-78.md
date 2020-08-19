@@ -3,7 +3,7 @@ sip: 78
 title: iSynth limit reset must not trip circuit breaker
 status: Proposed
 author: Justin J Moses <@justinjmoses>
-discussions-to: https://research.synthetix.io/t/sip-76-chainlink-warning-flags/167
+discussions-to: https://research.synthetix.io/t/sip-78-isynth-limit-reset-must-not-trip-circuit-breaker/181
 
 created: 2020-08-19
 ---
