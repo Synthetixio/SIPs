@@ -184,7 +184,7 @@ and paid into or out of its margin. Hence funding affects each contract's liquid
 | \\(i_{max}\\) | Maximum funding rate | - | A percentage per day. Initially \\(i_{max} = 100\%\\). |
 | \\(i\\) | Instantaneous funding rate | \\[i \ := \ clamp(\frac{W}{W_{max}}, -1, 1) \ i_{max} \\]  | A percentage per day. |
 
-**TBD:** Determine an initial value for \\(W_{max}\\).
+**TBD:** Determine initial value for \\(W_{max}\\).
 
 The funding rate can be negative, and has the same sign as the skew. When \\(i\\) is positive, longs pay shorts, while
 when it is negative, shorts pay longs. When \\(K = i = 0\\), no funding is paid, as the market is balanced.
@@ -255,6 +255,7 @@ Funding will be settled whenever a contract is closed or modified.
 | \\(F\\) | Accumulated funding sequence | \\[F_0 \ := \ 0\\] | \\(F_i\\) denotes the i'th entry in the sequence of accumulated funding per base unit. \\(F_n\\) will be taken to be the latest entry. |
 | \\(j\\) | Last-modified index | \\[j \leftarrow 0\\] at initialisation. | The index into \\(F\\) corresponding to the event that a contract was opened or modified. |
 | \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline s^c \ q^c \ (F_n + F_{last} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
+| \\(di_{max}\\) | Maximum funding rate of change | - | This is an allowable funding rate change per unit of time. If a funding rate update would change it more than this, only add at most a delta of \\(di_{max} * (now - t_{last})\\). |
 
 Then any time a contract \\(c\\) is modified, first update the accumulated funding sequence:
 
