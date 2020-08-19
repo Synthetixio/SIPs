@@ -1,6 +1,6 @@
 ---
 sccp: TBA
-title: Lower C-Ratio by 100% to 600%
+title: Lower C-Ratio by 50% to 650%
 status: WIP
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -9,7 +9,7 @@ created: 2020-08-16
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-Decrease the collateralization ratio to 600%
+Decrease the collateralization ratio to 650%
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
@@ -27,10 +27,10 @@ The premium has been consistently high for the last month as can be seen [here](
 
 I believe it is important to protect the sUSD peg against USD, whether in premium or discount as it helps gives confidence to traders on the unit of account that keep  synth flavors aligned with their underlyings. 
 
-It is important to note that although the 100% c-ratio decrease might not be enough to stabilize the peg, more action will be proposed to the community in the coming weeks until the peg falls back to parity. 
+It is important to note that although the 50% c-ratio decrease might not be enough to stabilize the peg, more action will be proposed to the community in the coming weeks until the peg falls back to parity. 
 Further action could take the following forms
-1) More decreases in the collateralization ratio gradually until we hit something close to 300 to 400%.
-2) Reducing SNX rewards on curve gradually to something close to SNX 4-8k per week. 
+1) More decreases in the collateralization ratio gradually until we hit a lower bound
+2) Reducing SNX rewards on curve gradually
 3) Limiting burning to 1 week after a mint (instead of 24 hours)
 4) Increasing inflationary rewards (to encourage minting)
 
