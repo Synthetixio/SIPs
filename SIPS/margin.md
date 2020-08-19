@@ -28,11 +28,13 @@ To combat this, a perpetual-style funding rate is paid from the heavier to the l
 encouraging a neutral balance.
 
 ## Motivation
+
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 
 TBD
 
 ## Specification
+
 <!--The specification should describe the syntax and semantics of any new feature, there are five sections
 1. Overview
 2. Rationale
@@ -42,11 +44,13 @@ TBD
 -->
 
 ### Overview
+
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
 TBD
 
 ### Rationale
+
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
 TBD
@@ -68,24 +72,24 @@ We will use a superscript to indicate that a value is associated with a particul
 corresponds to the size of contract \\(c\\). If the superscript is omitted, the symbol is understood to refer to
 an arbitrary contract.
 
-| Symbol | Description | Definition | Notes |
-| ------ | ----------- | ---------- | ----- |
-| \\(q\\) | Contract size | - | Measured in units of the base asset, for example a contract worth 10 BTC will have \\(q = 10\\). |
-| \\(s\\) | Contract side indicator | \\(s^c \ := \ \begin{cases} 1 & \ \mbox{if } \ c \text{ is long} \\ \\ \newline -1 & \ \mbox{if } \ c \text{ is short} \\ \end{cases} \\) | The sign of \\(s\\) indicates whether a contract is long or short. |
-| \\(p\\) | Base asset spot price | - | We also define \\(p^c_e\\), the spot price when contract \\(c\\) was entered. |
-| \\(v\\) | Notional value | \\(v \ := \ q \ p\\) | This is the dollar value of the base currency units on a contract. In addition to the spot notional value, we also define the entry notional value \\(v_e := q \ p_e\\). |
-| \\(r\\) | Profit / loss | \\(r \ := \ s \ (v - v_e)\\) | The profit in a position is the change in its notional value since entry. Note that short profit is the negative of long profit, \\(r_L = v - v_e\\) and \\(r_S = -r_L\\). |
+| Symbol  | Description             | Definition                                                                                                                                | Notes                                                                                                                                                                      |
+| ------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \\(q\\) | Contract size           | -                                                                                                                                         | Measured in units of the base asset, for example a contract worth 10 BTC will have \\(q = 10\\).                                                                           |
+| \\(s\\) | Contract side indicator | \\(s^c \ := \ \begin{cases} 1 & \ \mbox{if } \ c \text{ is long} \\ \\ \newline -1 & \ \mbox{if } \ c \text{ is short} \\ \end{cases} \\) | The sign of \\(s\\) indicates whether a contract is long or short.                                                                                                         |
+| \\(p\\) | Base asset spot price   | -                                                                                                                                         | We also define \\(p^c_e\\), the spot price when contract \\(c\\) was entered.                                                                                              |
+| \\(v\\) | Notional value          | \\(v \ := \ q \ p\\)                                                                                                                      | This is the dollar value of the base currency units on a contract. In addition to the spot notional value, we also define the entry notional value \\(v_e := q \ p_e\\).   |
+| \\(r\\) | Profit / loss           | \\(r \ := \ s \ (v - v_e)\\)                                                                                                              | The profit in a position is the change in its notional value since entry. Note that short profit is the negative of long profit, \\(r_L = v - v_e\\) and \\(r_S = -r_L\\). |
 
 Each market, implemented by a specific smart contract, is differentiated primarily by its base asset and the contracts
 open on that market. Additional parameters control the leverage offered on a particular market.
 
-| Symbol | Description | Definition | Notes |
-| ------ | ----------- | ---------- | ----- |
-| \\(C\\) | The set of all contracts on the market | - | We also have the contracts on the long and short sides, \\(C_L\\) and \\(C_S\\), with \\(C = C_L \cup C_S\\). |
-| \\(b\\) | Base asset | - | For example, BTC, ETH, and so on. The price \\(p\\) defined above refers to this asset. |
-| \\(Q_L\\), \\(Q_S\\) | Market Size | \\[Q_L \ := \ \sum_{c \in C_L}{q^c}\\] \\[Q_S \ := \ \sum_{c \in C_S}{q^c}\\] | The total size of all outstanding contracts on a given side of the market. |
-| \\(K\\) | Market skew | \\(K \ := \ Q_L - Q_S\\) | The excess contract units on one side or the other. When the skew is positive, longs outweigh shorts; when it is negative, shorts outweigh longs. When \\(K = 0\\), the market is perfectly balanced. |
-| \\(\lambda_{max}\\) | Maximum leverage | - | The size of a contract must not exceed its initial margin multiplied by the maximum leverage. |
+| Symbol               | Description                            | Definition                                                                    | Notes                                                                                                                                                                                                 |
+| -------------------- | -------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \\(C\\)              | The set of all contracts on the market | -                                                                             | We also have the contracts on the long and short sides, \\(C_L\\) and \\(C_S\\), with \\(C = C_L \cup C_S\\).                                                                                         |
+| \\(b\\)              | Base asset                             | -                                                                             | For example, BTC, ETH, and so on. The price \\(p\\) defined above refers to this asset.                                                                                                               |
+| \\(Q_L\\), \\(Q_S\\) | Market Size                            | \\[Q_L \ := \ \sum_{c \in C_L}{q^c}\\] \\[Q_S \ := \ \sum_{c \in C_S}{q^c}\\] | The total size of all outstanding contracts on a given side of the market.                                                                                                                            |
+| \\(K\\)              | Market skew                            | \\(K \ := \ Q_L - Q_S\\)                                                      | The excess contract units on one side or the other. When the skew is positive, longs outweigh shorts; when it is negative, shorts outweigh longs. When \\(K = 0\\), the market is perfectly balanced. |
+| \\(\lambda\_{max}\\) | Maximum leverage                       | -                                                                             | The size of a contract must not exceed its initial margin multiplied by the maximum leverage.                                                                                                         |
 
 ---
 
@@ -95,12 +99,12 @@ When a contract is opened, the account-holder chooses their initial leverage rat
 which the contract size is computed. As profit is computed against the notional value of a contract, higher leverage
 increases the contract's liquidation risk.
 
-| Symbol | Description | Definition | Notes |
-| ------ | ----------- | ---------- | ----- |
-| \\(\mu_e\\) | Initial margin ratio | - | The inverse of a contract's initial leverage. For example, \\(\mu_e = 0.5\\) corresponds to 2x leverage. |
-| \\(\mu_{min}\\) | Minimum initial margin ratio | - | The selected margin level must be no lower than this. We constrain \\[\mu_{min} \leq \mu_e\\]. Thus, this also constrains the maximum leverage. |
-| \\(m_e\\) | Initial margin | \\(m_e \ := \ \mu_e \ q \ p_e\\) | This is the quantity of sUSD the user initially spends to open a contract of \\(q\\) units of the base currency. The remaining \\(v_e - m_e\\) sUSD to pay for the rest of the position is "borrowed" from SNX holders, and it must be paid back when the position is closed. |
-| \\(m\\) | Remaining margin | \\(m \ := \ max(m_e + r + f, 0)\\) | A contract's remaining margin is its initial margin, plus its profit \\(r\\) and funding \\(f\\) (described below). When the remaining margin reaches zero, the position is liquidated, so that it can never take a negative value. |
+| Symbol           | Description                  | Definition                         | Notes                                                                                                                                                                                                                                                                         |
+| ---------------- | ---------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \\(\mu_e\\)      | Initial margin ratio         | -                                  | The inverse of a contract's initial leverage. For example, \\(\mu_e = 0.5\\) corresponds to 2x leverage.                                                                                                                                                                      |
+| \\(\mu\_{min}\\) | Minimum initial margin ratio | -                                  | The selected margin level must be no lower than this. We constrain \\[\mu_{min} \leq \mu_e\\]. Thus, this also constrains the maximum leverage.                                                                                                                               |
+| \\(m_e\\)        | Initial margin               | \\(m_e \ := \ \mu_e \ q \ p_e\\)   | This is the quantity of sUSD the user initially spends to open a contract of \\(q\\) units of the base currency. The remaining \\(v_e - m_e\\) sUSD to pay for the rest of the position is "borrowed" from SNX holders, and it must be paid back when the position is closed. |
+| \\(m\\)          | Remaining margin             | \\(m \ := \ max(m_e + r + f, 0)\\) | A contract's remaining margin is its initial margin, plus its profit \\(r\\) and funding \\(f\\) (described below). When the remaining margin reaches zero, the position is liquidated, so that it can never take a negative value.                                           |
 
 It is important to note that the granularity and frequency of oracle price updates constrains the maximum leverage
 that it's feasible to offer. If the oracle updates the price whenever it moves 1% or more, then any contracts
@@ -116,7 +120,7 @@ No exchange fee is charged for correcting the skew, nor for closing or reducing 
 | Symbol | Description | Definition | Notes |
 | \\(\phi\\) | Exchange fee rate | - | Account holders will be charged only on skew they introduce into the market when modifying orders. Initially, \\(\phi = 0.3\%\\). |
 
-If the user introduces \\(k\\) units of skew in the position, they will be charged a fee of \\(\phi \ k \ p\\) sUSD from their margin.  
+If the user introduces \\(k\\) units of skew in the position, they will be charged a fee of \\(\phi \ k \ p\\) sUSD from their margin.
 For example, if a user opens an order on the heavier side of the market, then they are charged \\(\phi \ v_e\\).
 On the other hand, if they are submitting an order on the lighter side of the market, they will not be charged for that
 part of their order that reduces the skew, and only for the part that induces new skew.
@@ -130,7 +134,7 @@ Once a position's remaining margin is exhausted, the position must be closed in 
 so that its contribution to the market skew and to the overall debt pool is accounted for as rapidly as possible,
 necessary for accuracy in funding rate and minting computations.
 
-As price updates cannot directly trigger the liquidation of insolvent positions, it is necessary 
+As price updates cannot directly trigger the liquidation of insolvent positions, it is necessary
 for keepers to perform this work by executing a public liquidation function.
 
 Yet this is not as simple as checking that a position's current remaining margin is zero,
@@ -144,7 +148,7 @@ zero remaining margin, and the difference will go to a liquidation keeper.
 
 | Symbol | Description | Definition | Notes |
 | \\(P\\) | Liquidation keeper incentive | - | This is a flat fee that is used to incentivise keeper duties. Initially this will be set to \\(P = 20\\) sUSD. |
-| \\(m_{min}\\) | Minimum order size | - | The keeper incentive necessitates that orders are at least as large. We will initially choose \\(m_{min} = 100\\) sUSD, corresponding to 5x leverage at the minimum order size relative to \\(P\\). We will require \\(m_{min} \leq m_e\\). |
+| \\(m*{min}\\) | Minimum order size | - | The keeper incentive necessitates that orders are at least as large. We will initially choose \\(m*{min} = 100\\) sUSD, corresponding to 5x leverage at the minimum order size relative to \\(P\\). We will require \\(m\_{min} \leq m_e\\). |
 
 A position may be liquidated whenever a price is received that causes:
 
@@ -180,11 +184,11 @@ and paid into or out of its margin. Hence funding affects each contract's liquid
 
 | Symbol | Description | Definition | Notes |
 | \\(W\\) | Proportional skew | \\[W \ := \ \frac{K}{Q_L + Q_S}\\] | The skew as a fraction of the total market size. |
-| \\(W_{max}\\) | Max funding skew threshold | - | The proportional skew at which the maximum funding rate will be charged (when \\(i = i_{max}\\)). | 
-| \\(i_{max}\\) | Maximum funding rate | - | A percentage per day. Initially \\(i_{max} = 100\%\\). |
-| \\(i\\) | Instantaneous funding rate | \\[i \ := \ clamp(\frac{W}{W_{max}}, -1, 1) \ i_{max} \\]  | A percentage per day. |
+| \\(W*{max}\\) | Max funding skew threshold | - | The proportional skew at which the maximum funding rate will be charged (when \\(i = i*{max}\\)). |
+| \\(i*{max}\\) | Maximum funding rate | - | A percentage per day. Initially \\(i*{max} = 100\%\\). |
+| \\(i\\) | Instantaneous funding rate | \\[i \ := \ clamp(\frac{W}{W_{max}}, -1, 1) \ i_{max} \\] | A percentage per day. |
 
-**TBD:** Determine an initial value for \\(W_{max}\\).
+**TBD:** Determine an initial value for \\(W\_{max}\\).
 
 The funding rate can be negative, and has the same sign as the skew. When \\(i\\) is positive, longs pay shorts, while
 when it is negative, shorts pay longs. When \\(K = i = 0\\), no funding is paid, as the market is balanced.
@@ -198,11 +202,10 @@ funding on every position, but it is always receiving more than it is paying. SN
 receive \\(i \ K\\) in funding: this is a positive value which will be paid into the fee pool.
 
 This funding flow increases directly as the skew increases, and also as the funding rate
-increases, which itself increases linearly with the skew (up to \\(W_{max}\\)). As the fee pool
+increases, which itself increases linearly with the skew (up to \\(W\_{max}\\)). As the fee pool
 is party to \\(Q_L + Q_S\\) in open contracts, its percentage return from funding is
 \\(\frac{i K}{Q_L + Q_S} \propto W^2\\), so it grows with the square of the proportional skew.
 This provides accelerating compensation as the risk increases.
-
 
 #### Accrued Funding Calculation
 
@@ -250,11 +253,11 @@ it by index.
 Funding will be settled whenever a contract is closed or modified.
 
 | Symbol | Description | Definition | Notes |
-| \\(t_{last}\\) | Skew last modified | - | The timestamp of the last skew-modifying event in seconds. |
-| \\(F_{last}\\) | Unrecorded funding | \\[F_{last} \ := \ i \ p \ (now - t_{last})\\] | The funding per base unit accumulated since \\(t_{last}\\). |
+| \\(t*{last}\\) | Skew last modified | - | The timestamp of the last skew-modifying event in seconds. |
+| \\(F*{last}\\) | Unrecorded funding | \\[F_{last} \ := \ i \ p \ (now - t_{last})\\] | The funding per base unit accumulated since \\(t*{last}\\). |
 | \\(F\\) | Accumulated funding sequence | \\[F_0 \ := \ 0\\] | \\(F_i\\) denotes the i'th entry in the sequence of accumulated funding per base unit. \\(F_n\\) will be taken to be the latest entry. |
 | \\(j\\) | Last-modified index | \\[j \leftarrow 0\\] at initialisation. | The index into \\(F\\) corresponding to the event that a contract was opened or modified. |
-| \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline s^c \ q^c \ (F_n + F_{last} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
+| \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline s^c \ q^c \ (F_n + F*{last} - F\_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
 
 Then any time a contract \\(c\\) is modified, first update the accumulated funding sequence:
 
@@ -280,15 +283,15 @@ The overall market debt is the sum of the remaining margin in all contracts.
 As funding is merely transferred between accounts, it has no impact on the debt, and can be neglected.
 The possibility of negative remaining margin will also be neglected in the following computations,
 as such contributions can exist only transiently while contracts are awaiting liquidation.
-So long as insolvent contracts are liquidated within the 24-hour time lock specified in [SIP 40](sip-40.md), 
+So long as insolvent contracts are liquidated within the 24-hour time lock specified in [SIP 40](sip-40.md),
 the risk of a front-minting attack is minimal.
-These affordances will simplify calculations, and for the purposes of aggregated debt, 
+These affordances will simplify calculations, and for the purposes of aggregated debt,
 the remaining margin will be taken to be \\(m = m_e + r\\).
 
 The total debt is computed as follows.
 
 \\[D \ := \ \sum_{c \in C}{m^c}\\]
-\\[\ \ = \ p \ K  + \sum_{c \in C}{m_e^c} - (\sum_{c \in C_L}{v_e^c} - \sum_{c \in C_S}{v_e^c})\\]
+\\[\ \ = \ p \ K + \sum_{c \in C}{m_e^c} - (\sum_{c \in C_L}{v_e^c} - \sum_{c \in C_S}{v_e^c})\\]
 
 That is, the sum of remaining margins is equivalent to the notional skew, plus the sum of entry margins,
 minus the notional entry skew.
@@ -301,10 +304,10 @@ can be updated as follows:
 \\[K \ \leftarrow \ K + s' \ q' - s \ q\\]
 \\[\Delta_e \ \leftarrow \ \Delta_e + m_e' - s' \ v_e' - m_e + s \ v_e\\]
 
-Where \\(s'\\), \\(q'\\), \\(m_e'\\), and \\(v_e'\\) are the contract's basic values post-modification. 
+Where \\(s'\\), \\(q'\\), \\(m_e'\\), and \\(v_e'\\) are the contract's basic values post-modification.
 
 | Symbol | Description | Definition | Notes |
-| \\(\Delta_e\\) | Entry margin sum minus notional entry skew | \\[\Delta_e \ := \ \sum_{c \in C}{m_e^c} - (\sum_{c \in C_L}{v_e^c} - \sum_{c \in C_S}{v_e^c})\\] | - |
+| \\(\Delta*e\\) | Entry margin sum minus notional entry skew | \\[\Delta_e \ := \ \sum*{c \in C}{m*e^c} - (\sum*{c \in C*L}{v_e^c} - \sum*{c \in C_S}{v_e^c})\\] | - |
 | \\(D\\) | Market Debt | \\[D \ := \ max(p \ K + \Delta_e, 0)\\] | - |
 
 In this way the aggregate debt is efficiently computable at any time.
@@ -314,11 +317,11 @@ In this way the aggregate debt is efficiently computable at any time.
 #### Next Price Fulfillment
 
 As with Synth exchanges, it is possible to detect price updates coming from the oracle and
-front-run them for risk free profit. To resolve this, altering a position will be a 
+front-run them for risk free profit. To resolve this, altering a position will be a
 require a two-stage process.
 
 1. First the user indicates their intention to alter their position by committing to the chain their intended margin, leverage, and market side.
-2. After two price updates, the order is ready to be committed; a keeper finalises the transaction. The contract is then active; the entry price and funding are computed relative to this time.
+2. After the price updates, the order is ready to be committed; a keeper finalises the transaction. The contract is then active; the entry price and funding are computed relative to this time.
 
 At both steps, the wallet must contain enough sUSD to service the intended margin after fees, or else the order will
 revert, or be dropped.
@@ -335,17 +338,45 @@ In order to avoid collisions, for the first implementation, there will be only o
 will be paid into the fee pool. This will be done with a view to upgrading to a more robust and decentralised
 transaction relayer framework as the product matures.
 
+Actions subject to next price fulfillment
+
+- Open Initial Position
+- Close Position
+- Partial Increase / decrease position
+- Going from Long → Short
+
+#### Position Entry Contract
+
+Each action subject to next price update fulfillment is recorded in a “PositionEntry” contract mapping the type of action [ Open Position, Close Position ], timestamp, position size change, to the trader’s address and the position.
+
+To allow for partial increases / decreases in a trader’s open position, each action would be recorded in the “PositonsEntry” array to allow the next price update to be calculated for these actions.
+
+The Synthetix futures frontend would be able to reconcile the positions (by querying the Chainlink aggregators for the next available price) until keepers updates the trader’s position on-chain along with the global funding rate / notional skew calculations.
+
+Due to block gas limitations, there would be a “n” limit of entries per trader address before the trader or a keeper would have to update the “PositionEntry” actions and update the open position data on chain to clear out the “PositionsEntry” for the address.
+
+Keeper to maintain the determined (on next price update) units of the underlying tokens bought or sold and to update the funding rate skew global values (in the total open positions register).
+
+#### Rollup Finalising the trader’s Positions at Next Price Update
+
+When a trader is withdrawing their finalised PnL, pending a next price for the base asset the position is traded in, the withdraw() transaction will calculate the close position action’s final price that the trader can withdraw any margin at.
+
 ### Smart Contract Interface
 
 TBD
 
 ### Test Cases
+
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
+
 Test cases for an implementation are mandatory for SIPs but can be included with the implementation.
 
 ### Configurable Values (Via SCCP)
+
 <!--Please list all values configurable via SCCP under this implementation.-->
+
 Please list all values configurable via SCCP under this implementation.
 
 ## Copyright
+
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
