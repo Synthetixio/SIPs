@@ -1,7 +1,7 @@
 ---
-sccp: TBA
+sccp: 41
 title: Lower C-Ratio by 50% to 650%
-status: WIP
+status: Proposed
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
 created: 2020-08-16
