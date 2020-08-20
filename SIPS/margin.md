@@ -123,6 +123,10 @@ On the other hand, if they are submitting an order on the lighter side of the ma
 part of their order that reduces the skew, and only for the part that induces new skew.
 That is, the fee is \\(max(0, q - |K|) \ p_e \ \phi\\) sUSD.
 
+No fee is charged for closing a position so that funding rate arbitrage is more predictable even as skew changes,
+and in particular always profitable when opening a position on the lighter side of the market. See the
+[funding rate](#skew-funding-rate) section for further details.
+
 ---
 
 #### Liquidations
@@ -158,11 +162,10 @@ It should be borne in mind that if gas prices are too high to allow liquidations
 for liquidators, then liquidations will likely not be performed.
 In this case the system must fall back on relying on good samaritans until the incentive level can
 be raised by SCCP, and the extra incentive of unliquidated positions is ultimately paid out of the debt
-pool.
+pool. Future updates may consider a gas-sensitive liquidation incentive.
 
 The liquidation function should take an array of positions to liquidate;
-if any of the provided positions cannot be liquidated, or has already been liquidated,
-the transaction should not fail, but only liquidate the positions that are eligible.
+if any of the provided positions cannot be liquidated, or has already been liquidated, the transaction should not fail, but only liquidate the positions that are eligible.
 
 ---
 
