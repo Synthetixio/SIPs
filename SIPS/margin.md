@@ -304,7 +304,8 @@ can be updated as follows:
 \\[K \ \leftarrow \ K + s' \ q' - s \ q\\]
 \\[\Delta_e \ \leftarrow \ \Delta_e + m_e' - s' \ v_e' - m_e + s \ v_e\\]
 
-Where \\(s'\\), \\(q'\\), \\(m_e'\\), and \\(v_e'\\) are the contract's basic values post-modification. 
+Where \\(s'\\), \\(q'\\), \\(m_e'\\), and \\(v_e'\\) are the contract's recomputed side, size, and initial margin
+and notional values after the contract is modified. 
 
 | Symbol | Description | Definition | Notes |
 | \\(\Delta_e\\) | Entry margin sum minus notional entry skew | \\[\Delta_e \ := \ \sum_{c \in C}{m_e^c} - (\sum_{c \in C_L}{v_e^c} - \sum_{c \in C_S}{v_e^c})\\] | - |
