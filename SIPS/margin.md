@@ -1,10 +1,11 @@
 ---
-sip: 77
-title: Pooled Margin Trading
+sip: 80
+title: Synthetic Futures 
 status: WIP
 author: TBD
 discussions-to: Create a new thread on https://research.synthetix.io and drop the link here
 created: 2020-08-06
+requires (*optional): 79
 ---
 
 ## Simple Summary
@@ -70,7 +71,7 @@ an arbitrary contract.
 
 | Symbol | Description | Definition | Notes |
 | ------ | ----------- | ---------- | ----- |
-| \\(q\\) | Contract size | - | Measured in units of the base asset, for example a contract worth 10 BTC will have \\(q = 10\\). |
+| \\(q\\) | Contract size | \\(q \ := \ \frac{m_e}{\mu_e \ p_e} \\) | Measured in units of the base asset, for example a contract worth 10 BTC will have \\(q = 10\\). The contract size is computed from a user's margin and leverage. See the [margin](#margins-and-leverage) section for a definition of terms used in the definition. |
 | \\(s\\) | Contract side indicator | \\(s^c \ := \ \begin{cases} 1 & \ \mbox{if } \ c \text{ is long} \\ \\ \newline -1 & \ \mbox{if } \ c \text{ is short} \\ \end{cases} \\) | The sign of \\(s\\) indicates whether a contract is long or short. |
 | \\(p\\) | Base asset spot price | - | We also define \\(p^c_e\\), the spot price when contract \\(c\\) was entered. |
 | \\(v\\) | Notional value | \\(v \ := \ q \ p\\) | This is the dollar value of the base currency units on a contract. In addition to the spot notional value, we also define the entry notional value \\(v_e := q \ p_e\\). |
@@ -180,11 +181,9 @@ and paid into or out of its margin. Hence funding affects each contract's liquid
 
 | Symbol | Description | Definition | Notes |
 | \\(W\\) | Proportional skew | \\[W \ := \ \frac{K}{Q_L + Q_S}\\] | The skew as a fraction of the total market size. |
-| \\(W_{max}\\) | Max funding skew threshold | - | The proportional skew at which the maximum funding rate will be charged (when \\(i = i_{max}\\)). | 
-| \\(i_{max}\\) | Maximum funding rate | - | A percentage per day. Initially \\(i_{max} = 100\%\\). |
+| \\(W_{max}\\) | Max funding skew threshold | - | The proportional skew at which the maximum funding rate will be charged (when \\(i = i_{max}\\)). Initially, \\(W_{max} = 100\%\\) | 
+| \\(i_{max}\\) | Maximum funding rate | - | A percentage per day. Initially \\(i_{max} = 10\%\\). |
 | \\(i\\) | Instantaneous funding rate | \\[i \ := \ clamp(\frac{W}{W_{max}}, -1, 1) \ i_{max} \\]  | A percentage per day. |
-
-**TBD:** Determine initial value for \\(W_{max}\\).
 
 The funding rate can be negative, and has the same sign as the skew. When \\(i\\) is positive, longs pay shorts, while
 when it is negative, shorts pay longs. When \\(K = i = 0\\), no funding is paid, as the market is balanced.
@@ -244,8 +243,8 @@ any time the funding flow changes, it is possible to compute in constant time th
 to a contract per base unit over its entire lifetime.
 
 In the implementation, it is unnecessary to track the time at which each datum of the cumulative
-funding flow was recorded. For convenience we will reuse \\(F\\) for the sequence, but only access
-it by index.
+funding flow was recorded. For convenience we will reuse \\(F\\) for the sequence, to be accessed 
+by index, rather than as a function of time.
 
 Funding will be settled whenever a contract is closed or modified.
 
@@ -255,7 +254,7 @@ Funding will be settled whenever a contract is closed or modified.
 | \\(F\\) | Accumulated funding sequence | \\[F_0 \ := \ 0\\] | \\(F_i\\) denotes the i'th entry in the sequence of accumulated funding per base unit. \\(F_n\\) will be taken to be the latest entry. |
 | \\(j\\) | Last-modified index | \\[j \leftarrow 0\\] at initialisation. | The index into \\(F\\) corresponding to the event that a contract was opened or modified. |
 | \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline s^c \ q^c \ (F_n + F_{last} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
-| \\(di_{max}\\) | Maximum funding rate of change | - | This is an allowable funding rate change per unit of time. If a funding rate update would change it more than this, only add at most a delta of \\(di_{max} * (now - t_{last})\\). |
+| \\(di_{max}\\) | Maximum funding rate of change | - | This is an allowable funding rate change per unit of time. If a funding rate update would change it more than this, only add at most a delta of \\(di_{max} \ (now - t_{last})\\). Initially, \\(di_{max} = 1.25\%\\) per hour. |
 
 Then any time a contract \\(c\\) is modified, first update the accumulated funding sequence:
 
@@ -319,7 +318,7 @@ front-run them for risk free profit. To resolve this, altering a position will b
 require a two-stage process.
 
 1. First the user indicates their intention to alter their position by committing to the chain their intended margin, leverage, and market side.
-2. After two price updates, the order is ready to be committed; a keeper finalises the transaction. The contract is then active; the entry price and funding are computed relative to this time.
+2. After a price update is received, the order is ready to be committed; a keeper finalises the transaction. The contract is then active; the entry price and funding are computed relative to this time.
 
 At both steps, the wallet must contain enough sUSD to service the intended margin after fees, or else the order will
 revert, or be dropped.
