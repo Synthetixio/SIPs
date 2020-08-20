@@ -37,10 +37,12 @@ delay. Such operations include:
 * Futures contract order confirmations
 * Fee reclamation settlements
 
-Users cannot be expected to monitor prices for limit orders, or execute tedious transaction sequences.
+Users cannot be expected to monitor prices for limit orders, or tediously execute the transaction sequences required
+by frontrunning protection.
 This gas tank mechanism allows keepers to execute such deferred transactions and be reimbursed for the gas cost of
-executing them. It is intended that this gas tank will significantly reduce UX friction for these advanced operations,
-but will not be required for standard exchange operations that do not require it.
+executing them. It is intended that this will significantly reduce UX friction for users, as they will not have to
+execute these advanced operations themselves.
+Having a balance in the gas tank will not be required for standard exchange operations that do not need it.
 
 ## Specification
 <!--The specification should describe the syntax and semantics of any new feature, there are five sections
@@ -57,7 +59,7 @@ but will not be required for standard exchange operations that do not require it
 Any operation that needs to be deferred and executed by a keeper must measure its own gas consumption, reporting this 
 quantity to the gas tank contract at the end of the execution. The gas tank will then consult the latest fast gas price
 from [Chainlink](https://feeds.chain.link/fast-gas-gwei), ensure that this does not exceed the user's configured
-maximum gas price, and reimburse the keeper along with a fee to incentivise the execution, from the user's balance.
+maximum gas price, and reimburse the keeper from the user's balance, along with a fee to incentivise the execution.
 
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
@@ -95,8 +97,8 @@ This should be retrievable from the by a new [`SystemSettings.keeperFee()`](http
 
 #### Delegation
 
-In order to support delegation, the [`DelegateApprovals`](https://github.com/Synthetixio/synthetix/blob/4beaa8e00c8226646b5a718cc9e5d1f6f864e751/contracts/DelegateApprovals.sol)
-will need to be updated with a `canManageGasTankFor` function.
+In order to support delegation of gas tank management, the [`DelegateApprovals`](https://github.com/Synthetixio/synthetix/blob/4beaa8e00c8226646b5a718cc9e5d1f6f864e751/contracts/DelegateApprovals.sol)
+contract will need to be updated with a new `canManageGasTankFor` function.
 
 ### Function API
 
