@@ -20,7 +20,7 @@ Ensure the repricing of an iSynth does not trigger the decentralized circuit bre
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-When the protocolDAO resets an iSynth, it must also reset the pricing for the last exchange price tracker in the `Exchanger` contract.
+When the protocolDAO resets an iSynth, it must also update the pricing for the iSynth in the last exchange price tracker in the `Exchanger` contract.
 
 ## Motivation
 
@@ -42,7 +42,7 @@ When the protocolDAO resets an iSynth, it must also reset the pricing for the la
 
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
-When the protocolDAO resets an iSynth, the `lastExchangeRate` in `Exchanger` must be updated to the current synth rate, to indicate a refreshed price for the synth.
+When the protocolDAO resets an iSynth, the `lastExchangeRate` in `Exchanger` must be updated to the current iSynth rate with the latest `entryPoint`, to indicate a refreshed price for the synth.
 
 ### Rationale
 
