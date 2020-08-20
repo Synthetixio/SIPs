@@ -64,17 +64,27 @@ maximum gas price, and reimburse the keeper from the user's balance, along with 
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
-This SIP addresses the question of incentivising keepers to perform actions for users that it would otherwise be too inconvenient for
-them to perform for themelves. Therefore, several different incentive schemes were considered.
+The gas tank addresses the question of incentivising keepers to perform actions for users that it would otherwise be too inconvenient for
+them to perform for themelves. Several different incentive schemes were considered.
 
 #### SNX incentives
 
-Keepers could be incentivised by using the SNX token, but this runs into several issues. First, it means that the responsiveness
-of keepers also depends on the volatility of SNX value... TODO
+A gas tank could be avoided altogether by minting SNX to incentivise keepers, but this runs into several issues:
+
+* the responsiveness of keepers is influenced by volatility in the SNX price
+* the incentive level has to be set carefully to prevent reward farming
+* There are potentially macro-economic consequences, as SNX supply expansion depends upon system demand
 
 #### Synth incentives
 
+Users could deposit synths in their gas tank instead, but this would add additional gas cost to transactions, and
+necessitate keepers to exchange their earnings. If keeper incentives are paid in ether, then they need never
+top up their own balances in order to continue operating.
+
+### Per-transaction incentive levels
+
 TODO
+
 
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
