@@ -57,7 +57,7 @@ Having a balance in the gas tank will not be required for standard exchange oper
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
 Any operation that needs to be deferred and executed by a keeper must measure its own gas consumption, reporting this 
-quantity to the gas tank contract at the end of the execution. The gas tank will then consult the latest fast gas price
+quantity to the gas tank contract at the end of its execution. The gas tank will then consult the latest fast gas price
 from [Chainlink](https://feeds.chain.link/fast-gas-gwei), ensure that this does not exceed the user's configured
 maximum gas price, and reimburse the keeper from the user's balance, along with a fee to incentivise the execution.
 
@@ -99,6 +99,8 @@ This should be retrievable from the by a new [`SystemSettings.keeperFee()`](http
 
 In order to support delegation of gas tank management, the [`DelegateApprovals`](https://github.com/Synthetixio/synthetix/blob/4beaa8e00c8226646b5a718cc9e5d1f6f864e751/contracts/DelegateApprovals.sol)
 contract will need to be updated with a new `canManageGasTankFor` function.
+
+---
 
 ### Function API
 
@@ -163,7 +165,9 @@ Equivalent to `withdrawEtherOnBehalf(msg.sender, recipient, value)`.
 
 Allows system administrators to refund an account's ether balance.
 
-This function should revert if `msg.sender` is not the contract owner.
+This function should revert if:
+
+* `msg.sender` is not the contract owner.
 
 #### `maxGasPriceOf`
 
@@ -253,6 +257,7 @@ the execution of a deferred transaction at a certain gas price.
 
 Records that an account set its max acceptable gas price in wei.
 
+---
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
