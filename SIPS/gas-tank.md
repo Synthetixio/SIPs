@@ -33,7 +33,7 @@ A new `GasTank` contract will be deployed that does the following:
 There are a number of proposed operations in the Synthetix ecosystem which require transactions to be executed after a
 delay. Such operations include:
 
-* Limit orders, stop losses and other triggered orders
+* Limit orders and other future triggered orders
 * Futures contract order confirmations
 * Fee reclamation settlements
 
@@ -93,7 +93,7 @@ TODO
 
 Only contracts that absolutely need it should have the ability to invoke this functionality, and therefore the gas tank
 contract should verify that those attempting to spend user's ether are the correct contracts known to the [`AddressResolver`](https://github.com/Synthetixio/synthetix/blob/1ed6657a4af2e80d0fcc844ce4e381831ef7b931/contracts/AddressResolver.sol).
-Therefore, this contract will itself need to inherit [`MixinResolver`](https://github.com/Synthetixio/synthetix/blob/bf5ea7a433aaab83b9fbaca92f152a52b07b20c5/contracts/MixinResolver.sol).
+Therefore, this contract will need to inherit [`MixinResolver`](https://github.com/Synthetixio/synthetix/blob/bf5ea7a433aaab83b9fbaca92f152a52b07b20c5/contracts/MixinResolver.sol).
 
 #### Upgradeability
 
