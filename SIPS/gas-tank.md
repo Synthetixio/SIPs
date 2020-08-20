@@ -1,12 +1,11 @@
 ---
-sip: 78
+sip: 79
 title: Deferred Transaction Gas Tank 
 status: WIP
-author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
+author: Anton Jurisevic (@zyzek), Clément Balestrat (@clementbalestrat), Clinton Ennis (@hav-noms)
 discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here> 
 
 created: 2020-08-19
-requires (*optional): <SIP number(s)>
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
@@ -62,7 +61,6 @@ from [Chainlink](https://feeds.chain.link/fast-gas-gwei), ensure that this does 
 maximum gas price, and reimburse the keeper from the user's balance, along with a fee to incentivise the execution.
 
 ### Rationale
-<!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
 The gas tank addresses the question of incentivising keepers to perform actions for users that it would otherwise be too inconvenient for
 them to perform for themelves. Several different incentive schemes were considered.
@@ -81,11 +79,6 @@ Users could deposit synths in their gas tank instead, but this would add additio
 necessitate keepers to exchange their earnings. If keeper incentives are paid in ether, then they need never
 top up their own balances in order to continue operating.
 
-### Per-transaction incentive levels
-
-TODO
-
-
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 
@@ -97,13 +90,16 @@ Therefore, this contract will need to inherit [`MixinResolver`](https://github.c
 
 #### Upgradeability
 
-The gas tank contract should not operate if the system is suspended, and should itself be pausable for upgrades. For the same reason,
-it should have a separated state that holds user balances and ether.
+The gas tank contract should not operate if the system is suspended, and should itself be pausable for upgrades.
+For the same reason, it should have a separated state contract that holds user balances and ether; the two contracts
+should retrieve each other's address through the `AddressResolver`.
 
 #### Execution Fee
 
 Each execution by a keeper will be incentivised by flat SCCP-configurable keeper fee, stored as a global system setting.
 This should be retrievable from the by a new [`SystemSettings.keeperFee()`](https://github.com/Synthetixio/synthetix/blob/bf5ea7a433aaab83b9fbaca92f152a52b07b20c5/contracts/SystemSettings.sol) function.
+This will return the USD value of ether to be awarded to keepers, and should generally be kept as low as possible while
+still being incentivising for keepers to operate.
 
 #### Delegation
 
@@ -169,16 +165,6 @@ This function should revert if:
 
 Equivalent to `withdrawEtherOnBehalf(msg.sender, recipient, value)`.
 
-#### `refundEther`
-
-**Signature:** `function refundEther(address payable account) external`
-
-Allows system administrators to refund an account's ether balance.
-
-This function should revert if:
-
-* `msg.sender` is not the contract owner.
-
 #### `maxGasPriceOf`
 
 **Signature:** `function maxGasPriceOf(address account) external view returns (uint maxGasPriceWei)`
@@ -208,12 +194,19 @@ Equivalent to `setMaxGasPriceOnBehalf(msg.sender, maxGasPriceWei)`
 Fetches the current fast gas price from Chainlink's [Fast Gas / Gwei aggregation](https://feeds.chain.link/fast-gas-gwei),
 returning it as a quantity of wei.
 
+#### `currentEtherPrice`
+
+**Signature:** `function currentEtherPrice() external view returns (uint currentEtherPrice)`
+
+Fetches the current ether price from Chainlink's [ETH / USD aggregation](https://feeds.chain.link/eth-usd).
+
 #### `executionCost`
 
 **Signature:** `function executionCost(uint gas) external returns (uint etherCost)`
 
-Returns the cost in ether to spend a given quantity of gas at the current gas price, plus the keeper fee.
-That is, this returns `gas * currentGasPrice() + SystemSettings.keeperFee()`.
+Returns the cost in ether to spend a given quantity of gas at the current gas price, plus the keeper fee,
+plus the execution cost of an invocation of the `spendGas` function.
+That is, this returns `gas * currentGasPrice() + SystemSettings.keeperFee() / currentEtherPrice() + cost(spendGas)`.
 
 #### `spendGas`
 
@@ -271,11 +264,14 @@ Records that an account set its max acceptable gas price in wei.
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
-Test cases for an implementation are mandatory for SIPs but can be included with the implementation.
+
+See implementation.
 
 ### Configurable Values (Via SCCP)
 <!--Please list all values configurable via SCCP under this implementation.-->
-Please list all values configurable via SCCP under this implementation.
+
+| Value | Type | Description |
+| `keeperFee` | `uint` | The usd value of ether to pay keepers when they execute a gas-reimbursed deferred transaction |
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
