@@ -1,9 +1,9 @@
 ---
-sip: <to be assigned>
+sip: 81
 title: Remove Centralized Oracle
 status: WIP
 author: Justin J Moses (@justinjmoses)
-discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here>
+discussions-to: https://research.synthetix.io/t/sip-x-removal-of-snx-oracle/184
 
 created: 2020-08-25
 requires (*optional): 36, 75
