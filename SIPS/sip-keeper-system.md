@@ -1,8 +1,8 @@
 ---
-sip: 72
+sip: TBD
 title: Synthetix Keeper System
 status: WIP
-author: Jackson Chan (@jacko125)
+author: Jackson Chan (@jacko125), Justin Moses (@justinjmoses)
 discussions-to: https://discord.gg/kPPKsPb
 
 created: 2020-07-14
@@ -36,7 +36,6 @@ There are a number of core functions on Synthetix protocol that require keepers 
 1. FreezeSynths for Inverse Synths
 2. Settle fee reclamation for Synth exchanges
 3. Resolving Binary option markets
-4. Requesting the next price update from Chainlink Oracles
 5. Executing / clearing virtual Synth tokens
 6. Synthetix Futures keepers and liquidation
 7. Feepool period closure
@@ -60,10 +59,6 @@ https://research.synthetix.io/t/sip-keeper-function-settlement-of-exchange-entri
 ### Freeze Inverse Synths
 
 https://research.synthetix.io/t/sip-72-freeze-inverse-synths/109
-
-### Requesting / pulling next price update from Chainlink Oracles
-
-https://research.synthetix.io/t/sip-keeper-function-requesting-pulling-next-price-update-from-chainlink-oracles/110
 
 ### Resolving Binary option markets
 
