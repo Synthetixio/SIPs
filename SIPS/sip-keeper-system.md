@@ -12,7 +12,7 @@ created: 2020-07-14
 A generalised Synthetix keeper contract will be able to incentivise certain functions in the Synthetix protocol to be managed in a decentralised manner. The rewards, which can be SNX or other tokens / ether will be held in the keeper contract.
 
 ## Abstract
-This SIP proposes a generalised Synthetix keeper contract to reward keeper functions like Exchange settlement, iSynth freezing, Chainlink pull request for prices and Binary option market resolutions.
+This SIP proposes a generalised Synthetix keeper contract to reward keeper functions like Exchange settlement, iSynth freezing, fee period closing and resolving binary option markets.
 
 ## Motivation
 The reason for a generalised keeper system / contract is to provide reward incentives for decentralised keepers to help manage the Synthetix protocol. The generalised keeper system will be able to set the amount of incentive and rewards for each function in the platform that requires keepers to manage.
@@ -36,9 +36,8 @@ There are a number of core functions on Synthetix protocol that require keepers 
 1. FreezeSynths for Inverse Synths
 2. Settle fee reclamation for Synth exchanges
 3. Resolving Binary option markets
-5. Executing / clearing virtual Synth tokens
-6. Synthetix Futures keepers and liquidation
-7. Feepool period closure
+4. Executing / clearing virtual Synth tokens
+5. Feepool period closure
 
 ### Keeper Incentives
 
