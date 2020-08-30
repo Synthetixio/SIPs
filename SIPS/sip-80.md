@@ -110,7 +110,7 @@ increases the contract's liquidation risk.
 | Symbol | Description | Definition | Notes |
 | ------ | ----------- | ---------- | ----- |
 | \\(\mu_e\\) | Initial margin ratio | - | The inverse of a contract's initial leverage. For example, \\(\mu_e = 0.5\\) corresponds to 2x leverage. |
-| \\(\mu_{min}\\) | Minimum initial margin ratio | - | The selected margin level must be no lower than this. We constrain \\[\mu_{min} \leq \mu_e\\]. Thus, this also constrains the maximum leverage. |
+| \\(\mu_{min}\\) | Minimum initial margin ratio | \\(\mu_{min} \ := \ \frac{1}{\lambda_{max}}\\) | The selected margin level must be no lower than this. We constrain \\[\mu_{min} \leq \mu_e\\]. Thus, this also constrains the maximum leverage. |
 | \\(m_e\\) | Initial margin | \\(m_e \ := \ \mu_e \ q \ p_e\\) | This is the quantity of sUSD the user initially spends to open a contract of \\(q\\) units of the base currency. The remaining \\(v_e - m_e\\) sUSD to pay for the rest of the position is "borrowed" from SNX holders, and it must be paid back when the position is closed. |
 | \\(m\\) | Remaining margin | \\(m \ := \ max(m_e + r + f, 0)\\) | A contract's remaining margin is its initial margin, plus its profit \\(r\\) and funding \\(f\\) (described below). When the remaining margin reaches zero, the position is liquidated, so that it can never take a negative value. |
 
