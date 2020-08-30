@@ -97,7 +97,7 @@ open on that market. Additional parameters control the leverage offered on a par
 | \\(b\\) | Base asset | - | For example, BTC, ETH, and so on. The price \\(p\\) defined above refers to this asset. |
 | \\(Q_L\\), \\(Q_S\\) | Market Size | \\[Q_L \ := \ \sum_{c \in C_L}{q^c}\\] \\[Q_S \ := \ \sum_{c \in C_S}{q^c}\\] | The total size of all outstanding contracts on a given side of the market. |
 | \\(K\\) | Market skew | \\(K \ := \ Q_L - Q_S\\) | The excess contract units on one side or the other. When the skew is positive, longs outweigh shorts; when it is negative, shorts outweigh longs. When \\(K = 0\\), the market is perfectly balanced. |
-| \\(Q_{max}\\) | Open interest cap | - | We constrain \\(Q_L \leq Q_{max}\\) and \\(Q_S \leq Q_{max}\\). Orders cannot be opened that would cause the size of either side of the market to exceed this limit. The cap will initially be \\(1,000,000\\) units on each side of the market. |
+| \\(Q_{max}\\) | Open interest cap | - |  Orders cannot be opened that would cause the size of either side of the market to exceed this limit. We constrain both: \\[Q_L \leq Q_{max}\\] \\[Q_S \leq Q_{max}\\] The cap will initially be \\(1\,000\,000\\) units on each side of the market. |
 | \\(\lambda_{max}\\) | Maximum leverage | - | The size of a contract must not exceed its initial margin multiplied by the maximum leverage. Initially this will be no greater than 10. |
 
 ---
