@@ -47,13 +47,27 @@ The keeper contract would be able to allocate an amount of SNX / token rewards f
 
 Rewards paid in SNX will utilise the `exchangeRates` contract to get the USD value of SNX and the rewards paid will be based in USD value. This will ensure that a fair amount of SNX reward is given to keepers to compensate them.
 
-The keeper rewards would target a specific gas price (in gwei) that the keeper actions will be executed at. When the gas price fluctuates above the target gas price then we would expect keepers to cap their gas price for executing the keeper functions.
+### Time Sensitive Keeper functions
 
-If it is observed that the USD rewards allocated is sufficient / insufficient to have keeper actions completed within a specific time frame, then it would be possible to update the USD rewards to ensure actions are completed. If the reward is more than the marginal gas cost + running costs of completing the action, then in an efficient market keepers would continue performing the actions.
+Certain functions within the Synthetix ecosystem needs to be done in a timely manner and mined even when the gas prices are high.
 
-### Settlement of Exchange Entries
+Keeper functions that are time sensitive will have the `gas cost` rebated up to a `max of fast gas price` from [Chainlink's Fast gas oracle](https://feeds.chain.link/fast-gas-gwei) that the keeper actions will be executed at and reimbursed for (`USD value = Gas used * fast gas price * ETH price`), plus a keeper's reward fee for each specific action that is configurable via SCCP.
 
-https://research.synthetix.io/t/sip-keeper-function-settlement-of-exchange-entries/107
+This ensures that the gas costs are covered and also an incentive is also available for running the keepers.
+
+The `gas used` for each keeper function could be calcualted on the smart contract level by gas metering using `gasleft()` at the start of the keeper function plus a `21,000` gas stipend for iniating a transaction.
+
+```
+function keepable() {
+    uint gasUsed = gasLeft();
+    ...
+    gasUsed -= gasLeft();
+
+    _payKeeper(gasUsed);
+}
+```
+
+- `MaxGasPrice`: A max gas price parameter that caps the highest fast gas price possible (overrides Chainlink fast gas price) in extreme scenarios and protection from oracle issues.
 
 ### Freeze Inverse Synths
 
@@ -67,13 +81,15 @@ https://research.synthetix.io/t/sip-keeper-function-resolving-binary-option-mark
 
 https://research.synthetix.io/t/sip-keeper-function-executing-and-claiming-virtual-tokens/112
 
-### Synthetix Futures keepers and liquidation
-
-https://research.synthetix.io/t/sip-keeper-function-synthetix-futures-keepers-and-liquidation/113
-
 ### Feepool period closure
 
 https://research.synthetix.io/t/sip-keeper-function-feepool-close-current-fee-period/122
+
+**Non-time sensitive functions:**
+
+### Settlement of Exchange Entries
+
+https://research.synthetix.io/t/sip-keeper-function-settlement-of-exchange-entries/107
 
 ## Rationale
 
@@ -107,6 +123,9 @@ Test cases for an implementation are mandatory for SIPs but can be included with
 ## Configurable Values (Via SCCP)
 
 Each action that a keeper could perform will have a configurable amount of USD value / SNX / token rewards that are paid to cover gas costs and running a keeper system.
+
+- `KeeperRewardFee`: USD value for the
+- `MaxGasPrice`: A max gas price parameter that caps the highest fast gas price possible (overrides Chainlink fast gas price) in extreme scenarios / issues with the oracle.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
