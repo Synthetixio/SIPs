@@ -89,7 +89,7 @@ Having a public function that reads the latest Chainlink prices and synth total 
 
 - `Issuer.updateDebtPoolSnapshot()` Public function that updates the debt pool snapshot to latest values
 
-- `Issuer.totalIssuedSynths()` Current view function to get latest total issued synths and debt pool size
+- `Issuer.totalIssuedSynths()` Current view function to get latest total issued synths and debt pool size. Used by bot to view and calculate the % deviation between last snapshot and the current actual `totalIssuedSynths()`
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
