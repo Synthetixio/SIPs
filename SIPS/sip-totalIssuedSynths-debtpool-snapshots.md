@@ -57,7 +57,9 @@ Utilising a debt pool snapshot could expose frontminting opportunities when ther
 
 #### Keeper Bot
 
-The public function to update the `debt pool snapshot` will require a bot to pay for the gas to read and update the snapshot value on-chain. This function will be expensive to execute but provide a high level of utility for minting and burning transactions that subsequently rely on the sanpshot of the synths prices and debt pool size.
+The public function to update the `debt pool snapshot` will require a bot to pay for the gas to read and update the snapshot value on-chain. This function will be expensive to execute but provide a high level of utility for minting and burning transactions that subsequently rely on the snapshot of the synths prices and debt pool size.
+
+As the gas savings are in the vicinity of `~800,000` gas for minting, burning and claiming rewards, it would be possible to have SNX stakers pay a small proportion of the gas when they are minting, burning and claiming rewards towards the incentives to manage the snapshots.
 
 The keeper bot would aim to maintain the debt pool snapshot within a % threshold of current prices and synths total supply but balance the frequency of how often these debt pool snapshots are created.
 
@@ -89,7 +91,7 @@ Having a public function that reads the latest Chainlink prices and synth total 
 
 - `Issuer.updateDebtPoolSnapshot()` Public function that updates the debt pool snapshot to latest values
 
-- `Issuer.totalIssuedSynths()` Current view function to get latest total issued synths and debt pool size. Used by bot to view and calculate the % deviation between last snapshot and the current actual `totalIssuedSynths()`
+- `Issuer.totalIssuedSynths()` Current view function to get latest total issued synths and debt pool size. Used by bot to view and calculate the % deviation between last snapshot and the current actual `totalIssuedSynths()`. Excludes any of the EtherCollateral backed synths generated as not backed by SNX collateral.
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
