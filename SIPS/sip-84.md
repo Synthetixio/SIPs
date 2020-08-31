@@ -1,7 +1,7 @@
 ---
 sip: 84
 title: Pause Synths Below Open Interest Threshold
-status: WIP
+status: Proposed
 author: Kain Warwick (@kaiynne), Jackson Chan (@jacko125)
 discussions-to: TBC
 
@@ -21,7 +21,7 @@ Pause synths that are below the open interest threshold in order to reduce the g
 
 This SIP proposes to pause synths with a supply below `50k USD` until a new SIP can be implemented that leverages Chainlink to reduce the cost of calculating the debt pool. Pausing these synths will reduce the cost of minting and burning by as much as 75%. While this proposal is not ideal, it is important as without it the migration to external oracles will increase the cost of minting and burning by more than 50%.
 
-We propose to freeze the prices of synths below the open interest threshold of `50k USD`, we will then purge them into `sUSD` and temporarily disconnect them until we can get a workaround implemented ([such as this](https://github.com/Synthetixio/SIPs/pull/233)).
+We propose to freeze the prices of synths below the open interest threshold of `50k USD`, we will then purge them into `sUSD` and temporarily disconnect them until we can get a workaround implemented ([sip-83](https://sips.synthetix.io/sips/sip-83)).
 
 ## Motivation
 
@@ -29,7 +29,7 @@ We propose to freeze the prices of synths below the open interest threshold of `
 
 In the current gas environment minting and burning costs can reach \$50 USD per tx or higher. This is because the protocol needs to know the size of the debt pool, and it is calculated by summing up the `USD` value of all 40+ synths `totalSupply`.
 
-With the migration to decentralized oracles in [SIP-36](./sip-36.md), there is even more additional gas costs of reading state from external contracts via the `CALL` opcode for each and every synth, along with the existing `SLOAD` required to read contract state. These additional `CALL` codes impact issuance transactions by `5-100%`. By temporarily reducing the number of Synths we can reduce the gas costs below the current amount even after factoring in the increase.
+With the migration to decentralized oracles in [SIP-36](https://sips.synthetix.io/sips/sip-36), there is even more additional gas costs of reading state from external contracts via the `CALL` opcode for each and every synth, along with the existing `SLOAD` required to read contract state. These additional `CALL` codes impact issuance transactions by `5-100%`. By temporarily reducing the number of Synths we can reduce the gas costs below the current amount even after factoring in the increase.
 
 ## Specification
 
@@ -45,7 +45,7 @@ With the migration to decentralized oracles in [SIP-36](./sip-36.md), there is e
 
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
-We will specificy a threshold for Synth open interest, any synth that falls below this threshold will be frozen and purged following the _Pollux_ release. [Another SIP](https://github.com/Synthetixio/SIPs/pull/233) has been proposed that once implemented, will reduce gas such that these synths can be resumed. The changes will allow us to significantly expand the range of support synths without incurring incremental gas costs.
+We will specificy a threshold for Synth open interest, any synth that falls below this threshold will be frozen and purged following the _Pollux_ release. [SIP-83](https://sips.synthetix.io/sips/sip-83) has been proposed that once implemented, will reduce gas such that these synths can be resumed. The changes will allow us to significantly expand the range of support synths without incurring incremental gas costs.
 
 ### Rationale
 
