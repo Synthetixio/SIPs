@@ -1,5 +1,5 @@
 ---
-sip: 82
+sip: 84
 title: Pause Synths Below Open Interest Threshold
 status: WIP
 author: Kain Warwick (@kaiynne), Jackson Chan (@jacko125)
@@ -13,7 +13,7 @@ requires: Insert SIP for debt aggregation calcs
 
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-Pause synths that are below the open interest threshold in order to reduce the gas costs of issuance.
+Pause synths that are below the open interest threshold in order to reduce the gas costs of issuance, fee claiming and transfers
 
 ## Abstract
 
