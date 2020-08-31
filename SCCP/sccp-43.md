@@ -1,6 +1,6 @@
 ---
 sccp: 43
-title: Pollux Updates
+title: Pollux Updates for Chainlink Oracles
 author: Kain Warwick (@kaiynne), Justin Moses (@justinjmoses)
 discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here>
 status: WIP
