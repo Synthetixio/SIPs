@@ -1,6 +1,6 @@
 ---
-sccp: TBA
-title: Lower Rewards on Curve to SNX 8,000
+sccp: 42
+title: Lower rewards on Curve to SNX 8,000
 status: Proposed
 author: KALEB (@KalebKeny)
 discussions-to: governance
@@ -9,7 +9,7 @@ created: 2020-08-31
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-This SCCP proposes to decrease the rewards paid on Curve to incentivize the sUSD pool to SNX 8k per week.
+Propose to decrease the SNX rewards paid to incentivize the Curve sUSD pool to SNX 8k per week.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
