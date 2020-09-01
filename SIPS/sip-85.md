@@ -15,7 +15,7 @@ This SIP proposes a model for socializing the costs of managing the oracle while
 
 The Pollux release is set to increase the gas costs to mint, burn and claim by 50%. The reason for this is that the Synthetix contracts read the current price of every synth in the ecosystem on every transaction to validate the debt balance precisely. With roughly 40 synths, the increase in gas from the Chainlink update in Pollux will be substantial. 
 
-This SIP proposes a model where each mint, burn, claim or transfer transaction will contribute atomically to the management of the oracle. On each of these transactions, the Synthetix contract updates the price of one synth and records the updated value of debt in a cumulative variable. The Synthetix contracts are some of the most active on Ethereum, meaning the full portfolio of synths would be updated frequently. Even during slow days on the network, this cycle is likely to complete in less than 15 minutes. In some cases, this system may allow for 
+This SIP proposes a model where each mint, burn, claim or transfer transaction will contribute atomically to the management of the oracle. On each of these transactions, the Synthetix contract updates the price of one synth and records the updated value of debt in a cumulative variable. The Synthetix contracts are some of the most active on Ethereum, meaning the full portfolio of synths would be updated frequently. Even during slow days on the network, this cycle is likely to complete in less than 15 minutes. In some cases, this SIP may allow for more frequent updates than previously.
 
 ## Motivation
 Synthetix contracts are already some of the most expensive on Ethereum. The Chainlink update will compound that problem. SIP 84's suggested solution is to disable a large segment of the current synth assets. Regardless of their usage, this change would mean diminishing the quality of the exchange offering. 
@@ -28,7 +28,7 @@ The `_totalIssuedSynths` function on the **Issuer** contract would no longer ite
 
 The implementations for claiming, burning and transferring will mostly be along the same lines, without too much added complexity.
 
-These changes would reduce the costs of reading the debt balance by 95%. Reading the debt balance accounts for a significant percentage of the gas spent on Synthetix contracts. While there will be additional gas costs from writing to storage, these changes will still result in noticeably lower gas costs. In some cases, this SIP might actually result in the oracle price updating more frequently than previously.
+These changes would reduce the costs of reading the debt balance by 95%. Reading the debt balance accounts for a significant percentage of the gas spent on Synthetix contracts. While there will be additional gas costs from writing to storage, these changes will still result in noticeably lower gas costs.
 
 With the delays on burning-after-minting implemented in SIP 40, the risk of frontminting should remain negligible.
 
