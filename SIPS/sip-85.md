@@ -9,7 +9,7 @@ created: 2020-08-31
 
 ## Simple Summary
 
-This SIP proposes a model for socializing the costs of managing the reading of the oracle while reducing gas costs to mint, claim, burn and transfer significantly. 
+This SIP proposes a model for socializing the costs of reading of the oracle while reducing gas costs to mint, claim, burn and transfer significantly. 
 
 ## Abstract
 
