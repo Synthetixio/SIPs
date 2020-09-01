@@ -22,7 +22,7 @@ Synthetix contracts are already some of the most expensive on Ethereum. The Chai
 
 ## Technical Specification
 
-Using the process of issuing synths as an example, the `_internalIssueSynths` function on the **Issuer** contract would call an additional internal functional called `_updateSynthPrice` which would record the price of one single synth and use the token supply to update the cumulative running debt variable `totalSynthValue`. The contract would iterate through the 40+ synths sequentially using a `synthPriceUpdateIterator` - one synth read-and-write per user transaction. 
+Using the process of issuing synths as an example for how this could be implemented across the system, the `_internalIssueSynths` function on the **Issuer** contract would call an additional internal functional called `_updateSynthPrice` which would record the price of one single synth and use the token supply to update the cumulative running debt variable `totalSynthValue`. The contract would iterate through the 40+ synths sequentially using a `synthPriceUpdateIterator` - one synth read-and-write per user transaction. 
 
 The `_totalIssuedSynths` function on the **Issuer** contract would no longer iterate through the full universe of synths reading each price. The contract would only need to read from a `totalSynthValue` variable. 
 
