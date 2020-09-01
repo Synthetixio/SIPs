@@ -9,7 +9,7 @@ created: 2020-08-31
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-Decrease the iETH SNX rewards incentivive from 32k SNX to 16k SNX per week and add it to the RewardsDistribution contract from the inflationary supply.
+Decrease the iETH SNX rewards incentive from 32k SNX to 16k SNX per week and add it to the RewardsDistribution contract from the inflationary supply.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
