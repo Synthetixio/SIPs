@@ -3,7 +3,7 @@ sip: 83
 title: Total Issued Synths (Debt pool) Snapshots
 status: WIP
 author: Kain Warwick (@kaiynne), Jackson Chan (@jacko125)
-discussions-to: TBC
+discussions-to: https://research.synthetix.io/t/sip-83-total-issued-synths-debt-pool-snapshots/190
 
 created: 2020-08-31
 requires: TBC
