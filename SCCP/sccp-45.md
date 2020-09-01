@@ -9,11 +9,11 @@ created: 2020-08-31
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-Decrease the iETH SNX rewards incentivize 16k SNX per week and add to the RewardsDistribution contact from the inflationary supply.
+Decrease the iETH SNX rewards incentivive from 32k SNX to 16k SNX per week and add it to the RewardsDistribution contract from the inflationary supply.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
-The iETH trial incentive has run for months now being paid for by the synthetixDAO at a consistent rate of 32,000 SNX per week. The iETH incentive should be included in the weekly inflationary supply rewards distribution of 16K per week.
+The iETH trial incentive has run for several months being paid by the synthetixDAO at a consistent rate of 32,000 SNX per week. Given the value of this incentive in balancing the debt pool the iETH incentive should be included in the weekly inflationary supply rewards distribution.
 
 Configure the [RewardsDistribution](http://contracts.synthetix.io/RewardsDistribution) to add the iETH contract address to automate the distribution of 16K SNX weekly.
 
