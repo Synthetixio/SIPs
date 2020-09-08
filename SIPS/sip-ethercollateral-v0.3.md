@@ -127,10 +127,6 @@ The liquidation mechanism ensures that the issued sUSD is always fully backed by
 
 - Withdraw ETH from an open loan that is above the 200% collateral ratio. Useful when ETH-USD value increases.
 
-##### `issueSynths() payable` function
-
-- Issue additional sUSD synths on an existing loan up to 200% collateral ratio.
-
 ###### `CloseLoan()` function
 
 - Require sUSD loan balance + accrued interest(5%) in wallet
