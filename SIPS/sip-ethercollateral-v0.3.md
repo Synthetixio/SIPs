@@ -94,9 +94,9 @@ The liquidation mechanism ensures that the issued sUSD is always fully backed by
 
 ##### `CreateLoan() payable` function
 
-- Require sETH to mint does not exceed cap
+- Require sUSD to mint does not exceed issueLimit
 - Require openLoanClosing to be false
-- Issue sUSD to c-ratio (200%)
+- Issue sUSD to c-ratio (150%)
 - Store Loan: account address, creation timestamp, sUSD amount issued
 
 ```
@@ -125,17 +125,22 @@ The liquidation mechanism ensures that the issued sUSD is always fully backed by
 
 ##### `withdrawCollateral() payable` function
 
-- Withdraw ETH from an open loan that is above the 200% collateral ratio. Useful when ETH-USD value increases.
+- Withdraw ETH from an open loan that is above the 150% collateral ratio. Useful when ETH-USD value increases.
 
 ###### `CloseLoan()` function
 
-- Require sUSD loan balance + accrued interest(5%) in wallet
-- Fee Distribution. Deduct interest and transfer to fee pool.
+- Require sUSD loan balance + accrued interest(5%) + minting fee (if applicable 0.5%) in wallet
+- Fee Distribution. Deduct interest and transfer to fee pool to be distributed to SNX stakers
 - Burn all sUSD loaned via ETH collateral.
 - Unlock ETH and send ETH back to loan creator.
 
+##### `liquidateLoan(loanID, debtToCover)` function
+
+- Using sUSD will repay off the debt to restore the loan back to 150% collateral ratio. 
+
 ### sUSD contract
 
+- Upgraded to MultiCollateralSynth
 - modifier to allow EtherCollateral-sUSD to issue sUSD
 - configuration (or contract resolver) for the EtherCollateralsUSD address
 
@@ -146,7 +151,7 @@ The liquidation mechanism ensures that the issued sUSD is always fully backed by
 ### FeePool contract
 
 - `FeePool.recordFeePaid(amount)` external function to record fees to distribute for the open fee period.
-- Synths to notify amount of fees in sUSD transferred into the FEE_ADDRESS (`0xfeEFEEfeefEeFeefEEFEEfEeFeefEEFeeFEEFEeF`)
+- modifier to allow EtherCollateral-sUSD to call `FeePool.recordFeePaid(amount)`
 
 ### Test Cases
 
@@ -158,7 +163,7 @@ Test cases for an implementation are mandatory for SIPs but can be included with
 
 <!--Please list all values configurable via SCCP under this implementation.-->
 
-Please list all values configurable via SCCP under this implementa
+Please list all values configurable via SCCP under this implements
 
 1. Supply cap / debt ceiling - 10m sUSD
 2. Interest rate - 5.0%
