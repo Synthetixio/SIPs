@@ -59,7 +59,7 @@ The interest rate charged on the sUSD borrowed will be payable to SNX holders in
 
 Loans will be open for liquidations when the ETH value (collateral ratio) backing the loan drops below the liqudation ratio. The default liquidation ratio will be at 150%. The ETH price will be read from the `ExchangeRates` contract which is using the Chainlink `ETH-USD` oracle.
 
-The Collateral ratio of a loan can be calculated as: `ETH-USD value * ETH locked as collateral / sUSD loan value`.
+The Collateral ratio of a loan can be calculated as: `ETH-USD value * ETH locked as collateral / sUSD loan value + interest fees accrued`.
 
 When loans are liquidated they will incur a liquidation penalty taken out of the remaining ETH collateral.
 
@@ -141,7 +141,7 @@ The liquidation mechanism ensures that the issued sUSD is always fully backed by
 
 ### Synthetix contract
 
-- debtBalanceOf calculation `totalIssuedSynths() - EtherCollateral.totalIssuedSynths() - EtherCollateralsUSD.totalIssuedSynths().`
+- debtBalanceOf / totalIssuedSynthsExcludingEtherCollateral calculation `totalIssuedSynths() - EtherCollateral.totalIssuedSynths() - EtherCollateralsUSD.totalIssuedSynths().`
 
 ### FeePool contract
 
