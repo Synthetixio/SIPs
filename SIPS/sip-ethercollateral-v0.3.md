@@ -25,7 +25,7 @@ Ether collateral v0.3 will allow Ether to be locked to mint sUSD. This sUSD debt
 
 There are interest fees associated with opening an ETH backed sUSD loan, an interest rate (APR) calculated per second based on the block timestamp is calculated on the sUSD amount borrowed. The interest charged (sUSD) on the loan will be paid to SNX Minters into the fee pool when the loan is repaid.
 
-sUSD borrowers can loan up to a maximum of 200% of their ETH collateral value, and the ETH collateral backing the sUSD loan will be open for liquidations when the collateral value is 150% or less. There will be a liquidation penalty for liquidated loans paid to liquidators.
+The ETH collateral backing the sUSD loan will be open for liquidations when the collateral value is 150% or less. There will be a liquidation penalty for liquidated loans paid to liquidators.
 
 Initially there will be a supply cap / ceiling of 10m sUSD that can be issued and can be increased via governance and is based on the sUSD peg being maintained.
 
@@ -84,7 +84,7 @@ The liquidation mechanism ensures that the issued sUSD is always fully backed by
 - Configuration
   - interestRate: If updated, all new loans will be opened at the new interestRate: default is 5%.
   - issueLimit: Maximum amount of sUSD that can be issued by the EtherCollateral contract. Default 10m sUSD
-  - issuanceRatio: Collaterization ratio. Default 200%
+  - issuanceRatio: Collaterization ratio. Default 150%
   - issueFeeRate: Minting for creating the loan. Default 0 bips.
   - liquidationPenalty: Penalty paid to liquidators when liquidating loan. Default 10%
   - openLoanClosing: Boolean to allow anyone to close the loans with sUSD.
