@@ -69,9 +69,17 @@ When loans are liquidated they will incur a liquidation penalty taken out of the
 
 The rationale of implementing sUSD borrowing using ETH as collateral allows Synthetix to increase the supply of sUSD synths.
 
-Updating the existing Ether Collateral trial to issue sUSD allows borrowers to leverage their ETH for sUSD while maintaining price exposure to ETH. As the loan is denominated in sUSD instead of sETH, it is necessary to introduce a liquidation mechanism for loans that fall below the liquidation ratio determined by the ETH-USD value of the collateral.
+Updating the existing Ether Collateral trial to issue sUSD allows borrowers to leverage their ETH for sUSD while maintaining price exposure to ETH. As the loan is denominated in sUSD instead of sETH, it is necessary to introduce a liquidation mechanism for loans that fall below the liquidation ratio determined by the ETH-USD value of the collateral. For example, a loan with a 150% liquidation ratio will require a minimum of $1.50 of collateral value for every $1 of sUSD borrowed.
 
 The liquidation mechanism ensures that the issued sUSD is always fully backed by ETH collateral and can be redeemed for ETH.
+
+#### Liquidations ####
+
+Liquidators can liquidate a loan when the collateral value drops below the liquidation ratio. The default liquidation ratio for ETH collateral is 150%.
+
+The liquidation penalty is payable to liquidators out of the collateral value. For example, when a loan of $1000 is liquidated, the liquidator will recieve `$1000 * 1.10 = $1100` worth of the collateral.
+
+The remaining collateral can be withdrawn by the loan creator after the loan has been liquidated.
 
 ### Technical Specification
 
@@ -115,7 +123,7 @@ The liquidation mechanism ensures that the issued sUSD is always fully backed by
         // When the loan was paidback (closed)
         uint256 timeClosed;
         // Applicable Interest rate
-        uint256 interestRate;
+        uint256 loanInterestRate;
     }
 ```
 
@@ -134,9 +142,9 @@ The liquidation mechanism ensures that the issued sUSD is always fully backed by
 - Burn all sUSD loaned via ETH collateral.
 - Unlock ETH and send ETH back to loan creator.
 
-##### `liquidateLoan(loanID, debtToCover)` function
+##### `liquidateLoan(loanCreatorsAddress, loanID, debtToCover)` function
 
-- Using sUSD will repay off the debt to restore the loan back to 150% collateral ratio. 
+- Using sUSD will repay off the debt of the loan when the loan's collateral value is below the liquidation ratio.
 
 ### sUSD contract
 
