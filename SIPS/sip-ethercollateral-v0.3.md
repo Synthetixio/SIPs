@@ -21,7 +21,7 @@ The first iteration of [Ether collateral](./sip-35.md) allowed borrowers to lock
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-Ether collateral v0.3 will allow Ether to be locked to mint sUSD. This sUSD debt will be backed by the Ether locked and over-collateralised up to 150%. This allows the supply of synths to be more flexible to meet demand for sUSD, keeping the sUSD peg closer to \$1, and the ability for borrowing interest fees to be paid to SNX minters.
+Ether collateral v0.3 will allow Ether to be locked to mint sUSD. This sUSD debt will be backed by the Ether locked and over-collateralised up to 150%. This allows the supply of synths to be more flexible to meet demand for sUSD, keeping the sUSD peg closer to $1, and the ability for borrowing interest fees to be paid to SNX stakers.
 
 There are interest fees associated with opening an ETH backed sUSD loan, an interest rate (APR) calculated per second based on the block timestamp is calculated on the sUSD amount borrowed. The interest charged (sUSD) on the loan will be paid to SNX Minters into the fee pool when the loan is repaid.
 
