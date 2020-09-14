@@ -19,7 +19,7 @@ Increase fees to 50 bp on synths which are pushed with a 1% deviation threshold.
 
 ## Motivation
 
-Analysis of on-chain data showed that front-running opportunities were more accessible after migration to chainlink price updates. Increasing those fees to 50 bp should help reduce that window.
+Analysis of on-chain data showed that front-running opportunities were more accessible after migration to chainlink price updates. Increasing fees to 50 bp on synths with a 1% deviation threshold push should help close that window.
 
 ## Copyright
 
