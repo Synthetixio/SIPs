@@ -85,7 +85,7 @@ The remaining collateral can be withdrawn by the loan creator after the loan has
 
 sUSD loans that fall below the liquidation ratio can be partially liquidated to fix the collateral ratio. The liquidation penalty (`default 10%`) will be paid out of the remaining ETH collateral to the liquidator who repays the sUSD.
 
-The amount of sUSD loan that can be liquidated will be capped to the loan value that needs to be liquidated plus the liquidation penalty to restore the `collateral value` back to or above the liquidation ratio.
+The amount of sUSD loan that can be liquidated will be capped to the `loan value that needs to be liquidated plus the liquidation penalty` to restore the `collateral value` back to or above the liquidation ratio.
 
 The amount of sUSD that can be liquidated to fix a loan is calculated based on the formula:
 
