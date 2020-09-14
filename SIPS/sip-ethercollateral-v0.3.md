@@ -77,9 +77,29 @@ The liquidation mechanism ensures that the issued sUSD is always fully backed by
 
 Liquidators can liquidate a loan when the collateral value drops below the liquidation ratio. The default liquidation ratio for ETH collateral is 150%.
 
-The liquidation penalty is payable to liquidators out of the collateral value. For example, when a loan of $1000 is liquidated, the liquidator will recieve `$1000 * 1.10 = $1100` worth of the collateral.
+The liquidation penalty is payable to liquidators out of the collateral value. For example, when a loan of $1000 is liquidated, the liquidator will recieve `$1000 * 1.10 = $1100` worth of the underlying collateral.
 
 The remaining collateral can be withdrawn by the loan creator after the loan has been liquidated.
+
+#### Partial Liquidations ####
+
+sUSD loans that fall below the liquidation ratio can be partially liquidated to fix the collateral ratio. The liquidation penalty (`default 10%`) will be paid out of the remaining ETH collateral to the liquidator who repays the sUSD.
+
+The amount of sUSD loan that can be liquidated will be capped to the loan value that needs to be liquidated plus the liquidation penalty to restore the `collateral value` back to or above the liquidation ratio.
+
+The amount of sUSD that can be liquidated to fix a loan is calculated based on the formula:
+
+- V = Value of ETH Collateral
+- D = sUSD loan balance
+- t = Liquidation Ratio
+- S = Amount of sUSD debt to liquidate
+- P = Liquidation Penalty %
+
+\\[
+S = \frac{t * D - V}{t - (1 + P)}
+\\]
+
+The loan's `collateralAmount` and `loanAmount` will be updated after a partial liquidation to reflect the remaining `collateral amount` and `loan amount` that is outstanding.
 
 ### Technical Specification
 
@@ -124,6 +144,8 @@ The remaining collateral can be withdrawn by the loan creator after the loan has
         uint256 timeClosed;
         // Applicable Interest rate
         uint256 loanInterestRate;
+        // last timestamp interest amounts accrued
+        uint40 lastInterestAccrued;
     }
 ```
 
