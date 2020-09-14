@@ -116,7 +116,7 @@ The loan's `collateralAmount` and `loanAmount` will be updated after a partial l
   - issueFeeRate: Minting for creating the loan. Default 0 bips.
   - liquidationPenalty: Penalty paid to liquidators when liquidating loan. Default 10%
   - openLoanClosing: Boolean to allow anyone to close the loans with sUSD.
-  - minLoanSize: Minimum amount of ETH to create loan preventing griefing and gas consumption. Min 1ETH
+  - minCollateralSize: Minimum amount of ETH to create loan preventing griefing and gas consumption. Min 1ETH
 
 #### Functions
 
@@ -196,9 +196,9 @@ Test cases for an implementation are mandatory for SIPs but can be included with
 Please list all values configurable via SCCP under this implements
 
 1. Supply cap / debt ceiling - 10m sUSD
-2. Interest rate - 5.0%
+2. Interest rate - ~5.0%
 3. Minting fee - 0 bps
-4. Min loan size - 1 ETH
+4. Min Collateral size - 1 ETH
 5. Liquidation Deadline - 3 months
 
 ## Copyright
