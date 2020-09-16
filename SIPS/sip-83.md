@@ -46,7 +46,7 @@ the latest prices, timestamps, and total supplies of each synth from external co
 them all from the current `ExchangeRates` contract.
 
 In the current gas environment minting, burning and claiming costs can reach \$50 USD+ per tx or higher, with the
-migration to external oracles this could rise by 50-100% (See https://sips.synthetix.io/sips/sip-84).
+migration to external oracles this could rise by 50-100% (See [SIP 84](sip-84.md)).
 The projected cost of reading all 40+ synth prices on-chain from external oracles to calculate the debt pool on each
 transaction is `~800,000 gas` providing a huge reduction for stakers on Synthetix to issue, burn and claim rewards.
 
@@ -79,7 +79,7 @@ how much debt and the relative % shift someone is issuing / burning based on the
 As a system-wide value, the snapshot will be stored in the flexible storage contract described in [SIP 64](sip-64.md).
 
 The debt pool snapshot captures the current synth prices and supplies at the time of the snapshot and removes the need
-to retrieve latest data on every operation, relying on the fact that Synthetix exchanges involve repricing one synths
+to retrieve latest data on every operation, relying on the fact that Synthetix exchanges involve repricing one synth
 into another based on their respective USD prices.
 
 We propose a public function that can be called to update the debt pool snapshot and the caller will be paying the
@@ -107,6 +107,13 @@ until it has been updated.
 
 The staleness period will be initially set to `30 minutes` and is configurable via an SCCP.
 
+An additional point is that Synthetix already tracks whether the rates being supplied to the system are individually
+stale, or have been invalidated by chainlink warning flags (see [SIP 76](sip-76.md)). Currently, if any synth price is
+invalid at the time of a system debt calculation, the operation that triggered it will fail. Therefore system debt
+updates must also cache in flexible storage the validity of the debt snapshot in order to maintain this safety check.
+
+The debt snapshot function being public and unrestricted also means that, upon an invalid rate being fixed,
+the debt snapshot can be immediately recalculated by any account in order to re-enable dependent operations.
 
 #### Mint, Burn, & Exchange Debt Delta Adjustments
 
@@ -127,7 +134,7 @@ When exchanges between non-sUSD synths occur, the prices are already retrieved t
 perform the exchange, but we will additionally retrieve the post-exchange total supplies of the involved non-sUSD
 synths to compute their total sUSD-denominated value. The delta between these value and the previously-computed ones
 will be applied to the total debt snapshot, and the new values cached to be used next time an exchange of those
-synths occurs.
+synths occurs. If an involved synth price is invalid at exchange time then in addition the 
 
 In this way the current debt snapshot will be responsive to the latest price updates of those synths which are most
 frequently used, and the public keeper function will ideally only need to be invoked at times of extreme synth price
@@ -135,21 +142,25 @@ volatility or heavy network congestion. This system will assist in protecting ag
 but if it proves to keep the debt snapshot accurate enough, then its constant-time execution cost implies
 that an unbounded number of synths could be added to the system.
 
-#### Amortised Minter Debt Recomputation
+#### Phase 2: Amortised Minter Debt Recomputation Levy
 
 The debt snapshot keeper is the least technically complex solution to the debt calculation problem posed in this
 SIP, and is a useful safety mechanism for protocol participants to protect the system if required, but ideally
 no keeper functions would be required to maintain the integrity of the Synthetix debt pool.
 
-Therefore at a later stage it will be expedient to allow a full debt snapshot to occur at periodic heartbeats at the
-first mint, burn, or claim operations to be performed after a given heartbeat is due. However, given the extra expense
-involved, the gas cost of the recalculation will measured and rebated to the caller from a common pool of ether held
-in a manner similar to the [deferred transaction gas tank](sip-79.md). This pool will be replenished by a small
-percentage levy charged on each mint operation, which will be less than the gas saved by eliminating system debt
-recomputation on every mint, burn or claim operation, currently in the vicinity of `800,000` gas per operation, as
-the number of mint operations is much greater than the number of heartbeats required per day.
-Since the number of heartbeat updates per day at a given frequency is constant, any increase in system usage allows the
-gas charge to be decreased, or the heartbeat frequency to be increased.
+Therefore in a future phase of the implementation it will be expedient to allow a full debt snapshot to occur at periodic
+heartbeats once every 15 minutes, for example.
+These heartbeats could either be computed by a separate compensated keeper function, or at the first mint, burn, or
+claim operations to be performed after a given heartbeat is due. However, given the extra expense involved, the gas cost
+of the recalculation will measured and rebated to the caller from a common pool of ether held in a manner similar to the
+[deferred transaction gas tank](sip-79.md). This pool will be replenished by a small fee charged on the 
+execution cost of each mint, burn, and claim operation, which will be less than the gas saved for these function calls
+by eliminating continual system debt recomputations.
+As the number of snapshot-dependent operations occurring greatly exceeds the number of heartbeats required per day even
+at one heartbeat every 15 minutes, the size of the levy will be modest, still representing a great savings for
+all participants in the system.
+Since the number of heartbeats per day at a given frequency is constant, any increase in system usage
+allows the gas charge to be decreased, or the heartbeat frequency to be increased.
 
 
 ### Rationale
@@ -173,11 +184,13 @@ very high utility for them in gas savings.
 
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 
-- `uint debtPoolSnapshot` Snapshot value of all the circulating `synths supply * synth prices` (in \$USD) at the last snapshot. Includes any extra sUSD minted or burned since the last snapshot as these are added directly to the total Issued Synths value and debt pool. Wherever `Issuer.totalIssuedSynths()` is currently used, the snapshot will be substituted instead.
+- `uint debtPoolSnapshot` Snapshot value of all the circulating `synths supply * synth prices` (in \$USD) at the last snapshot, taking into account the contributions from mint, burn, and exchange operations since the last snapshot. Wherever `Issuer._totalIssuedSynths` is currently used, the snapshot will be substituted instead of a freshly-computed value.
 
 - `uint snapshotTimestamp` Timestamp of the debt pool snapshot: Updated when `Issuer.updateDebtPoolSnapshot()` is executed but not updated when mint, burn, or exchange transactions update the snapshot value.
 
-- `Issuer.updateDebtPoolSnapshot()` Public function that updates the debt pool snapshot to latest values
+- `bool debtPoolSnapshotIsInvalid` True if and only if any rate involved in the computation of the cached debt pool snapshot was reported as invalid at the time of the snapshot. `Issuer._totalIssuedSynths` currently reports this value freshly-recomputed at each invocation, the new implementation should return the cached value instead.
+
+- `Issuer.updateDebtPoolSnapshot()` Public function that updates the `debtPoolSnapshot`, `snapshotTimestamp`, and `debtPoolSnapshotIsInvalid` to their latest values.
 
 - `Issuer.totalIssuedSynths()` Current view function to get latest total issued synths and debt pool size. Used by bot to view and calculate the % deviation between last snapshot and the current actual `totalIssuedSynths()`. Excludes any of the EtherCollateral backed synths generated as not backed by SNX collateral.
 
