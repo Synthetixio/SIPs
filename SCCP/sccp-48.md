@@ -1,5 +1,5 @@
 ---
-sccp: TBA
+sccp: 48
 title: Raise Fees on Crypto Synths to 100 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Proposed
