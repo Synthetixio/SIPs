@@ -2,7 +2,7 @@
 sccp: 50
 title: Update sDEFI index
 status: WIP
-author: @farmwell, CryptoToit
+author: @farmwell
 discussions-to: https://discordapp.com/channels/413890591840272394/420345203270877185/756237055280939138
 created: 2019-09-28
 requires: SIP-69
