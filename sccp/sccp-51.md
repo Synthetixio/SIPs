@@ -1,5 +1,5 @@
 ---
-sccp: 50
+sccp: 51
 title: Update sDEFI index
 status: WIP
 author: @farmwell, @CryptoToit
@@ -18,7 +18,7 @@ It is proposed to update the composition of the sDEFI index synth. The DeFi spac
 <!--A short (~200 word) description of the variable change proposed.-->
 The proposal is to add YFI, UNI, NXM and CRV to sDEFI while removing ZRX, REP, LRC and BNT. The community has voted on the following initial weightage of the index:
   - 15.00%	YFI
-  - 15.00%	LEND
+  - 15.00%	AAVE
   - 15.00%	SNX
   - 10.00%	UNI
   - 7.50%	COMP
