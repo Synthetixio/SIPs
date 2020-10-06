@@ -1,7 +1,7 @@
 ---
 sip: 85
 title: Ether Collateral v0.3
-status: Proposed
+status: Implemented
 author: Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)
 discussions-to: https://research.synthetix.io/
 
@@ -120,7 +120,7 @@ The loan's `collateralAmount` and `loanAmount` will be updated after a partial l
 
 #### Functions
 
-##### `CreateLoan() payable` function
+##### `openLoan(uint256 _loanAmount) external payable` function
 
 - Require sUSD to mint does not exceed issueLimit
 - Require openLoanClosing to be false
@@ -149,13 +149,17 @@ The loan's `collateralAmount` and `loanAmount` will be updated after a partial l
     }
 ```
 
-##### `depositCollateral() payable` function
+##### `function depositCollateral(address account, uint256 loanID) payable` function
 
-- Deposit more ETH to an open loan to maintain it's collateral ratio above liquidation
+- Deposit more ETH to an open loan to maintain it's collateral ratio above liquidation.
 
-##### `withdrawCollateral() payable` function
+##### `function withdrawCollateral(uint256 loanID, uint256 withdrawAmount) payable` function
 
-- Withdraw ETH from an open loan that is above the 150% collateral ratio. Useful when ETH-USD value increases.
+- Withdraw ETH from an open loan that is above the 150% collateral ratio. Only loan creator can call this function for their own loan. Useful when ETH-USD value increases.
+
+##### `repayLoan(address loanCreator, uint256 loanID, uint256 amount) payable` function
+
+- Partial repayment of a ETH collateral sUSD loan to fix collateral ratio or pay down the borrowed amount.
 
 ###### `CloseLoan()` function
 
