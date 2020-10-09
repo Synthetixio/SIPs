@@ -29,7 +29,7 @@ accuracy of the snapshot. This frequency was initially set at a cautious level, 
 unnecessarily aggressive. Consider the following chart of the percentage deviations over the day following
 the Deneb release.
 
-![deviations](asset/sccp-52/snapshot-deviations.png){: .center-image }
+![deviations](asset/sccp-52/snapshot-deviations.svg){: .center-image }
 
 The dashed lines indicate the times at which complete snapshots were performed to prevent
 the snapshot going stale. The upper and lower bounds of this chart are the limits the
