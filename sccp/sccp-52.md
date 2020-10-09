@@ -25,9 +25,10 @@ This is to allow a snapshot heartbeat frequency of 4 hours, allowing the keeper 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 Since [SIP-83](../sips/sip-83.md) went live, snapshots have been operating approximately once per hour to ensure the
-accuracy of the snapshot. This frequency was initially set at a cautious level, but has proven to be
-unnecessarily aggressive. Consider the following chart of the percentage deviations over the day following
-the Deneb release.
+accuracy of the snapshot. This cannot be slowed down as the current stale time is also 1 hour.
+This stale time was initially set at a cautious level to protect the system, but has proven to be
+unnecessarily aggressive. Consider the following chart of the percentage deviations over the day
+following the Deneb release.
 
 ![deviations](asset/sccp-52/snapshot-deviations.svg){: .center-image }
 
@@ -51,8 +52,10 @@ targeting only those specific synths which have caused the price to deviate.
 Second, the high snapshot frequency obscures the extent to which the deviation
 is corrected by cache updates due to synth exchanges.
 
+In effect the high snapshot frequency entails paying more to learn less, and for this reason
+and those described above, this SCCP proposes slowing the heartbeat down.
 In the long run it may be a better approach to lower the stale time substantially,
-while also lowering the deviation threshold.
+while also lowering the deviation threshold on the keeper bot.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
