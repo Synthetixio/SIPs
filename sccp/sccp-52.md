@@ -27,8 +27,8 @@ This is to allow a snapshot heartbeat frequency of 4 hours, allowing the keeper 
 Since [SIP-83](../sips/sip-83.md) went live, snapshots have been operating approximately once per hour to ensure the
 accuracy of the snapshot. This cannot be slowed down as the current stale time is also 1 hour.
 This stale time was initially set at a cautious level to protect the system, but has proven to be
-unnecessarily aggressive. Consider the following chart of the percentage deviations over the day
-following the Deneb release.
+unnecessarily aggressive. Consider the following chart of the percentage deviation of the cached debt
+from the true total system debt over the day following the Deneb release.
 
 ![deviations](asset/sccp-52/snapshot-deviations.svg){: .center-image }
 
