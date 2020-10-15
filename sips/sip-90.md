@@ -1,14 +1,12 @@
-SIP 90 - Transition SIPs/SCCPs to Snapshot Governance
-
 ---
-
-Sip: 90
+sip: 90
 title: Transition SIPs/SCCPs to Snapshot Governance
-author: Andy T CF <@andytcf>
 status: WIP
+author: Andy T CF <@andytcf>
 discussions-to: https://research.synthetix.io/t/transition-sips-sccps-to-snapshot-governance/209
 
-## created: 2020-10-14
+created: 2020-10-14
+---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
 
