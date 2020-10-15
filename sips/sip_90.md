@@ -1,12 +1,12 @@
-SIP TSSG - Transition SIPs/SCCPs to Snapshot Governance
+SIP 90 - Transition SIPs/SCCPs to Snapshot Governance
 
 ---
 
-Sip: TSSG
+Sip: 90
 title: Transition SIPs/SCCPs to Snapshot Governance
 author: Andy T CF <@andytcf>
 status: WIP
-discussions-to: @TODO: link to research page
+discussions-to: https://research.synthetix.io/t/transition-sips-sccps-to-snapshot-governance/209
 
 ## created: 2020-10-14
 
