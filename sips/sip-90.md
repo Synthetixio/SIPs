@@ -2,7 +2,7 @@
 sip: 90
 title: Transition SIPs/SCCPs to Snapshot Governance
 status: WIP
-author: Andy T CF <@andytcf>
+author: Andy T CF (@andytcf)
 discussions-to: https://research.synthetix.io/t/transition-sips-sccps-to-snapshot-governance/209
 
 created: 2020-10-14
@@ -20,7 +20,7 @@ Transition the current SCCP signaling process to off-chain signatures via snapsh
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-Use snapshot’s gas-less off-chain governance platform (https://snapshot.page/) that will handle the SCCP/SIP signaling process of the Synthetix Protocol. The platform will enable community members to create SCCP/SIP proposals which will be able to be voted on via IPFS messages/signatures. Proposals created on snapshot will feature quadratic voting and votes will be weighted based on the user’s debt percentage in the last fee period.
+Use snapshot’s gas-less, off-chain governance platform (https://snapshot.page/) that will handle the SCCP/SIP signaling process of the Synthetix Protocol. The platform will enable community members to create SCCP/SIP proposals which will be able to be voted on via IPFS messages/signatures. Proposals created on snapshot will feature quadratic voting and votes will be weighted based on the user’s debt percentage in the last fee period.
 
 ## Motivation
 
@@ -46,13 +46,13 @@ Existing SIPs/SCCPs are carried out in the #governance-polls channel in the offi
 
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
-In order to improve the Sybil-resistance of the Synthetix Governance process, we will use snapshot’s off-chain gas-less solution to enable an ETH wallet based voting system, where each users vote will be weighted based on their debt percentage of the proposals dates previous fee period. The weights calculated in this way will also be quadratically modified to implement a quadratic voting system to increase the equality of voting power.
+In order to improve the Sybil-resistance of the Synthetix Governance process, we will use snapshot’s off-chain, gas-less solution to enable an wallet based voting system, where each user's vote will be weighted based on their debt percentage in the previous fee period. The weights calculated in this way will also be quadratically modified to implement a quadratic voting system to increase the equality of votes.
 
 ### Rationale
 
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
-The selection of snapshot’s platform for handling the SIP/SCCP governance process was due to factors such as the widespread usage amongst other projects, the gas-less nature of voting, the great usability of the platform which all supplemented the greater Sybil resistance that is provided for the Synthetix Governance.
+The selection of snapshot’s platform for handling the SIP/SCCP governance process was due to factors such as the widespread usage amongst other projects, the gas-less nature of voting and the great usability of the platform. Factors which all supplement the improved Sybil resistance of the Synthetix Governance process.
 
 ### Technical Specification
 
