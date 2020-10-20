@@ -90,6 +90,10 @@ interface; but its semantics will be altered as follows:
 * `cachedSNXIssuedDebtForCurrencies` will report realtime values from `currentSNXIssuedDebtForCurrencies`.
 * All mutative functions in the interface such as `cacheSNXIssuedDebt` will become no-ops.
 
+While the `Issuer` is being modified, functions to add and remove multiple Synths at once will also be added,
+which will speed up redeployments of the `Issuer` (among other operations) by batching Synth migrations rather
+than performing them one by one.
+
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
