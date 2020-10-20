@@ -55,40 +55,64 @@ future. By separating out the logic into a new contract, this overhead is reduce
 size is brought down much further below the fundamental size limits imposed by the OVM, allowing more headroom
 to extend its functionality.
 
+Although heavy interface modifications
+
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 
+`Issuer` will no longer be responsible for maintaining the debt cache, but will instead pass this responsibility on to
+the new `DebtCache` contract.
+
+#### Interface Modifications
+
 The following functions, and a number of supporting internal functions will be moved from the `Issuer` and into a
-new contract called `DebtCache`:
+new contract called `DebtCache`. These functions will be renamed to clarify the resulting interface. Several new functions
+will added to round out its functionality and simplify the implementation.
 
-* `debtSnapshotStaleTime`
-* `currentSNXIssuedDebtForCurrencies`
-* `cachedSNXIssuedDebtForCurrencies`
-* `currentSNXIssuedDebt`
-* `cachedSNXIssuedDebtInfo`
-* `cacheSNXIssuedDebt`
-* `updateSNXIssuedDebtForCurrencies`
-* `cacheSNXIssuedDebtForSynth`
-* `cacheSNXIssuedDebtOnExchange`
-* `purgeDebtCacheForSynth`
+| `Issuer` Function | `DebtCache` Function | Description | 
+| ----------------- | -------------------- | ----------- |
+| `debtSnapshotStaleTime` | `debtSnapshotStaleTime` | Reports the current snapshot stale time. |
+| `currentSNXIssuedDebtForCurrencies` | `currentSynthDebts` | Reports the debt values for a set of synths at current prices and supply. |
+| `cachedSNXIssuedDebtForCurrencies` | `cachedSynthDebts` | Reports the cached debt values for a set of synths. |
+| `currentSNXIssuedDebt` | `currentDebt` | Reports the current total system debt value across all synths. |
+| `cachedSNXIssuedDebtInfo` | `cacheInfo` | Reports the cached system debt, when a snapshot was last taken, and the cache's invalidity and stale status |
+| `cacheSNXIssuedDebt` | `takeDebtSnapshot` | Takes completely fresh debt snapshot, updating the cache, timestamp, and validity status. |
+| `updateSNXIssuedDebtForCurrencies` | `updateCachedSynthDebts` | Modifies the cached debt value with the deltas from a specific set of synths. |
+| `purgeDebtCacheForSynth` | `purgeCachedSynthDebt` | Admin function to purge the cached value of a specific Synth if it was not added/removed from the system properly after an upgrade. |
+| `updateSNXIssuedDebtForSynth` | `updateCachedSynthDebtWithRate` |  Allows the issuer and exchanger contracts to update a synth's cached debt without refetching its price |
+| `updateSNXIssuedDebtOnExchange` | Deleted | Exchange-specific logic will be moved into the `Exchanger` contract; the same functionality will be implemented with the new `updateCachedSynthDebtsWithRates` function. |
+| None | `updateCachedSynthDebtsWithRates` | As `updateCachedSynthDebtWithRate`, but for a set of synths. |
+| None | `updateDebtCacheValidity` | Allows the issuer to invalidate teh cache when adding or removing synths. |
+| None | `cachedDebt` | Reports the cached system debt. |
+| None | `cacheTimestamp` | The timestamp that the cache was last refreshed with a full snapshot. |
+| None | `cacheInvalid` | True if the cache has been invalidated by, or since, the last full snapshot. |
+| None | `cacheStale` | True if the cache timestamp is older than the stale time. |
 
-Additionally, a new function `DebtCache.changeDebtCacheValidityIfNeeded(bool currentlyInvalid)` will be exposed,
-only callable from the `Issuer`, to allow the cache to be invalidated when adding or removing synths.
-The issuer itself will also gain a new function,
-`Issuer.synthAddresses(bytes32[] memory currencyKeys) returns (ISynth[] memory)`, which will be used by the
-debt cache to obtain several synth addresses in a single function call in order to fetch the total supply of each.
+The `DebtCacheSynchronised` event will be renamed to `DebtCacheSnapshotTaken`.
 
-To offset the gas cost of the additional function call, the cached debt values will be stored in the debt cache contract
-itself rather than in flexible storage. In particular, this will decrease gas consumption for any account calling
-`cacheSNXIssuedDebt`, which will decrease gas costs for the snapshot keeper, which must run regularly to keep the
+In addition, the issuer itself will also gain a new function, `Issuer.synthAddresses(bytes32[] memory currencyKeys) returns (ISynth[] memory)`,
+which will be used by the debt cache to obtain several synth addresses in a single function call in order to fetch the
+total supply of each.
+
+#### Flexible Storage Removal
+
+To simplify implmentation, offset the gas cost of the additional function call, the cached debt values will be stored in
+the debt cache contract itself rather than in flexible storage.
+There is less of a necessity to persist this information since it no longer rides along with the issuer, but in addition
+storing the cache in the contract will decrease gas consumption for any account calling
+`takeDebtSnapshot`, which will improve gas costs for the snapshot keeper, which must run regularly to keep the
 debt snapshot from going stale.
+
+#### L2 Realtime Debt Cache
 
 On L2 `DebtCache` will be replaced by `RealtimeDebtCache`, which is a drop-in replacement that shares an identical
 interface; but its semantics will be altered as follows:
 
-* `cachedSNXIssuedDebtInfo` will report realtime values from `currentSNXIssuedDebt` for the debt and invalidity. The cache timestamp will always report as the current block timestamp, and the cache will never be stale.
-* `cachedSNXIssuedDebtForCurrencies` will report realtime values from `currentSNXIssuedDebtForCurrencies`.
-* All mutative functions in the interface such as `cacheSNXIssuedDebt` will become no-ops.
+* `cacheInfo` will report realtime values from `currentDebt` for the debt and invalidity. The cache timestamp will always report as the current block timestamp, and the cache will never be stale.
+* `cachedSynthDebts` will report realtime values from `currentSynthDebts`.
+* All mutative functions in the interface such as `takeDebtSnapshot` will become no-ops.
+
+#### Issuer Multiple Synth Addition/Removal 
 
 While the `Issuer` is being modified, functions to add and remove multiple Synths at once will also be added,
 which will speed up redeployments of the `Issuer` (among other operations) by batching Synth migrations rather
