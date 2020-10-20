@@ -1,9 +1,9 @@
 ---
 sip: 91 
 title: Debt Cache Contract
-status: WIP
+status: Proposed
 author: Anton Jurisevic (@zyzek)
-discussions-to: https://research.synthetix.io/ 
+discussions-to: https://research.synthetix.io/t/sip-91-debt-cache-contract/213
 
 created: 2020-10-20 
 requires (*optional): 83
@@ -55,7 +55,8 @@ future. By separating out the logic into a new contract, this overhead is reduce
 size is brought down much further below the fundamental size limits imposed by the OVM, allowing more headroom
 to extend its functionality.
 
-Although heavy interface modifications
+Many functions will be renamed in this refactor; although in many cases no functionality will change, these
+modifications to the interface are in service of making it clearer, more consistent, and more complete.
 
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
@@ -96,7 +97,7 @@ total supply of each.
 
 #### Flexible Storage Removal
 
-To simplify implmentation, offset the gas cost of the additional function call, the cached debt values will be stored in
+To simplify implementation, offset the gas cost of the additional function call, the cached debt values will be stored in
 the debt cache contract itself rather than in flexible storage.
 There is less of a necessity to persist this information since it no longer rides along with the issuer, but in addition
 storing the cache in the contract will decrease gas consumption for any account calling
