@@ -99,7 +99,7 @@ With the launch of L2 Staking for SNX on the OVM testnet, users will be able to 
 
 2. The L1 migration step is not required for stakers to migrate to L2 their escrowed SNX. If the user has not migrated on L1, the `secondaryDeposit.deposit()` function will read from the Old RewardEscrow to determine the remaining escrowed SNX and entries to be migrated to L2. This reduces the steps and costs for stakers who want to move to L2 so that they won't need to pay the gas costs of L1 migration.
 
-3. The `secondaryDeposit.deposit()` transaction will revert if the address has any escrowed SNX balance and the approval process in step 1 is not completed. The deposit() will transfer the `totalEscrowedAccountBalance` SNX amount from the Reward escrow contract into the deposit contract.
+3. The `secondaryDeposit.deposit()` transaction will revert if the address has any escrowed SNX balance and the approval process in step 1 has not been completed. The `deposit()` will transfer the `totalEscrowedAccountBalance` SNX amount from the Reward escrow contract into the deposit contract.
 
 Fields migrated to L2 Reward Escrow:
 
