@@ -2,7 +2,7 @@
 sip: 60
 title: New Escrow Contract & Migration
 status: WIP
-author: Clinton Ennis (@hav-noms)
+author: Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)
 discussions-to: <https://discord.gg/ShGSzny>
 
 created: 2020-05-20
@@ -20,7 +20,7 @@ Add new flexible escrow API to the SNX Escrow contract.
 
 <!--A short (~200 word) description of the technical issue being addressed.-->
 
-The current SNX [RewardEscrow](https://contracts.synthetix.io/RewardEscrow) contract is limited only allowing the [FeePool](https://contracts.synthetix.io/FeePool) to escrow SNX rewards from the inflationary supply. 
+The current SNX [RewardEscrow](https://contracts.synthetix.io/RewardEscrow) contract is limited only allowing the [FeePool](https://contracts.synthetix.io/FeePool) to escrow SNX rewards from the inflationary supply.
 
 It was not designed to be used as a general purpose escrow contract. New requirements include adding arbitary length escrow entries to be created by anyone as well as supporting the new terminal inflation and liquidation.
 
@@ -45,7 +45,8 @@ This will require a migration of all escrowed SNX and escrow entries from the cu
 3. Update `checkAccountSchedule` to allow for terminal inflation and an unlimited escrow navigation through paging.
 4. Allowing anyone to `vest` an accounts escrowed tokens allows Synthetix network keepers to help support SNX holders and supports the [Liquidation system](https://sips.synthetix.io/sips/sip-15) to vest an under collateralised accounts vest-able SNX to be paid to the liquidator.
 5. If an account being [liquidated](https://sips.synthetix.io/sips/sip-15) does not have enough transferable SNX in their account and the system needs to liquidate escrowed SNX being used as collateral then reassign the escrow amounts to the liquidators account to vest.
-TBD: Should the escrowed SNX be liquidated at a larger discount? or vested and transfered to the liquidator at the standard discount?
+6. Ability for account merging of escrowed tokens at specific time windows for people to merge their balances - [sip-13](https://sips.synthetix.io/sips/sip-13).
+7. Ability to migrate escrowed SNX and vesting entries to L2 OVM. An internal contract (SecondaryDeposit) to clear all entries for a user (during the initial deposit phase of L2 migration).
 
 ## Specification
 
@@ -54,24 +55,68 @@ TBD: Should the escrowed SNX be liquidated at a larger discount? or vested and t
 ```
 interface ISynthetixEscrow {
     // Views
-    
+
+    // Check whether an address has migrated from the Old reward escrow to the new contract
+    function accountMigrated(address account) external view returns (bool);
+
+    // Check whether an address has migrated their escrowed SNX to L2 staking.
+    function accountMigratedToL2(address account) external view returns (bool);
+
     // Updated to handle paging of 100 escrow entries at a time from a starting vesting index
-    function checkAccountSchedule(address account, uint startIndex) public view returns (uint[100] memory) 
+    function checkAccountSchedule(address account, uint startIndex) public view returns (uint[100] memory)
 
     // Mutative functions
-    
+
     // Added escrowLength argument allowing any length of escrow period from 1 second to x years
     function appendVestingEntry(address account, uint quantity, uint escrowLength) external;
-        
+
     function vest() external;
-    
+
     // New function to allow any account vest another account
     function vestOnBehalf(address account) external;
 }
 ```
+
 ### Migration
-1. Synthetix will need to be upgraded to migrate the SNX to the new contract onchain.
-2. During the migration `Vest` needs to be disabled or effectivly fail to ensure integrity of escrow entries and SNX balances beign migrated for all accounts.
+
+1. Issuer contract will need to be upgraded to migrate the SNX to the new contract onchain.
+
+2. During the migration `Vest` needs to be disabled or effectivly fail to ensure integrity of escrow entries and SNX balances being migrated for all accounts.
+
+3. `totalEscrowedAccountBalance` will be migrated by the protocol for all accounts on the OLD reward escrow to ensure users are allocated their collateral for staking on the new reward escrow contract.
+
+4. Claiming rewards and vesting on the new contract will be blocked for users with existing vesting entries.
+
+5. Users with existing vesting entries on the old rewards escrow will need to migrate their vesting entries across to the new contract. The migration will read from the address's existing entries and copy them across.
+
+6. Any escrow SNX that can be vested will be vested first. This will mean that only the remaining 52 weeks of vesting entries will be copied.
+
+### L2 Escrow Migration
+
+With the launch of L2 Staking for SNX on the OVM testnet, users will be able to migrate all their SNX and escrowed SNX to L2 for staking and rewards. The vesting entries will be copied onto the L2 reward escrow contract that mirrors the migration process.
+
+1. User first approves on the Reward Escrow for the `SecondaryDeposit` contract to transfer their escrowed SNX when `secondaryDeposit.deposit()` is called. The approval transaction will also vest the SNX so that the user will only migrate the remaining 52 weeks of vesting entries to L2.
+
+2. The L1 migration step is not required for stakers to migrate to L2 their escrowed SNX. If the user has not migrated on L1, the `secondaryDeposit.deposit()` function will read from the Old RewardEscrow to determine the remaining escrowed SNX and entries to be migrated to L2. This reduces the steps and costs for stakers who want to move to L2 so that they won't need to pay the gas costs of L1 migration.
+
+3. The `secondaryDeposit.deposit()` transaction will revert if the address has any escrowed SNX balance and the approval process in step 1 is not completed. The deposit() will transfer the `totalEscrowedAccountBalance` SNX amount from the Reward escrow contract into the deposit contract.
+
+Fields migrated to L2 Reward Escrow:
+
+```
+Amount of SNX escrowed for address (totalEscrowedAccountBalance)
+52 Vesting entries for address
+```
+
+4. Flag on L1 RewardEscrow that the address has been migrated to L2. L2 migration is an irreversible action.
+
+### Account Merging
+
+- Require all debt to be burned before account merging is open for a staker.
+- Vest all of the escrowed SNX that can be vested first.
+- Approve and record the recipient address that will claim the new escrow SNX amount and vesting entries.
+- The recipient address will sign a transaction to merge the escrowed SNX amount to their existing `totalEscrowedAccountBalance` balance and append the vesting entries to their `vestingSchedules`.
+
 
 ## Test Cases
 
