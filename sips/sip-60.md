@@ -103,7 +103,7 @@ Amount of SNX escrowed for address (totalEscrowedAccountBalance)
 52 Vesting entries for address
 ```
 
-4. Flag on L1 RewardEscrow that the address has been migrated to L2. L2 migration is an irreversible action.
+3. Flag on L1 RewardEscrow that the address has been migrated to L2. L2 migration is an irreversible action.
 
 ### Account Merging
 
