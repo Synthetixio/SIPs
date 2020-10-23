@@ -46,7 +46,7 @@ This will require a migration of all escrowed SNX and escrow entries from the cu
 4. Allowing anyone to `vest` an accounts escrowed tokens allows Synthetix network keepers to help support SNX holders and supports the [Liquidation system](https://sips.synthetix.io/sips/sip-15) to vest an under collateralised accounts vest-able SNX to be paid to the liquidator.
 5. If an account being [liquidated](https://sips.synthetix.io/sips/sip-15) does not have enough transferable SNX in their account and the system needs to liquidate escrowed SNX being used as collateral then reassign the escrow amounts to the liquidators account to vest.
 6. Ability for account merging of escrowed tokens at specific time windows for people to merge their balances - [sip-13](https://sips.synthetix.io/sips/sip-13).
-7. Ability to migrate escrowed SNX and vesting entries to L2 OVM. An internal contract (SynthetixOptimisticBridge) to clear all entries for a user (during the initial deposit phase of L2 migration).
+7. Ability to migrate escrowed SNX and vesting entries to L2 OVM. An internal contract (base:SynthetixBridgeToOptimism) to clear all entries for a user (during the initial deposit phase of L2 migration).
 
 ## Specification
 
@@ -92,11 +92,11 @@ interface ISynthetixEscrow {
 
 With the launch of L2 Staking for SNX on the OVM testnet, users will be able to migrate all their SNX and escrowed SNX to L2 for staking and rewards. The vesting entries will be copied onto the L2 reward escrow contract that mirrors the migration process.
 
-1. The `SynthetixOptimisticBridge.deposit()` transaction will vest any escrowed SNX that can be vested and transfer the remaining `totalEscrowedAccountBalance` SNX amount from the Reward escrow contract into the deposit contract. The vesting entries on L1 reward escrow will be deleted for the address.
+1. The `base:SynthetixBridgeToOptimism.deposit()` transaction will vest any escrowed SNX that can be vested and transfer the remaining `totalEscrowedAccountBalance` SNX amount from the Reward escrow contract into the deposit contract. The vesting entries on L1 reward escrow will be deleted for the address.
 
 2. The L1 migration step is not required for stakers to migrate to L2 their escrowed SNX.
 
-If the user has not migrated on L1 to the new escrow contract, the `SynthetixOptimisticBridge.deposit()` function will read from the Old RewardEscrow to determine the remaining escrowed SNX and vesting entries to be migrated to L2. This reduces the steps and costs for stakers who want to move to L2 so that they won't need to pay the gas costs of L1 migration.
+If the user has not migrated on L1 to the new escrow contract, the `base:SynthetixBridgeToOptimism.deposit()` function will read from the Old RewardEscrow to determine the remaining escrowed SNX and vesting entries to be migrated to L2. This reduces the steps and costs for stakers who want to move to L2 so that they won't need to pay the gas costs of L1 migration.
 
 To prevent an address from migrating their SNX staking to L2 and then duplicating their vesting entries to the new Reward Escrow afterwards, `migrateVestingSchedule()` will fail if the address has already migrated to L2 first.
 
