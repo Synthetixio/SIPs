@@ -35,9 +35,11 @@ The dashed lines indicate the times at which complete snapshots were performed t
 the snapshot going stale. The upper and lower bounds of this chart are the limits the
 deviation would have to breach in order to trigger a fresh snapshot.
 
-The maximum deviation over this period was 0.76%. Most dramatic deviations in this period were corrected rapidly by
-exchange snapshot updates (see [the relevant section of SIP-83](../sips/sip-83.md#mint-burn--exchange-debt-delta-adjustments)).
-As a result, there has still been no deviation-triggered partial snapshot over the time debt snapshots have been operating.
+The maximum deviation over this period was 0.76%. Most dramatic deviations in this period were corrected rapidly
+(and well before the next heartbeat) by exchange snapshot updates
+(see [the relevant section of SIP-83](../sips/sip-83.md#mint-burn--exchange-debt-delta-adjustments)) and market price
+corrections. As a result, there has still been no deviation-triggered partial snapshot over the time debt snapshots
+have been operating.
 
 Most of the rationale for slowing down snapshots laid out in [SCCP-52](sccp-52.md) still applies. We have learnt that
 synth exchange snapshot updates are effective, but have not seen its full benefit; and all the other reasons to slow
