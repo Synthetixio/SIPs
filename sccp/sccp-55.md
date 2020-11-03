@@ -1,5 +1,5 @@
 ---
-sccp: 54
+sccp: 55
 title: Change Debt Snapshot Stale Time to 12 Hours 
 author: Anton Jurisevic (@zyzek)
 discussions-to: https://research.synthetix.io/
@@ -29,7 +29,7 @@ threshold of 1%, so lowering the frequency should not unduly impact the integrit
 Snapshots have been operating reliably for several weeks with a stale time of 4 hours. In this period the system's debt
 deviation has not exceeded 1%. The debt snapshot deviation over the last two weeks is described in the following chart:
 
-![deviations](asset/sccp-54-snapshot-staleness/deviation_chart.svg){: .center-image }
+![deviations](asset/sccp-55-snapshot-staleness/deviation_chart.svg){: .center-image }
 
 The dashed lines indicate the times at which complete snapshots were performed to prevent
 the snapshot going stale. The upper and lower bounds of this chart are the limits the
