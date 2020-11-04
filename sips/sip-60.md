@@ -44,7 +44,7 @@ This will require a migration of all escrowed SNX and escrow entries from the cu
 2. Public escrowing. Allows any EOA or any contract to escrow SNX. Allowing SNX to be escrowed for protocol contributors, investors and funds or contracts that escrow some sort of incentive similar to the Staking Rewards.
 3. Update `checkAccountSchedule` to allow for terminal inflation and an unlimited escrow navigation through paging.
 4. Allowing anyone to `vest` an accounts escrowed tokens allows Synthetix network keepers to help support SNX holders and supports the [Liquidation system](https://sips.synthetix.io/sips/sip-15) to vest an under collateralised accounts vest-able SNX to be paid to the liquidator.
-5. If an account being [liquidated](https://sips.synthetix.io/sips/sip-15) does not have enough transferable SNX in their account and the system needs to liquidate escrowed SNX being used as collateral then reassign the escrow amounts to the liquidators account to vest.
+5. If an account being [liquidated](https://sips.synthetix.io/sips/sip-15) does not have enough transferable SNX in their account and the system needs to liquidate escrowed SNX being used as collateral then reassign the escrow amounts to the liquidators account in the escrow contract.
 6. Ability for account merging of escrowed tokens at specific time windows for people to merge their balances - [sip-13](https://sips.synthetix.io/sips/sip-13).
 7. Ability to migrate escrowed SNX and vesting entries to L2 OVM. An internal contract (base:SynthetixBridgeToOptimism) to clear all entries for a user (during the initial deposit phase of L2 migration).
 
@@ -53,24 +53,39 @@ This will require a migration of all escrowed SNX and escrow entries from the cu
 <!--The technical specification should describe the syntax and semantics of any new feature.-->
 
 ```
-interface ISynthetixEscrow {
+interface IRewardEscrowV2 {
     // Views
+    function balanceOf(address account) external view returns (uint);
 
-    // Check whether an address has migrated their escrowed SNX to L2 staking.
-    function accountMigratedToL2(address account) external view returns (bool);
+    function numVestingEntries(address account) external view returns (uint);
 
-    // Updated to handle paging of 100 escrow entries at a time from a starting vesting index
-    function checkAccountSchedule(address account, uint startIndex) public view returns (uint[100] memory)
+    function totalEscrowedAccountBalance(address account) external view returns (uint);
+
+    function totalVestedAccountBalance(address account) external view returns (uint);
+
+    function getVestingScheduleEntry(address account, uint index) external view returns (uint[2] memory);
 
     // Mutative functions
+    function appendVestingEntry(address account, uint quantity) external;
 
-    // Added escrowLength argument allowing any length of escrow period from 1 second to x years
-    function appendVestingEntry(address account, uint quantity, uint escrowLength) external;
+    function migrateVestingSchedule(address _addressToMigrate) external;
 
-    function vest() external;
+    function migrateAccountEscrowBalances(
+        address[] calldata accounts,
+        uint256[] calldata escrowBalances,
+        uint256[] calldata vestedBalances
+    ) external;
 
-    // New function to allow any account vest another account
-    function vestOnBehalf(address account) external;
+    // L2 Migration
+    function importVestingEntries(
+        address account,
+        uint64[] calldata timestamps,
+        uint256[] calldata amounts
+    ) external;
+
+    function burnForMigration(address account) external returns (uint64[52] memory, uint256[52] memory);
+
+    function vest(address account) external;
 }
 ```
 
