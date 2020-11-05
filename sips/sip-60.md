@@ -104,9 +104,9 @@ interface IRewardEscrowV2 {
 
 2. During the migration `Vest` needs to be disabled or effectivly fail to ensure integrity of escrow entries and SNX balances being migrated for all accounts.
 
-3. `totalEscrowedAccountBalance` will be migrated by the protocol for all accounts on the OLD reward escrow to ensure users are allocated their collateral for staking on the new reward escrow contract.
+3. `totalEscrowedAccountBalance` and `totalVestedAccountBalance` will be migrated by the protocol for all accounts on the OLD reward escrow to ensure users are allocated their collateral for staking on the new reward escrow contract.
 
-4. Claiming rewards and vesting on the new contract will be blocked for users with existing vesting entries.
+4. Claiming rewards and vesting on the new contract will be blocked for users with existing vesting entries who haven't migrated their previous vesting entries.
 
 5. Users with existing vesting entries on the old rewards escrow will need to migrate their vesting entries across to the new contract. The migration will read from the address's existing entries and copy them from the old escrow contract.
 
