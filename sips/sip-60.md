@@ -14,7 +14,7 @@ created: 2020-05-20
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-Add new flexible escrow API to the SNX Escrow contract.
+Migrate to a new SNX escrow contract that supports, liquidations of escrowed SNX, L2 migration, flexible and infinite escrow support for terminal inflation migrate and deprecate token sale escrow contract and migrate all balances to new contract.
 
 ## Abstract
 
@@ -47,6 +47,14 @@ This will require a migration of all escrowed SNX and escrow entries from the cu
 5. If an account being [liquidated](https://sips.synthetix.io/sips/sip-15) does not have enough transferable SNX in their account and the system needs to liquidate escrowed SNX being used as collateral then reassign the escrow amounts to the liquidators account in the escrow contract.
 6. Ability for account merging of escrowed tokens at specific time windows for people to merge their balances - [sip-13](https://sips.synthetix.io/sips/sip-13).
 7. Ability to migrate escrowed SNX and vesting entries to L2 OVM. An internal contract (base:SynthetixBridgeToOptimism) to clear all entries for a user (during the initial deposit phase of L2 migration).
+
+### Deprecate `HavvenEscrow` TokenSale contract
+There are still approx 1MM SNX in the [old token sale contract](https://contracts.synthetix.io/SynthetixEscrow). These escrow entries and balances should be migrated to the new escrow contract to;
+
+1. Reduce the cross contract collateral calls
+2. Only need Dapps to support 1 escrow contract
+3. Remove from the code base reducing surface area
+4. Allows liquidation support
 
 ## Specification
 
