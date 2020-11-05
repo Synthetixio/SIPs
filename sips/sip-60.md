@@ -83,7 +83,8 @@ interface IRewardEscrowV2 {
         uint256[] calldata amounts
     ) external;
 
-    function burnForMigration(address account) external returns (uint64[52] memory, uint256[52] memory);
+    // Return amount of SNX transfered to SynthetixBridgeToOptimism deposit contract
+    function burnForMigration(address account) external returns (uint256, uint64[52] memory, uint256[52] memory);
 
     function vest(address account) external;
 }
@@ -107,11 +108,11 @@ interface IRewardEscrowV2 {
 
 With the launch of L2 Staking for SNX on the OVM testnet, users will be able to migrate all their SNX and escrowed SNX to L2 for staking and rewards. The vesting entries will be copied onto the L2 reward escrow contract that mirrors the migration process.
 
-1. The `base:SynthetixBridgeToOptimism.deposit()` transaction will vest any escrowed SNX that can be vested and transfer the remaining `totalEscrowedAccountBalance` SNX amount from the Reward escrow contract into the deposit contract. The vesting entries on L1 reward escrow will be deleted for the address.
+1. The `SynthetixBridgeToOptimism.deposit()` transaction will vest any escrowed SNX that can be vested and transfer the remaining `totalEscrowedAccountBalance` SNX amount from the Reward escrow contract into the deposit contract. The vesting entries on L1 reward escrow will be deleted for the address.
 
 2. The L1 migration step is not required for stakers to migrate to L2 their escrowed SNX.
 
-If the user has not migrated on L1 to the new escrow contract, the `base:SynthetixBridgeToOptimism.deposit()` function will read from the Old RewardEscrow to determine the remaining escrowed SNX and vesting entries to be migrated to L2. This reduces the steps and costs for stakers who want to move to L2 so that they won't need to pay the gas costs of L1 migration.
+If the user has not migrated on L1 to the new escrow contract, the `SynthetixBridgeToOptimism.deposit()` function will read from the Old RewardEscrow to determine the remaining escrowed SNX and vesting entries to be migrated to L2. This reduces the steps and costs for stakers who want to move to L2 so that they won't need to pay the gas costs of L1 migration.
 
 To prevent an address from migrating their SNX staking to L2 and then duplicating their vesting entries to the new Reward Escrow afterwards, `migrateVestingSchedule()` will fail if the address has already migrated to L2 first.
 
