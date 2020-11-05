@@ -100,7 +100,7 @@ interface IRewardEscrowV2 {
 
 ### Migration
 
-1. Issuer contract will need to be upgraded to migrate the SNX to the new contract onchain.
+1. Synthetix contract will need to be upgraded to migrate the SNX from the old escrow contract to the new contract onchain. There will be a temporary function to allow the pdao to execute this.
 
 2. During the migration `Vest` needs to be disabled or effectivly fail to ensure integrity of escrow entries and SNX balances being migrated for all accounts.
 
