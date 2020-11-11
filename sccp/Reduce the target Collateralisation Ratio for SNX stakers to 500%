@@ -1,8 +1,9 @@
-58: Reducethe target Collaterliasation Ratio for SNX stakers to 500%
-Author Akin Sawyerr (@nottrunner)
+58: Reduce the target Collaterliasation Ratio for SNX stakers to 500%
+Author Akin Sawyerr
 discussions-To  https://research.synthetix.io/t/sccp-58-reduce-target-collateralisation-ratio-to-500/225
 status: Proposed
 created: 2020-11-09
+
 Simple Summary
 Decrease the target Collateralisation Ratio for SNX stakers to 500%
 
@@ -11,18 +12,23 @@ The system is much more stable with the first successful set of liquidations exe
 
 Motivation
 Liquidation process in place and working
-
 Network and Active c-ratio are a very health 783% and 635% respectfully, even with recent drop in SNX price
-
 Increased liquidity will support increased use of the exchange(s) and transaction fees
-
 Capital Efficiency
-
 Increased demand for synths will drive more integrations with other DeFi platforms
-
 It will allow us to further collect data on stability of the peg, would be market absorb the increased supply?
-
 We now have liquidations
+
+Specification
+Overview 
+
+Rationale
+
+Technical Specification
+
+Test Cases
+
+Configurable Values (Via SCCP)
 
 Copyright
 Copyright and related rights waived via CC0.
