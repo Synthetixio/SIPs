@@ -1,8 +1,8 @@
 ---
-sccp: TBA
+sccp: 94
 title: Increase Fees on DEFI and CEX to 100 bp
 author: Kaleb Keny (@kaleb-keny)
-status: TBA
+status: Proposed
 discussions-to: https://research.synthetix.io/
 created: 2020-11-11
 
