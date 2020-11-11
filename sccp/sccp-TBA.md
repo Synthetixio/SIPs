@@ -1,6 +1,6 @@
 ---
 sccp: TBA
-title: Increase Fees on DEFI and CEX to 50 bp
+title: Increase Fees on DEFI and CEX to 100 bp
 author: Kaleb Keny (@kaleb-keny)
 status: TBA
 discussions-to: https://research.synthetix.io/
@@ -10,7 +10,7 @@ created: 2020-11-11
 
 ## Simple Summary
 
-Increase fees on trades into sDEFI, iDEFI, sCEX and iCEX to 50 bp.
+Increase fees on trades into sDEFI, iDEFI, sCEX and iCEX to 100 bp.
 
 ## Abstract
 
@@ -20,7 +20,7 @@ This SCCP suggests to raise fees on sDEFI, iDEFI, sCEX and iCEX to counter front
 
 ## Motivation
 
-Analysis of on-chain data showed that front-running opportunities were more accessible for these synths given the fees levied were 30 bp while the threshold frequency by chainlink is 1%.
+Analysis of on-chain data showed that front-running opportunities were more accessible for these synths given the fees levied 30 bp while the threshold frequency by chainlink is 1%.
 
 ## Copyright
 
