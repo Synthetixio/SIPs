@@ -31,7 +31,7 @@ Each space will still have the benefits provided by using snapshot as covered in
 
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 
-The current implementation of SIP-90 was too large of a paradigm change from historical forms of Synthetix Governance, reducing the influence of individuals who have alternative skin-in-the-game (reputation) whilst providing large SNX holders with a disproportionate amount of voting weight reducing the influence of the majority of token holders.
+The current implementation of SIP-90 was too large of a paradigm shift from historical forms of Synthetix Governance, reducing the influence of individuals who have alternative skin-in-the-game (reputation) whilst providing large SNX holders with a disproportionate amount of voting weight reducing the influence of the majority of token holders.
 
 ## Specification
 
@@ -49,8 +49,8 @@ The current implementation of SIP-90 was too large of a paradigm change from his
 
 There are two major components of the new proposed governance system:
 
-- Spartan Council
-- Synthetix Proposals
+1. Spartan Council
+2. Synthetix Proposals
 
 - Spartan Council - As a result of SIP-90, we have transitioned into a system that was previously 1 identity 1 vote to 1 identity N votes whilst also removing individuals who posses alternative skin in the game from the governance process. The Spartan Council will be a X periodic election where nominees are voted in by the Synthetix token holders reenabling the influence of community representatives who are able to debate and distill technical changes whilst also not directly providing large SNX holders a disproportionate voting weight in the outcome of proposals.
 
@@ -90,8 +90,8 @@ The current use of the Spartan Council is more in line with the future goal of d
 
 <!--Please list all values configurable via SCCP under this implementation.-->
 
-1. Spartan Council seat numbers - the number of seats available on the Spartan Council and thus N/2 + 1 is the required number for a decision to be voted in.
-2. Re-election period - the period in which token holders must redelegate their votes to new and existing council members (to prevent stagnation and ephemeral power).
+- Spartan Council seat numbers - the number of seats available on the Spartan Council and thus N/2 + 1 is the required number for a decision to be voted in.
+- Re-election period - the period in which token holders must redelegate their votes to new and existing council members (to prevent stagnation and ephemeral power).
 
 ## Copyright
 
