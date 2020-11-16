@@ -45,7 +45,7 @@ Since the BCH asset has forked into two new assets, each would need to be subjec
 
 Delist sBCH & iBCH
 
-1. Upgrade iBCH without purge exchange limit of 10,000 sUSD
+1. Upgrade iBCH without purge exchange limit of 100,000 sUSD
 2. Upgrade sBCH to a Purgeable Synth
 3. Purge sBCH & iBCH into sUSD
 4. Remove sBCH & iBCH from the protocol and the exchange
