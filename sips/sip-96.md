@@ -28,7 +28,7 @@ Suspend synths 72 hours before an upcoming hard fork. This will prevent the synt
 
 When a blockchain undergoes a hard fork, there could be two different versions of the chain that are running simultaneously creating uncertainity in the price feeds for the asset. Exchanges and miners can choose to adopt a prevailing fork of a chain and this process could take a few days to stabilise.
 
-To protect traders and SNX stakers against this uncertainty, this framework proposes to enable the affected Synths to be suspended 72 hours before the hard fork event.
+To protect traders and SNX stakers against this uncertainty, this framework proposes to suspend the affected Synths 72 hours before the hard fork event.
 
 In the case of contentious hard forks where there are two competing forks, a SIP could be proposed, for example in the case of the recent [BCH fork](.sip-95.md), to the community and stakers to delist the synths and then re-examine relisting the synths once the dominant fork and price feeds are established.
 
