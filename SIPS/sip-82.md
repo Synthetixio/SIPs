@@ -1,5 +1,5 @@
 ---
-sip: TBD
+sip: 82
 title: Synthetix Keeper System
 status: WIP
 author: Jackson Chan (@jacko125), Justin Moses (@justinjmoses)
