@@ -1,5 +1,5 @@
 ---
-sip: 92
+sip: 97
 title: Multi-Collateral Loans
 status: Proposed
 author: Michael Spain (@mjs-12), Clinton Ennis (@hav-noms)
