@@ -43,16 +43,15 @@ A loan can be summarised by the following fields.
 
 | Symbol | Description | Example |
 | ------ | ----------- | ----- |
-| \\(c_q\\) | Collateral locked | 1 ETH | 
-| \\(s\\) | Synth borrowed | sUSD |
-| \\(s_a\\) | Amount of synth borrowed | 50 sUSD | 
-| \\(c_p\\) | USD price of the collateral | $100 | 
-| \\(s_p\\) | USD price of the synth | $1 | 
-| \\(z\\) | Interest accrued on the loan | 5 sUSD| 
+| \\(c\\) | Collateral locked | 1 ETH | 
+| \\(p_c\\) | USD price of the collateral | $100 | 
+| \\(s\\) | Synth borrowed | 10 sUSD |
+| \\(p_s\\) | USD price of the synth | $1 | 
+| \\(I\\) | Interest accrued on the loan | 5 sUSD| 
 
 From these fields, we can determine the loan's collateralisation ratio.
 
-\\( ratio \ := \frac{c_p \ c}{s_p \ (a + x)}\\) 
+\\( r \ := \frac{p_c \ c}{p_s \ (s + I)}\\) 
 
 Each type of collateral is implemented by its own smart contract and is responsible for the issuance and management of all the loans associated with it. It is distinguished by several variables.
 
@@ -64,9 +63,9 @@ Each type of collateral is implemented by its own smart contract and is responsi
 
 ### Debt pool and Interest
 
-Each loan contributes to the size of the debt pool. When a loan is opened, the debt pool increases by the amount of the synth borrowed. Now, while the debt of the borrower is fixed, they are free to exchange their synths. This means that the profit/loss from their trading activities is absorbed by the SNX stakers and increases in proportion with the ratio of non SNX debt to SNX debt. We call this utilisation ratio U and desire that as it increases,  the cost of borrowing increases with it, to compensate stakers for the increased risk. A simple linear funtion is sufficient for our needs.
+Each loan contributes to the size of the debt pool. When a loan is opened, the debt pool increases by the amount of the synth borrowed. While the debt of the borrower is fixed, they are free to exchange their synths. This means that the profit/loss from their trading activities is absorbed by the SNX stakers and increases in proportion with the ratio of non SNX debt to SNX debt. We call this utilisation ratio \(U\) and require that as it increases, the cost of borrowing increases with it, to compensate stakers for the increased risk. A simple linear funtion is sufficient for our needs.
 
-\[i \ := \ mU + b \ \]
+\\(i \ := \ mU + b \\)
 
 Utilisation changes anytime the debt pool composition changes. It is not feasible to update every loan whenever the debt pool changes. Instead, whenever a loan is interacted with, we check the utilisation and determine the total accrued interest per base currency unit, using the same approach described by [SIP 80](https://sips.synthetix.io/sips/sip-80#aggregate-debt-calculation). This means we can calculate the interest accrued on a particular loan in constant time. Interest is charged whenever a repayment is made, a liquidation occurs, or a loan is closed.
 
