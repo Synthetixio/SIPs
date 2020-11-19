@@ -27,7 +27,7 @@ As Synthetix grows, the limitations of a single collateral system are becoming a
 
 As the two largest and most liquid assets, BTC and ETH are considerably less volatile than SNX and therefore can be borrowed against at lower collateralisation levels. They are also the most widely held assets, representing a huge market of potential traders. Allowing these users to access Synthetix whilst maintaining their BTC/ETH exposure will make the system more enticing. Having already successfully trialed ETH as collateral, we would like the system to be positioned to capture the increasing amount of tokenised Bitcoin that is entering Ethereum.
 
-An implementation that supports generic ERC20 collateral would also mean that additional collateral could be added without requiring additional technichal work.
+An implementation that supports generic ERC20 collateral would also mean that additional collateral could be added without requiring technichal work.
 
 ## Specification
 
@@ -64,7 +64,7 @@ Each type of collateral is implemented by its own smart contract and is responsi
 
 ### Debt pool and Interest
 
-Each loan contributes to the size of the debt pool. When a loan is opened, the debt pool increases by the amount of the synth borrowed. Now, while the debt of the borrower is fixed, they are free to exchange their synths. This means that the profit/loss from their trading activities is absorbed by the SNX stakers increases in proportion with the ratio of non SNX debt to SNX debt. We call this ratio the Utilisation U and desire that as it increases,  the cost of borrowing increases with it, to compensate stakers for the increased risk. A simple linear funtion is sufficient for our needs.
+Each loan contributes to the size of the debt pool. When a loan is opened, the debt pool increases by the amount of the synth borrowed. Now, while the debt of the borrower is fixed, they are free to exchange their synths. This means that the profit/loss from their trading activities is absorbed by the SNX stakers and increases in proportion with the ratio of non SNX debt to SNX debt. We call this utilisation ratio U and desire that as it increases,  the cost of borrowing increases with it, to compensate stakers for the increased risk. A simple linear funtion is sufficient for our needs.
 
 \[i \ := \ mU + b \ \]
 
