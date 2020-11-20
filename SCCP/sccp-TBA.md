@@ -25,7 +25,7 @@ Increasing fees to 50 bp should help close down any available front-running oppu
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Analysis of on-chain data showed that front-running were more available on iETH, as the synth is close to it's lower limit and therefore more volatile, given a changes in the price of sETH.
+Analysis of on-chain data showed that front-running is possible on iETH, as the synth is close to it's lower limit and therefore more volatile for a given changes in the price of sETH.
 
 ## Copyright
 
