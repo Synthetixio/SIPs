@@ -25,7 +25,7 @@ Increasing fees by 20 bp on sETH and by 25 bp on iETH should narrow down the pot
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Analysis of on-chain data showed that front-running continued to be possible on iETH, as the synth is close to it's lower limit. Furthermore, front-running on sETH, due to the chainlink push threshold of 0.50%, matching the push frequency with fees should close up the front-running window completely.
+Analysis of on-chain data showed that front-running continued to be possible on iETH, as the synth is close to it's lower limit. Furthermore, due to the chainlink push threshold of 0.50%, fees on sETH should be raised to match the push frequency and close up the front-running window completely.
 
 ## Copyright
 
