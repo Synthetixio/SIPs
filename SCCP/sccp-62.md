@@ -19,13 +19,14 @@ Raise exchange fees of trades into `iETH`by 25 bp to `0.75%` and on `sETH` by 20
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Increasing fees by 20 bp on `sETH` and by 25 bp on `iETH` should narrow down the front-running gap completely.
+Increasing fees by 20 bp on `sETH` and by 25 bp on `iETH` should narrow down the front-running gap which remained possible after yesterday's rate increase.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 Analysis of on-chain data showed that front-running continued to be possible on iETH, as the synth is close to it's lower limit. Furthermore, due to the chainlink push threshold of 0.50%, fees on sETH should be raised to match the push frequency and close up the front-running window completely.
+It should be mentioned that I will be advocating for lowering fees on iETH back to previous levels (and will write the needed SCCP), after the synth is frozen and the leverage is reset.
 
 ## Copyright
 
