@@ -13,13 +13,13 @@ created: 2020-11-21
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Raise exchange fees of trades into `iETH`by 25 bp to `0.75%` and on sETH by 20 bp to '0.50%'.
+Raise exchange fees of trades into `iETH`by 25 bp to `0.75%` and on `sETH` by 20 bp to '0.50%'.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Increasing fees by 20 bp on sETH and by 25 bp on iETH should narrow down the potential front-running gap completely.
+Increasing fees by 20 bp on `sETH` and by 25 bp on `iETH` should narrow down the front-running gap completely.
 
 ## Motivation
 
