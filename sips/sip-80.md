@@ -111,7 +111,7 @@ increases the contract's liquidation risk.
 | Symbol | Description | Definition | Notes |
 | ------ | ----------- | ---------- | ----- |
 | \\(\lambda\\) | Leverage | \\(\lambda \ := \ \frac{v}{m}\\) | We also define \\(\lambda_e := \frac{v_e}{m_e}\\), the selected leverage when the position was entered. We constrain the entry leverage thus: \\[\lambda_e \leq \lambda_{max}\\] Note that the leverage in a position at a given time may exceed this value as its margin is exhausted. |
-| \\(m_e\\) | Initial margin | \\(m_e \ := \ \mu_e \ q \ p_e\\) | This is the quantity of sUSD the user initially spends to open a contract of \\(q\\) units of the base currency. The remaining \\(v_e - m_e\\) sUSD to pay for the rest of the position is "borrowed" from SNX holders, and it must be paid back when the position is closed. |
+| \\(m_e\\) | Initial margin | \\(m_e \ := \ \frac{q \ p_e}{\lambda_e}\\) | This is the quantity of sUSD the user initially spends to open a contract of \\(q\\) units of the base currency. The remaining \\(v_e - m_e\\) sUSD to pay for the rest of the position is "borrowed" from SNX holders, and it must be paid back when the position is closed. |
 | \\(m\\) | Remaining margin | \\(m \ := \ max(m_e + r + f, 0)\\) | A contract's remaining margin is its initial margin, plus its profit \\(r\\) and funding \\(f\\) (described below). When the remaining margin reaches zero, the position is liquidated, so that it can never take a negative value. |
 
 It is important to note that the granularity and frequency of oracle price updates constrains the maximum leverage
