@@ -14,7 +14,7 @@ created: 2020-11-26
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Raise exchange fees of trades into `iBTC` by 25 bp to `0.75%` and trades into sBTC by 45 bp to `0.75%`.
+Raise exchange fees of trades into `iBTC` by 25 bp to `0.75%` and trades into `sBTC` by 45 bp to `0.75%`.
 
 ## Abstract
 
