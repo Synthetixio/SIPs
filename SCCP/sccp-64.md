@@ -20,7 +20,7 @@ Raise exchange fees of trades into `iBTC` by 20 bp to `0.50%`.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Increasing fees to 20 bp on iBTC should help reduce the gap against the oracle price push.
+Increasing fees by 20 bp to 50 bp on iBTC should help reduce the gap against the oracle price push.
 
 ## Motivation
 
