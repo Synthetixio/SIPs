@@ -1,6 +1,6 @@
 ---
 sccp: 65
-title: Increase fees on sBTC to 0.50% and iBTC to 0.75%
+title: Increase fees on sBTC and iBTC to 75 bp
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
 status: Proposed
@@ -14,13 +14,13 @@ created: 2020-11-26
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Raise exchange fees of trades into `iBTC` by 25 bp to `0.75%` and trades into sBTC by 20 bp to `0.50%`.
+Raise exchange fees of trades into `iBTC` by 25 bp to `0.75%` and trades into sBTC by 45 bp to `0.75%`.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Increasing fees by 25 bp and 20 bp, respectively on iBTC and sBTC, should narrow down the front-running gap which remained possible after today's rate increase.
+Increasing fees on trades into iBTC and sBTC to 75 bp, should significantly narrow down the front-running gap which remained possible after today's rate increase.
 
 ## Motivation
 
