@@ -27,7 +27,7 @@ Increasing fees by 25 bp and 20 bp, respectively on iBTC and sBTC, should narrow
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 Analysis of on-chain data showed that front-running continued to be possible on the iBTC and sBTC pair. This is mostly due to chainlink delayed price push threshold.
-It is worth mentioning that the current rate increases are short-term and other solutions are explored to close the gap without raising fees for traders.
+It is worth mentioning that the current rate increases are short-term and other solutions can be explored in the future to close the gap without raising fees on traders. 
 
 
 ## Copyright
