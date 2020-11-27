@@ -1,5 +1,5 @@
 ---
-sip: 98
+sip: 99
 title: Upgrade sOIL to use diversified Chainlink aggregator
 status: Proposed
 author: Clinton Ennis (@hav-noms)
