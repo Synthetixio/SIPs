@@ -19,7 +19,7 @@ Increasing the  price adjustment period to 7 minutes from 3 minutes.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Increasing the price adjustment period should allow to close a front-running window on the sETH/iETH pair without raising exchange fees. 
+Increasing the price adjustment period helps in closing a front-running window on the sETH/iETH pair without raising exchange fees. 
 
 ## Motivation
 
