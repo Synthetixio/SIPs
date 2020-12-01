@@ -19,16 +19,14 @@ Increasing the  price adjustment period to 7 minutes from 3 minutes.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Increasing the price adjustment period helps in closing a front-running window on the sETH/iETH pair without raising exchange fees. 
+Increasing the price adjustment period helps in closing a front-running window and correct for delays in the chainlink price push. 
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Analysis of on-chain data showed that front-running is possible on the sETH/iETH pair at the current exchange rate of 50 bp. 
-Increasing the price adjustment period could help in closing that window and once SIP-98 is enacted, we could opt to lower both the waiting period and the fees charged.
-Worth noting that any further relaxation of these parameters could be voted on and discussed by the incoming Spartan Council.
-
+Analysis of on-chain data showed that front-running is possible on the sETH/iETH pair even with the recently enacted SIP-98 due to delay in chainlink price synch with market swings.
+Raising the price adjustment period to 7 minutes, should help close that window.
 
 ## Copyright
 
