@@ -4,8 +4,8 @@ title: Multi-Collateral Loans
 status: Proposed
 author: Michael Spain (@mjs-12), Clinton Ennis (@hav-noms)
 discussions-to: https://research.synthetix.io/t/sip-97-multi-collateral-loans/230
-created: 2020-11-19 
-requires: 
+created: 2020-11-19
+requires:
 ---
 
 ## Simple Summary
@@ -14,16 +14,18 @@ Allow users to borrow synthetic assets against ETH and ERC20 collateral.
 
 ## Abstract
 
-By locking collateral into Synthetix, users can borrow synthetic assets (synths) against the value of their collateral. A borrower's debt is fixed at the time the loan is created. This is in contrast with the debt of an SNX staker, which fluctuates with the composition of the debt pool. Since borrowers assume no responsibility for maintenance of the debt pool they are ineligible to receive fees or rewards. Instead, they are charged interest in proportion with the risk that they introduce to the system, which is paid weekly to SNX stakers via the fee pool. 
+By locking collateral into Synthetix, users can borrow synthetic assets (synths) against the value of their collateral. A borrower's debt is fixed at the time the loan is created. This is in contrast with the debt of an SNX staker, which fluctuates with the composition of the debt pool. Since borrowers assume no responsibility for maintenance of the debt pool they are ineligible to receive fees or rewards. Instead, they are charged interest in proportion with the risk that they introduce to the system, which is paid weekly to SNX stakers via the fee pool.
 
 Initially, the system will support borrowing sUSD/sETH against ETH and sUSD/sBTC against renBTC. We may also consider allowing sUSD to be borrowed against SNX as a fixed debt position.
 
 ## Motivation
 
-As Synthetix grows, the limitations of a single collateral system are becoming apparent.
+Until now, the Synthetix system has only supported a single collateral system (SNX <> sUSD).
 
-- SNX price volatility requires significant overcollateralisation, making the system relatively capital inefficient.
-- It introduces friction by requiring prospective traders to either exchange their assets directly for synths or buy and stake SNX.
+As Synthetix grows, the limitations of this system is becoming apparent.
+
+- The price volatility of the Synthetix Network Token in comparison to other larger cap assets requires significant over-collateralisation, making the system relatively capital inefficient.
+- There is significant friction to use the SNX system for trading/exchanging, requiring users to exchange their assets in third-party markets directly for synths or to participate in the SNX debt pool.
 
 As the two largest and most liquid assets, BTC and ETH are considerably less volatile than SNX and therefore can be borrowed against at lower collateralisation levels. They are also the most widely held assets, representing a huge market of potential traders. Allowing these users to access Synthetix whilst maintaining their BTC/ETH exposure will make the system more enticing. Having already successfully trialed ETH as collateral, we would like the system to be positioned to capture the increasing amount of tokenised Bitcoin that is entering Ethereum.
 
@@ -33,33 +35,33 @@ An implementation that supports generic ERC20 collateral would also mean that ad
 
 ### Loans
 
-A loan is a debt position taken out by a borrower and is denominated in a specific synth. To open a loan, the borrower must deposit collateral. Depending on the type of collateral deposited, the borrower will have a choice of different synths that can be borrowed. They may also choose the amount borrowed, subject to the constraint that the ratio of collateral value to synth value is greater than some minimum. 
+A loan is a debt position taken out by a borrower and is denominated in a specific synth. To open a loan, the borrower must deposit collateral. Depending on the type of collateral deposited, the borrower will have a choice of different synths that can be borrowed. They may also choose the amount borrowed, subject to the constraint that the ratio of collateral value to synth value is greater than some minimum.
 
-The duration of the loan is at the discretion of the borrower. While open, the loan accrues interest according to a variable rate that will be discussed later. Repayments can be made at any time, by anyone, but only the borrower may close the loan. 
+The duration of the loan is at the discretion of the borrower. While open, the loan accrues interest according to a variable rate that will be discussed later. Repayments can be made at any time, by anyone, but only the borrower may close the loan.
 
 If the collateralisation ratio of the loan falls below the minimum, it will be eligible for liquidation. To increase the loan's collateralisation ratio, anyone can deposit collateral to an open loan. The borrower can also withdraw collateral as long as they do not violate the minimum collateralisation requirement.
 
 A loan can be summarised by the following fields.
 
-| Symbol | Description | Example |
-| ------ | ----------- | ----- |
-| \\(c\\) | Collateral locked | 1 ETH | 
-| \\(p_c\\) | USD price of the collateral | $100 | 
-| \\(s\\) | Synth borrowed | 10 sUSD |
-| \\(p_s\\) | USD price of the synth | $1 | 
-| \\(I\\) | Interest accrued on the loan | 5 sUSD| 
+| Symbol    | Description                  | Example |
+| --------- | ---------------------------- | ------- |
+| \\(c\\)   | Collateral locked            | 1 ETH   |
+| \\(p_c\\) | USD price of the collateral  | $100    |
+| \\(s\\)   | Synth borrowed               | 10 sUSD |
+| \\(p_s\\) | USD price of the synth       | $1      |
+| \\(I\\)   | Interest accrued on the loan | 5 sUSD  |
 
 From these fields, we can determine the loan's collateralisation ratio.
 
-\\( r \ := \frac{p_c \ c}{p_s \ (s + I)}\\) 
+\\( r \ := \frac{p_c \ c}{p_s \ (s + I)}\\)
 
 Each type of collateral is implemented by its own smart contract and is responsible for the issuance and management of all the loans associated with it. It is distinguished by several variables.
 
-| Symbol | Description | Notes |
-| ------ | ----------- | ----- |
-| \\(S\\)  | Synths that can be issued | For example [sUSD, sETH] or [sUSD, sBTC] |
-| \\(b\\)  | Base interest rate | A configurable parameter that reflects the risk profile of the collateral. |
-| \\(ratio_{min}\\) | Minimum collateralisation ratio | This limits the maximum loan that can be issued for a certain amount of collateral. If a loan falls under this threshold, it is eligible for liquidation. |
+| Symbol             | Description                     | Notes                                                                                                                                                     |
+| ------------------ | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \\(S\\)            | Synths that can be issued       | For example [sUSD, sETH] or [sUSD, sBTC]                                                                                                                  |
+| \\(b\\)            | Base interest rate              | A configurable parameter that reflects the risk profile of the collateral.                                                                                |
+| \\(ratio\_{min}\\) | Minimum collateralisation ratio | This limits the maximum loan that can be issued for a certain amount of collateral. If a loan falls under this threshold, it is eligible for liquidation. |
 
 ### Debt pool and Interest
 
