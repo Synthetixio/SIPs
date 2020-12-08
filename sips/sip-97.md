@@ -33,7 +33,7 @@ An implementation that supports generic ERC20 collateral would also mean that ad
 
 ## Specification
 
-### Loans
+### Overview
 
 A loan is a debt position taken out by a borrower and is denominated in a specific synth. To open a loan, the borrower must deposit collateral. Depending on the type of collateral deposited, the borrower will have a choice of different synths that can be borrowed. They may also choose the amount borrowed, subject to the constraint that the ratio of collateral value to synth value is greater than some minimum.
 
@@ -63,7 +63,7 @@ Each type of collateral is implemented by its own smart contract and is responsi
 | \\(b\\)            | Base interest rate              | A configurable parameter that reflects the risk profile of the collateral.                                                                                |
 | \\(ratio\_{min}\\) | Minimum collateralisation ratio | This limits the maximum loan that can be issued for a certain amount of collateral. If a loan falls under this threshold, it is eligible for liquidation. |
 
-### Debt pool and Interest
+#### Debt pool and Interest
 
 Each loan contributes to the size of the debt pool. When a loan is opened, the debt pool increases by the amount of the synth borrowed. While the debt of the borrower is fixed, they are free to exchange their synths. This means that the profit/loss from their trading activities is absorbed by the SNX stakers and increases in proportion with the ratio of non SNX debt to SNX debt. We call this utilisation ratio \(U\) and require that as it increases, the cost of borrowing increases with it, to compensate stakers for the increased risk. A simple linear funtion is sufficient for our needs.
 
@@ -71,16 +71,73 @@ Each loan contributes to the size of the debt pool. When a loan is opened, the d
 
 Utilisation changes anytime the debt pool composition changes. It is not feasible to update every loan whenever the debt pool changes. Instead, whenever a loan is interacted with, we check the utilisation and determine the total accrued interest per base currency unit, using the same approach described by [SIP 80](https://sips.synthetix.io/sips/sip-80#aggregate-debt-calculation). This means we can calculate the interest accrued on a particular loan in constant time. Interest is charged whenever a repayment is made, a liquidation occurs, or a loan is closed.
 
-### Liquidations
+#### Liquidations
 
 When a loan's collateralisation ratio falls below the minimum collateralistion required, it is eligible for liquidation. Liquidation is a public function that may be performed by anyone. The liquidation mechanism is the same as described in [SIP 15](https://sips.synthetix.io/sips/sip-15). The liquidator pays an amount of the borrowed synth back, and receives an amount of the borrower's collateral equal to the liquidated amount plus a penalty.
 
-## Rationale
+### Rationale
 
-### Interest considerations
+#### Interest considerations
 
 In systems where borrowers access the collateral of other depositors, there is a tension between utilisation and liquidity risk. If all the deposited ETH is borrowed, depositors cannot access any liquidity, which is a highly undesirable state. So they use piecewise functions to rapidly increase the cost of borrowing beyond some utilisation threshold. In Synthetix, users do not borrow the collateral of other users, rather the borrowed assets are created at the time the loan is issued.
 
-## Test cases
+### Technical Specification
+
+Several new contracts will be deployed:
+- `Collateral.sol` which defines the core logic associated with opening and managing loans for a given collateral type.
+- `CollateralManager.sol` which aggregates information across the various collateral contracts and interfaces with `Issuer.sol`.
+- `CollateralEth.sol` which inherits from `Collateral.sol` and provides ETH specific implementation features.
+- `CollateralErc20.sol` which inherits from `Collateral.sol` and provides ERC20 specific implementation features.
+- `CollateralState.sol` stores loans associated with a given collateral.
+- `CollateralManagerState.sol` stores borrow rates and aggregate issuance statistics.
+
+The entry points for users are `CollateralEth.sol` and `CollateralErc20.sol`, which implement the following interfaces.
+
+```solidity
+interface ICollateralEth {
+    function open(uint amount, bytes32 currency) external payable;
+
+    function close(uint id) external;
+
+    function deposit(address borrower, uint id) external payable;
+
+    function withdraw(uint id, uint amount) external;
+
+    function repay(address borrower, uint id, uint amount) external;
+
+    function liquidate(address borrower, uint id, uint amount) external;
+
+    function claim(uint amount) external;
+}
+
+interface ICollateralErc20 {
+    function open(uint collateral, uint amount, bytes32 currency) external;
+
+    function close(uint id) external;
+
+    function deposit(address borrower, uint id, uint collateral) external;
+
+    function withdraw(uint id, uint amount) external;
+
+    function repay(address borrower, uint id, uint amount) external;
+
+    function liquidate(address borrower, uint id, uint amount) external;
+}
+```
+
+### Test cases
 
 Included with the implementation.
+
+### Configurable Values (Via SCCP)
+
+- `synths` the synths which can be borrowed against the collateral.
+- `minimumCollateralisation` the minimum collateralisation ratio before becoming eligible for liquidation.
+- `baseInterestRate` a configurable rate that is applied to all loans of this collateral and reflects its risk profile.
+- `liquidationPenalty` the incentive that is paid out of the collateral to the liquidator.
+- `issueFeeRate` the fee for opening a loan.
+- `minCollateral` the minimum collateral required to open a position.
+- `maxDebt` The maximum value that can be created.
+
+## Copyright
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
