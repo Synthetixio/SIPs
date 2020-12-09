@@ -56,21 +56,24 @@ There are two major components of the new proposed governance system:
 
 - Synthetix Proposals - Changes in the protocol (initially SCCPs, but eventually SIPs) that are submitted to the [SIPs Github repository](https://github.com/Synthetixio/SIPs) will be posted on the Synthetix Proposal space. Proposals must reach an supermajority agreement (N/2 + 1 - if N is even or to Ceiling(N/2) - if N is odd) on a option for it to be enacted.
 
+**Liquid Democracy**
 Within a Council Epoch, votes are liquid, so voters can remove or change their votes at any time.
 
 If a Council Member loses enough votes during a Council Epoch to below a non-member, then the protocolDAO will manually retrieve the NFT from the departing Council Member and issue it to the new Council Member, giving them Council voting rights. This is a manual process, so there may be some lag before the protocolDAO carries this out. The protocolDAO will check the election standings before implementing any successful SCCP (or, in the future, SIP).
 
+**Council Payments**
 Initially, SNX payments to Council Members will be paid manually by the synthetixDAO at the end of a Council Epoch, but there are plans to move to a streaming process. In the case of sufficient Council Member’s votes being pulled out before the end of a Council Epoch to remove them from the Council, they will receive SNX rewards proportionate to their time in the Council during that Epoch, up until the point at which their NFT is retrieved. The replacement Member will receive SNX rewards proportionate to their time in the Council after which their NFT is issued.
 
-- Despite the council reaching a consensus on a proposal, the protocolDAO still retains discretion over any changes to the protocol in this version of governance if required. However, this is only a last resort in case of emergency — the processes should all be optimised to minimise this potential occurence. Indeed, all of SIP-93 is intended to minimise the protocolDAO's discretion. 
-
-![Example Timeline](assets/sip-93/example-timeline.png){: .center-image }
-
-Above is the example timeline for the genesis election, with helps understand the terminology of configurable values.
+**pDAO Discretion**
+Despite the council reaching a consensus on a proposal, the protocolDAO still retains discretion over any changes to the protocol in this version of governance if required. However, this is only a last resort in case of emergency — the processes should all be optimised to minimise this potential occurence. Indeed, all of SIP-93 is intended to minimise the protocolDAO's discretion.
 
 **Meta-Governance**
 
 Any SCCP's that relate to configuring the values of this SIP will need to be voted on by the Spartan Council members. In order for this SCCP to pass, the Spartan Council must reach an unanimous decision.
+
+![Example Timeline](assets/sip-93/example-timeline.png){: .center-image }
+
+Above is the example timeline for the genesis election, with helps understand the terminology of configurable values.
 
 ### Rationale
 
