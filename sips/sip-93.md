@@ -62,7 +62,7 @@ If a Council Member loses enough votes during a Council Epoch to below a non-mem
 
 Initially, SNX payments to Council Members will be paid manually by the synthetixDAO at the end of a Council Epoch, but there are plans to move to a streaming process. In the case of sufficient Council Member’s votes being pulled out before the end of a Council Epoch to remove them from the Council, they will receive SNX rewards proportionate to their time in the Council during that Epoch, up until the point at which their NFT is retrieved. The replacement Member will receive SNX rewards proportionate to their time in the Council after which their NFT is issued.
 
-- Despite the council reaching a consensus on a proposal, the protocolDAO still maintains full discretion over any changes to the protocol in this version of governance if required.
+- Despite the council reaching a consensus on a proposal, the protocolDAO still retains discretion over any changes to the protocol in this version of governance if required. However, this is only a last resort in case of emergency — the processes should all be optimised to minimise this potential occurence. Indeed, all of SIP-93 is intended to minimise the protocolDAO's discretion. 
 
 ![Example Timeline](assets/sip-93/example-timeline.png){: .center-image }
 
