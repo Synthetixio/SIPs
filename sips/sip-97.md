@@ -153,13 +153,13 @@ The following values are proposed as the initial configuration.
 `CollateralEth.sol`
 - `synths` sUSD, sETH
 - `minCratio` 150%
-- `minCollateral` 0.1
+- `minCollateral` 0.5
 - `issueFeeRate` 0
 
 `CollateralErc20.sol`
 - `synths` sUSD, sBTC
 - `minCratio` 150%
-- `minCollateral` 0.01
+- `minCollateral` 0.025  
 - `issueFeeRate` 0
 - `underlyingAsset` 0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D (renBTC address)
 
