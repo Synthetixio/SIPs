@@ -131,13 +131,38 @@ Included with the implementation.
 
 ### Configurable Values (Via SCCP)
 
+For collateral contracts, the following values must be set.
+
 - `synths` the synths which can be borrowed against the collateral.
-- `minimumCollateralisation` the minimum collateralisation ratio before becoming eligible for liquidation.
-- `baseInterestRate` a configurable rate that is applied to all loans of this collateral and reflects its risk profile.
-- `liquidationPenalty` the incentive that is paid out of the collateral to the liquidator.
+- `minCratio` the minimum collateralisation ratio before becoming eligible for liquidation.
+- `minCollateral` the minimum collateral required to open a loan.
 - `issueFeeRate` the fee for opening a loan.
-- `minCollateral` the minimum collateral required to open a position.
-- `maxDebt` The maximum value that can be created.
+
+For the collateral manager, the following values must be set.
+
+- `baseBorrowRate` the base interest rate applied to all borrows.
+- `baseShortRate` the base interest rate applied to all shorts (see [SIP 103](https://sips.synthetix.io/sips/sip-103) for context).
+
+#### Proposed Initial Values
+
+The following values are proposed as the initial configuration.
+
+`CollateralEth.sol`
+- `synths` sUSD, sETH
+- `minCratio` 150%
+- `minCollateral` 0.1
+- `issueFeeRate` 0
+
+`CollateralErc20.sol`
+- `synths` sUSD, sBTC
+- `minCratio` 150%
+- `minCollateral` 0.01
+- `issueFeeRate` 0
+- `underlyingAsset` 0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D (renBTC address)
+
+`CollateralManager.sol`
+- `baseBorrowRate` 0
+- `baseShortRate` 0
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
