@@ -138,10 +138,13 @@ For collateral contracts, the following values must be set.
 - `minCollateral` the minimum collateral required to open a loan.
 - `issueFeeRate` the fee for opening a loan.
 
+Aditionally, for erc20 collateral contracts, we must set the `underlyingAsset`, which will be used as the collateral.
+
 For the collateral manager, the following values must be set.
 
 - `baseBorrowRate` the base interest rate applied to all borrows.
 - `baseShortRate` the base interest rate applied to all shorts (see [SIP 103](https://sips.synthetix.io/sips/sip-103) for context).
+- `maxDebt` the maximum amount of debt, in sUSD, issuable by all contracts combined.
 
 #### Proposed Initial Values
 
@@ -163,6 +166,7 @@ The following values are proposed as the initial configuration.
 `CollateralManager.sol`
 - `baseBorrowRate` 0
 - `baseShortRate` 0
+- `maxDebt` 5000000
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
