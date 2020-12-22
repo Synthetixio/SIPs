@@ -49,7 +49,7 @@ issueFeeRate 0.003
 ## Motivation
 
 - 130% min c-ratio equates to 76.9%, thats quite competitive against other lending protocols such as Aave/Compound which allows 75% and liquidation at 80% for ETH for example
-- Inception fee needs to be 0.30% on SIP-103 because of chainlink laggy oracles
+- Inception fee needs to be 0.30% on SIP-103 due to chainlink oracle latency.
 - Min collateral is set as close as possible to 1000 sUSD to allow bigger audience to be able to use Synthetix
 - Max debt is set initially at 10 Millions sUSD for security purposes and might be expanded later as we hit the ceiling
 
