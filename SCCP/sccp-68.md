@@ -1,5 +1,5 @@
 ---
-sccp: 18
+sccp: 68
 title: Increase Fee Reclamation Waiting Period to 10 minutes
 author: Kaleb Keny (@kalebkeny)
 discussions-to: governance
