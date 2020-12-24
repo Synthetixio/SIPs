@@ -26,7 +26,7 @@ Increase fee reclamation waiting period to 10 minutes to accommodate network con
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-With the consistently high gas prices it has been taking chainlink around 8 minutes to fully reflect the price updates of a significant price swings. This results in a narrow but potential front-running exploit to try and target the price update despite the high fees levied on crypto-to-crypto exchanges.
+With the consistently high gas prices it has been taking chainlink around 8 minutes to fully reflect the price update of a significant price swing. This results in a narrow but potential front-running exploit to try and target the price update despite the high fees levied on crypto-to-crypto exchanges.
 Increasing fee reclamation time to 10 minutes will help close the potential exploit until I am able to propose other alternatives.
 
 
