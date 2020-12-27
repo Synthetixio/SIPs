@@ -26,7 +26,7 @@ Increasing fees on trades into iBTC, should close the front-running gap which be
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Analysis of on-chain data showed that front-running continued to be possible on the iBTC. This is mostly due to chainlink delayed price push threshold as well as the increased leverage due to `iBTC` nearing it's lower limit.
+Analysis of on-chain data showed that front-running became increasingly possible on the iBTC. This is mostly due to chainlink delayed price push threshold as well as the increased leverage due to `iBTC` nearing it's lower limit.
 It is worth mentioning that the current rate increases is short-term and rates will be changed back to previous levels once `iBTC` is frozen, or when leverage decreases back to previous levels.
 
 
