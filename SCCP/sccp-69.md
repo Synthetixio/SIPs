@@ -1,5 +1,5 @@
 ---
-sccp: 65
+sccp: 69
 title: Increase fees on trades into iBTC to 2%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
