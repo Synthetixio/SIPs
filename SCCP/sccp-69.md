@@ -1,4 +1,3 @@
-
 ---
 sccp: 69
 title: Increase Fees on Leveraged Inverse Synths
