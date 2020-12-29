@@ -1,3 +1,4 @@
+
 ---
 sccp: 69
 title: Increase Fees on Leveraged Inverse Synths
@@ -35,7 +36,7 @@ Raising fees as per the below configuration and continuing to monitor the change
 |-------	|:--------:	|:--------:	|:--------:	|:-------------:	|
 | iADA  	| 0.083777 	| 0.1822   	| 2.17     	| 150           	|
 | iDEFI 	| 1883.947 	| 3,569.81 	| 1.89     	| 150            	|
-| iETH  	| 444.91   	| 711      	| 1.60     	| 100            	|
+| iETH  	| 444.91   	| 711      	| 1.60     	| 80            	|
 
 
 ## Copyright
