@@ -27,7 +27,7 @@ Increasing fees on inverse tokens who's price has decreased considerably relativ
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Analysis of on-chain data showed that front-running is possible on the below listed synths, as the chainlink rate push frequency is calibrated for price changes of the synths and not those of inverses opening up a front-running gap.
+Analysis of on-chain data showed that front-running is possible on the below listed synths, as the chainlink rate push frequency is calibrated for price changes of the synths and not those of inverses, opening up a front-running gap.
 Raising fees as per the below configuration and continuing to monitor the change leverage would help ensure that minters debt are not exploited.
 
 
