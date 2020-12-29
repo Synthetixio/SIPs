@@ -20,15 +20,15 @@ Raise exchange fees on inverses based on the leverage stemming from the token pr
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Increasing fees on inverse tokens who's price has decreased considerably relative to the synth price helps in closing the front-running opportunities.
+Increasing fees on inverse tokens who's price has decreased considerably relative to the synth price should close up front-running opportunities that were noticed recently.
 
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Analysis of on-chain data showed that front-running is possible on the below listed synths, as the chainlink rate push frequency for these synths does not depend on the price of the inverse but of the synth opening up a front-running gap.
-Raising fees as per the below configuration and continuing to increase/decrease fees based on leverage would help ensure that minters debt are not exploited. Although data will continue to be monitored and fees more increases be porposed in future sccps.
+Analysis of on-chain data showed that front-running is possible on the below listed synths, as the chainlink rate push frequency is calibrated for price changes of the synths and not those of inverses opening up a front-running gap.
+Raising fees as per the below configuration and continuing to monitor the change leverage would help ensure that minters debt are not exploited.
 
 
 |       	|   iRate  	|   sRate  	| Leverage 	| Fee      (bp) 	|
