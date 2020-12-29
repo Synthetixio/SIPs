@@ -31,12 +31,11 @@ Analysis of on-chain data showed that front-running is possible on the below lis
 Raising fees as per the below configuration and continuing to monitor the change leverage would help ensure that minters debt are not exploited.
 
 
-|       	|   iRate  	|   sRate  	| Leverage 	| Fee      (bp) 	|
-|-------	|:--------:	|:--------:	|:--------:	|:-------------:	|
-| iADA  	| 0.083777 	| 0.1822   	| 2.17     	| 150           	|
-| iDEFI 	| 1883.947 	| 3,569.81 	| 1.89     	| 150            	|
-| iETH  	| 444.91   	| 711      	| 1.60     	| 80            	|
-
+|       	|   iRate  	|   sRate  	| Leverage 	| Fee Proposed 	| Fee Previously 	|
+|-------	|:--------:	|:--------:	|:--------:	|:------------:	|----------------	|
+| iADA  	| 0.083777 	| 0.1822   	| 2.17     	| 150          	| 100            	|
+| iDEFI 	| 1883.947 	| 3,569.81 	| 1.89     	| 150          	| 100            	|
+| iETH  	| 444.91   	| 711      	| 1.60     	| 80           	| 30             	|
 
 ## Copyright
 
