@@ -1,7 +1,7 @@
 ---
 sccp: 69
-title: Increase Fees on Inverse Synths
-author: Kaleb Keny (@kaleb-keny)
+title: Increase Fees on Leveraged Inverse Synths
+author: Kaleb, Spreek, Danijel, farmwell
 discussions-to: governance
 status: Proposed
 created: 2020-12-29
@@ -33,11 +33,9 @@ Raising fees as per the below configuration and continuing to monitor the change
 
 |       	|   iRate  	|   sRate  	| Leverage 	| Fee      (bp) 	|
 |-------	|:--------:	|:--------:	|:--------:	|:-------------:	|
-| iADA  	| 0.083777 	| 0.1822   	| 2.17     	| 100           	|
-| iDEFI 	| 1883.947 	| 3,569.81 	| 1.89     	| 85            	|
-| iBNB  	| 22.8799  	| 37.51    	| 1.64     	| 70            	|
-| iETH  	| 444.91   	| 711      	| 1.60     	| 70            	|
-| iXMR  	| 108.1555 	| 156.36   	| 1.45     	| 70            	|
+| iADA  	| 0.083777 	| 0.1822   	| 2.17     	| 150           	|
+| iDEFI 	| 1883.947 	| 3,569.81 	| 1.89     	| 150            	|
+| iETH  	| 444.91   	| 711      	| 1.60     	| 100            	|
 
 
 ## Copyright
