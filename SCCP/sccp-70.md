@@ -1,6 +1,6 @@
 ---
 sccp: 70
-title: Raise maxDebt on Multi-Collateral Loans to sUSD 20 million
+title: Raise maxDebt on Multi-Collateral Loans to sUSD 20 million from sUSD 10 million
 author: Kaleb
 discussions-to: governance
 status: Proposed
@@ -14,13 +14,13 @@ created: 2020-12-31
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Raise the max debt on multi-collateral loans to sUSD 20 million.
+Raise the `maxDebt` on multi-collateral and shorting loans to sUSD 20 million.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The maxDebt parameters governs a ceiling on the total sUSD value of the loans that can be taken out by borrowers on the Multi-Collateral and Shorting contracts.
+The `maxDebt` parameters governs a ceiling on the total sUSD value of the loans that can be taken out by borrowers on the Multi-Collateral and Shorting contracts.
 Normally setting a high rate exposes minters to extra leverage on their debt.
 
 ## Motivation
