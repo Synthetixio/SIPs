@@ -27,7 +27,7 @@ Normally setting a high rate exposes minters to extra leverage on their debt.
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The max debt currently set at 10 million$, is proposed to be increased 30 million$ to accommodate for two things essentially:
+The max debt currently set at 10 million$, is proposed to be increased 20 million$ to accommodate for two things essentially:
 - The increase demand for sUSD loans for farming purposes `https://mith.cash/`
 - The sDAO has also taken around 5 million $ worth of ETH and BTC shorts
 
