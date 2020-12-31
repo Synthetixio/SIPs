@@ -1,6 +1,6 @@
 ---
 sccp: 70
-title: Raise maxDebt on Multi-Collateral Loans to 20 million $
+title: Raise maxDebt on Multi-Collateral Loans to sUSD 20 million
 author: Kaleb
 discussions-to: governance
 status: Proposed
@@ -14,7 +14,7 @@ created: 2020-12-31
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Raise the max debt on multi-collateral loans to 20 million$.
+Raise the max debt on multi-collateral loans to sUSD 20 million.
 
 ## Abstract
 
@@ -27,9 +27,9 @@ Normally setting a high rate exposes minters to extra leverage on their debt.
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The max debt currently set at 10 million$, is proposed to be increased 20 million$ to accommodate for two things essentially:
+The max debt currently set at sUSD 10 million, is proposed to be increased sUSD 20 million to accommodate for two things essentially:
 - The increase demand for sUSD loans for farming purposes `https://mith.cash/`
-- The sDAO has also taken around 5 million $ worth of ETH and BTC shorts
+- The sDAO has also taken around sUSD 5 million worth of ETH and BTC shorts
 
 The former has no effect on the debt pool, as the debt in sUSD does not result in an increase in debt volatility and the latter actually helps the skew in the debt pool without having minters needing to incentivize balancing out the debt pool skew.
 
