@@ -19,7 +19,7 @@ Lower exchange fees on inverses which had been frozen.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Proposing to lower fees levied on traders for trading into a particular iSynths.
+Proposing to lower fees levied on traders for trading into frozen iSynths.
 
 ## Motivation
 
