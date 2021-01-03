@@ -1,5 +1,5 @@
 ---
-sccp: 70
+sccp: 71
 title: Lower Fees on Frozen Inverse Synths
 author: Kaleb (@kaleb-keny)
 discussions-to: governance
