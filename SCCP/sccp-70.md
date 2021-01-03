@@ -25,7 +25,7 @@ Proposing to lower fees levied on traders for trading into frozen iSynths.
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The fee increase to account for higher leverage increased by closing the front-running gap. Given that these inverse synths are expected to be reset the sccp proposes to lower the fees back to previous levels, aligned or slightly below the oracle push frequency.
+The fee increase to account for higher leverage managed to close the front-running gap. However, given that these inverse synths are expected to be reset this sccp proposes to lower the fees back to previous levels, aligned or slightly below the oracle push frequency.
 
 
 |       | Oracle Push | Current Fee | New Fee |
@@ -33,6 +33,9 @@ The fee increase to account for higher leverage increased by closing the front-r
 |  iETH |    0.50%    |    0.80%    |  0.30%  |
 | iDEFI |    1.00%    |    1.50%    |  1.00%  |
 |  iADA |    1.00%    |    1.50%    |  1.00%  |
+
+
+Danijel (@dgornjakovic) developped this [site](https://synthetix-monitoring.herokuapp.com/synths) which should help the spartan council change the fees as necessary to account for higher or lower leverage.
 
 
 ## Copyright
