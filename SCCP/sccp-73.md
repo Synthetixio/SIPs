@@ -25,7 +25,7 @@ Proposing to adjust fees on trades into `iETH` to 70 bp as the higher gas prices
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-`iETH` fees were set at 30 bp after reset, given that historically matching the link push frequency would not open any front-running gap. However, given the high gas prices which are causing delays in terms of price updates as well as the current and apparent increase in fees I propose to increase fees on iETH to 70 bp.
+`iETH` fees were set at 30 bp after reset, given that historically matching the link push frequency would not open any front-running gap. However, given the contiued pressure on gas prices, which are causing delays in terms oracle price push, as well as the current and apparent increase in ETH price, I propose to increase fees on `iETH` to 70 bp.
 The leverage on `iETH` will be monitored and if the front-running gap were to recede, I would propose to lower fees back down.
 
 
