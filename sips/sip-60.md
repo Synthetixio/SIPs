@@ -14,7 +14,7 @@ created: 2020-05-20
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
 
-Migrate to a new more flexible SNX escrow contract that supports arbitrary vesting entry legnths, L2 escrow migration and account merging. Allow users to migrate to the new contract and then deprecate the existing reward escrow contract.
+Migrate to a new more flexible SNX escrow contract that supports arbitrary vesting entry lengths, L2 escrow migration and account merging. Allow users to migrate to the new contract and then deprecate the existing reward escrow contract.
 
 ## Abstract
 
@@ -53,13 +53,13 @@ This will require a migration of all escrowed SNX and escrow entries from the cu
 
 ### Migration
 
-1. Synthetix contract will need to be upgraded to migrate the SNX from the old escrow contract to the new contract onchain.
+1. Synthetix contract will need to be upgraded to migrate the SNX from the old escrow contract to the new contract on chain.
 
 2. Claiming rewards and vesting on the new contract will be blocked for users with existing vesting entries who haven't migrated their previous vesting entries.
 
 3. Users with existing vesting entries on the old rewards escrow will need to migrate their vesting entries across to the new contract. The migration will read from the address's existing entries and copy them from the old escrow contract.
 
-4. The gas cost of writing all of these vesting entries to the new contract could be as high as 0.5 ETH per address, given this the proposal is for low SNX balances of less than 1,000 escrowed SNX all vesting entries are wiped and any escrowed SNX for these addresses is immeditaely available to vest. 
+4. The gas cost of writing all of these vesting entries to the new contract could be as high as 0.5 ETH per address, given this the proposal is for low SNX balances of less than 1,000 escrowed SNX all vesting entries are wiped and any escrowed SNX for these addresses is immediately available to vest. 
 
 5. For balances over 1,000 SNX any vesting entries beyond 52 weeks will be rolled up into a single entry that is immediately available to be vested.
 
