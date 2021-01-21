@@ -26,22 +26,24 @@ This SCCP furher provides for removing from sDEFI:
 The Spartan Council was presented with three different options for weighting the index. 
 The Council in principle agreed to the following proposed weightage: 
 
-  % Weightage | Ticker | Units
-  - 15.00% | AAVE | 0.87
-  - 15.00% | SNX | 11.15
-  - 15.00% | UNI | 18.40
-  - 10.00% | MKR | 0.079
-  - 7.50% | YFI | 0.0016
-  - 7.50% | SUSHI | 7.87
-  - 5.00%	| COMP | 0.268
-  - 5.00%	| UMA | 4.97
-  - 5.00%	| REN | 75.09
-  - 5.00%	| CRV | 26.45
-  - 5.00%	| KNC | 36.23
-  - 5.00%	| BAL | 2.50
-  - 2.50% | 1INCH | 14.79
-  - 2.50% | BNT | 15.53
- 
+
+| % Weightage  |  Ticker  |  Units |
+|:------------:|:--------:|:------:|
+|    15.00%    |   AAVE   |  0.87  |
+|    15.00%    |    SNX   |  11.15 |
+|    15.00%    |    UNI   |  18.4  |
+|    10.00%    |    MKR   |  0.079 |
+|     7.50%    |    YFI   | 0.0016 |
+|     7.50%    |   SUSHI  |  7.87  |
+|     5.00%    |   COMP   |  0.268 |
+|     5.00%    |    UMA   |  4.97  |
+|     5.00%    |    REN   |  75.09 |
+|     5.00%    |    CRV   |  26.45 |
+|     5.00%    |    KNC   |  36.23 |
+|     5.00%    |    BAL   |   2.5  |
+|     2.50%    |   1INCH  |  14.79 |
+|     2.50%    |    BNT   |  15.53 | 
+  
   
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
