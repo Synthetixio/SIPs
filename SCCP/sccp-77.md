@@ -1,5 +1,5 @@
 ---
-sccp: 51
+sccp: 77
 title: Update sDEFI and iDEFI
 status: Proposal
 author: Farmwell (@farmwell), CryptoToit (@CryptoToit)
