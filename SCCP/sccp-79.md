@@ -44,7 +44,7 @@ I should mention that fees could potentially pushed further lower, on the synths
 |  sETH |       30      |    20    |      10     |
 
 
-I'd like to thank every member of the synthetix community for their supporting through out 2020 in passing sccp's that aim at defeating front-runners. 
+I'd like to thank every member of the synthetix community for their continued unrelenting support and trust through out 2020. 
 I look forward to a period where we have consistent healthy robust exchange volume, with fees and fee-adjustment period lowered to the minimum on L1 (in future work).
 
 ## Copyright
