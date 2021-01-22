@@ -45,7 +45,7 @@ I should mention that fees could potentially pushed further lower, on the synths
 
 
 I'd like to thank every member of the synthetix community for their supporting through out 2020 in passing sccp's that aim at defeating front-runners. 
-I look forward to a period where we have consistent healthy robust exchange volume, with fees and fee-adjustment period lowered to the minimum L1 (in future work), as to further support synthetix traders.
+I look forward to a period where we have consistent healthy robust exchange volume, with fees and fee-adjustment period lowered to the minimum on L1 (in future work).
 
 ## Copyright
 
