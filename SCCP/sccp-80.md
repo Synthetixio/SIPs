@@ -1,5 +1,5 @@
 ---
-sccp: 79
+sccp: 80
 title: Lower Fees on Selected Synths
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
