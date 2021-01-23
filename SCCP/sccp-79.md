@@ -13,19 +13,19 @@ created: 2021-01-23
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the account mergers duration `accountMergingDuration` from 7 days to 2 weeks (1209600 seconds) putting into effect a new merging window.
+Increase the account mergers duration from 7 days to 2 weeks (1209600 seconds) and putting into effect a new merging window.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Proposing to change the account `accountMergingDuration` state variable to 14 days and triggering the `startMergingWindow` method.
+Proposing to change the account `accountMergingDuration` state variable to 14 days and triggering the `startMergingWindow` method in order to start a new merging epoch.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Given the recent implementation of [SIP-13](https://sips.synthetix.io/sips/sip-13), as well as the development of a by `vbstreetz`, the sccp aims to extending the merging duration which had expired recently.
+Given the recent implementation of [SIP-13](https://sips.synthetix.io/sips/sip-13), as well as the development of UI by `vbstreetz`, the sccp aims to extending the merging duration which had expired recently.
 
 
 ## Copyright
