@@ -25,7 +25,7 @@ Proposing to change the account `accountMergingDuration` state variable to 14 da
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Given the recent implementation of [SIP-13](https://sips.synthetix.io/sips/sip-13), as well as the development of UI by `vbstreetz`, the sccp aims to extending the merging duration which had expired recently.
+Given the recent implementation of [SIP-13](https://sips.synthetix.io/sips/sip-13), as well as the development of a UI by `vbstreetz`, the sccp aims to extending the merging duration which had expired recently, so that users can have a chance to merge different wallets having escrowed tokens.
 
 
 ## Copyright
