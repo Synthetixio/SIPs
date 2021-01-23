@@ -32,16 +32,17 @@ I should mention that fees could potentially pushed further lower, on the synths
 
 |  CCY  | Previous Rate | New Rate | Rate Decrease|
 |:-----:|:-------------:|:--------:|:-----------:|
+|  sETH |       30      |    25    |       5     |
 |  iETH |       70      |    50    |      20     |
+|  sXTZ |      100      |    85    |      15     |
 |  iXTZ |      100      |    85    |      15     |
 |  sEOS |      100      |    85    |      15     |
-|  sETC |      100      |    85    |      15     |
-|  sXTZ |      100      |    85    |      15     |
-| sLINK |      100      |    85    |      15     |
-| iDASH |      100      |    90    |      10     |
 |  iEOS |      100      |    90    |      10     |
+|  sETC |      100      |    85    |      15     |
+| sLINK |      100      |    85    |      15     |
+| sDASH |      100      |    90    |      10     |
+| iDASH |      100      |    90    |      10     |
 |  sXRP |      100      |    90    |      10     |
-|  sETH |       30      |    20    |      10     |
 
 
 I'd like to thank every member of the synthetix community for their continued unrelenting support and trust through out 2020. 
