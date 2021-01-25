@@ -28,7 +28,7 @@ Given the state of the peg, this sccp proposes to decrease the collateralization
 
 The peg seem to be increasingly pressured as can be seen [here](https://www.curve.fi/trade/susdv2/SUSD-USDC/4h). 
 This is mostly likely due to an increase in usage of synth liquidity for farming and trading purposes as well as the substantial increase in snx held on [exchange wallets](https://snx.watch/holders).
-Decreasing the collateralization ratio has the following motivation:
+Decreasing the collateralization ratio aims at achieving the following:
  - Increase it's utilization, which stands at around 30%, through increased leverage incentive.
  - Allow people who have already taken out loans to draw out more ETH held, with minimal risk of liquidation.
 

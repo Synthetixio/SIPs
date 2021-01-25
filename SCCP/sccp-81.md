@@ -28,7 +28,7 @@ Given the state of the peg, this sccp proposes to decrease the target collateral
 
 The peg seem to be increasingly pressured as can be seen [here](https://www.curve.fi/trade/susdv2/SUSD-USDC/4h). 
 This is mostly likely due to an increase in usage of synth liquidity for farming and trading purposes as well as the substantial increase in snx held on [exchange wallets](https://snx.watch/holders).
-Although I should mention that lowering the target collateralization ratio does increase the leverage of the system, as well as increases the system-wide collateralized wallets. However, I believe the 25% cut is minimal for the desired effect of peg stability.
+Although I should mention that lowering the target collateralization ratio does increase the leverage of the system, as well as increases the system-wide solvency risks. However, I believe the 25% cut is minimal for the desired effect of peg stability.
 
 
 
