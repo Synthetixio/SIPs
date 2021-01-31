@@ -3,7 +3,7 @@ sip: <to be assigned>
 title: Add New Long and Inverse Synths for COREVault Finance
 status: WIP
 author: Rasikh Morani (@HysMagus) <rasikh@arcadiamgroup.com>
-discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here> 
+discussions-to: https://research.synthetix.io/t/sip-add-new-long-and-inverse-synths-for-corevault-finance/285 
 
 created: 2021-01-30
 ---
