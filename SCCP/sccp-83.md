@@ -1,7 +1,7 @@
 ---
 sccp: 83
 title: Apply Market Closure Mechanism on Forex and Commodity Synths
-author: Kaleb Keny (@kaleb-keny)
+author: Kaleb Keny (@kaleb-keny) , Spreek (@spreek)
 discussions-to: governance
 status: Proposed
 created: 2021-01-31
