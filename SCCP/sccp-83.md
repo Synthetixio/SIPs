@@ -13,7 +13,7 @@ created: 2021-01-31
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Going forward, apply the same market closure mechanism on commodities and forex synths as those applied on stocks during periods of market closures.
+Apply going forward the same market closure mechanism, currently applied on stocks, on commodities and forex synths.
 
 ## Abstract
 
