@@ -19,7 +19,7 @@ Apply going forward the same market closure mechanism, currently applied on stoc
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Freezing the below mentioned synths until the market is open and a fresh price is pushed and applying fee reclamation/rebate to the next price available on market open.
+Freezing the below mentioned synths until the market is open and a fresh price is pushed. To clarify, no trades on the contracts will be possible when markets are closed.
 - sEUR
 - sJPY
 - sAUD
