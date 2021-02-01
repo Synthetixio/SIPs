@@ -30,20 +30,20 @@ The Council in principle agreed to the following proposed weightage:
 
 | % Weightage  |  Ticker  |  Units |
 |--------------|----------|--------|
-| 15.00%       |  AAVE    | 0.87   |
-| 15.00%       |  SNX     | 11.15  |
-| 15.00%       |  UNI     | 18.4   |
-| 10.00%       |  MKR     | 0.079  |
-| 5.00%        |  YFI     | 0.0016 |
-| 5.00%        |  SUSHI   | 7.87   |
-| 5.00%        |  COMP    | 0.268  |
-| 5.00%        |  UMA     | 4.97   |
-| 5.00%        |  REN     | 75.09  |
-| 5.00%        |  CRV     | 26.45  |
-| 5.00%        |  KNC     | 36.23  |
-| 5.00%        |  BAL     | 2.5    |
-| 2.50%        |  1INCH   | 14.79  |
-| 2.50%        |  BNT     | 15.53  |
+| 15.00%       |  AAVE    | 5.10   |
+| 15.00%       |  SNX     | 87.91  |
+| 15.00%       |  UNI     | 76.08  |
+| 10.00%       |  MKR     | 0.685  |
+| 5.00%        |  YFI     | 0.016  |
+| 5.00%        |  SUSHI   | 40.22  |
+| 5.00%        |  COMP    | 1.45   |
+| 5.00%        |  UMA     | 46.05  |
+| 5.00%        |  REN     | 830.67 |
+| 5.00%        |  CRV     | 195.06 |
+| 5.00%        |  KNC     | 371.47 |
+| 5.00%        |  BAL     | 4.55   |
+| 2.50%        |  1INCH   | 49.34  |
+| 2.50%        |  BNT     | 131.56 |
   
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
