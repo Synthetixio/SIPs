@@ -1,7 +1,7 @@
 ---
 sip: 13
 title: Account Merging
-status: Proposed
+status: Rejected
 author: Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)
 discussions-to: https://discord.gg/CDTvjHY
 
@@ -9,6 +9,9 @@ created: 2019-08-14
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
+
+## NOTICE
+This functionality has now been implemented as part of SIP-60
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SIP.-->
