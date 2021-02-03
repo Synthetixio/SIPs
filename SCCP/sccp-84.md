@@ -25,7 +25,7 @@ The fee can be decrease to 40 bp without exposing inefficiencies in the oracle p
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The fee were originally levied this high in order to counter a front-running gap. However with the price-adjustment waiting period increased to 6 minutes, the fees can be lowered safely without exposing minters to the risk of front-running.
+The fee were originally levied this high in order to counter a front-running gap. However with the price-adjustment waiting period increase to 6 minutes, the fees can be lowered safely without exposing minters to the risk of front-running.
 However, incoming data will be reviewed, and action will be taken by the council if front-running pockets were found.
 Note that this sccp supercedes [sccp-80](https://sips.synthetix.io/SCCP/sccp-80) on the iETH rate.
 
