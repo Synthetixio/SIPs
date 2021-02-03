@@ -3,7 +3,7 @@ sip: sip_sTSLA
 title: Add sTSLA Synth
 status: Proposed
 author: SynthaMan (@Synthaman)
-discussions-to: 
+discussions-to: https://research.synthetix.io/
 
 created: 2021-02-02
 requires (*optional):
