@@ -1,4 +1,3 @@
-
 ---
 sip: 112
 title: ETH Wrappr
