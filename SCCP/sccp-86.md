@@ -13,13 +13,13 @@ created: 2021-02-17
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the account mergers duration from 7 days to 2 weeks (1209600 seconds) and put into effect a new merging window.
+Open up a new new merging window for a 2 week period.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Proposing to change the account `accountMergingDuration` state variable to 14 days and triggering the `startMergingWindow` method in order to start a new merging epoch.
+Proposing to trigger the `startMergingWindow` method which initiates a new merging epoch.
 
 ## Motivation
 
