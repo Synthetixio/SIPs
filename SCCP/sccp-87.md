@@ -20,7 +20,7 @@ Lower fees on all FX synths to 15 bp.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The fee levied on trade into a FX synths is usually set based on the chainlink push frequency. Analysis of the oracle price feed against real-time price feed revealed that it is lower fees on these FX synths.
+The fee levied on trades into a FX synths is usually set based on the chainlink push frequency. Analysis of the oracle price feed against real-time price feed revealed that it is possible to lower fees on these FX synths.
 
 ## Motivation
 
