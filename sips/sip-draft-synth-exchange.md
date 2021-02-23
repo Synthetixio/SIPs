@@ -39,13 +39,14 @@ Now that this limitation is about to be lifted and with the upcoming support of 
 
 ### Overview
 
+<!--  -->
 <!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
-No new contracts were developed. The OE Synthetix instance, namely `MintableSynthetix` was enhanced with exchanging functionality. The basic Synhetix functionality that is supoorted on both layers is imlemented on a parent contract (`BaseSynthetix`) which is inherited by the L1 (Synthetix) and the l2 (MintableSynthetix) instances. For further details on this approach please check [SIP-102](./sip-102.md).
+No new contracts were developed. The OE Synthetix instance, namely `MintableSynthetix` was enhanced with exchanging functionality. The basic Synhetix functionality that is supoorted on both layers is imlemented on a parent contract (`BaseSynthetix`) which is inherited by the L1 (Synthetix) and the l2 (MintableSynthetix) instances.
 
 > Note: A `BaseDebtCahce` contract was introduced in order to state the shared functionality between DebtCahce and RealtimedebtCache more explicitly.
 
-Due to the near instant confirmation time of the transactions on L2, oracle frontrunning is no longer an issue, thus, exchanging needs no settlement. The waiting period is now set to 0 and no rebate/reclaim takes place.
+The waiting period is now set to 0 and no rebate/reclaim takes place.
 
 The following functions were activated on L2 `Synthetix`:
 
@@ -56,6 +57,8 @@ The following functions were activated on L2 `Synthetix`:
 ### Rationale
 
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
+
+The polymorphic approach adopted during the L2 integration (check [SIP-102](./sip-102.md) for further details) proved to be very efficient. For basic exchanging functionality the functions needed to be added are the following: `exchange()`, `exchangeOnBehalf()`,`settle()`. Their implementation is moved from `Synthetix` to `BaseSynthetix` since they are going to be available on both layers. Due to the near-instant confirmation time of the transactions on L2, oracle front-running is no longer an issue, thus, exchanging needs no settlement. The waiting period parameter is set to 0 when deploying on L2 and there are extra checks in the code that bypass settlement to reduce unnecessary function and contract calls and hence gas costs. For example, no exchange entries are created via `appendExchange()` when the waiting period is 0.
 
 ### Technical Specification
 
