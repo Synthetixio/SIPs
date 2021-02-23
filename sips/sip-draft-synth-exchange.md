@@ -1,0 +1,249 @@
+---
+sip: 113
+title: Support Synth Exchanging on L2 with Optimism
+status: Draft
+author:
+discussions-to:
+created: 2020-02-23
+---
+
+## Simple Summary
+
+<!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
+
+ENable synth exchanging on L2 via Optimism
+
+## Abstract
+
+<!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
+
+After a multi-phase, incentivised testnet trial, Synthetix went live on Optimistic Ethereum mainnet. However, this was an intitial soft launh i.e. L2 users can only stake SNX and issue or burn sUSD. The implementation of this SIP enables actual synth exchanging on L2.
+.
+
+## Motivation
+
+<!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
+
+As described in [The Optimistic Ethereum Transition](https://blog.synthetix.io/the-optimistic-ethereum-transition), phase 0 enabled users to lock snx on and mint an equivalent amount via a Syntehtix to Optimism bridge. However, the L2 functionality is limited to staking SNX, issuing sUSD and claiming weekly rewards. Additionally, both SNX and sUSD are not tarnsferable, due to an initial security related restriction imposed by OE.
+Now that this limitation is about to be lifted and with the upcoming support of reliable oracles, all the necessary conditions are met for enabling synth exchanging.
+
+## Specification
+
+<!--The specification should describe the syntax and semantics of any new feature, there are five sections
+1. Overview
+2. Rationale
+3. Technical Specification
+4. Test Cases
+5. Configurable Values
+-->
+
+### Overview
+
+<!--This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
+
+No new contracts were developed. The OE Synthetix instance, namely `MintableSynthetix` was enhanced with exchanging functionality. The basic Synhetix functionality that is supoorted on both layers is imlemented on a parent contract (`BaseSynthetix`) which is inherited by the L1 (Synthetix) and the l2 (MintableSynthetix) instances. For further details on this approach please check [SIP-102](./sip-102.md).
+
+> Note: A `BaseDebtCahce` contract was introduced in order to state the shared functionality between DebtCahce and RealtimedebtCache more explicitly.
+
+Due to the near instant confirmation time of the transactions on L2, oracle frontrunning is no longer an issue, thus, exchanging needs no settlement. The waiting period is now set to 0 and no rebate/reclaim takes place.
+
+The following functions were activated on L2 `Synthetix`:
+
+- `exchange() `
+- `exchangeOnBehalf()`
+- `settle()`
+
+### Rationale
+
+<!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
+
+### Technical Specification
+
+<!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
+
+```solidity
+interface IBaseSynthetix {
+    // Views
+    function anySynthOrSNXRateIsInvalid() external view returns (bool anyRateInvalid);
+
+    function availableCurrencyKeys() external view returns (bytes32[] memory);
+
+    function availableSynthCount() external view returns (uint);
+
+    function availableSynths(uint index) external view returns (ISynth);
+
+    function collateral(address account) external view returns (uint);
+
+    function collateralisationRatio(address issuer) external view returns (uint);
+
+    function debtBalanceOf(address issuer, bytes32 currencyKey) external view returns (uint);
+
+    function isWaitingPeriod(bytes32 currencyKey) external view returns (bool);
+
+    function maxIssuableSynths(address issuer) external view returns (uint maxIssuable);
+
+    function remainingIssuableSynths(address issuer)
+        external
+        view
+        returns (
+            uint maxIssuable,
+            uint alreadyIssued,
+            uint totalSystemDebt
+        );
+
+    function synths(bytes32 currencyKey) external view returns (ISynth);
+
+    function synthsByAddress(address synthAddress) external view returns (bytes32);
+
+    function totalIssuedSynths(bytes32 currencyKey) external view returns (uint);
+
+    function totalIssuedSynthsExcludeEtherCollateral(bytes32 currencyKey) external view returns (uint);
+
+    function transferableSynthetix(address account) external view returns (uint transferable);
+
+    // Mutative Functions
+    function burnSynths(uint amount) external;
+
+    function burnSynthsOnBehalf(address burnForAddress, uint amount) external;
+
+    function burnSynthsToTarget() external;
+
+    function burnSynthsToTargetOnBehalf(address burnForAddress) external;
+
+    function exchange(
+        bytes32 sourceCurrencyKey,
+        uint sourceAmount,
+        bytes32 destinationCurrencyKey
+    ) external returns (uint amountReceived);
+
+    function exchangeOnBehalf(
+        address exchangeForAddress,
+        bytes32 sourceCurrencyKey,
+        uint sourceAmount,
+        bytes32 destinationCurrencyKey
+    ) external returns (uint amountReceived);
+
+    function exchangeWithTracking(
+        bytes32 sourceCurrencyKey,
+        uint sourceAmount,
+        bytes32 destinationCurrencyKey,
+        address originator,
+        bytes32 trackingCode
+    ) external returns (uint amountReceived);
+
+    function exchangeOnBehalfWithTracking(
+        address exchangeForAddress,
+        bytes32 sourceCurrencyKey,
+        uint sourceAmount,
+        bytes32 destinationCurrencyKey,
+        address originator,
+        bytes32 trackingCode
+    ) external returns (uint amountReceived);
+
+    function exchangeWithVirtual(
+        bytes32 sourceCurrencyKey,
+        uint sourceAmount,
+        bytes32 destinationCurrencyKey,
+        bytes32 trackingCode
+    ) external returns (uint amountReceived, IVirtualSynth vSynth);
+
+    function issueMaxSynths() external;
+
+    function issueMaxSynthsOnBehalf(address issueForAddress) external;
+
+    function issueSynths(uint amount) external;
+
+    function issueSynthsOnBehalf(address issueForAddress, uint amount) external;
+
+    function mint() external returns (bool);
+
+    function settle(bytes32 currencyKey)
+        external
+        returns (
+            uint reclaimed,
+            uint refunded,
+            uint numEntries
+        );
+
+    // Liquidations
+    function liquidateDelinquentAccount(address account, uint susdAmount) external returns (bool);
+
+    // Restricted Functions
+
+    function mintSecondary(address account, uint amount) external;
+
+    function mintSecondaryRewards(uint amount) external;
+
+    function burnSecondary(address account, uint amount) external;
+}
+
+
+interface IBaseDebtCache {
+    // Views
+
+    function cachedDebt() external view returns (uint);
+
+    function cachedSynthDebt(bytes32 currencyKey) external view returns (uint);
+
+    function cacheTimestamp() external view returns (uint);
+
+    function cacheInvalid() external view returns (bool);
+
+    function cacheStale() external view returns (bool);
+
+    function currentSynthDebts(bytes32[] calldata currencyKeys)
+        external
+        view
+        returns (uint[] memory debtValues, bool anyRateIsInvalid);
+
+    function cachedSynthDebts(bytes32[] calldata currencyKeys) external view returns (uint[] memory debtValues);
+
+    function currentDebt() external view returns (uint debt, bool anyRateIsInvalid);
+
+    function cacheInfo()
+        external
+        view
+        returns (
+            uint debt,
+            uint timestamp,
+            bool isInvalid,
+            bool isStale
+        );
+
+    // Mutative functions
+
+    function updateCachedSynthDebts(bytes32[] calldata currencyKeys) external;
+
+    function updateCachedSynthDebtWithRate(bytes32 currencyKey, uint currencyRate) external;
+
+    function updateCachedSynthDebtsWithRates(bytes32[] calldata currencyKeys, uint[] calldata currencyRates) external;
+
+    function updateDebtCacheValidity(bool currentlyInvalid) external;
+}
+
+interface IDebtCache {
+    // Mutative functions
+
+    function purgeCachedSynthDebt(bytes32 currencyKey) external;
+
+    function takeDebtSnapshot() external;
+}
+```
+
+> Note: The Synthetix interface didn't change, it was just renamed to `IBaseSynthetix`
+
+### Test Cases
+
+<!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
+
+TBD
+
+### Configurable Values (Via SCCP)
+
+<!--Please list all values configurable via SCCP under this implementation.-->
+
+As this SIP only proposes supporting `SNX` staking on L2, there will be no trading rewards to claim on L2. Thus only SNX rewards are relevant here, and those will only exist if they are sent to L2 by a benevolent holder - such as the synthetixDAO.
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
