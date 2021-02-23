@@ -11,7 +11,7 @@ created: 2020-02-23
 
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 
-ENable synth exchanging on L2 via Optimism
+Enable synth exchanging on L2 via Optimism
 
 ## Abstract
 
