@@ -2,7 +2,7 @@
 sip: 118
 title: Conditionally skipping fee reclamation
 status: Proposed
-author:
+author: Yannis Stamelakos (@i-stam), Justin J Moses (@justinjmoses), Alejandro Santander (@ajsantander)
 discussions-to:
 created: 2020-02-25
 ---
