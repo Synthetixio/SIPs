@@ -1,0 +1,48 @@
+---
+sip: 122
+title: sSNX ERC-20 Synths
+status: WIP
+author: Andre Cronje (@andrecronje)
+discussions-to: TBD
+created: 2021-03-02
+
+---
+
+## Simple Summary
+<!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
+Curve cross-asset swaps along with [SIP 120](https://github.com/Synthetixio/SIPs/blob/master/sips/sip-120.md) allow for atomic cross-asset swaps. Even without [SIP 120](https://github.com/Synthetixio/SIPs/blob/master/sips/sip-120.md) it is important to capture all high volume pairs as synths for synthetix exchange volume. @kaiynne has identified high volume assets in [PR 407](https://github.com/Synthetixio/SIPs/pull/407). I propose to add sSNX as another key addition.
+
+## Abstract
+<!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
+This SIP will add one new ERC-20 assets as a Synth; sSNX. It does not propose adding inverse Synths of these assets.
+
+## Motivation
+<!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
+Aside from promoting volume and liquidity for SNX, a key motivator is the addition of a SNX/sSNX Curve pool. Not only will this increase on-chain SNX liquidity, but also allow for a very high yielding APY pair for SNX. Using LINK/sLINK as a guide, we see APY as high as ~105%. As a lot of early Curve farmers were sUSD holders, the Synthetix community has large veCRV holdings, and as such can promote a SNX/sSNX pool. Deeper liquidity, more Synthetix volume, and a high yielding pair for SNX.
+
+## Specification
+<!--The specification should describe the syntax and semantics of any new feature, there are five sections
+1. Rationale
+2. Technical Specification
+3. Test Cases
+4. Configurable Values
+-->
+
+### Rationale
+<!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
+See Motivation
+
+### Technical Specification
+<!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
+N/A
+
+### Test Cases
+<!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
+TBC
+
+### Configurable Values (Via SCCP)
+<!--Please list all values configurable via SCCP under this implementation.-->
+N/A
+
+## Copyright
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
