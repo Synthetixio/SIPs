@@ -13,7 +13,7 @@ created: 2021-03-07
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-The current cap is set to 30m of which sUSD 28 million is utilized in shorts and borrows, so there is not much room for new users to take loans or short available assets.
+The current cap was configured to sUSD 30 million in [SCCP-85](https://sips.synthetix.io/SCCP/sccp-85) of which sUSD 28 million is currently utilized in shorts and borrows, so there is not much room for new users to take loans or short available assets.
 
 ## Abstract
 
@@ -25,7 +25,7 @@ The cap can safely be increased to sUSD 40 million to allow more users to take l
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The cap of sUSD 30 million has almost been reached. Given that we want to promote using the new shorting mechanism as a longterm replacement for iSynths staking, increasing the cap gradually as it approaches full utilization would be the prudent approach.
+The cap of sUSD 30 million has almost been reached. Given that we want to promote using the new shorting mechanism as a longterm replacement for iSynths staking, increasing the cap gradually we approach full utilization would be the prudent approach.
 The breakdown of the program is as follows:
 
 | CCY 	| sUSD Debt 	| % of Total 	|
