@@ -19,7 +19,7 @@ The current cap was configured to sUSD 30 million in [SCCP-85](https://sips.synt
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The cap can safely be increased to sUSD 40 million to allow more users to take loans or short available assets.
+The cap can safely be increased to sUSD 40 million to allow more users to take loans and shorts.
 
 ## Motivation
 
