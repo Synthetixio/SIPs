@@ -21,7 +21,10 @@ Redirect current [iETH 16K SNX incentives](https://etherscan.io/address/0x3f27c5
 
 Now that traditional shorting mechanism is available with sETH shorts on [kwenta.io/shorts](https://kwenta.io/shorting), I propose to redirect the 16K SNX incentive from the weekly inflationary supply to the [ShortingRewardssETH](http://contracts.synthetix.io/ShortingRewardssETH) contract instead of the [iETH Staking Rewards](https://etherscan.io/address/0x3f27c540adae3a9e8c875c61e3b970b559d7f65d) contract. 
 
-A simple change by the protocolDAO to [RewardsDistribution](http://contracts.synthetix.io/RewardsDistribution) to change distributions[1].address from [0x3f27c540ADaE3a9E8c875C61e3B970b559d7F65d](https://etherscan.io/address/0x3f27c540ADaE3a9E8c875C61e3B970b559d7F65d) to  [0x12DC1273915A16ab8BD47bA7866B240c253e4c12](https://etherscan.io/address/0x12DC1273915A16ab8BD47bA7866B240c253e4c12)
+A single transaction by the protocolDAO to the [RewardsDistribution](http://contracts.synthetix.io/RewardsDistribution) contract to change distributions[1].address from 
+[0x3f27c540ADaE3a9E8c875C61e3B970b559d7F65d](https://etherscan.io/address/0x3f27c540ADaE3a9E8c875C61e3B970b559d7F65d) 
+to  
+[0x12DC1273915A16ab8BD47bA7866B240c253e4c12](https://etherscan.io/address/0x12DC1273915A16ab8BD47bA7866B240c253e4c12)
 
 ![image](https://user-images.githubusercontent.com/1251099/111264773-3c42a780-867c-11eb-8034-e313fe5f2fbd.png)
 
