@@ -1,7 +1,7 @@
 ---
 sccp: 89
 title: Redirect iETH rewards to sETH Shorting Rewards
-status: Implemented
+status: Proposed
 author: Clinton Ennis (@hav-noms)
 discussions-to: https://discord.gg/B3PtpY
 created: <2021-03-15>
