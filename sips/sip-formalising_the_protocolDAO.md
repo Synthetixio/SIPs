@@ -11,7 +11,7 @@ created: 2021-03-19
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
-The protocolDAO is one of the most critical governing bodies within the Synthetix protocol, however, the current process for assigning a new member to the protocolDAO is fairly informal and at the discretion of the other pDAO members. This worked well historically, but as the governance of Synthetix has progressiveky decentralised a more formal and trasparent process for assigning members to the pDAO is required.
+The protocolDAO is one of the most critical governing bodies within the Synthetix protocol, however, the current process for assigning a new member to the protocolDAO is fairly informal and at the discretion of the other pDAO members. This worked well historically, but as the governance of Synthetix has progressively decentralised a more formal and trasparent process for assigning members to the pDAO is required.
 
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
