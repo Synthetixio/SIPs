@@ -19,15 +19,16 @@ Update the `priceDeviationThresholdFactor` in the `SystemSettings` contract to 1
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Given the addition of multiple stock synths, this sccp proposes to tighten `priceDeviationThresholdFactor` to a value of 1.5x, in order to safeguard against the event of a significant increase in synth price following a reverse stock split.
+Given the imminent increase in stock synths, this sccp proposes to tighten `priceDeviationThresholdFactor` to a value of 1.5x, in order to safeguard against the event of a significant increase in synth price following a reverse stock split.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 
-As explained in [SIP-65](https://sips.synthetix.io/sips/sip-65) the decentralized circuit breaker aims at preventing irrecoverable loss on minters by halting the exchange on a synth, if it's price increases or decreased by `priceDeviationThresholdFactor`.  The current factor is currently configured to 3 and would only  trigger if the price were to increase or decrease by 3x which is too wide to cater for 2-for-1 stock split or reverse stock split, in which the price halves or doubles.
-Therefore, updating the `priceDeviationThresholdFactor ` to 1.5 would tighten the band to a 1.5x move and would act as a safety mechanism in case such an event were to occur. The table below shows the upper and lower bands of the 1.5x and 3x factors for a synth having an initial price of 100.
+As explained in [SIP-65](https://sips.synthetix.io/sips/sip-65) the decentralized circuit breaker aims at preventing irrecoverable loss on minters by halting the exchange on a synth, if it's price increases or decreased by the `priceDeviationThresholdFactor`.  The current factor is currently configured to 3 and would  trigger if the price were to increase or decrease by 3x, which is too wide to cater fo a 2-for-1 stock split or 1-for-2 reverse stock split, in which the price respectively, halves or doubles. Therefore, updating the `priceDeviationThresholdFactor ` to 1.5x would tighten the band enough for the mechanism to trigger in this scenario. 
+
+The table below shows the upper and lower bands of the 1.5x and 3x factors for a synth having an initial price of 100.
 
 | priceDeviationThresholdFactor  	|  1.5X 	|   3X  	|
 |--------------------------------	|:-----:	|:-----:	|
