@@ -28,7 +28,7 @@ Given the imminent increase in stock synths, this sccp proposes to tighten `pric
 
 As explained in [SIP-65](https://sips.synthetix.io/sips/sip-65) the decentralized circuit breaker aims at preventing irrecoverable loss on minters by halting the exchange on a synth, if it's price increases or decreased by the `priceDeviationThresholdFactor`.  The current factor as currently configured would  trigger only if the price were to increase or decrease by 3x, which is too wide to cater fo a 2-for-1 stock split or 1-for-2 reverse stock split, in which the price respectively, halves or doubles. Therefore, updating the `priceDeviationThresholdFactor ` to 1.5x would tighten the band enough for the mechanism to trigger in this scenario and more extreme scenarios. 
 
-The table below shows the upper and lower bands of the 1.5x and 3x factors for a synth having an initial price of 100.
+The table below shows the upper and lower bands that trigger the decentralized circuit breaker with `priceDeviationThresholdFactor` set at 1.5x and 3x for a synth having an initial price of 100.
 
 | priceDeviationThresholdFactor  	|  1.5X 	|   3X  	|
 |--------------------------------	|:-----:	|:-----:	|
