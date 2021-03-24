@@ -21,8 +21,9 @@ Redirect current [iETH 16K SNX incentives](https://etherscan.io/address/0x3f27c5
 
 Now that traditional shorting mechanism is available with sETH shorts on [kwenta.io/shorts](https://kwenta.io/shorting), I propose to redirect the 16K SNX incentive from the weekly inflationary supply to the [ShortingRewardssETH](http://contracts.synthetix.io/ShortingRewardssETH) contract instead of the [iETH Staking Rewards](https://etherscan.io/address/0x3f27c540adae3a9e8c875c61e3b970b559d7f65d) contract. 
 
-sDAO Funded sETH Short incentives emmision ends on Friday, 2 April 2021 05:49:59. The plan is to cut over in the next week to allow 1 week of rollover which will boost the incenvitves for a week. Encouraging iETH stakers to move over to the sETH short rewards.
-
+- sDAO funded sETH Short incentives emmision ends on Friday, 2 April 2021 05:49:59. 
+- [ShortingRewardssETH](http://contracts.synthetix.io/ShortingRewardssETH) currently has a duration of 4 weeks which needs to be updated to 7 days. This duration can only be modified at the end of the emission at the periodFinish on timestamp 1617342599
+- sDAO will fund a week of incentives at an increased APY to encourage shorters to move over from iETH to sETH shorts.
 
 A single transaction by the protocolDAO to the [RewardsDistribution](http://contracts.synthetix.io/RewardsDistribution) contract to change distributions[1].address from 
 [0x3f27c540ADaE3a9E8c875C61e3B970b559d7F65d](https://etherscan.io/address/0x3f27c540ADaE3a9E8c875C61e3B970b559d7F65d) 
