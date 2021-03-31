@@ -33,14 +33,14 @@ Initially, only VirtualSynths are proposed to be deployed in this way as they re
 The `ExchangerWithVirtual` contract will be modified to:
 
 1. Deploy an ERC-1167 proxy pointing to an "base" Virtual Synth contract instead of a full Virtual Synth contract.
-2. Receive the address of the base Virtual Synth contract in its `constructor`. This value will be considered immutable with no functionality to update it in the future.
+2. Receive the address of the base Virtual Synth contract through the `AddressResolver`.
 
 To allow such deployments, the `VirtualSynth` contract will require changes:
 
 1. Migrate the current `constructor` to an `initialize` function, as proxies do not run constructors
 1. A new constructor that "disables" the base contract from being initialized. This step is not strictly necessary, but preferable to avoid possible future confusion.
 
-As a optional step, a vanity address or universal deployer could be used to deploy the base contract to let it occupy the same (immutable) address on each desired chain.
+A vanity address or universal deployer will be used to deploy the base contract to let it occupy the same (immutable) address on each desired chain. It will be made internally available to other contracts through the `AddressResolver`, as `VirtualSynthBase`.
 
 ### Rationale
 
