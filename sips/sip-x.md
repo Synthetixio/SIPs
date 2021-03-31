@@ -3,7 +3,7 @@ sip: <to be assigned>
 title: Minimal Proxies for Virtual Synths
 status: WIP
 author: Justin Moses (@justinjmoses), Brett Sun (@sohkai)
-discussions-to: TBD
+discussions-to: https://research.synthetix.io/t/sip-x-minimal-proxies-for-virtual-synths/366
 
 created: 2021-03-31
 ---
