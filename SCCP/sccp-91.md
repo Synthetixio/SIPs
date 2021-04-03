@@ -25,7 +25,7 @@ The cap can be increased to sUSD 65 million to allow more users to take loans an
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The cap of sUSD 50 million has almost been reached. Given that we want to promote using the new shorting mechanism, increasing the cap is recommended.
+The cap of sUSD 50 million has been reached. Given that we want to promote using the new shorting mechanism, increasing the cap is recommended.
 
 ## Copyright
 
