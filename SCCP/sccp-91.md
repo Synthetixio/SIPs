@@ -39,7 +39,7 @@ Due to the recent increase in snx rewards paid on sETH shorts, total debt had in
 |          sETH         	|     27     	|
 | **Total**             	|   **54**    |
 
-Rewards on sETH shorts now amount to 24k SNX per week, due to the transition from sDAO funding to inflationary supply funding as per [SCCP-89](https://sips.synthetix.io/SCCP/sccp-89). With the current cap being reached,  users are not able to open shorts on sBTC shorts and sETH, resulting in the APY on shorts surging to 100%, while it was 50% pre-reward boost. Therefore this SCCP suggests to increase `maxDebt` to sUSD 65 million and to revise it gradually lower in future if excess capacity isn't fully utilized, as rewards are decreased back down. 
+Rewards on sETH shorts now amount to 24k SNX per week, due to the transition from sDAO funding to inflationary supply funding as per [SCCP-89](https://sips.synthetix.io/SCCP/sccp-89). With the current cap being reached,  users are not able to open shorts on sBTC or sETH, resulting in the APY on shorts surging to 100%, while it was 50% pre-reward boost. Therefore this SCCP suggests to increase `maxDebt` to sUSD 65 million and to revise it gradually lower in future if excess capacity isn't fully utilized, as rewards are decreased back down. 
 
 ## Copyright
 
