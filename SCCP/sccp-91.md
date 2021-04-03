@@ -13,7 +13,7 @@ created: 2021-04-03
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-The current cap was configured to sUSD 50 million in [SCCP-88](https://sips.synthetix.io/SCCP/sccp-88) but has long been surpassed, this sccp proposed to increase it to sUSD 65 million given the increased demand for shorts from the increase in rewards.
+The current `maxDebt` was configured to be sUSD 50 million in [SCCP-88](https://sips.synthetix.io/SCCP/sccp-88) but has long been surpassed, this sccp proposed to increase it that parameter to sUSD 65 million given the increased demand for shorts follwing the recent increase in snx rewards.
 
 ## Abstract
 
@@ -25,7 +25,21 @@ The cap can be increased to sUSD 65 million to allow more users to take loans an
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The cap of sUSD 50 million has been reached. Given that we want to promote using the new shorting mechanism, increasing the cap is recommended.
+Due to the recent increase in snx rewards paid on sETH shorts, total debt had increased beyound the sUSD 50 million `maxDebt` previously configured, as can be seen in the table below: 
+
+|                       	| **sUSD M** 	|
+|-----------------------	|:----------:	|
+| **ETH Collateral**    	|    **7**     	|
+|          sUSD         	|      7     	|
+| **renBTC Collateral** 	|    **4**     	|
+|          sBTC         	|    0.03    	|
+|          sUSD         	|      4     	|
+| **Shorts**            	|   **42**   	|
+|          sBTC         	|     16     	|
+|          sETH         	|     27     	|
+| **Total**             	|   **54**     	|
+
+Rewards on sETH shorts now amount to 24k SNX per week, due to the transition from sDAO funding to inflationary supply funding. The cap prevented users from opening shorts on sBTC shorts as well, resulting in the APY on ETH and BTC shorts surging to 100%, while it was 50% pre-reward boost. Therefore this SCCP suggests to increase `maxDebt` to sUSD 65 million and to revise it gradually lower in future if excess capacity isn't fully utilized, as rewards are decreased back down. 
 
 ## Copyright
 
