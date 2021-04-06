@@ -26,6 +26,8 @@ Now that traditional shorting mechanism is available with sBTC shorts on [kwenta
 
 A single transaction by the protocolDAO to the [RewardsDistribution](http://contracts.synthetix.io/RewardsDistribution) contract to add rewardDistributions to destination address `0xCed4055b47cfD0421f3727a35F69CE659c8bAF7a` and amount `16000000000000000000000` (16k SNX) to the distributions list.
 
+- Set `RewardsDuration` to `604800` seconds (7 days) on sBTC ShortingRewards contract.
+
 - Setting `RewardDistribution` on the [sBTC short incentives](http://contracts.synthetix.io/ShortingRewardssBTC) contract to the distributions contract `0x29C295B046a73Cde593f21f63091B072d407e3F2`.
 
 ## Motivation
