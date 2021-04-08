@@ -73,7 +73,7 @@ The following testcase should confirm the contract change.
 
 <!--Please list all values configurable via SCCP under this implementation.-->
 
-TODO
+N/A
 
 ## Copyright
 
