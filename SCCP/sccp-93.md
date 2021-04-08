@@ -1,7 +1,7 @@
 ---
 sccp: 93
 title: Slighly increase the circuit breaker deviation
-status: Proposed
+status: Implemented
 author: Jackson Chan (@justinjmoses)
 discussions-to: https://discord.gg/8Br87gxm
 vote record: https://staking.synthetix.io/gov/snxgov.eth/
