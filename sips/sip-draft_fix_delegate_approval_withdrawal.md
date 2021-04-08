@@ -6,7 +6,6 @@ author: Mitchel Kelonye (@vbstreetz)
 discussions-to: https://research.synthetix.io/t/sip-toggle-off-the-all-approval-if-set-when-withdrawing-other-delegate-approvals/373
 
 created: 2021-03-29
-requires (*optional): N/A
 ---
 
 ## Simple Summary
@@ -43,23 +42,32 @@ TODO
 
 Add logic to the `DelegateApprovals` contract withdrawal methods, to revoke the "ALL" approval if set.
 
-### Rationale
-
-<!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
-
-TODO
-
 ### Technical Specification
 
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 
-Implemented at https://github.com/Synthetixio/staking/pull/385
+Implemented at https://github.com/Synthetixio/synthetix/pull/1181
 
 ### Test Cases
 
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
 
-TODO
+The following testcase should confirm the contract change.
+
+#### Old contract
+
+- In the old `DelegateApprovals` contract, create a new "ALL" power approval with the `approveAllDelegatePowers` method.
+- Ensure running `canBurnFor` returns true.
+- In a new tx, try withdrawing the "BURN" power with the `removeBurnOnBehalf` method.
+- Ensure running `canBurnFor` still returns true.
+
+### New contract
+
+- Deploy the updated version of the `DelegateApprovals` contract.
+- Create a new "ALL" power approval with the `approveAllDelegatePowers` method.
+- Ensure running `canBurnFor` returns true.
+- In a new tx, withdrawal the "BURN" power with the `removeBurnOnBehalf` method.
+- Ensure running `canBurnFor` now returns false.
 
 ### Configurable Values (Via SCCP)
 
