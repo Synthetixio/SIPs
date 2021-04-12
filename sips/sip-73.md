@@ -2,7 +2,7 @@
 sip: 73
 title: Binary Market Competition
 status: WIP
-author: CryptoToit (@FarmerT), Danijel (@dgornjakovic)
+author: CryptoToit (@CryptoToit), Danijel (@dgornjakovic)
 discussions-to: https://research.synthetix.io/t/sip-binary-competition/119
 
 created: 2020-07-25
