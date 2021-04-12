@@ -1,7 +1,7 @@
 ---
 sip: 81
 title: Remove Centralized Oracle
-status: WIP
+status: Rejected
 author: Justin J Moses (@justinjmoses)
 discussions-to: https://research.synthetix.io/t/sip-x-removal-of-snx-oracle/184
 
