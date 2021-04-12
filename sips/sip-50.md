@@ -1,7 +1,7 @@
 ---
 sip: 50
 title: Add sYIELD synth
-status: Proposed
+status: Rejected
 author: Nocturnalsheet (@nocturnalsheet), IanC
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
