@@ -134,7 +134,7 @@ The current SIP editors are
 
 ` * Justin Moses (@justinjmoses)`
 
-` * Clinton Ennis (@clints)`
+` * David Goldberg (@gberg1)`
 
 ` * Andy CF (@andytcf)`
 
