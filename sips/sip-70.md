@@ -1,7 +1,7 @@
 ---
 sip: 70
 title: Automated weekly trading competition
-status: WIP
+status: Rejected
 author: Danijel (@dgornjakovic)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
