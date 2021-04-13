@@ -37,7 +37,7 @@ Total debt had increased beyound the sUSD 65 million `maxDebt` previously config
 | **Shorts**            |   **52**   |
 | sBTC                  |     18.3   |
 | sETH                  |     34     |
-| **Total**             |   **54**   |
+| **Total**             |   **65.5**   |
 
 
 
