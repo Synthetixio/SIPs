@@ -13,7 +13,7 @@ created: 2021-04-13
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-The current `maxDebt` was configured to be sUSD 65 million in [SCCP-91](https://sips.synthetix.io/SCCP/sccp-91) but has been surpassed, this sccp proposed to increase it to sUSD 75 million given the increased demand for shorts, following the recent temporary increase in snx rewards.
+The current `maxDebt` was configured to be sUSD 65 million in [SCCP-91](https://sips.synthetix.io/SCCP/sccp-91) but has been surpassed, this sccp proposed to increase it to sUSD 75 million given the increased demand for shorts.
 
 ## Abstract
 
