@@ -34,11 +34,13 @@ Total debt had increased beyound the sUSD 65 million `maxDebt` previously config
 | **renBTC Collateral** |   **4.4**  |
 | sBTC                  |    0.03    |
 | sUSD                  |     4.4    |
-| **Shorts**            |   **52**   |
+| **Shorts**            |   **52.3** |
 | sBTC                  |     18.3   |
 | sETH                  |     34     |
-| **Total**             |   **65.5**   |
+| **Total**             |   **65.5** |
 
+
+Therefore raising it to sUSD 75 million allows users to open short positions.
 
 
 ## Copyright
