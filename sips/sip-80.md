@@ -360,8 +360,10 @@ transaction relayer framework as the product matures.
 
 ### Extensions
 
-* Funding rate as automatic position size scaling, which would automatically bring the market into balance.
 * Paying a portion of the skew funding rate owed to the fee pool to the lighter side of the market, which would enhance the profitability of taking the counter position on market.
+* Make funding rate sensitive to leverage - right now a market with \\(100 \times 10\\) long and \\(500 \times 2\\) open interest is considered balanced, even though the long exposure is much riskier. Some remedies could include:
+    * Funding rate that accounts for leverage risk
+    * Funding rate as automatic position size scaling, which would automatically bring the market into balance.
 * Mechanisms to constrain the overall size of each market, other than leverage and available sUSD.
 
 ---
