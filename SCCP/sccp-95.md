@@ -13,13 +13,13 @@ created: 2021-04-17
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-The current `maxDebt` was configured to be sUSD 75 million in [SCCP-94](https://sips.synthetix.io/SCCP/sccp-94) but has almost been reached, this sccp proposed to increase it to sUSD 90 million given the increased demand for shorts.
+The current `maxDebt` was configured to be sUSD 75 million in [SCCP-94](https://sips.synthetix.io/SCCP/sccp-94) but has almost been reached, this sccp proposes to increase it to sUSD 90 million given the increased demand for shorts.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The cap if increased to sUSD 90 million allows users to take loans and shorts.
+The cap if increased to sUSD 90 million allows users to continue to take loans and shorts without interruption.
 
 ## Motivation
 
