@@ -40,7 +40,7 @@ Total debt has almost reached the sUSD 75 million `maxDebt` previously configure
 | **Total**             |   **72**   |
 
 
-Therefore raising it to sUSD 90 million allows users to open short positions.
+Therefore raising it to sUSD 90 million allows users to continue to open short positions without interruption.
 
 
 ## Copyright
