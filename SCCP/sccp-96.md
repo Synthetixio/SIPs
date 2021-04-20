@@ -1,10 +1,10 @@
 ---
 sccp: 96
-title: Raise L2 C-Ratio To 1000%
-author: @Spreek
-discussions-to: TBD
-status: <WIP>
-created: <2021-04-21>
+title: Increase L2 Target C-Ratio To 1000%
+author: Spreek (@Spreek)
+discussions-to: governance
+status: Proposed
+created: 2021-04-21
 ---
 
 ## Simple Summary
