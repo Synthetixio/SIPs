@@ -1,7 +1,7 @@
 ---
 sip: 74
 title: Binary Markets with custom questions
-status: WIP
+status: Rejected
 author: Danijel (@dgornjakovic), Farmwell (@farmwell)
 discussions-to: https://research.synthetix.io/t/sip-custom-binary-options/118
 

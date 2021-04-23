@@ -1,7 +1,7 @@
 ---
 sip: 72
 title: Add More Assets to the Binary Options Markets
-status: WIP
+status: Rejected
 author: psybull (@psybull)
 discussions-to: https://research.synthetix.io/t/sip-add-more-binary-options-markets/116
 

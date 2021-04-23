@@ -1,7 +1,7 @@
 ---
 sip: 80
 title: Synthetic Futures 
-status: Proposed
+status: WIP
 author: Anton Jurisevic (@zyzek), Jackson Chan (@jacko125), Kain Warwick (@kaiynne)
 discussions-to: https://research.synthetix.io/t/sip-80-synthetic-futures/183
 created: 2020-08-06
@@ -31,7 +31,7 @@ encouraging a neutral balance.
 ## Motivation
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 
-The current design of Synths does not easily provide traders with a mechanism leveraged trading or for shorting assets, the iSynths are an approximation to a short position but have significant trade-offs in their current implementation. Synthetic futures contracts will enable a much expanded trading experience by enabling both leveraged price exposure and short exposure.
+The current design of Synths does not easily provide traders with a mechanism for leveraged trading or for shorting assets. iSynths are an approximation to a short position but have significant trade-offs in their current implementation. Synthetic futures contracts will enable a much expanded trading experience by enabling both leveraged price exposure and short exposure.
 
 ## Specification
 <!--The specification should describe the syntax and semantics of any new feature, there are five sections
@@ -82,7 +82,7 @@ an arbitrary contract.
 
 | Symbol | Description | Definition | Notes |
 | ------ | ----------- | ---------- | ----- |
-| \\(q\\) | Contract size | \\(q \ := \ \frac{m_e \ \lambda_e}{p_e} \\) | Measured in units of the base asset. Long positions have \\(q > 0\\), while short positions have \\(q < 0\\). for example a short contract worth 10 BTC will have \\(q = -10\\). The contract size is computed from a user's margin and leverage. See the [margin](#margins-and-leverage) section for a definition of terms used in the definition. |
+| \\(q\\) | Contract size | \\(q \ := \ \frac{m_e \ \lambda_e}{p_e} \\) | Measured in units of the base asset. Long positions have \\(q > 0\\), while short positions have \\(q < 0\\). for example a short contract worth 10 BTC will have \\(q = -10\\). The contract size is computed from a user's margin and leverage. See the [margin](#leverage-and-margins) section for a definition of terms used in the definition. |
 | \\(p\\) | Base asset spot price | - | We also define \\(p^c_e\\), the spot price when contract \\(c\\) was entered. |
 | \\(v\\) | Notional value | \\(v \ := \ q \ p\\) | This is the (signed) dollar value of the base currency units on a contract. Long positions will have positive notional, shorts will have negative notional. In addition to the spot notional value, we also define the entry notional value \\(v_e := q \ p_e = m_e \ \lambda_e\\). |
 | \\(r\\) | Profit / loss | \\(r \ := \ v - v_e\\) | The profit in a position is the change in its notional value since entry. Note that due to the sign of the notional value, if price increases long profit rises, while short profit decreases. |
@@ -95,7 +95,7 @@ open on that market. Additional parameters control the leverage offered on a par
 | \\(C\\) | The set of all contracts on the market | - | We also have the contracts on the long and short sides, \\(C_L\\) and \\(C_S\\), with \\(C = C_L \cup C_S\\). |
 | \\(b\\) | Base asset | - | For example, BTC, ETH, and so on. The price \\(p\\) defined above refers to this asset. |
 | \\(Q\\) | Market Size | \\[Q \ := \sum_{c \in C}{\|q^c\|} = Q_L + Q_S\\] \\[Q_L \ := \ \sum_{c \in C_L}{\|q^c\|}\\] \\[Q_S \ := \ \sum_{c \in C_S}{\|q^c\|}\\] | The total size of all outstanding contracts (on a given side of the market). |
-| \\(Q_{max}\\) | Open interest cap | - |  Orders cannot be opened that would cause the size of either side of the market to exceed this limit. We constrain both: \\[Q_L \leq Q_{max}\\] \\[Q_S \leq Q_{max}\\] The cap will initially be \\(1\,000\,000\\) units on each side of the market. |
+| \\(Q_{max}\\) | Open interest cap | - |  Orders cannot be opened that would cause the size of either side of the market to exceed this limit. We constrain both: \\[Q_L \leq Q_{max}\\] \\[Q_S \leq Q_{max}\\] The cap will initially be \\(1\,000\,000\\) dollars worth on each side of the market. |
 | \\(K\\) | Market skew | \\(K \ := \ \sum_{c \in C}{q^c} \ = \ Q_L - Q_S\\) | The excess contract units on one side or the other. When the skew is positive, longs outweigh shorts; when it is negative, shorts outweigh longs. When \\(K = 0\\), the market is perfectly balanced. |
 | \\(\lambda_{max}\\) | Maximum Initial leverage | - | The absolute notional value of a contract must not exceed its initial margin multiplied by the maximum leverage. Initially this will be no greater than 10. |
 
@@ -115,7 +115,7 @@ increases the contract's liquidation risk.
 
 It is important to note that the granularity and frequency of oracle price updates constrains the maximum leverage
 that it's feasible to offer. If the oracle updates the price whenever it moves 1% or more, then any contracts
-leveraged at 100x or more will immediately be liquidated by such an update.
+leveraged at 100x or more will immediately be liquidated by any update.
 
 When a contract is closed, the funds in its margin are settled. After profit and funding are computed, the remaining
 margin of \\(m\\) sUSD will be minted into the account that created the contract, while any losses out of the initial
@@ -131,7 +131,7 @@ No exchange fee is charged for correcting the skew, nor for closing or reducing 
 | Symbol | Description | Definition | Notes |
 | \\(\phi\\) | Exchange fee rate | - | Account holders will be charged only on skew they introduce into the market when modifying orders. Initially, \\(\phi = 0.3\%\\). |
 
-If the user increases the market skew by \\(k\\) units, they will be charged a fee of \\(\phi \ k \ p\\) sUSD from their margin.  
+If the user increases the market skew by \\(k\\) units, they will be charged a fee of \\(\phi \ k \ p_e\\) sUSD from their margin.  
 For example, if a user opens an order on the heavier side of the market, then they are charged \\(\phi \ v_e\\).
 On the other hand, if they are submitting an order on the lighter side of the market, they will not be charged for that
 part of their order that reduces the skew, and only for the part that induces new skew.
@@ -267,9 +267,9 @@ This provides accelerating compensation as the risk increases.
 
 #### Accrued Funding Calculation
 
-Funding accrues continually, so any time the skew or base asset price changes, so too does
+Funding accrues continuously, so any time the skew or base asset price changes, so too does
 the funding flow for all open contracts. This may occur many times between the open and close
-of each contract. It is prohibitive to continually update all open contracts, so instead any time
+of each contract. The expense of constantly updating all open contracts is prohibitive, so instead any time
 the skew changes, the total accrued funding per base currency unit will be recorded, and the
 individual funding flow for each contract computed from this.
 

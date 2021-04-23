@@ -1,7 +1,7 @@
 ---
 sip: 79
 title: Deferred Transaction Gas Tank
-status: WIP
+status: Rejected
 author: Anton Jurisevic (@zyzek), Clément Balestrat (@clementbalestrat), Clinton Ennis (@hav-noms)
 discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here>
 

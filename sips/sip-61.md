@@ -1,7 +1,7 @@
 ---
 sip: 61
 title: Keeper Synths
-status: WIP
+status: Rejected
 author: Kain Warwick (@kaiynne), Justin Moses (@justinjmoses)
 discussions-to: https://discord.gg/kPPKsPb
 
