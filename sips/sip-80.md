@@ -268,7 +268,7 @@ Funding will be settled whenever a contract is closed or modified.
 | Symbol | Description | Definition | Notes |
 | \\(t_{last}\\) | Skew last modified | - | The timestamp of the last skew-modifying event in seconds. |
 | \\(F\\) | Cumulative funding sequence | \\[F_0 \ := \ 0\\] | \\(F_i\\) denotes the i'th entry in the sequence of cumulative funding per base unit. \\(F_n\\) will be taken to be the latest entry. |
-| \\(F_{now}\\) | Unrecorded cumulative funding | \\[F_{now} \ := F_n + \ i \ p \ (now - t_{last})\\] | The funding per base unit accumulated up to the current time (including since \\(t_{last}\\)). |
+| \\(F_{now}\\) | Unrecorded cumulative funding | \\[F_{now} \ := F_n + \ i \ p \ (now - t_{last})\\] | The funding per base unit accumulated up to the current time, including since \\(t_{last}\\). |
 | \\(j\\) | Last-modified index | \\[j \leftarrow 0\\] at initialisation. | The index into \\(F\\) corresponding to the event that a contract was opened or modified. |
 | \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline q^c \ (F_{now} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
 | \\(di_{max}\\) | Maximum funding rate of change | - | This is an allowable funding rate change per unit of time. If a funding rate update would change it more than this, only add at most a delta of \\(di_{max} \ (now - t_{last})\\). Initially, \\(di_{max} = 1.25\%\\) per hour. |
