@@ -143,51 +143,6 @@ and in particular always profitable when opening a position on the lighter side 
 
 ---
 
-#### Aggregate Debt Calculation
-
-Each open contract contributes to the overall system debt of Synthetix.
-When a contract is opened, it accounts for a debt quantity exactly equal to the value of its initial margin.
-That same value of sUSD is burnt upon the creation of the contract. As the price of the base asset moves, however,
-the contract’s remaining margin changes, and so too does its debt contribution. In order to efficiently aggregate all
-these, each market keeps track of its overall debt contribution, which is updated whenever contracts are opened or
-closed.
-
-The overall market debt is the sum of the remaining margin in all contracts.
-As funding is merely transferred between accounts, it has no impact on the debt, and can be neglected.
-The possibility of negative remaining margin will also be neglected in the following computations,
-as such contributions can exist only transiently while contracts are awaiting liquidation.
-So long as insolvent contracts are liquidated within the 24-hour time lock specified in [SIP 40](sip-40.md), 
-the risk of a front-minting attack is minimal.
-These affordances will simplify calculations, and for the purposes of aggregated debt, 
-the remaining margin will be taken to be \\(m = m_e + r\\).
-
-The total debt is computed as follows.
-
-\\[D \ := \ \sum_{c \in C}{m^c}\\]
-\\[\ \ = \ p \ K  + \sum_{c \in C}{m_e^c - v_e^c}\\]
-
-That is, the sum of remaining margins is equivalent to the notional skew, plus the sum of entry margins,
-minus the notional entry skew.
-
-Apart from the spot price \\(p\\), nothing in this expression changes but when positions are modified.
-Therefore we can keep track of everything in two variables: the skew value \\(K\\), and \\(\Delta_e\\) holding
-the sum of entry margins minus the notional entry skew. Then upon modification of a contract, these values
-can be updated as follows:
-
-\\[K \ \leftarrow \ K + q' - q\\]
-\\[\Delta_e \ \leftarrow \ \Delta_e + (m_e' - v_e') - (m_e - v_e)\\]
-
-Where \\(q'\\), \\(m_e'\\), and \\(v_e'\\) are the contract's recomputed size, initial margin
-and notional values after the contract is modified. 
-
-| Symbol | Description | Definition | Notes |
-| \\(\Delta_e\\) | Entry margin sum minus notional entry skew | \\[\Delta_e \ := \ \sum_{c \in C}{m_e^c - v_e^c}\\] | - |
-| \\(D\\) | Market Debt | \\[D \ := \ max(p \ K + \Delta_e, 0)\\] | - |
-
-In this way the aggregate debt is efficiently computable at any time.
-
----
-
 #### Liquidations and Keepers
 
 Once a position's remaining margin is exhausted, the position must be closed in a timely fashion,
@@ -312,20 +267,63 @@ Funding will be settled whenever a contract is closed or modified.
 
 | Symbol | Description | Definition | Notes |
 | \\(t_{last}\\) | Skew last modified | - | The timestamp of the last skew-modifying event in seconds. |
-| \\(F_{last}\\) | Unrecorded funding | \\[F_{last} \ := \ i \ p \ (now - t_{last})\\] | The funding per base unit accumulated since \\(t_{last}\\). |
-| \\(F\\) | Accumulated funding sequence | \\[F_0 \ := \ 0\\] | \\(F_i\\) denotes the i'th entry in the sequence of accumulated funding per base unit. \\(F_n\\) will be taken to be the latest entry. |
+| \\(F\\) | Cumulative funding sequence | \\[F_0 \ := \ 0\\] | \\(F_i\\) denotes the i'th entry in the sequence of cumulative funding per base unit. \\(F_n\\) will be taken to be the latest entry. |
+| \\(F_{now}\\) | Unrecorded cumulative funding | \\[F_{now} \ := F_n + \ i \ p \ (now - t_{last})\\] | The funding per base unit accumulated up to the current time (including since \\(t_{last}\\)). |
 | \\(j\\) | Last-modified index | \\[j \leftarrow 0\\] at initialisation. | The index into \\(F\\) corresponding to the event that a contract was opened or modified. |
-| \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline q^c \ (F_n + F_{last} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
+| \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline q^c \ (F_{now} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
 | \\(di_{max}\\) | Maximum funding rate of change | - | This is an allowable funding rate change per unit of time. If a funding rate update would change it more than this, only add at most a delta of \\(di_{max} \ (now - t_{last})\\). Initially, \\(di_{max} = 1.25\%\\) per hour. |
 
-Then any time a contract \\(c\\) is modified, first update the accumulated funding sequence:
+Then any time a contract \\(c\\) is modified, first compute the current funding rate by updating market size and skew, where \\(q'\\) is the contract's updated size after modification:
 
-\\[F_{n+1} \ \leftarrow \ F_n + F_{last}\\]
+\\[Q \ \leftarrow \ Q + |q'| - |q|\\]
+\\[K \ \leftarrow \ K + q' - q\\]
+
+Then update the accumulated funding sequence:
+
+\\[F_{n+1} \ \leftarrow \ F_{now}\\]
 
 Then settle funding and perform the contract update, including:
 
 \\[t_{last} \ \leftarrow \ now\\]
 \\[j^c \ \leftarrow \ \begin{cases} 0 & \ \text{if closing} \ c \\ \\ \newline n + 1 & \ \text{otherwise} \end{cases}\\]
+
+---
+
+#### Aggregate Debt Calculation
+
+Each open contract contributes to the overall system debt of Synthetix.
+When a contract is opened, it accounts for a debt quantity exactly equal to the value of its initial margin.
+That same value of sUSD is burnt upon the creation of the contract. As the price of the base asset moves, however,
+the contract’s remaining margin changes, and so too does its debt contribution. In order to efficiently aggregate all
+these, each market keeps track of its overall debt contribution, which is updated whenever contracts are opened or
+closed.
+
+The overall market debt is the sum of the remaining margin in all contracts.
+The possibility of negative remaining margin will also be neglected in the following computations,
+as such contributions can exist only transiently while contracts are awaiting liquidation.
+So long as insolvent contracts are liquidated within the 24-hour time lock specified in [SIP 40](sip-40.md), 
+the risk of a front-minting attack is minimal.
+This will simplify calculations, and for the purposes of aggregated debt, 
+the remaining margin will be taken to be \\(m = m_e + r + f\\).
+
+The total debt is computed as follows:
+
+\\[D \ := \ \sum_{c \in C}{m^c}\\]
+\\[\ \ = \ K \ (p + F_{now})  + \sum_{c \in C}{m_e^c - v_e^c - q \ F_{j^c}}\\]
+
+Apart from the spot price \\(p\\), nothing in this expression changes except when positions are modified,
+Therefore we can keep track of everything with one additional variable to be updated on position modification:
+\\(\Delta_e\\), holding the sum on the right hand side. Then upon modification of a contract, this value is updated as follows:
+
+\\[\Delta_e \ \leftarrow \ \Delta_e + \delta_e' - \delta_e\\]
+
+Where \\(\delta_e := m_e - q_e \(p_e + F_j)\\) and \\(\delta_e'\\) is its recomputed value after the contract is modified.
+
+| Symbol | Description | Definition | Notes |
+| \\(\Delta_e\\) | Aggregate position entry debt correction | \\[\Delta_e \ := \ \sum_{c \in C}{m_e^c - v_e^c - q_e^c \ F_{j^c}}\\] | - |
+| \\(D\\) | Market Debt | \\[D \ := \ max(K \ (p + F_{now}) + \Delta_e, 0)\\] | - |
+
+In this way the aggregate debt is efficiently computable at any time.
 
 ---
 
