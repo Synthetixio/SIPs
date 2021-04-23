@@ -82,11 +82,10 @@ an arbitrary contract.
 
 | Symbol | Description | Definition | Notes |
 | ------ | ----------- | ---------- | ----- |
-| \\(q\\) | Contract size | \\(q \ := \ \frac{m_e \ \lambda_e}{p_e} \\) | Measured in units of the base asset, for example a contract worth 10 BTC will have \\(q = 10\\). The contract size is computed from a user's margin and leverage. See the [margin](#margins-and-leverage) section for a definition of terms used in the definition. |
-| \\(s\\) | Contract side indicator | \\(s^c \ := \ \begin{cases} 1 & \ \mbox{if } \ c \text{ is long} \\ \\ \newline -1 & \ \mbox{if } \ c \text{ is short} \\ \end{cases} \\) | The sign of \\(s\\) indicates whether a contract is long or short. |
+| \\(q\\) | Contract size | \\(q \ := \ \frac{m_e \ \lambda_e}{p_e} \\) | Measured in units of the base asset. Long positions have \\(q > 0\\), while short positions have \\(q < 0\\). for example a short contract worth 10 BTC will have \\(q = -10\\). The contract size is computed from a user's margin and leverage. See the [margin](#margins-and-leverage) section for a definition of terms used in the definition. |
 | \\(p\\) | Base asset spot price | - | We also define \\(p^c_e\\), the spot price when contract \\(c\\) was entered. |
-| \\(v\\) | Notional value | \\(v \ := \ q \ p\\) | This is the dollar value of the base currency units on a contract. In addition to the spot notional value, we also define the entry notional value \\(v_e := q \ p_e = m_e \ \lambda_e\\). |
-| \\(r\\) | Profit / loss | \\(r \ := \ s \ (v - v_e)\\) | The profit in a position is the change in its notional value since entry. Note that short profit is the negative of long profit, \\(r_L = v - v_e\\) and \\(r_S = -r_L\\). |
+| \\(v\\) | Notional value | \\(v \ := \ q \ p\\) | This is the (signed) dollar value of the base currency units on a contract. Long positions will have positive notional, shorts will have negative notional. In addition to the spot notional value, we also define the entry notional value \\(v_e := q \ p_e = m_e \ \lambda_e\\). |
+| \\(r\\) | Profit / loss | \\(r \ := \ v - v_e\\) | The profit in a position is the change in its notional value since entry. Note that due to the sign of the notional value, if price increases long profit rises, while short profit decreases. |
 
 Each market, implemented by a specific smart contract, is differentiated primarily by its base asset and the contracts
 open on that market. Additional parameters control the leverage offered on a particular market.
@@ -95,10 +94,10 @@ open on that market. Additional parameters control the leverage offered on a par
 | ------ | ----------- | ---------- | ----- |
 | \\(C\\) | The set of all contracts on the market | - | We also have the contracts on the long and short sides, \\(C_L\\) and \\(C_S\\), with \\(C = C_L \cup C_S\\). |
 | \\(b\\) | Base asset | - | For example, BTC, ETH, and so on. The price \\(p\\) defined above refers to this asset. |
-| \\(Q_L\\), \\(Q_S\\) | Market Size | \\[Q_L \ := \ \sum_{c \in C_L}{q^c}\\] \\[Q_S \ := \ \sum_{c \in C_S}{q^c}\\] | The total size of all outstanding contracts on a given side of the market. |
-| \\(K\\) | Market skew | \\(K \ := \ Q_L - Q_S\\) | The excess contract units on one side or the other. When the skew is positive, longs outweigh shorts; when it is negative, shorts outweigh longs. When \\(K = 0\\), the market is perfectly balanced. |
+| \\(Q\\) | Market Size | \\[Q \ := \sum_{c \in C}{\|q^c\|} = Q_L + Q_S\\] \\[Q_L \ := \ \sum_{c \in C_L}{\|q^c\|}\\] \\[Q_S \ := \ \sum_{c \in C_S}{\|q^c\|}\\] | The total size of all outstanding contracts (on a given side of the market). |
 | \\(Q_{max}\\) | Open interest cap | - |  Orders cannot be opened that would cause the size of either side of the market to exceed this limit. We constrain both: \\[Q_L \leq Q_{max}\\] \\[Q_S \leq Q_{max}\\] The cap will initially be \\(1\,000\,000\\) units on each side of the market. |
-| \\(\lambda_{max}\\) | Maximum Initial leverage | - | The notional value of a contract must not exceed its initial margin multiplied by the maximum leverage. Initially this will be no greater than 10. |
+| \\(K\\) | Market skew | \\(K \ := \ \sum_{c \in C}{q^c} \ = \ Q_L - Q_S\\) | The excess contract units on one side or the other. When the skew is positive, longs outweigh shorts; when it is negative, shorts outweigh longs. When \\(K = 0\\), the market is perfectly balanced. |
+| \\(\lambda_{max}\\) | Maximum Initial leverage | - | The absolute notional value of a contract must not exceed its initial margin multiplied by the maximum leverage. Initially this will be no greater than 10. |
 
 ---
 
@@ -110,8 +109,8 @@ increases the contract's liquidation risk.
 
 | Symbol | Description | Definition | Notes |
 | ------ | ----------- | ---------- | ----- |
-| \\(\lambda\\) | Leverage | \\(\lambda \ := \ \frac{v}{m}\\) | We also define \\(\lambda_e := \frac{v_e}{m_e}\\), the selected leverage when the position was entered. We constrain the entry leverage thus: \\[\lambda_e \leq \lambda_{max}\\] Note that the leverage in a position at a given time may exceed this value as its margin is exhausted. |
-| \\(m_e\\) | Initial margin | \\(m_e \ := \ \frac{q \ p_e}{\lambda_e}\\) | This is the quantity of sUSD the user initially spends to open a contract of \\(q\\) units of the base currency. The remaining \\(v_e - m_e\\) sUSD to pay for the rest of the position is "borrowed" from SNX holders, and it must be paid back when the position is closed. |
+| \\(\lambda\\) | Leverage | \\(\lambda \ := \ \frac{v}{m}\\) | The sign of \\(\lambda\\) reflects the side of the position: longs have positive \\(\lambda\\), while shorts have negative \\(\lambda\\). We also define \\(\lambda_e := \frac{v_e}{m_e}\\), the selected leverage when the position was entered. We constrain the entry leverage thus: \\[\|\lambda_e\| \leq \lambda_{max}\\] Note that the leverage in a position at a given time may exceed this value as its margin is exhausted. |
+| \\(m_e\\) | Initial margin | \\(m_e \ := \frac{v_e}{\lambda_e} \ = \ \frac{q \ p_e}{\lambda_e}\\) | This is the quantity of sUSD the user initially spends to open a contract of \\(q\\) units of the base currency. The remaining \\(\|v_e\| - m_e\\) sUSD to pay for the rest of the position is "borrowed" from SNX holders, and it must be paid back when the position is closed. |
 | \\(m\\) | Remaining margin | \\(m \ := \ max(m_e + r + f, 0)\\) | A contract's remaining margin is its initial margin, plus its profit \\(r\\) and funding \\(f\\) (described below). When the remaining margin reaches zero, the position is liquidated, so that it can never take a negative value. |
 
 It is important to note that the granularity and frequency of oracle price updates constrains the maximum leverage
@@ -136,7 +135,7 @@ If the user increases the market skew by \\(k\\) units, they will be charged a f
 For example, if a user opens an order on the heavier side of the market, then they are charged \\(\phi \ v_e\\).
 On the other hand, if they are submitting an order on the lighter side of the market, they will not be charged for that
 part of their order that reduces the skew, and only for the part that induces new skew.
-That is, the fee is \\(max(0, q - |K|) \ p_e \ \phi\\) sUSD.
+That is, the fee is \\(max(0, |q| - |K|) \ p_e \ \phi\\) sUSD.
 
 No fee is charged for closing a position so that funding rate arbitrage is more predictable even as skew changes,
 and in particular always profitable when opening a position on the lighter side of the market. See the
@@ -165,7 +164,7 @@ the remaining margin will be taken to be \\(m = m_e + r\\).
 The total debt is computed as follows.
 
 \\[D \ := \ \sum_{c \in C}{m^c}\\]
-\\[\ \ = \ p \ K  + \sum_{c \in C}{m_e^c} - (\sum_{c \in C_L}{v_e^c} - \sum_{c \in C_S}{v_e^c})\\]
+\\[\ \ = \ p \ K  + \sum_{c \in C}{m_e^c - v_e^c}\\]
 
 That is, the sum of remaining margins is equivalent to the notional skew, plus the sum of entry margins,
 minus the notional entry skew.
@@ -175,14 +174,14 @@ Therefore we can keep track of everything in two variables: the skew value \\(K\
 the sum of entry margins minus the notional entry skew. Then upon modification of a contract, these values
 can be updated as follows:
 
-\\[K \ \leftarrow \ K + s' \ q' - s \ q\\]
-\\[\Delta_e \ \leftarrow \ \Delta_e + m_e' - s' \ v_e' - m_e + s \ v_e\\]
+\\[K \ \leftarrow \ K + q' - q\\]
+\\[\Delta_e \ \leftarrow \ \Delta_e + (m_e' - v_e') - (m_e - v_e)\\]
 
-Where \\(s'\\), \\(q'\\), \\(m_e'\\), and \\(v_e'\\) are the contract's recomputed side, size, and initial margin
+Where \\(q'\\), \\(m_e'\\), and \\(v_e'\\) are the contract's recomputed size, initial margin
 and notional values after the contract is modified. 
 
 | Symbol | Description | Definition | Notes |
-| \\(\Delta_e\\) | Entry margin sum minus notional entry skew | \\[\Delta_e \ := \ \sum_{c \in C}{m_e^c} - (\sum_{c \in C_L}{v_e^c} - \sum_{c \in C_S}{v_e^c})\\] | - |
+| \\(\Delta_e\\) | Entry margin sum minus notional entry skew | \\[\Delta_e \ := \ \sum_{c \in C}{m_e^c - v_e^c}\\] | - |
 | \\(D\\) | Market Debt | \\[D \ := \ max(p \ K + \Delta_e, 0)\\] | - |
 
 In this way the aggregate debt is efficiently computable at any time.
@@ -243,7 +242,7 @@ Funding will be computed as a percentage charged over time against each position
 and paid into or out of its margin. Hence funding affects each contract's liquidation point.
 
 | Symbol | Description | Definition | Notes |
-| \\(W\\) | Proportional skew | \\[W \ := \ \frac{K}{Q_L + Q_S}\\] | The skew as a fraction of the total market size. |
+| \\(W\\) | Proportional skew | \\[W \ := \ \frac{K}{Q}\\] | The skew as a fraction of the total market size. |
 | \\(W_{max}\\) | Max funding skew threshold | - | The proportional skew at which the maximum funding rate will be charged (when \\(i = i_{max}\\)). Initially, \\(W_{max} = 100\%\\) | 
 | \\(i_{max}\\) | Maximum funding rate | - | A percentage per day. Initially \\(i_{max} = 10\%\\). |
 | \\(i\\) | Instantaneous funding rate | \\[i \ := \ clamp(\frac{-W}{W_{max}}, -1, 1) \ i_{max} \\]  | A percentage per day. |
@@ -262,8 +261,8 @@ receive \\(- i \ K\\) in funding: this is a positive value which will be paid in
 
 This funding flow increases directly as the skew increases, and also as the funding rate
 increases, which itself increases linearly with the skew (up to \\(W_{max}\\)). As the fee pool
-is party to \\(Q_L + Q_S\\) in open contracts, its percentage return from funding is
-\\(\frac{- i K}{Q_L + Q_S} \propto W^2\\), so it grows with the square of the proportional skew.
+is party to \\(Q\\) in open contracts, its percentage return from funding is
+\\(\frac{- i K}{Q} \propto W^2\\), so it grows with the square of the proportional skew.
 This provides accelerating compensation as the risk increases.
 
 #### Accrued Funding Calculation
@@ -306,7 +305,7 @@ any time the funding flow changes, it is possible to compute in constant time th
 to a contract per base unit over its entire lifetime.
 
 In the implementation, it is unnecessary to track the time at which each datum of the cumulative
-funding flow was recorded. For convenience we will reuse \\(F\\) for the sequence, to be accessed 
+funding flow was recorded. For convenience, we will reuse \\(F\\) for the sequence, to be accessed 
 by index, rather than as a function of time.
 
 Funding will be settled whenever a contract is closed or modified.
@@ -316,7 +315,7 @@ Funding will be settled whenever a contract is closed or modified.
 | \\(F_{last}\\) | Unrecorded funding | \\[F_{last} \ := \ i \ p \ (now - t_{last})\\] | The funding per base unit accumulated since \\(t_{last}\\). |
 | \\(F\\) | Accumulated funding sequence | \\[F_0 \ := \ 0\\] | \\(F_i\\) denotes the i'th entry in the sequence of accumulated funding per base unit. \\(F_n\\) will be taken to be the latest entry. |
 | \\(j\\) | Last-modified index | \\[j \leftarrow 0\\] at initialisation. | The index into \\(F\\) corresponding to the event that a contract was opened or modified. |
-| \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline s^c \ q^c \ (F_n + F_{last} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
+| \\(f\\) | Accrued contract funding | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline q^c \ (F_n + F_{last} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a contract at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
 | \\(di_{max}\\) | Maximum funding rate of change | - | This is an allowable funding rate change per unit of time. If a funding rate update would change it more than this, only add at most a delta of \\(di_{max} \ (now - t_{last})\\). Initially, \\(di_{max} = 1.25\%\\) per hour. |
 
 Then any time a contract \\(c\\) is modified, first update the accumulated funding sequence:
