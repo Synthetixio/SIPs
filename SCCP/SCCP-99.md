@@ -1,7 +1,7 @@
 ---
 sccp: 99
 Title: Rebalance sDEFI and iDEFI
-status: Implemented
+status: Proposed
 author: Farmwell (@farmwell), CryptoToit (@CryptoToit)
 discussions-to: https://research.synthetix.io/
 created: 2021-04-22
