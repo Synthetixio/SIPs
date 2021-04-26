@@ -1,8 +1,8 @@
 ---
 sccp: 98
-Title: Rebalance sDEFI and iDEFI
-status: Proposed
+title: Rebalance sDEFI and iDEFI
 author: Farmwell (@farmwell), CryptoToit (@CryptoToit)
+status: Proposed
 discussions-to: https://research.synthetix.io/
 created: 2021-04-22
 ---
