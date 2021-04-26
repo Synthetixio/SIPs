@@ -1,5 +1,5 @@
 ---
-sccp: 97
+sccp: 99
 Title: Rebalance sDEFI and iDEFI
 status: Implemented
 author: Farmwell (@farmwell), CryptoToit (@CryptoToit)
