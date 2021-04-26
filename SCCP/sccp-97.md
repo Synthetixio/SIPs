@@ -1,7 +1,7 @@
 ---
 sccp: 97
 title: Increase migrateEntriesThresholdAmount to 164500
-author: kaleb  (@kaleb-keny)
+author: Kaleb Keny  (@kaleb-keny)
 discussions-to: governance
 status: Proposed
 created: 2021-04-26
