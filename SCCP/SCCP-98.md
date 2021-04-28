@@ -29,12 +29,12 @@ The new sDEFI embraces an open-arms approach. There are 20 assets in sDEFI v5, w
 
 The SCCP proposes the addition of the following assets: 
 
-Terra’s LUNA
-Thorchain’s RUNE
-0x’s ZRX
-Alpha Finance’s ALPHA
-Alchemix’s ALCX
-Cream’s CREAM
+- Terra’s LUNA
+- Thorchain’s RUNE
+- 0x’s ZRX
+- Alpha Finance’s ALPHA
+- Alchemix’s ALCX
+- Cream’s CREAM
 
 Additionally, this SCCP proposes the sDEFI index synth to be paused from trading during the rebalance period. At the end of the rebalancing, the sDEFI will trade at roughly the same index price as it currently trades at. However, since this will effectively be a newly constructed product, some users may wish to exit the sDEFI prior to rebalancing.
 
