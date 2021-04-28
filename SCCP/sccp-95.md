@@ -3,7 +3,7 @@ sccp: 95
 title: Increase loans and shorts cap to sUSD 90 million from sUSD 75 million
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Proposed
+status: Implemented
 created: 2021-04-17
 ---
 
