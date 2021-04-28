@@ -3,7 +3,7 @@ sccp: 96
 title: Increase L2 Target C-Ratio To 1000%
 author: Spreek (@Spreek)
 discussions-to: governance
-status: Proposed
+status: Implemented
 created: 2021-04-21
 ---
 
