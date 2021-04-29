@@ -29,39 +29,39 @@ The new sDEFI embraces an open-arms approach. There are 20 assets in sDEFI v5, w
 
 The SCCP proposes the addition of the following assets: 
 
-Terra’s LUNA
-Thorchain’s RUNE
-0x’s ZRX
-Alpha Finance’s ALPHA
-Alchemix’s ALCX
-Cream’s CREAM
+- Terra’s LUNA
+- Thorchain’s RUNE
+- 0x’s ZRX
+- Alpha Finance’s ALPHA
+- Alchemix’s ALCX
+- Cream’s CREAM
 
 Additionally, this SCCP proposes the sDEFI index synth to be paused from trading during the rebalance period. At the end of the rebalancing, the sDEFI will trade at roughly the same index price as it currently trades at. However, since this will effectively be a newly constructed product, some users may wish to exit the sDEFI prior to rebalancing.
 
 The SCCP proposes the following weightages for each constituent of the index:
 
-| % Weightage | Ticker | Units   |
-| ----------- | ------ | ------- |
-| 12.50%      | UNI   | 56.53   |
-| 10.00%      | LUNA   | 107.78   |
-| 10.00%      | AAVE    | 4.09  |
-| 10.00%      | MKR    | 0.37    |
-| 5.00%        | RUNE    | 55.26    |
-| 5.00%        | COMP    | 1.37 |
-| 5.00%        | SNX  | 47.95   |
-| 5.00%        | SUSHI   | 60.25    |
-| 5.00%        | YFI    | 0.02   |
-| 5.00%        | UMA    | 680.59  |
-| 5.00%        | ZRX    | 254.95  |
-| 5.00%        | BNT    | 334.06  |
-| 2.50%        | CRV  | 133.55 |
-| 2.50%        | 1INCH | 80.78 |
-| 2.50%        | REN | 495.80 |
-| 2.00%        | BAL    | 5.41   |
-| 2.00%        | KNC  | 111.68   |
-| 2.00%        | ALPHA    | 213.68   |
-| 2.00%        | ALCX | 0.22 |
-| 2.00%        | CREAM | 3.02 |
+| % Weightage | Ticker | 
+| ----------- | ------ | 
+| 12.50%      | UNI   | 
+| 10.00%      | LUNA   | 
+| 10.00%      | AAVE    | 
+| 8.00%      | MKR    | 
+| 8.00%        | SNX    | 
+| 5.00%        | COMP    | 
+| 5.00%        | RUNE  | 
+| 5.00%        | SUSHI   | 
+| 5.00%        | YFI    | 
+| 5.00%        | UMA    | 
+| 5.00%        | ZRX    | 
+| 5.00%        | BNT    | 
+| 2.50%        | CRV  | 
+| 2.50%        | 1INCH | 
+| 2.50%        | REN | 
+| 2.00%        | BAL    | 
+| 2.00%        | KNC  | 
+| 2.00%        | ALPHA    | 
+| 2.00%        | ALCX | 
+| 2.00%        | CREAM | 
 
 ## Motivation
 
