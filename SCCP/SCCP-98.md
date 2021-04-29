@@ -61,7 +61,7 @@ The SCCP proposes the following weightages for each constituent of the index:
 | 2.00%        | KNC  | 
 | 2.00%        | ALPHA    | 
 | 2.00%        | ALCX | 
-| 2.00%        | CREAM | 
+| 1.00%        | CREAM | 
 
 ## Motivation
 
