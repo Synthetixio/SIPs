@@ -1,7 +1,7 @@
 ---
 sip: 96
 title: Blockchain Forks Framework for Synths
-status: Proposed
+status: Implemented
 author: Jackson Chan (@jacko125), Garth Travers (@garthtravers), Clinton Ennis (@hav-noms)
 discussions-to: https://research.synthetix.io/
 
@@ -51,7 +51,8 @@ The uncertainity a hard fork introduces requires the protocol to suspend the exc
 1. Notify stakers and traders that the synths will be suspended 72 hours ahead of the fork.
 2. The Protocol DAO will suspend the long and inverse synths.
 3. SIP raised if the synths need to be delisted and purged back into sUSD before the fork happens.
-
+4. Spartan council is able to resume the trading of suspended synth/s via governance process.
+ 
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
