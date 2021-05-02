@@ -1,7 +1,7 @@
 ---
 sccp: 92
 title: Distribute 16k SNX to sBTC shorting reward incentives
-status: Proposed
+status: Implemented
 author: Jackson Chan (@jacko125)
 discussions-to: https://discord.gg/8Br87gxm
 vote record: https://staking.synthetix.io/gov/snxgov.eth/
