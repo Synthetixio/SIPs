@@ -35,6 +35,7 @@ The SCCP proposes the addition of the following assets:
 - Alpha Finance’s ALPHA
 - Alchemix’s ALCX
 - Cream’s CREAM
+- BarnBridge's BOND
 
 Additionally, this SCCP proposes the sDEFI index synth to be paused from trading during the rebalance period. At the end of the rebalancing, the sDEFI will trade at roughly the same index price as it currently trades at. However, since this will effectively be a newly constructed product, some users may wish to exit the sDEFI prior to rebalancing.
 
@@ -42,7 +43,7 @@ The SCCP proposes the following weightages for each constituent of the index:
 
 | % Weightage | Ticker | 
 | ----------- | ------ | 
-| 12.50%      | UNI   | 
+| 12.00%      | UNI   | 
 | 10.00%      | LUNA   | 
 | 10.00%      | AAVE    | 
 | 8.00%      | MKR    | 
@@ -62,6 +63,7 @@ The SCCP proposes the following weightages for each constituent of the index:
 | 2.00%        | ALPHA    | 
 | 2.00%        | ALCX | 
 | 1.00%        | CREAM | 
+| 0.50%        | BOND | 
 
 ## Motivation
 
