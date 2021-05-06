@@ -16,7 +16,7 @@ This SIP proposes to improve the debt pool / debt cache calculation of total iss
 
 With the introduction of Ether collateral loans in [SIP 85](https://sips.synthetix.io/sips/sip-85) and Multi-collateral loans in [SIP 97](https://sips.synthetix.io/sips/sip-97), sETH and sUSD synths could be issued with ETH and renBTC collateral. This sETH and sUSD issued by the Ether Collateral and loans are excluded from the debt that SNX stakers owe, with the supply excluded from the `synths.totalSupply()` in the debt cache. However the current debt pool calculations doesn't factor in when the sUSD or sETH synths are exchanged for another synth the total supply of sUSD / sETH could be less than the total issued amount backed by non-SNX collateral.
 
-To support the upcoming Ether Wrapper contract in [SIP 85](https://sips.synthetix.io/sips/sip-85) which allows ETH / wETH to mint sETH directly, the debt pool will be calculated as `Total supply of Synths in USD - Excluded Supply from Debt Pool in USD`.
+To support the upcoming Ether Wrapper contract in [SIP 112](https://sips.synthetix.io/sips/sip-112) which allows ETH / wETH to mint sETH directly, the debt pool will be calculated as `Total supply of Synths in USD - Excluded Supply from Debt Pool in USD`.
 
 The excluded supply consists of:
 
