@@ -2,7 +2,7 @@
 sip: TBA
 title: Improve debt cache total issued synths calculation
 status: Proposed
-author: Liam Zebedeee (@liamzebedee), Jackson Chan (@drgoldb)
+author: Liam Zebedeee (@liamzebedee), Jackson Chan (@jacko125)
 discussions-to: https://research.synthetix.io/
 
 created: 2021-05-06
