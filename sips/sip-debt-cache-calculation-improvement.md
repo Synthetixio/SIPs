@@ -1,0 +1,84 @@
+---
+sip: TBA
+title: Improve debt cache total issued synths calculation
+status: Proposed
+author: Liam Zebedeee (@liamzebedee), Jackson Chan (@jacko125)
+discussions-to: https://research.synthetix.io/
+
+created: 2021-05-06
+---
+
+## Simple Summary
+
+This SIP proposes to improve the debt pool / debt cache calculation of total issued synths (the debt pool) that are backed by SNX stakers and the synths supply that is issued by other types of collateral.
+
+### Overview
+
+With the introduction of Ether collateral loans in [SIP 85](https://sips.synthetix.io/sips/sip-85) and Multi-collateral loans in [SIP 97](https://sips.synthetix.io/sips/sip-97), sETH and sUSD synths could be issued with ETH and renBTC collateral. This sETH and sUSD issued by the Ether Collateral and loans are excluded from the debt that SNX stakers owe, with the supply excluded from the `synths.totalSupply()` in the debt cache. However the current debt pool calculations doesn't factor in when the sUSD or sETH synths are exchanged for another synth the total supply of sUSD / sETH could be less than the total issued amount backed by non-SNX collateral.
+
+To support the upcoming Ether Wrapper contract in [SIP 112](https://sips.synthetix.io/sips/sip-112) which allows ETH / wETH to mint sETH directly, the debt pool will be calculated as `Total supply of Synths in USD - Excluded Supply from Debt Pool in USD`.
+
+The excluded supply consists of:
+
+- Total issued sETH and sUSD synths from EtherCollateral loans.
+- Total issued sETH, sBTC and sUSD synths from Multi-collateral loans.
+- Total Shorts value issued in Collateral Shorts.
+- Total issued sETH and sUSD synths from Ether Wrapper.
+
+### Rationale
+
+By calculating the total excluded debt from EtherCollateral loans, multi-collateral loans, collateral shorts and ETH wrapper in USD, this value can be subtracted from all of the circulating Synth's total supply to determine the debt pool size.
+
+The excluded debt takes into consideration that sUSD, sETH, sBTC issued against ETH or renBTC collateral can be exchanged into another synth. Currently on mainnet there could be an edge case where if the multicollateral synth's total supply is less than the amount that is backed by other collateral, it would not exclude the correct amount of debt that is excluded from SNX staker's debt pool.
+
+### Technical Specification
+
+Update `BaseDebtCache._issuedSynthValues()` to return the USD values of each synth's total supply and the computed excluded debt USD value.
+
+`DebtCache.sol` contract uses these values to update the debt pool and debt cache, excluding the excluded debt value from the system's total USD value.
+
+```solidity
+    function _issuedSynthValues(bytes32[] memory currencyKeys, uint[] memory rates)
+        internal
+        view
+        returns (uint[] memory values, uint excludedDebt)
+    {
+        uint numValues = currencyKeys.length;
+        values = new uint[](numValues);
+        ISynth[] memory synths = issuer().getSynths(currencyKeys);
+
+        for (uint i = 0; i < numValues; i++) {
+            address synthAddress = address(synths[i]);
+            bytes32 key = currencyKeys[i];
+            require(synthAddress != address(0), "Synth does not exist");
+            uint supply = IERC20(synthAddress).totalSupply();
+
+            values[i] = supply.multiplyDecimalRound(rates[i]);
+
+            // Calculate excluded debt.
+            if (collateralManager().isSynthManaged(key)) {
+                uint collateralIssued = collateralManager().long(key);
+                excludedDebt = excludedDebt.add(collateralIssued.multiplyDecimalRound(rates[i]));
+            }
+
+            if (key == sUSD || key == sETH) {
+                IEtherCollateral etherCollateralContract =
+                    key == sUSD ? IEtherCollateral(address(etherCollateralsUSD())) : etherCollateral();
+                excludedDebt = excludedDebt.add(etherCollateralContract.totalIssuedSynths().multiplyDecimalRound(rates[i]));
+            }
+        }
+        return (values, excludedDebt);
+    }
+```
+
+### Test Cases
+
+Unit tests included with implementation.
+
+### Configurable Values (Via SCCP)
+
+N/A
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
