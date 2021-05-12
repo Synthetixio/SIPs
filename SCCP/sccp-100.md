@@ -22,7 +22,7 @@ This SCCP proposes to set the initial parameters of the wrappr contract [SIP-112
 
 <!--A short (~200 word) description of the variable change proposed.-->
 The initial parameters proposed in this SCCP will be revisisted once the contract cap is utilized and on-chain arbs take place in order to fix the peg. 
-In the long-run, `mintFeeRate` and `burnFeeRate` are expected to be around 5 bp, once the peg issue is resoved, as to encourage peg arbing with the least amount of friction possible. 
+In the long-run, `mintFeeRate` and `burnFeeRate` are expected to be around 5 bp as to encourage peg arbing with the least amount of friction possible and `maxETH` is expected to be set significantly high enough in order to keep some capacity for increased demand for synths and offset the skew in the debt pool.
 
 ## Motivation
 
