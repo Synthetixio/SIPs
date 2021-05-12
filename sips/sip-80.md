@@ -95,7 +95,7 @@ open on that market. Additional parameters control the leverage offered on a par
 | \\(C\\) | The set of all contracts on the market | - | We also have the contracts on the long and short sides, \\(C_L\\) and \\(C_S\\), with \\(C = C_L \cup C_S\\). |
 | \\(b\\) | Base asset | - | For example, BTC, ETH, and so on. The price \\(p\\) defined above refers to this asset. |
 | \\(Q\\) | Market Size | \\[Q \ := \sum_{c \in C}{\|q^c\|} = Q_L + Q_S\\] \\[Q_L \ := \ \sum_{c \in C_L}{\|q^c\|}\\] \\[Q_S \ := \ \sum_{c \in C_S}{\|q^c\|}\\] | The total size of all outstanding contracts (on a given side of the market). |
-| \\(Q_{max}\\) | Open interest cap | - |  Orders cannot be opened that would cause the size of either side of the market to exceed this limit. We constrain both: \\[Q_L \leq Q_{max}\\] \\[Q_S \leq Q_{max}\\] The cap will initially be \\(1\,000\,000\\) dollars worth on each side of the market. |
+| \\(Q_{max}\\) | Open interest cap | - |  Orders cannot be opened that would cause the notional value of either side of the market to exceed this limit. We constrain both: \\[Q_L * p \leq Q_{max}\\] \\[Q_S * p \leq Q_{max}\\] The cap will initially be \\(1\,000\,000\\) dollars worth on each side of the market. |
 | \\(K\\) | Market skew | \\(K \ := \ \sum_{c \in C}{q^c} \ = \ Q_L - Q_S\\) | The excess contract units on one side or the other. When the skew is positive, longs outweigh shorts; when it is negative, shorts outweigh longs. When \\(K = 0\\), the market is perfectly balanced. |
 | \\(\lambda_{max}\\) | Maximum Initial leverage | - | The absolute notional value of a contract must not exceed its initial margin multiplied by the maximum leverage. Initially this will be no greater than 10. |
 
@@ -330,8 +330,7 @@ In this way the aggregate debt is efficiently computable at any time.
 #### Next Price Fulfillment
 
 As with Synth exchanges, it is possible to detect price updates coming from the oracle and
-front-run them for risk free profit. To resolve this, any alteration to a position will be a 
-a two-stage process.
+front-run them for risk free profit. To resolve this, any alteration to a position will be a two-stage process.
 
 1. First the user indicates their intention to alter their position by committing to the chain their intended margin, leverage, and market side.
 2. After a price update is received, the order is ready to be committed; a keeper finalises the transaction, additionally updating the global funding rate, skew, and debt values. The user's contract is then active; the entry price is established: funding and PnL are computed relative to this time.
