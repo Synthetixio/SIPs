@@ -32,7 +32,7 @@ The initial parameters of the wrappr contract are proposed to be set as such for
 
 - The `maxETH` parameter is set low enough as to minimize volatility on the peg and avoid situations where liquidity is drawn from Curve pools in expectations of large influx of synths. In addition, the cap is set as such, since the contract is still being battle tested against on-chain activities. The cap will be raised eventually over the next few weeks until the peg premium is resolved.
 
-- The `mintFeeRate` is set as to capture most of the arb-value due to the peg-premium by the fee pool. Currently curve provides around 250 bp premium for trades of sETH into ETH. Therefore, setting `mintFeeRate` to 200 bp will ensure that  most of the value is captured by the fee pool.
+- The `mintFeeRate` is set as such in order for the fee pool to capture most of the arb-value. Currently curve provides around [250 bp](https://curve.fi/trade/seth/SETH-ETH/5m) premium for trades of sETH into ETH. Therefore, setting `mintFeeRate` to 200 bp will ensure that  most of the value is captured by the fee pool.
 
 - The `burnFeeRate` is set initially at 5 bp, which is the long-run expected fee, as this function isn't expected to be utilized initially due to the peg premium.
 
