@@ -49,7 +49,7 @@ There are a number of high level components required for the implementation of s
 
 * [Market and Contract Parameters](#market-and-contract-parameters)
 * [Leverage and Margins](#leverage-and-margins)
-* [Position Fees](#position-fees)
+* [Exchange Fees](#exchange-fees)
 * [Aggregate Debt Calculation](#aggregate-debt-calculation)
 * [Liquidations and Keepers](#liquidations-and-keepers)
 * [Continuous funding rate](#skew-funding-rate)
@@ -123,23 +123,33 @@ margin (\\(max(m_e - m, 0)\\)), will be minted into the fee pool.
 
 ---
 
-#### Position Fees
+#### Exchange Fees
 
-Users must pay a fee whenever they increase the skew in the position, proportional with the skew they introduce.
-No exchange fee is charged for correcting the skew, nor for closing or reducing the size of a position.
+Users pay a fee whenever they open or increase a position. However, we wish to incentivise reduction of skew, so
+we distinguish between maker and taker fees. A maker is someone reducing skew and a taker is someone increasing
+it, and so we charge makers less than takers, possibly even zero.
+This fee will be charged out of the user's remaining margin. If the user has insufficient margin remaining to cover the fee,
+then the transaction should revert unless they deposit more margin or make some profit.
+
+The fees will be denoted by the symbol \\(\phi\\) as follows:
 
 | Symbol | Description | Definition | Notes |
-| \\(\phi\\) | Exchange fee rate | - | Account holders will be charged only on skew they introduce into the market when modifying orders. Initially, \\(\phi = 0.3\%\\). |
+| \\(\phi_{t}\\) | Taker fee rate | - | Charged against the notional value of orders increasing the skew. Initially, \\(\phi_{t} = 0.3\%\\). |
+| \\(\phi_{m}\\) | Maker fee rate | - | Charged against the notional value of orders reducing the skew. Initially, \\(\phi_{m} = 0.1\%\\). |
 
-If the user increases the market skew by \\(k\\) units, they will be charged a fee of \\(\phi \ k \ p_e\\) sUSD from their margin.  
-For example, if a user opens an order on the heavier side of the market, then they are charged \\(\phi \ v_e\\).
-On the other hand, if they are submitting an order on the lighter side of the market, they will not be charged for that
-part of their order that reduces the skew, and only for the part that induces new skew.
-That is, the fee is \\(max(0, |q| - |K|) \ p_e \ \phi\\) sUSD.
+We will generally maintain \\(\phi_{m} \leq \phi_{t}\\).
 
-No fee is charged for closing a position so that funding rate arbitrage is more predictable even as skew changes,
-and in particular always profitable when opening a position on the lighter side of the market. See the
-[funding rate](#skew-funding-rate) section for further details.
+There are several cases of interest here, the fee charged in each case is as follows:
+
+| Case | Fee |
+| Decrease in the size of a position. | 0 |
+| Increase in the size of a position on the heavy side of the market (and therefore the skew) by \\(k\\) units. | \\(\phi_{t} \ k \ p\\) |
+| Increase in the size of a position on the light side of the market by \\(k \leq |K|\\) units. | \\(\phi_{m} \ k \ p\\) |
+| Increase in the size of a position on the light side of the market by \\(k \gt |K|\\) units. The user's order flips the skew, and so they are charged the maker fee up to the size of the skew, and the taker fee for the new skew they introduce. | \\((\phi_{m} \ |K| + \phi_{t} \ (k - |K|)) \ p\\) |
+
+Note that no fee will be charged for closing or reducing the size of a position, so that funding rate arbitrage
+is more predictable even as skew changes, and in particular always profitable when opening a position on the lighter
+side of the market. See the [funding rate](#skew-funding-rate) section for further details.
 
 ---
 
