@@ -95,7 +95,7 @@ open on that market. Additional parameters control the leverage offered on a par
 | \\(C\\) | The set of all contracts on the market | - | We also have the contracts on the long and short sides, \\(C_L\\) and \\(C_S\\), with \\(C = C_L \cup C_S\\). |
 | \\(b\\) | Base asset | - | For example, BTC, ETH, and so on. The price \\(p\\) defined above refers to this asset. |
 | \\(Q\\) | Market Size | \\[Q \ := \sum_{c \in C}{\|q^c\|} = Q_L + Q_S\\] \\[Q_L \ := \ \sum_{c \in C_L}{\|q^c\|}\\] \\[Q_S \ := \ \sum_{c \in C_S}{\|q^c\|}\\] | The total size of all outstanding contracts (on a given side of the market). |
-| \\(V_{max}\\) | Open interest cap | - |  Orders cannot be opened that would cause the notional value of either side of the market to exceed this limit. We constrain both: \\[Q_L \ p \leq V_{max}\\] \\[Q_S \ p \leq V_{max}\\] The cap will initially be \\(1\,000\,000\\) dollars worth on each side of the market. |
+| \\(V_{max}\\) | Open interest cap | - |  Orders cannot be opened that would cause the notional value of either side of the market to exceed this limit. We constrain both: \\[p \ Q_L \leq V_{max}\\] \\[p \ Q_S \leq V_{max}\\] The cap will initially be \\(\$10\,000\,000\\) on each side of the market. |
 | \\(K\\) | Market skew | \\(K \ := \ \sum_{c \in C}{q^c} \ = \ Q_L - Q_S\\) | The excess contract units on one side or the other. When the skew is positive, longs outweigh shorts; when it is negative, shorts outweigh longs. When \\(K = 0\\), the market is perfectly balanced. |
 | \\(\lambda_{max}\\) | Maximum Initial leverage | - | The absolute notional value of a contract must not exceed its initial margin multiplied by the maximum leverage. Initially this will be no greater than 10. |
 
@@ -145,11 +145,11 @@ There are several cases of interest here, the fee charged in each case is as fol
 | Case | Fee |
 | Decrease in the size of a position. | 0 |
 | Increase in the size of a position on the heavy side of the market (and therefore the skew) by \\(k\\) units. | \\(\phi_{t} \ k \ p\\) |
-| Increase in the size of a position on the light side of the market by \\(k \leq |K|\\) units. | \\(\phi_{m} \ k \ p\\) |
-| Increase in the size of a position on the light side of the market by \\(k \gt |K|\\) units. The user's order flips the skew, and so they are charged the maker fee up to the size of the skew, and the taker fee for the new skew they introduce. | \\((\phi_{m} \ |K| + \phi_{t} \ (k - |K|)) \ p\\) |
+| Increase in the size of a position on the light side of the market by \\(k \leq \|K\|\\) units. | \\(\phi_{m} \ k \ p\\) |
+| Increase in the size of a position on the light side of the market by \\(k \gt \|K\|\\) units. The user's order flips the skew, and so they are charged the maker fee up to the size of the skew, and the taker fee for the opposing skew induced. | \\((\phi_{m} \ \|K\| + \phi_{t} \ (k - \|K\|)) \ p\\) |
 
 Note that no fee will be charged for closing or reducing the size of a position, so that funding rate arbitrage
-is more predictable even as skew changes, and in particular always profitable when opening a position on the lighter
+is more predictable even as skew changes, and in particular more profitable when opening a position on the lighter
 side of the market. See the [funding rate](#skew-funding-rate) section for further details.
 
 ---
