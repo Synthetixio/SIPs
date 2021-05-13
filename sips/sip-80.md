@@ -127,9 +127,10 @@ margin (\\(max(m_e - m, 0)\\)), will be minted into the fee pool.
 
 Users pay a fee whenever they open or increase a position. However, we wish to incentivise reduction of skew, so
 we distinguish between maker and taker fees. A maker is someone reducing skew and a taker is someone increasing
-it, and so we charge makers less than takers, possibly even zero.
-This fee will be charged out of the user's remaining margin. If the user has insufficient margin remaining to cover the fee,
-then the transaction should revert unless they deposit more margin or make some profit.
+it, and so we charge makers less than takers, possibly even zero insofar as this is possible in the presence of
+front-running.
+This fee will be charged out of the user's remaining margin. If the user has insufficient margin remaining to cover
+the fee, then the transaction should revert unless they deposit more margin or make some profit.
 
 The fees will be denoted by the symbol \\(\phi\\) as follows:
 
