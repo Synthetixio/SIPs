@@ -3,7 +3,7 @@ sccp: 100
 title: Initial Parameters of ETH Wrappr
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Proposed
+status: Implemented
 created: 2021-05-12
 ---
 
