@@ -24,7 +24,7 @@ Setting the minting fee at 2% will effectively raise the cost of minting new sUS
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 The primary motivation is to control the supply of synths in expectation of ramping up the cap of the wrappr and a significant reduction on `mintFeeRate`. Increasing minting fee on ETH backed loans will allow us to implement [SCCP-99](https://sips.synthetix.io/SCCP/sccp-99) and allow participants to continue to open up new short positions without opening up a gap that allows arbitragers to front-run the wrapper paramater update.
-That said, the minting fee will be reduced back to 10 bp, once wrappr is fully deployed with low minting fee and a large cap.
+That said, the minting fee on ETH backed loans will be reduced back to the original fee of 10 bp, once wrappr is fully deployed.
 
 
 ## Copyright
