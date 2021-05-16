@@ -3,7 +3,7 @@ sccp: 101
 title: Decrease Cap on sUSD and sETH loans
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Proposed
+status: Implemented
 created: 2021-05-12
 ---
 
