@@ -3,7 +3,7 @@ sccp: 104
 title: Lower the Wrppr MintFeeRate to 100 bp from 200 bp
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Proposed
+status: Implemented
 created: 2021-05-17
 ---
 
@@ -18,12 +18,15 @@ This SCCP proposes to lower the wrppr mintFeeRate to 100 bp from 200 bp.
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
-Setting the minting fee at 100 bp will effectively open up arbitrage opportunities on [curve](https://curve.fi/trade/seth/SETH-ETH/1h) and will help with synths peg alignment. 
+
+Setting the minting fee at 100 bp will effectively open up arbitrage opportunities on [curve](https://curve.fi/trade/seth/SETH-ETH/1h) and will help with synths peg alignment.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
+
 Lowering the `mintFeeRate` to 100 bp will help with the sETH peg, as well as ensure that snx stakers reap a large part of the benefit from the arbitrage and minimize volatility on synth prices.
 
 ## Copyright
+
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
