@@ -13,7 +13,7 @@ created: 2021-05-18
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase the cap on the wrappr contract to 50k ETH from 15k wETH.
+This SCCP proposes to increase the cap on the wrappr contract to 50k ETH from 15k ETH.
 
 ## Abstract
 
