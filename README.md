@@ -21,8 +21,11 @@ There is a 500 sUSD bounty for proposing a SIP that reaches the 'Implemented' ph
 
 # SIP Statuses
 
-- **WIP** - a SIP that is still being developed.
-- **Proposed** - a SIP that is ready to be reviewed in a governance call.
+
+- **Draft** - The initial state of a new SIP before the Spartan Council and core contributors have assessed it (formerly "WIP")
+- **Feasibility** - Once assessed a SIP is moved into Feasability and a CC is assigned  (formerly "Proposed")
+- **SC_Review_Pending** - Once the Author and the CC doing the feasbility study are satisfied a SIP is in Spartan Council Review Pending
+- **Vote_Pending** - Once the Spartan Council has formally reviewed the SIP during the SIP presentation they can either move it to a vote or send it back to Feasibility
 - **Approved** - a SIP that has been accepted for implementation by the Synthetix community.
 - **Implemented** - a SIP that has been released to mainnet.
 - **Rejected** - a SIP that has been rejected.
