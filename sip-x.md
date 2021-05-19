@@ -1,7 +1,7 @@
 ---
 sip: <to be assigned>
 title: <SIP title>
-status: WIP
+status: Draft
 author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here> 
 
