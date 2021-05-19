@@ -3,7 +3,7 @@ sccp: 105
 title: Increase Cap on Wrappr to 50k ETH from 15k ETH
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Proposed
+status: Implemented
 created: 2021-05-18
 ---
 
@@ -25,7 +25,7 @@ Increasing the cap to 50k ETH will allow arbitragers to futher tighten the sETH 
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The cap increase will allow arbers to take advantage of the wrappr contract in order to mint sETH with ETH and swap the resulting sETH on curve for ETH. This helps align the  pegs on different curve pools as well, and reinforces the pegs across the synth eco-system. 
+The cap increase will allow arbers to take advantage of the wrappr contract in order to mint sETH with ETH and swap the resulting sETH on curve for ETH. This helps align the pegs on different curve pools as well, and reinforces the pegs across the synth eco-system.
 
 ## Copyright
 
