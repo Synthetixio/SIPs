@@ -36,13 +36,13 @@ Your role as the champion is to write the SIP using the style and format describ
 
 Each status change is requested by the SIP author and reviewed by the SIP editors. Use a pull request to update the status. Please include a link to where people should continue discussing your SIP. The SIP editors will process these requests as per the conditions below.
 
-* **Work in progress (WIP)** -- Once the champion has asked the Synthetix community whether an idea has any chance of support, they will write a draft SIP as a [pull request]. Consider including an implementation if this will aid people in studying the SIP.
-* **Proposed** If agreeable, SIP editor will assign the SIP a number (generally the issue or PR number related to the SIP) and merge your pull request. The SIP editor will not unreasonably deny an SIP. Proposed SIPs will be discussed on governance calls and in Discord. If there is a reasonable level of consensus around the change on the governance call the change will be moved to approved. If the change is contentious a vote of token holders may be held to resolve the issue or approval may be delayed until consensus is reached.
+* **Draft** -- This SIP is work-in-progress and being reviewed by a Spartan Council member with the champion.
+* **Feasibility** -- This SIP is assigned with a Core Contributor and underdoing a feasibility study. 
+* **SC Review Pending** -- This SIP is being formally reviewed by the Spartan Council to decide on voting or sent back for feasibility study.
+* **Vote Pending** -- This SIP is scheduled for voting on [staking](https://staking.synthetix.io/)
 * **Approved** -- This SIP has passed community governance and is now being prioritised for development.
-  
-* **Implemented** -- This SIP has been implemented and deployed to mainnet.
-
 * **Rejected** -- This SIP has failed to reach community consensus.
+* **Implemented** -- This SIP has been implemented and deployed to mainnet.
 
 ## What belongs in a successful SIP?
 
@@ -74,7 +74,7 @@ Each SIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style
 
 ` * discussions-to:` \<a url pointing to the official discussion thread at research.synthetix.io\>
 
-` status:` < WIP | PROPOSED | APPROVED | IMPLEMENTED >
+` status:` < Draft \| Feasibility \| SC Review Pending \| Vote Pending \| Approved \| Rejected \| Implemented > 
 
 ` created:` <date created on>
 
@@ -106,7 +106,7 @@ if the email address is not given.
 
 #### `discussions-to` header
 
-While an SIP is in WIP or Proposed status, a `discussions-to` header will indicate the URL at [research.synthetix.io](https://research.synthetix.io/) where the SIP is being discussed.
+While an SIP is in **Draft** or **Feasibility** status, a `discussions-to` header will indicate the URL at [research.synthetix.io](https://research.synthetix.io/) where the SIP is being discussed.
 
 #### `created` header
 
