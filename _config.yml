@@ -33,6 +33,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-seo-tag
+  - jemoji
 
 permalink: /:slug
 
