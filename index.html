@@ -55,7 +55,7 @@ title: Synthetix Improvement Proposals
   the SIP, use relative links such as <code>../assets/sip-X/image.png</code>.
 </p>
 <p>
-  When you believe your SIP is mature and ready to progress past the WIP phase,
+  When you believe your SIP is mature and ready to progress past the Draft phase,
   you should reach out to a Spartan Council member on discord by searching
   members with the "Spartan Council" role or finding them within the #governance
   channel. The Spartan Council will schedule in a call with the SIP author to go
@@ -63,13 +63,14 @@ title: Synthetix Improvement Proposals
 </p>
 
 <p>
-  If the Spartan Council has found that the SIP is valid, they will assign the
-  <code>Proposed</code> status and call the SIP to a snapshot vote within the
-  <code>spartancouncil.eth</code> snapshot space connected on the
-  <a href="https://staking.synthetix.io/"> staking </a> dApp. Once the voting
-  has ended, the SIP is assigned either a <code>Approved</code> or
-  <code>Rejected</code> status depending on whether the SIP voting has reached a
-  super majority.
+  Once assessed, a SIP is moved into <code>Feasibility</code> and a Core Contributor is assigned.
+  The Core Contributor will work with the author to conduct a feasibility study.
+  Once the Author and the Core Contributor are satisfied, a SIP is moved to <code>SC Review Pending</code>.
+  Once the Spartan Council has formally reviewed the SIP during the SIP presentation
+  they can either move it to a vote or send it back to <code>Feasability</code>.
+  A vote is conducted within the <code>spartancouncil.eth</code> snapshot space connected on the
+  <a href="https://staking.synthetix.io/"> staking </a> dApp.
+  If a vote by the Spartan Council reaches a super majority, the SIP is moved to <code>Approved</code>, otherwise it is <code>Rejected</code>.
 </p>
 
 <p>
@@ -81,20 +82,28 @@ title: Synthetix Improvement Proposals
 
 <h2>SIP status terms</h2>
 <ul>
-  <li><strong>WIP</strong> - a SIP that is still being developed.</li>
+  <li><strong>Draft</strong> - The initial state of a new SIP before the 
+    Spartan Council and core contributors have assessed it.</li>
   <li>
-    <strong>Proposed</strong> - a SIP that has been reviewed in a Spartan
-    Council SIP interview.
+    <strong>Feasibility</strong> - a SIP that is being assessed for 
+    feasability with an assigned Core Contributor
+  </li>
+  <li>
+    <strong>SC Review Pending</strong> - a SIP that is awaiting a Spartan 
+    Council Review after the Author and Core Contributor are satisfied with feasibility
+  </li>
+  <li>
+    <strong>Vote Pending</strong> - a SIP that is awaiting a vote.
   </li>
   <li>
     <strong>Approved</strong> - a SIP that has successfully reached a super
     majority Spartan Council vote in favour.
   </li>
   <li>
-    <strong>Implemented</strong> - a SIP that has been released to main-net.
-  </li>
-  <li>
     <strong>Rejected</strong> - a SIP that has failed to reach a supermajority
     Spartan Council vote in favour.
+  </li>
+  <li>
+    <strong>Implemented</strong> - a SIP that has been released to main-net.
   </li>
 </ul>

@@ -11,7 +11,7 @@
   {% assign sips = include.sips|where:"status",status|sort:"sip" %}
   {% assign count = sips|size %}
   {% if count > 0 %}
-    <h2>{{status}}</h2>
+    <h2>{{status|replace: "_", " " }}</h2>
     <table class="siptable">
       <thead>
         <tr><th class="sipnum">Number</th><th class="title">Title</th><th class="author">Author</th></tr>
