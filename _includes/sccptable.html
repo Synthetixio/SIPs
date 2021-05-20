@@ -11,7 +11,7 @@
   {% assign sccp = include.sccp|where:"status",status|sort:"sccp" %}
   {% assign count = sccp|size %}
   {% if count > 0 %}
-    <h2>{{status}}</h2>
+    <h2>{{status|replace: "_", " " }}</h2>
     <table class="sccptable">
       <thead>
         <tr><th class="sccpnum">Number</th><th class="title">Title</th><th class="author">Author</th></tr>
