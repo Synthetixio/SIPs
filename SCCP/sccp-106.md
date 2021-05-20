@@ -13,7 +13,7 @@ created: 2021-05-15
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to reduce the minting fee (`issueFeeRate`) on new ETH backed loans to 75 bp on contract (`0x5c8344bcdC38F1aB5EB5C1d4a35DdEeA522B5DfA`).
+This SCCP proposes to reduce the minting fee (`issueFeeRate`) on new ETH backed loans to 75 bp on the multi-collateral loan contract (`0x5c8344bcdC38F1aB5EB5C1d4a35DdEeA522B5DfA`).
 
 ## Abstract
 
