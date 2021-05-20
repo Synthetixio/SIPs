@@ -3,7 +3,7 @@ sccp: 107
 title: Lower the Wrppr MintFeeRate to 75 bp from 100 bp
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Vote Pending
+status: Vote_Pending
 created: 2021-05-20
 ---
 
