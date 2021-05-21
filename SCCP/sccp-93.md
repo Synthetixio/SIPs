@@ -4,7 +4,6 @@ title: Slighly increase the circuit breaker deviation
 status: Implemented
 author: Jackson Chan (@justinjmoses)
 discussions-to: https://discord.gg/8Br87gxm
-vote record: https://staking.synthetix.io/gov/snxgov.eth/
 created: <2021-04-08>
 ---
 
