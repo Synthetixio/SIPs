@@ -3,9 +3,8 @@ sccp: 110
 title: Increase Cap on Wrappr from 75k ETH from 50k ETH
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Pending_Vote
+status: Vote_Pending
 created: 2021-05-21
----
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->
 
@@ -19,13 +18,14 @@ This SCCP proposes to increase the cap on the wrappr contract from 75k ETH from 
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-With the contract currently being saturated with eth, this sccp proposes to increase the cap to 75k ETH.
+
+With the contract currently being near saturation with eth, this sccp proposes to increase the cap to 75k ETH.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The cap increase is to allow for arbers to take advantage of the wrappr contract in order to mint sETH with ETH and align the pegs during periods of excess demand.
+The cap increase is to allow for arbers to continue to take advantage of the wrappr contract in order to mint sETH with ETH and align the pegs during periods of excess demand without hitting the cap.
 
 ## Copyright
 
