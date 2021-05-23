@@ -43,11 +43,14 @@ Trading will be halted outside of market hours or when a valid price feed is not
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 The MSCI All Country World Index is MSCI's flagship global equity index designed to represent performance of the full opportunity set of large cap and mid cap companies across 23 developed and 27 emerging markets. It is comprised of 3,000 constitutents across 11 sectors and accounts for 85% of the free float-adjusted market cap in each of these markets. The iShares MSCI ACWI ETF (ACWI) is the most commonly used investable product using the MSCI All Country World Index's methodology.
 
+  ![image](https://user-images.githubusercontent.com/83479596/119246752-efc28f00-bb38-11eb-8e75-3983208993c4.png)
+
+  
 The primary rationale for creating this Synth is to make the MSCI All Country World Index available on-chain as a crypto-native product. The MSCI All Country World Index is a common benchmark for global equity in traditional finance. Having one-click diversified equity exposure will allow crypto investors to allocate toward traditional capital markets without ever having to migrate assets off-chain.
   
-This SIP comes at an interesting time for the crypto ecosystem. DeFi protocols are beginning to examine their growing treasuries and realize there is a need to diversify away some of the idiosyncratic risk of their own governance tokens. The sACWI Synth addresses this institutional investor mindset.
+This SIP comes at an interesting time for the crypto ecosystem. DeFi protocols are beginning to examine their growing treasuries and realize there is a need to diversify away some of the idiosyncratic risk of their own governance tokens. The sACWI Synth addresses this need by providing a product in line with the institutional investor mindset.
   
-I expect this Synth to increase trading volume as I could see many DAOs and institutional investors willing to hold an asset like this on-chain. In addition, it would allow traders to speculate on the movements of the entire global market. While Synthetix continues to work to expand its product offerings in traditional equities, sACWI will ensure Synthetix can always provide full global equity exposure.
+I expect this Synth to increase trading volume as I could see many DAOs and institutional investors willing to hold an asset like this on-chain. In addition, it would allow traders to speculate on the movements of the entire global market. While Synthetix continues to work to expand its product offerings in traditional equities, sACWI will ensure Synthetix can always provide full global equity exposure to anyone looking for it.
   
 Finally, I believe this Synth would be extremely beneficial for DeFi as a whole. Having the global stock market as a composable asset on-chain could lead to some interesting opportunities not possible with traditional investment vehicles. 
   
