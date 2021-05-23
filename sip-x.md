@@ -3,7 +3,7 @@ sip: <to be assigned>
 title: Create a global stock market synth
 status: Draft
 author: Accelerated Capital (@accelerated-capital)
-discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here> 
+discussions-to: https://research.synthetix.io/t/sip-create-a-global-stock-market-synth/410
 
 created: 2021-05-22
 ---
