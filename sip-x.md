@@ -49,7 +49,7 @@ This SIP comes at an interesting time for the crypto ecosystem. DeFi protocols a
   
 I expect this Synth to increase trading volume as I could see many DAOs and institutional investors willing to hold an asset like this on-chain. In addition, it would allow traders to speculate on the movements of the entire global market. While Synthetix continues to work to expand its product offerings in traditional equities, sACWI will ensure Synthetix can always provide full global equity exposure.
   
-Finally, I believe this Synth would be extremely beneficial for DeFi as a whole. Having the global stock market as a composable asset on-chain could lead to some interesting opportunities not possible with traditional investment vehicles.
+Finally, I believe this Synth would be extremely beneficial for DeFi as a whole. Having the global stock market as a composable asset on-chain could lead to some interesting opportunities not possible with traditional investment vehicles. 
   
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
