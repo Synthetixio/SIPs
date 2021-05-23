@@ -1,6 +1,6 @@
 ---
 sccp: 110
-title: Increase Cap on Wrappr from 75k ETH from 50k ETH
+title: Increase Cap on Wrappr to 75k ETH from 50k ETH
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
 status: Vote_Pending
@@ -13,7 +13,7 @@ created: 2021-05-21
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase the cap on the wrappr contract from 75k ETH from 50k ETH.
+This SCCP proposes to increase the cap on the wrappr contract to 75k ETH from 50k ETH.
 
 ## Abstract
 
