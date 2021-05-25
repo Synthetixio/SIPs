@@ -19,7 +19,7 @@ This SCCP proposes to decrease the SNX reward paid to LP stakers on Curve to 6k 
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Given the relative stability sUSD peg and the availability of an on-ramp with deep frictionless liquidity (wrappr) snx inflation paid to the sUSD pool on curve can be decreased with no consequence on the state of the peg.
+Given the relative stability sUSD peg and the availability of an on-ramp with deep frictionless liquidity (wrappr), snx inflation paid to the sUSD pool on curve can be decreased with no consequence on the state of the peg.
 
 ## Motivation
 

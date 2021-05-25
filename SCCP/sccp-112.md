@@ -26,7 +26,7 @@ The programs have long past their due date and now can be ended as we transition
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 Users can now procure  synths  more easily with the wrappr and the multi-collateral loan contracts, therefore decommissioning the trial contracts will alleviate some of the confusion on having multiple programs running simultaneously. 
-It is important to mention that users will be accorded at least a month to close their loans, however, users that do not close their loans before would permanently lose access to their collateral.
+It is important to mention that users will be accorded at least a month to close their loans, however, users that do not close their loans by the deadline would permanently lose access to their collateral.
 
 ## Copyright
 
