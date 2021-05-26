@@ -18,7 +18,7 @@ Deprecate the [skinny Ethercollateral](./sip-35.md) and [EtherCollateral sUSD](.
 
 The EtherCollateral loans were scheduled to be deprecated once Multi-collateral loans system has been fully deployed. The current functions of the skinny ether collateral and Ethercollateral sUSD loans can be both done via the Multi-collateral loans and also the Ether Wrapper contracts.
 
-After the one month notice period ending 00:00 UTC on June 25th, 2021, the pDAO would enable liquidations on the Ethercollateral loans as per [SCCP 112](https://sips.synthetix.io/sccps/sccp-112) which allows any unclosed loans to be liquidated. Outstanding loans can be repaid by repaying the sUSD or sETH borrowed and the ETH collateral redeemed.
+After the one month notice period ending **00:00 UTC on June 25th, 2021**, the pDAO would enable liquidations on the Ethercollateral loans as per [SCCP 112](https://sips.synthetix.io/sccps/sccp-112) which allows any unclosed loans to be liquidated. Outstanding loans can be repaid by repaying the sUSD or sETH borrowed and the ETH collateral redeemed.
 
 The EtherCollateral contracts can then be deprecated and removed from the Synthetix protocol by detaching these contracts from the protocol.
 
