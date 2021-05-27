@@ -3,7 +3,7 @@ sccp: 116
 title: Reduce Issue Fee Rate on ETH backed loans to 25 bp from 50 bp
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Vote_Pending
+status: Implemented
 created: 2021-05-26
 ---
 
