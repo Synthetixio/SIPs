@@ -13,7 +13,7 @@ created: 2021-05-30
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to decrease the SNX inflationary rewards paid on ETH shorts 8k SNX per week from 16k SNX per week.
+This SCCP proposes to decrease the SNX inflationary rewards paid on ETH shorts to 8k SNX per week from 16k SNX per week.
 
 ## Abstract
 
