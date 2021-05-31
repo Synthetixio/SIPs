@@ -1,7 +1,7 @@
 ---
-sip: TBA
+sip: 142
 title: Deprecating EtherCollateral loans
-status: Proposed
+status: Feasibility
 author: Jackson Chan (@jacko125)
 discussions-to: https://research.synthetix.io
 
