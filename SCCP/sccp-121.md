@@ -1,10 +1,10 @@
 ---
-sccp: 118
-title: Increase Cap on Wrappr to 125k ETH from 100k ETH
+sccp: 121
+title: Increase Cap on Wrappr to 175k ETH from 125k ETH
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Implemented
-created: 2021-05-29
+status: Vote_Pending
+created: 2021-06-01
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->
@@ -13,13 +13,13 @@ created: 2021-05-29
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase the cap on the wrappr contract to 125k ETH from 100k ETH.
+This SCCP proposes to increase the cap on the wrappr contract to 175k ETH from 125k ETH.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-With the contract currently being near saturation with eth, this sccp proposes to increase the cap to 125k ETH.
+With the contract currently being near saturation with eth, this sccp proposes to increase the cap to 175k ETH.
 
 ## Motivation
 
