@@ -3,7 +3,7 @@ sccp: 121
 title: Increase Cap on Wrappr to 175k ETH from 125k ETH
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Vote_Pending
+status: Implemented
 created: 2021-06-01
 ---
 
