@@ -19,7 +19,7 @@ This SCCP proposes to increase the cap on the wrappr contract to 250k ETH from 1
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-With the contract currently being near saturation with eth, this sccp proposes to increase the cap to 2505k ETH.
+With the contract currently being near saturation with eth, this sccp proposes to increase the cap to 250k ETH.
 
 ## Motivation
 
