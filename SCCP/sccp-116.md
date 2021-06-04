@@ -1,10 +1,10 @@
 ---
-sccp: 93
-title: Slighly increase the circuit breaker deviation
+sccp: 116
+title: Reduce Issue Fee Rate on ETH backed loans to 25 bp from 50 bp
+author: Kaleb Keny (@kaleb-keny)
+discussions-to: governance
 status: Implemented
-author: Jackson Chan (@justinjmoses)
-discussions-to: https://discord.gg/8Br87gxm
-created: <2021-04-08>
+created: 2021-05-26
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->
@@ -13,19 +13,20 @@ created: <2021-04-08>
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the price deviation threshold factor to `1.8` in order to unblock `sEOS`.
+This SCCP proposes to reduce the minting fee (`issueFeeRate`) on new ETH backed loans to 25 bp on the multi-collateral loan contract (`0x5c8344bcdC38F1aB5EB5C1d4a35DdEeA522B5DfA`).
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The `SystemSettings.priceDeviationThresholdFactor` from [SIP-65](../sips/sip-65.md) has been triggered on the `sEOS` synth. It needs to be increased and a single trade executed in order to reset the new price. A SIP will be coming in soon to fix this issue in the future so SCCPs like this are not necessary.
+Setting the minting fee at 25 bp will effectively lower the cost of minting of new sUSD and sETH with ETH collateral.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The last traded price of `sEOS` is `3.711` (see `Exchanger.lastExchangeRate(sEOS)`) and the current price is `6.32` (see `ExchangeRates.rateForCurrency(sEOS)`) - which yields a factor of `1.7`. Thus, even if the synth is resumed, the next attempted trade will suspend it again via [SIP-65](../sips/sip-65.md).
+The primary motivation is to align the wrappr `mintFeeRate` with the loans `issueFeeRate` which allow borrowers to take our synth loans helping with the skew without hampering the gradual rollout of the wrappr.
+
 
 ## Copyright
 

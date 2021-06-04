@@ -4,7 +4,6 @@ title: Distribute 16k SNX to sBTC shorting reward incentives
 status: Implemented
 author: Jackson Chan (@jacko125)
 discussions-to: https://discord.gg/8Br87gxm
-vote record: https://staking.synthetix.io/gov/snxgov.eth/
 created: <2021-04-06>
 ---
 
