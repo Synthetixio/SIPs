@@ -130,7 +130,9 @@ we distinguish between maker and taker fees. A maker is someone reducing skew an
 it, and so we charge makers less than takers, possibly even zero insofar as this is possible in the presence of
 front-running.
 This fee will be charged out of the user's remaining margin. If the user has insufficient margin remaining to cover
-the fee, then the transaction should revert unless they deposit more margin or make some profit.
+the fee, then the transaction should revert unless they deposit more margin or make some profit. As the fee
+diminishes a user's margin, and is charged after order confirmation, they should be
+aware that it will slightly increase their effective leverage. 
 
 The fees will be denoted by the symbol \\(\phi\\) as follows:
 
