@@ -1,7 +1,7 @@
 ---
 sip: 52
 title: Add Next Price to Fee Reclamation
-status: WIP
+status: Draft
 author: Justin J Moses (@justinjmoses)
 discussions-to: <https://discordapp.com/invite/AEdUHzt>
 
