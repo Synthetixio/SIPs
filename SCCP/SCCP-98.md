@@ -33,7 +33,6 @@ The SCCP proposes the addition of the following assets:
 - Thorchain’s RUNE
 - 0x’s ZRX
 - Alpha Finance’s ALPHA
-- Alchemix’s ALCX
 - Cream’s CREAM
 - BarnBridge's BOND
 
@@ -43,27 +42,26 @@ The SCCP proposes the following weightages for each constituent of the index:
 
 | % Weightage | Ticker | 
 | ----------- | ------ | 
-| 12.00%      | UNI   | 
-| 10.00%      | LUNA   | 
-| 10.00%      | AAVE    | 
-| 8.00%      | MKR    | 
-| 8.00%        | SNX    | 
-| 5.00%        | COMP    | 
-| 5.00%        | RUNE  | 
-| 5.00%        | SUSHI   | 
-| 5.00%        | YFI    | 
-| 5.00%        | UMA    | 
-| 5.00%        | ZRX    | 
-| 5.00%        | BNT    | 
-| 2.50%        | CRV  | 
-| 2.50%        | 1INCH | 
-| 2.50%        | REN | 
-| 2.00%        | BAL    | 
-| 2.00%        | KNC  | 
-| 2.00%        | ALPHA    | 
-| 2.00%        | ALCX | 
-| 1.00%        | CREAM | 
-| 0.50%        | BOND | 
+| 12.00%      | UNI    | 
+| 11.00%      | AAVE   | 
+| 10.00%      | SNX    | 
+| 10.00%      | MKR    | 
+| 10.00%      | RUNE   | 
+| 5.00%       | LUNA   | 
+| 5.00%       | COMP   | 
+| 5.00%       | SUSHI  | 
+| 5.00%       | YFI    | 
+| 4.00%       | BNT    | 
+| 4.00%       | UMA    | 
+| 4.00%       | 0x     | 
+| 2.50%       | CRV    | 
+| 2.50%       | 1INCH  | 
+| 2.50%       | REN    | 
+| 2.00%       | BAL    | 
+| 2.00%       | ALPHA  | 
+| 2.00%       | KNC    | 
+| 1.00%       | CREAM  | 
+| 0.50%       | BOND   | 
 
 ## Motivation
 
