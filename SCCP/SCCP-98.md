@@ -23,9 +23,7 @@ The proposal is to keep with a quarterly cadence of updating the index. The last
 
 This SCCP proposes for several new additions to sDEFI. 
 
-One of the most inspiring projects to have emerged includes Alchemix, which introduces the concept of automated, self-paying loans using your initial collateral for yield farming and funneling the returns to pay back the loan principle. 
-
-The new sDEFI embraces an open-arms approach. There are 20 assets in sDEFI v5, which is the most ever for the index. One of the reasons motivating this approach is that adding more assets makes the index more tamper resistant to price manipulation. A broader range of assets also gives more exposure to newer, smaller DeFi protocols like Alchemix, Cream and Alpha Finance. 
+The new sDEFI embraces an open-arms approach. There are 20 assets in sDEFI v5, which is the most ever for the index. One of the reasons motivating this approach is that adding more assets makes the index more tamper resistant to price manipulation. A broader range of assets also gives more exposure to newer, smaller DeFi protocols like Cream and Alpha Finance. 
 
 The SCCP proposes the addition of the following assets: 
 
