@@ -1,12 +1,11 @@
 ---
-sip: <to be assigned>
-title: <SIP title>
+sip: 147
+title: sMATIC
 status: Draft
-author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
-discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here> 
+author: MiLLiE
+discussions-to: https://research.synthetix.io
+created: 09 June 2021
 
-created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
-requires (*optional): <SIP number(s)>
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
@@ -16,11 +15,11 @@ requires (*optional): <SIP number(s)>
   
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
 This proposal aims to introduce an sMATIC synth. MATIC is the native token of Polygon, an ethereum side chain which uses a combination of a plasma bridge/PoS-bridge to enable transfers between Ethereum and Polygon. Polygon is an EVM compatible sidechain which can support most dapps built on ETH. The Market cap of MATIC is $9B as of this writing with a daily trade volume of over $2B across exchanges such as Binance, Coinbase, OKEx, Huobi and Kraken and others.
-Chainlink already supports a price feed for MATIC so the deployment of an sMATIC synth would be completed in a traditional fashion.
+Chainlink already supports a price feed for MATIC, thus the deployment of sMATIC be completed in the same way as any traditional crypto synth.
   
 ## Abstract
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-Deploy an sMATIC synth for trading on Kwenta with 100 bps fee, using the MATIC chainlink price feed.
+Deploy sMATIC for trading on Kwenta with 100 bps fee, using the MATIC chainlink price feed.
 
 ## Motivation
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
@@ -47,7 +46,7 @@ Chainlink already supports a MATIC oracle: https://data.chain.link/ethereum/main
 
 It should be noted that in light of its market cap and very large trade volumes, the MATIC token is highly volatile and some times has significant daily price swings, and the Polygon sidechain, as with all sidechains, comes with its own security implementations. With those points in mind, all crypto assets saw extreme volatility over the past months and MATIC was subject to the same conditions. Naturally all sidechains/bridges carry some risk in crypto and yet it did not impede the deployment of sRUNE (the native token for Thorchain) for trading on kwenta. 
 
-SNX stakers would only stand benefit from the introduction of synthetic MATIC and its daily trade volumes. The risk of manipulation in particular is minimal, and any existential risks related to the sidechain are not isolated to Polygon but are a part of crypto and defi in its entirety. 
+SNX stakers would stand to benefit from the introduction of synthetic MATIC and its daily trade volumes. The risk of manipulation in particular is minimal, and any existential risks related to the sidechain are not isolated to Polygon but are a part of crypto and defi in its entirety. 
   
 ### Technical Specification
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
