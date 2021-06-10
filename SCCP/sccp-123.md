@@ -19,7 +19,7 @@ This SCCP proposes to decrease the remove SNX inflationary rewards paid on ETH s
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Decreasing the inflationary rewards paid on ETH shorts will help boost the weekly snx inflation paid to minters and reduce wastage, as a the debt pool is currently negatively skewed in ETH following the complete rollout of the wrapper contract.
+Removing the inflationary rewards paid on ETH shorts will help boost the weekly snx inflation paid to minters and reduce wastage, as a the debt pool is currently negatively skewed in ETH following the complete rollout of the wrapper contract.
 
 ## Motivation
 
