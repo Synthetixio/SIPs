@@ -3,7 +3,7 @@ sccp: 113
 title: Decrease SNX Inflationary Rewards on Curve to 6k SNX
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Approved
+status: Implemented
 created: 2021-05-25
 ---
 

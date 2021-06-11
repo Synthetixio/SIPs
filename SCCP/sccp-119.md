@@ -3,7 +3,7 @@ sccp: 119
 title: Decrease SNX Inflationary Rewards on ETH shorts to 8k SNX from 16k SNX
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Approved
+status: Implemented
 created: 2021-05-30
 ---
 
