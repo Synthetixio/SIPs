@@ -3,7 +3,7 @@ sccp: 123
 title: Remove SNX Inflationary Rewards on ETH shorts
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Vote_Pending
+status: Approved
 created: 2021-06-10
 ---
 
@@ -13,7 +13,7 @@ created: 2021-06-10
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to decrease the remove SNX inflationary rewards paid on ETH shorts.
+This SCCP proposes to remove SNX inflationary rewards paid on ETH shorts.
 
 ## Abstract
 
