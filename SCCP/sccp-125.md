@@ -19,15 +19,15 @@ This SCCP proposes to remove SNX inflationary rewards paid on BTC shorts.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Removing the inflationary rewards paid on BTC shorts will help reduce the pressure on the peg as shorts are closed, as sUSD is being locked in the shorting contract as collateral.
+Removing the inflationary rewards paid on BTC shorts will help reduce the pressure on the peg, since when shorts are closed the supply of sUSD available should increase (due to the collateralization ratio).
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 The main motivations of this SCCP  are as follows:
-- To relieve the peg pressure  as sUSD is being locked in the contract in order to open short positions at increased collateralization ratio.
-- To reduce the negative sETH skew on the debt pool as depicted in this (chart)[https://ibb.co/yh5j8VZ], due to the correlation between ETH and BTC. It is important to mention, that as investors acquire sBTC to burn it to close their short positions, the net sBTC skew will remain unchanged, however, the supply of free floating sUSD should increase helping with the peg. As some of that supply goes to sETH as arbs, the negative skew should decrease.
+- To relieve the peg pressure,  as sUSD is being locked in the contract in order to open short positions.
+- To reduce the negative sETH skew on the debt pool as depicted in this [chart](https://ibb.co/yh5j8VZ), as ETH and BTC are highly correlated. The logic behind this is that investors will acquire sBTC and burn to close their short positions. These transactions will result in no change in the sBTC skew. However, the supply of free floating sUSD will help with the sUSD peg and open up some arbs towards sETH or sBTC, providing minimal relief to the negative sETH skew.
 - To increase efficiency of the use of SNX inflation, as the currently SNX would be going to minters as part of the weekly claim escrowed for a year.    
 
 
