@@ -27,7 +27,7 @@ Removing the inflationary rewards paid on BTC shorts will help reduce the pressu
 
 The main motivations of this SCCP  are as follows:
 - To relieve the peg pressure,  as sUSD is being locked in the contract in order to open short positions.
-- To reduce the negative sETH skew on the debt pool as depicted in this [chart](https://ibb.co/yh5j8VZ), as ETH and BTC are highly correlated. The logic behind this is that investors will acquire sBTC and burn to close their short positions. These transactions will result in no change in the sBTC skew. However, the supply of free floating sUSD will help with the sUSD peg and open up some arbs towards sETH or sBTC, providing minimal relief to the negative sETH skew.
+- To reduce the negative sETH skew on the debt pool as depicted in this [chart](https://ibb.co/yh5j8VZ), as ETH and BTC are highly correlated. The logic behind this is that investors will acquire sBTC and burn it to close their short positions. These transactions will result in no change in the sBTC skew. However, the supply of free floating sUSD will help with the sUSD peg and open up some arbs towards sETH or sBTC, providing minimal relief to the negative sETH skew.
 - To increase efficiency of the use of SNX inflation, as the currently SNX would be going to minters as part of the weekly claim escrowed for a year.    
 
 
