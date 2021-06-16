@@ -19,7 +19,7 @@ This SCCP proposes to remove SNX inflationary rewards paid on BTC shorts.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Removing the inflationary rewards paid on BTC shorts will help reduce the pressure on the peg, since when shorts are closed the supply of sUSD available should increase (due to the collateralization ratio).
+Removing the inflationary rewards paid on BTC shorts will help reduce the pressure on the peg, since as shorts are closed the supply of sUSD available should increase (due to the collateralization ratio).
 
 ## Motivation
 
