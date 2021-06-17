@@ -41,16 +41,18 @@ The SCCP proposes the following weightages for each constituent of the index:
 
 | % Weightage | Ticker  | 
 | ----------- | ------- | 
-|35.00%       | BNB     |
-|30.00%       | COIN    |
-|5.00%        | OKB     |
-|5.00%        | CRO     |
-|5.00%        | CEL     |
-|5.00%        | FTT     |
-|5.00%        | HT      |
-|5.00%        | LEO     |
-|2.50%        | NEXO    |
-|2.50%        | KCS     |
+|31.42%       | BNB     |
+|27.04%       | COIN    |
+|6.22%        | OKB     |
+|6.08%        | CRO     |
+|5.69%        | CEL     |
+|5.57%        | FTT     |
+|4.97%        | HT      |
+|4.52%        | LEO     |
+|4.31%        | NEXO    |
+|4.19%        | KCS     |
+
+A combination of capitalization based weights were used, adjusted by decreasing the heavy bias towards BNB and COIN by a third and spreading it equally among the remaining assets.
 
 ## Motivation
 
