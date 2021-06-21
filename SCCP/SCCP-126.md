@@ -6,9 +6,6 @@ author: Rafa [https://github.com/Rafanator]
 created: 2021-06-21
 ---
 
-# Initiate New Account Merging Window
-
-
 ## Simple Summary
 Open up a new merging window for a 2 week period.
 ## Abstract
