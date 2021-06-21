@@ -2,7 +2,7 @@
 sccp: 126
 title: Initiate New Account Merging Window
 status: Draft
-author: Rafa [https://github.com/Rafanator]
+author: Rafa (@rafanator) 
 created: 2021-06-21
 ---
 
