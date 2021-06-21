@@ -1,5 +1,5 @@
 ---
-sccp: 156
+sccp: 126
 title: Initiate New Account Merging Window
 status: Draft
 author: Rafa [https://github.com/Rafanator]
