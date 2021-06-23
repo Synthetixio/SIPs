@@ -3,7 +3,7 @@ sccp: 125
 title: Remove SNX Inflationary Rewards on BTC shorts
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Vote_Pending
+status: Implemented
 created: 2021-06-16
 ---
 
