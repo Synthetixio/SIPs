@@ -4,7 +4,7 @@ title: Lower Target Collateralization Ratio 450% from 500%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
 status: Vote_Pending
-created: 2021-06-26
+created: 2021-06-23
 
 ---
 
