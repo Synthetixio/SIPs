@@ -30,7 +30,7 @@ The peg is increasingly pressured as can be seen [here](https://www.curve.fi/tra
 - The decrease in the capatlalization of synthetix due to the market downtrend. 
 - The on-going liquidations that are resulting in further snx price pressure and peg premiums.
 
-This SCCP proposes to provide minters who are close to liquidation some breathing room by allowing them to acquire synths more cheaply and having them need to burn less sUSD in order to start claiming again. That said, more longer-term solutions are being evaluated whether by putting in place structures for liquidations or having stable backed synths (stable-wrapper).
+This SCCP proposes to provide minters who are close to liquidation some breathing room by allowing them to acquire synths more cheaply and having them need to burn less sUSD in order to start claiming again. That said, more longer-term solutions are being evaluated whether by putting in place structures for [liquidations](https://sips-git-fork-spreek-master-synthetixio.vercel.app/sips/sip-148) or having stable backed synths (stable-wrapper).
 
 
 ## Copyright
