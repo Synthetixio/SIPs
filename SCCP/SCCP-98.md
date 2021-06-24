@@ -40,26 +40,26 @@ The SCCP proposes the following weightages for each constituent of the index:
 
 | % Weightage | Ticker | 
 | ----------- | ------ | 
-| 12.00%      | UNI    | 
+| 15.00%      | UNI    | 
 | 11.00%      | AAVE   | 
-| 10.00%      | SNX    | 
-| 10.00%      | MKR    | 
-| 10.00%      | RUNE   | 
-| 5.00%       | LUNA   | 
-| 5.00%       | COMP   | 
-| 5.00%       | SUSHI  | 
-| 5.00%       | YFI    | 
-| 4.00%       | BNT    | 
-| 4.00%       | UMA    | 
-| 4.00%       | 0x     | 
+| 10.00%      | LUNA   | 
+| 9.00%       | MKR    | 
+| 8.00%       | SNX    | 
+| 8.00%       | RUNE   | 
+| 7.00%       | SUSHI  | 
+| 7.00%       | COMP   | 
+| 6.00%       | YFI    | 
+| 3.00%       | BNT    | 
+| 3.00%       | UMA    | 
+| 2.50%       | ZRX    | 
 | 2.50%       | CRV    | 
-| 2.50%       | 1INCH  | 
-| 2.50%       | REN    | 
-| 2.00%       | BAL    | 
-| 2.00%       | ALPHA  | 
-| 2.00%       | KNC    | 
-| 1.00%       | CREAM  | 
-| 0.50%       | BOND   | 
+| 2.00%       | 1INCH  | 
+| 2.00%       | REN    | 
+| 1.00%       | BAL    | 
+| 1.00%       | KNC    | 
+| 1.00%       | BOND   | 
+| 0.50%       | CREAM  | 
+| 0.50%       | ALPHA  | 
 
 ## Motivation
 
