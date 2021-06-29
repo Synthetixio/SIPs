@@ -20,13 +20,13 @@ This SCCP proposes to rebalance the sCEX and rename it to sCEFI
 <!--A short (~200 word) description of the variable change proposed.-->
 
 The proposal would be a first rebalance of the sCEX index. Currently, the index tracks 7 centralized exchanges. 
-This SCCP proposes 2 new additions, one of which is not an exchanges, but rather a centralized financial blockchain product offering similar services than what we see in DEFI. Also, some existing assets in the index are more than just exchanges, i.e. Crypto.com with its yield/lending or debit card products. It is thus fitting that the sCEX is renamed to sCEFI.
+This SCCP proposes 2 new additions, one of which is not an exchange, but rather a centralized financial blockchain product offering similar services than what we see in DEFI. Also, some existing assets in the index are more than just exchanges, i.e. Crypto.com with its yield/lending or debit card products. It is thus fitting that the sCEX is renamed to sCEFI.
 
 First addition is Celsius Network (CEL), a centralized lending and borrowing platform that is approaching its fourth year in business. By April 30th, Celsius' assets under management grew to more than $17 billion in digital assets, including over 100,000 Bitcoin and 1.3 million Ethereum. Most of Celsius liquidity resides on FTT and Uniswap. 
 
 Second addition is NEXO (NEXO), which is also a centralized lending and borrowing platform predominantly, also approaching its fourth year in business. It currently manages more than $15 billion in digital assets. 
  
-The new sCEFI embraces an open-arms approach. There will be 10 assets in this updated sCEFI, which is the most ever for the index. One of the reasons motivating this approach is that adding more assets makes the index more tamper resistant to price manipulation. A broader range of established assets also opens up the index to allow future exposure to newer, smaller CEFI.
+The new sCEFI embraces an open-arms approach. There will be 9 assets in this updated sCEFI, which is the most ever for the index. One of the reasons motivating this approach is that adding more assets makes the index more tamper resistant to price manipulation. A broader range of established assets also opens up the index to allow future exposure to newer, smaller CEFI.
 Additionally, this SCCP proposes the sCEX index synth to be paused from trading during the rebalance and rename period. At the end of the rebalancing, the sCEFI will trade at roughly the same index price as it currently trades at. However, since this will effectively be a newly constructed product, some users may wish to exit the sCEFI prior to rebalancing.
 
 The SCCP proposes the addition of the following assets:
