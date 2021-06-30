@@ -326,16 +326,16 @@ A position may be liquidated whenever a price is received that causes:
 If this is satisfied, the contract is closed, the incentive is minted into the liquidating keeper's wallet at the
 execution time, and the rest of the contract's initial margin goes into the fee pool.
 
-As the Synthetix system can issue and burn synths as necessary, this liquidation can occur retrospectively, even
-if the spot price has moved past the exact liquidation point at \\(m = D\\).
-The exact price \\(p_{liq}\\) that this happens at is found by expanding the definition of \\(m\\) and solving for the spot price:
-As this price depends on the function sequence, it can move around a little as funding accrues into a position's margin.
-Therefore its value at the entry into a position is only an estimate; but it becomes more accurate as the margin is exhausted.
-
 | Symbol | Description | Definition | Notes |
 | \\(D\\) | Liquidation keeper incentive | - | This is a flat fee that is used to incentivise keeper duties. Initially this will be set to \\(D = 20\\) sUSD. |
 | \\(m_{min}\\) | Minimum order size | - | The keeper incentive necessitates that orders are at least as large. We will initially choose \\(m_{min} = 100\\) sUSD, corresponding to 5x leverage at the minimum order size relative to \\(D\\). We will require \\(m_{min} \leq m_e\\). |
 |\\(p_{liq}\\) | Liquidation Price | \\[p_{liq} := \frac{p_e - (F_n - F_j) - \frac{m_e - D}{q}}{1 + u}\\] | The liquidation price will be below the entry price for long positions, and above it for short positions, as the sign of \\(q\\) changes. |
+
+As the Synthetix system can issue and burn synths as necessary, liquidations occur retrospectively at exactly \\(p_{liq}\\),
+even  if the spot price has moved past the exact liquidation point at \\(m = D\\).
+The form of \\(p_{liq}\\) is found by expanding the left hand side of \\(m = D\\) and solving for the spot price.
+As this price depends on the function sequence, it can move around a little as funding accrues into a position's margin.
+Therefore the indicated liquidation price when position opens is only an estimate; but it becomes more accurate as the margin is exhausted.
 
 It should be borne in mind that if gas prices are too high to allow liquidations to be profitable
 for liquidators, then liquidations will likely not be performed.
