@@ -317,27 +317,33 @@ and in order to liquidate a contract it will be sufficient to prove only that th
 in that history that exhausted its remaining margin.
 
 In order to pay for this work, the liquidation point will in fact be slightly above
-zero remaining margin, and the difference will go to a liquidation keeper.
+zero remaining margin, and the difference \\(D\\) will go to a liquidation keeper. Therefore
+when opening a position, the user must post at least \\(D\\) sUSD worth of margin to ensure
+the keeper can be incentivised.
+
+A position may be liquidated whenever a price is received that causes:
+\\[m \leq D\\]
+If this is satisfied, the contract is closed, the incentive is minted into the liquidating keeper's wallet at the
+execution time, and the rest of the contract's initial margin goes into the fee pool.
+
+As the Synthetix system can issue and burn synths as necessary, this liquidation can occur retrospectively, even
+if the spot price has moved past the exact liquidation point at \\(m = D\\).
+The exact price that this happens at is found by expanding the definition of \\(m\\) and solving for the spot price:
+\\[p_{liquidation} = \frac{p_e - (F_n - F_j) - \frac{m_e - D}{q}}{1 + u}\\]
+As this price depends on the function sequence, it can move around a little as funding accrues into a position's margin.
+So its value at the entry into a position is only an estimate; but it becomes more accurate as the margin is exhausted.
 
 | Symbol | Description | Definition | Notes |
 | \\(D\\) | Liquidation keeper incentive | - | This is a flat fee that is used to incentivise keeper duties. Initially this will be set to \\(D = 20\\) sUSD. |
 | \\(m_{min}\\) | Minimum order size | - | The keeper incentive necessitates that orders are at least as large. We will initially choose \\(m_{min} = 100\\) sUSD, corresponding to 5x leverage at the minimum order size relative to \\(D\\). We will require \\(m_{min} \leq m_e\\). |
-
-A position may be liquidated whenever a price is received that causes:
-\\[m \leq D\\]
-Then the contract is closed, the incentive is minted into the liquidating keeper's wallet at the time
-that the keeper executes the liquidation, with the rest of the contract's initial margin going into the fee pool.
-
-As the Synthetix system can issue and burn synths as necessary, the liquidation can occur retrospectively, even
-if the spot price has moved past the exact liquidation point at \\(m = D\\).
-The exact price that this happens at is found by expanding the definition of \\(m\\) and solving for the spot price:
-\\[p = \frac{p_e - (F_n - F_j) - \frac{m_e - D}{q}}{1 + u}\\]
+|\\(p_{liquidation}\\) | Liquidation Price | \\[p_{liquidation = \frac{p_e - (F_n - F_j) - \frac{m_e - D}{q}}{1 + u}\\] | The liquidation price will be below the entry price for long positions, and above it for short positions, as the sign of \\(q\\) changes. |
 
 It should be borne in mind that if gas prices are too high to allow liquidations to be profitable
 for liquidators, then liquidations will likely not be performed.
 In this case the system must fall back on relying on good samaritans until the incentive level can
-be raised by SCCP, and the extra incentive of unliquidated positions is ultimately paid out of the debt
-pool. Future updates may consider a gas-sensitive liquidation incentive.
+be raised by SCCP. Increasing \\(D\\) will spontaneously modify the liquidation points of
+already-liquidatable positions, and the extra incentive is ultimately paid out of the debt
+pool. Future updates should consider a gas-sensitive liquidation incentive.
 
 The liquidation function should take an array of positions to liquidate;
 if any of the provided positions cannot be liquidated, or has already been liquidated, the transaction should not fail,
