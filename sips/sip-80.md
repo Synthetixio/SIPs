@@ -303,7 +303,7 @@ In this way the aggregate debt is efficiently computable at any time.
 
 #### Liquidations and Keepers
 
-Once a position's remaining margin is exhausted, the position must be closed in a timely fashion,
+Once a position's remaining margin is exhausted, it must be closed in a timely fashion,
 so that its contribution to the market skew and to the overall debt pool is accounted for as rapidly as possible,
 necessary for accuracy in funding rate and minting computations.
 
@@ -329,7 +329,7 @@ execution time, and the rest of the position's initial margin goes into the fee 
 | Symbol | Description | Definition | Notes |
 | \\(D\\) | Liquidation keeper incentive | - | This is a flat fee that is used to incentivise keeper duties. Initially this will be set to \\(D = 20\\) sUSD. |
 | \\(m_{min}\\) | Minimum order size | - | The keeper incentive necessitates that orders are at least as large. We will initially choose \\(m_{min} = 100\\) sUSD, corresponding to 5x leverage at the minimum order size relative to \\(D\\). We will require \\(m_{min} \leq m_e\\). |
-|\\(p_{liq}\\) | Liquidation Price | \\[p_{liq} := \frac{p_e - (F_n - F_j) - \frac{m_e - D}{q}}{1 + u}\\] | The liquidation price will be below the entry price for long positions, and above it for short positions, as the sign of \\(q\\) changes. |
+|\\(p_{liq}\\) | Liquidation price | \\[p_{liq} := \frac{p_e - (F_n - F_j) - \frac{m_e - D}{q}}{1 + u}\\] | The liquidation price will be below the entry price for long positions, and above it for short positions, as the sign of \\(q\\) changes. |
 
 As the Synthetix system can issue and burn synths as necessary, liquidations occur retrospectively at exactly \\(p_{liq}\\),
 even  if the spot price has moved past the exact liquidation point at \\(m = D\\).
