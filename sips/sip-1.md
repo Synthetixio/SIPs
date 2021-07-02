@@ -139,6 +139,8 @@ The current SIP editors are
 ` * Andy CF (@andytcf)`
 
 ` * Kaleb (@kaleb-keny)`
+  
+` * Danijel (@dgornjakovic)`
 
 ## SIP Editor Responsibilities
 
