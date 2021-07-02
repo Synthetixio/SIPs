@@ -118,7 +118,7 @@ SCCPs may include auxiliary files such as diagrams. Such files must be named SCC
 
 ## SIP Editors
 
-The current SIP editors can be found listed in [SIP-1]https://github.com/Synthetixio/SIPs/blob/master/sips/sip-1.md)
+The current SIP editors can be found listed in [SIP-1](https://github.com/Synthetixio/SIPs/blob/master/sips/sip-1.md)
 
 ## SIP Editor Responsibilities
 
