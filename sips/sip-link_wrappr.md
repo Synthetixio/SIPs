@@ -1,8 +1,8 @@
 ---
-sip: TBC
+sip: 153
 title: LINK Wrappr
-status: Implemented
-author: Kain Warwick (@kaiynne), Spreek (@spreekaway), Afif Bandak (@???)
+status: Feasability
+author: Kain Warwick (@kaiynne), Spreek (@spreekaway), Afif Bandak (@aband1)
 discussions-to: https://research.synthetix.io/
 created: 2021-07-01
 ---
