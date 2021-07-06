@@ -1,7 +1,7 @@
 ---
-sip: 85
+sip: tbd
 title: Oracle Socialization
-status: WIP
+status: Draft
 author: @mjayceee
 discussions-to: 
 created: 2020-08-31
