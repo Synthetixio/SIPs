@@ -2,7 +2,7 @@
 sccp: 124
 title: Rebalance and rename sCEX to sCEFI
 author: Rubberduck (@rubberducketh)
-status: Draft
+status: Approved
 discussions-to: synths discord channel
 created: 2021-06-13
 ---
