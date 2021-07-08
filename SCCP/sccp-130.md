@@ -9,7 +9,7 @@ created: 2021-07-08
 
 ## Simple Summary
 
-Raise fees on exchanges into sXTZ, sXMR, sETC, sDOT, sEOS, sTRX, sDASH, sCRV, sAAVE, sRUNE, sCOMP, sYFI and s1INCH to 300 bp from 100 bp.
+Raise fees on exchanges into sXTZ, sXMR, sETC, sDOT, sEOS, sTRX, sDASH, sDEFI ,sCRV, sAAVE, sRUNE, sCOMP, sYFI and s1INCH to 300 bp from 100 bp.
 
 ## Motivation
 
