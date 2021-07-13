@@ -3,7 +3,7 @@ sccp: 128
 title: Lower Target Collateralization Ratio from 450% to 400%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
-status: Vote_Pending
+status: Implemented
 created: 2021-06-27
 
 ---

@@ -3,7 +3,7 @@ sccp: 129
 title: SCCP-129 Increase exchange fees for s1INCH, sCOMP, and sCRV
 author: Afif Bandak (@aband1)
 discussions-to: governance
-status: Vote_Pending
+status: Rejected
 created: 2021-07-06
 
 ---

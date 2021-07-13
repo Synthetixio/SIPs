@@ -2,7 +2,7 @@
 sccp: 130
 title: Raise Fees on Altcoin Synths to 300 bp
 author: Kaleb Keny (@kaleb-keny)
-status: Vote_Pending
+status: Rejected
 discussions-to: Governance
 created: 2021-07-08
 ---
