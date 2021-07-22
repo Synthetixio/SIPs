@@ -139,18 +139,19 @@ The fees will be denoted by the symbol \\(\phi\\) as follows:
 | Symbol | Description | Definition | Notes |
 | \\(\phi_{t}\\) | Taker fee rate | - | Charged against the notional value of orders increasing the skew. Initially, \\(\phi_{t} = 0.3\%\\). |
 | \\(\phi_{m}\\) | Maker fee rate | - | Charged against the notional value of orders reducing the skew. Initially, \\(\phi_{m} = 0.1\%\\). |
+| \\(\phi_{c}\\) | Closure fee rate | - | Charged against the notional value of orders reducing in size. Generally, we will have \\(\phi_{c} = 0\\), but this may rise if it is necessary to combat front-running, for example. |
 
 We will generally maintain \\(\phi_{m} \leq \phi_{t}\\).
 
 There are several cases of interest here, the fee charged in each case is as follows:
 
 | Case | Fee |
-| Decrease in the size of a position. | 0 |
+| Decrease in the size of a position by \\(k\\) units. | \\(\phi_{c} \ k \ p \\) |
 | Increase in the size of a position on the heavy side of the market (and therefore the skew) by \\(k\\) units. | \\(\phi_{t} \ k \ p\\) |
 | Increase in the size of a position on the light side of the market by \\(k \leq \|K\|\\) units. | \\(\phi_{m} \ k \ p\\) |
 | Increase in the size of a position on the light side of the market by \\(k \gt \|K\|\\) units. The user's order flips the skew, and so they are charged the maker fee up to the size of the skew, and the taker fee for the opposing skew induced. | \\((\phi_{m} \ \|K\| + \phi_{t} \ (k - \|K\|)) \ p\\) |
 
-Note that no fee will be charged for closing or reducing the size of a position, so that funding rate arbitrage
+Note that no fee will generally be charged for closing or reducing the size of a position, so that funding rate arbitrage
 is more predictable even as skew changes, and in particular more profitable when opening a position on the lighter
 side of the market. See the [funding rate](#skew-funding-rate) section for further details.
 
