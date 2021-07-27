@@ -1,11 +1,11 @@
 ---
 sip: <to be assigned>
-title: <SIP title>
+title: <Deprecate low volume L1 Synths>
 status: Draft
-author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
+author: <@hjmomtazi>
 discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here> 
 
-created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+created: <2021-07-27>
 requires (*optional): <SIP number(s)>
 ---
 
@@ -14,24 +14,31 @@ requires (*optional): <SIP number(s)>
 This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.
 
 ## Simple Summary
-<!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
-"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed change intends to achieve. This should be non-technical and accessible to a casual community member.
+<This SIP proposes to deprecate a number of L1 Synths as we move closer to launching L2.    The proposed Synths are generating low volumes for the network with most having high exchange fees on L1 and add various front running and other risk factors which can be better solved for on L2  
+
+The Synths to be deprecated include s1INCH, sAAVE, sGOOG, sAMZN, sAAPL, sADA, sCOIN, sCOMP, sCRV, sDASH, sEOS, sETC, sFTSE, sFB, sLTC, sMSFT, sXMR, sNFLX, sNIKKEI, sDOT, sREN, sXRP, sRUNE, sTRX, sTSLA, sXTZ, sUNI, sYFI, sGBP, sCHF, sJPY, sKRW, sBNB
+
+Once deprecated each asset can be re-evaluated and then launched on L2 as per SIP 121
 
 ## Abstract
-<!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
-A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".
+<This SIP will remove synths from the L1 contracts by pausing exchanges into all the proposed Synths then purging holders into sUSD.
+
+Once all holders are purged, the debt pool and Synthetix protocol will be updated to remove references to corresponding Synths on L1
+
 
 ## Motivation
-<!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
-This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!
+<With the imminent launch of Synth trading on L2 the requirement to maintain a comprehensive list of L1 Synths becomes less desirable.  Many of the listed Synths can be exploited in ways that are detrimental to Stakers.  Soft front running and spot manipulation have been identified as practical attack vectors the protocol has been dealing with on L1. Front running issues also cause the exchange fee on many of these Synths to be high and adds an unnecessary perception that Synthetix is a prohibitively expensive protocol to use for exchanging assets.  
+  
+More recently the project has been discussing the focus on L2 as the primary environment for trading Synths, while keeping a handful of more liquid L1 Synths for larger composability opportunities.  
+The Synths that would continue to be available, traded and utilized (including through various integrations) are sUSD, sETH, sBTC, sLINK, sDEFI, sCEX (converting to sCEFI), sEUR and sAUD 
+Reducing surface area during this transition to L2 will minimise chances of an exploit, accelerate the shift to a better, faster trading experience and refine the protocol’s focus on desirable Synths
+
 
 ## Specification
-<!--The specification should describe the syntax and semantics of any new feature, there are five sections
-1. Overview
-2. Rationale
-3. Technical Specification
-4. Test Cases
-5. Configurable Values
+<Phase 1: Purge and remove Synths
+Pause exchanges on all Synths.
+Upgrade synths to PurgeableSynths that allows synths to be purged into sUSD.
+Purge remaining synth holders and remove Synths from the Synthetix pricing exchangeRates contract.
 -->
 
 ### Overview
@@ -39,12 +46,10 @@ This is the problem statement. This is the *why* of the SIP. It should clearly e
 This is a high level overview of *how* the SIP will solve the problem. The overview should clearly describe how the new feature will be implemented.
 
 ### Rationale
-<!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
-This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
+<Splitting the deprecation of Synths into two phases allows the Synths to be purged and removed from Kwenta first, and then have contract updates to be done as a separate release
 
 ### Technical Specification
-<!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
-The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones. 
+<
 
 ### Test Cases
 <!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
