@@ -1,7 +1,7 @@
 ---
 sip: 82
 title: Synthetix Keeper System
-status: Draft
+status: Rejected
 author: Jackson Chan (@jacko125), Justin Moses (@justinjmoses)
 discussions-to: https://discord.gg/kPPKsPb
 
