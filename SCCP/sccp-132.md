@@ -17,7 +17,7 @@ The Chainlink price feeds for sETH, sBTC, and sLINK were tested on Kovan and wer
 
 Mainnet will be monitored and fee reclamation can be switched back on at moment's notice, should the Spartan Council find it necessary. 
 
-Some recent benchmarking demonstrated that front-running is possible when you have large muliple standard of diviations of volatility. This was confirmed by both a bot being run by a community member and separately one that Synthetix core contributors were running. Given that the Spartan Council can always turn on fee reclamation should the need arise, and that we will be actively monitoring for front-runners via front-running detection models we are proposing releasing L2 Exchangiing with 40 bip fees. 
+Some recent benchmarking demonstrated that front-running is possible when you have multiple deviations of volatility. This was confirmed by a bot ran by the community and a separate one operated by the Synthetix core-contributors. Given that the Spartan Council can always turn on fee reclamation should the need arise, and that we will be actively monitoring for front-runners via front-running detection models we are proposing releasing L2 Exchangiing with 40 bip fees. 
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
