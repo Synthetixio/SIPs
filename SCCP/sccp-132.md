@@ -15,7 +15,7 @@ Roll out L2 Exchanging for sETH, sBTC, and sLINK with 40 bip fees.
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 The Chainlink price feeds for sETH, sBTC, and sLINK were tested on Kovan and were deemed to be lively enough that with 40 bip fees, fee reclamation can initially be removed all together on L2, without a significant risk to SNX stakers.
 
-Mainnet will be monitored and fee reclamation can be switched back on at moment's notice, should the Spartan Council find it necessary. 
+Mainnet will be monitored and fee reclamation can be switched back on at a moment's notice, should the Spartan Council find it necessary. 
 
 Some recent benchmarking demonstrated that front-running is possible when you have multiple deviations of volatility. This was confirmed by a bot ran by the community and a separate one operated by the Synthetix core-contributors. Given that the Spartan Council can always turn on fee reclamation should the need arise, and that we will be actively monitoring for front-runners via front-running detection models we are proposing releasing L2 Exchangiing with 40 bip fees. 
 
