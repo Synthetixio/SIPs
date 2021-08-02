@@ -3,7 +3,7 @@ sccp: 132
 title: Fee Rates for L2 Exchanging
 author: David Goldberg (@drgoldb)
 discussions-to: governance
-status: SC_Review_Pending
+status: Implemented
 created: 2021-07-27
 ---
 
