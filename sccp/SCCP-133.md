@@ -19,7 +19,7 @@ As per SIP-132, the Volume Partner Program is currently paying 4,000 SNX per mon
 
 Before, the sDAO would pay 25% of generated trading fees to Volume Partners. Given that Volume Partners generate a big % of volume, it makes sense to increase rewards to an amount that is more in accordance to the volume they provide. 
 
-The council has agreed in increasing the amount to 10,000 SNX per month (which anualized is 0.44% of 2021's supply).
+This proposal consists in increasing the amount to 10,000 SNX per month (which annualised is 0.44% of 2021's supply).
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 Reward Volume Partners for their contributions. 
