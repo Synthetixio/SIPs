@@ -5,7 +5,6 @@ author: Spreek (@Spreek)
 discussions-to: https://discord.gg/e9c5Cs
 status: Vote_Pending
 created: 2021-08-11
-requires (*optional): <SIP/SCCP number(s)>
 ---
 
 ## Simple Summary
