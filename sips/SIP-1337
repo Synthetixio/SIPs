@@ -1,0 +1,29 @@
+---
+sip: <to be assigned>
+title: <Kwenta Independence>
+status: Draft
+author: <Andrew (@andotlas)>
+discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here> 
+
+created: <2021-08-13>
+---
+
+## Summary 
+
+This SIP proposes that Kwenta be formally transferred from a Synthetix project to an independent protocol. 
+
+## Abstract
+
+Kwenta is a Synthetic asset trading platform powered by the Synthetix protocol that, to-date, has been designed, built, and managed by the Synthetix protocol. By formalizing Kwenta as a project no longer under the management of Synthetix, Kwenta will have the dedicated focus and resources it needs to thrive and grow beyond what could be accomplished under Synthetix management. 
+
+## Motivation 
+
+Kwenta is an iteration of synthetix.exchange, a Synth trading exchange made by the Synthetix Core Contributors with the purpose of showcasing the potential utility of the Synthetix Protocol. As Synthetix grew, it’s positioning became synonymous with synthetix.exchange which had the unintended side effect of ecosystem members categorizing Synthetix as a user-facing decentralized exchange instead of a building block in the Ethereum DeFi ecosystem. To remedy this misassociation, the Sythetix Core Contributors created Kwenta with the purpose of separating its branding from Synthetix, allowing Synthetix Core to more clearly communicate the value of Synthetix the protocol to developers while still offering a showcase for Synth utility. Although this strategy proved fruitful, Kwenta required more dedicated resources than Synthetix could offer as early designs went unimplemented, a backlog of changes built up, and new features that needed to be showcased (Ex. Futures) took priority. By making Kwenta an independent project, Kwenta will have the resources it needs to deliver on designs, meet user demands, and innovate to compete with other trading tools in the DeFi ecosystem.
+
+## Specification 
+
+The only requirement for this SIP is that a vote be held to formally spin out Kwenta as an independent project. 
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
