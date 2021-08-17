@@ -12,38 +12,40 @@ interface Props {
 const FrontmatterTable: React.FC<Props> = ({ frontmatter }) => {
   return (
     <table>
-      <tr>
-        <th>Author</th>
-        <td>
-          <AuthorList author={frontmatter.author} />
-        </td>
-      </tr>
-      {frontmatter.discussions_to && (
+      <tbody>
         <tr>
-          <th>Discussions-To</th>
+          <th>Author</th>
           <td>
-            <a href={frontmatter.discussions_to}>
-              {frontmatter.discussions_to}
-            </a>
+            <AuthorList author={frontmatter.author} />
           </td>
         </tr>
-      )}
-      <tr>
-        <th>Status</th>
-        <td>{frontmatter.status}</td>
-      </tr>
-      {frontmatter.created && (
+        {frontmatter.discussions_to && (
+          <tr>
+            <th>Discussions-To</th>
+            <td>
+              <a href={frontmatter.discussions_to}>
+                {frontmatter.discussions_to}
+              </a>
+            </td>
+          </tr>
+        )}
         <tr>
-          <th>Created</th>
-          <td>{format(new Date(frontmatter.created), 'yyyy-MM-dd')}</td>
+          <th>Status</th>
+          <td>{frontmatter.status}</td>
         </tr>
-      )}
-      {frontmatter.updated && (
-        <tr>
-          <th>Updated</th>
-          <td>{format(new Date(frontmatter.created), 'yyyy-MM-dd')}</td>
-        </tr>
-      )}
+        {frontmatter.created && (
+          <tr>
+            <th>Created</th>
+            <td>{format(new Date(frontmatter.created), 'yyyy-MM-dd')}</td>
+          </tr>
+        )}
+        {frontmatter.updated && (
+          <tr>
+            <th>Updated</th>
+            <td>{format(new Date(frontmatter.created), 'yyyy-MM-dd')}</td>
+          </tr>
+        )}
+      </tbody>
     </table>
   )
 }

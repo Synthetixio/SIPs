@@ -1,6 +1,6 @@
 ---
 sccp: 52
-title: Change Debt Snapshot Stale Time to 4 Hours 
+title: Change Debt Snapshot Stale Time to 4 Hours
 author: Anton Jurisevic (@zyzek)
 discussions-to: https://research.synthetix.io/
 status: Implemented
@@ -10,11 +10,13 @@ created: 2020-10-09
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->
 
 ## Simple Summary
+
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 This SCCP proposes changing the debt snapshot stale time to 4 hours.
 
 ## Abstract
+
 <!--A short (~200 word) description of the variable change proposed.-->
 
 The pDAO will call [`SystemSettings.setDebtSnapshotStaleTime(15000)`](https://etherscan.io/address/0x703D37fb776A4C905e28f7Ff23C73102ce36E08B#writeContract).
@@ -25,6 +27,7 @@ The keeper bot will still take snapshots earlier than 4 hours if the deviation e
 threshold of 2%, so lowering the frequency should not unduly impact the integrity of the system.
 
 ## Motivation
+
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 Since [SIP-83](../sips/sip-83.md) went live, snapshots have been operating approximately once per hour to ensure the
@@ -33,7 +36,7 @@ This stale time was initially set at a cautious level to protect the system, but
 unnecessarily aggressive. Consider the following chart of the percentage deviation of the cached debt
 from the true total system debt over the day following the Deneb release.
 
-![deviations](asset/sccp-52/snapshot-deviations.svg){: .center-image }
+![deviations](asset/sccp-52/snapshot-deviations.svg)
 
 The dashed lines indicate the times at which complete snapshots were performed to prevent
 the snapshot going stale. The upper and lower bounds of this chart are the limits the
@@ -61,4 +64,5 @@ In the long run it may be a better approach to lower the stale time substantiall
 while also lowering the deviation threshold on the keeper bot.
 
 ## Copyright
+
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

@@ -25,7 +25,10 @@ const Template: React.FC<Props> = ({ data }) => {
         </a>
       </h1>
       <FrontmatterTable frontmatter={frontmatter} />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div
+        className="markdown-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </Main>
   )
 }
