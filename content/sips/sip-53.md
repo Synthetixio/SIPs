@@ -9,6 +9,7 @@ created: 2020-04-23
 ---
 
 ## Simple Summary
+
 This SIP proposes to allow the creation of new markets for trading binary options.
 
 ## Abstract
@@ -23,36 +24,36 @@ the market paying out the other side at maturity. This structure removes the nec
 
 ## Table of Contents
 
-* [Motivation](#motivation)
-  * [Summary](#summary)
-  * [Smart Contracts](#smart-contracts)
-  * [Basic Dynamics](#basic-dynamics)
-    * [Market Resolution](#market-resolution)
-    * [Fees](#fees)
-    * [Option Supply and Prices](#option-supply-and-prices)
-    * [Market Equilibria](#market-equilibria)
-  * [Market Creation](#market-creation)
-    * [Initial Capital](#initial-capital)
-    * [Oracles](#oracles)
-    * [Further Incentives](#further-incentives)
-  * [Bidding](#bidding)
-    * [Bids](#bids)
-    * [Refunds](#refunds)
-  * [Trading](#trading)
-  * [Maturity](#maturity)
-    * [Oracle Snapshot](#oracle-snapshot)
-    * [Exercising Options](#exercising-options)
-  * [Expiry](#expiry)
-  * [Future Extensions](#future-extensions)
-    * [Arbitrary Maturity Predicates](#arbitrary-maturity-predicates)
-    * [Multimodal Options Markets](#multimodal-options-markets)
-    * [Limit Bids](#limit-bids)
-  * [Summary of Definitions](#summary-of-definitions)
-* [Rationale](#rationale)
-* [Test Cases](#test-cases)
-* [Implementation](#implementation)
-* [Discussion Questions](#discussion-questions)
-* [Configurable Values](#configurable-values-via-sccp)
+- [Motivation](#motivation)
+  - [Summary](#summary)
+  - [Smart Contracts](#smart-contracts)
+  - [Basic Dynamics](#basic-dynamics)
+    - [Market Resolution](#market-resolution)
+    - [Fees](#fees)
+    - [Option Supply and Prices](#option-supply-and-prices)
+    - [Market Equilibria](#market-equilibria)
+  - [Market Creation](#market-creation)
+    - [Initial Capital](#initial-capital)
+    - [Oracles](#oracles)
+    - [Further Incentives](#further-incentives)
+  - [Bidding](#bidding)
+    - [Bids](#bids)
+    - [Refunds](#refunds)
+  - [Trading](#trading)
+  - [Maturity](#maturity)
+    - [Oracle Snapshot](#oracle-snapshot)
+    - [Exercising Options](#exercising-options)
+  - [Expiry](#expiry)
+  - [Future Extensions](#future-extensions)
+    - [Arbitrary Maturity Predicates](#arbitrary-maturity-predicates)
+    - [Multimodal Options Markets](#multimodal-options-markets)
+    - [Limit Bids](#limit-bids)
+  - [Summary of Definitions](#summary-of-definitions)
+- [Rationale](#rationale)
+- [Test Cases](#test-cases)
+- [Implementation](#implementation)
+- [Discussion Questions](#discussion-questions)
+- [Configurable Values](#configurable-values-via-sccp)
 
 ---
 
@@ -99,7 +100,7 @@ Bids cannot be transferred between wallets, but they can be refunded for a fee.
 At the termination of bidding the basic price of each option is fixed, according to the relative demand on each
 and no more bids or refunds are accepted.
 
-#### 2. Trading 
+#### 2. Trading
 
 From the start of the trading period users can claim the options they are owed based on
 the size of their bid and the final option prices.
@@ -119,7 +120,7 @@ If the market resolved short, each long option pays out nothing, and each short 
 
 These returns are paid from the total bids made on both sides during the bidding period.
 
-#### 4. Expiry 
+#### 4. Expiry
 
 After a time period allowing users to exercise their options,
 those markets expire, and the market can destroyed.
@@ -132,11 +133,11 @@ list of active markets.
 
 ### Smart Contracts
 
-![Architecture](assets/sip-53/smart-contract-architecture.svg){: .center-image }
+![Architecture](assets/sip-53/smart-contract-architecture.svg)
 
-* `Manager`: Responsible for generating new markets, and maintaining a list of active markets.
-* `Market`: Each `Market` instance provides options for a particular asset to be at a certain price on a given date. Many of these could exist simultaneously for different assets, with different strike prices, maturity dates, and so on. All bid funds are held in this contract.
-* `Option`: This is an ERC20 token contract which tracks each user's bids and option balances. Two option tokens exist per market, one long and one short.
+- `Manager`: Responsible for generating new markets, and maintaining a list of active markets.
+- `Market`: Each `Market` instance provides options for a particular asset to be at a certain price on a given date. Many of these could exist simultaneously for different assets, with different strike prices, maturity dates, and so on. All bid funds are held in this contract.
+- `Option`: This is an ERC20 token contract which tracks each user's bids and option balances. Two option tokens exist per market, one long and one short.
 
 ---
 
@@ -151,13 +152,13 @@ exchanging sUSD with the `Market` contract.
 
 At the maturity date the market resolves into exactly one of these events, which will be denoted \\(L\\) and \\(S\\):
 
-* \\(L\\): The event that \\(P_U \geq P_U^{\*}\\), when long options pay out 1 sUSD each.
-* \\(S\\): The event that \\(P_U < P_U^{\*}\\), when short options pay out 1 sUSD each.
+- \\(L\\): The event that \\(P_U \geq P_U^{\*}\\), when long options pay out 1 sUSD each.
+- \\(S\\): The event that \\(P_U < P_U^{\*}\\), when short options pay out 1 sUSD each.
 
 And further define the quantities of sUSD bid on each side:
 
-* \\(Q_L\\): The value of sUSD bid on the long side of the market.
-* \\(Q_S\\): The value of sUSD bid on the short side of the market.
+- \\(Q_L\\): The value of sUSD bid on the long side of the market.
+- \\(Q_S\\): The value of sUSD bid on the short side of the market.
 
 #### Fees
 
@@ -165,12 +166,12 @@ During the bidding phase, bids and refunds are made, and fees are charged on the
 
 There are two basic fee rates:
 
-* \\(\phi\\): The fee charged on bids, to be paid to the market creator and fee pool.
-* \\(\phi_{R}\\): The fee rate charged on refunds, which stays in the market, compensating the remaining bidders.
+- \\(\phi\\): The fee charged on bids, to be paid to the market creator and fee pool.
+- \\(\phi\_{R}\\): The fee rate charged on refunds, which stays in the market, compensating the remaining bidders.
 
 The market collects fees as bids are refunded, hence:
 
-* \\(Q_R\\): The total value of sUSD accrued as refund fees.
+- \\(Q_R\\): The total value of sUSD accrued as refund fees.
 
 After the bidding period has concluded, the total funds held in the contract is the sum of bids on both sides,
 plus any accrued refund fees; a value of (\\(Q_L + Q_S + Q_R\\)) sUSD.
@@ -178,7 +179,7 @@ At maturity, the bidding fee is charged on the total deposits, and these fees ar
 fee pool. The remaining funds are paid out to winning option-holders.
 
 The specific quantities sent to the market creator vs the fee pool are determined by distinct fee rates for the fee pool
-(\\(\phi_{pool}\\)) and for the market creator (\\(\phi_{creator}\\)), and the overall fee rate is their sum:
+(\\(\phi*{pool}\\)) and for the market creator (\\(\phi*{creator}\\)), and the overall fee rate is their sum:
 
 \\[
 \phi := \phi_{pool} + \phi_{creator}
@@ -205,7 +206,7 @@ Since each option pays 1 sUSD, and L and S are mutually exclusive events, each s
 must also be awarded \\(Q\\) options. So the total quantity of options minted is \\(2Q\\),
 but only \\(Q\\) mature in the money.
 
-The market spent quantities \\(Q_L\\) and \\(Q_S\\) of sUSD to exchange into \\(Q\\) options per side, so the 
+The market spent quantities \\(Q_L\\) and \\(Q_S\\) of sUSD to exchange into \\(Q\\) options per side, so the
 final option prices are easily computed:
 
 \\[
@@ -278,11 +279,11 @@ demand attracted, decreasing the volatility term enough to bring the sum of pric
 
 A new options market is generated by the `Manager` contract; the contract creator must choose fixed values for:
 
-* \\(O\\): The price oracle for the underlying asset \\(U\\), which implicitly sets \\(U\\) as well;
-* \\(t_b\\): The end of the bidding period;
-* \\(t_m\\): The maturity date;
-* \\(P_U^{\*}\\): the strike price of \\(U\\);
-* \\(Q_L\\) / \\(Q_S\\): the initial bid on each side of the market;
+- \\(O\\): The price oracle for the underlying asset \\(U\\), which implicitly sets \\(U\\) as well;
+- \\(t_b\\): The end of the bidding period;
+- \\(t_m\\): The maturity date;
+- \\(P_U^{\*}\\): the strike price of \\(U\\);
+- \\(Q_L\\) / \\(Q_S\\): the initial bid on each side of the market;
 
 A new `Market` contract is instantiated with the specified parameters, and two child `Option` instances.
 
@@ -312,7 +313,7 @@ step-laddered up to achieve a reasonable size.
 
 The market creator may refund part of their initial capital if they provided more than the capital requirement,
 but until the end of bidding, their total bids in the market must be greater than \\(C\\). After the bidding phase,
-the creator may trade or exercise their options, or simply reclaim the capital at market destruction. 
+the creator may trade or exercise their options, or simply reclaim the capital at market destruction.
 Thus it is important for the author of a given market to carefully select its initial parameters.
 By selecting a combination of asset, timing, and strike price that attracts demand, and by choosing initial prices that
 are reasonably fair, the market creator minimises their own risk by maximising the market's health.
@@ -329,7 +330,7 @@ supply manipulated data feeds, but this could be democratised in the future.
 #### Further Incentives
 
 Without a profit motive there is no reason to expect anyone to risk funds in the creation of these markets,
-and therefore a portion of the overall payout (\\(\phi_{creator}\\)) will go to the market creator at the maturity date.
+and therefore a portion of the overall payout (\\(\phi\_{creator}\\)) will go to the market creator at the maturity date.
 In the initial stages it may be necessary to subsidise the creation of these markets by means of inflationary rewards or
 other bounties. The implementation of such subsidies is an open question for the community to answer.
 
@@ -355,8 +356,8 @@ If a user has already taken a position, they may refund it. A fee is charged for
 and other manipulations available to actors with private information.
 
 If the user with wallet \\(w\\) has already bid \\(b\\) sUSD long, then they may refund any quantity \\(q \leq b\\),
-and will receive \\(q (1 - \phi_{R})\\) sUSD. \\(Q_L\\) and the associated long `Option` contract's balance
-for wallet \\(w\\) are decremented by \\(b\\). The remaining \\(q \cdot \phi_{R}\\) sUSD remains in the common pot,
+and will receive \\(q (1 - \phi*{R})\\) sUSD. \\(Q_L\\) and the associated long `Option` contract's balance
+for wallet \\(w\\) are decremented by \\(b\\). The remaining \\(q \cdot \phi*{R}\\) sUSD remains in the common pot,
 but not allocated to the total bids on either side, and so discounts the prices for both sides, incentivising further
 demand to make up for that which was withdrawn by the refund.
 
@@ -376,7 +377,7 @@ market, creating a friction that stands in the way of the most rapid possible pr
 
 At the commencement of the trading period, bidding is disabled and ERC20 token transfer is enabled. As the individual
 token prices have stabilised, the quantity of options each wallet is owed can be computed, so it is at this point that
-users can claim the options they are owed. 
+users can claim the options they are owed.
 
 An account that bid \\(b\\) sUSD on each of the long and short sides will be able to claim option balances of
 \\(\frac{b}{P_L}\\) and \\(\frac{b}{P_S}\\) options, respectively.
@@ -448,8 +449,8 @@ In particular, if there are \\(n\\) possible outcomes, then \\(n\\) `Option` tok
 one for each outcome.
 
 If \\(\Omega\\) is an exhaustive set of mutually exclusive outcomes,
-and \\(Q_o\\) is the quantity bid towards outcome \\(o \in \Omega\\),
-then \\(Q := (1 - \phi) \sum_{o \in \Omega}{Q_o}\\) is the number of options awarded to each outcome; \\(n \cdot Q\\)
+and \\(Q*o\\) is the quantity bid towards outcome \\(o \in \Omega\\),
+then \\(Q := (1 - \phi) \sum*{o \in \Omega}{Q_o}\\) is the number of options awarded to each outcome; \\(n \cdot Q\\)
 options are issued altogether, of which \\(Q\\) will pay out. Then the price for outcome
 \\(o\\) is \\(P_o := \frac{Q_o}{Q}\\).
 
@@ -491,20 +492,20 @@ A related proposal for triggered order contracts is discussed in [SIP 54](https:
 
 ### Summary of Definitions
 
-| Symbol | Description |
-| ------ | ----------- |
-| \\(U\\)   | The underlying asset of this market. It is assumed we have a reliable oracle \\(O\\) supplying its instantaneous price. |
-| \\(t_b\\), \\(t_m\\)  | The timestamps for the end of bidding and maturity, respectively, of a given contract. \\(t_b\\) must be later than the contract creation time, and \\(t_m\\) must be later than \\(t_b\\). |
-| \\(P_U\\), \\(P_U^{\*}\\) | \\(P_U\\) is the price of \\(U\\) queried from the oracle \\(O\\) at the maturity date \\(t_m\\). \\(P_U^{\*}\\) is the strike price of \\(U\\), against which \\(P_U\\) is compared at maturity to resolve the market. |
-| \\(\phi_{pool}\\), \\(\phi_{creator}\\) | The platform fee rate paid to the fee pool and to the market creator respectively. These fees are paid at the market destruction. |
-| \\(\phi\\) | The overall market fee, which is equal to \\(\phi_{pool} + \phi_{creator}\\). \\(\phi\\) must in the range \\([0, 1]\\). |
-| \\(\phi_{R}\\)  | The fee rate to refund a bid. Its value must be in the range \\([0, 1]\\). |
-| \\(Q_R\\) | The accrued refund fees in a market. |
-| \\(L\\), \\(S\\) | The possible outcomes at maturity. \\(L\\) is the event that \\(P_U \geq P_U^{\*} \\); when the "long" side of the market pays out. \\(S\\) is the event that \\(P_U < P_U^{\*}\\); when the "short" side of the market pays out. |
-| \\(Q_L\\), \\(Q_S\\) | The total funds on the long and short sides of the market respectively. |
-| \\(Q\\) | The quantity of options awarded to each side of the market; this is equal to \\((1 - \phi) (Q_L + Q_S + Q_R)\\). |
-| \\(P_L\\), \\(P_S\\) | The price of long and short options respectively. Defined as \\(P_L := \frac{Q_L}{Q}\\) and \\(P_S := \frac{Q_S}{Q}\\). |
-| \\(C\\)   | The minimum initial capitalisation of a new market. |
+| Symbol                                  | Description                                                                                                                                                                                                                       |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \\(U\\)                                 | The underlying asset of this market. It is assumed we have a reliable oracle \\(O\\) supplying its instantaneous price.                                                                                                           |
+| \\(t_b\\), \\(t_m\\)                    | The timestamps for the end of bidding and maturity, respectively, of a given contract. \\(t_b\\) must be later than the contract creation time, and \\(t_m\\) must be later than \\(t_b\\).                                       |
+| \\(P_U\\), \\(P_U^{\*}\\)               | \\(P_U\\) is the price of \\(U\\) queried from the oracle \\(O\\) at the maturity date \\(t_m\\). \\(P_U^{\*}\\) is the strike price of \\(U\\), against which \\(P_U\\) is compared at maturity to resolve the market.           |
+| \\(\phi*{pool}\\), \\(\phi*{creator}\\) | The platform fee rate paid to the fee pool and to the market creator respectively. These fees are paid at the market destruction.                                                                                                 |
+| \\(\phi\\)                              | The overall market fee, which is equal to \\(\phi*{pool} + \phi*{creator}\\). \\(\phi\\) must in the range \\([0, 1]\\).                                                                                                          |
+| \\(\phi\_{R}\\)                         | The fee rate to refund a bid. Its value must be in the range \\([0, 1]\\).                                                                                                                                                        |
+| \\(Q_R\\)                               | The accrued refund fees in a market.                                                                                                                                                                                              |
+| \\(L\\), \\(S\\)                        | The possible outcomes at maturity. \\(L\\) is the event that \\(P_U \geq P_U^{\*} \\); when the "long" side of the market pays out. \\(S\\) is the event that \\(P_U < P_U^{\*}\\); when the "short" side of the market pays out. |
+| \\(Q_L\\), \\(Q_S\\)                    | The total funds on the long and short sides of the market respectively.                                                                                                                                                           |
+| \\(Q\\)                                 | The quantity of options awarded to each side of the market; this is equal to \\((1 - \phi) (Q_L + Q_S + Q_R)\\).                                                                                                                  |
+| \\(P_L\\), \\(P_S\\)                    | The price of long and short options respectively. Defined as \\(P_L := \frac{Q_L}{Q}\\) and \\(P_S := \frac{Q_S}{Q}\\).                                                                                                           |
+| \\(C\\)                                 | The minimum initial capitalisation of a new market.                                                                                                                                                                               |
 
 ---
 
@@ -544,10 +545,10 @@ Test cases are included with [the implementation](#implementation).
 
 A full implementation of the above specification is provided by the following smart contracts:
 
-* [`BinaryOptionMarketManager`](https://github.com/Synthetixio/synthetix/blob/0e78911f20bf24b9ed37e79f94a7cd3ebe7a51f9/contracts/BinaryOptionMarketManager.sol).
-* [`BinaryOptionMarketFactory`](https://github.com/Synthetixio/synthetix/blob/0e78911f20bf24b9ed37e79f94a7cd3ebe7a51f9/contracts/BinaryOptionMarketFactory.sol).
-* [`BinaryOptionMarket`](https://github.com/Synthetixio/synthetix/blob/0e78911f20bf24b9ed37e79f94a7cd3ebe7a51f9/contracts/BinaryOptionMarket.sol).
-* [`BinaryOption`](https://github.com/Synthetixio/synthetix/blob/0e78911f20bf24b9ed37e79f94a7cd3ebe7a51f9/contracts/BinaryOption.sol).
+- [`BinaryOptionMarketManager`](https://github.com/Synthetixio/synthetix/blob/0e78911f20bf24b9ed37e79f94a7cd3ebe7a51f9/contracts/BinaryOptionMarketManager.sol).
+- [`BinaryOptionMarketFactory`](https://github.com/Synthetixio/synthetix/blob/0e78911f20bf24b9ed37e79f94a7cd3ebe7a51f9/contracts/BinaryOptionMarketFactory.sol).
+- [`BinaryOptionMarket`](https://github.com/Synthetixio/synthetix/blob/0e78911f20bf24b9ed37e79f94a7cd3ebe7a51f9/contracts/BinaryOptionMarket.sol).
+- [`BinaryOption`](https://github.com/Synthetixio/synthetix/blob/0e78911f20bf24b9ed37e79f94a7cd3ebe7a51f9/contracts/BinaryOption.sol).
 
 There is also an [accompanying pull request](https://github.com/Synthetixio/synthetix-docs/pull/16) for documentation.
 
@@ -607,8 +608,8 @@ provide immediate liquidity to the new binary options.
 
 ### Forced Option Exercise
 
-In the current design, at the expiry of a market, the value of any unexercised options is 
-given to the account that cleans up the market. However, in the future it may be useful to allow these options 
+In the current design, at the expiry of a market, the value of any unexercised options is
+given to the account that cleans up the market. However, in the future it may be useful to allow these options
 to be force-exercised after the maturity period by external parties, who would receive a portion
 of the value owed to these wallets.
 
@@ -616,15 +617,15 @@ of the value owed to these wallets.
 
 ## Configurable Values (Via SCCP)
 
-| Symbol | Initial Value | Description |
-| ------ | ------------- |----------- |
-| \\(C\\) | 1000 sUSD | The minimum value of the initial capitalisation of a new binary option market. This is a value of USD. |
-| \\(\phi_{pool}\\) | 0.8% | The platform fee rate paid to the fee pool. This is a decimal number in the range \\([0, 1]\\). |
-| \\(\phi_{creator}\\) | 0.2% | The fee rate paid to the creator of a market. This is a decimal number in the range \\([0, 1]\\). |
-| \\(\phi_{R}\\) | 5% | The fee rate to refund a bid. This is a decimal number in the range \\([0, 1]\\). |
-| max oracle price age | 2 hours | The oldest a price update can be to be considered acceptable for resolving a market. |
-| expiry duration | 26 weeks | How long options can be exercised before their market is eligible to be destroyed. |
-| max time to maturity | 2 years | A safety constraint that limits how far in the future a maturity date can be set at market creation. |
+| Symbol                | Initial Value | Description                                                                                            |
+| --------------------- | ------------- | ------------------------------------------------------------------------------------------------------ |
+| \\(C\\)               | 1000 sUSD     | The minimum value of the initial capitalisation of a new binary option market. This is a value of USD. |
+| \\(\phi\_{pool}\\)    | 0.8%          | The platform fee rate paid to the fee pool. This is a decimal number in the range \\([0, 1]\\).        |
+| \\(\phi\_{creator}\\) | 0.2%          | The fee rate paid to the creator of a market. This is a decimal number in the range \\([0, 1]\\).      |
+| \\(\phi\_{R}\\)       | 5%            | The fee rate to refund a bid. This is a decimal number in the range \\([0, 1]\\).                      |
+| max oracle price age  | 2 hours       | The oldest a price update can be to be considered acceptable for resolving a market.                   |
+| expiry duration       | 26 weeks      | How long options can be exercised before their market is eligible to be destroyed.                     |
+| max time to maturity  | 2 years       | A safety constraint that limits how far in the future a maturity date can be set at market creation.   |
 
 ---
 

@@ -39,8 +39,6 @@ const Main: React.FC = ({ children }) => {
       </main>
 
       <footer className="site-footer h-card">
-        <data className="u-url" href="/"></data>
-
         <div className="wrapper">
           <h2 className="footer-heading">SIPs</h2>
 
@@ -78,12 +76,12 @@ const Main: React.FC = ({ children }) => {
           </div>
         </div>
       </footer>
-      <script type="text/javascript" src={'/mathjax-config.js'} defer />
+      <script type="text/javascript" src="/mathjax-config.js" defer />
       <script
         type="text/javascript"
         id="MathJax-script"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-svg.min.js"
-        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+        defer
       />
     </main>
   )

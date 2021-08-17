@@ -74,7 +74,7 @@ Despite the council reaching a consensus on a proposal, the protocolDAO still re
 
 Any SCCP's that relate to configuring the values of this SIP will need to be voted on by the Spartan Council members. In order for this SCCP to pass, the Spartan Council must reach an unanimous decision.
 
-![Example Timeline](assets/sip-93/example-timeline.png){: .center-image }
+![Example Timeline](assets/sip-93/example-timeline.png)
 
 Above is the example timeline for the genesis election, with helps understand the terminology of configurable values.
 
