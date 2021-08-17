@@ -33,7 +33,7 @@
     "gatsby-transformer-remark": "4.6.0",
     "glob": "7.1.7",
     "lodash": "4.17.21",
-    "postcss": "8.2.6",
+    "postcss": "8.2.10",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
