@@ -19,10 +19,3 @@ jobs:
         run: npm ci --ignore-scripts --no-optional
       - name: Validate SIP & SCCP frontmatters
         run: npm test
-      - name: Build Gatsby
-        uses: enriikke/gatsby-gh-pages-action@v2
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
-          skip-publish: true
