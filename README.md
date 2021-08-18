@@ -1,9 +1,6 @@
 # SIPs [![Discord](https://img.shields.io/discord/413890591840272394.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discordapp.com/channels/413890591840272394/) [![Twitter Follow](https://img.shields.io/twitter/follow/synthetix_io.svg?label=synthetix_io&style=social)](https://twitter.com/synthetix_io)
 
 Synthetix Improvement Proposals (SIPs) describe standards for the Synthetix platform, including core protocol specifications, client APIs, and contract standards.
-
-WIP: A browsable version of all current and draft SIPs can be found on [the official SIP site](https://sips.synthetix.io/).
-
 # Contributing
 
 1.  Review [SIP-1](sips/sip-1.md).
@@ -24,22 +21,22 @@ Once the SIP has been implemented by either the protocol DAO or the SIP author a
 # SIP Statuses
 
 - **Draft** - The initial state of a new SIP before the Spartan Council and core contributors have assessed it.
-- **Feasibility** - a SIP that is being assessed for feasability with an assigned Core Contributor
-- **SC Review Pending** - a SIP that is awaiting a Spartan Council Review after the Author and Core Contributor are satisfied with feasibility
-- **Vote Pending** - a SIP that is awaiting a vote.
+- **Feasibility** - a SIP that is being assessed for feasibility with an assigned Core Contributor
+- **SC_Review_Pending** - a SIP that is awaiting a Spartan Council Review after the Author and Core Contributor are satisfied with feasibility
+- **Vote_Pending** - a SIP that is awaiting a vote.
 - **Approved** - a SIP that has successfully reached a super majority Spartan Council vote in favour.
-- **Rejected** - a SIP that has failed to reach a supermajority Spartan Council vote in favour.
+- **Rejected** - a SIP that has failed to reach a super-majority Spartan Council vote in favour.
 - **Implemented** - a SIP that has been released to main-net.
 
 # Validation
 
-SIPs must pass some validation tests. The SIP repository ensures this by running tests using [html-proofer](https://rubygems.org/gems/html-proofer) and [sip_validator](https://rubygems.org/gems/sip_validator).
+SIPs must pass some validation tests.
 
 It is possible to run the SIP validator locally:
 
 ```
-gem install sip_validator
-sip_validator <INPUT_FILES>
+npm install (if not done already)
+npm run test
 ```
 
 # Automerger
