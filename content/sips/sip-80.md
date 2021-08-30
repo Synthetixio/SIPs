@@ -53,7 +53,6 @@ There are a number of high level components required for the implementation of s
 * [Skew Funding Rate](#skew-funding-rate)
 * [Aggregate Debt Calculation](#aggregate-debt-calculation)
 * [Liquidations and Keepers](#liquidations-and-keepers)
-* [Next Price Fulfillment](#next-price-fulfillment)
 
 Each of these components will be detailed below in the technical specification. Together they enable the system to offer leveraged trading,
 while charging a funding rate to reduce market skew and tracking the impact to the debt pool of each futures market.
@@ -354,33 +353,6 @@ pool. Future updates should consider a gas-sensitive liquidation incentive.
 The liquidation function should take an array of positions to liquidate;
 if any of the provided positions cannot be liquidated, or has already been liquidated, the transaction should not fail,
 but only liquidate the positions that are eligible.
-
----
-
-#### Next Price Fulfillment
-
-As with Synth exchanges, it is possible to detect price updates coming from the oracle and
-front-run them for risk free profit. To resolve this, any alteration to a position will be a two-stage process.
-
-1. First the user indicates their intention to alter their position by committing to the chain their intended margin, leverage, and market side.
-2. After a price update is received, the order is ready to be committed; a keeper finalises the transaction, additionally updating the global funding rate, skew, and debt values. The user's position is then active; the entry price is established: funding and PnL are computed relative to this time.
-
-The finalisation transaction will be paid for by the user from their ether gas tank (see [SIP-79](sip-79.md)), so that
-the keeper who executes it does not bear any cost for doing so.
-
-At each step the user's wallet must contain enough sUSD to service the intended margin after fees, or else the order
-will revert or be dropped. This process applies to opening and closing positions, as well as to changing sides or
-modifying a position's overall size, but it will not apply to margin top-ups or withdrawals, as these operations
-have no affect on market skew or funding rates. 
-
-Note that in order to ensure exchange fees are predictable, they will be computed relative to
-the market conditions at the time the order was submitted, rather than at the confirmation time.
-A user may change their committed trade before it is finalised, which will recompute the fees and position size, but if
-they do so, this will entail waiting for another price to be received. 
-
-In order to avoid collisions, for the first implementation, there will be only one privileged keeper, whose profits
-will be paid into the fee pool. This will be done with a view to upgrading to a more robust and decentralised
-transaction relayer framework as the product matures.
 
 ---
 
