@@ -1,12 +1,32 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { Helmet } from 'react-helmet';
+
 import GithubIcon from '../icons/Github'
 import TwitterIcon from '../icons/Twitter'
 
 const Main: React.FC = ({ children }) => {
   return (
     <main>
+      <Helmet>
+        {/* matomo */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+              var u="https://analytics.synthetix.io/";
+              _paq.push(['setTrackerUrl', u+'matomo.php']);
+              _paq.push(['setSiteId', '4']);
+              var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+              g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+          `,
+          }} />
+      </Helmet>
       <header className="site-header" role="banner">
         <div className="wrapper">
           <Link className="site-title" rel="author" to="/">
