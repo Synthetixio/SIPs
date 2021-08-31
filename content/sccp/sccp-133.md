@@ -3,7 +3,7 @@ sccp: 133
 title: Increase volume partner rewards to 10K SNX p/month
 author: Rafa (@rafanator)
 discussions-to: https://discord.gg/e9c5Cs
-status: Vote_Pending
+status: Implemented
 created: 2021-08-04
 ---
 

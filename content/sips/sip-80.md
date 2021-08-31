@@ -53,7 +53,6 @@ There are a number of high level components required for the implementation of s
 * [Skew Funding Rate](#skew-funding-rate)
 * [Aggregate Debt Calculation](#aggregate-debt-calculation)
 * [Liquidations and Keepers](#liquidations-and-keepers)
-* [Next Price Fulfillment](#next-price-fulfillment)
 
 Each of these components will be detailed below in the technical specification. Together they enable the system to offer leveraged trading,
 while charging a funding rate to reduce market skew and tracking the impact to the debt pool of each futures market.
@@ -137,6 +136,7 @@ slightly increase their effective leverage.
 The fees will be denoted by the symbol \\(\phi\\) as follows:
 
 | Symbol | Description | Definition | Notes |
+| ------ | ----------- | ---------- | ----- |
 | \\(\phi_{t}\\) | Taker fee rate | - | Charged against the notional value of orders increasing the skew. Initially, \\(\phi_{t} = 0.3\%\\). |
 | \\(\phi_{m}\\) | Maker fee rate | - | Charged against the notional value of orders reducing the skew. Initially, \\(\phi_{m} = 0.1\%\\). |
 | \\(\phi_{c}\\) | Closure fee rate | - | Charged against the notional value of orders reducing in size. Generally, we will have \\(\phi_{c} = 0\\), but this may rise if it is necessary to combat front-running, for example. |
@@ -146,6 +146,7 @@ We will generally maintain \\(\phi_{m} \leq \phi_{t}\\).
 There are several cases of interest here, the fee charged in each case is as follows:
 
 | Case | Fee |
+| ---- | --- |
 | Decrease in the size of a position by \\(k\\) units. | \\(\phi_{c} \ k \ p \\) |
 | Increase in the size of a position on the heavy side of the market (and therefore the skew) by \\(k\\) units. | \\(\phi_{t} \ k \ p\\) |
 | Increase in the size of a position on the light side of the market by \\(k \leq \|K\|\\) units. | \\(\phi_{m} \ k \ p\\) |
@@ -171,6 +172,7 @@ Funding will be computed as a percentage charged over time against each position
 and paid into or out of its margin. Hence funding affects each position's liquidation point.
 
 | Symbol | Description | Definition | Notes |
+| ------ | ----------- | ---------- | ----- |
 | \\(W\\) | Proportional skew | \\[W \ := \ \frac{K}{Q}\\] | The skew as a fraction of the total market size. |
 | \\(W_{max}\\) | Max funding skew threshold | - | The proportional skew at which the maximum funding rate will be charged (when \\(i = i_{max}\\)). Initially, \\(W_{max} = 100\%\\) | 
 | \\(i_{max}\\) | Maximum funding rate | - | A percentage per day. Initially \\(i_{max} = 10\%\\). |
@@ -240,6 +242,7 @@ by index, rather than as a function of time.
 Funding will be settled whenever a position is closed or modified.
 
 | Symbol | Description | Definition | Notes |
+| ------ | ----------- | ---------- | ----- |
 | \\(t_{last}\\) | Skew last modified | - | The timestamp of the last skew-modifying event in seconds. |
 | \\(F\\) | Cumulative funding sequence | \\[F_0 \ := \ 0\\] | \\(F_i\\) denotes the i'th entry in the sequence of cumulative funding per base unit. \\(F_n\\) will be taken to be the latest entry. |
 | \\(u\\) | Unrecorded base funding | \\[u \ := \ i \ (now - t_{last})\\] | The funding (denominated in the base currency) per base unit accrued since the last funding entry was recorded at \\(t_{last}\\). |
@@ -295,6 +298,7 @@ Therefore we can keep track of everything with one additional variable to be upd
 Where \\(\delta_e := m_e - q_e \(p_e + F_j)\\) and \\(\delta_e'\\) is its recomputed value after the position is modified.
 
 | Symbol | Description | Definition | Notes |
+| ------ | ----------- | ---------- | ----- |
 | \\(\Delta_e\\) | Aggregate position entry debt correction | \\[\Delta_e \ := \ \sum_{c \in C}{m_e^c - v_e^c - q_e^c \ F_{j^c}}\\] | - |
 | \\(D\\) | Market Debt | \\[D \ := \ max(K \ (p + F_{now}) + \Delta_e, 0)\\] | - |
 
@@ -328,6 +332,7 @@ If this is satisfied, the position is closed, the incentive is minted into the l
 execution time, and the rest of the position's initial margin goes into the fee pool.
 
 | Symbol | Description | Definition | Notes |
+| ------ | ----------- | ---------- | ----- |
 | \\(D\\) | Liquidation keeper incentive | - | This is a flat fee that is used to incentivise keeper duties. Initially this will be set to \\(D = 20\\) sUSD. |
 | \\(m_{min}\\) | Minimum order size | - | The keeper incentive necessitates that orders are at least as large. We will initially choose \\(m_{min} = 100\\) sUSD, corresponding to 5x leverage at the minimum order size relative to \\(D\\). We will require \\(m_{min} \leq m_e\\). |
 |\\(p_{liq}\\) | Liquidation price | \\[p_{liq} := \frac{p_e - (F_n - F_j) - \frac{m_e - D}{q}}{1 + u}\\] | The liquidation price will be below the entry price for long positions, and above it for short positions, as the sign of \\(q\\) changes. |
@@ -348,33 +353,6 @@ pool. Future updates should consider a gas-sensitive liquidation incentive.
 The liquidation function should take an array of positions to liquidate;
 if any of the provided positions cannot be liquidated, or has already been liquidated, the transaction should not fail,
 but only liquidate the positions that are eligible.
-
----
-
-#### Next Price Fulfillment
-
-As with Synth exchanges, it is possible to detect price updates coming from the oracle and
-front-run them for risk free profit. To resolve this, any alteration to a position will be a two-stage process.
-
-1. First the user indicates their intention to alter their position by committing to the chain their intended margin, leverage, and market side.
-2. After a price update is received, the order is ready to be committed; a keeper finalises the transaction, additionally updating the global funding rate, skew, and debt values. The user's position is then active; the entry price is established: funding and PnL are computed relative to this time.
-
-The finalisation transaction will be paid for by the user from their ether gas tank (see [SIP-79](sip-79.md)), so that
-the keeper who executes it does not bear any cost for doing so.
-
-At each step the user's wallet must contain enough sUSD to service the intended margin after fees, or else the order
-will revert or be dropped. This process applies to opening and closing positions, as well as to changing sides or
-modifying a position's overall size, but it will not apply to margin top-ups or withdrawals, as these operations
-have no affect on market skew or funding rates. 
-
-Note that in order to ensure exchange fees are predictable, they will be computed relative to
-the market conditions at the time the order was submitted, rather than at the confirmation time.
-A user may change their committed trade before it is finalised, which will recompute the fees and position size, but if
-they do so, this will entail waiting for another price to be received. 
-
-In order to avoid collisions, for the first implementation, there will be only one privileged keeper, whose profits
-will be paid into the fee pool. This will be done with a view to upgrading to a more robust and decentralised
-transaction relayer framework as the product matures.
 
 ---
 
