@@ -2,11 +2,15 @@
 sip: 80
 title: Synthetic Futures 
 status: Feasibility
-author: Anton Jurisevic (@zyzek), Jackson Chan (@jacko125), Kain Warwick (@kaiynne), Clemente Balestrat (@clementbalestrat)
+author: Anton Jurisevic (@zyzek), Jackson Chan (@jacko125), Kain Warwick (@kaiynne)
 discussions-to: https://research.synthetix.io/t/sip-80-synthetic-futures/183
 created: 2020-08-06
 requires: 79
 ---
+
+## Implementors
+
+Jackson Chan (@jacko125) and Clemente Balestrat (@clementbalestrat)
 
 ## Simple Summary
 
