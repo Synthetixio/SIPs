@@ -8,6 +8,10 @@ created: 2020-08-06
 requires: 79
 ---
 
+## Implementors
+
+Jackson Chan (@jacko125) and Clemente Balestrat (@clementbalestrat)
+
 ## Simple Summary
 
 This SIP proposes the creation of pooled synthetic futures contracts, with the SNX debt pool acting as counterparty to
