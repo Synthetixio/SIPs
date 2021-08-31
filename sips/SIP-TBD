@@ -1,0 +1,33 @@
+sip: <to be assigned>
+title: <Formalize Kwenta TreasuryDAO>
+status: Draft
+author: <Andrew (@andotlas)>
+discussions-to: <https://research.synthetix.io/t/sip-kwenta-treasurydao/466> 
+
+created: <2021-08-13>
+---
+
+## Summary 
+
+This SIP proposes a decentralized structure to manage the Kwenta treasury. 
+
+## Abstract
+
+As Kwenta begins to develop its own protocol, the community will need a structure in place to manage its treasury. The treasuryDAO will be composed of the three community members selected by the council until Kwenta governance has matured to the point where the treasuryDAO deems governance fit to manage the treasury. 
+
+## Motivation 
+
+There is currently no decentralized mechanism in place to handle the financial management of the Kwenta DAO. The treasuryDAO will manage the funding used to compensate Core Contributors, fuel early Kwenta growth, and ensure funds are well managed. 
+
+## Specification 
+
+This SIP has a few requirements:
+1. The Spartan Council will elect three individuals they feel are the best candidates to manage the Kwenta treasury. Once the Spartan Council has reached a near-consensus (unanimous minus one as a minimum) on who the three TreasuryDAO members should be, the vote will pass. The individuals selected for the TreasuryDAO will not be disclosed for security purposes. 
+2. Whenever a new Spartan Council is formed at the end of an epoch, a new Kwenta TreasuryDAO will be selected following the above model. 
+3. Set up a multisig wallet for treasury management. Transactions will require ⅔ signers. 
+4. Write a KIP once Kwenta governance has matured to move the Kwenta treasuryDAO into Kwenta governance management, replacing the current function of the Spartan Council with a Kwenta governance mechanism. 
+ 
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
