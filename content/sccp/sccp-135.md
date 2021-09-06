@@ -19,7 +19,7 @@ Make Account Merging always possible in order to enable transferring escrowed SN
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-This SCCP intends to make account merging for any escrowed SNX balance (including partial amounts) possible at any time.
+This SCCP intends to make account merging for any escrowed SNX balance (including partial amounts) possible at any time. This changes in parameters are meant to happen on both L1 and L2. 
 
 ## Motivation
 
@@ -36,7 +36,7 @@ Less accounts staking as SNX is escrowed in wallets that are not maintained
 
 ## Implementation
 
-The merge window on the current escrow contract needs to be extended to a very long amount of time (like uint256(-1)) making it permanent.
+The merge window on the current escrow contract needs to be extended to a very long amount of time (like uint256(-1)) making it permanent. 
 
 The escrow migration service will be able to flash loan sUSD, burn all debt, migrate SNX and optionally sell down some SNX if the ratio is below 400%. By modifying the account merge window to be always on, this functionality can be integrated into staking.synthetix.io.
 
