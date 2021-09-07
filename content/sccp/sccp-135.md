@@ -36,7 +36,10 @@ Less accounts staking as SNX is escrowed in wallets that are not maintained
 
 ## Implementation
 
-The merge window on the current escrow contract needs to be extended to a very long amount of time (like uint256(-1)) making it permanent. 
+The merge window on the current escrow contract needs to be extended to a very long amount of time (315360000 seconds - 10 years) making it permanent and can be extended. 
+
+- RewardEscrowV2.setMaxAccountMergingWindow(uint(315360000))
+- RewardEscrowV2.setAccountMergingDuration(uint(315360000))
 
 The escrow migration service will be able to flash loan sUSD, burn all debt, migrate SNX and optionally sell down some SNX if the ratio is below 400%. By modifying the account merge window to be always on, this functionality can be integrated into staking.synthetix.io.
 
