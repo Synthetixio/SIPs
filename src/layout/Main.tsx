@@ -1,7 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
-import { Helmet } from 'react-helmet';
 
 import GithubIcon from '../icons/Github'
 import TwitterIcon from '../icons/Twitter'
@@ -9,8 +6,9 @@ import TwitterIcon from '../icons/Twitter'
 const Main: React.FC = ({ children }) => {
   return (
     <main>
-        {/* matomo */}
-        <script dangerouslySetInnerHTML={{
+      {/* matomo */}
+      <script
+        dangerouslySetInnerHTML={{
           __html: `
             var _paq = window._paq = window._paq || [];
             /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -24,12 +22,13 @@ const Main: React.FC = ({ children }) => {
               g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
             })();
           `,
-          }} />
+        }}
+      />
       <header className="site-header" role="banner">
         <div className="wrapper">
-          <Link className="site-title" rel="author" to="/">
+          <a className="site-title" rel="author" href="/">
             SIPs
-          </Link>
+          </a>
           <nav className="site-nav">
             <input type="checkbox" id="nav-trigger" className="nav-trigger" />
             <label htmlFor="nav-trigger">
@@ -41,12 +40,12 @@ const Main: React.FC = ({ children }) => {
             </label>
 
             <div className="trigger">
-              <Link className="page-link" to="/all-sip">
+              <a className="page-link" href="/all-sip">
                 All SIPs
-              </Link>
-              <Link className="page-link" to="/all-sccp">
+              </a>
+              <a className="page-link" href="/all-sccp">
                 All SCCPs
-              </Link>
+              </a>
             </div>
           </nav>
         </div>
