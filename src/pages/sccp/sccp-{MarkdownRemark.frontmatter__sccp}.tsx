@@ -6,6 +6,7 @@ import Main from '../../layout/Main'
 import FrontmatterTable from '../../components/FrontmatterTable'
 import SourceIcon from '../../icons/Source'
 import { SccpPageQuery } from '../../../types/gql'
+import { getGithubLink } from '../../components/utils'
 
 interface Props {
   frontmatter__sip: number
@@ -14,14 +15,14 @@ interface Props {
 
 const Template: React.FC<Props> = ({ data }) => {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, fileAbsolutePath } = markdownRemark
+  const githubLink = getGithubLink(fileAbsolutePath)
   return (
     <Main>
       <Helmet title={`SCCP-${frontmatter.sccp}: ${frontmatter.title}`} />
       <h1 className="page-heading">
-        SCCP-{frontmatter.sccp}: {frontmatter.title}{' '}
-        <a href="#" className="inline-block">
-          <SourceIcon />
+        <a href={githubLink} className="inline-block">
+          SCCP-{frontmatter.sccp}: {frontmatter.title} <SourceIcon />
         </a>
       </h1>
       <FrontmatterTable frontmatter={frontmatter} />
@@ -38,6 +39,7 @@ export default Template
 export const pageQuery = graphql`
   query sccpPage($frontmatter__sccp: Int) {
     markdownRemark(frontmatter: { sccp: { eq: $frontmatter__sccp } }) {
+      fileAbsolutePath
       frontmatter {
         ...Frontmatter
       }
