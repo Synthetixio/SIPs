@@ -11,23 +11,23 @@ created: 2021-09-23
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Re-enable the deprecated sXTZ (Tezos),sRUNE (THORchain),sYFI (yearn.finance),sCRV (Curve DAO Token),sUNI (Uniswap),sXRP (Ripple),sBNB (Binance Coin) and sXAU (Gold Ounce) price feeds until their currently live Thales markets are resolved properly.
+Re-enable the deprecated price feeds of sXTZ (Tezos), sRUNE (THORchain), sYFI (yearn.finance), sCRV (Curve DAO Token), sUNI (Uniswap), sXRP (Ripple), sBNB (Binance Coin) and sXAU (Gold Ounce) until their currently live Thales markets are resolved properly.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
 
- Per SIP-169, a number of L1 Synths were deprecated. Thales Binary Options protocol currently has 8 live markets that use 8 price feeds of these deprecated L1 Synths that are crucial for resolving the said markets properly on their respective maturity dates. 
+Per SIP-169, a number of L1 Synths were deprecated. Thales Binary Options protocol currently has 8 live markets that use 8 price feeds of these deprecated L1 Synths that are crucial for resolving the said markets properly on their respective maturity dates. 
 
 Those 8 price feeds and their respective markets and maturity dates on Thales are: 
 
-sXTZ (Tezos) XTZ@30.09.2021
-sRUNE (THORchain) RUNE@30.09.2021
-sYFI (yearn.finance) YFI@15.10.2021
-sCRV (Curve DAO Token) CRV@31.12.2021
-sUNI (Uniswap) UNI@31.12.2021
-sXRP (Ripple) XRP@31.12.2021
-sBNB (Binance Coin) BNB@31.12.2021
-sXAU (Gold Ounce) XAU@31.12.2021
+- sXTZ (Tezos) XTZ@30.09.2021
+- sRUNE (THORchain) RUNE@30.09.2021
+- sYFI (yearn.finance) YFI@15.10.2021
+- sCRV (Curve DAO Token) CRV@31.12.2021
+- sUNI (Uniswap) UNI@31.12.2021
+- sXRP (Ripple) XRP@31.12.2021
+- sBNB (Binance Coin) BNB@31.12.2021
+- sXAU (Gold Ounce) XAU@31.12.2021
 
 To support and properly resolve these 8 markets that are currently live using price feeds from deprecated synths, Thales needs these price feeds re-enabled as soon as possible. 
 
