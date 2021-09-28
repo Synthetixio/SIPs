@@ -4,7 +4,7 @@ title: Re-enable price feeds that certain live markets on Thales Protocol rely o
 
 author: padzank (@padzank)
 discussions-to: https://discord.gg/e9c5Cs
-status: Vote_Pending
+status: Approved
 created: 2021-09-23
 ---
 
