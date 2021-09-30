@@ -2,10 +2,10 @@
 sip: <to be assigned>
 title: <SIP title>
 status: Draft
-author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
+author: <guanlong huang(gl041188@gmail.com)>
 discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here> 
 
-created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+created: <date created on, in ISO 8601 (2021.09.30) format>
 requires (*optional): <SIP number(s)>
 ---
 
