@@ -3,9 +3,9 @@ sip: 92
 title: Historical iSynths Pricing Tracks When Last Frozen
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: https://research.synthetix.io
-
-created: 2020-11-09
+discussions-to: 'https://research.synthetix.io'
+created: 2020-11-09T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->

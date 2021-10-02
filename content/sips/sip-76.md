@@ -3,9 +3,9 @@ sip: 76
 title: Integrate Warning Flags to Disable Transactions
 status: Implemented
 author: Justin J Moses <@justinjmoses>
-discussions-to: https://research.synthetix.io/t/sip-76-chainlink-warning-flags/167
-
-created: 2020-08-05
+discussions-to: 'https://research.synthetix.io/t/sip-76-chainlink-warning-flags/167'
+created: 2020-08-05T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->

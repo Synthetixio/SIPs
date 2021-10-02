@@ -2,10 +2,11 @@
 sip: 97
 title: Multi-Collateral Loans
 status: Implemented
-author: Michael Spain (@mjs-12), Clinton Ennis (@hav-noms)
-discussions-to: https://research.synthetix.io/t/sip-97-multi-collateral-loans/230
-created: 2020-11-19
-requires:
+author: 'Michael Spain (@mjs-12), Clinton Ennis (@hav-noms)'
+discussions-to: 'https://research.synthetix.io/t/sip-97-multi-collateral-loans/230'
+created: 2020-11-19T00:00:00.000Z
+requires: null
+type: Governance
 ---
 
 ## Simple Summary

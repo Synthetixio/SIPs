@@ -48,6 +48,7 @@
     "@typescript-eslint/parser": "4.28.3",
     "eslint": "7.30.0",
     "eslint-plugin-react": "7.24.0",
+    "frontmatter-file-batcher": "^0.0.1-beta.0",
     "typescript": "4.3.5"
   }
 }

@@ -1,10 +1,11 @@
 ---
 sip: 11
-title: Allow fee period to be closed by any address 
+title: Allow fee period to be closed by any address
 status: Implemented
 author: Nocturnalsheet (@nocturnalsheet)
-discussions-to: https://discord.gg/CDTvjHY
-created: 2019-07-10
+discussions-to: 'https://discord.gg/CDTvjHY'
+created: 2019-07-10T00:00:00.000Z
+type: Governance
 ---
 
 

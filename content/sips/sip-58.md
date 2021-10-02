@@ -3,9 +3,9 @@ sip: 58
 title: Emit every fee reclamation outcome during trade settlement
 status: Implemented
 author: Jackson Chan (@jacko125)
-discussions-to: <https://discord.gg/ShGSzny>
-
-created: 2020-05-11
+discussions-to: '<https://discord.gg/ShGSzny>'
+created: 2020-05-11T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->

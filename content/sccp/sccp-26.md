@@ -4,7 +4,8 @@ title: Lower c-ratio to 750%
 author: Andrew Kang (@rewkang)
 discussions-to: TBC
 status: Implemented
-created: 2020-04-14
+created: 2020-04-14T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

@@ -2,9 +2,10 @@
 sip: 41
 title: ProtocolDAO phase zero
 status: Implemented
-author: Garth Travers (@garthtravers), Kain Warwick (@kaiynne)
-discussions-to: https://discordapp.com/invite/AEdUHzt
-created: 2020-02-28
+author: 'Garth Travers (@garthtravers), Kain Warwick (@kaiynne)'
+discussions-to: 'https://discordapp.com/invite/AEdUHzt'
+created: 2020-02-28T00:00:00.000Z
+type: Governance
 ---
 ## Simple Summary
 

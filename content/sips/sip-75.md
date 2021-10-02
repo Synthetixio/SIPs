@@ -2,10 +2,10 @@
 sip: 75
 title: Keeper Synths - Phase 1
 status: Implemented
-author: Kain Warwick (@kaiynne), Justin J Moses (@justinjmoses)
-discussions-to: https://discord.gg/kPPKsPb
-
-created: 2020-07-20
+author: 'Kain Warwick (@kaiynne), Justin J Moses (@justinjmoses)'
+discussions-to: 'https://discord.gg/kPPKsPb'
+created: 2020-07-20T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

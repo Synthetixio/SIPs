@@ -2,10 +2,11 @@
 sip: 4
 title: Change Fee Claim Window
 status: Implemented
-author: Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)
-discussions-to: https://discord.gg/aApjG26
-created: 2019-06-17
-updated: 2019-06-21
+author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'
+discussions-to: 'https://discord.gg/aApjG26'
+created: 2019-06-17T00:00:00.000Z
+updated: 2019-06-21T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

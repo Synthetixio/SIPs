@@ -2,9 +2,10 @@
 sccp: 55
 title: Change Debt Snapshot Stale Time to 12 Hours
 author: Anton Jurisevic (@zyzek)
-discussions-to: https://research.synthetix.io/
+discussions-to: 'https://research.synthetix.io/'
 status: Implemented
-created: 2020-11-02
+created: 2020-11-02T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->

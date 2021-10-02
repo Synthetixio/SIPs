@@ -1,10 +1,11 @@
 ---
 sccp: 7
 title: Reduce exchange fee to 30 basis points for two weeks
-author: Arthur, nocturnalsheet 
-discussions-to: https://discord.gg/kPPKsPb
+author: 'Arthur, nocturnalsheet'
+discussions-to: 'https://discord.gg/kPPKsPb'
 status: Implemented
-created: 2019-11-15
+created: 2019-11-15T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

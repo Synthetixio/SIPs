@@ -3,7 +3,8 @@ sip: 88
 title: ExchangeRates patch - Chainlink aggregator V2V3
 status: Implemented
 author: Clement Balestrat (@clementbalestrat)
-created: 2020-10-06
+created: 2020-10-06T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary
