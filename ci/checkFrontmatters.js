@@ -9,9 +9,15 @@ const g = promisify(glob)
 const commonValidationSchema = Yup.object().shape({
   file: Yup.string().required(),
   title: Yup.string().required(),
+  type: Yup.string()
+    .oneOf(['Meta-Governance', 'Governance', 'TBD'])
+    .required()
+    .default('TBD'),
+  proposal: Yup.string().url(),
   status: Yup.string().oneOf(statuses),
   author: Yup.string().required(),
-  implementor: Yup.string().nullable(),
+  implementor: Yup.string().required().default('TBD'),
+  release: Yup.string().nullable().default('TBD'),
   created: Yup.date().nullable(),
   updated: Yup.date().nullable(),
   requires: Yup.mixed().nullable(),
@@ -46,7 +52,8 @@ const sccpValidationSchema = commonValidationSchema
       sips.map(async (file) => {
         const content = await fs.readFile(file, 'utf-8')
         const { attributes } = fm(content)
-        return await sipValidationSchema.validate({ file, ...attributes })
+        const castValues = sipValidationSchema.cast({ file, ...attributes })
+        return await sipValidationSchema.validate(castValues)
       }),
     )
     // SCCP
@@ -54,7 +61,8 @@ const sccpValidationSchema = commonValidationSchema
       sccp.map(async (file) => {
         const content = await fs.readFile(file, 'utf-8')
         const { attributes } = fm(content)
-        return await sccpValidationSchema.validate({ file, ...attributes })
+        const castValues = sccpValidationSchema.cast({ file, ...attributes })
+        return await sccpValidationSchema.validate(castValues)
       }),
     )
   } catch (error) {

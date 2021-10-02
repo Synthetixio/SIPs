@@ -7,6 +7,10 @@ const Frontmatter = `
     sccp
     title
     author
+    type
+    proposal
+    implementor
+    release
     discussions_to
     created
     updated
@@ -80,4 +84,44 @@ exports.onPostBuild = async ({ graphql }) => {
       fs.writeFileSync(`${path}/${status}.json`, JSON.stringify(data))
     })
   })
+}
+
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions
+  const typeDefs = [
+    `
+    type MarkdownRemarkFrontmatter implements Node {
+      title: String!
+      type: String
+      status: String!
+      author: String!
+      implementor: String
+      proposal: String
+      release: String
+      created: Date
+      updated: Date
+    }
+  `,
+    // schema.buildObjectType({
+    //   name: 'Frontmatter',
+    //   fields: {
+    //     tags: {
+    //       type: 'String!',
+    //       resolve(source, args, context, info) {
+    //         const { tags } = source
+    //         console.log(source)
+    //         switch (source[info.fieldName]) {
+    //           case 'type':
+    //             return 'TBD'
+    //           case 'implementor':
+    //             return 'TBD'
+    //           default:
+    //             return tags
+    //         }
+    //       },
+    //     },
+    //   },
+    // }),
+  ]
+  createTypes(typeDefs)
 }
