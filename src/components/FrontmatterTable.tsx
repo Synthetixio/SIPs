@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import { FrontmatterFragment } from '../../types/gql'
 import { AuthorList } from './AuthorList'
+import { ProposalStatus } from './ProposalStatus'
 
 interface Props {
   frontmatter: FrontmatterFragment
@@ -24,10 +25,12 @@ const FrontmatterTable: React.FC<Props> = ({ frontmatter }) => {
           <td>{frontmatter.status}</td>
         </tr>
 
-        <tr>
-          <th>Type</th>
-          <td>{frontmatter.type || 'TBD'}</td>
-        </tr>
+        {frontmatter.proposal && (
+          <tr>
+            <th>Type</th>
+            <td>{frontmatter.type}</td>
+          </tr>
+        )}
 
         <tr>
           <th>Implementor</th>
@@ -38,6 +41,17 @@ const FrontmatterTable: React.FC<Props> = ({ frontmatter }) => {
           <th>Release</th>
           <td>{frontmatter.release || 'TBD'}</td>
         </tr>
+
+        {frontmatter.proposal && (
+          <tr>
+            <th>Proposal</th>
+            <td>
+              <a href={frontmatter.proposal}>
+                <ProposalStatus url={frontmatter.proposal} />
+              </a>
+            </td>
+          </tr>
+        )}
 
         {frontmatter.discussions_to && (
           <tr>
