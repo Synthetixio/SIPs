@@ -18,6 +18,18 @@ const ProposalStatus: React.FC<{ url: string }> = ({ url }) => {
       proposal(id: "${id}") {
         state
       }
+      votes (
+        first: 1000
+        skip: 0
+        where: {
+          proposal: "${id}"
+        }
+        orderBy: "created",
+        orderDirection: desc
+      ) {
+        id
+        choice
+      }
     }`,
     fetcher
   )
@@ -27,6 +39,8 @@ const ProposalStatus: React.FC<{ url: string }> = ({ url }) => {
   return (
     <a href={url} target="_blank" rel="noreferrer noopener">
       {startCase(data.proposal.state)}
+      {' '}&ndash;{' '}
+      {data.votes.length} vote(s)
     </a>
   )
 }
