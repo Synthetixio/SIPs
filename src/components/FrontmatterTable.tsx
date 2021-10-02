@@ -25,7 +25,7 @@ const FrontmatterTable: React.FC<Props> = ({ frontmatter }) => {
           <td>{frontmatter.status}</td>
         </tr>
 
-        {frontmatter.proposal && (
+        {frontmatter.type && (
           <tr>
             <th>Type</th>
             <td>{frontmatter.type}</td>
@@ -46,9 +46,7 @@ const FrontmatterTable: React.FC<Props> = ({ frontmatter }) => {
           <tr>
             <th>Proposal</th>
             <td>
-              <a href={frontmatter.proposal}>
-                <ProposalStatus url={frontmatter.proposal} />
-              </a>
+              <ProposalStatus url={frontmatter.proposal} />
             </td>
           </tr>
         )}

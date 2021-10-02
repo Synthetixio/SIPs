@@ -13,7 +13,7 @@ const ProposalStatus: React.FC<{ url: string }> = ({ url }) => {
   if (matches && matches[2]) {
     id = matches[2]
   }
-  const { data, error } = useSWR(
+  const { data } = useSWR(
     `{
       proposal(id: "${id}") {
         state
@@ -21,13 +21,13 @@ const ProposalStatus: React.FC<{ url: string }> = ({ url }) => {
     }`,
     fetcher
   )
-  const isLoading = !error && !data
+  const isLoading = !data
   if (isLoading) return <>Loading status...</>
-  if (error) return <>Error loading status</>
+  if (!data?.proposal?.state) return <>Error loading status</>
   return (
-    <>
+    <a href={url} target="_blank" rel="noreferrer noopener">
       {startCase(data.proposal.state)}
-    </>
+    </a>
   )
 }
 
