@@ -1,5 +1,8 @@
 const fs = require('fs')
 const kebabCase = require('lodash/kebabCase')
+const statuses = require('./ci/statuses')
+
+const kebabStatuses = statuses.map(kebabCase)
 
 const Frontmatter = `
   fragment Frontmatter on MarkdownRemarkFrontmatter {
@@ -75,6 +78,12 @@ exports.onPostBuild = async ({ graphql }) => {
     { path: sccpPath, result: allSccp },
   ].forEach(({ path, result }) => {
     if (!fs.existsSync(path)) fs.mkdirSync(path, { recursive: true })
+
+    // Initialize all statuses with empty array
+    kebabStatuses.forEach((status) =>
+      fs.writeFileSync(`${path}/${status}.json`, JSON.stringify([])),
+    )
+
     result.data.allMarkdownRemark.group.forEach((group) => {
       const status = kebabCase(group.fieldValue)
       const data = group.nodes.map(({ frontmatter, ...node }) => ({
