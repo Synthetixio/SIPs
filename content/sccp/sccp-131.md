@@ -3,7 +3,7 @@ sccp: 131
 title: Increase migrateEntriesThresholdAmount to 720000
 author: Jackson Chan (@jacko125)
 discussions-to: governance
-status: Approved
+status: Implemented
 created: 2021-07-12
 ---
 
