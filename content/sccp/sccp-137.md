@@ -3,7 +3,7 @@ sccp: 137
 title: Reduce L2 Target C-Ratio To 750% 
 author: Spreek (@Spreek)
 discussions-to: https://discord.gg/e9c5Cs
-status: Approved
+status: Implemented
 created: 2021-08-31
 ---
 
