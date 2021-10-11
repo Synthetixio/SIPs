@@ -20,7 +20,7 @@ In order to alleviate some of the pressure on the peg on L2, this SCCP proposes 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
- Although, the ultimate fix to the L2 peg situation would be the release of the sUSD wrappr. In the meantime, lowering the collateralization could act as a bridge, allowing minters to mint new synths that can be traded for a 20% premium on uniswap in anticipation of the wrappr release.
+ Although, the ultimate fix to the L2 peg situation would be the release of the sUSD wrappr. In the meantime, lowering the collateralization could act as a bridge, allowing minters to mint new synths that can be traded for a 10 to 20% premium on uniswap in anticipation of the wrappr release.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
