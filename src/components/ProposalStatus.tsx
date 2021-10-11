@@ -2,6 +2,7 @@ import React from 'react'
 import startCase from 'lodash/startCase'
 import { request } from 'graphql-request'
 import useSWR from 'swr'
+import { flow, countBy, mapKeys } from 'lodash/fp'
 
 const fetcher = (query: string) => request('https://hub.snapshot.org/graphql', query)
 
@@ -17,6 +18,7 @@ const ProposalStatus: React.FC<{ url: string }> = ({ url }) => {
     `{
       proposal(id: "${id}") {
         state
+        choices
       }
       votes (
         first: 1000
@@ -36,12 +38,23 @@ const ProposalStatus: React.FC<{ url: string }> = ({ url }) => {
   const isLoading = !data
   if (isLoading) return <>Loading status...</>
   if (!data?.proposal?.state) return <>Error loading status</>
+
+  const choices = flow(countBy('choice'), mapKeys(k => data.proposal.choices[k - 1]))(data.votes)
+  console.log({ choices })
   return (
-    <a href={url} target="_blank" rel="noreferrer noopener">
-      {startCase(data.proposal.state)}
-      {' '}&ndash;{' '}
-      {data.votes.length} vote(s)
-    </a>
+    <div>
+
+      <a href={url} target="_blank" rel="noreferrer noopener">
+        {startCase(data.proposal.state)}
+        {' '}&ndash;{' '}
+        {data.votes.length} vote(s)
+      </a>
+      <div>
+        {Object.keys(choices).map(key =>
+          <span key={key}>{key} - {choices[key]}</span>
+        )}
+      </div>
+    </div>
   )
 }
 
