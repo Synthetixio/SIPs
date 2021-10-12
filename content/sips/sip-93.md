@@ -3,9 +3,10 @@ sip: 93
 title: Supersede SIP-90 to Delegated Council Governance
 status: Implemented
 author: Andy T CF (@andytcf)
-discussions-to: https://research.synthetix.io/t/supersede-sip-90-to-delegated-council-governance/227
-
-created: 2020-11-11
+discussions-to: >-
+  https://research.synthetix.io/t/supersede-sip-90-to-delegated-council-governance/227
+created: 2020-11-11T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->

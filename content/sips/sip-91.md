@@ -1,12 +1,12 @@
 ---
-sip: 91 
+sip: 91
 title: Debt Cache Contract
 status: Implemented
 author: Anton Jurisevic (@zyzek)
-discussions-to: https://research.synthetix.io/t/sip-91-debt-cache-contract/213
-
-created: 2020-10-20 
+discussions-to: 'https://research.synthetix.io/t/sip-91-debt-cache-contract/213'
+created: 2020-10-20T00:00:00.000Z
 requires: 83
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->

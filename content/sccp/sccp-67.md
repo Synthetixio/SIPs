@@ -1,10 +1,11 @@
 ---
 sccp: 67
 title: Change Configurable Values for SIP-97 and SIP-103
-author: SynthaMan, Kaleb
+author: 'SynthaMan, Kaleb'
 status: Implemented
-discussions-to: https://discord.gg/7nMZMdbf
-created: 2020-12-22
+discussions-to: 'https://discord.gg/7nMZMdbf'
+created: 2020-12-22T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

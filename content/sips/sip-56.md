@@ -3,9 +3,9 @@ sip: 56
 title: Differential Fees
 status: Implemented
 author: Clinton Ennis (@hav-noms)
-discussions-to: <https://discordapp.com/invite/AEdUHzt>
-
-created: 2020-05-01
+discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
+created: 2020-05-01T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->

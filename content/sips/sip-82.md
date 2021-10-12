@@ -2,10 +2,10 @@
 sip: 82
 title: Synthetix Keeper System
 status: Rejected
-author: Jackson Chan (@jacko125), Justin Moses (@justinjmoses)
-discussions-to: https://discord.gg/kPPKsPb
-
-created: 2020-07-14
+author: 'Jackson Chan (@jacko125), Justin Moses (@justinjmoses)'
+discussions-to: 'https://discord.gg/kPPKsPb'
+created: 2020-07-14T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

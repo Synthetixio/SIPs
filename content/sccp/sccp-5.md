@@ -2,9 +2,10 @@
 sccp: 5
 title: Increase Arb Pool Distribution to 5%
 author: Kain Warwick (@kaiynne)
-discussions-to: https://discordapp.com/invite/aApjG26
+discussions-to: 'https://discordapp.com/invite/aApjG26'
 status: Implemented
-created: 2019-11-05
+created: 2019-11-05T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->

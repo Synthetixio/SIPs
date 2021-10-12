@@ -2,9 +2,10 @@
 sip: 10
 title: Upgrade Delegate Powers
 author: Nocturnalsheet (@nocturnalsheet)
-discussions-to: https://discord.gg/CDTvjHY
+discussions-to: 'https://discord.gg/CDTvjHY'
 status: Implemented
-created: 2019-07-16
+created: 2019-07-16T00:00:00.000Z
+type: Governance
 ---
 
 

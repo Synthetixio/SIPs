@@ -4,7 +4,8 @@ title: Reduce incentives for sETH/ETH Uniswap pool
 author: IanC
 discussions-to: Discord
 status: Implemented
-created: 2020-04-25
+created: 2020-04-25T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

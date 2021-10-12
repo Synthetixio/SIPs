@@ -4,8 +4,8 @@ title: Lower Target Collateralization Ratio 475%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
 status: Rejected
-created: 2021-01-25
-
+created: 2021-01-25T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->

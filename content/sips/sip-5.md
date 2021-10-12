@@ -2,8 +2,9 @@
 sip: 5
 title: New Crypto Synths June '19
 status: Implemented
-author: Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)
-created: 2019-06-18
+author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'
+created: 2019-06-18T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

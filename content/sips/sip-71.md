@@ -2,10 +2,10 @@
 sip: 71
 title: Binary Options v1.1
 status: Implemented
-author: Anton Jurisevic <@zyzek>, Danijel <@dgornjakovic>
-discussions-to: https://research.synthetix.io/t/binary-options-improvements/13
-
-created: 2020-07-13
+author: 'Anton Jurisevic <@zyzek>, Danijel <@dgornjakovic>'
+discussions-to: 'https://research.synthetix.io/t/binary-options-improvements/13'
+created: 2020-07-13T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary
