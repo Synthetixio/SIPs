@@ -1,7 +1,7 @@
 ---
 sccp: 135
 title: Open Account Merging Continuously
-status: Approved
+status: Implemented
 discussions-to: governance
 author: Rafa (@rafanator)
 created: 2021-08-13T00:00:00.000Z
