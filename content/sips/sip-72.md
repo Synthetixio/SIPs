@@ -3,8 +3,9 @@ sip: 72
 title: Add More Assets to the Binary Options Markets
 status: Rejected
 author: psybull (@psybull)
-discussions-to: https://research.synthetix.io/t/sip-add-more-binary-options-markets/116
-created: 2020-07-25
+discussions-to: 'https://research.synthetix.io/t/sip-add-more-binary-options-markets/116'
+created: 2020-07-25T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->

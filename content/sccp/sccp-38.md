@@ -3,9 +3,9 @@ sccp: 38
 title: Increase Fees on Silver and Gold to 100 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented
-discussions-to: https://research.synthetix.io/t/increase-fees-on-silver-and-gold-to-100-bp/168
-created: 2020-08-05
-
+discussions-to: 'https://research.synthetix.io/t/increase-fees-on-silver-and-gold-to-100-bp/168'
+created: 2020-08-05T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

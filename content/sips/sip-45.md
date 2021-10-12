@@ -1,10 +1,11 @@
 ---
 sip: 45
-title: Deprecate ERC223 sUSD Deposits from Depot 
+title: Deprecate ERC223 sUSD Deposits from Depot
 author: Clinton Ennis (@hav-noms)
-discussions-to: https://discord.gg/DQ8ehX4
+discussions-to: 'https://discord.gg/DQ8ehX4'
 status: Implemented
-created: 2020-03-01
+created: 2020-03-01T00:00:00.000Z
+type: Governance
 ---
 
 

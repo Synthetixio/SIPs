@@ -3,8 +3,9 @@ sccp: 32
 title: Increase Fees on Stock Synths
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented
-discussions-to: <https://discord.gg/XzQjCf>
-created: 2020-07-03
+discussions-to: '<https://discord.gg/XzQjCf>'
+created: 2020-07-03T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

@@ -1,6 +1,7 @@
 # SIPs [![Discord](https://img.shields.io/discord/413890591840272394.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discordapp.com/channels/413890591840272394/) [![Twitter Follow](https://img.shields.io/twitter/follow/synthetix_io.svg?label=synthetix_io&style=social)](https://twitter.com/synthetix_io)
 
 Synthetix Improvement Proposals (SIPs) describe standards for the Synthetix platform, including core protocol specifications, client APIs, and contract standards.
+
 # Contributing
 
 1.  Review [SIP-1](sips/sip-1.md).
@@ -37,6 +38,34 @@ It is possible to run the SIP validator locally:
 ```
 npm install (if not done already)
 npm run test
+```
+
+# JSON API
+
+All SIPs & SCCPs data is available in JSON format by status at the following urls:
+
+## SIPs
+
+```
+https://sips.synthetix.io/api/sips/draft.json
+https://sips.synthetix.io/api/sips/feasibility.json
+https://sips.synthetix.io/api/sips/sc-review-pending.json
+https://sips.synthetix.io/api/sips/vote-pending.json
+https://sips.synthetix.io/api/sips/approved.json
+https://sips.synthetix.io/api/sips/rejected.json
+https://sips.synthetix.io/api/sips/implemented.json
+```
+
+## SCCPs
+
+```
+https://sips.synthetix.io/api/sccp/draft.json
+https://sips.synthetix.io/api/sccp/feasibility.json
+https://sips.synthetix.io/api/sccp/sc-review-pending.json
+https://sips.synthetix.io/api/sccp/vote-pending.json
+https://sips.synthetix.io/api/sccp/approved.json
+https://sips.synthetix.io/api/sccp/rejected.json
+https://sips.synthetix.io/api/sccp/implemented.json
 ```
 
 # Automerger

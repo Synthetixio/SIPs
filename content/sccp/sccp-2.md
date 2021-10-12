@@ -3,9 +3,10 @@ sccp: 2
 title: Change C Ratio to 750%
 status: Implemented
 author: Kain Warwick (@kaiynne)
-discussions-to: https://discord.gg/CDTvjHY
-created: 2019-06-17
+discussions-to: 'https://discord.gg/CDTvjHY'
+created: 2019-06-17T00:00:00.000Z
 requires: SIP-2
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->

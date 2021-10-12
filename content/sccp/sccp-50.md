@@ -4,7 +4,8 @@ title: Pause s/iDEFI ahead of LEND->AAVE migration
 status: Implemented
 author: Garth Travers (@garthtravers)
 discussions-to: governance
-created: 2020-10-01
+created: 2020-10-01T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

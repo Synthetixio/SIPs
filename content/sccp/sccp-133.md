@@ -2,9 +2,10 @@
 sccp: 133
 title: Increase volume partner rewards to 10K SNX p/month
 author: Rafa (@rafanator)
-discussions-to: https://discord.gg/e9c5Cs
+discussions-to: 'https://discord.gg/e9c5Cs'
 status: Implemented
-created: 2021-08-04
+created: 2021-08-04T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->

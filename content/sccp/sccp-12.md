@@ -4,7 +4,8 @@ title: Temporarily Deactivate Exploited Assets
 author: Michael J. Cohen (@mjayceee)
 discussions-to: TBC
 status: Implemented
-created: 2020-02-03
+created: 2020-02-03T00:00:00.000Z
+type: Governance
 ---
 
 ## Update (20/02/2020)

@@ -1,10 +1,10 @@
 ---
 sccp: 10
-title: Reduce minter reward for supply schedule 
-author: Jackson Chan (@jacko125), Justin J Moses (@justinjmoses)
+title: Reduce minter reward for supply schedule
+author: 'Jackson Chan (@jacko125), Justin J Moses (@justinjmoses)'
 status: Implemented
-
-created: 2020-01-23
+created: 2020-01-23T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary
