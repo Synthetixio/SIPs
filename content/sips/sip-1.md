@@ -3,8 +3,11 @@ sip: 1
 title: SIP Purpose and Guidelines
 status: Implemented
 author: Kain Warwick (@kaiynne)
-discussions-to: https://research.synthetix.io/
-created: 2019-06-10
+discussions-to: 'https://research.synthetix.io/'
+created: 2019-06-10T00:00:00.000Z
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmPfGDZyVdCTSZfLAPe9tmBKgD3NRZTDJy4sH2dkNDtSuP
+type: Governance
 ---
 
 ## What is an SIP?
@@ -25,7 +28,7 @@ An SIP or SCCP must meet certain minimum criteria. It must be a clear and comple
 
 ## SIP Work Flow
 
-Parties involved in the process are the *author*, the [*SIP editors*](#sip-editors), the [Synthetix Core Contributors] and the Synthetix community.
+Parties involved in the process are the _author_, the [_SIP editors_](#sip-editors), the [Synthetix Core Contributors] and the Synthetix community.
 
 :warning: Before you begin, vet your idea, this will save you time. Ask the Synthetix community first if an idea is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will have the intend effect. The appropriate public forum to gauge interest around your SIP or SCCP is [the Synthetix Discord].
 
@@ -35,13 +38,13 @@ Your role as the champion is to write the SIP using the style and format describ
 
 Each status change is requested by the SIP author and reviewed by the SIP editors. Use a pull request to update the status. Please include a link to where people should continue discussing your SIP. The SIP editors will process these requests as per the conditions below.
 
-* **Draft** -- This SIP is work-in-progress and being reviewed by a Spartan Council member with the champion.
-* **Feasibility** -- This SIP is assigned with a Core Contributor and underdoing a feasibility study. 
-* **SC Review Pending** -- This SIP is being formally reviewed by the Spartan Council to decide on voting or sent back for feasibility study.
-* **Vote Pending** -- This SIP is scheduled for voting on [staking](https://staking.synthetix.io/)
-* **Approved** -- This SIP has passed community governance and is now being prioritised for development.
-* **Rejected** -- This SIP has failed to reach community consensus.
-* **Implemented** -- This SIP has been implemented and deployed to mainnet.
+- **Draft** -- This SIP is work-in-progress and being reviewed by a Spartan Council member with the champion.
+- **Feasibility** -- This SIP is assigned with a Core Contributor and underdoing a feasibility study.
+- **SC Review Pending** -- This SIP is being formally reviewed by the Spartan Council to decide on voting or sent back for feasibility study.
+- **Vote Pending** -- This SIP is scheduled for voting on [staking](https://staking.synthetix.io/)
+- **Approved** -- This SIP has passed community governance and is now being prioritised for development.
+- **Rejected** -- This SIP has failed to reach community consensus.
+- **Implemented** -- This SIP has been implemented and deployed to mainnet.
 
 ## What belongs in a successful SIP?
 
@@ -50,7 +53,7 @@ Each SIP or SCCP should have the following parts:
 - Preamble - RFC 822 style headers containing metadata about the SIP, including the SIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details.
 - Simple Summary - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the SIP.
 - Abstract - a short (~200 word) description of the technical issue being addressed.
-- Motivation (*optional) - The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.
+- Motivation (\*optional) - The motivation is critical for SIPs that want to change Synthetix. It should clearly explain why the existing specification is inadequate to address the problem that the SIP solves. SIP submissions without sufficient motivation may be rejected outright.
 - Specification - The technical specification should describe the syntax and semantics of any new feature.
 - Rationale - The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.
 - Test Cases - Test cases may be added during the implementation phase but are required before implementation.
@@ -63,7 +66,7 @@ Image files should be included in a subdirectory of the `assets` folder for that
 
 ## SIP Header Preamble
 
-Each SIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style header preamble, preceded and followed by three hyphens (`---`). This header is also termed ["front matter" by Jekyll](https://jekyllrb.com/docs/front-matter/). The headers must appear in the following order. Headers marked with "*" are optional and are described below. All other headers are required.
+Each SIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style header preamble, preceded and followed by three hyphens (`---`). This header is also termed ["front matter" by Jekyll](https://jekyllrb.com/docs/front-matter/). The headers must appear in the following order. Headers marked with "\*" are optional and are described below. All other headers are required.
 
 ` sip:` <SIP number> (this is determined by the SIP editor)
 
@@ -73,7 +76,7 @@ Each SIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style
 
 ` * discussions-to:` \<a url pointing to the official discussion thread at research.synthetix.io\>
 
-` status:` < Draft \| Feasibility \| SC Review Pending \| Vote Pending \| Approved \| Rejected \| Implemented > 
+` status:` < Draft \| Feasibility \| SC Review Pending \| Vote Pending \| Approved \| Rejected \| Implemented >
 
 ` created:` <date created on>
 
@@ -136,7 +139,7 @@ The current SIP editors are
 ` * Andy CF (@andytcf)`
 
 ` * Kaleb (@kaleb-keny)`
-  
+
 ` * Danijel (@dgornjakovic)`
 
 ## SIP Editor Responsibilities
@@ -163,23 +166,22 @@ The editors don't pass judgment on SIPs. We merely do the administrative & edito
 
 ## History
 
-The SIP document was derived heavily from the EIP Ethereum Improvement Proposal document in many places text was simply copied and modified. Any comments about the SIP document should be directed to the SIP editors. The history of the EIP is quoted below from the EIP document  for context:
+The SIP document was derived heavily from the EIP Ethereum Improvement Proposal document in many places text was simply copied and modified. Any comments about the SIP document should be directed to the SIP editors. The history of the EIP is quoted below from the EIP document for context:
 
-* *"This document (EIP) was derived heavily from [Bitcoin's BIP-0001] written by Amir Taaki which in turn was derived from [Python's PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."* *
+- _"This document (EIP) was derived heavily from [Bitcoin's BIP-0001] written by Amir Taaki which in turn was derived from [Python's PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."_ \*
 
 June 10, 2019: SIP 1 has been drafted and submitted as a PR.
-
 
 See [the revision history for further details](https://github.com/Synthetixio/), which is also available by clicking on the History button in the top right of the SIP.
 
 ### Bibliography
 
-[the Synthetix Discord]: https://discord.gg/a2E6uxk
+[the synthetix discord]: https://discord.gg/a2E6uxk
 [pull request]: https://github.com/Synthetixio/SIPs/pulls
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-[Bitcoin's BIP-0001]: https://github.com/bitcoin/bips
-[Python's PEP-0001]: https://www.python.org/dev/peps/
-[Synthetix Engineering Team]: https://github.com/orgs/Synthetixio/people
+[bitcoin's bip-0001]: https://github.com/bitcoin/bips
+[python's pep-0001]: https://www.python.org/dev/peps/
+[synthetix engineering team]: https://github.com/orgs/Synthetixio/people
 
 ## Copyright
 

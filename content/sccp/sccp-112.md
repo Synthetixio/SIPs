@@ -1,10 +1,11 @@
 ---
 sccp: 112
-title: Ending Trial ETH Loan Programs 
+title: Ending Trial ETH Loan Programs
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
 status: Implemented
-created: 2021-05-25
+created: 2021-05-25T00:00:00.000Z
+type: Governance
 ---
 
 ## Implementor

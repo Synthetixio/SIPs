@@ -4,7 +4,8 @@ title: Increase migrateEntriesThresholdAmount to 720000
 author: Jackson Chan (@jacko125)
 discussions-to: governance
 status: Approved
-created: 2021-07-12
+created: 2021-07-12T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

@@ -1,10 +1,11 @@
 ---
 sccp: 134
-title: Reduce L2 Target C-Ratio To 900% 
+title: Reduce L2 Target C-Ratio To 900%
 author: Spreek (@Spreek)
-discussions-to: https://discord.gg/e9c5Cs
+discussions-to: 'https://discord.gg/e9c5Cs'
 status: Implemented
-created: 2021-08-11
+created: 2021-08-11T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

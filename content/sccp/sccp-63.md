@@ -1,11 +1,11 @@
 ---
 sccp: 63
 title: Remove Temporary iETH limits
-author: Kain Warwick (@kaiynne), Jackson Chan (@jacko125)
-discussions-to: https://discord.gg/kPPKsPb
+author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125)'
+discussions-to: 'https://discord.gg/kPPKsPb'
 status: Implemented
-created: 2020-11-23
-
+created: 2020-11-23T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

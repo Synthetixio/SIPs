@@ -3,9 +3,9 @@ sccp: 60
 title: Suspend sBCH and iBCH synths until after BCH hard fork
 author: Jackson Chan (@jacko125)
 status: Implemented
-discussions-to: https://research.synthetix.io/
-created: 2020-11-14
-
+discussions-to: 'https://research.synthetix.io/'
+created: 2020-11-14T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

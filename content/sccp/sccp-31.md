@@ -3,8 +3,9 @@ sccp: 31
 title: Increase Commodity Fees
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented
-discussions-to: <https://discord.gg/XzQjCf>
-created: 2020-06-26
+discussions-to: '<https://discord.gg/XzQjCf>'
+created: 2020-06-26T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

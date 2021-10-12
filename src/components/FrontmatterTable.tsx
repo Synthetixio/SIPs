@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import { FrontmatterFragment } from '../../types/gql'
 import { AuthorList } from './AuthorList'
+import { ProposalStatus } from './ProposalStatus'
 
 interface Props {
   frontmatter: FrontmatterFragment
@@ -19,6 +20,37 @@ const FrontmatterTable: React.FC<Props> = ({ frontmatter }) => {
             <AuthorList author={frontmatter.author} />
           </td>
         </tr>
+        <tr>
+          <th>Status</th>
+          <td>{frontmatter.status}</td>
+        </tr>
+
+        {frontmatter.type && (
+          <tr>
+            <th>Type</th>
+            <td>{frontmatter.type}</td>
+          </tr>
+        )}
+
+        <tr>
+          <th>Implementor</th>
+          <td>{frontmatter.implementor || 'TBD'}</td>
+        </tr>
+
+        <tr>
+          <th>Release</th>
+          <td>{frontmatter.release || 'TBD'}</td>
+        </tr>
+
+        {frontmatter.proposal && (
+          <tr>
+            <th>Proposal</th>
+            <td>
+              <ProposalStatus url={frontmatter.proposal} />
+            </td>
+          </tr>
+        )}
+
         {frontmatter.discussions_to && (
           <tr>
             <th>Discussions-To</th>
@@ -29,10 +61,6 @@ const FrontmatterTable: React.FC<Props> = ({ frontmatter }) => {
             </td>
           </tr>
         )}
-        <tr>
-          <th>Status</th>
-          <td>{frontmatter.status}</td>
-        </tr>
         {frontmatter.created && (
           <tr>
             <th>Created</th>
@@ -56,6 +84,10 @@ export const query = graphql`
     sccp
     title
     author
+    type
+    proposal
+    implementor
+    release
     discussions_to
     created
     updated

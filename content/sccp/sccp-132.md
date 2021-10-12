@@ -4,7 +4,8 @@ title: Fee Rates for L2 Exchanging
 author: David Goldberg (@drgoldb)
 discussions-to: governance
 status: Implemented
-created: 2021-07-27
+created: 2021-07-27T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

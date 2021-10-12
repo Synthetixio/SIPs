@@ -4,7 +4,8 @@ title: Add iETH incentive to RewardsDistribution
 status: Implemented
 author: Clinton Ennis (@hav-noms)
 discussions-to: governance
-created: 2020-08-31
+created: 2020-08-31T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

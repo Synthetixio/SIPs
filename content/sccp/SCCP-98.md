@@ -1,10 +1,11 @@
 ---
 sccp: 98
 title: Rebalance sDEFI and iDEFI
-author: Farmwell (@farmwell), CryptoToit (@CryptoToit)
+author: 'Farmwell (@farmwell), CryptoToit (@CryptoToit)'
 status: Implemented
-discussions-to: https://research.synthetix.io/
-created: 2021-04-22
+discussions-to: 'https://research.synthetix.io/'
+created: 2021-04-22T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->

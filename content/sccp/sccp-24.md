@@ -3,9 +3,10 @@ sccp: 24
 title: Setting initial differential fee levels
 author: Spreek (@Spreek)
 status: Implemented
-discussions-to: <https://discordapp.com/invite/AEdUHzt>
-created: 2020-06-04
+discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
+created: 2020-06-04T00:00:00.000Z
 requires: SIP-56
+type: Governance
 ---
 
 ## Simple Summary
