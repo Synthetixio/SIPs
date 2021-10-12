@@ -2,9 +2,10 @@
 sccp: 139
 title: Re-enable price feeds that certain live markets on Thales Protocol rely on
 author: padzank (@padzank)
-discussions-to: 'https://discord.gg/e9c5Cs'
-status: Approved
+discussions-to: https://discord.gg/e9c5Cs
+status: Implemented
 created: 2021-09-23T00:00:00.000Z
+proposal: https://snapshot.org/#/snxgov.eth/proposal/QmbtDx5nRsuWTzeZ4BqrbfGK7uiHNpDwqRc2ySCW5gCmBn
 type: Governance
 ---
 
