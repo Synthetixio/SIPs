@@ -2,10 +2,10 @@
 sip: 23
 title: Inflation Smoothing
 status: Implemented
-author: Deltatiger (@deltatigernz), Vance Spencer(@frameworkvance)
-discussions-to: https://github.com/Synthetixio/SIPs/issues/36
-
-created: 2019-09-24
+author: 'Deltatiger (@deltatigernz), Vance Spencer(@frameworkvance)'
+discussions-to: 'https://github.com/Synthetixio/SIPs/issues/36'
+created: 2019-09-24T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

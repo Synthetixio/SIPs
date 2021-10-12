@@ -2,11 +2,12 @@
 sip: 83
 title: Total Issued Synths (Debt pool) Snapshots
 status: Implemented
-author: Kain Warwick (@kaiynne), Jackson Chan (@jacko125), Anton Jurisevic (@zyzek)
-discussions-to: https://research.synthetix.io/t/sip-83-total-issued-synths-debt-pool-snapshots/190
-
-created: 2020-08-31
-requires: https://sips.synthetix.io/sips/sip-84
+author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125), Anton Jurisevic (@zyzek)'
+discussions-to: >-
+  https://research.synthetix.io/t/sip-83-total-issued-synths-debt-pool-snapshots/190
+created: 2020-08-31T00:00:00.000Z
+requires: 'https://sips.synthetix.io/sips/sip-84'
+type: Governance
 ---
 
 ## Simple Summary

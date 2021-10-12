@@ -2,10 +2,10 @@
 sip: 61
 title: Keeper Synths
 status: Rejected
-author: Kain Warwick (@kaiynne), Justin Moses (@justinjmoses)
-discussions-to: https://discord.gg/kPPKsPb
-
-created: 2020-05-21
+author: 'Kain Warwick (@kaiynne), Justin Moses (@justinjmoses)'
+discussions-to: 'https://discord.gg/kPPKsPb'
+created: 2020-05-21T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

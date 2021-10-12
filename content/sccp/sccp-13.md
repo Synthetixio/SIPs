@@ -4,7 +4,8 @@ title: Temporarily lower fee claim buffer to 500%
 author: Garth Travers (@garthtravers)
 discussions-to: Discord
 status: Implemented
-created: 2020-02-19
+created: 2020-02-19T00:00:00.000Z
+type: Governance
 ---
 
 ## Update (2020-02/20)

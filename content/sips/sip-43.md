@@ -4,8 +4,8 @@ title: Address Resolver
 status: Implemented
 author: Justin J Moses (@justinjmoses)
 discussions-to: <Discord Channel>
-
-created: 2020-02-28
+created: 2020-02-28T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

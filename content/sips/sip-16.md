@@ -2,9 +2,10 @@
 sip: 16
 title: Improved Upgrades - Utilise Proxies internally
 status: Implemented
-author: Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)
-discussions-to: https://discord.gg/CDTvjHY
-created: 2019-08-25
+author: 'Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'
+discussions-to: 'https://discord.gg/CDTvjHY'
+created: 2019-08-25T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary
