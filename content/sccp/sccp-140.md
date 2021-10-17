@@ -3,7 +3,7 @@ sccp: 140
 title: Reduce L2 Target C-Ratio To 500%
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/e9c5Cs'
-status: Vote_Pending
+status: Implemented
 created: 2021-10-11T00:00:00.000Z
 type: Governance
 ---
