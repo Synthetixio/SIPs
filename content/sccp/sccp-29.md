@@ -2,9 +2,10 @@
 sccp: 29
 title: End SNX rewards for sETH/ETH Uniswap pool v1
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: https://discord.gg/4GvuB3
+discussions-to: 'https://discord.gg/4GvuB3'
 status: Implemented
-created: 2020-06-24
+created: 2020-06-24T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

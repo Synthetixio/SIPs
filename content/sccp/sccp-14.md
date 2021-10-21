@@ -4,7 +4,8 @@ title: Increase Collateralisation Ratio to 800%
 author: Garth Travers (@garthtravers)
 discussions-to: Discord
 status: Implemented
-created: 2020-03-04
+created: 2020-03-04T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

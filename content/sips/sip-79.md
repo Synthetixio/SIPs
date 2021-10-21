@@ -2,10 +2,12 @@
 sip: 79
 title: Deferred Transaction Gas Tank
 status: Rejected
-author: Anton Jurisevic (@zyzek), Clément Balestrat (@clementbalestrat), Clinton Ennis (@hav-noms)
-discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here>
-
-created: 2020-08-19
+author: >-
+  Anton Jurisevic (@zyzek), Clément Balestrat (@clementbalestrat), Clinton Ennis
+  (@hav-noms)
+discussions-to: '<Create a new thread on https://research.synthetix.io and drop the link here>'
+created: 2020-08-19T00:00:00.000Z
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SIPs. Note that an SIP number will be assigned by an editor. When opening a pull request to submit your SIP, please use an abbreviated title in the filename, `sip-draft_title_abbrev.md`. The title should be 44 characters or less.-->

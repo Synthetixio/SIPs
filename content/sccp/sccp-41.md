@@ -2,9 +2,10 @@
 sccp: 41
 title: Lower C-Ratio by 100% to 600%
 status: Implemented
-author: Clinton Ennis (@hav-noms), Spreek (@Spreek), Garth Travers (@garthtravers)
+author: 'Clinton Ennis (@hav-noms), Spreek (@Spreek), Garth Travers (@garthtravers)'
 discussions-to: governance
-created: 2020-08-20
+created: 2020-08-20T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

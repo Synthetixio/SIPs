@@ -1,10 +1,11 @@
 ---
 sccp: 42
-title: Lower rewards on Curve to SNX 8,000
+title: 'Lower rewards on Curve to SNX 8,000'
 status: Implemented
 author: KALEB (@KalebKeny)
 discussions-to: governance
-created: 2020-08-31
+created: 2020-08-31T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary

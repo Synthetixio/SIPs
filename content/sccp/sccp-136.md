@@ -2,9 +2,10 @@
 sccp: 136
 title: Increase L2 Inflationary Rewards to 50k
 author: Michael Spain (@mjs-12)
-discussions-to: https://discord.gg/e9c5Cs
+discussions-to: 'https://discord.gg/e9c5Cs'
 status: Implemented
-created: 2021-08-20
+created: 2021-08-20T00:00:00.000Z
+type: Governance
 ---
 
 ## Simple Summary
