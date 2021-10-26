@@ -17,7 +17,7 @@ Provide an overveiw of what the change will do the protocol.
 
 ## Motivation 
 
-provide an explanation for why this change is necessary. 
+Provide an explanation for why this change is necessary. 
 
 ## Specification
 
