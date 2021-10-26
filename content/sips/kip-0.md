@@ -9,11 +9,11 @@ Created: 2021-10-26
 
 ## Summary
 
-In 1-2 sentences, state the change that would made to the protocol if this KIP were to be implemented. 
+In 1-2 sentences, state the change that would be made to the protocol if this KIP were to be implemented. 
 
 ## Abstract
 
-Provide an overveiw of what the change will do the protocol. 
+Provide a breif overveiw of what the change will do the protocol. 
 
 ## Motivation 
 
