@@ -13,7 +13,7 @@ In 1-2 sentences, state the change that would be made to the protocol if this KI
 
 ## Abstract
 
-Provide a breif overveiw of what the change will do the protocol. 
+Provide a brief overview of what the change will do to the protocol. 
 
 ## Motivation 
 
