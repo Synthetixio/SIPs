@@ -13,7 +13,7 @@ Your first PR should be a first draft of the final KIP. It must meet the formatt
 
 If your KIP requires images, the image files should be included in a subdirectory of the `assets` folder for that KIP as follow: `assets/kip-X` (for kip **X**). When linking to an image in the KIP, use relative links such as `../assets/kip-X/image.png`.
 
-When you believe your KIP is mature and ready to progress past the Draft phase, you should reach out to the Elite Council via the #council-chambers channel in Discord. The Elite Council may schedule in a call with the KIP author to go through the KIP in more detail if necessarry.
+When you believe your KIP is mature and ready to progress past the Draft phase, create a thread in the #governance channel in [Discord](https://discord.gg/Y32dAVMMwF) to discuss your KIP with the Elite Council and community. The Elite Council may schedule in a call with the KIP author to go through the KIP in more detail if necessarry.
 
 Once assessed, a KIP is moved into `Proposed` where the Elite Council will vote on the proposal via the Kwenta.eth Snapshot. If a vote by the Elite Council reaches a majority, the KIP is moved to `Approved`, otherwise it is `Rejected`. 
 
