@@ -11,7 +11,7 @@ Kwenta Improvement Proposals (KIPs) describe standards for the Kwenta platform, 
 
 Your first PR should be a first draft of the final KIP. It must meet the formatting criteria enforced by the build (largely, correct metadata in the header). An editor will manually review the first PR for a new KIP and assign it a number before merging it. 
 
-If your KIP requires images, the image files should be included in a subdirectory of the `assets` folder for that KIP as follow: `assets/kip-X` (for kip **X**). When linking to an image in the KIP, use relative links such as `../assets/sip-X/image.png`.
+If your KIP requires images, the image files should be included in a subdirectory of the `assets` folder for that KIP as follow: `assets/kip-X` (for kip **X**). When linking to an image in the KIP, use relative links such as `../assets/kip-X/image.png`.
 
 When you believe your KIP is mature and ready to progress past the Draft phase, you should reach out to the Elite Council via the #council-chambers channel in Discord. The Elite Council may schedule in a call with the KIP author to go through the KIP in more detail if necessarry.
 
