@@ -22,9 +22,6 @@ Once the KIP has been implemented by either the protocol DAO or the KIP author a
 # KIP Statuses
 
 - **Draft** - The initial state of a new KIP before the Elite Council and core contributors have assessed it.
-- **Feasibility** - a KIP that is being assessed for feasibility with an assigned Core Contributor
-- **SC_Review_Pending** - a KIP that is awaiting a Elite Council Review after the Author and Core Contributor are satisfied with feasibility
-- **Vote_Pending** - a KIP that is awaiting a vote.
 - **Approved** - a KIP that has successfully reached a super majority Elite Council vote in favour.
 - **Rejected** - a KIP that has failed to reach a super-majority KIP Council vote in favour.
 - **Implemented** - a KIP that has been released to main-net.
@@ -38,36 +35,4 @@ It is possible to run the KIP validator locally:
 ```
 npm install (if not done already)
 npm run test
-```
 
-# JSON API
-
-All KIPs, CKIPs, and KTR data is available in JSON format by status at the following urls:
-
-## SIPs
-
-```
-https://sips.synthetix.io/api/sips/draft.json
-https://sips.synthetix.io/api/sips/feasibility.json
-https://sips.synthetix.io/api/sips/sc-review-pending.json
-https://sips.synthetix.io/api/sips/vote-pending.json
-https://sips.synthetix.io/api/sips/approved.json
-https://sips.synthetix.io/api/sips/rejected.json
-https://sips.synthetix.io/api/sips/implemented.json
-```
-
-## SCCPs
-
-```
-https://sips.synthetix.io/api/sccp/draft.json
-https://sips.synthetix.io/api/sccp/feasibility.json
-https://sips.synthetix.io/api/sccp/sc-review-pending.json
-https://sips.synthetix.io/api/sccp/vote-pending.json
-https://sips.synthetix.io/api/sccp/approved.json
-https://sips.synthetix.io/api/sccp/rejected.json
-https://sips.synthetix.io/api/sccp/implemented.json
-```
-
-# Automerger
-
-The KIP repository contains an "auto merge" feature to ease the workload for KIP editors. If a change is made via a PR to a draft KIP, then the authors of the KIP can Github approve the change to have it auto-merged by the [sip-automerger](https://github.com/bakaoh/sip_automerger) bot.
