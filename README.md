@@ -4,27 +4,28 @@ Kwenta Improvement Proposals (KIPs) describe standards for the Kwenta platform, 
 
 # Contributing
 
-1.  Review [SIP-1](sips/sip-1.md).
+1.  Review [KIP-1](sips/sip-1.md).
 2.  Fork the repository by clicking "Fork" in the top right.
-3.  Add your KIP to your fork of the repository. There is a [template SIP here](sip-x.md).
-4.  Submit a Pull Request to Synthetix's [SIPs repository](https://github.com/synthetixio/SIPs).
+3.  Add your KIP to your fork of the repository. You can copy templates for [KIPs](kip-x.md), [CKIPs](kip-x.md), and [KTRs](kip-x.md). 
+4.  Submit a Pull Request to Kwenta's [KIPs repository](https://github.com/kwenta/KIPs).
 
-Your first PR should be a first draft of the final KIP. It must meet the formatting criteria enforced by the build (largely, correct metadata in the header). An editor will manually review the first PR for a new KIP and assign it a number before merging it. Make sure you include a `discussions-to` header with the URL to a new thread on [research.synthetix.io](https://research.synthetix.io) where people can discuss the KIP as a whole.
+Your first PR should be a first draft of the final KIP. It must meet the formatting criteria enforced by the build (largely, correct metadata in the header). An editor will manually review the first PR for a new KIP and assign it a number before merging it. 
 
-If your KIP requires images, the image files should be included in a subdirectory of the `assets` folder for that KIP as follow: `assets/sip-X` (for sip **X**). When linking to an image in the KIP, use relative links such as `../assets/sip-X/image.png`.
+If your KIP requires images, the image files should be included in a subdirectory of the `assets` folder for that KIP as follow: `assets/kip-X` (for kip **X**). When linking to an image in the KIP, use relative links such as `../assets/sip-X/image.png`.
 
-When you believe your KIP is mature and ready to progress past the Draft phase, you should reach out to a Spartan Council member on discord by searching members with the "Spartan Council" role or finding them within the #governance channel. The Spartan Council will schedule in a call with the SIP author to go through the SIP in more detail.
+When you believe your KIP is mature and ready to progress past the Draft phase, you should reach out to the Elite Council via the #council-chambers channel in Discord. The Elite Council may schedule in a call with the KIP author to go through the KIP in more detail if necessarry.
 
-Once assessed, a KIP is moved into `Feasibility` and a Core Contributor is assigned. The Core Contributor will work with the author to conduct a feasibility study. Once the Author and the Core Contributor are satisfied, a KIP is moved to `EC Review Pending`. Once the Spartan Council has formally reviewed the KIP during the KIP presentation they can either move it to a vote or send it back to `Feasability`. A vote is conducted within the `spartancouncil.eth` snapshot space connected on the [staking](https://staking.synthetix.io/) dApp. If a vote by the Elite Council reaches a super majority, the KIP is moved to `Approved`, otherwise it is `Rejected`.
+Once assessed, a KIP is moved into `Proposed` where the Elite Council will vote on the proposal via the Kwenta.eth Snapshot. If a vote by the Elite Council reaches a majority, the KIP is moved to `Approved`, otherwise it is `Rejected`. 
 
-Once the KIP has been implemented by either the protocol DAO or the KIP author and relevant parties, the KIP is assigned the `Implemented` status. There is a 500 sUSD bounty for proposing a KIP that reaches the `Implemented` phase.
+Once the KIP has been implemented by either the protocol DAO or the KIP author and relevant parties, the KIP is assigned the `Implemented` status. 
 
-# KIP Statuses
+# Proposal Statuses
 
-- **Draft** - The initial state of a new KIP before the Elite Council and core contributors have assessed it.
-- **Approved** - a KIP that has successfully reached a super majority Elite Council vote in favour.
-- **Rejected** - a KIP that has failed to reach a super-majority KIP Council vote in favour.
-- **Implemented** - a KIP that has been released to main-net.
+- **Draft** - The initial state of a new proposal before the Elite Council and core contributors have assessed it.
+- **Propsed** - This proposal is being voted on.
+- **Approved** - A proposal that has successfully reached a majority Elite Council vote in favour.
+- **Rejected** - A propsal that has failed to reach a majority Elite Council vote in favour.
+- **Implemented** - A proposal that has been released to main-net.
 
 # Validation
 
