@@ -7,27 +7,10 @@ const Main: React.FC = ({ children }) => {
   return (
     <main>
       {/* matomo */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            var _paq = window._paq = window._paq || [];
-            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-            _paq.push(['trackPageView']);
-            _paq.push(['enableLinkTracking']);
-            (function() {
-              var u="https://analytics.synthetix.io/";
-              _paq.push(['setTrackerUrl', u+'matomo.php']);
-              _paq.push(['setSiteId', '5']);
-              var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-              g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-            })();
-          `,
-        }}
-      />
       <header className="site-header" role="banner">
         <div className="wrapper">
           <a className="site-title" rel="author" href="/">
-            SIPs
+            KIPs
           </a>
           <nav className="site-nav">
             <input type="checkbox" id="nav-trigger" className="nav-trigger" />
@@ -40,11 +23,14 @@ const Main: React.FC = ({ children }) => {
             </label>
 
             <div className="trigger">
-              <a className="page-link" href="/all-sip">
-                All SIPs
+              <a className="page-link" href="/all-kip">
+                KIPs
               </a>
-              <a className="page-link" href="/all-sccp">
-                All SCCPs
+              <a className="page-link" href="/all-ckip">
+                CKIPs
+              </a>
+              <a className="page-link" href="/all-ktr">
+                KTRs
               </a>
             </div>
           </nav>
@@ -57,27 +43,27 @@ const Main: React.FC = ({ children }) => {
 
       <footer className="site-footer h-card">
         <div className="wrapper">
-          <h2 className="footer-heading">SIPs</h2>
+          <h2 className="footer-heading">KIPs</h2>
 
           <div className="footer-col-wrapper">
             <div className="footer-col footer-col-1">
               <ul className="contact-list">
-                <li className="p-name">SIPs</li>
+                <li className="p-name">KIPs</li>
               </ul>
             </div>
 
             <div className="footer-col footer-col-2">
               <ul className="social-media-list">
                 <li>
-                  <a href="https://github.com/Synthetixio/SIPs">
+                  <a href="https://github.com/Kwenta/KIPs">
                     <GithubIcon className="svg-icon" />
-                    <span className="username">Synthetixio/SIPs</span>
+                    <span className="username">Kwenta/KIPs</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/synthetix_io">
+                  <a href="https://twitter.com/kwenta_io">
                     <TwitterIcon className="svg-icon" />
-                    <span className="username">synthetix_io</span>
+                    <span className="username">kwenta_io</span>
                   </a>
                 </li>
               </ul>
@@ -85,9 +71,9 @@ const Main: React.FC = ({ children }) => {
 
             <div className="footer-col footer-col-3">
               <p>
-                Synthetix Improvement Proposals (SIPs) describe standards for
-                the Synthetix platform, including core protocol specifications,
-                client APIs, and contract standards.
+                Kwenta Improvement Proposals (KIPs) describe standards for the
+                Kwenta platform, including core protocol specifications, client
+                APIs, and contract standards.
               </p>
             </div>
           </div>

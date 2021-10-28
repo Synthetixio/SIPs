@@ -1,10 +1,10 @@
 module.exports = {
   flags: {
-    DEV_SSR: true
+    DEV_SSR: true,
   },
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
-    title: 'Synthetix SIPs & SCCPs',
+    siteUrl: 'https://kips.kwenta.io',
+    title: 'Kwenta KIPs, CKIPs & KTRs',
   },
   plugins: [
     'gatsby-plugin-typescript',

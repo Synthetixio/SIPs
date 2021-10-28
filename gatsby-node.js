@@ -6,27 +6,25 @@ const kebabStatuses = statuses.map(kebabCase)
 
 const Frontmatter = `
   fragment Frontmatter on MarkdownRemarkFrontmatter {
-    sip
-    sccp
+    kip
+    ckip
+    ktr
     title
     author
     type
     proposal
-    implementor
-    release
-    discussions_to
     created
     updated
     status
   }
 `
-const allSipsQuery = `
+const allKipsQuery = `
   ${Frontmatter}
-  query allSips {
+  query allKips {
     allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "/sips/" }
-        frontmatter: { sip: { ne: null } }
+        fileAbsolutePath: { regex: "/kips/" }
+        frontmatter: { kip: { ne: null } }
       }
     ) {
       group(field: frontmatter___status) {
@@ -43,13 +41,36 @@ const allSipsQuery = `
   }
 `
 
-const allSccpQuery = `
+const allCkipQuery = `
   ${Frontmatter}
-  query allSips {
+  query allCkips {
     allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "/sccp/" }
-        frontmatter: { sccp: { ne: null } }
+        fileAbsolutePath: { regex: "/ckip/" }
+        frontmatter: { ckip: { ne: null } }
+      }
+    ) {
+      group(field: frontmatter___status) {
+        fieldValue
+        nodes {
+          frontmatter {
+            ...Frontmatter
+          }
+          md: rawMarkdownBody
+          html
+        }
+      }
+    }
+  }
+`
+
+const allKtrQuery = `
+  ${Frontmatter}
+  query allKtrs {
+    allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/ktrs/" }
+        frontmatter: { ktr: { ne: null } }
       }
     ) {
       group(field: frontmatter___status) {
@@ -67,15 +88,18 @@ const allSccpQuery = `
 `
 
 exports.onPostBuild = async ({ graphql }) => {
-  const allSips = await graphql(allSipsQuery)
-  const allSccp = await graphql(allSccpQuery)
+  const allKips = await graphql(allKipsQuery)
+  const allCkip = await graphql(allCkipQuery)
+  const allKtrs = await graphql(allKtrQuery)
 
-  const sipsPath = './public/api/sips'
-  const sccpPath = './public/api/sccp'
+  const kipsPath = './public/api/kips'
+  const ckipPath = './public/api/ckip'
+  const ktrsPath = './public/api/ktrs'
 
   ;[
-    { path: sipsPath, result: allSips },
-    { path: sccpPath, result: allSccp },
+    { path: kipsPath, result: allKips },
+    { path: ckipPath, result: allCkip },
+    { path: ktrsPath, result: allKtrs },
   ].forEach(({ path, result }) => {
     if (!fs.existsSync(path)) fs.mkdirSync(path, { recursive: true })
 
@@ -104,9 +128,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       type: String
       status: String!
       author: String!
-      implementor: String
       proposal: String
-      release: String
       created: Date
       updated: Date
     }

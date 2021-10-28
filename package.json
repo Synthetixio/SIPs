@@ -1,9 +1,9 @@
 {
-  "name": "snx-sips",
+  "name": "kwenta-kips",
   "version": "1.0.0",
   "private": true,
-  "description": "snx-sips",
-  "author": "SynthetixIo",
+  "description": "Kwenta KIPs",
+  "author": "KwentaIo",
   "keywords": [
     "gatsby"
   ],
