@@ -27,6 +27,14 @@ Once the KIP has been implemented by either the protocol DAO or the KIP author a
 - **Rejected** - A propsal that has failed to reach a majority Elite Council vote in favour.
 - **Implemented** - A proposal that has been released to main-net.
 
+
+# Proposal Types 
+
+- **KIP** - A Kwenta Improvement Proposal outlines a change to be made to the Kwenta protocol. These are submitted to the Elite Council for voting and require a majority to pass.
+- **CKIP** - A Community Kwenta Improvement Proposal outlines a change to be made to the DAO which overrules the Elite Council. These proposals should only be used in the event that there's disagreement between the Elite Council and the Kwenta community. These are submitted to token holders for voting and require quorum (over 50% of the circulating supply) to pass.
+- **KTR** - A Kwenta Treasury Request outlines a request for funds from the treasuryDAO. These are submitted to the treasuryDAO and require a majority to pass. 
+
+
 # Validation
 
 KIPs must pass some validation tests.
