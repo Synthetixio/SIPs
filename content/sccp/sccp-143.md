@@ -11,7 +11,7 @@ type: Governance
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-The SCCP aims at increasing the ETH Wrappr max capacity and the lowering the minting fee in order to offset the positive ETH skew and aling the price of sUSD against other stables.
+The SCCP aims at increasing the ETH Wrappr max capacity and the lowering the minting fee in order to offset the positive ETH skew and align the price of sUSD against other stables.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
@@ -22,7 +22,7 @@ Increase the L2 ETH Capacity to 1,500 ETH and lower the minting fee to 5 bp, sta
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 Currently there is a 3 to 4m sUSD shortfall on the [uniswap pools](https://info.uniswap.org/#/optimism/tokens/0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9), this sccp aims at closing that gap while earning minters a substantial amount of fees and lowering the ETH skew on the debt pool.
-The proposed minting fee schedule is as follows:
+The proposed minting fee change schedule is as follows:
 - Change from 3.5% to 3%
 - Change from 3% to 2.5%
 - Change from 2.5% to 2%
