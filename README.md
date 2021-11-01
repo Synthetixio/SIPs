@@ -6,27 +6,26 @@ Kwenta Improvement Proposals (KIPs) describe standards for the Kwenta platform, 
 
 1.  Review [KIP-1](kips/kip-1.md).
 2.  Fork the repository by clicking "Fork" in the top right.
-3.  Add your KIP to your fork of the repository. There are templates for the
-    different proposal types: [KIP template](kip-x.md), [CKIP template](ckip-x.md), [KTR template](ktr-x.md).
-4.  Submit a Pull Request to Kwentas [KIPs repository](https://github.com/kwenta/KIPs).
+3.  Add your KIP to your fork of the repository. You can copy templates for [KIPs](kip-x.md), [CKIPs](kip-x.md), and [KTRs](kip-x.md).
+4.  Submit a Pull Request to Kwenta's [KIPs repository](https://github.com/kwenta/KIPs).
 
 Your first PR should be a first draft of the final KIP. It must meet the formatting criteria enforced by the build (largely, correct metadata in the header). An editor will manually review the first PR for a new KIP and assign it a number before merging it.
 
 If your KIP requires images, the image files should be included in a subdirectory of the `assets` folder for that KIP as follow: `assets/kip-X` (for kip **X**). When linking to an image in the KIP, use relative links such as `../assets/kip-X/image.png`.
 
-When you believe your KIP is ready to progress past the `Draft` phase, you should reach out to a Kwenta Council member on Discord. The Kwenta Council will schedule in a call with the KIP author to go through the KIP in more detail.
+When you believe your KIP is mature and ready to progress past the Draft phase, create a thread in the #governance channel in [Discord](https://discord.gg/Y32dAVMMwF) to discuss your KIP with the Elite Council and community. The Elite Council may schedule in a call with the KIP author to go through the KIP in more detail if necessarry.
 
-Once assessed, a KIP is moved into `Proposed`. Once the Kwenta Council has formally reviewed the KIP during the KIP presentation they can either move it to a vote or send it back to `Draft`. A vote is conducted within the Kwenta discord. If a vote by the Kwenta Council reaches a majority, the Kwenta is moved to `Approved`, otherwise it is `Rejected`.
+Once assessed, a KIP is moved into `Proposed` where the Elite Council will vote on the proposal via the Kwenta.eth Snapshot. If a vote by the Elite Council reaches a majority, the KIP is moved to `Approved`, otherwise it is `Rejected`.
 
-Once the KIP has been implemented the KIP is assigned the `Implemented` status.
+Once the KIP has been implemented by either the protocol DAO or the KIP author and relevant parties, the KIP is assigned the `Implemented` status.
 
-# KIP Statuses
+# Proposal Statuses
 
-- **Draft** - The initial state of an KIP while it is still being actively developed.
-- **Proposed** - A KIP that is awaiting a vote.
-- **Approved** - A KIP that has successfully reached a majority Kwenta Council vote in favour.
-- **Rejected** - A KIP that has failed to reach a majority Kwenta Council vote in favour.
-- **Implemented** - A KIP that has been released to mainnet.
+- **Draft** - The initial state of a new proposal before the Elite Council and core contributors have assessed it.
+- **Propsed** - This proposal is being voted on.
+- **Approved** - A proposal that has successfully reached a majority Elite Council vote in favour.
+- **Rejected** - A propsal that has failed to reach a majority Elite Council vote in favour.
+- **Implemented** - A proposal that has been released to main-net.
 
 # Proposal Types
 
