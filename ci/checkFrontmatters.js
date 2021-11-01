@@ -11,31 +11,36 @@ const snapshotIdRegex = /^https?:\/\/(snapshot.org).*\/([A-z0-9]{7,})$/
 const commonValidationSchema = Yup.object().shape({
   file: Yup.string().required(),
   title: Yup.string().required(),
-  type: Yup.string().oneOf(['Meta-Governance', 'Governance']).required(),
   proposal: Yup.string().matches(snapshotIdRegex),
   status: Yup.string().oneOf(statuses),
   author: Yup.string().required(),
-  implementor: Yup.string().nullable(),
-  release: Yup.string().nullable(),
   created: Yup.date().nullable(),
   updated: Yup.date().nullable(),
   requires: Yup.mixed().nullable(),
-  'discussions-to': Yup.string().nullable(),
 })
 
-const sipValidationSchema = commonValidationSchema
+const kipValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
-      sip: Yup.number().required(),
+      kip: Yup.number().required(),
     }),
   )
   .noUnknown()
   .strict()
 
-const sccpValidationSchema = commonValidationSchema
+const ckipValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
-      sccp: Yup.number().required(),
+      ckip: Yup.number().required(),
+    }),
+  )
+  .noUnknown()
+  .strict()
+
+const ktrValidationSchema = commonValidationSchema
+  .concat(
+    Yup.object().shape({
+      ktr: Yup.number().required(),
     }),
   )
   .noUnknown()
@@ -43,25 +48,35 @@ const sccpValidationSchema = commonValidationSchema
 
 ;(async () => {
   try {
-    const sips = await g('./content/sips/*.md')
-    const sccp = await g('./content/sccp/*.md')
+    const kips = await g('./content/kips/*.md')
+    const ckips = await g('./content/ckip/*.md')
+    const ktrs = await g('./content/ktrs/*.md')
 
-    // SIP
+    // KIP
     await Promise.all(
-      sips.map(async (file) => {
+      kips.map(async (file) => {
         const content = await fs.readFile(file, 'utf-8')
         const { attributes } = fm(content)
-        const castValues = sipValidationSchema.cast({ file, ...attributes })
-        return await sipValidationSchema.validate(castValues)
+        const castValues = kipValidationSchema.cast({ file, ...attributes })
+        return await kipValidationSchema.validate(castValues)
       }),
     )
-    // SCCP
+    // CKIP
     await Promise.all(
-      sccp.map(async (file) => {
+      ckips.map(async (file) => {
         const content = await fs.readFile(file, 'utf-8')
         const { attributes } = fm(content)
-        const castValues = sccpValidationSchema.cast({ file, ...attributes })
-        return await sccpValidationSchema.validate(castValues)
+        const castValues = ckipValidationSchema.cast({ file, ...attributes })
+        return await ckipValidationSchema.validate(castValues)
+      }),
+    )
+    // KTR
+    await Promise.all(
+      ktrs.map(async (file) => {
+        const content = await fs.readFile(file, 'utf-8')
+        const { attributes } = fm(content)
+        const castValues = ktrValidationSchema.cast({ file, ...attributes })
+        return await ktrValidationSchema.validate(castValues)
       }),
     )
   } catch (error) {
