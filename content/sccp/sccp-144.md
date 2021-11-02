@@ -21,7 +21,7 @@ With the expected release of the shorting contracts on optimism, this sccp aims 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-In order to enhance the user experience, this sccp disables opening of new shorts. Important to note that users with existing short positions can still interact with their positions and are not affected by this parameter change.
+In order to enhance the user experience, this sccp disables opening of new shorts on mainnet. Important to note that users with existing short positions can still interact with their positions and are not affected by this parameter change.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
