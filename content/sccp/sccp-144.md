@@ -3,11 +3,9 @@ sccp: 143
 title: Increase L2 ETH Wrappr Max cap to 2,200 ETH
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Implemented
+status: Vote_Pending
 created: 2021-11-04
 type: Governance
-proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/QmQRRVjFqS3p4zCzMGSCyNvRfB3eG8FUmGRdPq23WAd48y
 ---
 
 ## Simple Summary
