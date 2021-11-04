@@ -1,5 +1,5 @@
 ---
-sccp: 143
+sccp: 144
 title: Increase L2 ETH Wrappr Max cap to 2,200 ETH
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
