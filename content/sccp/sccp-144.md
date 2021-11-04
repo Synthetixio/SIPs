@@ -21,7 +21,7 @@ The SCCP aims at increasing the ETH Wrappr max capacity to 2,200 ETH due to the 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Currently the (https://stats.synthetix.io/)[stats] page shows that the debt pool has 3,200 worth of long ETH exposure, raising the ETH wrappr cap will result in that exposure being reduced to 1,000 ETH helping the debt pool remain stable regardless of crypto-prices. The risk here, is that some of that sETH will be converted to sUSD as more protocols go live on L2 and demand for synth liquidity increases further resulting in a negative ETH skew. However, this can be mitigated by having a stable coin wrappr (with lower fees), expected in the coming week, which incentivize folks to mint sUSD with a stablecoin rather than sETH.
+Currently the [stats](https://stats.synthetix.io/) page shows that the debt pool has 3,200 worth of long ETH exposure, raising the ETH wrappr cap will result in that exposure being reduced to 1,000 ETH helping the debt pool remain stable regardless of crypto-prices. The risk here, is that some of that sETH will be converted to sUSD as more protocols go live on L2 and demand for synth liquidity increases further resulting in a negative ETH skew. However, this can be mitigated by having a stable coin wrappr (with lower fees), expected in the coming week, which incentivize folks to mint sUSD with a stablecoin rather than sETH.
 Furthermore, the size of the debt pool is expected continue to grow into the future, which might offset a net short ETH exposure on the debt pool.
 
 ## Copyright
