@@ -3,7 +3,7 @@ sccp: 145
 title: Increase L2 ETH Wrappr Minting Fee to 250 bp
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Vote_Pending
+status: Implemented
 created: 2021-11-04
 type: Governance
 ---

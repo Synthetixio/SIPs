@@ -3,7 +3,7 @@ sccp: 142
 title: Increase L2 Inflationary Rewards to 75k
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/e9c5Cs'
-status: Approved
+status: Implemented
 created: 2021-10-17
 type: Governance
 ---
