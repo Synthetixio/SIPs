@@ -1,6 +1,6 @@
 ---
 sccp: 147
-title: Increasing the cap on the DAI wrappr to 30m and lower the fee on DAI 
+title: Increasing the cap on the DAI wrappr to 30m and lower the minting fee on DAI to 5 bp
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Vote_Pending
