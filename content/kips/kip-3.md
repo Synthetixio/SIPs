@@ -29,14 +29,14 @@ Inflationary rewards are distributed continuously to stakers based on two factor
 
 The inflationary rewards will be split into two types of rewards: pure inflationary rewards and trading rewards (determined by a trading score). This proposal recommends allocating 80% of inflation to the pure inflationary (𝜌) rewards. This will enable the treasury and growth fund, when staked, to retain a proportion of the supply, better preparing the protocol to operate sustainably and provide additional incentives for trading, DAO roles, marketing, etc. 
 
-tbd
+https://github.com/Kwenta/KIPs/commit/f1b44a9fb9f065851dc875d6a08d3db163100264#commitcomment-59649441
 
 The remaining 20% of inflation will be distributed to KWENTA stakers according to a
 rewards score that is a function of staking participation and trading activity. The rewards
 score will be a Cobb-Douglas function with exponential weighting (that ideally will favor
 trading activity):
 
-tbd
+https://github.com/Kwenta/KIPs/commit/f1b44a9fb9f065851dc875d6a08d3db163100264#commitcomment-59649450
 
 It’s important to note that 𝑓𝑒𝑒𝑠_𝑝𝑎𝑖𝑑 is used here rather than 𝑡𝑟𝑎𝑑𝑖𝑛𝑔_𝑣𝑜𝑙𝑢𝑚𝑒 to prevent
 abuse. Since different markets will have lower fees than others (e.g. FOREX markets
@@ -45,10 +45,12 @@ large volumes in low fee markets. Using 𝑓𝑒𝑒𝑠_𝑝𝑎𝑖𝑑 levels
 
 An individual staker’s trading rewards are then evaluated as:
 
-tbd
+https://github.com/Kwenta/KIPs/commit/f1b44a9fb9f065851dc875d6a08d3db163100264#commitcomment-59649458
 
 Configurable Values
+
 • 𝜌 – share of inflation allocated to pure staking rewards (default = 0.8)
+
 • 𝑎 – weight applied to 𝑓𝑒𝑒𝑠_𝑝𝑎𝑖𝑑 in 𝑟𝑒𝑤𝑎𝑟𝑑𝑠_𝑠𝑐𝑜𝑟𝑒 calculation (default = 0.7)
 
 Inflationary KWENTA rewards are locked for a period of 1 year but will have transferability so that the protocol can redirect inflationary rewards earned from the growth fund and treasury as needed. Once the one year vesting period is complete, KWENTA can be withdrawn from the staking portal and freely used at the stakers’ discretion. KWENTA rewards that are vesting can be staked to increase voting power and weekly rewards.
