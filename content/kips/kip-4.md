@@ -50,9 +50,9 @@ The 20% reserved for the Kwenta treasury will be staked indefinitely. The yield 
 
 **Distribution:**
 
-Synthetix stakers - SNX stakers who have met the requirements (tbd) will be allocated 30% of the initial token supply based. 
+Synthetix stakers - SNX stakers who have met the requirements (tbd) will be allocated 30% of the initial token supply. 
 
-Synth Traders - Addresses that have exchanged Synths whch me the requirements (tbd) will be allocated 30% of the initial token supply based. 
+Synth Traders - Addresses that have exchanged Synths whch me the requirements (tbd) will be allocated 5% of the initial token supply. 
 
 The remaining KWENTA will be allocated to the treasury for further management. 
 
