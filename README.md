@@ -21,10 +21,10 @@ Once the KIP has been implemented by either the protocol DAO or the KIP author a
 
 # Proposal Statuses
 
-- **Draft** - The initial state of a new proposal before the Elite Council and core contributors have assessed it.
-- **Propsed** - This proposal is being voted on.
+- **Draft** - The initial state of a new proposal before the Elite Council and Core Contributors have assessed it.
+- **Proposed** - This proposal is being voted on.
 - **Approved** - A proposal that has successfully reached a majority Elite Council vote in favour.
-- **Rejected** - A propsal that has failed to reach a majority Elite Council vote in favour.
+- **Rejected** - A proposal that has failed to reach a majority Elite Council vote in favour.
 - **Implemented** - A proposal that has been released to main-net.
 
 # Proposal Types
