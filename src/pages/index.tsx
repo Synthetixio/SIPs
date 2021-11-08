@@ -6,7 +6,10 @@ import Main from '../layout/Main'
 // markup
 const IndexPage = () => (
   <Main>
-    <Helmet title="Kwenta Improvement Proposals" />
+    <Helmet title="Kwenta Improvement Proposals">
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="alt" href="/favicon.ico" />
+    </Helmet>
     <h1 className="page-heading">
       Kwenta Improvement Proposals{' '}
       {/* <a
