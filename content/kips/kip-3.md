@@ -29,14 +29,14 @@ Inflationary rewards are distributed continuously to stakers based on two factor
 
 The inflationary rewards will be split into two types of rewards: pure inflationary rewards and trading rewards (determined by a trading score). This proposal recommends allocating 80% of inflation to the pure inflationary (𝜌) rewards. This will enable the treasury and growth fund, when staked, to retain a proportion of the supply, better preparing the protocol to operate sustainably and provide additional incentives for trading, DAO roles, marketing, etc. 
 
-https://github.com/Kwenta/KIPs/commit/f1b44a9fb9f065851dc875d6a08d3db163100264#commitcomment-59649441
+<img width="590" alt="Screen Shot 2021-11-08 at 12 01 20 PM" src="https://user-images.githubusercontent.com/65911685/140786585-d8da9ab4-0a0a-412a-bf61-75f5fe413fe3.png">
 
 The remaining 20% of inflation will be distributed to KWENTA stakers according to a
 rewards score that is a function of staking participation and trading activity. The rewards
 score will be a Cobb-Douglas function with exponential weighting (that ideally will favor
 trading activity):
 
-https://github.com/Kwenta/KIPs/commit/f1b44a9fb9f065851dc875d6a08d3db163100264#commitcomment-59649450
+<img width="536" alt="Screen Shot 2021-11-08 at 12 01 35 PM" src="https://user-images.githubusercontent.com/65911685/140786676-db7ebfe1-c689-48b9-b822-33e3c53829cd.png">
 
 It’s important to note that 𝑓𝑒𝑒𝑠_𝑝𝑎𝑖𝑑 is used here rather than 𝑡𝑟𝑎𝑑𝑖𝑛𝑔_𝑣𝑜𝑙𝑢𝑚𝑒 to prevent
 abuse. Since different markets will have lower fees than others (e.g. FOREX markets
@@ -45,7 +45,7 @@ large volumes in low fee markets. Using 𝑓𝑒𝑒𝑠_𝑝𝑎𝑖𝑑 levels
 
 An individual staker’s trading rewards are then evaluated as:
 
-https://github.com/Kwenta/KIPs/commit/f1b44a9fb9f065851dc875d6a08d3db163100264#commitcomment-59649458
+<img width="568" alt="Screen Shot 2021-11-08 at 12 01 44 PM" src="https://user-images.githubusercontent.com/65911685/140786730-236a3c6b-d096-42a6-8803-aac307ba837d.png">
 
 Configurable Values
 
