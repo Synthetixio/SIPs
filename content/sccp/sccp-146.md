@@ -3,9 +3,11 @@ sccp: 146
 title: Disabling New Shorts From Being Open Mainnet
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Vote_Pending
+status: Implemented
 created: 2021-11-02
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmUULrbbWVkvurLyc9fGneaNFCepGzMs5xDQLCXUVecaCs
 ---
 
 ## Simple Summary
