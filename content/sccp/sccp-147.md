@@ -7,7 +7,7 @@ status: Implemented
 created: 2021-11-05
 type: Governance
 proposal: >-
-  https://gov.synthetix.io/#/proposal/QmQnLDMTDXWbNomwJoB3scHkLMYPj1Dsgw9YpG5KhcvzAw
+  https://snapshot.org/#/snxgov.eth/proposal/QmQnLDMTDXWbNomwJoB3scHkLMYPj1Dsgw9YpG5KhcvzAw
 ---
 
 ## Simple Summary
