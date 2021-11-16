@@ -1,6 +1,6 @@
 ---
 kip: 3
-title: Kwenta Staking Mechainsim
+title: Kwenta Staking Mechanisim
 status: Draft
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2021-11-08
