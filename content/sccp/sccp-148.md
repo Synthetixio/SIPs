@@ -6,6 +6,8 @@ discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-11-16
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/Qmb19qFiTVVwY6rmHWRvK7vRLxfLgXxM8aESmfYDacJHyu
 ---
 
 ## Simple Summary
