@@ -22,7 +22,7 @@ This SCCP proposes to implement the following:
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
 
-In order to begin the process of unwinding away from the DAI Wrappr, this sccp proposes to decrease the cap to 0 as to disable minting, decrease the burning fee to 0 to allow arbers to burn DAI at the lowest cost possible and decrease the minting fee on the LUSD wrappr to 0 as to facilitate the transitioning the collateral pool from DAI to LUSD.
+In order to begin the process of unwinding away from the DAI Wrappr, this sccp proposes to decrease the cap on the DAI Wrappr to 0, effectively disabling minting, decrease the burn fee to 0 to allow arbers to burn DAI at the lowest cost possible and decrease the minting fee on the LUSD wrappr to 0 as to facilitate transitioning the external collateral pool from DAI to LUSD.
 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
