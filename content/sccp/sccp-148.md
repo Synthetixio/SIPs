@@ -1,9 +1,9 @@
 ---
 sccp: 148
-title: Increase Cap on LUSD Wrappr to 30 million sUSD
+title: Increase Cap on LUSD Wrappr to 30 million sUSD On L2
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Vote_Pending
+status: Implemented
 created: 2021-11-16
 type: Governance
 ---
@@ -11,7 +11,7 @@ type: Governance
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase the LUSD wrappr cap to 30 million sUSD.
+This SCCP proposes to increase the LUSD wrappr cap to 30 million sUSD on L2.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
