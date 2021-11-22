@@ -24,7 +24,7 @@ This SCCP proposes to implement the following:
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
 
-This SCCP paramterizes the wrappr contracts as to allow the process of unwinding away some of the ETH locked in the ETH Wrappr, which resulted in a negative skew on the debt pool on L1, and enable external collateral cross-asset swaps on synthetix with the help of wrapprs.
+This SCCP parameterizes the wrappr contracts as to allow the process of unwinding away some of the ETH locked in the ETH Wrappr, which resulted in a negative skew on the debt pool on L1, and enable external collateral cross-asset swaps on synthetix with the help of wrapprs.
 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
