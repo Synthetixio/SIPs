@@ -1,6 +1,6 @@
 ---
 sccp: 151
-title: On L1 - Decrease Cap on ETH Wrappr to 75k / Increase Cap on LUSD Wrappr to 50 Million sUSD / Decrease Burning Fee on ETH Wrappr to 0 / Decrease Minting Fee on LUSD Wrappr to 0
+title: On L1 - Decrease Cap on ETH Wrappr to 75k ETH / Increase Cap on LUSD Wrappr to 50 Million sUSD / Decrease Burning Fee on ETH Wrappr to 0 / Decrease Minting Fee on LUSD Wrappr to 0
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Draft
