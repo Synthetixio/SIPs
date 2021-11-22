@@ -33,7 +33,7 @@ Once these parameters are set, traders will be able to trade from ETH to LUSD on
 - Trade stables into LUSD (on 1inch)
 - Trade LUSD to sUSD (with LUSD wrappr at 0 fee)
 - Trade sUSD to sETH (with SNX Atomic contract at 25 bp fee)
-- Trade sETH to ETH (unwrappring ETH at 0 fee)
+- Trade sETH to ETH (unwrapping ETH at 0 fee)
 
 
 ## Copyright
