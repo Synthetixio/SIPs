@@ -13,7 +13,7 @@ A proposal outlining a structure for the Product Elite role within the Kwenta DA
 
 ## Abstract
 
-Build a curated group of up to five individuals that work directly with Kwenta CC’s to provide structured feedback to the developers during the implementation of a new KIP. Product Elites will be responsible for finding opportunities to improve the product, providing feedback, approving designs, and conducting testing.
+Build a curated group of up to five individuals that work directly with Kwenta Core Contributor’s (CCs) to provide structured feedback to the developers during the implementation of a new KIP. Product Elites will be responsible for finding opportunities to improve the product, providing feedback, approving designs, and conducting testing.
 
 ## Motivation
 
@@ -34,9 +34,9 @@ Elite Council members can add and remove Product Elites as they see fit. Product
 2. Discuss with Core Contributors possible product improvements and/or design ideas that render Kwenta more intuitive.
 3. Maintaining an active role within the ecosystem to stay aware of recurring feedback on the functionality of Kwenta products. Initiating discourse within the community to promote improving Protocol.
 
-Product Elites will have a discord channel where the Kwenta CCs (Core Contributors) can communicate open tasks. PEs might be called upon to work individually or in groups on available tasks. If Product Elites know they won’t be active for some time or have something come up, they should notify and discuss their situation with someone on the Elite Council. The Elite Council retains the right to remove Product Elites that become unresponsive or counterproductive in this role. The Core Contributors will monitor Product Elite performance and provide recommendations to the Elite Council as needed. 
+Product Elites will have a discord channel where the Kwenta CCs can communicate open tasks. PEs might be called upon to work individually or in groups on available tasks. If Product Elites know they won’t be active for some time or have something come up, they should notify and discuss their situation with someone on the Elite Council. The Elite Council retains the right to remove Product Elites that become unresponsive or counterproductive in this role. The CCs will monitor Product Elite performance and provide recommendations to the Elite Council as needed. 
 
-Once a KWENTA token has been launched, a compensation mechanism based on performance will be implemented by the Elite Council. Performance will be measured in terms of delivery regarding implementation of new KIPs, design feedback provided, functionality feedback provided, and other opportunities that arise either through independent Product Elite initiative or tasks organized by Core Contributors. The Elite Council will establish a monthly budget with the treasuryDAO and retroactively compensate Product Elites at the end of each month if payroll is applicable. Compensation for each contribution from Product Elites will vary based on the importance and demand a task includes. 
+Once a KWENTA token has been launched, a compensation mechanism based on performance will be implemented by the Elite Council. Performance will be measured in terms of delivery regarding implementation of new KIPs, design feedback provided, functionality feedback provided, and other opportunities that arise either through independent Product Elite initiative or tasks organized by CCs. The Elite Council will establish a monthly budget with the treasuryDAO and retroactively compensate Product Elites at the end of each month if payroll is applicable. Compensation for each contribution from Product Elites will vary based on the importance and demand a task includes. 
 
 
 ## Copyright
