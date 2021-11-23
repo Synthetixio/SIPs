@@ -1,6 +1,6 @@
 ---
 sccp: 150
-title: On L2 - Decrease Cap on DAI Wrappr to 0 / Decrease DAI Wrappr Burn Fee to 0 / Decrease LUSD Mint Fee to 0
+title: Wrappr Paramter Changes (L2)
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Draft
