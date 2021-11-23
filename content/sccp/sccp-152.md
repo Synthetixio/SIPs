@@ -1,7 +1,7 @@
 ---
 network: L2
 sccp: 152
-title: Increase LUSD Wrappr cap to 50m sUSD
+title: Increase LUSD Wrappr cap to 50m sUSD (L2)
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Vote_Pending
@@ -22,8 +22,8 @@ This SCCP proposes to increase the cap on the LUSD wrappr to 50 million sUSD in 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The DAI wrappr currently holding 30 million DAI need to be unwound as per [SCCP-150](https://sips-geil88lvh-synthetixio.vercel.app/sccp/sccp-150/) while the LUSD wrappr has around sUSD 25 million worth of capacity.
-Therefore increasing the LUSD wrappr to 50 million sUSD will allow to unwind the collateral in the DAI wrappr while maintaining a certain amount of buffer that allows for stability of the peg.
+The DAI wrappr, which currently holds 30 million DAI, needs to be unwound as per [SCCP-150](https://sips-geil88lvh-synthetixio.vercel.app/sccp/sccp-150/). However, the LUSD wrappr capacity is around sUSD 25 million sUSD.
+Therefore, this SCCP proposes to increase the LUSD wrappr to 50 million sUSD, which will allow us to unwind the collateral in the DAI wrappr while maintaining a certain amount of capacity buffer in the stable wrappr.
 
 
 ## Copyright
