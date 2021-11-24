@@ -3,7 +3,7 @@ sccp: 150
 title: Wrappr Paramter Changes (L2)
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Draft
+status: Approved
 created: 2021-11-18
 type: Governance
 ---
