@@ -1,11 +1,14 @@
 ---
+network: L2
 sccp: 150
-title: Wrappr Paramter Changes (L2)
+title: Wrappr Parameter Changes (L2)
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Approved
 created: 2021-11-18
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmcZhvsXe8GJrbs4cXMSBtXKsibwrGcixmCBc7fk5kQ9MM
 ---
 
 ## Simple Summary

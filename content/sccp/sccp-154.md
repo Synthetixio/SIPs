@@ -4,9 +4,11 @@ sccp: 154
 title: Include sEUR to Atomic Exchanges
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Draft
+status: Vote_Pending
 created: 2021-11-24
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmdzjrmCygXM9fT25RDnBx45CXh2vEo7jGwnAHN6Hr3JYv
 ---
 
 ## Simple Summary
