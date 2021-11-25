@@ -1,7 +1,7 @@
 ---
 sip: 54
 title: Limit Orders
-status: Implemented
+status: Rejected
 author: 'Tom Howard (@thowar2), Nour Haridy (@nourharidy)'
 discussions-to: Discord - limit-orders
 created: 2020-04-27T00:00:00.000Z
