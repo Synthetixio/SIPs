@@ -4,7 +4,7 @@ sccp: 152
 title: Increase LUSD Wrappr cap to 50m sUSD (L2)
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Approved
+status: Implemented
 created: 2021-11-23
 type: Governance
 proposal: >-
