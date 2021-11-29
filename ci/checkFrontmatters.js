@@ -27,6 +27,7 @@ const sipValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
       sip: Yup.number().required(),
+      network: Yup.string().required(),
     }),
   )
   .noUnknown()
