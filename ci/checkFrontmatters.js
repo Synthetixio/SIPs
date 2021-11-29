@@ -66,6 +66,7 @@ const sccpValidationSchema = commonValidationSchema
       }),
     )
   } catch (error) {
+    console.log(error)
     console.error({
       value: error.value,
       errors: error.errors,
