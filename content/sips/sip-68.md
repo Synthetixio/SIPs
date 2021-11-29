@@ -1,5 +1,6 @@
 ---
 sip: 68
+network: L1
 title: Minor enhancements to StakingRewards.sol
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Anton Jurisevic (@zyzek)'

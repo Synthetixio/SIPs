@@ -1,5 +1,6 @@
 ---
 sip: 92
+network: L1
 title: Historical iSynths Pricing Tracks When Last Frozen
 status: Implemented
 author: Justin J Moses (@justinjmoses)

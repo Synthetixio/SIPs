@@ -1,5 +1,6 @@
 ---
 sip: 32
+network: L1
 title: Chainlink Oracles Phase 1 - Forex & Commodities
 status: Implemented
 author: Justin J Moses (@justinjmoses)

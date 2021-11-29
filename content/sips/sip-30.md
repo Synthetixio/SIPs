@@ -1,5 +1,6 @@
 ---
 sip: 30
+network: L1
 title: Deprecate ERC223 from SNX and all Synths.
 status: Implemented
 author: Clinton Ennis (@hav-noms)

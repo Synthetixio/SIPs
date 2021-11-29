@@ -1,5 +1,6 @@
 ---
 sip: 16
+network: L1
 title: Improved Upgrades - Utilise Proxies internally
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'

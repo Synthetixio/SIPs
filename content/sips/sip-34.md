@@ -1,5 +1,6 @@
 ---
 sip: 34
+network: L1
 title: Disable sMKR and iMKR
 status: Implemented
 author: Spreek (@Spreek)

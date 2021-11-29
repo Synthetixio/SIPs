@@ -1,5 +1,6 @@
 ---
 sip: 85
+network: L1
 title: Ether Collateral v0.3
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'

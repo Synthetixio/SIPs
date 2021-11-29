@@ -1,5 +1,6 @@
 ---
 sip: 87
+network: L1
 title: Add iETH incentive to RewardsDistribution
 status: Implemented
 author: Clinton Ennis (@hav-noms)

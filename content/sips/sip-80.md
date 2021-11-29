@@ -1,5 +1,6 @@
 ---
 sip: 80
+network: L1
 title: Synthetic Futures
 status: Feasibility
 author: 'Anton Jurisevic (@zyzek), Jackson Chan (@jacko125), Kain Warwick (@kaiynne)'

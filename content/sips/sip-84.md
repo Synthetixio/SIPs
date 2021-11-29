@@ -1,5 +1,6 @@
 ---
 sip: 84
+network: L1
 title: Pause Synths Below Open Interest Threshold
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125)'

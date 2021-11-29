@@ -1,5 +1,6 @@
 ---
 sip: 54
+network: L1
 title: Limit Orders
 status: Rejected
 author: 'Tom Howard (@thowar2), Nour Haridy (@nourharidy)'

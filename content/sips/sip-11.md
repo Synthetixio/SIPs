@@ -1,5 +1,6 @@
 ---
 sip: 11
+network: L1
 title: Allow fee period to be closed by any address
 status: Implemented
 author: Nocturnalsheet (@nocturnalsheet)

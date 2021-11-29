@@ -1,5 +1,6 @@
 ---
 sip: 46
+network: L1
 title: Address Resolver Gas Improvements
 status: Implemented
 author: Justin J Moses (@justinjmoses)

@@ -1,5 +1,6 @@
 ---
 sip: 8
+network: L1
 title: sETH Uniswap Pool Staking Incentives
 status: Implemented
 author: Kain Warwick (@kaiynne)

@@ -1,5 +1,6 @@
 ---
 sip: 60
+network: L1
 title: New Escrow Contract & Migration
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'

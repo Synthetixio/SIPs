@@ -1,5 +1,6 @@
 ---
 sip: 58
+network: L1
 title: Emit every fee reclamation outcome during trade settlement
 status: Implemented
 author: Jackson Chan (@jacko125)

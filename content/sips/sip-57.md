@@ -1,5 +1,6 @@
 ---
 sip: 57
+network: L1
 title: Permanent Read-only Proxy for Address Resolver
 status: Implemented
 author: Justin J Moses (@justinjmoses)

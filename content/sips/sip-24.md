@@ -1,5 +1,6 @@
 ---
 sip: 24
+network: L1
 title: Terminal SNX Inflation
 status: Implemented
 author: >-

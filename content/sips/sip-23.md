@@ -1,5 +1,6 @@
 ---
 sip: 23
+network: L1
 title: Inflation Smoothing
 status: Implemented
 author: 'Deltatiger (@deltatigernz), Vance Spencer(@frameworkvance)'

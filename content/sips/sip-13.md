@@ -1,5 +1,6 @@
 ---
 sip: 13
+network: L1
 title: Account Merging
 status: Rejected
 author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'

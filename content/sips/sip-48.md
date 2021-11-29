@@ -1,5 +1,6 @@
 ---
 sip: 48
+network: L1
 title: Allow Views to Return When Rates Are Stale
 status: Implemented
 author: Justin J Moses (@justinjmoses)

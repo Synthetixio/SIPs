@@ -1,5 +1,6 @@
 ---
 sip: 76
+network: L1
 title: Integrate Warning Flags to Disable Transactions
 status: Implemented
 author: Justin J Moses <@justinjmoses>

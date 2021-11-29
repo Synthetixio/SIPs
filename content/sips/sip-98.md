@@ -1,5 +1,6 @@
 ---
 sip: 98
+network: L1
 title: Re-implement double exchange fee rate on swing trades
 author: 'Jackson Chan (@jacko125), Clinton Ennis (@hav-noms)'
 discussions-to: 'https://discord.gg/CDTvjHY'

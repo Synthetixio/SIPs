@@ -1,5 +1,6 @@
 ---
 sip: 37
+network: L1
 title: Fee Reclamations and Rebates
 status: Implemented
 author: Justin J Moses (@justinjmoses)

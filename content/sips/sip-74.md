@@ -1,5 +1,6 @@
 ---
 sip: 74
+network: L1
 title: Binary Markets with custom questions
 status: Rejected
 author: 'Danijel (@dgornjakovic), Farmwell (@farmwell)'

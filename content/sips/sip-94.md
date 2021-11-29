@@ -1,5 +1,6 @@
 ---
 sip: 94
+network: L1
 title: Virtual Synth Fix to Ensure Settlement Is Connected
 status: Implemented
 author: Justin J Moses (@justinjmoses)

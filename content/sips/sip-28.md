@@ -1,5 +1,6 @@
 ---
 sip: 28
+network: L1
 title: Audit Remediations
 status: Rejected
 author: 'Garth Travers (@garthtravers), Clinton Ennis (@hav-noms)'

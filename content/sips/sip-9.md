@@ -1,5 +1,6 @@
 ---
 sip: 9
+network: L1
 title: Change Fee Claim Window To One Period
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'

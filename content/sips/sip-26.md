@@ -1,5 +1,6 @@
 ---
 sip: 26
+network: L1
 title: Max Gas on token fallback
 status: Implemented
 author: Clinton Ennis (@hav-noms)

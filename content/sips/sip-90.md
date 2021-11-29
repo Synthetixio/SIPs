@@ -1,5 +1,6 @@
 ---
 sip: 90
+network: L1
 title: Transition SIPs/SCCPs to Snapshot Governance
 status: Implemented
 author: Andy T CF (@andytcf)

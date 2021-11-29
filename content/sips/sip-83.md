@@ -1,5 +1,6 @@
 ---
 sip: 83
+network: L1
 title: Total Issued Synths (Debt pool) Snapshots
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125), Anton Jurisevic (@zyzek)'

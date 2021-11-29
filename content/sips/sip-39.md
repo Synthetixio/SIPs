@@ -1,5 +1,6 @@
 ---
 sip: 39
+network: L1
 title: Set up GrantsDAO
 status: Implemented
 author: Garth Travers (@garthtravers)

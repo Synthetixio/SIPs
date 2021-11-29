@@ -1,5 +1,6 @@
 ---
 sip: 38
+network: L1
 title: Charge Fees During Purge
 status: Implemented
 author: Justin J Moses (@justinjmoses)

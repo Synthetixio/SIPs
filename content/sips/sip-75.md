@@ -1,5 +1,6 @@
 ---
 sip: 75
+network: L1
 title: Keeper Synths - Phase 1
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Justin J Moses (@justinjmoses)'

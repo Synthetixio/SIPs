@@ -1,5 +1,6 @@
 ---
 sip: 22
+network: L1
 title: Add sDEFI Synth
 status: Implemented
 author: Garth Travers (@garthtravers)

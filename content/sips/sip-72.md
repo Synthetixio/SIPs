@@ -1,5 +1,6 @@
 ---
 sip: 72
+network: L1
 title: Add More Assets to the Binary Options Markets
 status: Rejected
 author: psybull (@psybull)

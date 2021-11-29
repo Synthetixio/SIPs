@@ -1,5 +1,6 @@
 ---
 sip: 44
+network: L1
 title: Synthetix & Synth Disabling
 status: Implemented
 author: Justin J Moses (@justinjmoses)

@@ -1,5 +1,6 @@
 ---
 sip: 86
+network: L1
 title: ExchangeRates Chainlink Aggregator V2V3
 status: Implemented
 author: Clement Balestrat (@clementbalestrat)

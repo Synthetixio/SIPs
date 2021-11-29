@@ -1,5 +1,6 @@
 ---
 sip: 20
+network: L1
 title: Gas Optimisations
 author: Clinton Ennis (@hav-noms)
 discussions-to: 'https://discord.gg/CDTvjHY'

@@ -1,5 +1,6 @@
 ---
 sip: 65
+network: L1
 title: Decentralized Circuit Breaker
 status: Implemented
 author: Justin J Moses (@justinjmoses)

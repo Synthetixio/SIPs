@@ -1,5 +1,6 @@
 ---
 sip: 52
+network: L1
 title: Add Next Price to Fee Reclamation
 status: Rejected
 author: Justin J Moses (@justinjmoses)

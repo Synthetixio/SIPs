@@ -1,5 +1,6 @@
 ---
 sip: 59
+network: L1
 title: Delegated Migrator
 status: Rejected
 author: Justin J Moses (@justinjmoses)

@@ -1,5 +1,6 @@
 ---
 sip: 61
+network: L1
 title: Keeper Synths
 status: Rejected
 author: 'Kain Warwick (@kaiynne), Justin Moses (@justinjmoses)'

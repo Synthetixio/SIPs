@@ -1,5 +1,6 @@
 ---
 sip: 47
+network: L1
 title: Prevent Empty Exchanges
 status: Implemented
 author: Justin J Moses (@justinjmoses)

@@ -1,5 +1,6 @@
 ---
 sip: 62
+network: L1
 title: Futures reference price methodology
 status: Implemented
 author: >-

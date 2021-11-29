@@ -1,5 +1,6 @@
 ---
 sip: 64
+network: L1
 title: Flexible Contract Storage
 status: Implemented
 author: Justin J Moses (@justinjmoses)

@@ -1,5 +1,6 @@
 ---
 sip: 66
+network: L1
 title: Reduce gas of SNX transfers for non-stakers
 status: Implemented
 author: Justin J Moses (@justinjmoses)

@@ -1,5 +1,6 @@
 ---
 sip: 35
+network: L1
 title: Skinny Ether Collateral
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'

@@ -1,5 +1,6 @@
 ---
 sip: 45
+network: L1
 title: Deprecate ERC223 sUSD Deposits from Depot
 author: Clinton Ennis (@hav-noms)
 discussions-to: 'https://discord.gg/DQ8ehX4'

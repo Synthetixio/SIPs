@@ -1,5 +1,6 @@
 ---
 sip: 89
+network: L1
 title: Virtual Synths
 status: Implemented
 author: Justin J Moses (@justinjmoses)
