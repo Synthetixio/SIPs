@@ -1,7 +1,7 @@
 ---
 sccp: 155
 title: Ambassador Council modification
-network: L1/L2
+network: L1-L2
 status: Draft
 type: Meta-Governance
 author: Milli3
