@@ -1,5 +1,6 @@
 ---
 sip: 4
+network: L1
 title: Change Fee Claim Window
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'

@@ -1,5 +1,6 @@
 ---
 sip: 40
+network: L1
 title: Time lock on burning after minting
 status: Implemented
 author: >-

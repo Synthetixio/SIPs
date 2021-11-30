@@ -1,5 +1,6 @@
 ---
 sip: 31
+network: L1
 title: sETH LP rewards contract
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Anton Bukov (@k06a)'

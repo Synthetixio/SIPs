@@ -1,5 +1,6 @@
 ---
 sip: 7
+network: L1
 title: Oracle Trading Locks
 status: Implemented
 author: 'Jackson Chan (@jacko125), Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'

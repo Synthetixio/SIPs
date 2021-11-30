@@ -1,5 +1,6 @@
 ---
 sip: 49
+network: L1
 title: Add new synths for Hadar release
 status: Implemented
 author: Nocturnalsheet (@nocturnalsheet)

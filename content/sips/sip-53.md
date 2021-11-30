@@ -1,5 +1,6 @@
 ---
 sip: 53
+network: L1
 title: Binary Options
 status: Implemented
 author: Anton Jurisevic (@zyzek)

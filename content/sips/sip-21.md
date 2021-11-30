@@ -1,5 +1,6 @@
 ---
 sip: 21
+network: L1
 title: Double exchange fee rate on swing trades
 author: Clinton Ennis (@hav-noms)
 discussions-to: 'https://discord.gg/CDTvjHY'

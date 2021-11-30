@@ -1,5 +1,6 @@
 ---
 sip: 51
+network: L1
 title: sETH & sUSD Liquidity Incentive
 status: Implemented
 author: Nocturnalsheet (@nocturnalsheet)

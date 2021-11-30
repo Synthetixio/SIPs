@@ -1,5 +1,6 @@
 ---
 sip: 33
+network: L1
 title: Deprecate XDR synth from Synthetix.
 status: Implemented
 author: 'Nocturnalsheet (@nocturnalsheet), Clinton Ennis (@hav-noms)'

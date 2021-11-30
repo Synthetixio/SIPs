@@ -1,5 +1,6 @@
 ---
 sip: 3
+network: L1
 title: Purgeable Synths
 status: Implemented
 author: Clinton Ennis (@hav-noms)

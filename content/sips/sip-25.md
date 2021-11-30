@@ -1,5 +1,6 @@
 ---
 sip: 25
+network: L1
 title: Decouple Gas Limiter from Oracle
 status: Implemented
 author: Justin J. Moses (@justinjmoses)

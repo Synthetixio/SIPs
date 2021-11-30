@@ -1,5 +1,6 @@
 ---
 sip: 70
+network: L1
 title: Automated weekly trading competition
 status: Rejected
 author: Danijel (@dgornjakovic)

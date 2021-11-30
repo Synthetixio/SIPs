@@ -1,5 +1,6 @@
 ---
 sip: 93
+network: L1
 title: Supersede SIP-90 to Delegated Council Governance
 status: Implemented
 author: Andy T CF (@andytcf)

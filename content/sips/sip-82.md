@@ -1,5 +1,6 @@
 ---
 sip: 82
+network: L1
 title: Synthetix Keeper System
 status: Rejected
 author: 'Jackson Chan (@jacko125), Justin Moses (@justinjmoses)'

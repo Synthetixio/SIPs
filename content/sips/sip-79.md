@@ -1,5 +1,6 @@
 ---
 sip: 79
+network: L1
 title: Deferred Transaction Gas Tank
 status: Rejected
 author: >-

@@ -1,5 +1,6 @@
 ---
 sip: 55
+network: L1
 title: Synth Circuit Breaker (Phase One)
 status: Implemented
 author: 'Jackson Chan (@jacko125), Justin J Moses (@justinjmoses)'

@@ -1,5 +1,6 @@
 ---
 sip: 10
+network: L1
 title: Upgrade Delegate Powers
 author: Nocturnalsheet (@nocturnalsheet)
 discussions-to: 'https://discord.gg/CDTvjHY'

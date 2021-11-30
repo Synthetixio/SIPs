@@ -1,5 +1,6 @@
 ---
 sip: 81
+network: L1
 title: Remove Centralized Oracle
 status: Rejected
 author: Justin J Moses (@justinjmoses)

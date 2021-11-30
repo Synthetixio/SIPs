@@ -1,5 +1,6 @@
 ---
 sip: 69
+network: L1
 title: Update Index Synths
 status: Implemented
 author: Daryl Lau (@daryllautk)

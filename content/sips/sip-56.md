@@ -1,5 +1,6 @@
 ---
 sip: 56
+network: L1
 title: Differential Fees
 status: Implemented
 author: Clinton Ennis (@hav-noms)

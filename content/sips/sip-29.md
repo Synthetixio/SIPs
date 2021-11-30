@@ -1,5 +1,6 @@
 ---
 sip: 29
+network: L1
 title: 'Issue, burn and claim only in sUSD'
 status: Implemented
 author: Justin J Moses (@justinjmoses)

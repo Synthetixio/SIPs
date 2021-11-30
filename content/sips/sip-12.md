@@ -1,5 +1,6 @@
 ---
 sip: 12
+network: L1
 title: Max gas price for exchange transactions
 status: Implemented
 author: >-

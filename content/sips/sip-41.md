@@ -1,5 +1,6 @@
 ---
 sip: 41
+network: L1
 title: ProtocolDAO phase zero
 status: Implemented
 author: 'Garth Travers (@garthtravers), Kain Warwick (@kaiynne)'

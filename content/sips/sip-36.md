@@ -1,5 +1,6 @@
 ---
 sip: 36
+network: L1
 title: 'Chainlink Oracles Phase 2 - Cryptocurrencies, indexes'
 status: Implemented
 author: 'Garth Travers (@garthtravers), Justin J Moses (@justinjmoses)'

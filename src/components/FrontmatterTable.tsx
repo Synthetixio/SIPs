@@ -32,6 +32,13 @@ const FrontmatterTable: React.FC<Props> = ({ frontmatter }) => {
           </tr>
         )}
 
+        {frontmatter.network && (
+          <tr>
+            <th>Network</th>
+            <td>{frontmatter.network}</td>
+          </tr>
+        )}
+
         <tr>
           <th>Implementor</th>
           <td>{frontmatter.implementor || 'TBD'}</td>

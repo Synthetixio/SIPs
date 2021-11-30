@@ -1,5 +1,6 @@
 ---
 sip: 63
+network: L1
 title: Trading Incentives
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125)'

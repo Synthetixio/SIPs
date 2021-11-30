@@ -1,5 +1,6 @@
 ---
 sip: 42
+network: L1
 title: Gas Optimisations on issueSynths and burnSynths
 author: 'Jackson Chan (@jacko125), Clinton Ennis (@hav-noms)'
 discussions-to: 'https://discord.gg/CDTvjHY'

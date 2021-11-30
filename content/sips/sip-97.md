@@ -1,5 +1,6 @@
 ---
 sip: 97
+network: L1
 title: Multi-Collateral Loans
 status: Implemented
 author: 'Michael Spain (@mjs-12), Clinton Ennis (@hav-noms)'

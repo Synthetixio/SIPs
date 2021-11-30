@@ -1,5 +1,6 @@
 ---
 sip: 50
+network: L1
 title: Add sYIELD synth
 status: Rejected
 author: 'Nocturnalsheet (@nocturnalsheet), IanC'

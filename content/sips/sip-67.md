@@ -1,5 +1,6 @@
 ---
 sip: 67
+network: L1
 title: Binary Options bid phases
 status: Rejected
 author: Danijel (@dgornjakovic)

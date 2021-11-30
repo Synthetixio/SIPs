@@ -1,5 +1,6 @@
 ---
 sip: 99
+network: L1
 title: Upgrade sOIL to use diversified Chainlink aggregator
 status: Implemented
 author: Clinton Ennis (@hav-noms)

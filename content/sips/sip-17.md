@@ -1,5 +1,6 @@
 ---
 sip: 17
+network: L1
 title: Bytes4 to Bytes32 currencyKeys
 status: Implemented
 author: 'Jackson Chan (@jacko125), Clinton Ennis (@hav-noms)'

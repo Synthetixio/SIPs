@@ -1,5 +1,6 @@
 ---
 sip: 6
+network: L1
 title: Frontrunning protection
 status: Implemented
 author: 'Jackson Chan (@jacko125), Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'

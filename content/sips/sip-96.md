@@ -1,5 +1,6 @@
 ---
 sip: 96
+network: L1
 title: Blockchain Forks Framework for Synths
 status: Implemented
 author: >-

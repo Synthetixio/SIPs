@@ -1,5 +1,6 @@
 ---
 sip: 5
+network: L1
 title: New Crypto Synths June '19
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'

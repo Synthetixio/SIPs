@@ -1,5 +1,6 @@
 ---
 sip: 14
+network: L1
 title: Allow delegation of Synthetix Exchange function to another address
 author: 'Jackson Chan (@jacko125), Clinton Ennis (@hav-noms)'
 discussions-to: 'https://discord.gg/DQ8ehX4'

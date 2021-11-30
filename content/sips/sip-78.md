@@ -1,5 +1,6 @@
 ---
 sip: 78
+network: L1
 title: iSynth limit reset must not trip circuit breaker
 status: Implemented
 author: Justin J Moses <@justinjmoses>

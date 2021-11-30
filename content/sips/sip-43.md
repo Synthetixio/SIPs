@@ -1,5 +1,6 @@
 ---
 sip: 43
+network: L1
 title: Address Resolver
 status: Implemented
 author: Justin J Moses (@justinjmoses)

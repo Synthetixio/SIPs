@@ -1,5 +1,6 @@
 ---
 sip: 19
+network: L1
 title: Deprecate Transfer Fee logic
 author: 'Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'
 discussions-to: 'https://discord.gg/CDTvjHY'

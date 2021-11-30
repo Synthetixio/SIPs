@@ -1,5 +1,6 @@
 ---
 sip: 73
+network: L1
 title: Binary Market Competition
 status: Rejected
 author: 'CryptoToit (@CryptoToit), Danijel (@dgornjakovic)'

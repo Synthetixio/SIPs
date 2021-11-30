@@ -1,5 +1,6 @@
 ---
 sip: 95
+network: L1
 title: Delist sBCH and iBCH for evaluation
 status: Implemented
 author: >-

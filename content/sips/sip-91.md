@@ -1,5 +1,6 @@
 ---
 sip: 91
+network: L1
 title: Debt Cache Contract
 status: Implemented
 author: Anton Jurisevic (@zyzek)

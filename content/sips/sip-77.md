@@ -1,5 +1,6 @@
 ---
 sip: 77
+network: L1
 title: StakingRewards bug fix's and Pausable stake()
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Anton Jurisevic (@zyzek)'

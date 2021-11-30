@@ -1,5 +1,6 @@
 ---
 sip: 2
+network: L1
 title: Remove Fee Penalty Tiers
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125)'
