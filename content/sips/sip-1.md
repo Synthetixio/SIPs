@@ -34,7 +34,7 @@ Parties involved in the process are the _author_, the [_SIP editors_](#sip-edito
 
 Your role as the champion is to write the SIP using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea. Following is the process that a successful SIP will move along:
 
-![SIP-workflow.png](../assets/sip-workflow.png)
+![SIP-workflow.png](https://github.com/Synthetixio/SIPs/blob/master/static/sip-workflow.png)
 
 Each status change is requested by the SIP author and reviewed by the SIP editors. Use a pull request to update the status. Please include a link to where people should continue discussing your SIP. The SIP editors will process these requests as per the conditions below.
 
