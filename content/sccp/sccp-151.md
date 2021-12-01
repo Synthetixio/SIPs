@@ -4,7 +4,7 @@ sccp: 151
 title: Wrappr Parameter Changes (L1)
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Approved
+status: Implemented
 created: 2021-11-22
 type: Governance
 proposal: >-
