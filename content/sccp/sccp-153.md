@@ -4,7 +4,7 @@ sccp: 153
 title: Increase Volume Cap on Atomic Exchanges
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Vote_Pending
+status: Implemented
 created: 2021-11-24
 type: Governance
 proposal: >-
