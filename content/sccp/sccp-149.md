@@ -22,7 +22,7 @@ Lowering the atomic swap exchange fee to 20 bp and increasing the cap on the vol
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The primary motivation is to improve the attractiveness of the atomic exchange product, as fees in the space for large block trades are in the 30 bp range. Therefore, lower the fee to below that threshold will lead to aggregators routing volumes directly through the snx exchange as to offer the best pricing. Furthermore, analysis done shows that is relatively safe to increase the volume per block without increasing the risk on the snx stakers significantly. 
+The primary motivation is to improve the attractiveness of the atomic exchange product, as fees in the space for large block trades are in the 30 bp range. Therefore, lowering the fee to below that threshold will lead to aggregators routing volumes directly through the snx exchange as to offer the best pricing to their customers. Furthermore, analysis done shows that is relatively safe to increase the volume per block without increasing the risk on the snx stakers significantly. 
 
 It goes without saying, that volumes will be continuously monitored  and the parameters will be recalibrated best on analysis of empirical data. 
 
