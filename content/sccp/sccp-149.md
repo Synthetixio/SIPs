@@ -12,7 +12,7 @@ type: Governance
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to lower fees on atomic swaps to 20 bp and increase the volume per block on all exchanges to sUSD 5 million per block.
+This SCCP proposes to lower fees on atomic swaps to 20 bp and increase the volume per block on all atomic exchanges to sUSD 5 million per block.
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
@@ -22,7 +22,9 @@ Lowering the atomic swap exchange fee to 20 bp and increasing the cap on the vol
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The primary motivation is to improve the attractiveness of the atomic exchange product, as fees in the space for large block trades are in the 30 bp range. Therefore, lower the fee to below that threshold will help result in aggregators routing volumes directly through the snx exchange. Furthermore, analysis done shows that is relatively safe to increase the volume per block without increasing the risk on the snx stakers significantly. That said, volumes will be continuously monitored  and the parameters will be recalibrated. 
+The primary motivation is to improve the attractiveness of the atomic exchange product, as fees in the space for large block trades are in the 30 bp range. Therefore, lower the fee to below that threshold will lead to aggregators routing volumes directly through the snx exchange as to offer the best pricing. Furthermore, analysis done shows that is relatively safe to increase the volume per block without increasing the risk on the snx stakers significantly. 
+
+It goes without saying, that volumes will be continuously monitored  and the parameters will be recalibrated best on analysis of empirical data. 
 
 
 ## Copyright
