@@ -12,7 +12,7 @@ type: Governance
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to update the following on the LUSD wrappr on L2:
+This SCCP proposes to update the following parameters on the LUSD wrappr on L2:
 - Increase the minting fee to 10 bp
 - Increase the capacity by 5 million sUSD to 55 million sUSD
 
