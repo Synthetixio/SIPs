@@ -1,7 +1,7 @@
 ---
 ktr: 2
 title: Volume Program Rewards Management Request
-status: Draft
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2021-11-20
 ---
