@@ -1,7 +1,7 @@
 ---
 ktr: 1
 title: Core Contributor Funding
-status: Approved
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2021-10-28
 ---
