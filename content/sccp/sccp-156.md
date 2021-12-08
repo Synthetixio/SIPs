@@ -7,6 +7,8 @@ discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Vote_Pending
 created: 2021-12-07
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmP5jS937kpYJWFiDgiakZLvJxoMgy9UU199LNFdQxAp2h
 ---
 
 ## Simple Summary
