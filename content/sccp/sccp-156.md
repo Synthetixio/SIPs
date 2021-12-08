@@ -14,7 +14,7 @@ type: Governance
 
 This SCCP proposes to update the following parameters on the LUSD wrappr on L2:
 - Increase the minting fee to 10 bp
-- Increase the capacity by 5 million sUSD to 55 million sUSD
+- Increase the capacity by 25 million sUSD to 75 million sUSD
 
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
