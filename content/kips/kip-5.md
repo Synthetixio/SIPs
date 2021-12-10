@@ -1,7 +1,7 @@
 ---
 kip: 5
 title: Product Elite Role
-status: Draft
+status: Implemented
 author: Marko Roy (@Marko-roy)
 created: 2021-11-15
 ---
