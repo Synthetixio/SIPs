@@ -1,7 +1,7 @@
 ---
 kip: 6
 title: Kwenta devDAO Framework
-status: Drafted
+status: Draft
 author: Andrew Trudel (@Andrew-Synthetix), Raffiegang (@raffiegang), & Platschi (@platschi)
 created: 2021-12-14
 ---
