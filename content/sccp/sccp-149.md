@@ -17,7 +17,7 @@ This SCCP proposes to increase the volume per block on all atomic exchanges to s
 ## Abstract
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The cap sets the maximum synth volume per block in sUSD being traded.
+The cap sets the maximum synth exchange volume per block in sUSD being traded using the atomic exchange contract.
 
 ## Motivation
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
