@@ -4,7 +4,7 @@ sccp: 156
 title: Update LUSD Wrappr Parameters
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Vote_Pending
+status: Implemented
 created: 2021-12-07
 type: Governance
 proposal: >-
