@@ -33,10 +33,10 @@ The devDAO requires an interface where community developers can monitor open tic
 **Rewards & Compensation:** Rewards are issued in the form of Kwenta inflationary rewards which vest over a period of one year but can be staked while vesting to capture more rewards as well any fees/bonuses available.
 
 Compensation structure (These values are approximate, rewards are ultimately determined by Community PM and CCCs) 
-Entry-level tickets - 0.25-3 KWENTA 
-Intermediate-level tickets - 3-10 KWENTA
-Advanced-level tickets - 10+ KWENTA 
-Recurring compensation packages - 1k-16k sUSD/Month + Packages can include locked KWENTA for long-term engagements
+- Entry-level tickets - 0.25-3 KWENTA 
+- Intermediate-level tickets - 3-10 KWENTA
+- Advanced-level tickets - 10+ KWENTA 
+- Recurring compensation packages - 1k-16k sUSD/Month + Packages can include locked KWENTA for long-term engagements
 
 KWENTA will be issued with a 1 year lock-up period unless otherwise specified. 
 
