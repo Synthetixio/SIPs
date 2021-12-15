@@ -1,5 +1,6 @@
 ---
 sccp: 125
+network: L1
 title: Remove SNX Inflationary Rewards on BTC shorts
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -26,13 +27,11 @@ Removing the inflationary rewards paid on BTC shorts will help reduce the pressu
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The main motivations of this SCCP  are as follows:
-- To relieve the peg pressure,  as sUSD is being locked in the contract in order to open short positions.
+The main motivations of this SCCP are as follows:
+
+- To relieve the peg pressure, as sUSD is being locked in the contract in order to open short positions.
 - To reduce the negative sETH skew on the debt pool as depicted in this [chart](https://ibb.co/yh5j8VZ), as ETH and BTC are highly correlated. The logic behind this is that investors will acquire sBTC and burn it to close their short positions. These transactions will result in no change in the sBTC skew. However, the supply of free floating sUSD will help with the sUSD peg and open up some arbs towards sETH or sBTC, providing minimal relief to the negative sETH skew.
-- To increase efficiency of the use of SNX inflation, as the currently SNX would be going to minters as part of the weekly claim escrowed for a year.    
-
-
-
+- To increase efficiency of the use of SNX inflation, as the currently SNX would be going to minters as part of the weekly claim escrowed for a year.
 
 ## Copyright
 

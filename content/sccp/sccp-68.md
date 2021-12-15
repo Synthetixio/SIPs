@@ -1,5 +1,6 @@
 ---
 sccp: 68
+network: L1
 title: Increase Fee Reclamation Waiting Period to 6 minutes
 author: Kaleb Keny (@kalebkeny)
 discussions-to: governance

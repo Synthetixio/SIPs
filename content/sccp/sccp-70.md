@@ -1,5 +1,6 @@
 ---
 sccp: 70
+network: L1
 title: >-
   Raise maxDebt on Multi-Collateral Loans to sUSD 20 million from sUSD 10
   million
@@ -30,6 +31,7 @@ Normally setting a high rate exposes minters to extra leverage on their debt.
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 The max debt currently set at sUSD 10 million, is proposed to be increased sUSD 20 million to accommodate for two things essentially:
+
 - The increase demand for sUSD loans for farming purposes `https://mith.cash/`
 - The sDAO has also taken around sUSD 5 million worth of ETH and BTC shorts
 
@@ -37,15 +39,13 @@ The former has no effect on the debt pool, as the debt in sUSD does not result i
 
 The current break down of loans are as follows:
 
-
-|                        	| Total Loans (Revalued to sUSD) 	|
-|------------------------	|:------------------------------:	|
-| ETH backed sUSD Loans  	|             6,523K             	|
-| sUSD Backed sBTC Short 	|              957K              	|
-| sUSD Backed sETH Short 	|             4,440K             	|
-| ren Backed sBTC Loan   	|               15K              	|
-| ren Backed sUSD Loan   	|               87K              	|
-
+|                        | Total Loans (Revalued to sUSD) |
+| ---------------------- | :----------------------------: |
+| ETH backed sUSD Loans  |             6,523K             |
+| sUSD Backed sBTC Short |              957K              |
+| sUSD Backed sETH Short |             4,440K             |
+| ren Backed sBTC Loan   |              15K               |
+| ren Backed sUSD Loan   |              87K               |
 
 ## Copyright
 

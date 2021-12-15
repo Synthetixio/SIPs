@@ -1,5 +1,6 @@
 ---
 sccp: 47
+network: L1
 title: Raise Fees on Crypto Synths to 50 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented

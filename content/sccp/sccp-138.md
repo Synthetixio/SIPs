@@ -1,5 +1,6 @@
 ---
 sccp: 138
+network: L2
 title: Reduce L2 Target C-Ratio To 600%
 author: Spreek (@Spreek)
 discussions-to: 'https://discord.gg/e9c5Cs'

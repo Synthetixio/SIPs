@@ -1,5 +1,6 @@
 ---
 sccp: 75
+network: L1
 title: Inverse Synths Leverage Fee Adjustment (iLINK)
 author: Kaleb (@kaleb-keny)
 discussions-to: governance

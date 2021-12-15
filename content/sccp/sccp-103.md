@@ -1,5 +1,6 @@
 ---
 sccp: 103
+network: L1
 title: Increase Issue Fee Rate on ETH backed loans to 2%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance

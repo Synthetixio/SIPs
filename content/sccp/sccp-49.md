@@ -1,5 +1,6 @@
 ---
 sccp: 49
+network: L1
 title: Distribute 16k SNX to iETH incentives
 author: Kain Warwick (@kaiynne)
 status: Implemented

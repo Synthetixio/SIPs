@@ -1,5 +1,6 @@
 ---
 sccp: 129
+network: L1
 title: SCCP-129 Increase exchange fees for s1INCH, sCOMP, and sCRV
 author: Afif Bandak (@aband1)
 discussions-to: governance
