@@ -1,7 +1,7 @@
 ---
 kip: 7
 title: Kwenta marketingDAO Framework
-status: Drafted
+status: Draft
 author: Mike Griffith (@mikegriff), Andrew Trudel (@Andrew-Synthetix)
 created: 2021-12-14
 ---
