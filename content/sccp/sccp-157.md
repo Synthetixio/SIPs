@@ -13,7 +13,7 @@ type: Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 This SCCP proposes to update the following parameters on the sETH wrappr on L2:
-- Increase the minting fee to 45 bp
+- Increase the minting fee to 150 bp
 - Increase the max capacity by 1,000 ETH to 3,200 ETH 
 
 ## Abstract
