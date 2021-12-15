@@ -10,6 +10,7 @@ const Frontmatter = `
     sccp
     title
     author
+    network
     type
     proposal
     implementor
@@ -102,6 +103,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
     type MarkdownRemarkFrontmatter implements Node {
       title: String!
       type: String
+      network: String
       status: String!
       author: String!
       implementor: String

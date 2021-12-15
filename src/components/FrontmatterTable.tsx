@@ -90,6 +90,7 @@ export const query = graphql`
     sip
     sccp
     title
+    network
     author
     type
     proposal
