@@ -1,5 +1,6 @@
 ---
 sccp: 64
+network: L1
 title: Increase fees on iBTC to 0.50%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -28,7 +29,6 @@ Increasing fees by 20 bp to 50 bp on iBTC should help reduce the gap against the
 
 Analysis of on-chain data showed that front-running is possible on iBTC and sBTC, due to the mismatch against chainlink rate push frequency of 0.50%.
 Raising fees on one synth of the sBTC/iBTC pair, so that it matches the chainlink push frequency, should help close up the front-running gap and significantly impair the effectiveness of a front-running swing-based trade.
-
 
 ## Copyright
 

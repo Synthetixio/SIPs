@@ -1,5 +1,6 @@
 ---
 sccp: 139
+network: L1
 title: Re-enable price feeds that certain live markets on Thales Protocol rely on
 author: padzank (@padzank)
 discussions-to: https://discord.gg/e9c5Cs

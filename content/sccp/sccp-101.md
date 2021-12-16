@@ -1,5 +1,6 @@
 ---
 sccp: 101
+network: L1
 title: Decrease Cap on sUSD and sETH loans
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -19,12 +20,15 @@ This SCCP proposes to lower the cap on both the old sUSD and sETH loan contracts
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
+
 Decreasing the cap on the old sUSD and sETH will effectively make it not possible to mint fresh synths with ETH.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
+
 The cap decrease is in preparation of the deployment of the wrappr contract [SIP-112](https://sips.synthetix.io/sips/sip-112) which is expected to increase the supply of sETH. However, to allow for a smooth deployment, pockets of excess sETH capacity need to be closed, which will allow us to calibrate the `mintingFee` and `cap` on the wrapper at a later stage.
 
 ## Copyright
+
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

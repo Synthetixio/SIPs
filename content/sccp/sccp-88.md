@@ -1,5 +1,6 @@
 ---
 sccp: 88
+network: L1
 title: Increase loans and shorts cap to sUSD 50 million
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance

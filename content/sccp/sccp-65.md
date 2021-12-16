@@ -1,5 +1,6 @@
 ---
 sccp: 65
+network: L1
 title: Increase fees on sBTC to 0.50% and iBTC to 0.75%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -28,7 +29,6 @@ Increasing fees by 25 bp and 20 bp, respectively on iBTC and sBTC, should narrow
 
 Analysis of on-chain data showed that front-running continued to be possible on the iBTC and sBTC pair. This is mostly due to chainlink delayed price push threshold.
 It is worth mentioning that the current rate increases are short-term and other solutions can be explored in the future to close the gap without raising fees on traders.
-
 
 ## Copyright
 

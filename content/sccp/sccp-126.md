@@ -1,5 +1,6 @@
 ---
 sccp: 126
+network: L1
 title: Initiate New Account Merging Window
 status: Implemented
 discussions-to: governance
@@ -26,7 +27,8 @@ Proposing to trigger the startMergingWindow method which initiates a new merging
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-This SCCP aims to allow users to once more migrate escrowed SNX rewards to different accounts. Recent market volatility was considered a sufficient reason as to why users might have an interest to change accounts.  
+This SCCP aims to allow users to once more migrate escrowed SNX rewards to different accounts. Recent market volatility was considered a sufficient reason as to why users might have an interest to change accounts.
 
 ## Copyright
+
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

@@ -1,5 +1,6 @@
 ---
 sccp: 141
+network: L1
 title: Up the Weekly SNX Minting reward
 author: JJ (@justinjmoses)
 discussions-to: https://discord.gg/e9c5Cs

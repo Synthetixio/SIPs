@@ -1,5 +1,6 @@
 ---
 sccp: 67
+network: L1
 title: Change Configurable Values for SIP-97 and SIP-103
 author: 'SynthaMan, Kaleb'
 status: Implemented

@@ -1,5 +1,6 @@
 ---
 sccp: 123
+network: L1
 title: Remove SNX Inflationary Rewards on ETH shorts
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -26,7 +27,7 @@ Removing the inflationary rewards paid on ETH shorts will help boost the weekly 
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-SNX inflation dedicated towards ETH shorts were being done because of the persistent skew on ETH, where the collateralization ratio of minters was largely driven by the movement of ETH price. Therefore, it was common practice to incentivize external stakeholders who would take on a short ETH position  in order to assist minters in their debt management. However, with the introduction of wrapper, that ETH skew is currently  negative as a large portion of the minted sETH was swapped to stables. Therefore, it is possible to reduce the incentive paid on ETH shorts without taking on any risk of increasing the net ETH skew on the debt pool.
+SNX inflation dedicated towards ETH shorts were being done because of the persistent skew on ETH, where the collateralization ratio of minters was largely driven by the movement of ETH price. Therefore, it was common practice to incentivize external stakeholders who would take on a short ETH position in order to assist minters in their debt management. However, with the introduction of wrapper, that ETH skew is currently negative as a large portion of the minted sETH was swapped to stables. Therefore, it is possible to reduce the incentive paid on ETH shorts without taking on any risk of increasing the net ETH skew on the debt pool.
 
 ## Copyright
 

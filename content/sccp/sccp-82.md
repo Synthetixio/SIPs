@@ -1,5 +1,6 @@
 ---
 sccp: 82
+network: L1
 title: Decrease Collateralization&Liquidation Ratio on sUSD Loans to 130% from 150%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -26,15 +27,15 @@ Given the state of the peg, this sccp proposes to decrease the collateralization
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The peg seem to be increasingly pressured as can be seen [here](https://www.curve.fi/trade/susdv2/SUSD-USDC/4h). 
+The peg seem to be increasingly pressured as can be seen [here](https://www.curve.fi/trade/susdv2/SUSD-USDC/4h).
 This is mostly likely due to an increase in usage of synth liquidity for farming and trading purposes as well as the substantial increase in snx held on [exchange wallets](https://snx.watch/holders).
 Decreasing the collateralization ratio aims at achieving the following:
- - Increase it's utilization, which stands at around 30%, through increased leverage incentive.
- - Allow people who have already taken out loans to draw out more ETH held, with minimal risk of liquidation.
 
-I should mention that the loan program is well suited to address the peg issue, given that it bears no cost on borrowers (no minting fee - no interest rate) and the only deterrent is the risk of being liquidated at 130% if this sccp passes. Although if you're an ETH Ultra Bull, as most of us are, this is a non-issue. 
+- Increase it's utilization, which stands at around 30%, through increased leverage incentive.
+- Allow people who have already taken out loans to draw out more ETH held, with minimal risk of liquidation.
+
+I should mention that the loan program is well suited to address the peg issue, given that it bears no cost on borrowers (no minting fee - no interest rate) and the only deterrent is the risk of being liquidated at 130% if this sccp passes. Although if you're an ETH Ultra Bull, as most of us are, this is a non-issue.
 Also would need to mention that despite the loan trial end date, I would not vote on ending the program until at least a month, given that the state of the peg which requires that borrowers tap these loans without worrying about having to unwind them in the near future.
-
 
 ## Copyright
 

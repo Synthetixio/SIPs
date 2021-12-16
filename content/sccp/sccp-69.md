@@ -1,5 +1,6 @@
 ---
 sccp: 69
+network: L1
 title: Increase Fees on Leveraged Inverse Synths
 author: 'Kaleb, Spreek, Danijel, farmwell'
 discussions-to: governance

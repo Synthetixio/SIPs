@@ -1,5 +1,6 @@
 ---
 sccp: 135
+network: L1-L2
 title: Open Account Merging Continuously
 status: Implemented
 discussions-to: governance
@@ -20,7 +21,7 @@ Make Account Merging always possible in order to enable transferring escrowed SN
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-This SCCP intends to make account merging for any escrowed SNX balance (including partial amounts) possible at any time. This changes in parameters are meant to happen on both L1 and L2. 
+This SCCP intends to make account merging for any escrowed SNX balance (including partial amounts) possible at any time. This changes in parameters are meant to happen on both L1 and L2.
 
 ## Motivation
 
@@ -29,15 +30,14 @@ This SCCP intends to make account merging for any escrowed SNX balance (includin
 Not being able to merge accounts has caused several problems to stakers, such as:
 
 - Small stakers foregoing rewards due to inability to consolidate large wallets
-Less accounts staking as SNX is escrowed in wallets that are not maintained
+  Less accounts staking as SNX is escrowed in wallets that are not maintained
 - Limiting composability impedes using flashloans for debt repayment
 - Staking pools cannot operate efficiently
 - Overall worsening of UX
 
-
 ## Implementation
 
-The merge window on the current escrow contract needs to be extended to a very long amount of time (315360000 seconds - 10 years) making it permanent and can be extended. 
+The merge window on the current escrow contract needs to be extended to a very long amount of time (315360000 seconds - 10 years) making it permanent and can be extended.
 
 - RewardEscrowV2.setMaxAccountMergingWindow(uint(315360000))
 - RewardEscrowV2.setAccountMergingDuration(uint(315360000))
@@ -45,4 +45,5 @@ The merge window on the current escrow contract needs to be extended to a very l
 The escrow migration service will be able to flash loan sUSD, burn all debt, migrate SNX and optionally sell down some SNX if the ratio is below 400%. By modifying the account merge window to be always on, this functionality can be integrated into staking.synthetix.io.
 
 ## Copyright
+
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

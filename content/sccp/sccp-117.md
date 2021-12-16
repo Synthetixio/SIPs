@@ -1,5 +1,6 @@
 ---
 sccp: 117
+network: L1
 title: Lower the Wrppr MintFeeRate to 5 bp from 25 bp
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance

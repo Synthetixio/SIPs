@@ -1,5 +1,6 @@
 ---
 sccp: 87
+network: L1
 title: Increase loans and shorts cap to sUSD 40 million
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -29,19 +30,18 @@ The cap can safely be increased to sUSD 40 million to allow more users to take l
 The cap of sUSD 30 million has almost been reached. Given that we want to promote using the new shorting mechanism as a longterm replacement for iSynths staking, increasing the cap gradually we approach full utilization would be the prudent approach.
 The breakdown of the program is as follows:
 
-| CCY 	| sUSD Debt 	| % of Total 	|
-|:-:	|:-:	|:-:	|
-| **Total Borrows** 	| **$9M** 	| **32%** 	|
-| sUSD Against ETH 	| $4.4M 	| 16% 	|
-| sBTC against renBTC 	| $25k 	| 0% 	|
-| sUSD against renBTC 	| $4.6M 	| 17% 	|
-| **Total Shorts** 	| **$18.7M** 	| **68%** 	|
-| sBTC 	| $9.5M 	| 34% 	|
-| sETH 	| $9.2M 	| 33% 	|
-| **Total** 	| **$27.7M** 	| **93% Utilization** 	|
+|         CCY         | sUSD Debt  |     % of Total      |
+| :-----------------: | :--------: | :-----------------: |
+|  **Total Borrows**  |  **$9M**   |       **32%**       |
+|  sUSD Against ETH   |   $4.4M    |         16%         |
+| sBTC against renBTC |    $25k    |         0%          |
+| sUSD against renBTC |   $4.6M    |         17%         |
+|  **Total Shorts**   | **$18.7M** |       **68%**       |
+|        sBTC         |   $9.5M    |         34%         |
+|        sETH         |   $9.2M    |         33%         |
+|      **Total**      | **$27.7M** | **93% Utilization** |
 
-
-Want to take the opportunity to mention that the loan program which can be accessed on this [portal](https://synthetix.surge.sh/)  now display the liquidation price on shorts. Thank you Mitch!
+Want to take the opportunity to mention that the loan program which can be accessed on this [portal](https://synthetix.surge.sh/) now display the liquidation price on shorts. Thank you Mitch!
 
 ## Copyright
 

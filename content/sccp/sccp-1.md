@@ -1,5 +1,6 @@
 ---
 sccp: 1
+network: L1-L2
 title: SCCP Purpose and Guidelines
 status: Implemented
 author: Kain Warwick <@kaiynne>
@@ -22,7 +23,7 @@ An SCCP must meet certain minimum criteria. It must be a clear and complete desc
 
 ## SCCP Work Flow
 
-Parties involved in the process are the *author*, the [*SIP editors*](#sip-editors), and the [Synthetix Engineering Team].
+Parties involved in the process are the _author_, the [_SIP editors_](#sip-editors), and the [Synthetix Engineering Team].
 
 :warning: Before you begin, vet your idea, this will save you time. Ask the Synthetix community first if the proposed change is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will have the intend effect. The appropriate public forum to gauge interest around your SCCP is [the Synthetix Discord].
 
@@ -34,13 +35,13 @@ Your role as the champion is to write the SCCP using the style and format descri
 
 Each status change is requested by the SCCP author and reviewed by the SIP editors. Use a pull request to update the status. Please include a link to where people should continue discussing your SCCP. The SIP editors will process these requests as per the conditions below.
 
-* **Work in progress (WIP)** -- Once the champion has asked the Synthetix community whether an idea has any chance of support, they will write a draft SCCP as a [pull request].
+- **Work in progress (WIP)** -- Once the champion has asked the Synthetix community whether an idea has any chance of support, they will write a draft SCCP as a [pull request].
 
-* **Proposed** If agreeable, SIP editor will assign the SCCP a number (generally the issue or PR number related to the SCCP) and merge your pull request. The SIP editor will not unreasonably deny an SCCP. Proposed SCCPs will be discussed on governance calls and in Discord. If there is a reasonable level of consensus around the change on the governance call the change will be moved to approved. If the change is contentious a vote of token holders may be held to resolve the issue or approval may be delayed until consensus is reached.
+- **Proposed** If agreeable, SIP editor will assign the SCCP a number (generally the issue or PR number related to the SCCP) and merge your pull request. The SIP editor will not unreasonably deny an SCCP. Proposed SCCPs will be discussed on governance calls and in Discord. If there is a reasonable level of consensus around the change on the governance call the change will be moved to approved. If the change is contentious a vote of token holders may be held to resolve the issue or approval may be delayed until consensus is reached.
 
-* **Approved** -- This SCCP has passed community governance and is now being prioritised.
-  
-* **Implemented** -- This SCCP has been implemented and the variable changed on mainnet.
+- **Approved** -- This SCCP has passed community governance and is now being prioritised.
+
+- **Implemented** -- This SCCP has been implemented and the variable changed on mainnet.
 
 ## What belongs in a successful SCCP?
 
@@ -49,7 +50,7 @@ Each SCCP should have the following parts:
 - Preamble - RFC 822 style headers containing metadata about the SCCP, including the SCCP number, a short descriptive title (limited to a maximum of 44 characters), and the author details.
 - Simple Summary - “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the SCCP.
 - Abstract - a short (~200 word) description of the variable change proposed.
-- Motivation (*optional) - The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.
+- Motivation (\*optional) - The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.
 - Copyright Waiver - All SCCPs must be in the public domain. See the bottom of this SCCP for an example copyright waiver.
 
 ## SCCP Formats and Templates
@@ -59,7 +60,7 @@ Image files should be included in a subdirectory of the `assets` folder for that
 
 ## SCCP Header Preamble
 
-Each SCCP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style header preamble, preceded and followed by three hyphens (`---`). This header is also termed ["front matter" by Jekyll](https://jekyllrb.com/docs/front-matter/). The headers must appear in the following order. Headers marked with "*" are optional and are described below. All other headers are required.
+Each SCCP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style header preamble, preceded and followed by three hyphens (`---`). This header is also termed ["front matter" by Jekyll](https://jekyllrb.com/docs/front-matter/). The headers must appear in the following order. Headers marked with "\*" are optional and are described below. All other headers are required.
 
 ` sip:` <SCCP number> (this is determined by the SIP editor)
 
@@ -145,23 +146,22 @@ The editors don't pass judgment on SCCPs. We merely do the administrative & edit
 
 ## History
 
-The SCCP document was derived heavily from the EIP Ethereum Improvement Proposal document in many places text was simply copied and modified. Any comments about the SCCP document should be directed to the SIP editors. The history of the EIP is quoted below from the EIP document  for context:
+The SCCP document was derived heavily from the EIP Ethereum Improvement Proposal document in many places text was simply copied and modified. Any comments about the SCCP document should be directed to the SIP editors. The history of the EIP is quoted below from the EIP document for context:
 
-* *"This document (EIP) was derived heavily from [Bitcoin's BIP-0001] written by Amir Taaki which in turn was derived from [Python's PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."* *
+- _"This document (EIP) was derived heavily from [Bitcoin's BIP-0001] written by Amir Taaki which in turn was derived from [Python's PEP-0001]. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."_ \*
 
 June 10, 2019: SCCP-1 has been drafted and submitted as a PR.
-
 
 See [the revision history for further details](https://github.com/synthetixio/**), which is also available by clicking on the History button in the top right of the SCCP.
 
 ### Bibliography
 
-[the Synthetix Discord]: https://discord.gg/a2E6uxk
+[the synthetix discord]: https://discord.gg/a2E6uxk
 [pull request]: https://github.com/Synthetixio/SIPs/pulls
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-[Bitcoin's BIP-0001]: https://github.com/bitcoin/bips
-[Python's PEP-0001]: https://www.python.org/dev/peps/
-[Synthetix Engineering Team]: https://github.com/orgs/Synthetixio/people
+[bitcoin's bip-0001]: https://github.com/bitcoin/bips
+[python's pep-0001]: https://www.python.org/dev/peps/
+[synthetix engineering team]: https://github.com/orgs/Synthetixio/people
 
 ## Copyright
 
