@@ -1,5 +1,6 @@
 ---
 sccp: 89
+network: L1
 title: Redirect iETH rewards to sETH Shorting Rewards
 status: Implemented
 author: Clinton Ennis (@hav-noms)

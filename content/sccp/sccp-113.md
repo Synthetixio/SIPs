@@ -1,5 +1,6 @@
 ---
 sccp: 113
+network: L1
 title: Decrease SNX Inflationary Rewards on Curve to 6k SNX
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -27,11 +28,12 @@ Given the relative stability sUSD peg and the availability of an on-ramp with de
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 SNX incentives paid to Curve LP providers can be significantly decreased because of the following reasons:
+
 - Trading fees and CRV Governance inflation are more than enough to incentivize stakers to continue provide to curve.
 - Users can now unlock an unlimited supply of synths with the least amount of friction possible all the while reducing the skew on minters with wrappr.
 - The sUSD peg will remain, despite the small decrease in snx inflationary rewards, due to the arbitrage possible with the ETH locked in the wrappr contract.
 
-However, it is worth mentioning, given the close relationship between the  Synthetix and Curve protocols, this sccp proposes to only cut the rewards marginally.
+However, it is worth mentioning, given the close relationship between the Synthetix and Curve protocols, this sccp proposes to only cut the rewards marginally.
 
 ## Copyright
 

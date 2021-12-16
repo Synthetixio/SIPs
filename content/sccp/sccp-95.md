@@ -1,5 +1,6 @@
 ---
 sccp: 95
+network: L1
 title: Increase loans and shorts cap to sUSD 90 million from sUSD 75 million
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -40,9 +41,7 @@ Total debt has almost reached the sUSD 75 million `maxDebt` previously configure
 | sETH                  |     33     |
 | **Total**             |   **72**   |
 
-
 Therefore raising it to sUSD 90 million allows users to continue to open short positions without interruption.
-
 
 ## Copyright
 

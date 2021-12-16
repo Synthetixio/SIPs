@@ -1,5 +1,6 @@
 ---
 sccp: 130
+network: L1
 title: Raise Fees on Altcoin Synths to 300 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Rejected

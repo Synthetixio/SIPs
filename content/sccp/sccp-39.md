@@ -1,5 +1,6 @@
 ---
 sccp: 39
+network: L1
 title: Increase Forex Fees
 author: Spreek (@Spreek)
 discussions-to: 'https://research.synthetix.io/t/sccp-increase-forex-fees/169'
@@ -20,7 +21,7 @@ As per [sip-56](https://github.com/Synthetixio/SIPs/blob/master/SIPS/sip-56.md) 
 
 ## Motivation
 
-Analysis of data shows continued danger from frontrunning in traditional synths. When we introduced differential fees in SIP 56, we chose to reduce fees on traditional synths, thinking that the lower volatility synths would be less risky. However, due to lag from chainlink oracles, we see continued profitable trading in these pairs. Therefore, until a new solution, we should at least temporarily restore fees to their old level of 0.3%. 
+Analysis of data shows continued danger from frontrunning in traditional synths. When we introduced differential fees in SIP 56, we chose to reduce fees on traditional synths, thinking that the lower volatility synths would be less risky. However, due to lag from chainlink oracles, we see continued profitable trading in these pairs. Therefore, until a new solution, we should at least temporarily restore fees to their old level of 0.3%.
 
 ## Copyright
 

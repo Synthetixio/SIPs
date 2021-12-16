@@ -1,5 +1,6 @@
 ---
 sccp: 56
+network: L1
 title: Reduce exchange fees of sETH and sBTC to 0.3%
 author: Justin J Moses (@justinjmoses)
 discussions-to: governance

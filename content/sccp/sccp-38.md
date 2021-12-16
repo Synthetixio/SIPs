@@ -1,5 +1,6 @@
 ---
 sccp: 38
+network: L1
 title: Increase Fees on Silver and Gold to 100 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented

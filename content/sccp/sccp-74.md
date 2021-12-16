@@ -1,5 +1,6 @@
 ---
 sccp: 74
+network: L1
 title: Time lock on burning after minting Adjustment
 author: SynthaMan (@SNXified)
 discussions-to: governance
@@ -24,15 +25,11 @@ Proposing to adjust Time lock on burning after minting from 24 hours to 48 hours
 
 minimumStakeTime = 172,800
 
-
-
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 To further hinder rare snapshotters who can take advantage of the system. This will increase debt exposure from 1/7 to 2/7. Further increases are possible after discussions.
-
-
 
 ## Copyright
 

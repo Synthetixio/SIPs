@@ -1,5 +1,6 @@
 ---
 sccp: 90
+network: L1
 title: Update priceDeviationThresholdFactor to 1.6
 status: Implemented
 author: Kaleb  (@kaleb-keny)

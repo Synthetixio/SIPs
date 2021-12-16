@@ -1,5 +1,6 @@
 ---
 sccp: 105
+network: L1
 title: Increase Cap on Wrappr to 50k ETH from 15k ETH
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance

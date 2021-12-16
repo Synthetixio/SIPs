@@ -1,5 +1,6 @@
 ---
 sccp: 99
+network: L1
 title: Increase loans and shorts cap to sUSD 110 million from sUSD 90 million
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -27,7 +28,6 @@ The cap if increased to sUSD 110 million allows users to continue to take loans 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 Total debt has already been reached. Therefore raising the cap will allows users to continue to open short positions without interruption.
-
 
 ## Copyright
 

@@ -7,13 +7,11 @@ type: Meta-Governance
 author: Milli3
 discussions-to: https://discord.gg/UWgzgmf6
 created: 2021-11-30
-
 ---
-
 
 ## Simple Summary
 
-This SCCP proposes to increase the Ambassador Council seats to four members (currently there are 3) with a 3/4 Gnosis Safe Multi-Sig. 
+This SCCP proposes to increase the Ambassador Council seats to four members (currently there are 3) with a 3/4 Gnosis Safe Multi-Sig.
 
 ## Motivation
 
@@ -27,17 +25,15 @@ The ambassador council is centred around a multi-sig which is currently 3/3, (a 
 
 If the Ambassador Council is made up of four members on a 3/4 multi-sig, there would still need to be 3 members active to sign a transaction but the probability of having 3 members online to do so is greater than if there are only three members controlling a 3/3 multisig.
 
-In less urgent scenarios, a three member council makes it difficult to have more than one ambassador present at townhall events and community AMAs (again due to conflicting timezones). These scheduling difficulties are amplified when trying to coordinate with other DAOs for events on discord or twitter. 
+In less urgent scenarios, a three member council makes it difficult to have more than one ambassador present at townhall events and community AMAs (again due to conflicting timezones). These scheduling difficulties are amplified when trying to coordinate with other DAOs for events on discord or twitter.
 
-The Ambassador Council has come to mature this Epoch with initiatives like the Governance Participation Program and an increased social presence in the DeFi Ecosystem. After the Launch of delegation incentives (GPP) it became clear that there was a need for a technical role within the ambassador council (see SIP 157: there was a previous clause excluding any expectation of technical skills related to smart contracts). The addition of technical roles in the ambassador council indicates the need for more diversity among the nominees. 
+The Ambassador Council has come to mature this Epoch with initiatives like the Governance Participation Program and an increased social presence in the DeFi Ecosystem. After the Launch of delegation incentives (GPP) it became clear that there was a need for a technical role within the ambassador council (see SIP 157: there was a previous clause excluding any expectation of technical skills related to smart contracts). The addition of technical roles in the ambassador council indicates the need for more diversity among the nominees.
 
-The inclusion of a technical role coupled together with the introduction of our social events (town halls/community AMAs) makes us believe the ambassadors are in need of a larger Council to manage the initiatives that are being pursued.  
+The inclusion of a technical role coupled together with the introduction of our social events (town halls/community AMAs) makes us believe the ambassadors are in need of a larger Council to manage the initiatives that are being pursued.
 
 After the formation of the 300-community during the last epoch, we believe there'll be greater interest in participation for the upcoming elections. A larger council will be encouraging for new community members to nominate them selves and not be intimidated by a small candidacy list of recurring participants.
 
 The former aDAO has been quite active in the Ecosystem and we wish to provide even more value for the Synthetix community as we move forward, for the reasons mentioned above we believe it's necessary to increase the number of Ambassadors on the Council to four.
-
-
 
 ## Copyright
 

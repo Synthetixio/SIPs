@@ -1,5 +1,6 @@
 ---
 sccp: 92
+network: L1
 title: Distribute 16k SNX to sBTC shorting reward incentives
 status: Implemented
 author: Jackson Chan (@jacko125)

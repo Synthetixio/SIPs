@@ -1,5 +1,6 @@
 ---
 sccp: 55
+network: L1
 title: Change Debt Snapshot Stale Time to 12 Hours
 author: Anton Jurisevic (@zyzek)
 discussions-to: 'https://research.synthetix.io/'

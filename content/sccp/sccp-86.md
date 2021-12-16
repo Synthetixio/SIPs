@@ -1,5 +1,6 @@
 ---
 sccp: 86
+network: L1
 title: Initialize New Account Merging Window
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -26,8 +27,7 @@ Proposing to trigger the `startMergingWindow` method which initiates a new mergi
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Given sDAO's intention to migrate to a new account, this SCCP proposes to open up the account merging window for a 2-week period. 
-
+Given sDAO's intention to migrate to a new account, this SCCP proposes to open up the account merging window for a 2-week period.
 
 ## Copyright
 

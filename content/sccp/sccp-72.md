@@ -1,5 +1,6 @@
 ---
 sccp: 72
+network: L1
 title: Inverse Synths Leverage Fee Adjustment (iBNB)
 author: Kaleb (@kaleb-keny)
 discussions-to: governance
@@ -27,8 +28,6 @@ Proposing to adjust fees on trades into `iBNB` as the leverage has increased sig
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 Leverage on `iBNB` was around 1x a week ago and has increased to above 2x, as `iBNB` prices decreased to around sUSD 20 per `iBNB`. This makes it more possible to front-run the delayed oracle price push. Therefore, increasing fees to account for the leverage would help close that gap.
-
-
 
 ## Copyright
 

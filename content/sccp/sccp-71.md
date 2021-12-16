@@ -1,5 +1,6 @@
 ---
 sccp: 71
+network: L1
 title: Lower Fees on Frozen Inverse Synths
 author: Kaleb (@kaleb-keny)
 discussions-to: governance
@@ -28,16 +29,13 @@ Proposing to lower fees levied on traders for trading into frozen iSynths.
 
 The fee increase to account for higher leverage managed to close the front-running gap. However, given that these inverse synths are expected to be reset this sccp proposes to lower the fees back to previous levels, aligned or slightly below the oracle push frequency.
 
-
 |       | Oracle Push | Current Fee | New Fee |
-|:-----:|:-----------:|:-----------:|:-------:|
-|  iETH |    0.50%    |    0.80%    |  0.30%  |
+| :---: | :---------: | :---------: | :-----: |
+| iETH  |    0.50%    |    0.80%    |  0.30%  |
 | iDEFI |    1.00%    |    1.50%    |  1.00%  |
-|  iADA |    1.00%    |    1.50%    |  1.00%  |
-
+| iADA  |    1.00%    |    1.50%    |  1.00%  |
 
 Danijel (@dgornjakovic) developped this [site](https://synthetix-monitoring.herokuapp.com/synths) which should help the spartan council change the fees as necessary to account for higher or lower leverage.
-
 
 ## Copyright
 

@@ -1,5 +1,6 @@
 ---
 sccp: 59
+network: L1
 title: Reduce the target Collateralisation Ratio for SNX stakers to 500%
 author: Akin Sawyerr (@nottrunner)
 status: Implemented

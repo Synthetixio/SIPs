@@ -1,5 +1,6 @@
 ---
 sccp: 124
+network: L1
 title: Rebalance and rename sCEX to sCEFI
 author: Rubberduck (@rubberducketh)
 status: Approved
