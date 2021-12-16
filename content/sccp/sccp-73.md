@@ -1,5 +1,6 @@
 ---
 sccp: 73
+network: L1
 title: Inverse Synths Leverage Fee Adjustment (iETH)
 author: Kaleb (@kaleb-keny)
 discussions-to: governance

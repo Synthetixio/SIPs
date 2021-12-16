@@ -1,5 +1,6 @@
 ---
 sccp: 131
+network: L1
 title: Increase migrateEntriesThresholdAmount to 720000
 author: Jackson Chan (@jacko125)
 discussions-to: governance

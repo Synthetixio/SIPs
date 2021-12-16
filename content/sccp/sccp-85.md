@@ -1,5 +1,6 @@
 ---
 sccp: 85
+network: L1
 title: Increase loans and shorts cap to 30 million
 author: Danijel Gornjakovic (@danijel)
 discussions-to: governance
@@ -26,8 +27,8 @@ The cap can safely be increased to 30m to allow more users to take loans or shor
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The cap of 20m has almost been reached. Given that we want to promote using the new shorting mechanism as a longterm replacement for iSynths, we want to increase the cap.  
-We have been watching user behaviour during the first week of promoted shorting and have alleviated concerns that drove the initial cap, so we can safely increase it to 30m now and continue monitoring it. 
+The cap of 20m has almost been reached. Given that we want to promote using the new shorting mechanism as a longterm replacement for iSynths, we want to increase the cap.
+We have been watching user behaviour during the first week of promoted shorting and have alleviated concerns that drove the initial cap, so we can safely increase it to 30m now and continue monitoring it.
 
 ## Copyright
 

@@ -1,5 +1,6 @@
 ---
 sccp: 16
+network: L1
 title: Increase Fee Reclamation Waiting Period to 1 hour
 author: 'Justin J Moses (@justinjmoses), Kain Warwick (@kaiynne)'
 discussions-to: 'https://discordapp.com/invite/AEdUHzt'
@@ -14,9 +15,9 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-*NOTICE* 
+_NOTICE_
 This change has been reverted.
-*NOTICE*
+_NOTICE_
 
 Temporarily increase fee reclamation waiting period to an hour.
 

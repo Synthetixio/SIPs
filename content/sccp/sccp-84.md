@@ -1,5 +1,6 @@
 ---
 sccp: 84
+network: L1
 title: Lower Fees on iETH
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance

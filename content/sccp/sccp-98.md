@@ -1,5 +1,6 @@
 ---
 sccp: 98
+network: L1
 title: Rebalance sDEFI and iDEFI
 author: 'Farmwell (@farmwell), CryptoToit (@CryptoToit)'
 status: Implemented
@@ -14,19 +15,19 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to rebalance the sDEFI and iDEFI index synths. 
+This SCCP proposes to rebalance the sDEFI and iDEFI index synths.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The proposal is to keep with a quarterly cadence of updating the index. The last re-balance occurred in late January, when SUSHI, 1INCH and BNT joined the index. sDEFI index gained 21% since the last rebalancing, trading at $16,391.95 as of time of writing. 
+The proposal is to keep with a quarterly cadence of updating the index. The last re-balance occurred in late January, when SUSHI, 1INCH and BNT joined the index. sDEFI index gained 21% since the last rebalancing, trading at $16,391.95 as of time of writing.
 
-This SCCP proposes for several new additions to sDEFI. 
+This SCCP proposes for several new additions to sDEFI.
 
-The new sDEFI embraces an open-arms approach. There are 20 assets in sDEFI v5, which is the most ever for the index. One of the reasons motivating this approach is that adding more assets makes the index more tamper resistant to price manipulation. A broader range of assets also gives more exposure to newer, smaller DeFi protocols like Cream and Alpha Finance. 
+The new sDEFI embraces an open-arms approach. There are 20 assets in sDEFI v5, which is the most ever for the index. One of the reasons motivating this approach is that adding more assets makes the index more tamper resistant to price manipulation. A broader range of assets also gives more exposure to newer, smaller DeFi protocols like Cream and Alpha Finance.
 
-The SCCP proposes the addition of the following assets: 
+The SCCP proposes the addition of the following assets:
 
 - Terra’s LUNA
 - Thorchain’s RUNE
@@ -39,28 +40,28 @@ Additionally, this SCCP proposes the sDEFI index synth to be paused from trading
 
 The SCCP proposes the following weightages for each constituent of the index:
 
-| % Weightage | Ticker | 
-| ----------- | ------ | 
-| 15.00%      | UNI    | 
-| 11.00%      | AAVE   | 
-| 10.00%      | LUNA   | 
-| 9.00%       | MKR    | 
-| 8.00%       | SNX    | 
-| 8.00%       | RUNE   | 
-| 7.00%       | SUSHI  | 
-| 7.00%       | COMP   | 
-| 6.00%       | YFI    | 
-| 3.00%       | BNT    | 
-| 3.00%       | UMA    | 
-| 2.50%       | ZRX    | 
-| 2.50%       | CRV    | 
-| 2.00%       | 1INCH  | 
-| 2.00%       | REN    | 
-| 1.00%       | BAL    | 
-| 1.00%       | KNC    | 
-| 1.00%       | BOND   | 
-| 0.50%       | CREAM  | 
-| 0.50%       | ALPHA  | 
+| % Weightage | Ticker |
+| ----------- | ------ |
+| 15.00%      | UNI    |
+| 11.00%      | AAVE   |
+| 10.00%      | LUNA   |
+| 9.00%       | MKR    |
+| 8.00%       | SNX    |
+| 8.00%       | RUNE   |
+| 7.00%       | SUSHI  |
+| 7.00%       | COMP   |
+| 6.00%       | YFI    |
+| 3.00%       | BNT    |
+| 3.00%       | UMA    |
+| 2.50%       | ZRX    |
+| 2.50%       | CRV    |
+| 2.00%       | 1INCH  |
+| 2.00%       | REN    |
+| 1.00%       | BAL    |
+| 1.00%       | KNC    |
+| 1.00%       | BOND   |
+| 0.50%       | CREAM  |
+| 0.50%       | ALPHA  |
 
 ## Motivation
 

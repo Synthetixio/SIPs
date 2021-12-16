@@ -1,5 +1,6 @@
 ---
 sccp: 76
+network: L1
 title: Decrease Spartan Council seats to 7
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance discord

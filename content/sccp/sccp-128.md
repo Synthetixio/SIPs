@@ -1,5 +1,6 @@
 ---
 sccp: 128
+network: L1
 title: Lower Target Collateralization Ratio from 450% to 400%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -28,7 +29,6 @@ Given the state of the peg, this sccp proposes to decrease the target collateral
 
 The peg continues to be pressured as can be seen [here](https://www.curve.fi/trade/susdv2/SUSD-USDC/4h), this is mostly due to the reasons mentioned in [SCCP-127](https://sips.synthetix.io/SCCP/sccp-127). As can be seen on [stats](https://stats.synthetix.io/), the active c-ratio is 310%, the sUSD APY is above 10% and the SNX Staking APY at 40%, this means that a large proportion of minters are foregoing claiming all together.
 This SCCP proposes to provide minters with some relief, by allowing them to acquire synths more cheaply and have them need to burn less sUSD in order to get their accounts in order.
-
 
 ## Copyright
 

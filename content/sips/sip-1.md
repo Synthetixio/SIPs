@@ -1,6 +1,6 @@
 ---
 sip: 1
-network: L1
+network: L1-L2
 title: SIP Purpose and Guidelines
 status: Implemented
 author: Kain Warwick (@kaiynne)

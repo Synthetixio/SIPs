@@ -1,5 +1,6 @@
 ---
 sccp: 78
+network: L1
 title: Change Spartan Council Epoch to quarterly (3 months)
 author: Andy T CF (@andytcf)
 discussions-to: governance

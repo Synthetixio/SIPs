@@ -1,5 +1,6 @@
 ---
 sccp: 60
+network: L1
 title: Suspend sBCH and iBCH synths until after BCH hard fork
 author: Jackson Chan (@jacko125)
 status: Implemented

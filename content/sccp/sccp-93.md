@@ -1,5 +1,6 @@
 ---
 sccp: 93
+network: L1
 title: Slighly increase the circuit breaker deviation
 status: Implemented
 author: Jackson Chan (@justinjmoses)

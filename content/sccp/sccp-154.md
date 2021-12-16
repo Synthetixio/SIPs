@@ -1,6 +1,6 @@
 ---
-network: L2
 sccp: 154
+network: L1
 title: Include sEUR to Atomic Exchanges
 author: Kaleb (@kaleb-keny)
 discussions-to: 'https://discord.gg/EWmYsH7X'

@@ -1,5 +1,6 @@
 ---
 sccp: 120
+network: L1
 title: Decrease SNX Inflationary Rewards on BTC shorts to 8k SNX from 16k SNX
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -27,7 +28,6 @@ Decreasing the inflationary rewards paid on BTC shorts will help boost the weekl
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 SNX inflation dedicated towards BTC shorts were being done initially due to the persistently large skew on BTC. However, currently the total amount of sBTC synths issued is around $50 million making up a smaller portion of the debt pool, with around a third of it being offset by shorts. The shorts are effectively costing minters in snx inflation around 50% of the net open position per year which seems high, given the wide availability of cost effective tools to offset that BTC skew.
-
 
 ## Copyright
 

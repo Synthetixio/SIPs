@@ -1,5 +1,6 @@
 ---
 sccp: 119
+network: L1
 title: Decrease SNX Inflationary Rewards on ETH shorts to 8k SNX from 16k SNX
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -26,7 +27,7 @@ Decreasing the inflationary rewards paid on ETH shorts will help boost the weekl
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-SNX inflation dedicated towards ETH shorts were being done because of the persistent skew on ETH, where the collateralization ratio of minters was largely driven by the movement of ETH price. Therefore, it was common practice to incentivize external stakeholders who would take on a short ETH position  in order to assist minters in their debt management. However, with the introduction of wrapper, that ETH skew has materially declined as depicted in this [chart](https://ibb.co/jMTq0V1). Therefore, it is possible to reduce the incentive paid on ETH shorts without taking on the risk of significantly increasing the net ETH skew on the debt pool.
+SNX inflation dedicated towards ETH shorts were being done because of the persistent skew on ETH, where the collateralization ratio of minters was largely driven by the movement of ETH price. Therefore, it was common practice to incentivize external stakeholders who would take on a short ETH position in order to assist minters in their debt management. However, with the introduction of wrapper, that ETH skew has materially declined as depicted in this [chart](https://ibb.co/jMTq0V1). Therefore, it is possible to reduce the incentive paid on ETH shorts without taking on the risk of significantly increasing the net ETH skew on the debt pool.
 
 ## Copyright
 

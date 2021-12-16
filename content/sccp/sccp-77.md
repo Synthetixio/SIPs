@@ -1,5 +1,6 @@
 ---
 sccp: 77
+network: L1
 title: Update sDEFI and iDEFI
 status: Implemented
 author: 'Farmwell (@farmwell), CryptoToit (@CryptoToit)'

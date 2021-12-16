@@ -1,5 +1,6 @@
 ---
 sccp: 116
+network: L1
 title: Reduce Issue Fee Rate on ETH backed loans to 25 bp from 50 bp
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance
@@ -27,7 +28,6 @@ Setting the minting fee at 25 bp will effectively lower the cost of minting of n
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 The primary motivation is to align the wrappr `mintFeeRate` with the loans `issueFeeRate` which allow borrowers to take our synth loans helping with the skew without hampering the gradual rollout of the wrappr.
-
 
 ## Copyright
 

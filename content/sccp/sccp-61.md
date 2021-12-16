@@ -1,5 +1,6 @@
 ---
 sccp: 61
+network: L1
 title: Increase fees on iETH to 0.50%
 author: Kaleb Keny (@kaleb-keny)
 discussions-to: governance

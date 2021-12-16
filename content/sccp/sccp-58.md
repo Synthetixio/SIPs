@@ -1,5 +1,6 @@
 ---
 sccp: 58
+network: L1
 title: Increase Fees on DEFI and CEX to 100 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented
