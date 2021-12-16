@@ -46,7 +46,9 @@ Inflation Model - Inflationary rewards will start at 60% APY in KWENTA and linea
 
 20% - Kwenta Treasury
 
-The 20% reserved for the Kwenta treasury will be staked indefinitely. The yield generated from this reserve will be used as a long-term solution for fuelling community roles and product development.
+**Inflation and Fee Allocation:**
+
+20% of inflation and fees will be routed to the treasury. 80% of inflation and fees will be routed to stakers. These percentages can be adjusted at the Elite Council's discretion via a KIP. This will enable Kwenta to sustainably fund DAO roles while enabling the community to use the entire token supply as needed. 
 
 **Distribution:**
 
