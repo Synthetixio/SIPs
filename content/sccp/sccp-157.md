@@ -1,6 +1,6 @@
 ---
 sccp: 157
-network: Optimism
+network: L2
 title: Update sETH/ETH Wrappr Parameters
 author: Kaleb (@kaleb-keny)
 status: Approved
