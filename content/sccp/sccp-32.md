@@ -1,10 +1,9 @@
 ---
 sccp: 32
-network: L1
+network: Ethereum
 title: Increase Fees on Stock Synths
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented
-discussions-to: '<https://discord.gg/XzQjCf>'
 created: 2020-07-03T00:00:00.000Z
 type: Governance
 ---

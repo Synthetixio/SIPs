@@ -1,9 +1,8 @@
 ---
 sccp: 125
-network: L1
+network: Ethereum
 title: Remove SNX Inflationary Rewards on BTC shorts
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-06-16T00:00:00.000Z
 type: Governance

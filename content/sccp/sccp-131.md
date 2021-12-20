@@ -1,9 +1,8 @@
 ---
 sccp: 131
-network: L1
+network: Ethereum
 title: Increase migrateEntriesThresholdAmount to 720000
 author: Jackson Chan (@jacko125)
-discussions-to: governance
 status: Implemented
 created: 2021-07-12T00:00:00.000Z
 type: Governance

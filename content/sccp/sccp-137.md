@@ -1,9 +1,8 @@
 ---
 sccp: 137
-network: L2
+network: Optimism
 title: Reduce L2 Target C-Ratio To 750%
 author: Spreek (@Spreek)
-discussions-to: 'https://discord.gg/e9c5Cs'
 status: Implemented
 created: 2021-08-31T00:00:00.000Z
 type: Governance

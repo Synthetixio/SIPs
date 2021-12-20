@@ -1,9 +1,8 @@
 ---
 sccp: 86
-network: L1
+network: Ethereum
 title: Initialize New Account Merging Window
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-02-17T00:00:00.000Z
 type: Governance

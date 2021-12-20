@@ -1,9 +1,8 @@
 ---
 sccp: 13
-network: L1
+network: Ethereum
 title: Temporarily lower fee claim buffer to 500%
 author: Garth Travers (@garthtravers)
-discussions-to: Discord
 status: Implemented
 created: 2020-02-19T00:00:00.000Z
 type: Governance

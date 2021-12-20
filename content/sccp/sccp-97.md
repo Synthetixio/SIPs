@@ -1,9 +1,8 @@
 ---
 sccp: 97
-network: L1
+network: Ethereum
 title: Increase migrateEntriesThresholdAmount to 164500
 author: Kaleb Keny  (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-04-26T00:00:00.000Z
 type: Governance

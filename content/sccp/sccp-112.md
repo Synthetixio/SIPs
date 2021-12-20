@@ -1,9 +1,8 @@
 ---
 sccp: 112
-network: L1
+network: Ethereum
 title: Ending Trial ETH Loan Programs
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-05-25T00:00:00.000Z
 type: Governance

@@ -1,10 +1,9 @@
 ---
 sccp: 124
-network: L1
+network: Ethereum
 title: Rebalance and rename sCEX to sCEFI
 author: Rubberduck (@rubberducketh)
 status: Approved
-discussions-to: synths discord channel
 created: 2021-06-13T00:00:00.000Z
 type: Governance
 ---

@@ -1,10 +1,9 @@
 ---
 sccp: 41
-network: L1
+network: Ethereum
 title: Lower C-Ratio by 100% to 600%
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Spreek (@Spreek), Garth Travers (@garthtravers)'
-discussions-to: governance
 created: 2020-08-20T00:00:00.000Z
 type: Governance
 ---

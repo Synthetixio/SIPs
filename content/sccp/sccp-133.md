@@ -1,9 +1,8 @@
 ---
 sccp: 133
-network: L1
+network: Ethereum
 title: Increase volume partner rewards to 10K SNX p/month
 author: Rafa (@rafanator)
-discussions-to: 'https://discord.gg/e9c5Cs'
 status: Implemented
 created: 2021-08-04T00:00:00.000Z
 type: Governance

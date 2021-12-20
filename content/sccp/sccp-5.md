@@ -1,9 +1,8 @@
 ---
 sccp: 5
-network: L1
+network: Ethereum
 title: Increase Arb Pool Distribution to 5%
 author: Kain Warwick (@kaiynne)
-discussions-to: 'https://discordapp.com/invite/aApjG26'
 status: Implemented
 created: 2019-11-05T00:00:00.000Z
 type: Governance

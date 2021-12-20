@@ -1,9 +1,8 @@
 ---
 sccp: 18
-network: L1
+network: Ethereum
 title: Temporary iETH limits
 author: Kain Warwick (@kaiynne)
-discussions-to: 'https://discord.gg/kPPKsPb'
 status: Implemented
 created: 2020-04-27T00:00:00.000Z
 type: Governance

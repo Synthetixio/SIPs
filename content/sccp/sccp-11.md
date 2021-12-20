@@ -1,9 +1,8 @@
 ---
 sccp: 11
-network: L1
+network: Ethereum
 title: Raise Trading Fee to 100bps
 author: Kain Warwick (@kaiynne)
-discussions-to: TBC
 status: Implemented
 created: 2020-02-03T00:00:00.000Z
 type: Governance

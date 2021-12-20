@@ -1,10 +1,9 @@
 ---
 sccp: 31
-network: L1
+network: Ethereum
 title: Increase Commodity Fees
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented
-discussions-to: '<https://discord.gg/XzQjCf>'
 created: 2020-06-26T00:00:00.000Z
 type: Governance
 ---

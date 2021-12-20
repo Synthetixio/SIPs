@@ -1,9 +1,8 @@
 ---
 sccp: 55
-network: L1
+network: Ethereum
 title: Change Debt Snapshot Stale Time to 12 Hours
 author: Anton Jurisevic (@zyzek)
-discussions-to: 'https://research.synthetix.io/'
 status: Implemented
 created: 2020-11-02T00:00:00.000Z
 type: Governance

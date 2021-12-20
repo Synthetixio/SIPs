@@ -1,11 +1,10 @@
 ---
 sccp: 155
 title: Ambassador Council modification
-network: L1-L2
+network: Ethereum & Optimism
 status: Draft
 type: Meta-Governance
 author: Milli3
-discussions-to: https://discord.gg/UWgzgmf6
 created: 2021-11-30
 ---
 

@@ -1,9 +1,8 @@
 ---
 sccp: 141
-network: L1
+network: Ethereum
 title: Up the Weekly SNX Minting reward
 author: JJ (@justinjmoses)
-discussions-to: https://discord.gg/e9c5Cs
 status: Implemented
 created: 2021-10-12
 type: Governance

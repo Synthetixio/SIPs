@@ -1,9 +1,8 @@
 ---
 sccp: 12
-network: L1
+network: Ethereum
 title: Temporarily Deactivate Exploited Assets
 author: Michael J. Cohen (@mjayceee)
-discussions-to: TBC
 status: Implemented
 created: 2020-02-03T00:00:00.000Z
 type: Governance

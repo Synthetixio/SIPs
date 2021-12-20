@@ -1,9 +1,8 @@
 ---
 sccp: 129
-network: L1
+network: Ethereum
 title: SCCP-129 Increase exchange fees for s1INCH, sCOMP, and sCRV
 author: Afif Bandak (@aband1)
-discussions-to: governance
 status: Rejected
 created: 2021-07-06T00:00:00.000Z
 type: Governance

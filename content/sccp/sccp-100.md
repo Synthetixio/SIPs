@@ -1,9 +1,8 @@
 ---
 sccp: 100
-network: L1
+network: Ethereum
 title: Initial Parameters of ETH Wrappr
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-05-12T00:00:00.000Z
 type: Governance

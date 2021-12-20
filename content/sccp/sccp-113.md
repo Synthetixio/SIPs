@@ -1,9 +1,8 @@
 ---
 sccp: 113
-network: L1
+network: Ethereum
 title: Decrease SNX Inflationary Rewards on Curve to 6k SNX
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-05-25T00:00:00.000Z
 type: Governance

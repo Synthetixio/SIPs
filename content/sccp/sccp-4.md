@@ -1,9 +1,8 @@
 ---
 sccp: 4
-network: L1
+network: Ethereum
 title: Raise exchange fee to 50 basis points for two weeks
 author: Kain Warwick (@kaiynne)
-discussions-to: 'https://discord.gg/kPPKsPb'
 status: Implemented
 created: 2019-08-24T00:00:00.000Z
 type: Governance

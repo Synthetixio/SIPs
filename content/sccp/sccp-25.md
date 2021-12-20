@@ -1,9 +1,8 @@
 ---
 sccp: 25
-network: L1
+network: Ethereum
 title: Reduce Liquidation Time Delay
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: 'https://discord.gg/mXNj2x'
 status: Implemented
 created: 2020-06-06T00:00:00.000Z
 type: Governance

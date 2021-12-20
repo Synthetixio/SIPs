@@ -1,9 +1,8 @@
 ---
 sccp: 150
-network: L2
+network: Optimism
 title: Wrappr Parameter Changes (L2)
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-11-18
 type: Governance

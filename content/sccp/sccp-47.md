@@ -1,10 +1,9 @@
 ---
 sccp: 47
-network: L1
+network: Ethereum
 title: Raise Fees on Crypto Synths to 50 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented
-discussions-to: 'https://research.synthetix.io/'
 created: 2020-09-14T00:00:00.000Z
 type: Governance
 ---

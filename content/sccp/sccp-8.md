@@ -1,9 +1,8 @@
 ---
 sccp: 8
-network: L1
+network: Ethereum
 title: Increase exchange fee back to 50 basis points
 author: Garth Travers (@garthtravers)
-discussions-to: 'https://discordapp.com/invite/AEdUHzt'
 status: Implemented
 created: 2019-12-02T00:00:00.000Z
 type: Governance

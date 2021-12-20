@@ -1,10 +1,9 @@
 ---
 sccp: 67
-network: L1
+network: Ethereum
 title: Change Configurable Values for SIP-97 and SIP-103
 author: 'SynthaMan, Kaleb'
 status: Implemented
-discussions-to: 'https://discord.gg/7nMZMdbf'
 created: 2020-12-22T00:00:00.000Z
 type: Governance
 ---

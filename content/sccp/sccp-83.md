@@ -1,9 +1,8 @@
 ---
 sccp: 83
-network: L1
+network: Ethereum
 title: Apply Market Closure Mechanism on Forex and Commodity Synths
 author: 'Kaleb Keny (@kaleb-keny) , Spreek (@spreek)'
-discussions-to: governance
 status: Implemented
 created: 2021-01-31T00:00:00.000Z
 type: Governance

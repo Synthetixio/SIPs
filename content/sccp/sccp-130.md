@@ -1,10 +1,9 @@
 ---
 sccp: 130
-network: L1
+network: Ethereum
 title: Raise Fees on Altcoin Synths to 300 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Rejected
-discussions-to: Governance
 created: 2021-07-08T00:00:00.000Z
 type: Governance
 ---
