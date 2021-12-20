@@ -1,12 +1,11 @@
 ---
 sip: 24
-network: L1
+network: Ethereum
 title: Terminal SNX Inflation
 status: Implemented
 author: >-
   Vance Spencer (@FrameworkVance), Deltatiger (@deltatigernz), Michael Anderson
   (@meanderson)
-discussions-to: 'https://github.com/Synthetixio/SIPs/issues/36'
 created: 2019-10-25T00:00:00.000Z
 requires: Inflation Smoothing (SIP-23)
 type: Governance

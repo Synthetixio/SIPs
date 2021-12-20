@@ -1,10 +1,9 @@
 ---
 sip: 66
-network: L1
+network: Ethereum
 title: Reduce gas of SNX transfers for non-stakers
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-06-30T00:00:00.000Z
 type: Governance
 ---

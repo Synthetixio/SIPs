@@ -1,10 +1,9 @@
 ---
 sip: 59
-network: L1
+network: Ethereum
 title: Delegated Migrator
 status: Rejected
 author: Justin J Moses (@justinjmoses)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-05-11T00:00:00.000Z
 type: Governance
 ---

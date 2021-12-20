@@ -1,10 +1,9 @@
 ---
 sip: 33
-network: L1
+network: Ethereum
 title: Deprecate XDR synth from Synthetix.
 status: Implemented
 author: 'Nocturnalsheet (@nocturnalsheet), Clinton Ennis (@hav-noms)'
-discussions-to: '(https://discordapp.com/invite/CDTvjHY)'
 created: 2019-12-17T00:00:00.000Z
 type: Governance
 ---

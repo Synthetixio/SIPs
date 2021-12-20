@@ -1,10 +1,9 @@
 ---
 sip: 53
-network: L1
+network: Ethereum
 title: Binary Options
 status: Implemented
 author: Anton Jurisevic (@zyzek)
-discussions-to: 'https://discord.gg/kPPKsPb'
 created: 2020-04-23T00:00:00.000Z
 type: Governance
 ---

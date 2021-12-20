@@ -1,10 +1,9 @@
 ---
 sip: 56
-network: L1
+network: Ethereum
 title: Differential Fees
 status: Implemented
 author: Clinton Ennis (@hav-noms)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-05-01T00:00:00.000Z
 type: Governance
 ---

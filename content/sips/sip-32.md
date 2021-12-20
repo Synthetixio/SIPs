@@ -1,10 +1,9 @@
 ---
 sip: 32
-network: L1
+network: Ethereum
 title: Chainlink Oracles Phase 1 - Forex & Commodities
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: 'https://discord.gg/3uJ5rAy'
 created: 2019-12-02T00:00:00.000Z
 type: Governance
 ---

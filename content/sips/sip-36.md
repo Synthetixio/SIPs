@@ -1,10 +1,9 @@
 ---
 sip: 36
-network: L1
+network: Ethereum
 title: 'Chainlink Oracles Phase 2 - Cryptocurrencies, indexes'
 status: Implemented
 author: 'Garth Travers (@garthtravers), Justin J Moses (@justinjmoses)'
-discussions-to: 'https://discord.gg/3uJ5rAy'
 created: 2020-01-20T00:00:00.000Z
 type: Governance
 ---

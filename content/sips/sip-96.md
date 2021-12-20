@@ -1,12 +1,11 @@
 ---
 sip: 96
-network: L1
+network: Ethereum
 title: Blockchain Forks Framework for Synths
 status: Implemented
 author: >-
   Jackson Chan (@jacko125), Garth Travers (@garthtravers), Clinton Ennis
   (@hav-noms)
-discussions-to: 'https://research.synthetix.io/'
 created: 2020-11-16T00:00:00.000Z
 type: Governance
 ---

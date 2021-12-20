@@ -1,10 +1,9 @@
 ---
 sip: 3
-network: L1
+network: Ethereum
 title: Purgeable Synths
 status: Implemented
 author: Clinton Ennis (@hav-noms)
-discussions-to: 'https://discord.gg/CDTvjHY'
 created: 2019-06-12T00:00:00.000Z
 type: Governance
 ---

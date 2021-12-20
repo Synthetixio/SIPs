@@ -1,10 +1,9 @@
 ---
 sip: 61
-network: L1
+network: Ethereum
 title: Keeper Synths
 status: Rejected
 author: 'Kain Warwick (@kaiynne), Justin Moses (@justinjmoses)'
-discussions-to: 'https://discord.gg/kPPKsPb'
 created: 2020-05-21T00:00:00.000Z
 type: Governance
 ---

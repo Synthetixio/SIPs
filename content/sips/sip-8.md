@@ -1,10 +1,9 @@
 ---
 sip: 8
-network: L1
+network: Ethereum
 title: sETH Uniswap Pool Staking Incentives
 status: Implemented
 author: Kain Warwick (@kaiynne)
-discussions-to: 'https://discord.gg/2MmKtHb'
 created: 2019-08-02T00:00:00.000Z
 updated: 2019-10-29T00:00:00.000Z
 type: Governance

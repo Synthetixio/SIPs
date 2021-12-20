@@ -1,10 +1,9 @@
 ---
 sip: 7
-network: L1
+network: Ethereum
 title: Oracle Trading Locks
 status: Implemented
 author: 'Jackson Chan (@jacko125), Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'
-discussions-to: 'https://discord.gg/FHPnPk'
 created: 2019-07-09T00:00:00.000Z
 type: Governance
 ---

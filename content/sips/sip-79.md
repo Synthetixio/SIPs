@@ -1,12 +1,11 @@
 ---
 sip: 79
-network: L1
+network: Ethereum
 title: Deferred Transaction Gas Tank
 status: Rejected
 author: >-
   Anton Jurisevic (@zyzek), Clément Balestrat (@clementbalestrat), Clinton Ennis
   (@hav-noms)
-discussions-to: '<Create a new thread on https://research.synthetix.io and drop the link here>'
 created: 2020-08-19T00:00:00.000Z
 type: Governance
 ---

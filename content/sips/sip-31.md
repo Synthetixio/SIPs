@@ -1,10 +1,9 @@
 ---
 sip: 31
-network: L1
+network: Ethereum
 title: sETH LP rewards contract
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Anton Bukov (@k06a)'
-discussions-to: 'https://discord.gg/3uJ5rAy'
 created: 2019-11-04T00:00:00.000Z
 type: Governance
 ---

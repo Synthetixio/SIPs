@@ -1,10 +1,9 @@
 ---
 sip: 92
-network: L1
+network: Ethereum
 title: Historical iSynths Pricing Tracks When Last Frozen
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: 'https://research.synthetix.io'
 created: 2020-11-09T00:00:00.000Z
 type: Governance
 ---

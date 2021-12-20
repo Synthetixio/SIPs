@@ -1,10 +1,9 @@
 ---
 sip: 74
-network: L1
+network: Ethereum
 title: Binary Markets with custom questions
 status: Rejected
 author: 'Danijel (@dgornjakovic), Farmwell (@farmwell)'
-discussions-to: 'https://research.synthetix.io/t/sip-custom-binary-options/118'
 created: 2020-07-25T00:00:00.000Z
 type: Governance
 ---

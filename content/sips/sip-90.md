@@ -1,10 +1,9 @@
 ---
 sip: 90
-network: L1
+network: Ethereum
 title: Transition SIPs/SCCPs to Snapshot Governance
 status: Implemented
 author: Andy T CF (@andytcf)
-discussions-to: >-
   https://research.synthetix.io/t/transition-sips-sccps-to-snapshot-governance/209
 created: 2020-10-14T00:00:00.000Z
 type: Governance

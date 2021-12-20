@@ -1,10 +1,9 @@
 ---
 sip: 60
-network: L1
+network: Ethereum
 title: New Escrow Contract & Migration
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'
-discussions-to: '<https://discord.gg/ShGSzny>'
 created: 2020-05-20T00:00:00.000Z
 type: Governance
 ---

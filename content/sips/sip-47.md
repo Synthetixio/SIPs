@@ -1,10 +1,9 @@
 ---
 sip: 47
-network: L1
+network: Ethereum
 title: Prevent Empty Exchanges
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-03-05T00:00:00.000Z
 type: Governance
 ---

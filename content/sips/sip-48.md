@@ -1,10 +1,9 @@
 ---
 sip: 48
-network: L1
+network: Ethereum
 title: Allow Views to Return When Rates Are Stale
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-03-09T00:00:00.000Z
 type: Governance
 ---

@@ -1,10 +1,9 @@
 ---
 sip: 29
-network: L1
+network: Ethereum
 title: 'Issue, burn and claim only in sUSD'
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: '(https://discord.gg/3uJ5rAy)'
 created: 2019-11-27T00:00:00.000Z
 type: Governance
 ---

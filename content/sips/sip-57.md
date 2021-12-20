@@ -1,10 +1,9 @@
 ---
 sip: 57
-network: L1
+network: Ethereum
 title: Permanent Read-only Proxy for Address Resolver
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-05-08T00:00:00.000Z
 type: Governance
 ---

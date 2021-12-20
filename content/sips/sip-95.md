@@ -1,12 +1,11 @@
 ---
 sip: 95
-network: L1
+network: Ethereum
 title: Delist sBCH and iBCH for evaluation
 status: Implemented
 author: >-
   Jackson Chan (@jacko125), Garth Travers (@garthtravers), Clinton Ennis
   (@hav-noms)
-discussions-to: 'https://discordapp.com/invite/AEdUHzt'
 created: 2020-11-16T00:00:00.000Z
 type: Governance
 ---

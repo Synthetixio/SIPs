@@ -1,10 +1,9 @@
 ---
 sip: 65
-network: L1
+network: Ethereum
 title: Decentralized Circuit Breaker
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-06-17T00:00:00.000Z
 type: Governance
 ---

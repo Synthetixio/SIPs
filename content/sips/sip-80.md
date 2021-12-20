@@ -1,10 +1,9 @@
 ---
 sip: 80
-network: L2
+network: Optimism
 title: Synthetic Futures
 status: Feasibility
 author: 'Anton Jurisevic (@zyzek), Jackson Chan (@jacko125), Kain Warwick (@kaiynne)'
-discussions-to: 'https://research.synthetix.io/t/sip-80-synthetic-futures/183'
 created: 2020-08-06T00:00:00.000Z
 requires: 79
 type: Governance

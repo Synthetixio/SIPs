@@ -1,10 +1,9 @@
 ---
 sip: 68
-network: L1
+network: Ethereum
 title: Minor enhancements to StakingRewards.sol
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Anton Jurisevic (@zyzek)'
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-07-06T00:00:00.000Z
 type: Governance
 ---
