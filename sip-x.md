@@ -1,9 +1,9 @@
 ---
 sip: <to be assigned>
 title: <SIP title>
-network: L1 | Optimism | L1 & Optimism 
-status: Draft
-type: <Meta-Governance / Governance>
+network: <L1 | Optimism | L1 & Optimism>
+status: <Draft>
+type: <Meta-Governance | Governance>
 author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 implementor: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 release: (Release Name)
