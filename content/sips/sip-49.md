@@ -1,10 +1,9 @@
 ---
 sip: 49
-network: L1
+network: Ethereum
 title: Add new synths for Hadar release
 status: Implemented
 author: Nocturnalsheet (@nocturnalsheet)
-discussions-to: '<https://discordapp.com/invite/CDTvjHY>'
 created: 2020-03-30T00:00:00.000Z
 type: Governance
 ---

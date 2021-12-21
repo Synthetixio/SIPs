@@ -1,9 +1,8 @@
 ---
 sccp: 135
-network: L1-L2
+network: Ethereum & Optimism
 title: Open Account Merging Continuously
 status: Implemented
-discussions-to: governance
 author: Rafa (@rafanator)
 created: 2021-08-13T00:00:00.000Z
 type: Governance

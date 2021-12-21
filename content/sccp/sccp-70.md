@@ -1,11 +1,10 @@
 ---
 sccp: 70
-network: L1
+network: Ethereum
 title: >-
   Raise maxDebt on Multi-Collateral Loans to sUSD 20 million from sUSD 10
   million
 author: Kaleb
-discussions-to: governance
 status: Implemented
 created: 2020-12-31T00:00:00.000Z
 type: Governance

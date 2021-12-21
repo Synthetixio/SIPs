@@ -1,9 +1,8 @@
 ---
 sccp: 74
-network: L1
+network: Ethereum
 title: Time lock on burning after minting Adjustment
 author: SynthaMan (@SNXified)
-discussions-to: governance
 status: Rejected
 created: 2021-01-09T00:00:00.000Z
 type: Governance

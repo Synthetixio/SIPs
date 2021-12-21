@@ -1,10 +1,9 @@
 ---
 sip: 52
-network: L1
+network: Ethereum
 title: Add Next Price to Fee Reclamation
 status: Rejected
 author: Justin J Moses (@justinjmoses)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-03-04T00:00:00.000Z
 type: Governance
 ---

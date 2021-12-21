@@ -1,9 +1,8 @@
 ---
 sccp: 66
-network: L1
+network: Ethereum
 title: Increase Spartan Council seats to 8
 author: Andy T CF (@andytcf)
-discussions-to: governance discord
 status: Implemented
 created: 2020-11-09T00:00:00.000Z
 type: Governance

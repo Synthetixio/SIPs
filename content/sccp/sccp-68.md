@@ -1,9 +1,8 @@
 ---
 sccp: 68
-network: L1
+network: Ethereum
 title: Increase Fee Reclamation Waiting Period to 6 minutes
 author: Kaleb Keny (@kalebkeny)
-discussions-to: governance
 status: Implemented
 created: 2020-12-24T00:00:00.000Z
 type: Governance

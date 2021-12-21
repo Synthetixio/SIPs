@@ -1,10 +1,9 @@
 ---
 sccp: 37
-network: L1
+network: Ethereum
 title: Increase Fees on Silver to 50 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented
-discussions-to: <Governance-Channel>
 created: 2020-07-24T00:00:00.000Z
 type: Governance
 ---

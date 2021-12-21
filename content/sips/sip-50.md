@@ -1,10 +1,9 @@
 ---
 sip: 50
-network: L1
+network: Ethereum
 title: Add sYIELD synth
 status: Rejected
 author: 'Nocturnalsheet (@nocturnalsheet), IanC'
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-03-09T00:00:00.000Z
 type: Governance
 ---

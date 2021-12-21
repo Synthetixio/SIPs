@@ -1,10 +1,9 @@
 ---
 sip: 78
-network: L1
+network: Ethereum
 title: iSynth limit reset must not trip circuit breaker
 status: Implemented
 author: Justin J Moses <@justinjmoses>
-discussions-to: >-
   https://research.synthetix.io/t/sip-78-isynth-limit-reset-must-not-trip-circuit-breaker/181
 created: 2020-08-19T00:00:00.000Z
 type: Governance

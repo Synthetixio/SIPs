@@ -1,10 +1,9 @@
 ---
 sccp: 35
-network: L1
+network: Ethereum
 title: 'Reduce Rewards On Curve to 24,000 SNX'
 status: Implemented
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: 'https://discord.gg/B3PtpY'
 created: 2020-07-18T00:00:00.000Z
 type: Governance
 ---

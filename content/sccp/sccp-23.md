@@ -1,9 +1,8 @@
 ---
 sccp: 23
-network: L1
+network: Ethereum
 title: Reduce SNX rewards for sETH/ETH Uniswap pool
 author: Nocturnalsheet (@nocturnalsheet)
-discussions-to: 'https://discord.gg/kPPKsPb'
 status: Implemented
 created: 2020-05-30T00:00:00.000Z
 type: Governance

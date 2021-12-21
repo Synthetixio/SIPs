@@ -1,10 +1,9 @@
 ---
 sip: 2
-network: L1
+network: Ethereum
 title: Remove Fee Penalty Tiers
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125)'
-discussions-to: 'https://discord.gg/CDTvjHY'
 created: 2019-06-10T00:00:00.000Z
 type: Governance
 ---

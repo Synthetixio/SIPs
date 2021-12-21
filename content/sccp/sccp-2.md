@@ -1,10 +1,9 @@
 ---
 sccp: 2
-network: L1
+network: Ethereum
 title: Change C Ratio to 750%
 status: Implemented
 author: Kain Warwick (@kaiynne)
-discussions-to: 'https://discord.gg/CDTvjHY'
 created: 2019-06-17T00:00:00.000Z
 requires: SIP-2
 type: Governance

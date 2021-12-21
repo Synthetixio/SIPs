@@ -1,10 +1,9 @@
 ---
 sip: 55
-network: L1
+network: Ethereum
 title: Synth Circuit Breaker (Phase One)
 status: Implemented
 author: 'Jackson Chan (@jacko125), Justin J Moses (@justinjmoses)'
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-04-24T00:00:00.000Z
 type: Governance
 ---

@@ -1,9 +1,8 @@
 ---
 sccp: 79
-network: L1
+network: Ethereum
 title: Increase Account Mergers Deadline
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-01-23T00:00:00.000Z
 type: Governance

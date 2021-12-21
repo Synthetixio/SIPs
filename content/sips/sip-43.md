@@ -1,10 +1,9 @@
 ---
 sip: 43
-network: L1
+network: Ethereum
 title: Address Resolver
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: <Discord Channel>
 created: 2020-02-28T00:00:00.000Z
 type: Governance
 ---

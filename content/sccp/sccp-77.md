@@ -1,10 +1,9 @@
 ---
 sccp: 77
-network: L1
+network: Ethereum
 title: Update sDEFI and iDEFI
 status: Implemented
 author: 'Farmwell (@farmwell), CryptoToit (@CryptoToit)'
-discussions-to: 'https://research.synthetix.io/'
 created: 2021-01-21T00:00:00.000Z
 type: Governance
 ---

@@ -1,9 +1,8 @@
 ---
 sip: 19
-network: L1
+network: Ethereum
 title: Deprecate Transfer Fee logic
 author: 'Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'
-discussions-to: 'https://discord.gg/CDTvjHY'
 status: Implemented
 created: 2019-09-23T00:00:00.000Z
 type: Governance

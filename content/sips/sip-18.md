@@ -1,9 +1,8 @@
 ---
 sip: 18
-network: L1
+network: Ethereum
 title: Recover orphaned $2.9k sUSD from SNX fee address
 author: 'Nocturnalsheet (@nocturnalsheet), Clinton Ennis (@hav-noms)'
-discussions-to: 'https://discord.gg/CDTvjHY'
 status: Implemented
 created: 2019-09-02T00:00:00.000Z
 type: Governance

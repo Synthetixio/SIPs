@@ -1,10 +1,9 @@
 ---
 sip: 25
-network: L1
+network: Ethereum
 title: Decouple Gas Limiter from Oracle
 status: Implemented
 author: Justin J. Moses (@justinjmoses)
-discussions-to: 'https://discord.gg/3uJ5rAy'
 created: 2019-10-29T00:00:00.000Z
 type: Governance
 ---

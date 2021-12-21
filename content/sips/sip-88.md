@@ -1,6 +1,6 @@
 ---
 sip: 88
-network: L1
+network: Ethereum
 title: ExchangeRates patch - Chainlink aggregator V2V3
 status: Implemented
 author: Clement Balestrat (@clementbalestrat)
@@ -87,5 +87,3 @@ This scenario will only pass if the patch described in this SIP is implemented. 
 N/A
 
 ## Copyright
-
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

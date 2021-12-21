@@ -1,9 +1,8 @@
 ---
 sccp: 151
-network: L1
+network: Ethereum
 title: Wrappr Parameter Changes (L1)
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-11-22
 type: Governance

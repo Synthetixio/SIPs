@@ -1,9 +1,8 @@
 ---
 sccp: 84
-network: L1
+network: Ethereum
 title: Lower Fees on iETH
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-02-03T00:00:00.000Z
 type: Governance

@@ -1,9 +1,8 @@
 ---
 sccp: 128
-network: L1
+network: Ethereum
 title: Lower Target Collateralization Ratio from 450% to 400%
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-06-27T00:00:00.000Z
 type: Governance

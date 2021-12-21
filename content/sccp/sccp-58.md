@@ -1,10 +1,9 @@
 ---
 sccp: 58
-network: L1
+network: Ethereum
 title: Increase Fees on DEFI and CEX to 100 bp
 author: Kaleb Keny (@kaleb-keny)
 status: Implemented
-discussions-to: 'https://research.synthetix.io/'
 created: 2020-11-11T00:00:00.000Z
 type: Governance
 ---

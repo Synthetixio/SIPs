@@ -1,10 +1,9 @@
 ---
 sip: 15
-network: L1
+network: Ethereum
 title: SNX liquidation mechanism
 status: Implemented
 author: 'Jackson Chan (@jacko125), Kain Warwick (@kaiynne)'
-discussions-to: null
 created: 2019-08-20T00:00:00.000Z
 type: Governance
 ---

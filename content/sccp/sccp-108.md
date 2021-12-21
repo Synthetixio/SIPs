@@ -1,9 +1,8 @@
 ---
 sccp: 108
-network: L1
+network: Ethereum
 title: Reduce Issue Fee Rate on ETH backed loans to 50 bp from 200 bp
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-05-20T00:00:00.000Z
 type: Governance

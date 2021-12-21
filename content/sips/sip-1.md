@@ -1,10 +1,9 @@
 ---
 sip: 1
-network: L1-L2
+network: Ethereum & Optimism
 title: SIP Purpose and Guidelines
 status: Implemented
 author: Kain Warwick (@kaiynne)
-discussions-to: 'https://research.synthetix.io/'
 created: 2019-06-10T00:00:00.000Z
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/Qme74DFFv2CZDENkuD2HqYndFzAUtozFsn4U8khGeKfJsi

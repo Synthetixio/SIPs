@@ -1,10 +1,9 @@
 ---
 sip: 51
-network: L1
+network: Ethereum
 title: sETH & sUSD Liquidity Incentive
 status: Implemented
 author: Nocturnalsheet (@nocturnalsheet)
-discussions-to: 'https://discord.gg/2MmKtHb'
 created: 2020-04-04T00:00:00.000Z
 type: Governance
 ---

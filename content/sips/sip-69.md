@@ -1,10 +1,9 @@
 ---
 sip: 69
-network: L1
+network: Ethereum
 title: Update Index Synths
 status: Implemented
 author: Daryl Lau (@daryllautk)
-discussions-to: '(https://discordapp.com/invite/CDTvjHY)'
 created: 2020-07-07T00:00:00.000Z
 type: Governance
 ---

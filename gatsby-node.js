@@ -15,7 +15,6 @@ const Frontmatter = `
     proposal
     implementor
     release
-    discussions_to
     created
     updated
     status

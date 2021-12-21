@@ -1,9 +1,8 @@
 ---
 sip: 14
-network: L1
+network: Ethereum
 title: Allow delegation of Synthetix Exchange function to another address
 author: 'Jackson Chan (@jacko125), Clinton Ennis (@hav-noms)'
-discussions-to: 'https://discord.gg/DQ8ehX4'
 status: Implemented
 created: 2019-08-01T00:00:00.000Z
 type: Governance

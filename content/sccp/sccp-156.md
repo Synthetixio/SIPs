@@ -1,9 +1,8 @@
 ---
 sccp: 156
-network: L2
+network: Optimism
 title: Update LUSD Wrappr Parameters
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-12-07
 type: Governance

@@ -1,9 +1,8 @@
 ---
 sccp: 19
-network: L1
+network: Ethereum
 title: Cancel ArbRewarder's SNX Rewards
 author: Clinton Ennis (@hav-noms)
-discussions-to: 'https://discord.gg/kPPKsPb'
 status: Implemented
 created: 2020-04-30T00:00:00.000Z
 type: Governance

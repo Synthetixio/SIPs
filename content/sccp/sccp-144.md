@@ -1,9 +1,8 @@
 ---
 sccp: 144
-network: L2
+network: Optimism
 title: Increase L2 ETH Wrappr Max cap to 2,200 ETH
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-11-04
 type: Governance

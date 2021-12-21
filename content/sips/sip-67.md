@@ -1,10 +1,9 @@
 ---
 sip: 67
-network: L1
+network: Ethereum
 title: Binary Options bid phases
 status: Rejected
 author: Danijel (@dgornjakovic)
-discussions-to: 'https://discord.gg/e9c5Cs'
 created: 2020-07-05T00:00:00.000Z
 type: Governance
 ---

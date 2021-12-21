@@ -1,9 +1,8 @@
 ---
 sccp: 73
-network: L1
+network: Ethereum
 title: Inverse Synths Leverage Fee Adjustment (iETH)
 author: Kaleb (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-01-04T00:00:00.000Z
 type: Governance

@@ -1,11 +1,9 @@
 ---
 sip: 84
-network: L1
+network: Ethereum
 title: Pause Synths Below Open Interest Threshold
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125)'
-discussions-to: >-
-  https://research.synthetix.io/t/sip-84-pause-synths-below-open-interest-threshold/189
 created: 2020-08-31T00:00:00.000Z
 requires: 'https://sips.synthetix.io/sips/sip-83'
 type: Governance
@@ -61,19 +59,19 @@ Once temporarily reducing the number of Synths was deemed necessary we needed to
 
 The table below reflects the Synths (and their inverses) that would be paused based on a threshold of 50k USD.
 
-|  Synth   | Open Interest|
-|--------:|----------:|
-|    sEOS | 27,165.32 |
-|    sCEX | 24,556.73 |
-|    sTRX | 18,874.18 |
-|   sFTSE | 11,836.85 |
-|    sJPY |  9,467.44 |
-|    sXMR |  9,215.42 |
-|    sCHF |  1,725.99 |
-|    sETC |  1,112.68 |
-|    sGBP |    453.27 |
-| sNIKKEI |      93.1 |
-|   sDASH |      87.8 |
+|   Synth | Open Interest |
+| ------: | ------------: |
+|    sEOS |     27,165.32 |
+|    sCEX |     24,556.73 |
+|    sTRX |     18,874.18 |
+|   sFTSE |     11,836.85 |
+|    sJPY |      9,467.44 |
+|    sXMR |      9,215.42 |
+|    sCHF |      1,725.99 |
+|    sETC |      1,112.68 |
+|    sGBP |        453.27 |
+| sNIKKEI |          93.1 |
+|   sDASH |          87.8 |
 
 ### Test Cases
 

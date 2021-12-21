@@ -1,9 +1,8 @@
 ---
 sccp: 85
-network: L1
+network: Ethereum
 title: Increase loans and shorts cap to 30 million
 author: Danijel Gornjakovic (@danijel)
-discussions-to: governance
 status: Implemented
 created: 2021-02-13T00:00:00.000Z
 type: Governance

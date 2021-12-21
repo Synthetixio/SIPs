@@ -1,9 +1,8 @@
 ---
 sccp: 82
-network: L1
+network: Ethereum
 title: Decrease Collateralization&Liquidation Ratio on sUSD Loans to 130% from 150%
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-01-25T00:00:00.000Z
 type: Governance

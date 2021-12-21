@@ -1,10 +1,9 @@
 ---
 sccp: 49
-network: L1
+network: Ethereum
 title: Distribute 16k SNX to iETH incentives
 author: Kain Warwick (@kaiynne)
 status: Implemented
-discussions-to: 'https://research.synthetix.io/'
 created: 2020-09-24T00:00:00.000Z
 type: Governance
 ---

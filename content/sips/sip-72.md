@@ -1,10 +1,9 @@
 ---
 sip: 72
-network: L1
+network: Ethereum
 title: Add More Assets to the Binary Options Markets
 status: Rejected
 author: psybull (@psybull)
-discussions-to: 'https://research.synthetix.io/t/sip-add-more-binary-options-markets/116'
 created: 2020-07-25T00:00:00.000Z
 type: Governance
 ---

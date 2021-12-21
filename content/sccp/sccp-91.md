@@ -1,9 +1,8 @@
 ---
 sccp: 91
-network: L1
+network: Ethereum
 title: Increase loans and shorts cap to sUSD 65 million from sUSD 50 million
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-04-03T00:00:00.000Z
 type: Governance

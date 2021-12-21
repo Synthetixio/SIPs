@@ -1,10 +1,9 @@
 ---
 sip: 58
-network: L1
+network: Ethereum
 title: Emit every fee reclamation outcome during trade settlement
 status: Implemented
 author: Jackson Chan (@jacko125)
-discussions-to: '<https://discord.gg/ShGSzny>'
 created: 2020-05-11T00:00:00.000Z
 type: Governance
 ---

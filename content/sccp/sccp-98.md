@@ -1,10 +1,9 @@
 ---
 sccp: 98
-network: L1
+network: Ethereum
 title: Rebalance sDEFI and iDEFI
 author: 'Farmwell (@farmwell), CryptoToit (@CryptoToit)'
 status: Implemented
-discussions-to: 'https://research.synthetix.io/'
 created: 2021-04-22T00:00:00.000Z
 type: Governance
 ---

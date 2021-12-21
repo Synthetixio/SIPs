@@ -1,9 +1,8 @@
 ---
 sccp: 146
-network: L1
+network: Ethereum
 title: Disabling New Shorts From Being Open Mainnet
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-11-02
 type: Governance

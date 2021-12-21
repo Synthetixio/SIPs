@@ -1,9 +1,8 @@
 ---
 sccp: 147
-network: L2
+network: Optimism
 title: Increasing the cap on the DAI wrappr to 30m and lower the minting fee on DAI to 5 bp
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-11-05
 type: Governance

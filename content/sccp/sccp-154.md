@@ -1,9 +1,8 @@
 ---
 sccp: 154
-network: L1
+network: Ethereum
 title: Include sEUR to Atomic Exchanges
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-11-24
 type: Governance

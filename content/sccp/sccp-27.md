@@ -1,10 +1,9 @@
 ---
 sccp: 27
-network: L1
+network: Ethereum
 title: Reduce Collateral Ratio For sETH Loans
 status: Implemented
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: sip-35-eth-collateral
 created: 2020-05-25T00:00:00.000Z
 type: Governance
 ---

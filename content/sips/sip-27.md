@@ -1,10 +1,9 @@
 ---
 sip: 27
-network: L1
+network: Ethereum
 title: Add new crypto Synths
 status: Implemented
 author: Garth Travers (@garthtravers)
-discussions-to: '(https://discordapp.com/invite/CDTvjHY)'
 created: 2019-11-20T00:00:00.000Z
 type: Governance
 ---

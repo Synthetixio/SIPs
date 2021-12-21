@@ -1,9 +1,8 @@
 ---
 sccp: 34
-network: L1
+network: Ethereum
 title: Binary Options fees distribution
 author: Danijel (@dgornjakovic)
-discussions-to: 'https://discord.gg/e9c5Cs'
 status: Rejected
 created: 2020-07-05T00:00:00.000Z
 type: Governance

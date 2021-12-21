@@ -1,9 +1,8 @@
 ---
 sccp: 76
-network: L1
+network: Ethereum
 title: Decrease Spartan Council seats to 7
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance discord
 status: Rejected
 created: 2021-01-21T00:00:00.000Z
 type: Governance

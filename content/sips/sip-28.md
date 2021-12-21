@@ -1,10 +1,9 @@
 ---
 sip: 28
-network: L1
+network: Ethereum
 title: Audit Remediations
 status: Rejected
 author: 'Garth Travers (@garthtravers), Clinton Ennis (@hav-noms)'
-discussions-to: '(https://discordapp.com/invite/CDTvjHY)'
 created: 2019-11-21T00:00:00.000Z
 type: Governance
 ---

@@ -3,7 +3,6 @@ sccp: 149
 network: Ethereum
 title: Update Atomic Swap Parameters
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-12-04
 type: Governance

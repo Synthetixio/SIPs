@@ -1,10 +1,9 @@
 ---
 sip: 63
-network: L1
+network: Ethereum
 title: Trading Incentives
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125)'
-discussions-to: 'https://research.synthetix.io/t/sip-63-trading-incentives/83'
 created: 2020-05-28T00:00:00.000Z
 type: Governance
 ---

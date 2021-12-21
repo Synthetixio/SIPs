@@ -1,6 +1,6 @@
 ---
 sip: 86
-network: L1
+network: Ethereum
 title: ExchangeRates Chainlink Aggregator V2V3
 status: Implemented
 author: Clement Balestrat (@clementbalestrat)
@@ -144,5 +144,3 @@ Given one aggregator, tracking `fasGasPrice` price:
 N/A
 
 ## Copyright
-
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

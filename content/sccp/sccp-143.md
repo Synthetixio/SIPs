@@ -1,9 +1,8 @@
 ---
 sccp: 143
-network: L2
+network: Optimism
 title: Increase L2 ETH Wrappr Max cap to 1,500 ETH and Lower Minting Fee to 5 bp
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-10-31
 type: Governance

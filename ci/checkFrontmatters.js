@@ -15,7 +15,9 @@ const commonValidationSchema = Yup.object().shape({
   proposal: Yup.string().matches(snapshotIdRegex),
   status: Yup.string().oneOf(statuses),
   author: Yup.string().required(),
-  network: Yup.string().oneOf(['L1', 'L2', 'L1-L2']).required(),
+  network: Yup.string()
+    .oneOf(['Ethereum', 'Optimism', 'Ethereum & Optimism'])
+    .required(),
   implementor: Yup.string().nullable(),
   release: Yup.string().nullable(),
   created: Yup.date().nullable(),

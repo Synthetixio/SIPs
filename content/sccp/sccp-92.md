@@ -1,10 +1,9 @@
 ---
 sccp: 92
-network: L1
+network: Ethereum
 title: Distribute 16k SNX to sBTC shorting reward incentives
 status: Implemented
 author: Jackson Chan (@jacko125)
-discussions-to: 'https://discord.gg/8Br87gxm'
 created: 2021-04-06T00:00:00.000Z
 type: Governance
 ---
