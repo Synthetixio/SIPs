@@ -57,17 +57,6 @@ const FrontmatterTable: React.FC<Props> = ({ frontmatter }) => {
             </td>
           </tr>
         )}
-
-        {frontmatter.discussions_to && (
-          <tr>
-            <th>Discussions-To</th>
-            <td>
-              <a href={frontmatter.discussions_to}>
-                {frontmatter.discussions_to}
-              </a>
-            </td>
-          </tr>
-        )}
         {frontmatter.created && (
           <tr>
             <th>Created</th>
@@ -96,7 +85,6 @@ export const query = graphql`
     proposal
     implementor
     release
-    discussions_to
     created
     updated
     status
