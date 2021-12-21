@@ -1,12 +1,13 @@
 ---
 sccp: 157
-network: L2
+network: Optimism
 title: Update sETH/ETH Wrappr Parameters
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
-status: Vote_Pending
+status: Implemented
 created: 2021-12-14
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/Qmdd72qwHGiwz5k8ADJd9vEJRxCgDZE1Rzjd3EzH8TsjZR
 ---
 
 ## Simple Summary
