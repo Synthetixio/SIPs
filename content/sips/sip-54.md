@@ -1,10 +1,9 @@
 ---
 sip: 54
-network: L1
+network: Ethereum
 title: Limit Orders
 status: Rejected
 author: 'Tom Howard (@thowar2), Nour Haridy (@nourharidy)'
-discussions-to: Discord - limit-orders
 created: 2020-04-27T00:00:00.000Z
 type: Governance
 ---

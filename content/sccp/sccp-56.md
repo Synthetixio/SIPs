@@ -1,9 +1,8 @@
 ---
 sccp: 56
-network: L1
+network: Ethereum
 title: Reduce exchange fees of sETH and sBTC to 0.3%
 author: Justin J Moses (@justinjmoses)
-discussions-to: governance
 status: Implemented
 created: 2020-11-03T00:00:00.000Z
 type: Governance

@@ -1,12 +1,11 @@
 ---
 sip: 62
-network: L1
+network: Ethereum
 title: Futures reference price methodology
 status: Implemented
 author: >-
   Bill Mayott <bill.mayott@xbto.com>, Philippe Bekhazi <philippe@xbto.com>,
   Walton Comer <walton@xbto.com>, Kain Warwick (@kaiynne)
-discussions-to: 'https://discord.gg/VNFYvny'
 created: 2020-05-18T00:00:00.000Z
 type: Governance
 ---

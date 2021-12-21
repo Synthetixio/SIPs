@@ -1,10 +1,9 @@
 ---
 sip: 26
-network: L1
+network: Ethereum
 title: Max Gas on token fallback
 status: Implemented
 author: Clinton Ennis (@hav-noms)
-discussions-to: 'https://discord.gg/3uJ5rAy'
 created: 2019-10-29T00:00:00.000Z
 type: Governance
 ---

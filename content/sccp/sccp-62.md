@@ -1,9 +1,8 @@
 ---
 sccp: 62
-network: L1
+network: Ethereum
 title: Increase fees on iETH to 0.75% and sETH to 0.50%
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2020-11-21T00:00:00.000Z
 type: Governance

@@ -1,9 +1,8 @@
 ---
 sccp: 149
-network: L1
+network: Ethereum
 title: Update Atomic Swap Parameters
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Vote_Pending
 created: 2021-12-04
 type: Governance

@@ -1,9 +1,8 @@
 ---
 sccp: 120
-network: L1
+network: Ethereum
 title: Decrease SNX Inflationary Rewards on BTC shorts to 8k SNX from 16k SNX
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-05-31T00:00:00.000Z
 type: Governance

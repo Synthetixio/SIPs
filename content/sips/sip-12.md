@@ -1,12 +1,11 @@
 ---
 sip: 12
-network: L1
+network: Ethereum
 title: Max gas price for exchange transactions
 status: Implemented
 author: >-
   Bojan Kiculovic (@kicul88), Justin J Moses (@justinjmoses), Kain Warwick
   (@kaiynne)
-discussions-to: 'https://discordapp.com/invite/kPPKsPb'
 created: 2019-06-24T00:00:00.000Z
 type: Governance
 ---

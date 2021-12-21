@@ -1,6 +1,6 @@
 ---
 sip: 5
-network: L1
+network: Ethereum
 title: New Crypto Synths June '19
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'
@@ -37,4 +37,3 @@ iXTZ: Upper bound: X, Lower Bound: Y
 iMKR: Upper bound: X, Lower Bound: Y
 
 ## Copyright
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

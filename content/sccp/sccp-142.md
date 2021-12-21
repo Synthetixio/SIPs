@@ -1,9 +1,8 @@
 ---
 sccp: 142
-network: L2
+network: Optimism
 title: Increase L2 Inflationary Rewards to 75k
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/e9c5Cs'
 status: Implemented
 created: 2021-10-17
 type: Governance

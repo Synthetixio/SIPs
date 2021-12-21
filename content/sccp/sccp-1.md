@@ -1,10 +1,9 @@
 ---
 sccp: 1
-network: L1-L2
+network: Ethereum & Optimism
 title: SCCP Purpose and Guidelines
 status: Implemented
 author: Kain Warwick <@kaiynne>
-discussions-to: 'https://discord.gg/aApjG26'
 created: 2019-06-17T00:00:00.000Z
 type: Governance
 ---

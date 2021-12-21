@@ -1,10 +1,9 @@
 ---
 sccp: 51
-network: L1
+network: Ethereum
 title: Update sDEFI index
 status: Implemented
 author: 'Farmwell (@farmwell), CryptoToit (@CryptoToit)'
-discussions-to: 'https://research.synthetix.io/'
 created: 2020-09-30T00:00:00.000Z
 type: Governance
 ---

@@ -1,10 +1,9 @@
 ---
 sip: 34
-network: L1
+network: Ethereum
 title: Disable sMKR and iMKR
 status: Implemented
 author: Spreek (@Spreek)
-discussions-to: '(https://discord.gg/x88nPs)'
 created: 2019-12-25T00:00:00.000Z
 type: Governance
 ---

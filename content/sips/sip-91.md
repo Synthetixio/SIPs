@@ -1,10 +1,9 @@
 ---
 sip: 91
-network: L1
+network: Ethereum
 title: Debt Cache Contract
 status: Implemented
 author: Anton Jurisevic (@zyzek)
-discussions-to: 'https://research.synthetix.io/t/sip-91-debt-cache-contract/213'
 created: 2020-10-20T00:00:00.000Z
 requires: 83
 type: Governance

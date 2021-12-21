@@ -1,10 +1,9 @@
 ---
 sccp: 90
-network: L1
+network: Ethereum
 title: Update priceDeviationThresholdFactor to 1.6
 status: Implemented
 author: Kaleb  (@kaleb-keny)
-discussions-to: governance
 created: 2021-03-22T00:00:00.000Z
 type: Governance
 ---

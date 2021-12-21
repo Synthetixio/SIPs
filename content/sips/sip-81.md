@@ -1,10 +1,9 @@
 ---
 sip: 81
-network: L1
+network: Ethereum
 title: Remove Centralized Oracle
 status: Rejected
 author: Justin J Moses (@justinjmoses)
-discussions-to: 'https://research.synthetix.io/t/sip-x-removal-of-snx-oracle/184'
 created: 2020-08-25T00:00:00.000Z
 requires: '36, 75'
 type: Governance

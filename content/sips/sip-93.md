@@ -1,10 +1,9 @@
 ---
 sip: 93
-network: L1
+network: Ethereum
 title: Supersede SIP-90 to Delegated Council Governance
 status: Implemented
 author: Andy T CF (@andytcf)
-discussions-to: >-
   https://research.synthetix.io/t/supersede-sip-90-to-delegated-council-governance/227
 created: 2020-11-11T00:00:00.000Z
 type: Governance

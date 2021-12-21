@@ -1,12 +1,11 @@
 ---
 sip: 40
-network: L1
+network: Ethereum
 title: Time lock on burning after minting
 status: Implemented
 author: >-
   Kain Warwick (@kaiynne), Jackson Chan (@jacko125), Clinton Ennis (@hav-noms),
   Garth Travers (@garthtravers)
-discussions-to: 'https://discordapp.com/invite/AEdUHzt'
 created: 2020-02-27T00:00:00.000Z
 type: Governance
 ---

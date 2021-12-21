@@ -1,9 +1,8 @@
 ---
 sccp: 104
-network: L1
+network: Ethereum
 title: Lower the Wrppr MintFeeRate to 100 bp from 200 bp
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-05-17T00:00:00.000Z
 type: Governance

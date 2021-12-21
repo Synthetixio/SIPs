@@ -1,10 +1,9 @@
 ---
 sip: 13
-network: L1
+network: Ethereum
 title: Account Merging
 status: Rejected
 author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'
-discussions-to: 'https://discord.gg/CDTvjHY'
 created: 2019-08-14T00:00:00.000Z
 type: Governance
 ---

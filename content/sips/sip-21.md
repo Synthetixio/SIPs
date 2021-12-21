@@ -1,9 +1,8 @@
 ---
 sip: 21
-network: L1
+network: Ethereum
 title: Double exchange fee rate on swing trades
 author: Clinton Ennis (@hav-noms)
-discussions-to: 'https://discord.gg/CDTvjHY'
 status: Implemented
 created: 2019-10-17T00:00:00.000Z
 type: Governance

@@ -1,9 +1,8 @@
 ---
 sccp: 78
-network: L1
+network: Ethereum
 title: Change Spartan Council Epoch to quarterly (3 months)
 author: Andy T CF (@andytcf)
-discussions-to: governance
 status: Implemented
 created: 2021-01-21T00:00:00.000Z
 type: Governance

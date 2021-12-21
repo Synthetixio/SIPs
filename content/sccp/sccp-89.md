@@ -1,10 +1,9 @@
 ---
 sccp: 89
-network: L1
+network: Ethereum
 title: Redirect iETH rewards to sETH Shorting Rewards
 status: Implemented
 author: Clinton Ennis (@hav-noms)
-discussions-to: 'https://discord.gg/B3PtpY'
 created: 2021-03-15T00:00:00.000Z
 type: Governance
 ---

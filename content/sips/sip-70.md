@@ -1,10 +1,9 @@
 ---
 sip: 70
-network: L1
+network: Ethereum
 title: Automated weekly trading competition
 status: Rejected
 author: Danijel (@dgornjakovic)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-05-04T00:00:00.000Z
 type: Governance
 ---

@@ -1,9 +1,8 @@
 ---
 sccp: 145
-network: L2
+network: Optimism
 title: Increase L2 ETH Wrappr Minting Fee to 250 bp
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Implemented
 created: 2021-11-04
 type: Governance

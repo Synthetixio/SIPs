@@ -1,9 +1,8 @@
 ---
 sip: 10
-network: L1
+network: Ethereum
 title: Upgrade Delegate Powers
 author: Nocturnalsheet (@nocturnalsheet)
-discussions-to: 'https://discord.gg/CDTvjHY'
 status: Implemented
 created: 2019-07-16T00:00:00.000Z
 type: Governance

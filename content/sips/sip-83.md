@@ -1,11 +1,9 @@
 ---
 sip: 83
-network: L1
+network: Ethereum
 title: Total Issued Synths (Debt pool) Snapshots
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125), Anton Jurisevic (@zyzek)'
-discussions-to: >-
-  https://research.synthetix.io/t/sip-83-total-issued-synths-debt-pool-snapshots/190
 created: 2020-08-31T00:00:00.000Z
 requires: 'https://sips.synthetix.io/sips/sip-84'
 type: Governance
@@ -164,7 +162,7 @@ heartbeats once every 15 minutes, for example.
 These heartbeats could either be computed by a separate compensated keeper function, or at the first mint, burn, or
 claim operations to be performed after a given heartbeat is due. However, given the extra expense involved, the gas cost
 of the recalculation will be measured and rebated to the caller from a common pool of ether held in a manner similar to the
-[deferred transaction gas tank](sip-79.md). This pool will be replenished by a small fee charged on the 
+[deferred transaction gas tank](sip-79.md). This pool will be replenished by a small fee charged on the
 execution cost of each mint, burn, and claim operation, which will be less than the gas saved for these function calls
 by eliminating continual system debt recomputations.
 As the number of snapshot-dependent operations occurring greatly exceeds the number of heartbeats required per day even
@@ -172,7 +170,6 @@ at one heartbeat every 15 minutes, the size of the levy will be modest, still re
 all participants in the system.
 Since the number of heartbeats per day at a given frequency is constant, any increase in system usage
 allows the gas charge to be decreased, or the heartbeat frequency to be increased.
-
 
 ### Rationale
 
@@ -219,10 +216,10 @@ Test cases for an implementation are mandatory for SIPs but can be included with
 
 Please list all values configurable via SCCP under this implementation.
 
-| Parameter | initial Value |
-| --------- | ------------- |
-| Debt snapshot stale time | 60 minutes |
-| Debt snapshot max deviation | 2 percent |
+| Parameter                   | initial Value |
+| --------------------------- | ------------- |
+| Debt snapshot stale time    | 60 minutes    |
+| Debt snapshot max deviation | 2 percent     |
 
 ## Copyright
 

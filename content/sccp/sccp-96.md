@@ -1,9 +1,8 @@
 ---
 sccp: 96
-network: L1
+network: Ethereum
 title: Increase L2 Target C-Ratio To 1000%
 author: Spreek (@Spreek)
-discussions-to: governance
 status: Implemented
 created: 2021-04-21T00:00:00.000Z
 type: Governance

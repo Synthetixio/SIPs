@@ -1,10 +1,9 @@
 ---
 sip: 6
-network: L1
+network: Ethereum
 title: Frontrunning protection
 status: Implemented
 author: 'Jackson Chan (@jacko125), Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms)'
-discussions-to: 'https://discord.gg/kPPKsPb'
 created: 2019-06-27T00:00:00.000Z
 updated: 2019-07-09T00:00:00.000Z
 type: Governance

@@ -1,9 +1,8 @@
 ---
 sccp: 26
-network: L1
+network: Ethereum
 title: Lower c-ratio to 750%
 author: Andrew Kang (@rewkang)
-discussions-to: TBC
 status: Implemented
 created: 2020-04-14T00:00:00.000Z
 type: Governance

@@ -1,10 +1,9 @@
 ---
 sip: 94
-network: L1
+network: Ethereum
 title: Virtual Synth Fix to Ensure Settlement Is Connected
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: 'https://research.synthetix.io'
 created: 2020-11-12T00:00:00.000Z
 type: Governance
 ---

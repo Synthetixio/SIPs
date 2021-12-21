@@ -1,9 +1,8 @@
 ---
 sccp: 126
-network: L1
+network: Ethereum
 title: Initiate New Account Merging Window
 status: Implemented
-discussions-to: governance
 author: Rafa (@rafanator)
 created: 2021-06-21T00:00:00.000Z
 type: Governance

@@ -1,9 +1,8 @@
 ---
 sccp: 110
-network: L1
+network: Ethereum
 title: Increase Cap on Wrappr to 75k ETH from 50k ETH
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-05-21T00:00:00.000Z
 type: Governance

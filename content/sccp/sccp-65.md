@@ -1,9 +1,8 @@
 ---
 sccp: 65
-network: L1
+network: Ethereum
 title: Increase fees on sBTC to 0.50% and iBTC to 0.75%
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2020-11-26T00:00:00.000Z
 type: Governance

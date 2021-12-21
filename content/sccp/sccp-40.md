@@ -1,11 +1,10 @@
 ---
 sccp: 40
-network: L1
+network: Ethereum
 title: Increase Fee Reclamation Waiting Period to 10 minutes
 author: >-
   Clinton Ennis (@hav-noms), Jackson Chan (@jacko125), Justin J Moses
   (@justinjmoses), Kain Warwick (@kaiynne)
-discussions-to: 'https://discordapp.com/invite/AEdUHzt'
 status: Implemented
 created: 2020-08-13T00:00:00.000Z
 type: Governance

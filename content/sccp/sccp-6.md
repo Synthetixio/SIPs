@@ -1,9 +1,8 @@
 ---
 sccp: 6
-network: L1
+network: Ethereum
 title: Reduce Claim Buffer
 author: Kain Warwick (@kaiynne)
-discussions-to: 'https://github.com/Synthetixio/synthetix/issues/296'
 status: Implemented
 created: 2019-11-05T00:00:00.000Z
 type: Governance

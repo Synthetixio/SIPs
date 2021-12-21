@@ -1,9 +1,8 @@
 ---
 sccp: 21
-network: L1
+network: Ethereum
 title: Widen iSynth Price Bands
 author: Kain Warwick (@kaiynne)
-discussions-to: SIPS-WIPS
 status: Rejected
 created: 2020-05-05T00:00:00.000Z
 type: Governance

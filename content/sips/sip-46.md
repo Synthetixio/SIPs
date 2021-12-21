@@ -1,10 +1,9 @@
 ---
 sip: 46
-network: L1
+network: Ethereum
 title: Address Resolver Gas Improvements
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: '<https://discordapp.com/invite/AEdUHzt>'
 created: 2020-03-02T00:00:00.000Z
 type: Governance
 ---

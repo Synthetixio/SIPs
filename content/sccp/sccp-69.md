@@ -1,9 +1,8 @@
 ---
 sccp: 69
-network: L1
+network: Ethereum
 title: Increase Fees on Leveraged Inverse Synths
 author: 'Kaleb, Spreek, Danijel, farmwell'
-discussions-to: governance
 status: Implemented
 created: 2020-12-29T00:00:00.000Z
 type: Governance

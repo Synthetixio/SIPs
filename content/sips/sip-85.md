@@ -1,10 +1,9 @@
 ---
 sip: 85
-network: L1
+network: Ethereum
 title: Ether Collateral v0.3
 status: Implemented
 author: 'Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'
-discussions-to: 'https://research.synthetix.io/'
 created: 2020-09-08T00:00:00.000Z
 requires: null
 type: Governance

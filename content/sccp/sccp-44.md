@@ -1,9 +1,8 @@
 ---
 sccp: 44
-network: L1
+network: Ethereum
 title: Drop EtherCollateral fees to zero
 author: Clinton Ennis (@hav-noms)
-discussions-to: null
 status: Implemented
 created: 2020-09-01T00:00:00.000Z
 type: Governance

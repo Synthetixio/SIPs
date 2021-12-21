@@ -1,10 +1,9 @@
 ---
 sip: 35
-network: L1
+network: Ethereum
 title: Skinny Ether Collateral
 status: Implemented
 author: 'Kain Warwick (@kaiynne), Clinton Ennis (@hav-noms), Jackson Chan (@jacko125)'
-discussions-to: 'https://discord.gg/CDTvjHY'
 created: 2020-01-13T00:00:00.000Z
 type: Governance
 ---

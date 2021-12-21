@@ -1,6 +1,6 @@
 ---
 sip: 99
-network: L1
+network: Ethereum
 title: Upgrade sOIL to use diversified Chainlink aggregator
 status: Implemented
 author: Clinton Ennis (@hav-noms)
@@ -56,5 +56,3 @@ Change ExchangeRates to point to the new WTI Aggregator for sOIL will require th
 N/A
 
 ## Copyright
-
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

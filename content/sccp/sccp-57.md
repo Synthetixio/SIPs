@@ -1,9 +1,8 @@
 ---
 sccp: 57
-network: L1
+network: Ethereum
 title: Reduce fee reclamation window to three minutes (180 seconds)
 author: 'Jackson Chan (@jacko125), Justin Moses (@justinjmoses)'
-discussions-to: 'https://research.synthetix.io/'
 status: Implemented
 created: 2020-11-04T00:00:00.000Z
 type: Governance

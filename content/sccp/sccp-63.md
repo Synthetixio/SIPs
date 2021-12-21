@@ -1,9 +1,8 @@
 ---
 sccp: 63
-network: L1
+network: Ethereum
 title: Remove Temporary iETH limits
 author: 'Kain Warwick (@kaiynne), Jackson Chan (@jacko125)'
-discussions-to: 'https://discord.gg/kPPKsPb'
 status: Implemented
 created: 2020-11-23T00:00:00.000Z
 type: Governance

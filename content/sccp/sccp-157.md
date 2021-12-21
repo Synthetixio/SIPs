@@ -1,9 +1,8 @@
 ---
 sccp: 157
-network: L2
+network: Optimism
 title: Update sETH/ETH Wrappr Parameters
 author: Kaleb (@kaleb-keny)
-discussions-to: 'https://discord.gg/EWmYsH7X'
 status: Vote_Pending
 created: 2021-12-14
 type: Governance

@@ -1,9 +1,8 @@
 ---
 sccp: 71
-network: L1
+network: Ethereum
 title: Lower Fees on Frozen Inverse Synths
 author: Kaleb (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-01-03T00:00:00.000Z
 type: Governance

@@ -1,6 +1,6 @@
 ---
 sccp: 10
-network: L1
+network: Ethereum
 title: Reduce minter reward for supply schedule
 author: 'Jackson Chan (@jacko125), Justin J Moses (@justinjmoses)'
 status: Implemented

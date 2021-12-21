@@ -1,10 +1,9 @@
 ---
 sip: 73
-network: L1
+network: Ethereum
 title: Binary Market Competition
 status: Rejected
 author: 'CryptoToit (@CryptoToit), Danijel (@dgornjakovic)'
-discussions-to: 'https://research.synthetix.io/t/sip-binary-competition/119'
 created: 2020-07-25T00:00:00.000Z
 type: Governance
 ---

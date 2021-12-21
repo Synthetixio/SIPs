@@ -1,10 +1,9 @@
 ---
 sip: 89
-network: L1
+network: Ethereum
 title: Virtual Synths
 status: Implemented
 author: Justin J Moses (@justinjmoses)
-discussions-to: 'https://research.synthetix.io/t/virtual-synths-sip/202'
 created: 2020-10-06T00:00:00.000Z
 type: Governance
 ---

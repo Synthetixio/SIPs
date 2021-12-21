@@ -1,9 +1,8 @@
 ---
 sip: 42
-network: L1
+network: Ethereum
 title: Gas Optimisations on issueSynths and burnSynths
 author: 'Jackson Chan (@jacko125), Clinton Ennis (@hav-noms)'
-discussions-to: 'https://discord.gg/CDTvjHY'
 status: Implemented
 created: 2020-02-28T00:00:00.000Z
 type: Governance

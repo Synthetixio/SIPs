@@ -1,9 +1,8 @@
 ---
 sccp: 75
-network: L1
+network: Ethereum
 title: Inverse Synths Leverage Fee Adjustment (iLINK)
 author: Kaleb (@kaleb-keny)
-discussions-to: governance
 status: Rejected
 created: 2021-01-10T00:00:00.000Z
 type: Governance

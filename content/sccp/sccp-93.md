@@ -1,10 +1,9 @@
 ---
 sccp: 93
-network: L1
+network: Ethereum
 title: Slighly increase the circuit breaker deviation
 status: Implemented
 author: Jackson Chan (@justinjmoses)
-discussions-to: 'https://discord.gg/8Br87gxm'
 created: 2021-04-08T00:00:00.000Z
 type: Governance
 ---

@@ -1,10 +1,9 @@
 ---
 sip: 30
-network: L1
+network: Ethereum
 title: Deprecate ERC223 from SNX and all Synths.
 status: Implemented
 author: Clinton Ennis (@hav-noms)
-discussions-to: '(https://discordapp.com/invite/CDTvjHY)'
 created: 2019-11-26T00:00:00.000Z
 type: Governance
 ---

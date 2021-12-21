@@ -1,9 +1,8 @@
 ---
 sip: 98
-network: L1
+network: Ethereum
 title: Re-implement double exchange fee rate on swing trades
 author: 'Jackson Chan (@jacko125), Clinton Ennis (@hav-noms)'
-discussions-to: 'https://discord.gg/CDTvjHY'
 status: Implemented
 created: 2020-11-27T00:00:00.000Z
 type: Governance

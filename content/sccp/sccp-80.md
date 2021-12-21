@@ -1,9 +1,8 @@
 ---
 sccp: 80
-network: L1
+network: Ethereum
 title: Lower Fees on Selected Synths
 author: Kaleb Keny (@kaleb-keny)
-discussions-to: governance
 status: Implemented
 created: 2021-01-22T00:00:00.000Z
 type: Governance

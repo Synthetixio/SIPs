@@ -1,10 +1,9 @@
 ---
 sccp: 46
-network: L1
+network: Ethereum
 title: Lower C-Ratio by 100% to 500%
 status: Rejected
 author: Nocturnalsheet (@nocturnalsheet)
-discussions-to: governance
 created: 2020-09-02T00:00:00.000Z
 type: Governance
 ---
