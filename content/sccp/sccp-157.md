@@ -3,9 +3,11 @@ sccp: 157
 network: Optimism
 title: Update sETH/ETH Wrappr Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2021-12-14
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/Qmdd72qwHGiwz5k8ADJd9vEJRxCgDZE1Rzjd3EzH8TsjZR
 ---
 
 ## Simple Summary
@@ -14,7 +16,7 @@ type: Governance
 
 This SCCP proposes to update the following parameters on the sETH wrappr on L2:
 
-- Increase the minting fee to 150 bp
+- Lower the minting fee to 150 bp
 - Increase the max capacity by 1,000 ETH to 3,200 ETH
 
 ## Abstract
@@ -27,7 +29,7 @@ The minting fee is paid upon minting sETH with ETH and helps somewhat restrict t
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-With [SIP-195](https://sips.synthetix.io/sips/sip-195/) going live on L2 the proposed changes laid out in this SCCP will permit liquidations to take place regardless of the liquidity of ETH/sUSD on L2. Increasing the minting fee will ensure that users who want to procure sETH, would route their trades through the exchange (earning minters fees) and ensures that some sETH minting capacity remains available for liquidation purposes.
+With [SIP-195](https://sips.synthetix.io/sips/sip-195/) going live on L2 the proposed changes laid out in this SCCP will permit liquidations to take place regardless of the liquidity of ETH/sUSD on L2. Lowering the minting fee will ensure that users who want to procure sETH, would route their trades through the exchange (earning minters fees) and ensures that some sETH minting capacity remains available for liquidation purposes.
 
 ## Copyright
 
