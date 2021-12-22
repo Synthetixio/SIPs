@@ -18,13 +18,13 @@ This SCCP proposes to include sETH borrowing to the multi-collateral loan contra
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The function that needs to be called `addSynths` under the [CollateralEth](0x308AD16ef90fe7caCb85B784A603CB6E71b1A41a) contract with the following parameters (SynthsETH,sETH) adds sETH borrowing against ETH deposits.
+The function that needs to be called `addSynths` under the [CollateralEth](https://optimistic.etherscan.io/address/0x308AD16ef90fe7caCb85B784A603CB6E71b1A41a) contract with the following parameters `(SynthsETH,sETH)` allows for sETH borrowing against ETH deposits.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The primary motivation is to growth the supply of sETH on optimism to meet the growing needs of Lyra traders without utilizing the positive ETH skew which will help in the future offset the negative debt pool skew on L1. In addition, adding sETH borrowing will divert some traffic to the staking site as folks will be able to interact with the UI and introduce users to the staking site. 
+The primary motivation is to growth the supply of sETH on optimism to meet the growing needs of Lyra traders without utilizing the positive ETH skew which will help offset the negative debt pool skew on L1. In addition, adding sETH borrowing will divert some traffic to the staking site as folks will be able to interact with the UI and introduce users to the staking site. 
 The configuration of the sETH loans will be the same as those of sUSD, with 0 minting fee, a 300 bp per year interest rate and a minimum collateralization ratio of 120%.
 
 ## Copyright
