@@ -2,7 +2,7 @@
 kip: 8
 title: Fiat on-ramp integration
 status: Draft
-author: Ivan Prodanov (ivan-prodanov; @Ivan#4532)
+author: Ivan Prodanov (@ivan-prodanov)
 created: 2021-12-23
 ---
 
