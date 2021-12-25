@@ -3,9 +3,11 @@ sccp: 159
 network: Optimism
 title: Allow for sETH borrowing against ETH deposits 
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2021-12-22
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmbuFS7pWeSfEtTwbdtw17qY4nUz4yeBBZbDStWSm4BAPK
 ---
 
 ## Simple Summary
