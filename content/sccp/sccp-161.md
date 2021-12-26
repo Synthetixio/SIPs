@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the inflationary rewards on L2 to 75k snx from 100K snx per week.
+Increase the inflationary rewards on L2 to 100K snx from 75K snx per week.
 
 ## Abstract
 
