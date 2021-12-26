@@ -3,7 +3,7 @@ sccp: 160
 network: Optimism
 title: Update LUSD Wrappr Parameters
 author: Kain (@kaiynne)
-status: Draft
+status: Implemented
 created: 2021-12-07
 type: Governance
 proposal:
