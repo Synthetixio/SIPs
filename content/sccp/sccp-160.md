@@ -6,7 +6,8 @@ author: Kain (@kaiynne)
 status: Implemented
 created: 2021-12-07
 type: Governance
-proposal:
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmYoxQRx27Zrkb7rCoMKKW7FBGc7x2F6iQ6ThjcvJkRPNA
 ---
 
 ## Simple Summary
