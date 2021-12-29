@@ -3,7 +3,7 @@ sccp: 161
 network: Optimism
 title: Increase L2 Inflationary Rewards to 100k
 author: Matt (@MattLosquadro-Synthetix)
-status: Proposed
+status: Vote_Pending
 created: 2021-12-26
 type: Governance
 ---
