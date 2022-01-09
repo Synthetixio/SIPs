@@ -13,15 +13,18 @@ type: Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 This SCCP proposes the following updates to Atomic Exchange Contracts: 
-- Reduce `atomicPriceBuffer` on trades pertaining to `ETH` and `BTC` to zero. 
-- Reduce `atomicExchangeFee` on trades into of `EUR` to 20 bp.
+- Reduce `atomicPriceBuffer` on trades pertaining to `ETH` and `BTC` to zero
+- Reduce `atomicExchangeFee` on trades into of `EUR` to 20 bp
 - Increase `atomicMaxVolumePerBlock` from sUSD 5 million to sUSD 15 million
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
+The parameters being updated as are as follows
+- The `atomicPriceBuffer` is a parameter that worsens the chainlink price in the calculation of atomic exchange prices.
+- The `atomicExchangeFee` is the fee applied on trades into a certain synth
+-  The `atomicMaxVolumePerBlock` is the max volume allowed for trading per block
 
-In order to further the parameter configurations of the atomic exchange function, this sccp proposes to lower fees on trades into ETH, and reduce the atomicPriceBuffer on `BTC` and `ETH` trades to zero.
 
 ## Motivation
 
