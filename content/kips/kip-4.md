@@ -50,6 +50,10 @@ Inflation Model - Inflationary rewards will start at 60% APY in KWENTA and linea
 
 20% of inflation and fees will be routed to the treasury. 80% of inflation and fees will be routed to stakers. These percentages can be adjusted at the Elite Council's discretion via a KIP. This will enable Kwenta to sustainably fund DAO roles while enabling the community to use the entire token supply as needed. 
 
+**Vesting Mechansim:**
+
+KWENTA printed via inflation will undergo a 1-year lock-up period. The lock-up mechansim will begin with an 80% fee for vesting KWENTA early which will decay via in inverese exponential model, removing the bulk of the fee towards the end of the vesting period. If tokens are vested early, the percentage of tokens that are still applicable to the fee will be burned. After one year, the fee would reach 0% and no tokens would be burned when vesting KWENTA. 
+
 **Distribution:**
 
 Synthetix stakers - SNX stakers who have met the requirements (tbd) will be allocated 30% of the initial token supply. 
