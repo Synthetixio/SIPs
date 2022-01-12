@@ -4,6 +4,7 @@ title: Update Optimism Chainlink Oracles to OCR
 network: Optimism
 author: Roger Brogan (@rbrogan-git)
 status: Draft
+type: Governance
 created: 2022-01-10
 ---
 
