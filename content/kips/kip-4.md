@@ -52,7 +52,7 @@ Inflation Model - Inflationary rewards will start at 60% APY in KWENTA and linea
 
 **Vesting Mechansim:**
 
-KWENTA printed via inflation will undergo a 1-year lock-up period. The lock-up mechansim will begin with an 80% fee for vesting KWENTA early which will decay via in inverese exponential model, removing the bulk of the fee towards the end of the vesting period. If tokens are vested early, the percentage of tokens that are still applicable to the fee will be burned. After one year, the fee would reach 0% and no tokens would be burned when vesting KWENTA. 
+KWENTA printed via inflation will undergo a 1-year lock-up period. The lock-up mechansim will begin with an 80% fee for vesting KWENTA early which will decay linearly. If tokens are vested early, the percentage of tokens that are still applicable to the fee will be burned. After one year, the fee would reach 0% and no tokens would be burned when vesting KWENTA. 
 
 **Distribution:**
 
