@@ -42,7 +42,7 @@ Inflation Model - Inflationary rewards will start at 60% APY in KWENTA and linea
 
 25% - Community Growth Fund
 
-15% - Core Contributors (2.5% of which goes back to Synthetix Core Contributors)
+15% - Core Contributors
 
 20% - Kwenta Treasury
 
