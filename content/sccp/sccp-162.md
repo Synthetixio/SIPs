@@ -6,6 +6,8 @@ author: Kaleb (@kaleb-keny)
 status: Draft
 created: 2022-02-22
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmXBkGdsVPjFErHfucMR9KJ6XzgCySFni73CD3ytdYUYSi
 ---
 
 ## Simple Summary
