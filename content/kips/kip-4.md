@@ -56,12 +56,7 @@ KWENTA printed via inflation will undergo a 1-year lock-up period. The lock-up m
 
 **Distribution:**
 
-Synthetix stakers - SNX stakers who have met the requirements (tbd) will be allocated 30% of the initial token supply. 
-
-Synth Traders - Addresses that have used Kwenta and meet the requirements (tbd) will be allocated 5% of the initial token supply. 
-
-The remaining KWENTA will be allocated to the treasury for further management. 
-
+A future KIP outlining the launch distribution methodology will be published. 
 
 ## Copyright
 
