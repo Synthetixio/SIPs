@@ -1,3 +1,4 @@
+---
 kip: 10 
 title: Kwenta Sovereignty Phase
 status: Draft
