@@ -3,7 +3,7 @@ sccp: 162
 network: Ethereum
 title: Update Parameters of Atomic Swap
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-02-22
 type: Governance
 proposal: >-
