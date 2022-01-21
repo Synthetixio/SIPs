@@ -7,7 +7,7 @@ status: Implemented
 created: 2021-12-26
 type: Governance
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/QmY5BJ8UjRahSfJzSS1kE23ASKQJ1RiYuNtpSmJhJDpvqB
+  https://snapshot.org/#/snxgov.eth/proposal/QmY8tVa5UpmVQp3kS8oMUMMakwSFPZiAHChdi5TuXRj95C
 ---
 
 ## Simple Summary
