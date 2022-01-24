@@ -39,11 +39,11 @@ LP rewards will be available for those that contribute to the Uniswap ETH/sUSD p
 On Tuesday, March 15 Round 1 of the futures competition will commence. The week-long competition will be held where participants will compete to generate the most amount of profit with Kwenta’s futures product, working their way as high up the leaderboard as possible. 
 
 The round one prize pool will include 144 KWENTA:
-1st place: 15 KWENTA + Rare Kwenta NFT
-2nd place: 10 KWENTA + Rare Kwenta NFT
-3rd place: 5 KWENTA+ Rare Kwenta NFT
-4th-20th place: 2 KWENTA
-21st-100th place: 1 KWENTA
+* 1st place: 15 KWENTA + Rare Kwenta NFT
+* 2nd place: 10 KWENTA + Rare Kwenta NFT
+* 3rd place: 5 KWENTA+ Rare Kwenta NFT
+* 4th-20th place: 2 KWENTA
+* 21st-100th place: 1 KWENTA
 
 All active participants will be eligible for a POAP as well. 
 
@@ -53,20 +53,20 @@ On Tuesday, a second round of the futures competition will be held where everyon
 
 The round two prize pool will include 1595 KWENTA:
 
-1st place: 250 KWENTA + Rare Kwenta NFT
-2nd place: 125 KWENTA + Rare Kwenta NFT
-3rd place: 75 KWENTA+ Rare Kwenta NFT
-4th-20th place: 5 KWENTA
-21st - 100th place: 2 KWENTA
-101st - 1000th place: 1 KWENTA
+* 1st place: 250 KWENTA + Rare Kwenta NFT
+* 2nd place: 125 KWENTA + Rare Kwenta NFT
+* 3rd place: 75 KWENTA+ Rare Kwenta NFT
+* 4th-20th place: 5 KWENTA
+* 21st - 100th place: 2 KWENTA
+* 101st - 1000th place: 1 KWENTA
 
 All active participants will be eligible for a POAP as well. 
 
-Week 5 (March 28th - April 3rd)
+Week 7 (March 28th - April 3rd)
 
 Kwenta V2 will launch on mainnet with trading rewards. The mechanism in which trading rewards are outlined will take place in a future KIP prior to this stage.
 
-Week 6 (April 4th - 10th)
+Week 8 (April 4th - 10th)
 
 The Kwenta token will launch and be claimable on L2 for SNX stakers and Synth traders. Pool contributors that participated in the Aelin raise and received $vKWENTA as outlined in KIP-9, will be able to redeem their $vKWENTA for $KWENTA now. All rewards earned during the Sovereignty Phase will be distributed to participants on April 4th when the token officially launches.
 
