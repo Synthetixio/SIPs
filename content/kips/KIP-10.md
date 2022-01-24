@@ -22,15 +22,15 @@ The purpose of this campaign is to amplify the launch of futures, V2, and the Kw
 
 The Sovereignty Phase will take place over the course of 8 weeks:
 
-Week 1-2 (Feb 14th - Feb 27th)
+**Week 1-2 (Feb 14th - Feb 27th)**
 
 The Kwenta Sovereignty Phase will begin February 14th with the launch of the KWENTA Aelin raise as per KIP-9.
 
-Week 3-4 (Feb 28st - 13th) 
+**Week 3-4 (Feb 28st - 13th)** 
 
 Staking rewards will be available for SNX stakers on L2, encouraging L1 users to make the transition to Optimism, boosting Synth liquidity in preparation for futures. 696.38 KWENTA will be rewarded to stakers that participate in this two-week opportunity.
 
-Week 5 (March 14th - March 20th)
+**Week 5 (March 14th - March 20th)**
 
 Another round of staking rewards will be available for those that stake SNX continually for the next 4 weeks. This guarantees ample liquidity for the Kwenta mainnet futures competition. 2785.53 KWENTA will be available for this opportunity.
 
@@ -47,7 +47,7 @@ The round one prize pool will include 144 KWENTA:
 
 All active participants will be eligible for a POAP as well. 
 
-Week 6 (March 21st - 27th)
+**Week 6 (March 21st - 27th)**
 
 On Tuesday, a second round of the futures competition will be held where everyone starts on equal footing. By hosting a second round the following week, people who found out about the futures competition late will be able to still participate without being at a disadvantage. The week-long competition will be held where participants will compete to generate the most amount of profit with Kwenta’s futures product, working their way as high up the leader as possible. 
 
@@ -62,11 +62,11 @@ The round two prize pool will include 1595 KWENTA:
 
 All active participants will be eligible for a POAP as well. 
 
-Week 7 (March 28th - April 3rd)
+**Week 7 (March 28th - April 3rd)**
 
 Kwenta V2 will launch on mainnet with trading rewards. The mechanism in which trading rewards are outlined will take place in a future KIP prior to this stage.
 
-Week 8 (April 4th - 10th)
+**Week 8 (April 4th - 10th)**
 
 The Kwenta token will launch and be claimable on L2 for SNX stakers and Synth traders. Pool contributors that participated in the Aelin raise and received $vKWENTA as outlined in KIP-9, will be able to redeem their $vKWENTA for $KWENTA now. All rewards earned during the Sovereignty Phase will be distributed to participants on April 4th when the token officially launches.
 
