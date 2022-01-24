@@ -33,7 +33,7 @@ The new OCR feeds should be used as they are current state of the art.
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The OCR feeds are the latest technology and will perform better than the old versions.
+The OCR feeds are the latest technology and will perform better than the old versions. Random add
 
 The existing proxy address are:
 
