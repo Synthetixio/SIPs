@@ -1,7 +1,7 @@
 ---
 kip: 2
 title: Kwenta Governance Framework 
-status: Approved
+status: Implemented
 author: Andrew Trudel (@andrew-synthetix)
 created: 2021-11-08
 ---
