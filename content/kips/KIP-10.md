@@ -34,7 +34,7 @@ Staking rewards will be available for SNX stakers on L2, encouraging L1 users to
 
 Another round of staking rewards will be available for those that stake SNX continually for the next 4 weeks. This guarantees ample liquidity for the Kwenta mainnet futures competition. 2785.53 KWENTA will be available for this opportunity.
 
-LP rewards will be available for those that contribute to the Uniswap ETH/sUSD pool (Not finalized; Curve and Hop protocol are being explore as well) for the next four weeks. This guarantees ample liquidity for users bridging funds to L2 with the intent to participate in the futures competition. 2785.53 KWENTA will be available for this opportunity.
+LP rewards will be available for those that contribute to the Optimism Curve Stablecoin pool for the next four weeks. This guarantees ample liquidity for users bridging funds to L2 sUSD with the intent to participate in the futures competition. 2785.53 KWENTA will be available for this opportunity.
 
 On Tuesday, March 15 Round 1 of the futures competition will commence. The week-long competition will be held where participants will compete to generate the most amount of profit with Kwenta’s futures product, working their way as high up the leaderboard as possible. 
 
