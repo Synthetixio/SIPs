@@ -47,7 +47,7 @@ The round one prize pool will include 144 KWENTA:
 
 All active participants will be eligible for a POAP as well. 
 
-**Week 6 (March 21st - 27th)**
+**Week 6 (March 21st - March 27th)**
 
 On Tuesday, a second round of the futures competition will be held where everyone starts on equal footing. By hosting a second round the following week, people who found out about the futures competition late will be able to still participate without being at a disadvantage. The week-long competition will be held where participants will compete to generate the most amount of profit with Kwenta’s futures product, working their way as high up the leader as possible. 
 
@@ -66,7 +66,7 @@ All active participants will be eligible for a POAP as well.
 
 Kwenta V2 will launch on mainnet with trading rewards. The mechanism in which trading rewards are outlined will take place in a future KIP prior to this stage.
 
-**Week 8 (April 4th - 10th)**
+**Week 8 (April 4th - April 10th)**
 
 The Kwenta token will launch and be claimable on L2 for SNX stakers and Synth traders. Pool contributors that participated in the Aelin raise and received $vKWENTA as outlined in KIP-9, will be able to redeem their $vKWENTA for $KWENTA now. All rewards earned during the Sovereignty Phase will be distributed to participants on April 4th when the token officially launches.
 
