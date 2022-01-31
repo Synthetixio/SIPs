@@ -26,7 +26,7 @@ The Sovereignty Phase will take place over the course of 8 weeks:
 
 The Kwenta Sovereignty Phase will begin February 14th with the launch of the KWENTA Aelin raise as per KIP-9.
 
-**Week 3-4 (Feb 28st - 13th)** 
+**Week 3-4 (Feb 28th - 13th)** 
 
 Staking rewards will be available for SNX stakers on L2, encouraging L1 users to make the transition to Optimism, boosting Synth liquidity in preparation for futures. 696.38 KWENTA will be rewarded to stakers that participate in this two-week opportunity.
 
