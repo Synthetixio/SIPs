@@ -2,7 +2,7 @@
 sip: 80
 network: Optimism
 title: Synthetic Futures
-status: Feasibility
+status: SC_Review_Pending
 author: 'Anton Jurisevic (@zyzek), Jackson Chan (@jacko125), Kain Warwick (@kaiynne)'
 created: 2020-08-06T00:00:00.000Z
 requires: 79
