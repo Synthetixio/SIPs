@@ -3,7 +3,7 @@ sccp: 164
 network: Ethereum
 title: Time lock on burning after minting 7 days
 author: Kain Warwick (@kaiynne), Jackson Chan (@jacko125)
-status: Proposed
+status: Draft
 created: 2022-02-01
 type: Governance
 ---
