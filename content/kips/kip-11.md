@@ -1,5 +1,5 @@
 ---
-kip: 12
+kip: 11
 title: Kwenta Asset Listing Process 
 status: Draft
 author: Andrew Trudel (@Andrew-Synthetix), JVK (@jay_veekay)
