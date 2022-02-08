@@ -1,7 +1,7 @@
 ---
 kip: 11
 title: Kwenta Asset Listing Process 
-status: Draft
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix), JVK (@jay_veekay)
 created: 2022-02-01
 ---
