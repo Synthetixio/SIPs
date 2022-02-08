@@ -1,7 +1,7 @@
 ---
 kip: 10 
 title: Kwenta Sovereignty Phase
-status: Draft
+status: Approved
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-01-11
 ---
