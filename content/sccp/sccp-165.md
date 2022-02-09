@@ -15,7 +15,7 @@ type: Governance
 
 This SCCP proposes to update the following parameters on the LUSD wrappr on Ethereum:
 - Increase the `maxTokenAmount` to 100 million sUSD
-- Increase the burnFeeRate to 5%
+- Increase the `burnFeeRate` to 5%
 
 ## Abstract
 
