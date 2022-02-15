@@ -10,7 +10,7 @@ type: Governance
 
 ## Simple Summary
 
-Lower fees on exchanges into sBTC, sETH, and sLINK from 40bp to 25bp on Optimism, and lower `exchangeDynamicFeeThreshold` to 25bp on Optimism. 
+Lower fees on exchanges into sBTC, sETH, sLINK, sSOL, and sUSD from 40bp to 25bp on Optimism; and lower `exchangeDynamicFeeThreshold` to 25bp on Optimism. 
 
 ## Motivation
 
