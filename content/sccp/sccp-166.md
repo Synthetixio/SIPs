@@ -2,7 +2,7 @@
 sccp: 166
 network: Optimism
 title: Lower L2 Exchange fees to 25 bp
-author: Afif Bandak (aband1), Kaleb Keny (@kaleb-keny)
+author: Afif Bandak (@aband1), Kaleb Keny (@kaleb-keny)
 status: Draft
 created: 2022-02-16T00:00:00.000Z
 type: Governance
