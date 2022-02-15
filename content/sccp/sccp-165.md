@@ -3,10 +3,11 @@ sccp: 165
 network: Ethereum
 title: Update LUSD Wrappr Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Approved
 created: 2022-02-09
 type: Governance
-
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmTnUD21ipXw4SPivkBpRJ8KwQ21ts65x49aKHEamjj1bo
 ---
 
 ## Simple Summary
