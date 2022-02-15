@@ -15,7 +15,7 @@ Lower fees on exchanges into sBTC, sETH, sLINK, sSOL, and sUSD from 40bp to 25bp
 ## Motivation
 
 Analysis of on-chain data has shown that with the implementation of [SIP-184 for dynamic fees](https://sips.synthetix.io/sips/sip-184), lower base exchange fees are now feasible. 
-This SCCP proposes to lower base exchange fees for sBTC, sETH, and sLINK to 25bp on Optimism, and also lower the dynamic fee parameter `exchangeDynamicFeeThreshold` to 25bp. 
+This SCCP proposes to lower base exchange fees for sBTC, sETH, sLINK, sSOL, and sUSD to 25bp on Optimism, and also lower the dynamic fee parameter `exchangeDynamicFeeThreshold` to 25bp. 
 
 ## Copyright
 
