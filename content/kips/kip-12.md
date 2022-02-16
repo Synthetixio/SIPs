@@ -1,6 +1,6 @@
 ---
 kip: 12
-title: Kwenta adminDAO Framework, replacing the Core Contributors and Core Contributor Committee
+title: Kwenta adminDAO Framework, Replacing the Core Contributors and Core Contributor Committee
 status: Draft
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-02-09
