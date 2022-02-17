@@ -3,7 +3,7 @@ sccp: 165
 network: Ethereum
 title: Update LUSD Wrappr Parameters
 author: Kaleb (@kaleb-keny)
-status: Approved
+status: Implemented
 created: 2022-02-09
 type: Governance
 proposal: >-
@@ -15,6 +15,7 @@ proposal: >-
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 This SCCP proposes to update the following parameters on the LUSD wrappr on Ethereum:
+
 - Increase the `maxTokenAmount` to 100 million sUSD
 - Increase the `burnFeeRate` to 5%
 
@@ -34,4 +35,3 @@ This will allow up to gradually unwind the LUSD wrappr on L2, in favor of a wrap
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
