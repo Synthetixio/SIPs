@@ -30,7 +30,7 @@ Ticker - KWENTA
 
 Initial Supply - 313,373
 
-Inflation Model - Inflationary rewards will start at 60% APY in KWENTA and linearly deplete to 1% indefinitely over the course of 4 years. This will result in a total supply of 1,062,486.81 KWENTA at the end of 4 years. 
+Inflation Model - Weekly emissions will start at 14,463.37 $KWENTA the first week and drop to around 200 $KWENTA (1% APY) at the end of four years. Resulting in a total supply at the end of four years of 1,009,409.43 (note that this number was updated after CCs evaluated feasibility). 
 
 **Allocation breakdown:**
 
