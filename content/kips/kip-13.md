@@ -26,7 +26,7 @@ The distribution will follow this model:
 
 Synth traders who meet these requirements (TBD) will be distributed the 5% using this method (TBD). The tokens will be distributed evenly across these members and will go into a one-year vesting contract which can be vested at any time, however, an attached fee which will begin at 80% and deplete linearly to 0% after one year will be executed when vested which burns the percentage of tokens exposed to the remaining fee, enabling short term holders to exit while decreasing the total supply. 
 
-Note that shorting is not technically included in this distribution, however, to close a short with the Synthetix system, a wallet would need to make a Synth swap which would would be accounted for in the above distribution model. 
+Note that shorting is not technically included in this distribution, however, to close a short with the Synthetix system, a wallet would need to make a Synth swap which would be accounted for in the above distribution model. 
 
 
 #### SNX Stakers 30% 
