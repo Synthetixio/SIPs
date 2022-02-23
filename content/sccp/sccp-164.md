@@ -3,12 +3,11 @@ sccp: 164
 network: Ethereum
 title: Extend burn lock to seven days
 author: Kain Warwick (@kaiynne), Jackson Chan (@jacko125)
-status: Approved
+status: Implemented
 created: 2022-02-01
 type: Governance
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/QmbzbKqusFvELHY9pYicJkiF9vcozZSvCFhP9nAkQDgUT7
-
 ---
 
 ## Simple Summary
@@ -34,4 +33,3 @@ To further deter snapshotters following the increase in weekly SNX rewards to be
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
