@@ -3,7 +3,7 @@ sip: 80
 network: Optimism
 title: Synthetic Futures
 status: SC_Review_Pending
-author: 'Anton Jurisevic (@zyzek), Jackson Chan (@jacko125), Kain Warwick (@kaiynne)'
+author: 'Anton Jurisevic (@zyzek), Jackson Chan (@jacko125), Kain Warwick (@kaiynne), Arthur Deygin (@artdgn)'
 created: 2020-08-06T00:00:00.000Z
 requires: 79, 184
 type: Governance
@@ -37,7 +37,7 @@ encouraging a neutral balance.
 
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 
-The current design of Synths does not easily provide traders with a mechanism for leveraged trading or for shorting assets with leverage. Synthetic futures will enable a much expanded and capitcal efficient trading experience by enabling both leveraged price exposure and short exposure.
+The current design of Synths does not easily provide traders with a mechanism for leveraged trading or for shorting assets with leverage. Synthetic futures will enable a much expanded and capitcal efficient trading experience by enabling both leveraged long price exposure and short exposure.
 
 ## Specification
 
@@ -108,7 +108,7 @@ open on that market. Additional parameters control the leverage offered on a par
 | \\(V\_{max}\\)       | Open interest cap                      | -                                                                                                                                      | Orders cannot be opened that would cause the notional value of either side of the market to exceed this limit. We constrain both: \\[p \ Q_L \leq V_{max}\\] \\[p \ Q_S \leq V_{max}\\] The cap will initially be \\(\$10\,000\,000\\) on each side of the market. |
 | \\(K\\)              | Market skew                            | \\(K \ := \ \sum\_{c \in C}{q^c} \ = \ Q_L - Q_S\\)                                                                                    | The excess base units on one side or the other. When the skew is positive, longs outweigh shorts; when it is negative, shorts outweigh longs. When \\(K = 0\\), the market is perfectly balanced.                                                                  |
 | \\(\lambda\_{max}\\) | Maximum Initial leverage               | -                                                                                                                                      | The absolute notional value of a position must not exceed its initial margin multiplied by the maximum leverage. Initially this will be no greater than 10.                                                                                                        |
-| \\(\skewScale\\)     | Skew scaling denominator constant      | -                                                                                                                                      | A constant value used to compute the proportional skew.                                                                                                                                                                                                            |
+| \\(skewScale\\)      | Skew scaling denominator constant      | -                                                                                                                                      | A constant value used to compute the proportional skew.                                                                                                                                                                                                            |
 
 ---
 
@@ -315,42 +315,44 @@ As price updates cannot directly trigger the liquidation of insolvent positions,
 for keepers to perform this work by executing a public liquidation function. However, as opposed to the usual liquidations pattern,
 no capital is required for the liquidator - only submitting the transaction specifying the account to be liquidated.
 
-In order to incentivise the keepers, the a liquidation penalty proportional to the position size of the account
+In order to incentivise the keepers, the liquidation penalty proportional to the position size of the account
 will be paid to the keeper. The panatly will have a minimal size to ensure that transaction costs are covered and small accounts
-liquidations are also profitable (to prevent small accounts bloat). The initial setting for the penalty / incentive will be 35 basis points (of position size).
+liquidation is also profitable (to prevent small accounts bloat). The initial setting for the penalty / incentive will be 35 basis points (of position size).
 
 Additionally because a price update might cause an account to have a negative marin after accounting for the liquidation incentive, an
 additional proportional margin buffer will be used when calculating the liquidation threshold margin and price. The buffer will be
-set such that on average the remaining margin on liquidation after deducing the penalty is close to 0, but positive. This is to prevent
-the debt pool from leaking value in these cases. The initial setting for the buffer will be 25 basis points (of position size).
+set such that on average the remaining margin on liquidation after deducting the penalty is close to 0, but positive. This is to prevent
+the debt pool from leaking value in these cases. The initial setting for the buffer will be 25 basis points (of notional position size).
 
 The liquidation margin will be computed by summing both the liquidation incentive payable to a keeper, and the
 buffer (payable to the fee pool if positive).
 
-> > > > > TODO: update the following section's formulas, notation, notes
-> > > > > A position may be liquidated whenever a price is received that causes:
-> > > > > \\[m \leq D\\]
-> > > > > If this is satisfied, the position is closed, the incentive is minted into the liquidating keeper's wallet at the
-> > > > > execution time, and the rest of the position's remaining margin goes into the fee pool if it's positive.
+A position may be liquidated whenever a price is received that causes:
+\\[m \leq liqMargin\\]
+If this is satisfied, the position is closed, the incentive is minted into the liquidating keeper's wallet at the
+execution time, and the rest of the position's remaining margin goes into the fee pool if it's positive.
 
-| Symbol         | Description                  | Definition                                                           | Notes                                                                                                                                                                                                                                       |
-| -------------- | ---------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \\(D\\)        | Liquidation keeper incentive | -                                                                    | This is a flat fee that is used to incentivise keeper duties. Initially this will be set to \\(D = 20\\) sUSD.                                                                                                                              |
-| \\(m\_{min}\\) | Minimum order size           | -                                                                    | The keeper incentive necessitates that orders are at least as large. We will initially choose \\(m*{min} = 100\\) sUSD, corresponding to 5x leverage at the minimum order size relative to \\(D\\). We will require \\(m*{min} \leq m_e\\). |
-| \\(p\_{liq}\\) | Liquidation price            | \\[p_{liq} := \frac{p_e - (F_n - F_j) - \frac{m_e - D}{q}}{1 + u}\\] | The liquidation price will be below the entry price for long positions, and above it for short positions, as the sign of \\(q\\) changes.                                                                                                   |
+| Symbol               | Description                 | Definition                                                   | Notes                                                                                                                                                                     |
+| -------------------- | --------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \\(liqMargin\\)      | Liquidation margin          | \\(max(q \cdot p \cdot rFee, D) + q \cdot p \cdot rBuffer\\) | Liquidation margin below which a position will be liquidatable.                                                                                                           |
+| \\(rBuffer\\)        | Liquidation buffer ratio    | -                                                            | Ratio of notional position size that will be used as buffer to reduce chance of negative margin on large price updates. .                                                 |
+| \\(rFee\\)           | Liquidation fee ratio       | -                                                            | Ratio of notional position size that will be paid to incentive liquidation keepers.                                                                                       |
+| \\(D\\)              | Minimal keeper incentive    | -                                                            | This is the minimal fee that is used to incentivise keeper duties. Initially this will be set to \\(D = 20\\) sUSD.                                                       |
+| \\(p\_{liqApprox}\\) | Approxime liquidation price | \\(p_e - \frac{m_e - liqMargin}{q} - (F_n - F_j)\\)          | Approximate liquidation price as estimated using liquidation margin calculated for current price. Will be above actual liquidation price for longs, and below for shorts. |
 
-> > > > >
-
-The indicated liquidation price when position is not liquidatable is an estimate calculated using
+An approximate liquidation price will be calculated for UI purposes, however, this indicated liquidation price
+(when position is not yet liquidatable) is an estimate calculated using
 the price and accrued funding known at the time. Due to using proportional liquidation incentive and buffer it
 will be conservative in most cases (e.g. higher than actual liquidation price for longs, lower for shorts). The estimate becomes
-more and more accurate as the conditions approach the actual liquidation conditions (price and funding).
+more and more accurate as the conditions approach the actual liquidation conditions (price and funding). An exact liquidation check
+will be available uding a `canLiquidate()` view, and will be checked during the liquidation transaction.
 
 ### Dynamic fees integration
 
 In addition to the constant exchange fees, a volatility dependant "dynamic fee" (SIP-184) is used. This is
 done in order to prevent value leakage due to oracle-delay ("soft front-running") trades. Refer to SIP-184
 for the full explanation of the mechanism.
+
 In short, exchange fees are increased immediately following price updates
 that are over a certain percentage threshold change. For the vast majority of time, the thresholding results in this
 fee being exactly 0, and in volatile periods it grows proportionally to the recent volatility.
@@ -363,12 +365,12 @@ The dynamic fee in this context is applied in the following ways:
 
 ### Next-price orders and fees
 
-In order to allow funding rate arbitrage to be profitable even for low funding rates and skews, the exchange fees for arbitrageurs must be as low as possible. This should reduce the skew, which reduces risk for SNX and reduces funding rate for by traders.
-A special exchange fee rate will be applied to a specific mechanism of non non-atomic trades that will use the future (next price) update coming from the oracle. Due to using future, unknown price to initite the trade, this mechanism should be less volunerable to "soft front-running" (because two prices ahead, instead of one, need to be known to profitably front-run it).
+In order to allow funding rate arbitrage to be profitable even for low funding rates and skews, the exchange fees for arbitrageurs must be as low as possible. This should reduce the skew, which reduces risk for protocol and reduces funding rate for by traders.
+A special exchange fee rate will be applied to a specific mechanism of non non-atomic trades that will use the future (next price) update coming from the oracle. Due to using future, unknown price to initiate the trade, this mechanism should be less volunerable to "soft front-running" (because two prices ahead, instead of one, need to be known to profitably front-run it).
 
 The mechanism has 3 methods:
 
-- `submitNextPriceOrder(int size)`: stores an order to be executed at next-price update. Only one order can be stored for account at a time. A certain amount of fees are deducted from account on submission: commitment fee, and keeper fee. The commitment fee is refundable if order will be executed successfully, the keeper fee will be refunded if execution will be done from the account itself and otherwise paid to the keeper executing it as incentive. The commitment fee is a proportional fee and is equal to the exchange fee that would be charged for a regular order. The keeper fee is equal to the minimum keeper fee (\\D\\ ~ 20sUSD initially). The purpose of the commitment fee is to make cancellation cost as much as a regular trade to prevent free optionality (which would mean that the decision to trade is taken when next-price is known, which reduces the mechanism to immediate one)
+- `submitNextPriceOrder(int size)`: stores an order to be executed at next-price update. Only one order can be stored for account at a time. A certain amount of fees are deducted from account on submission: commitment fee, and keeper fee. The commitment fee is refundable if order will be executed successfully, the keeper fee will be refunded if execution will be done from the account itself and otherwise paid to the keeper executing it as incentive. The commitment fee is a proportional fee and is equal to the exchange fee that would be charged for a regular order. The keeper fee is equal to the minimum keeper fee (\\(D\\) ~ 20 sUSD initially). The purpose of the commitment fee is to make cancellation cost as much as a regular trade to prevent free optionality (which would mean that the decision to trade is taken when next-price is known, which reduces the mechanism to immediate one)
 - `cancelNextPriceOrder(address account)`: a stored order can be cancelled by the account itself at any time. It can also be cancelled by any other account (e.g. keeper) after the confirmation window (the window during which the order can be executed). If an order is cancelled, the keeper fee is paid to whoever submitted the cancellation transaction, and the commitment fee is paid to the fee pool.
 - `executeNextPriceOrder(address account)`: the order can be executed by anyone during the confirmation window (initially 2 oracle price rounds). If the order executes successfully, the commitment fee is refunded to the account. The keeper fee is paid to whoever submitted the transaction (so if it's the account itself - it's refunded). If the confirmation window is over, or if the order cannot be executed (reverts), the order should be cancelled instead.
 
