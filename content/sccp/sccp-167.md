@@ -4,6 +4,7 @@ network: Optimism
 title: Lower baseBorrowRate on Synth Loans to 0.25%
 author: Kaleb Keny (@kaleb-keny)
 status: Draft
+created: 2022-03-01
 type: Governance
 ---
 
