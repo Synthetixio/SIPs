@@ -1,7 +1,7 @@
 ---
-ktr: <to be assigned>
+ktr: 4
 title: devDAO Community Tips
-status: Draft
+status: Feasibility
 author: Platschi (@platschi)
 created: <2022-03-02>
 ---
