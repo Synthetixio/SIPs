@@ -25,7 +25,7 @@ const Template: React.FC<Props> = ({ data: { allMarkdownRemark } }) => {
     <Main>
       <Helmet title="All CKIPs" />
       <header className="post-header">
-        <h1 className="post-title">All SCCPs</h1>
+        <h1 className="post-title">All CKIPs</h1>
       </header>
       <div className="post-content">
         {columns.map((g) => {
