@@ -2,7 +2,7 @@
 sccp: TBD
 title: Move Curve sUSD pool reward to metapool
 network: Ethereum
-author: GUNBOATs @gunboatsss
+author: GUNBOATs (@gunboatsss)
 status: Draft
 created: 2022-03-05
 ---
