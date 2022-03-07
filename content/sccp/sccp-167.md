@@ -3,7 +3,9 @@ sccp: 167
 network: Optimism
 title: Lower baseBorrowRate on Synth Loans to 0.25%
 author: Kaleb Keny (@kaleb-keny)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmRtRvAwpuKnQj5upC3VBC6H7LquS3YVG2ZzdrDz31CbR6
 created: 2022-03-01
 type: Governance
 ---
@@ -17,6 +19,7 @@ This SCCP proposes to lower the base borrowing rate to 0.25% from 3%.
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
+
 The `baseBorrowRate` determines the annual interest rate applied on sUSD/sETH borrowing against ETH.
 
 ## Motivation
