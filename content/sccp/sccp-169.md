@@ -1,5 +1,5 @@
 ---
-sccp: TBD
+sccp: 169
 title: Move Curve sUSD pool reward to metapool
 network: Ethereum
 author: GUNBOATs (@gunboatsss)
