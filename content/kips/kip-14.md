@@ -1,5 +1,5 @@
 ---
-kip: 15
+kip: 14
 title: marketingDAO 2.0 
 status: Draft
 author: Andrew Trudel (@Andrew-Synthetix)
