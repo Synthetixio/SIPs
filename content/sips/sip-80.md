@@ -404,7 +404,11 @@ interface IFuturesMarket {
 
     function modifyPosition(int sizeDelta) external;
 
+    function modifyPositionWithTracking(int sizeDelta, bytes32 trackingCode) external;
+
     function submitNextPriceOrder(int sizeDelta) external;
+
+    function submitNextPriceOrderWithTracking(int sizeDelta, bytes32 trackingCode) external;
 
     function cancelNextPriceOrder(address account) external;
 
@@ -412,11 +416,15 @@ interface IFuturesMarket {
 
     function closePosition() external;
 
+    function closePositionWithTracking(bytes32 trackingCode) external;
+
     function liquidatePosition(address account) external;
 
     /* ========== Views ========== */
 
     /* ---------- Market Details ---------- */
+
+    function marketKey() external view returns (bytes32 key);
 
     function baseAsset() external view returns (bytes32 key);
 
@@ -492,9 +500,9 @@ interface IFuturesMarketManager {
 
     function allMarkets() external view returns (address[] memory);
 
-    function marketForAsset(bytes32 asset) external view returns (address);
+    function marketForKey(bytes32 marketKey) external view returns (address);
 
-    function marketsForAssets(bytes32[] calldata assets) external view returns (address[] memory);
+    function marketsForKeys(bytes32[] calldata marketKeys) external view returns (address[] memory);
 
     function totalDebt() external view returns (uint debt, bool isInvalid);
 }
