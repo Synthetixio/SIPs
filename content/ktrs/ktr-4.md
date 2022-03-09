@@ -1,7 +1,7 @@
 ---
 ktr: 4
 title: devDAO Community Tips
-status: Feasibility
+status: Implemented
 author: Platschi (@platschi)
 created: <2022-03-02>
 ---
