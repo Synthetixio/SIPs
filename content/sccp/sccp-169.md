@@ -48,7 +48,7 @@ The below table showcases stats on the decrease in fees when moving from the pre
 |                           	| **sol**  	|   26 bp  	|  4  bp  	|   117 sec   	|   116 sec   	|     0 sec    	|  
 
 
-The below table showcases the change in oracle latency when moving from the old fee regime to the new one. As can be seen, the oracle latency does not exceed 50 bp a large factor in most extreme cases, with 50 bp being the cutoff needed by latency arbitragers that aim to cover the base fee of the round trip of 25 bp.
+The below table showcases the change in oracle latency when moving from the old fee regime to the new one. As can be seen, the oracle latency does not exceed 50 bp in most extreme cases, with 50 bp being the cutoff needed by latency arbitragers that aim to cover the base fee of the round trip.
 
 | **Oracle   Latency Delta** 	| **Ticker** 	| **99%** 	| **99.50%** 	| **99.90%** 	|
 |:--------------------------:	|:----------:	|:-------:	|:----------:	|:----------:	|
