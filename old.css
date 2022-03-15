@@ -312,7 +312,7 @@ table td {
 .footer-col {
   float: left;
   margin-bottom: 15px;
-  padding-left: 15px;
+  padding: 10px;
 }
 
 .footer-col-1 {
@@ -330,6 +330,11 @@ table td {
   width: calc(45% - (30px / 2));
 }
 
+.footer-col-4 {
+  width: 100%;
+  padding: 10px;
+}
+
 @media screen and (max-width: 800px) {
   .footer-col-1,
   .footer-col-2 {
@@ -337,6 +342,10 @@ table td {
     width: calc(50% - (30px / 2));
   }
   .footer-col-3 {
+    width: -webkit-calc(100% - (30px / 2));
+    width: calc(100% - (30px / 2));
+  }
+  .footer-col-4 {
     width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2));
   }

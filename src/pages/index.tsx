@@ -89,10 +89,10 @@ const IndexPage = () => (
     </p>
 
     <p>
-      Once assessed, a KIP is moved into <code>Proposed</code>. Once the Kwenta
+      Once assessed, a KIP is moved into <code>Feasibility</code>. Once the Kwenta
       Council has formally reviewed the KIP during the KIP presentation they can
       either move it to a vote or send it back to <code>Draft</code>. A vote is
-      conducted within the Kwenta discord. If a vote by the Kwenta Council
+      conducted via Snapshot. If a vote by the Kwenta Council
       reaches a majority, the KIP is moved to <code>Approved</code>, otherwise
       it is <code>Rejected</code>.
     </p>
@@ -109,7 +109,10 @@ const IndexPage = () => (
         being actively developed.
       </li>
       <li>
-        <strong>Proposed</strong> - The KIP is awaiting a vote.
+        <strong>Feasibility</strong> - The KIP is being discussed with the community.
+      </li>
+      <li>
+        <strong>Voting</strong> - The KIP is awaiting a vote.
       </li>
       <li>
         <strong>Approved</strong> - The KIP has successfully reached a majority

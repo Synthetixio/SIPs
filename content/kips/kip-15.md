@@ -12,7 +12,7 @@ This proposal outlines a tiered role structure for the devDAO.
 
 ## Abstract
 
-Creating a tiered role system for devDAO community members to grow into when contributing code to the development of Kwenta. The tiered role system will allow for systematic growth and engagement as well as an umambiguous path to distribute tickets by skill level.
+Creating a tiered role system for devDAO community members to grow into when contributing code to the development of Kwenta. The tiered role system will allow for systematic growth and engagement as well as an unambiguous path to distribute tickets by skill level.
 
 ## Motivation
 

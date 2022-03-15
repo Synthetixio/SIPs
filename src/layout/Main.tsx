@@ -2,6 +2,7 @@ import React from 'react'
 
 import GithubIcon from '../icons/Github'
 import TwitterIcon from '../icons/Twitter'
+import SourceIcon from '../icons/Source'
 
 const Main: React.FC = ({ children }) => {
   return (
@@ -43,16 +44,7 @@ const Main: React.FC = ({ children }) => {
 
       <footer className="site-footer h-card">
         <div className="wrapper">
-          <h2 className="footer-heading">KIPs</h2>
-
-          <div className="footer-col-wrapper">
-            <div className="footer-col footer-col-1">
-              <ul className="contact-list">
-                <li className="p-name">KIPs</li>
-              </ul>
-            </div>
-
-            <div className="footer-col footer-col-2">
+            <div className="footer-col">
               <ul className="social-media-list">
                 <li>
                   <a href="https://github.com/Kwenta/KIPs">
@@ -66,17 +58,21 @@ const Main: React.FC = ({ children }) => {
                     <span className="username">kwenta_io</span>
                   </a>
                 </li>
+                <li>
+                  <a href="https://kwenta.io">
+                    <SourceIcon className="svg-icon" />
+                    <span className="username">Kwenta</span>
+                  </a>
+                </li>
               </ul>
             </div>
-
-            <div className="footer-col footer-col-3">
+            <div className="footer-col-4">
               <p>
                 Kwenta Improvement Proposals (KIPs) describe standards for the
                 Kwenta platform, including core protocol specifications, client
                 APIs, and contract standards.
               </p>
             </div>
-          </div>
         </div>
       </footer>
       <script type="text/javascript" src="/mathjax-config.js" defer />
