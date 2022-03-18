@@ -2,11 +2,12 @@
 sip: 80
 network: Optimism
 title: Synthetic Futures
-status: SC_Review_Pending
+status: Implemented
 author: 'Anton Jurisevic (@zyzek), Jackson Chan (@jacko125), Kain Warwick (@kaiynne), Arthur Deygin (@artdgn)'
 created: 2020-08-06T00:00:00.000Z
 requires: 79, 184
 type: Governance
+release: Diphda
 ---
 
 ## Implementors
@@ -240,14 +241,14 @@ by index, rather than as a function of time.
 
 Funding will be settled whenever a position is closed or modified.
 
-| Symbol          | Description                    | Definition                                                                                                                           | Notes                                                                                                                                                                                                                         |
-| --------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \\(t\_{last}\\) | Skew last modified             | -                                                                                                                                    | The timestamp of the last skew-modifying event in seconds.                                                                                                                                                                    |
-| \\(F\\)         | Cumulative funding sequence    | \\[F_0 \ := \ 0\\]                                                                                                                   | \\(F_i\\) denotes the i'th entry in the sequence of cumulative funding per base unit. \\(F_n\\) will be taken to be the latest entry.                                                                                         |
-| \\(u\\)         | Unrecorded base funding        | \\[u \ := \ i \ (now - t_{last})\\]                                                                                                  | The funding (denominated in the base currency) per base unit accrued since the last funding entry was recorded at \\(t\_{last}\\).                                                                                            |
-| \\(F\_{now}\\)  | Unrecorded cumulative funding  | \\[F_{now} \ := F_n + p \ u\\]                                                                                                       | The funding per base unit accumulated up to the current time, including since \\(t\_{last}\\).                                                                                                                                |
-| \\(j\\)         | Last-modified index            | \\[j \leftarrow 0\\] at initialisation.                                                                                              | The index into \\(F\\) corresponding to the event that a position was opened or modified.                                                                                                                                     |
-| \\(f\\)         | Accrued position funding       | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline q^c \ (F_{now} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a position at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner.                                                                      |
+| Symbol          | Description                   | Definition                                                                                                                           | Notes                                                                                                                                                    |
+| --------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \\(t\_{last}\\) | Skew last modified            | -                                                                                                                                    | The timestamp of the last skew-modifying event in seconds.                                                                                               |
+| \\(F\\)         | Cumulative funding sequence   | \\[F_0 \ := \ 0\\]                                                                                                                   | \\(F_i\\) denotes the i'th entry in the sequence of cumulative funding per base unit. \\(F_n\\) will be taken to be the latest entry.                    |
+| \\(u\\)         | Unrecorded base funding       | \\[u \ := \ i \ (now - t_{last})\\]                                                                                                  | The funding (denominated in the base currency) per base unit accrued since the last funding entry was recorded at \\(t\_{last}\\).                       |
+| \\(F\_{now}\\)  | Unrecorded cumulative funding | \\[F_{now} \ := F_n + p \ u\\]                                                                                                       | The funding per base unit accumulated up to the current time, including since \\(t\_{last}\\).                                                           |
+| \\(j\\)         | Last-modified index           | \\[j \leftarrow 0\\] at initialisation.                                                                                              | The index into \\(F\\) corresponding to the event that a position was opened or modified.                                                                |
+| \\(f\\)         | Accrued position funding      | \\[f^c \ := \ \begin{cases} 0 & \ \text{if opening} \ c \\ \\ \newline q^c \ (F_{now} - F_{j^c}) & \ \text{otherwise} \end{cases}\\] | The sUSD owed as funding by a position at the current time. It is straightforward to query the accrued funding at any previous time in a similar manner. |
 
 Then any time a position \\(c\\) is modified, first compute the current funding rate by updating market size and skew, where \\(q'\\) is the position's updated size after modification:
 
