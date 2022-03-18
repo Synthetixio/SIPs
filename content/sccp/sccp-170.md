@@ -1,6 +1,6 @@
 ---
 sccp: 170
-network: Optimism
+network: Ethereum
 title: Update Parameters of ETH Wrappr
 author: Kaleb (@kaleb-keny)
 status: Draft
