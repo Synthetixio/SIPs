@@ -23,7 +23,7 @@ The parameter determines the maximum amount of ETH that can be minted with the E
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Given the favorable vote on [SIP-210](https://sips.synthetix.io/sips/sip-210/), this sccp proposes to lower the `maxETH` parameter on the ETH wrappr to 0, as to prevent the situation of more ETH being wrapped after unwinding takes place. Currently there is 117k ETH in the ETH wrappr, with 36k ETH at most is expected to be unwound with the DAI wrappr. The existing utilization after unwind is expected to be around 80k ETH just above the `maxETH` at 75k ETH. If the ETH wrapped goes below 75k ETH, it might prevent further unskew as arbers are able to mint ETH with sETH, later sent to stables.
+Given the imminent unwind of the negative ETH Skew, this sccp proposes to lower the `maxETH` parameter on the ETH wrappr to 0, as to prevent the situation of more ETH being wrapped after unwinding takes place. Currently there is 117k ETH in the ETH wrappr, with 36k ETH expected to be unwound. The existing utilization after unwind is expected to be around 80k ETH, just above the current `maxETH` level of 75k ETH. If the ETH wrapped goes below 75k ETH, it might prevent further unskew as arbers are able to mint ETH with sETH, later sent to stables.
 
 ## Copyright
 
