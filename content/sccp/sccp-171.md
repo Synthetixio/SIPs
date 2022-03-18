@@ -3,7 +3,9 @@ sccp: 171
 network: Optimism
 title: Increase `BaseFee` on AVAX to 35 bp from 25 bp
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
+proposal: >-
+  https://gov.synthetix.io/#/proposal/QmQFxkfsqSJdnHAc8NQTBe85MXrvT3NMUYe2S5gh5yiZNU
 created: 2022-03-10
 type: Governance
 ---
