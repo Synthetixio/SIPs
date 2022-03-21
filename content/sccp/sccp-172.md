@@ -24,7 +24,7 @@ This SCCP proposes to reduce the `minInitialMargin` on on perpetual futures mark
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The main reason for this change is to imrove the UX during the initial rollout of futures markets. Due to how checks are currently performed when modifying positions, margin for an open position has to be at least `minInitialMargin`, however closing position uses the same flow, so closing a losing position if a user deposited exactly 100 sUSD is impossible, even though the position is not yet liquidatable.
+The main reason for this change is to improve the UX during the initial rollout of futures markets. Due to how checks are currently performed when modifying positions, margin for an open position has to be at least `minInitialMargin`, however closing position uses the same flow, so closing a losing position if a user deposited exactly 100 sUSD is impossible, even though the position is not yet liquidatable.
 
 If this parameter is updated to 40, users who deposit e.g. 100 sUSD, or even 50 sUSD would not encounter that problem, and a trading UI can guide them to deposit at least 50 or 100 (to allow for more price movement on high leverage) amount to prevent that issue.
 
@@ -36,8 +36,8 @@ With 40 sUSD as min initial margin, and a 50 sUSD margin deposit that backs a 10
 
 Details of calculation:
 
-- Exhange fee opening (500 sUSD position, 30 bips) => 1.5. Remaining margin 48.5.
-- Exhange fee closing (500 sUSD position, 20 bips) => 1. This needs to be subtracted when closing the position.
+- Exchange fee opening (500 sUSD position, 30 bips) => 1.5. Remaining margin 48.5.
+- Exchange fee closing (500 sUSD position, 20 bips) => 1. This needs to be subtracted when closing the position.
 - 47.5 - 40 = 7.5; 7.5 loss relative to (roughtly 500 value position) ~= 1.5%
 - Maintenance margin => 21.25 (min fee + buffer of 25 bips). At this margin the position will be liquidatable if no additional margin is added.
 
