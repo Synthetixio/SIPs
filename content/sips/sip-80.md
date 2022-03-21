@@ -8,6 +8,8 @@ created: 2020-08-06T00:00:00.000Z
 requires: 79, 184
 type: Governance
 release: Diphda
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmXVL1iEVPaDQMFLiNvGAbZBiyazf1u4v5yLsS8PZg8FZi
 ---
 
 ## Implementors
