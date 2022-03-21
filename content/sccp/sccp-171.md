@@ -5,7 +5,7 @@ title: Increase `BaseFee` on AVAX to 35 bp from 25 bp
 author: Kaleb (@kaleb-keny)
 status: Implemented
 proposal: >-
-  https://gov.synthetix.io/#/proposal/QmQFxkfsqSJdnHAc8NQTBe85MXrvT3NMUYe2S5gh5yiZNU
+  https://snapshot.org/#/snxgov.eth/proposal/QmQFxkfsqSJdnHAc8NQTBe85MXrvT3NMUYe2S5gh5yiZNU
 created: 2022-03-10
 type: Governance
 ---
