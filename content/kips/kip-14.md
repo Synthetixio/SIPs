@@ -1,7 +1,7 @@
 ---
 kip: 14
 title: marketingDAO 2.0 
-status: Voting
+status: Approved
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-03-07
 ---
