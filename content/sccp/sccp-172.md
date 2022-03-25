@@ -3,7 +3,7 @@ sccp: 172
 network: Optimism
 title: Decrease `minInitialMargin` for futures markets from 100 to 40 sUSD
 author: Arthur (@artdgn)
-status: Approved
+status: Implemented
 created: 2022-03-21
 type: Governance
 proposal: >-
