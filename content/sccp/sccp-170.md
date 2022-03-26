@@ -17,7 +17,7 @@ This SCCP proposes to lower the `maxETH` in the ETH wrappr to 0.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The parameter determines the maximum amount of ETH that can be minted with the ETH wrappr.
+The parameter determines the maximum amount of ETH that can be minted with the sETH wrappr.
 
 ## Motivation
 
