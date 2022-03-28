@@ -13,12 +13,11 @@ type: Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 This SCCP proposes to update the following base fee parameters:
-- raise sSOL baseFee to 40 bp from 25 bp
-- raise sUNI baseFee to 40 bp from 25 bp
-- raise sAAVE baseFee to 40 bp from 25 bp
-- raise sLINK baseFee to 40 bp from 25 bp
-- raise sAVAX baseFee to 40 bp from 35 bp
-- raise sMATIC baseFee to 40 bp from 25 bp
+- raise sSOL baseFee to 35 bp from 25 bp
+- raise sUNI baseFee to 35 bp from 25 bp
+- raise sAAVE baseFee to 35 bp from 25 bp
+- raise sLINK baseFee to 35 bp from 25 bp
+- raise sMATIC baseFee to 35 bp from 25 bp
 - raise futures makerFee on LINK shorts/longs to 35 bp and on takerFee to 40 bp
 
 ## Abstract
