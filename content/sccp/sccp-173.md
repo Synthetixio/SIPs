@@ -18,7 +18,8 @@ This SCCP proposes to update the following base fee parameters:
 - raise sAAVE baseFee to 40 bp from 25 bp
 - raise sLINK baseFee to 40 bp from 25 bp
 - raise sAVAX baseFee to 40 bp from 35 bp
-- raise futures base fee on LINK shorts/longs to 40 bp from 25 bp
+- raise sMATIC baseFee to 40 bp from 25 bp
+- raise futures makerFee on LINK shorts/longs to 40 bp and on takerFee to 45 bp
 
 ## Abstract
 
