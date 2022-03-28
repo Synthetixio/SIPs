@@ -3,9 +3,11 @@ sccp: 173
 network: Optimism
 title: Update Base Fees
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-03-26
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmXd6kPNGUnACAuXKQKoVDQZoEEkuG7GStNeSWJpsPeq98
 ---
 
 ## Simple Summary
@@ -13,6 +15,7 @@ type: Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 This SCCP proposes to update the following base fee parameters:
+
 - raise sSOL baseFee to 35 bp from 25 bp
 - raise sUNI baseFee to 35 bp from 25 bp
 - raise sAAVE baseFee to 35 bp from 25 bp
