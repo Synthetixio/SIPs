@@ -24,7 +24,7 @@ This SCCP proposes to update the following base fee parameters:
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The `baseFee` is the fee charged for exchange into a particular synth, or establishing a position in the `FuturesMarket` contract.
+The `baseFee` is the fee charged for exchange into a particular synth. The `makerFee` is the fee levied in order to establish a position in a `FuturesMarket` contract.
 
 ## Motivation
 
