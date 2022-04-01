@@ -4,7 +4,7 @@ network: Optimism
 title: Update Base Fees
 author: Kaleb (@kaleb-keny)
 status: Draft
-created: 2022-03-31
+created: 2022-04-01
 type: Governance
 ---
 
