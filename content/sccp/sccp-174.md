@@ -3,7 +3,7 @@ sccp: 174
 network: Optimism
 title: Update Base Fees
 author: Kaleb (@kaleb-keny)
-status: Impelemted
+status: Implemented
 created: 2022-03-30
 type: Governance
 proposal: >-
