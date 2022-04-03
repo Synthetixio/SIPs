@@ -3,9 +3,11 @@ sccp: 177
 network: Optimism
 title: Update Base Fees
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-04-01
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmaiZW7HtVV72EfTLTTKDKTPSyYD1eYfDiTjjrSVuKQWaY
 ---
 
 ## Simple Summary
