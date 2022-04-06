@@ -12,7 +12,7 @@ This proposal outlines a model in which the KWENTA token will be distributed to 
 
 ## Abstract
 
-5% of KWENTA will be distributed to all Synth traders who have (TBD) and 30% of KWENTA will be distributed to SNX stakers active during Sept 1st 2021 - Feb 1st 2022. The remainder of the KWENTA will be sent to the treasury and distributed according to the model proposed in KIP-4. 
+5% of KWENTA will be distributed to **eligible** Synth traders who have traded between Jan 1st 2020 - Feb 1st 2022 and 30% of KWENTA will be distributed to SNX stakers active during Sept 1st 2021 - Feb 1st 2022. The remainder of the KWENTA will be sent to the treasury and distributed according to the model proposed in KIP-4. 
 
 ## Motivation
 
@@ -24,9 +24,9 @@ The distribution will follow this model:
 
 #### Synth traders 5% 
 
-Synth traders who meet these requirements (TBD) will be distributed the 5% using this method (TBD). The tokens will be distributed evenly across these members and will go into a one-year vesting contract which can be vested at any time, however, an attached fee which will begin at 80% and deplete linearly to 0% after one year will be executed when vested which burns the percentage of tokens exposed to the remaining fee, enabling short term holders to exit while decreasing the total supply. 
+Synth traders active within the range of Jan 1st 2020 to February 1st 2022 are eligible for 5% of the initial KWENTA supply. The minimum trade requirements on were at least **5 trades** and **$1000 in cumulative volume** on L1; and  at least **10 trades** and **$5000 in cumulative volume** on L2. These values were selected to filter sybils and provide highly active traders with a meaningful stake in KWENTA. The tokens will be distributed evenly across these members and will go into a one-year vesting contract which can be vested at any time, however, an attached fee which will begin at 80% and deplete linearly to 0% after one year will be executed when vested which burns the percentage of tokens exposed to the remaining fee, enabling short term holders to exit while decreasing the total supply. 
 
-Note that shorting is not technically included in this distribution, however, to close a short with the Synthetix system, a wallet would need to make a Synth swap which would be accounted for in the above distribution model. 
+*Note that shorting is not technically included in this distribution, however, to close a short with the Synthetix system, a wallet would have needed to make a Synth exchange which would be accounted for in the above distribution model. 
 
 
 #### SNX Stakers 30% 
