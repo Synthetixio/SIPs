@@ -1,5 +1,5 @@
 ---
-sccp: 176
+sccp: 177
 network: Optimism
 title: Update Base Fees
 author: Kaleb (@kaleb-keny)
@@ -7,7 +7,7 @@ status: Implemented
 created: 2022-04-01
 type: Governance
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/QmdXWywY4Hi4Hs6SUpFoNdBe7sBYvDePxrztsyoXV1DxYc
+  https://snapshot.org/#/snxgov.eth/proposal/QmaiZW7HtVV72EfTLTTKDKTPSyYD1eYfDiTjjrSVuKQWaY
 ---
 
 ## Simple Summary
@@ -16,9 +16,8 @@ proposal: >-
 
 This SCCP proposes to update the following base fee parameters:
 
-- raise sAAVE baseFee to 70 bp
-- raise sUNI baseFee to 70 bp
-- raise sMATIC baseFee to 70 bp
+- raise sAVAX baseFee to 70 bp
+- raise sSOL baseFee to 70 bp
 
 ## Abstract
 
