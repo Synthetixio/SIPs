@@ -3,9 +3,11 @@ sccp: 170
 network: Ethereum
 title: Update Parameters of ETH Wrappr
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-03-18
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmYKJrCsUoiXRxLthS27fU1CmXn39SvZ3zqnzxLousGPr5
 ---
 
 ## Simple Summary
@@ -13,6 +15,7 @@ type: Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 This SCCP proposes to lower the `maxETH` in the ETH wrappr to 0.
+
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->

@@ -3,16 +3,18 @@ sccp: 178
 network: Ethereum
 title: Disable New Loans against renBTC
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-04-03
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmbVoehE3NNDM4YCUxYfnLALwg9jtkUogUgf7scPxJSyjC
 ---
 
 ## Simple Summary
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Set the `canOpenLoans` on the `ColltarealERC20` contract to False. 
+Set `canOpenLoans` on the `CollateralERC20` contract to `false`.
 
 ## Abstract
 
