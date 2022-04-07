@@ -24,7 +24,7 @@ The `makerNextPrice` and `takerNextPrice` are the fees paid by traders when they
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Activity seen on chain, where traders are using next price orders in order to cancel latency arbitrages we seen, given the low fees levied on immediate execution on ETH and BTC. Raising next price orders fees helps lean against those arbitrage patterns.
+Activity seen on chain, where traders are using next price orders in order to cancel latency arbitrages were seen on chain, given the low fees levied on immediate execution of ETH and BTC futures trades. Raising next price orders fees helps lean against those arbitrage patterns.
 
 ## Copyright
 
