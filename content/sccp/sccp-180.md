@@ -32,7 +32,7 @@ The primary motivation is to launch these markets for trading with parameter con
 - takerFeeNextPrice: 30 bp
 - makerFeeNextPrice: 30 bp
 - maxFundingRate: 10%
-- skewScaleUSD: 100m
+- skewScaleUSD: 50m
 
 
 ## Copyright
