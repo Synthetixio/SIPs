@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the `makerFeeNextPrice` and `takerFeeNextPrice` to 20 bp on LINK, ETH and BTC futures. 
+Increase the `makerFeeNextPrice` and `takerFeeNextPrice` to 25 bp on LINK, ETH and BTC futures. 
 
 ## Abstract
 
