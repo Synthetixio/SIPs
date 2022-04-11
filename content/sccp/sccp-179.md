@@ -3,9 +3,11 @@ sccp: 179
 network: Optimism
 title: Update Futures Fees
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-04-07
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/Qmb6ae8xThXPRvwsy3uAz78SBHAtZRkQV8iodZF6CrrNwP
 ---
 
 ## Simple Summary
@@ -18,7 +20,7 @@ Increase the `makerFeeNextPrice` and `takerFeeNextPrice` to 20 bp on LINK, ETH a
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The `makerNextPrice` and `takerNextPrice` are the fees paid by traders when filled for next price futures orders, they do not affect fees paid by traders when they execute immediately.
+The `makerFeeNextPrice` and `takerFeeNextPrice` are the fees paid by traders when filled for next price futures orders, they do not affect fees paid by traders when they execute immediately.
 
 ## Motivation
 
