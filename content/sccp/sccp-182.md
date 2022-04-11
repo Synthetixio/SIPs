@@ -15,7 +15,7 @@ type: Governance
 This SCCP proposes to lower the `MaxMarketValueUSD` on futures markets as follows:
 
 - On BTC to 3 million USD 
-- On ETH to 4 million USD 
+- On ETH to 7 million USD 
 - On LINK to 3 million USD 
 
 ## Abstract
