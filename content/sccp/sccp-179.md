@@ -20,7 +20,7 @@ Increase the `makerFeeNextPrice` and `takerFeeNextPrice` to 20 bp on LINK, ETH a
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The `makerNextPrice` and `takerNextPrice` are the fees paid by traders when filled for next price futures orders, they do not affect fees paid by traders when they execute immediately.
+The `makerFeeNextPrice` and `takerFeeNextPrice` are the fees paid by traders when filled for next price futures orders, they do not affect fees paid by traders when they execute immediately.
 
 ## Motivation
 
