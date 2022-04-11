@@ -1,7 +1,7 @@
 ---
 sccp: 183
 network: Optimism
-title: Update Future Base Fees
+title: Update Dynamic Fee Parameters
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2022-04-11

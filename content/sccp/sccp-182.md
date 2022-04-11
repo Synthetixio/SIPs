@@ -1,7 +1,7 @@
 ---
 sccp: 182
 network: Optimism
-title: Update Future Base Fees
+title: Update Open Interest Limits
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2022-04-11
@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to lower the `MaxMarketValueUSD` on futures markets as follows:
+This SCCP proposes to lower the `MaxMarketValueUSD` on futures markets to the following:
 
 - On BTC to 3 million USD 
 - On ETH to 7 million USD 
