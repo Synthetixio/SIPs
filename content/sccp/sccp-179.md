@@ -3,9 +3,11 @@ sccp: 179
 network: Optimism
 title: Update Futures Fees
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-04-07
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/Qmb6ae8xThXPRvwsy3uAz78SBHAtZRkQV8iodZF6CrrNwP
 ---
 
 ## Simple Summary
