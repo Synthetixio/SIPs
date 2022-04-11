@@ -15,12 +15,22 @@ type: Governance
 This SCCP proposes to update the base fees on futures as follows:
 
 - On BTC
+
     a) Increase `makerFee` to 30 bp from 20 bp
-    b) Increase `takerFee to 35 bp from 25 bp
+
+    b) Increase `takerFee` to 35 bp from 25 bp
 
 - On ETH
+
     a) Increase `makerFee` to 30 bp from 25 bp
+
     b) Increase `takerFee` to 35 bp from 30 bp
+
+- On LINK
+
+    a) Increase `makerFee` to 40 bp from 35 bp
+
+    b) Increase `takerFee` to 45 bp from 40 bp
 
 ## Abstract
 
