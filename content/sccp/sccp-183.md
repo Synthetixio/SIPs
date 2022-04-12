@@ -3,7 +3,7 @@ sccp: 183
 network: Optimism
 title: Update Dynamic Fee Parameters
 author: Kaleb (@kaleb-keny)
-status: Approved
+status: Implemented
 created: 2022-04-11
 type: Governance
 proposal: >-

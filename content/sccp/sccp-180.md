@@ -3,9 +3,11 @@ sccp: 180
 network: Optimism
 title: Unpause Futures Markets
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-04-08
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmRUdtSPxijmTc154jUQDdnD9C5KaxzFgQxKi61AKRLs66
 ---
 
 ## Simple Summary
