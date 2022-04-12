@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase the `MaxMarketValueUSD` to sUSD 15 million from sUSD 7 million. 
+This SCCP proposes to increase the `MaxMarketValueUSD` on the Ethereum Futures Market to sUSD 15 million from sUSD 7 million. 
 
 ## Abstract
 
