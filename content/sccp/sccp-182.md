@@ -3,7 +3,7 @@ sccp: 182
 network: Optimism
 title: Update Open Interest Limits
 author: Kaleb (@kaleb-keny)
-status: Approved
+status: Implemented
 created: 2022-04-11
 type: Governance
 proposal: >-

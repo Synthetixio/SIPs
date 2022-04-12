@@ -3,16 +3,18 @@ sccp: 184
 network: Optimism
 title: Update Open Interest Limits
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-04-14
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmQEYgoZrTn2ii9yVMGnn1YA4ziiB4U39fsMYo9gJX2end
 ---
 
 ## Simple Summary
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase the `MaxMarketValueUSD` to sUSD 15 million from sUSD 7 million. 
+This SCCP proposes to increase the sETH futures market `MaxMarketValueUSD` to sUSD 15 million from sUSD 7 million. 
 
 ## Abstract
 
