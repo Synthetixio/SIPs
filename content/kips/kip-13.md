@@ -36,6 +36,8 @@ SNX stakers, on both L1 and L2, active within the range of September 1st 2021 to
 
 *Note L2 stakers with only fee claims prior to the [Optimism Mainnet Regenesis on November 11th 2021](https://twitter.com/optimismPBC/status/1451339513964359682?s=20&t=KxKrgJ6GSyUHcAqynpYJpQ) were excluded from the distribution due to incomplete fee claim data. However, those with SNX staked "pre-regenesis" and continued to claim weekly rewards "post-regenesis" are eligible for this distribution.
 
+In the event that a Synthetix community member beleives they were incorrectly excluded from the distribution, there will be an application form open for 1 month where disputes can be submitted. 
+
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
