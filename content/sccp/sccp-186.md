@@ -1,7 +1,7 @@
 ---
 sccp: 186
 network: Optimism
-title: Increase Rate Stale Period
+title: Lower Rate Stale Period
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2022-04-15
