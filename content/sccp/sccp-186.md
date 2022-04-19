@@ -3,9 +3,11 @@ sccp: 186
 network: Optimism
 title: Lower Rate Stale Period
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-04-15
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/Qmeh91xszdRso1zqwnURFf3TMfD57xbZhCrVtnNnE2PZuE
 ---
 
 ## Simple Summary
