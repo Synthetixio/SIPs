@@ -2,7 +2,7 @@
 sccp: 187
 network: Optimism
 title: Update Open Interest Limits - Increase sGOLD
-author: Matt (@MattLosquadro)
+author: Matt (@MattLosquadro), Millie, MasterMojo
 status: Draft
 created: 2022-04-20
 type: Governance
