@@ -1,6 +1,6 @@
 ---
 sccp: 189
-network: Optimism & Ethereum Mainnet
+network: Ethereum & Optimism
 title: Change SNX inflationary distribution ratio
 author: Matt (@MattLosquadro)
 status: Draft
