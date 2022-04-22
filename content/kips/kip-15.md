@@ -1,7 +1,7 @@
 ---
 kip: 15
 title: devDAO Community Role Structure
-status: Approved
+status: Implemented
 author: Platschi (@platschi)
 created: <2022-03-14>
 ---
