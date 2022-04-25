@@ -104,7 +104,7 @@ The parameters are as follows:
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The base fees were primarily calibrated by considering the historical volatility of the assets as to limit the latency arbitrage. The atomic exchange circuit breakers were also set by looking at historical data, looking at the number of oracle prices pushes during different time intervals under different volatility environments.
+The base fees were primarily calibrated by considering the historical volatility of the assets as to limit the latency arbitrage. The atomic exchange circuit breakers were set by looking at the number of historical oracle prices pushes during different time intervals under different volatility environments with the aim of limiting trading disruption.
 
 ## Copyright
 
