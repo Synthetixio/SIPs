@@ -48,8 +48,8 @@ This SCCP proposes to update the parameters for the atomic and non-atomic exchan
 #### Other Parameters
 
 - The max volume per block would remaind at 15m$ per block
-- USD, ETH and BTC would be using ['USDC'](https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48), [`wETH`](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) and [`wBTC`](https://etherscan.io/token/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599) as their respective uniswap-v3 equivalents. 
-- The rest of the feeds, being EUR, CHF, JPY, GBP and KRW, would trade at the pure chainlink price.
+- USD, ETH and BTC would be using ['USDC'](https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48), [wETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) and [wBTC](https://etherscan.io/token/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599) as their respective uniswap-v3 equivalents. 
+- The rest of the feeds, being EUR, CHF, JPY, GBP, AUD and KRW, would trade at the pure chainlink price.
 - The `CL_BUFFER` will be set to zero on all assets.
 
 #### Non-Atomic Exchanges on Ethereum
@@ -95,7 +95,7 @@ This SCCP proposes to update the parameters for the atomic and non-atomic exchan
 
 The parameters are as follows:
 
-- `feeRateForExchange` is the fee that is paid by traders computed by adding the `baseFee` of the source and destination currencies after [SIP-222](https://sips.synthetix.io/sips/sip-222/).  Previously that fee is based purely on the destination currency traded into.
+- `feeRateForExchange` is the fee that is paid by traders computed by adding the `baseFee` of the source and destination currencies after [SIP-222](https://sips.synthetix.io/sips/sip-222/).  Previously that fee is based purely on the destination currency.
 - `atomicMaxVolumePerBlock` is the max volume in sUSD per block.
 - The `atomicVolatilityConsiderationWindow` is the the time window to evaluate whether a synth is too volatile to atomically exchange, specified in number of seconds
 - The `atomicVolatilityUpdateThreshold` is the maximum number of Chainlink updates in the consideration window before a synth is deemed too volatile to atomically exchange, specified in number of updates.
