@@ -1,7 +1,7 @@
 ---
 sccp: 187
 network: Optimism
-title: Update Open Interest Limits - Increase sGOLD
+title: Update Open Interest Limits - Increase sGOLD (sXAU)
 author: Matt (@MattLosquadro), Millie, MasterMojo
 status: Draft
 created: 2022-04-20
@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase the sGOLD futures market `MaxMarketValueUSD` to sUSD 2.5 million from sUSD 1 million. 
+This SCCP proposes to increase the sGOLD (sXAU) futures market `MaxMarketValueUSD` to sUSD 2.5 million from sUSD 1 million. 
 
 ## Abstract
 
@@ -24,7 +24,7 @@ The `MaxMarketValueUSD` is the maximum amount of open interest available for a c
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The primary motivation to increase the open interest limit given the increased demand for sGOLD futures.
+The primary motivation to increase the open interest limit given the increased demand for sGOLD (sXAU) futures.
 
 ## Copyright
 
