@@ -31,7 +31,7 @@ This SCCP proposes to update the fees parameters of the futures contracts as fol
 
 The parameters in the table above represent the following:
 - `makerFeeNextPrice` and `takerFeeNextPrice` are the fees paid by traders when filled for next price futures orders.
-- `makerFee` and `takerFee` are the fees paid by traders when filled the fill immediately..
+- `makerFee` and `takerFee` are the fees paid by traders when filled immediately..
 
 ## Motivation
 
