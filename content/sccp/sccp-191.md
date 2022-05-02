@@ -3,9 +3,11 @@ sccp: 191
 network: Optimism
 title: Update Futures Fees Parameters
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Vote_Pending
 created: 2022-04-29
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmTQk2e7A5nVG2rNo47yGqcFNAkMqUy4v1E5ajgeEtuzYc
 ---
 
 ## Simple Summary
