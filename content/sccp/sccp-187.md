@@ -3,9 +3,11 @@ sccp: 187
 network: Optimism
 title: Update Open Interest Limits - Increase sGOLD (sXAU)
 author: Matt (@MattLosquadro), Millie, MasterMojo
-status: Draft
+status: Implemented
 created: 2022-04-20
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmfVeUUGxyK1Wu2Uwd5Vms4GjW3f8PpG6sBiRVuhrMwJRC
 ---
 
 ## Simple Summary
