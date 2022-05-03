@@ -43,14 +43,14 @@ The high level breakdown proposed is:
 70% to be paid out to SNX stakers ongoing for the next twelve months
 
 The 2m OP requested by the TC is intended to help diversify the Synthetix treasury and ensure continued alignment between Synthetix and Optimism.
-The first 30% of the 9m OP distribution to stakers will be based on weighted debt scaled against time staked network with a weighting factor of 1 for those who staked on launch day and scaling down linearly to zero for those who staked at the time of this SIP being merged as a draft.
+The first 30% of the 9m OP distribution to stakers will be based on weighted debt scaled against time staked in the network with a weighting factor of 1 for those who staked on the day Staking launched on Optimism and scaling down linearly to zero for those who staked at the time of this SIP being merged as a draft.
 The remaining 70% distribution will be based on weighted debt tied to the weekly snapshot, however, it will not begin until debt migration is live and all L1 stakers can migrate to Optimism.
 For both the retor and future distribution the proposal is to pay out OP tokens to stakers on both L1 and L2 based on the current split of debt between the networks.
 
 
 ### Rationale
 
-This SIP is a draft proposal and is presented for debate and discussion, it is intended to align with past decisions made by the Spartan Council and ensure we continue to support the migration to Optimism without impacting the health of the overall Synthetix network.
+This SIP is a draft proposal and is presented for debate and discussion, it is intended to align with past decisions made by the Spartan Council and ensure we continue to support the migration to Optimism without impacting the health of the overall Synthetix network. The reason for delaying the start of the ongoing inflation is that OP tokens are a strong incentive for stakers to migrate to Optimism but we do not want to create a situation where sUSD liquidity is insufficient on L1 for all stakers to migrate and the peg breaks. 
 
 ### Technical Specification
 
