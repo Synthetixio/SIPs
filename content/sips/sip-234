@@ -1,0 +1,73 @@
+---
+sip: 234
+title: OP Token Distribution
+network: Ethereum & Optimism
+status: Draft
+type: Governance
+author: Kain (@kaiynne)
+implementor: TBC
+discussions-to: Discord
+created: 2022-04-26
+---
+
+## Simple Summary
+
+This SIP proposes a distribution mechanism for OP tokens to be claimed from the Optimism Governance Fund.
+
+## Abstract
+
+OP tokens will be distributed to projects that have deployed on Optimism, the specifics of that distribution must be decided by Synthetix governance. This SIP proposes a distribution that aligns with the previous approach taken by the council for an orderly migration between L1 and L2.
+
+## Motivation
+
+Synthetix governance must decide on how to distribte OP tokens to the community.
+
+## Specification
+
+<!--The specification should describe the syntax and semantics of any new feature, there are five sections
+1. Overview
+2. Rationale
+3. Technical Specification
+4. Test Cases
+5. Configurable Values
+-->
+
+### Overview
+
+This SIP proposes to split the distribution of OP tokens into retro and future distributions, it also proposes to requesting OP tokens to be retained by the treasury given the significnat investment of time and resources into the deployment of the Optimism network over the last 18 months.
+
+The high level breakdown proposed is:
+2m OP to be requested by the Synthetix Treasury Council
+9m OP to be requested to be distributed to the Synthetix community
+30% to be paid out to SNX stakers retroactively
+70% to be paid out to SNX stakers ongoing for the next twelve months
+
+The 2m OP requested by the TC is intended to help diversify the Synthetix treasury and ensure continued alignment between Synthetix and Optimism.
+The first 30% of the 9m OP distribution to stakers will be based on weighted debt scaled against time staked in the network with a weighting factor of 1 for those who staked on the day Staking launched on Optimism and scaling down linearly to zero for those who staked at the time of this SIP being merged as a draft.
+The remaining 70% distribution will be based on weighted debt tied to the weekly snapshot, however, it will not begin until debt migration is live and all L1 stakers can migrate to Optimism.
+For both the retor and future distribution the proposal is to pay out OP tokens to stakers on both L1 and L2 based on the current split of debt between the networks.
+
+
+### Rationale
+
+This SIP is a draft proposal and is presented for debate and discussion, it is intended to align with past decisions made by the Spartan Council and ensure we continue to support the migration to Optimism without impacting the health of the overall Synthetix network. The reason for delaying the start of the ongoing inflation is that OP tokens are a strong incentive for stakers to migrate to Optimism but we do not want to create a situation where sUSD liquidity is insufficient on L1 for all stakers to migrate and the peg breaks. 
+
+### Technical Specification
+
+<!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
+
+TBC
+
+### Test Cases
+
+<!--Test cases for an implementation are mandatory for SIPs but can be included with the implementation..-->
+
+### Configurable Values (Via SCCP)
+
+<!--Please list all values configurable via SCCP under this implementation.-->
+
+N/A
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

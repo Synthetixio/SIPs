@@ -1,32 +1,40 @@
 ---
-sccp: 179
+sccp: 181
 network: Optimism
-title: Update Futures Fees
+title: Unpause Futures Markets
 author: Kaleb (@kaleb-keny)
 status: Implemented
-created: 2022-04-07
+created: 2022-04-08
 type: Governance
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/Qmb6ae8xThXPRvwsy3uAz78SBHAtZRkQV8iodZF6CrrNwP
+  https://snapshot.org/#/snxgov.eth/proposal/QmT6TMrDnbJCfG227V859f9M3By1dwLqcm1D3sotJ43SRK
 ---
 
 ## Simple Summary
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the `makerFeeNextPrice` and `takerFeeNextPrice` to 20 bp on LINK, ETH and BTC futures. 
+This SCCP proposes to unpause the EUR, XAU and XAG Futures Markets.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The `makerFeeNextPrice` and `takerFeeNextPrice` are the fees paid by traders when filled for next price futures orders, they do not affect fees paid by traders when they execute immediately.
+[SIP-217](https://sips.synthetix.io/sips/sip-217/) implemented these markets but they were launched as paused. This SCCP proposes to unpause these markets.
+
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Traders can use next price orders in order to hedge arbitrage of trades with  immediate execution orders. Raising fees on next price orders fees helps lean against those arbitrage patterns.
+The primary motivation is to launch these markets for trading with parameter configurations that offset latency, the proposed parameters at launch are as follows:
+- makerFee: 15 bp
+- takeFee: 15 bp
+- maxMarketValueUSD : 1m$
+- takerFeeNextPrice: 10 bp
+- makerFeeNextPrice: 10 bp
+- maxFundingRate: 10%
+- skewScaleUSD: 100m
 
 ## Copyright
 
