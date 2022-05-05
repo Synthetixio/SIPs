@@ -4,7 +4,6 @@ network: Optimism
 title: Lower LUSD Wrapper Burn Fee
 author: Spreek (@Spreek)
 status: Proposed
-proposal:
 created: 2022-05-05
 type: Governance
 ---
