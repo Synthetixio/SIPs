@@ -3,7 +3,7 @@ sccp: 193
 network: Optimism
 title: Lower LUSD Wrapper Burn Fee
 author: Spreek (@Spreek)
-status: Proposed
+status: Vote_Pending
 created: 2022-05-05
 type: Governance
 ---
