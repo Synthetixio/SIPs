@@ -14,9 +14,9 @@ type: Governance
 
 This SCCP proposes the following changes to Dynamic Fees parameters:
 
-- Decrease the `exchangeDynamicFeeThreshold` to 35 bp from 25 bp
-- Increase the `exchangeDynamicFeeRounds` to 3 rounds from 6 rounds
-- Increase the `exchangeDynamicFeeWeightDecay` to 0.75 from 0.95
+- Increase the `exchangeDynamicFeeThreshold` to 35 bp from 25 bp
+- Decrease the `exchangeDynamicFeeRounds` to 3 rounds from 6 rounds
+- Decrease the `exchangeDynamicFeeWeightDecay` to 0.75 from 0.95
 
 ## Abstract
 
