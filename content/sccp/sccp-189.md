@@ -3,7 +3,7 @@ sccp: 189
 network: Ethereum & Optimism
 title: Change SNX inflationary distribution ratio
 author: Matt (@MattLosquadro)
-status: Approved
+status: Implemented
 created: 2022-04-20
 type: Governance
 proposal: >-

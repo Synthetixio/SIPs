@@ -3,9 +3,11 @@ sccp: 192
 network: Optimism
 title: Futures - Lower min keeper fee from 20 sUSD to 5.
 author: Arthur (@artdgn)
-status: Draft
+status: Implemented
 created: 2022-05-02
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmSy5HuQui7ocMpFfPMqyvP2c47ior5xUSvXpicoV8MUs5
 ---
 
 ## Simple Summary
