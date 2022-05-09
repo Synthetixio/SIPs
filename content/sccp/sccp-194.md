@@ -33,25 +33,26 @@ The parameters being updated are as follows:
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 The primary motivation is to lower fees on traders, given the effectiveness in [offchain circuit breakers](https://sips.synthetix.io/sips/sip-231/) in dealing with oracle latency.
-The expected impact on fees can be found below, where the stats represent statistics on dynamic fees observed during the last 2 weeks of trading for the previous (in italic) and new parameters (in bold).
+The expected impact on fees can be found below, where the stats represent statistics on dynamic fees (in bp) observed during the last 2 weeks of trading, where the effect of proposed parameters (in bold).
+The last 2 columns represent the number of seconds fees remain above a given threshold specified in the column header.
 
-| **Ticker** 	| **Rounds** 	| **Decay** 	| **Threshold** 	| **mean** 	| **std** 	| **95%** 	| **99%** 	| **Seconds_Above_50bp** 	| **Seconds_Above_75bp** 	| **Seconds_Above_100bp** 	|
-|------------	|------------	|-----------	|---------------	|----------	|---------	|---------	|---------	|------------------------	|------------------------	|-------------------------	|
-| **aave**   	| **3**      	| **75%**   	| **35**        	| **3**    	| **9**   	| **17**  	| **40**  	| **261**                	| **260**                	| **301**                 	|
-| aave       	| 6          	| 95%       	| 25            	| 20       	| 23      	| 63      	| 94      	| 464                    	| 309                    	| 382                     	|
-| **avax**   	| **3**      	| **75%**   	| **35**        	| **3**    	| **8**   	| **17**  	| **38**  	| **200**                	| **120**                	| **61**                  	|
-| avax       	| 6          	| 95%       	| 25            	| 21       	| 22      	| 60      	| 114     	| 468                    	| 281                    	| 327                     	|
-| **btc**    	| **3**      	| **75%**   	| **35**        	| **1**    	| **9**   	| **6**   	| **21**  	| **91**                 	| **91**                 	| **91**                  	|
-| btc        	| 6          	| 95%       	| 25            	| 8        	| 18      	| 37      	| 52      	| 638                    	| 1561                   	| 1561                    	|
-| **eth**    	| **3**      	| **70%**   	| **45**        	| **1**    	| **7**   	| **0**   	| **16**  	| **390**                	| **390**                	| **390**                 	|
-| eth        	| 6          	| 95%       	| 25            	| 9        	| 21      	| 35      	| 85      	| 691                    	| 679                    	| 870                     	|
-| **link**   	| **3**      	| **75%**   	| **35**        	| **3**    	| **9**   	| **18**  	| **38**  	| **56**                 	| **61**                 	| **46**                  	|
-| link       	| 6          	| 95%       	| 25            	| 21       	| 23      	| 64      	| 109     	| 610                    	| 398                    	| 376                     	|
-| **matic**  	| **3**      	| **75%**   	| **35**        	| **3**    	| **10**  	| **16**  	| **39**  	| **201**                	| **328**                	| **328**                 	|
-| matic      	| 6          	| 95%       	| 25            	| 18       	| 22      	| 59      	| 93      	| 634                    	| 400                    	| 329                     	|
-| **uni**    	| **3**      	| **75%**   	| **35**        	| **3**    	| **8**   	| **19**  	| **39**  	| **84**                 	| **120**                	| **60**                  	|
-| uni        	| 6          	| 95%       	| 25            	| 22       	| 22      	| 67      	| 92      	| 440                    	| 221                    	| 336                     	|
 
+| **Ticker** 	| **Rounds** 	| **Decay** 	| **Threshold** 	| **mean** 	| **std** 	| **95%** 	| **99%** 	| **>50bp** 	| **>100bp** 	|
+|------------	|------------	|-----------	|---------------	|----------	|---------	|---------	|---------	|-----------	|------------	|
+| **aave**   	| **3**      	| **75%**   	| **35**        	| **3**    	| **9**   	| **17**  	| **40**  	| **261**   	| **301**    	|
+| aave       	| 6          	| 95%       	| 25            	| 20       	| 23      	| 63      	| 94      	| 464       	| 382        	|
+| **avax**   	| **3**      	| **75%**   	| **35**        	| **3**    	| **8**   	| **17**  	| **38**  	| **200**   	| **61**     	|
+| avax       	| 6          	| 95%       	| 25            	| 21       	| 22      	| 60      	| 114     	| 468       	| 327        	|
+| **btc**    	| **3**      	| **75%**   	| **35**        	| **1**    	| **9**   	| **6**   	| **21**  	| **91**    	| **91**     	|
+| btc        	| 6          	| 95%       	| 25            	| 8        	| 18      	| 37      	| 52      	| 638       	| 1561       	|
+| **eth**    	| **3**      	| **70%**   	| **45**        	| **1**    	| **7**   	| **0**   	| **16**  	| **390**   	| **390**    	|
+| eth        	| 6          	| 95%       	| 25            	| 9        	| 21      	| 35      	| 85      	| 691       	| 870        	|
+| **link**   	| **3**      	| **75%**   	| **35**        	| **3**    	| **9**   	| **18**  	| **38**  	| **56**    	| **46**     	|
+| link       	| 6          	| 95%       	| 25            	| 21       	| 23      	| 64      	| 109     	| 610       	| 376        	|
+| **matic**  	| **3**      	| **75%**   	| **35**        	| **3**    	| **10**  	| **16**  	| **39**  	| **201**   	| **328**    	|
+| matic      	| 6          	| 95%       	| 25            	| 18       	| 22      	| 59      	| 93      	| 634       	| 329        	|
+| **uni**    	| **3**      	| **75%**   	| **35**        	| **3**    	| **8**   	| **19**  	| **39**  	| **84**    	| **60**     	|
+| uni        	| 6          	| 95%       	| 25            	| 22       	| 22      	| 67      	| 92      	| 440       	| 336        	|
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
