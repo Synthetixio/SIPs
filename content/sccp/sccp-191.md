@@ -3,7 +3,7 @@ sccp: 191
 network: Optimism
 title: Update Futures Fees Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-04-29
 type: Governance
 proposal: >-
