@@ -34,7 +34,7 @@ The parameters being updated are as follows:
 
 The primary motivation is to lower fees on traders, given the effectiveness in [offchain circuit breakers](https://sips.synthetix.io/sips/sip-231/) in dealing with oracle latency.
 The expected impact on fees can be found below, where the stats represent statistics on dynamic fees (in bp) observed during the last 2 weeks of trading.
-The last 2 columns represent the number of seconds fees remain above a given threshold specified in the column header.
+The last 2 columns represent the number of seconds fees remain above a given threshold specified on average.
 
 
 | **Ticker** 	| **Rounds** 	| **Decay** 	| **Threshold** 	| **mean** 	| **std** 	| **95%** 	| **99%** 	| **>50bp** 	| **>100bp** 	|
