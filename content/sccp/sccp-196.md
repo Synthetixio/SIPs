@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to pause the weekly minting of `baseInflation` at it's current levels of 2.23m snx per week.
+This SCCP proposes to pause the growth in `baseInflation` at it's current levels of 2.23m snx per week.
 
 ## Abstract
 
