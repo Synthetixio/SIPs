@@ -19,8 +19,8 @@ Kwenta will leverage the OP token to drive Optimism adoption while relying on Kw
 The proposal for Kwenta’s OP is as follows: 
 
 ### Distribution Breakdown
-Platform Migration Incentives 66.7%
-DAO Contributor Incentives 33.3% 
+ - Platform Migration Incentives 66.7%
+ - DAO Contributor Incentives 33.3% 
 
 **Platform Migration Incentives**
 Amount: 600,000 $OP
