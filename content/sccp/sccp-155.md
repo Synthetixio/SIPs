@@ -2,7 +2,7 @@
 sccp: 155
 title: Ambassador Council modification
 network: Ethereum & Optimism
-status: Draft
+status: Rejected
 type: Meta-Governance
 author: Milli3
 created: 2021-11-30

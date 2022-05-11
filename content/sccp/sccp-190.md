@@ -3,7 +3,7 @@ sccp: 190
 network: Ethereum & Optimism
 title: Update Fees & Atomic Volatility Circuit Breakers Parameters 
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Approved
 created: 2022-04-25
 type: Governance
 proposal: >-
