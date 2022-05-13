@@ -19,16 +19,27 @@ The active network ratio is currently low enough that the introduction of SIP-14
 <!--A short (~200 word) description of the variable change proposed.-->
 
 collateralisationRatio: 300%
+
 liquidationEscrowDuration: 1 year
+
 liquidationDelay: 12 hours
+
 liquidationRatio: 150%
+
 liquidationPenalty: 30%
+
 selfLiquidationRatio: 250%
+
 selfLiquidationPenalty: 20%
+
 flagReward (L1): 10 SNX
+
 flagReward (L2): 1 SNX
+
 liquidateReward (L1): 20 SNX
+
 liquidateReward (L2): 2 SNX
+
 
 ## Motivation
 
