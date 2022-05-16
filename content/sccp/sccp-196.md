@@ -3,9 +3,11 @@ sccp: 196
 network: Ethereum & Optimism
 title: Pause Increase in Base Inflation
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-05-10
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmSTPMiYyoFEHgRvr6BFJ6JYtrMwz5S3NkkMULmNYkhhCB
 ---
 
 ## Simple Summary

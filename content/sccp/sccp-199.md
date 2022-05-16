@@ -3,9 +3,11 @@ sccp: 199
 network: Ethereum & Optimism
 title: Lower C-Ratio and adjust parameters for SIP-148
 author: Kain (@kaiynne)
-status: Draft
+status: Implemented
 created: 2022-05-13
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmRFhDwCqQpa9k9Pt4hTTeGZ3AUJRUm5T8CupFme71yqy4
 ---
 
 ## Simple Summary
@@ -27,8 +29,6 @@ liquidationDelay: 12 hours
 liquidationRatio: 150%
 
 liquidationPenalty: 30%
-
-selfLiquidationRatio: 250%
 
 selfLiquidationPenalty: 20%
 

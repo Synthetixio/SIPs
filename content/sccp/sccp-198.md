@@ -3,9 +3,11 @@ sccp: 198
 network: Ethereum & Optimism
 title: Adjust LUSD Wrapprs
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-05-12
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmUXQZJwL6igKNfkMeLh37pbsbMUfStZkRjnStDmoPaGZw
 ---
 
 ## Simple Summary
