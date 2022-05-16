@@ -7,7 +7,7 @@ status: Vote_Pending
 created: 2022-05-16
 type: Governance
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/QmRFhDwCqQpa9k9Pt4hTTeGZ3AUJRUm5T8CupFme71yqy4
+  https://snapshot.org/#/snxgov.eth/proposal/QmcyFWXNgi5qs3teWba8JU5ZCpgnRUqtQRmwZZjEeCo1Qe
 ---
 
 ## Simple Summary
