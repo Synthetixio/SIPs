@@ -24,7 +24,7 @@ The proposal for Kwenta’s OP is as follows:
 
 **Platform Migration Incentives**
 Amount: 600,000 $OP
-Method: 1200 trader addresses with the most trading activity (based on volume, open interest, and funding captured) on GMX (Arbitrum) and dYdX (StarkEx) will be able to claim OP tokens after making 10 trades on Kwenta, generating a minimum PnL of 10%, and having a total cumulative volume of $5000 sUSD. 
+Method: 1200 trader addresses who were unable to claim $DYDX and had a minimum deposit of $1000 USD in dYdX will be able to claim OP tokens after making 10 trades on Kwenta, generating a minimum PnL of 10%, and having a total cumulative volume of $5000 sUSD.
  
 **DAO Contributors** 
 Amount: 300,000 $OP
