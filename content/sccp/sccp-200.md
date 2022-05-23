@@ -3,7 +3,7 @@ sccp: 200
 network: Ethereum
 title: Adjust LUSD Wrappr Parameters
 author: Kaleb (@Kaleb)
-status: Vote_Pending
+status: Implemented
 created: 2022-05-16
 type: Governance
 proposal: >-
