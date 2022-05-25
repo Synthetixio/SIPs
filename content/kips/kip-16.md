@@ -20,9 +20,9 @@ The proposal for Kwenta’s OP is as follows:
 
 ### Airdrop Breakdown
 
-- Platform Migration Incentives 66.6%
+- Platform Migration Incentives 66%
 
-- Competition Prizes 14.4%
+- Competition Prizes 14%
 
 - DAO Contributor Incentives 20%
 
