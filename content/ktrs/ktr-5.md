@@ -1,3 +1,4 @@
+---
 ktr: 5
 title: Treasury Diversification 
 status: Draft
