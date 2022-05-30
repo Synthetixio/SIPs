@@ -3,7 +3,7 @@ ktr: 5
 title: Treasury Diversification 
 status: Draft
 author: Andrew Trudel (@Andotlas)
-created: 2022-06-30
+created: 2022-05-30
 ---
 
 ## Summary
