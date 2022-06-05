@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase `maxLeverage` on the ETH, BTC, LINK and sol futures markets to 25 from 10.
+This SCCP proposes to increase `maxLeverage` on the ETH, BTC, LINK and SOL futures markets to 25 from 10.
 
 ## Abstract
 
