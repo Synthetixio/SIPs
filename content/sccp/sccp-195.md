@@ -2,7 +2,7 @@
 sccp: 195
 network: Optimism
 title: Increase Max Initial Leverage
-author: Burt Rock (@BurtRock), Marko Roy (@Marko-roy)
+author: Burt Rock (@BurtRock), Marko Roy (@Marko-roy), Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2022-05-09
 type: Governance
@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase `maxLeverage` for all markets to 25 from 10.
+This SCCP proposes to increase `maxLeverage` on the ETH, BTC, LINK and SOL futures markets to 25 from 10.
 
 ## Abstract
 
@@ -28,7 +28,7 @@ The initial futures rollout established with [SIP-80](https://sips.synthetix.io/
 
 Increasing the maximum initial leverage improves capital efficiency, improves the flexibility of the futures product, and is necessary to offer a comparable product to other exchanges, especially in the case of low volatility assets.
 
-Current assets available for futures have undergone extreme scrutiny and have been vetted for liquidity, trading volume, and credibility. With OI (Open Interest) caps and recently introduced safety mechanisms, increasing the available leverage to 25x from 10x should be possible and make the product more appealing for users.
+The assets proposed for increased leverage have the best latency and are vetted for market liquidity, trading volume, and credibility. With OI (Open Interest) caps and recently introduced safety mechanisms, increasing the available leverage to 25x from 10x should be possible and make the product more appealing for users.
 
 ## Copyright
 
