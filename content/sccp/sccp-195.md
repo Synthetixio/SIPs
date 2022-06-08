@@ -6,6 +6,8 @@ author: Burt Rock (@BurtRock), Marko Roy (@Marko-roy), Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2022-05-09
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/QmZhdrkgYAHB4KdFBfZ2btYoqCiwwduhWX6TFMVrFKW33r
 ---
 
 ## Simple Summary
