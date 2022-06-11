@@ -34,7 +34,7 @@ Method: 1000 trader addresses who were unable to claim $DYDX and had a minimum d
 
 **Competition Prizes**
 
-Amount: 130,000 $OP
+Amount: 120,000 $OP
 
 Method: Kwenta will be hosting 2 competitions to kickoff the launch of the Kwenta token. The OP token will be used to incentivize participation by being added to the prize pool.
 
