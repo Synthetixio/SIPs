@@ -14,7 +14,7 @@ proposal: >-
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Update the `skewScale` of the futures markets as per the below:
+Update the `skewScale` of the futures markets as per the below (in dollar millions):
 
 |       	| **Current Skew Scale** 	| **Propose Skew Scale** 	| **current hourly funding in bp** 	|
 |-------	|:----------------------:	|:----------------------:	|:------------------------:	|
