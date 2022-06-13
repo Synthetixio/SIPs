@@ -38,7 +38,7 @@ The `skewScale` determines the funding rate for a given level of skew, as per th
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The main motivation is the state of crypto markets, where short positions undertaken by traders should compensate snx stakers as per the market funding rates.
+The main motivation is the state of crypto markets, where short positions undertaken by traders should compensate snx stakers for the risk underwriting.
 
 
 ## Copyright
