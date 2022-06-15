@@ -3,7 +3,7 @@ sccp: 201
 network: Optimism
 title: Equalise maker and taker fee for all futures markets  
 author: Arthur (@artdgn)
-status: Vote_Pending
+status: Rejected
 created: 2022-06-08
 type: Governance
 proposal: >-

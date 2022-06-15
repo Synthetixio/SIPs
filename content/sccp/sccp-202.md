@@ -3,7 +3,7 @@ sccp: 202
 network: Optimism
 title: Lower the skew scale
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-06-13
 type: Governance
 proposal: >-
