@@ -3,7 +3,7 @@ sccp: 194
 network: Optimism
 title: Increase ETH Futures Base Fee
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-06-13
 type: Governance
 proposal: >-
