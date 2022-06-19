@@ -7,7 +7,7 @@ status: Vote_Pending
 created: 2022-06-19
 type: Governance
 proposal: >-
-  https://staking.synthetix.io/gov/snxgov.eth/QmYTQUMiUCLqCg4CTjnmeoHULrLaf5fPxc58q6vYugjgRJ
+  https://snapshot.org/#/snxgov.eth/proposal/QmYTQUMiUCLqCg4CTjnmeoHULrLaf5fPxc58q6vYugjgRJ
 ---
 
 ## Simple Summary
