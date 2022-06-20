@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the target staking ratio from 350% from 300% for snx stakers on ethereum and optimism.
+Increase the target staking ratio to 350% from 300% for snx stakers on ethereum and optimism.
 
 ## Abstract
 
