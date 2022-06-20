@@ -1,7 +1,7 @@
 ---
 sccp: 204
 network: Ethereum & Optimism
-title: Raising the c-ratio to 350%
+title: Raising the target staking ratio to 350%
 author: Gauntlet
 status: Draft
 created: 2022-06-19
@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the target staking ratio from 350% from 300% for snx stakers on ethereum and optimism.
+Increase the target staking ratio to 350% from 300% for snx stakers on ethereum and optimism.
 
 ## Abstract
 
@@ -33,7 +33,7 @@ The table below shows volatility and exchange volume data from 05/17 to 06/07. T
 Our simulations, which have incorporated the most recent parameter changes including SIP-148, indicate that increasing the c-ratio will lead to a significant decrease in liquidations and insolvent debt in extreme market scenarios. For reference, the largest 1-day drop in SNX in the recent past was ~26% on May 11th. Our models observe that there is ~300k worth of insolvent debt on the protocol. In simulation, Gauntlet's objective was to analyze the impact of the global debt pool and SNX stakers' positions as volatility continues to increase. As we increased c-ratio from 300% to 350% in our simulations, we observed that the decrease in liquidations and insolvencies for equivalent volatility and liquidity scenarios was over 28% for insolvencies and over 45% for liquidations.
 
 ![](https://i.imgur.com/mZiPhG1.png)
-The graph above shows the expected insolvent value of the protocol given different market conditions and collateralization ratio. At collateralization ratios of 250% and 300%, the insolvency risk is significantly higher than 350% and above.
+The graph above shows the expected insolvent value of the protocol given different market conditions and collateralization ratio. At target staking ratios of 250% and 300%, the insolvency risk is significantly higher than 350% and above.
 ![](https://i.imgur.com/bFDXRP7.png)
 
 The graph above shows that, given different c-ratio values and market conditions, total collateralization ratio of the protocol will change positively with c-ratio increases and negatively with volatility scalar increases. Note that a liquidation will lead to an increase in collateralization as it pushes accounts closer to the target issuance ratio. 
