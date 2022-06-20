@@ -130,17 +130,15 @@ SIPs may include auxiliary files such as diagrams. Such files must be named SIP-
 
 The current SIP editors are
 
-` * Kain Warwick (@kaiynne)`
+` * Kain (@kaiynne)`
 
-` * Justin Moses (@justinjmoses)`
-
-` * David Goldberg (@gberg1)`
-
-` * Andy CF (@andytcf)`
+` * jj (@justinjmoses)`
 
 ` * Kaleb (@kaleb-keny)`
 
 ` * Danijel (@dgornjakovic)`
+
+` * Afif (@abandek)`
 
 ## SIP Editor Responsibilities
 
