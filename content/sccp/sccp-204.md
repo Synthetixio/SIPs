@@ -3,9 +3,11 @@ sccp: 204
 network: Ethereum & Optimism
 title: Raising the target staking ratio to 350%
 author: Gauntlet
-status: Draft
+status: Implemented
 created: 2022-06-19
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/Qmcwx8zuPRS39c6wANbqt6HBjNJAH4khPeWEvd43SQMT6i
 ---
 
 ## Simple Summary
