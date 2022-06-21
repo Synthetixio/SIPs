@@ -3,7 +3,7 @@ sccp: 203
 network: Ethereum
 title: Increase ETH Wrappr Burn Fee Rate to 5%
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-06-19
 type: Governance
 proposal: >-
