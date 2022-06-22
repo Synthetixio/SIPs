@@ -1,7 +1,7 @@
 ---
 sccp: 205
 network: Ethereum & Optimism
-title: Raising the target staking ratio to 450%
+title: Raising the target staking ratio to 400%
 author: kaleb
 status: Draft
 created: 2022-06-20
@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the target staking ratio to 450% for snx stakers on ethereum and optimism.
+Increase the target staking ratio to 400% for snx stakers on ethereum and optimism.
 
 ## Abstract
 
