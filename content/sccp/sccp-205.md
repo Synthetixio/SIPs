@@ -2,8 +2,8 @@
 sccp: 205
 network: Ethereum & Optimism
 title: Raising the target staking ratio to 400%
-author: kaleb
-status: Draft
+author: Kaleb (@kaleb-keny)
+status: Rejected
 created: 2022-06-20
 type: Governance
 ---
@@ -26,6 +26,7 @@ The target staking ratio, is the minimum collateralization ratio required for st
 
 The main motivation is the recent snx price action which is accompanied by the increase in snx price volatility. In order to protect the system from potentially significant liquidation when stakers mint max, a higher minimum staking ratio is needed. 
 Over the long run, the target staking ratio should be stable as the snx price stabalizes at around a certain equilibrium market price.
+The SCCP was rescinded by the author.
 
 ## Copyright
 

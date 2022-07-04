@@ -2,7 +2,7 @@
 sccp: 206
 network: Optimism
 title: Update Wrapper Parameters
-author: kaleb
+author: Kaleb (@kaleb-keny)
 status: Draft
 created: 2022-07-04
 type: Governance
