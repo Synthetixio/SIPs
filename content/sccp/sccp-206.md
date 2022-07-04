@@ -33,7 +33,6 @@ The `mintFeeRate` is the fee levied when minting sETH with ETH.
 The main motivation is the recent premium seen on the sUSD peg, increasing the LUSD `burnFeeRate` will reduce the amount of sUSD that is being burned in order to release the locked LUSD. the `burnFeeRate` was originally set to zero, as to encourage arbitrages and sending the LUSD back to L1 where it's needed for liquidations. Originally 50m$ worth of LUSD was locked in the LUSD wrappr making up over 40% of all the LUSD ever minted, that amount has steadily decreased in the last few weeks as can be seen [here](https://dune.com/queries/848381/1489436). The scarcity of LUSD which results in a LUSD premium result in that premium being imported onto sUSD as arbitrages had taken place.
 On increasing the `maxTokenAmount` for the ETH wrappr, currently the debt pool is 25% (or 25m$) long ETH. Increasing the wrapper capacity by 2k ETH might lead to a decrease in the skew by the equivalent amount, as the sETH is sent over to sUSD, and will help with relieving some of the pressure on the peg.
 
-
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
