@@ -5,7 +5,7 @@ title: Set councils minimumActiveMembers
 author: Ethernaut
 status: Draft
 created: 2022-07-05
-type: Governance
+type: Meta-Governance
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xc9c6f73c61ae851cb486878ed9beca16a5e7e7e0c36d6de30d41c87beacff14d
 ---
