@@ -4,10 +4,10 @@ network: Optimism
 title: Set council minimumActiveMembers to n-1
 author: Ethernaut (@theethernaut.eth)
 status: Draft
-created: 2022-07-05
-type: Meta-Governance
 proposal: >-
 https://snapshot.org/#/snxgov.eth/proposal/0xf5d4480bc826f070dd309ae68c9f28d03b347fc2cfe7fe1a24afbfe8d278b154
+created: 2022-07-05
+type: Meta-Governance
 ---
 
 ## Simple Summary
