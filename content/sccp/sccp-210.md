@@ -34,7 +34,7 @@ The main motivation of the first two actions is to improve the execution pricing
 - Shortening the twap window aligns the atomic price with the spot price. 4 minute Twap protection is still considered to be safe and conservative since bad actors that want to take advantage would need to move the price on a pool and defend it for a prolonged period of time, since a lot of trading takes place on these concentrated liquidity pools. And the best improvement to the fill would be up to the chainlink price. Hence, the uniswap pool manipulation attack vector is improbable and can be defused if chainlink pushes a price during the attack.
 - Switching the from the 30 bp pool to the 5 bp pool leads to utilizing the price available on a pool that is more reactive to changes in cex prices and therefore offers traders better execution.
 
-The main motivation behind lowering the `atomicMaxVolumePerBlock` to sUSD 5 million per block is due to more than 95% exchanges did not exceed the sUSD 5 million per block. This number can be revisted in case we see that the maximum is being hit frequently.
+The main motivation behind lowering the `atomicMaxVolumePerBlock` to sUSD 5 million per block is due to the fact that more than 95% exchanges did not exceed a couple million sUSD per block. This number can be revisted in case we see that the maximum is being hit frequently.
 
 ## Copyright
 
