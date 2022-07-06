@@ -1,24 +1,24 @@
 ---
 sccp: 300
 network: Optimism
-title: Set councils minimumActiveMembers
-author: Ethernaut
+title: Set council minimumActiveMembers to n-1
+author: Ethernaut (@theethernaut.eth)
 status: Draft
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xf5d4480bc826f070dd309ae68c9f28d03b347fc2cfe7fe1a24afbfe8d278b154
 created: 2022-07-05
 type: Meta-Governance
-proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0xc9c6f73c61ae851cb486878ed9beca16a5e7e7e0c36d6de30d41c87beacff14d
 ---
 
 ## Simple Summary
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Set all council's `minimumActiveMembers` setting to n-2, where n represents each council's current seat count.
-* Ambassador council: `2/3` (n-2 does not apply because we don't want to allow a single member)
-* Grants council: `3/5`
-* Spartan council: `6/8`
-* Treasury council: `2/4`
+Set all councils' `minimumActiveMembers` setting to `n-1`, where `n` represents each council's current seat count.
+* Ambassador council: `2/3`
+* Grants council: `4/5`
+* Spartan council: `7/8`
+* Treasury council: `3/4`
 
 ## Abstract
 
