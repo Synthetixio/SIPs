@@ -1,7 +1,7 @@
 ---
 sccp: 300
 network: Optimism
-title: Set council minimumActiveMembers to n-1
+title: Set councils minimumActiveMembers
 author: Ethernaut (@theethernaut.eth)
 status: Draft
 proposal: >-
