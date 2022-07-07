@@ -1,5 +1,5 @@
 ---
-sccp: 210
+sccp: 211
 network: Ethereum & Optimism
 title: Increase target staking ratio and lower adjustments and decay rate
 author: Danijel
