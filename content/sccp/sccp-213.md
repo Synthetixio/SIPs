@@ -36,5 +36,3 @@ Since the change is drastic (1.66x less, 25 -> 15bp), volume would need to be 1.
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
-thoughts? is 4bp too much of a reduction?
