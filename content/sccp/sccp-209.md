@@ -3,7 +3,7 @@ sccp: 209
 network: Ethereum
 title: Update Synth Loans Backed by ETH
 author: Kaleb Keny (@kaleb-keny)
-status: Draft
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/bafkreigojnxfiud2yfw3zeu7zh3gedyxuthxef2legvraffndjlgvrl2du
 created: 2022-07-05
