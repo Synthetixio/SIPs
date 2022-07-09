@@ -3,9 +3,11 @@ sccp: 210
 network: Ethereum
 title: Improve Pricing of Atomic Swaps
 author: Kaleb Keny (@kaleb-keny), Afif Bandak (@aband1)
-status: Draft
+status: Implemented
 created: 2022-07-06
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/bafkreiehl6dbtrjvgcygkqtm5a6wo22yssfv5hr2ikf7h2u57nvxyoq7g4
 ---
 
 ## Simple Summary

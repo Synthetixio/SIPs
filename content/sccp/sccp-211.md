@@ -6,6 +6,8 @@ author: Danijel
 status: Draft
 created: 2022-07-07
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/bafkreidlx35zsbklainjlf2leopusxv6z2bnmbobztia3oq7vwqaig2poe
 ---
 
 ## Simple Summary

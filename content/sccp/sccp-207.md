@@ -3,9 +3,11 @@ sccp: 207
 network: Ethereum & Optimism
 title: Lower target c-ratio to 300%
 author: kain (@kaiynne)
-status: Draft
+status: Rejected
 created: 2022-05-05
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/bafkreib3bjkso3mnzvyvygxochv6idekjxr62nnfz3ora7ljbhz4nk7wke
 ---
 
 ## Simple Summary
