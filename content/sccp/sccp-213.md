@@ -2,7 +2,7 @@
 sccp: 213
 network: Ethereum
 title: Atomic Swap Fee Update (sETH)
-author: Community Member
+author: Degen(@CasualDegen)
 status: Draft
 created: 2022-07-09
 type: Governance
