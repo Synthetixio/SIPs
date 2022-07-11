@@ -2,7 +2,7 @@
 kip: 21
 title: SynthSwap
 status: Draft
-author: Marko Roy (), Jared Borders (@JaredBorders)
+author: Marko Roy (@marko-roy), Jared Borders (@JaredBorders)
 created: 2022-07-11
 ---
 
