@@ -25,7 +25,7 @@ As a spot trader, I want:
 * Spot exposure with synthetic assets:
   * By swapping my ERC20 tokens or ETH for synths
 * To leave the ecosystem:
-  * By swapping my synths for ERC20 tokens or `ETH`
+  * By swapping my synths for ERC20 tokens or ETH
 
 As a futures trader, I want:
 * To open positions:
