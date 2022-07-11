@@ -1,37 +1,31 @@
 ---
 sccp: 213
 network: Ethereum
-title: Atomic Swap Fee Update (sETH)
+title: Change Oracle Source To 30BP ETH/USDC
 author: Degen(@CasualDegen)
 status: Draft
-created: 2022-07-09
+created: 2022-07-11
 type: Governance
 ---
 
 ## Simple Summary
 
-This SCCP proposes to update the fee parameter for sETH atomic swap after the release of [SCCP-210](https://sips.synthetix.io/sccp/sccp-210/).
+This SCCP proposes to revert the change of the oracle source for atomic swaps done in [SCCP-210](https://sips.synthetix.io/sccp/sccp-210/).
 SCCP-210 changed the uni-v3 oracle source from the 30bp ETH/USDC pool to the 5bp one.
 
-### Atomic Exchange on Ethereum
-
-#### Base Fee
-
-Ticker: sETH
-Previous Fee: 25bp
-Proposed Fee Change: lower to 15bp
+This SCCP proposes to implement the following:
+- Update the fee tier of the wETH/wUSDC pool from the [5 bp pool](https://etherscan.io/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640) to the [30 bp pool](https://etherscan.io/address/0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8). This is done by calling the [`setPoolForRoute`](https://etherscan.io/address/0xf120f029ac143633d1942e48ae2dfa2036c5786c#writeContract), taking in arguments of the [wETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) and [USDC](https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) addresses as well as the address of the [30 bp pool](https://etherscan.io/address/0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8).
 
 ## Abstract
 
-Parameter that is required for change:
-
-- feeRateForExchange is the fee that is paid by traders computed by adding the baseFee of the source and destination currencies after [SIP-222](https://sips.synthetix.io/sips/sip-222/).
+Below is description of the parameters involved:
+- The `setPoolForRoute` overrides the default route taken when trades take place for specific tokens.
 
 ## Motivation
 
 After implementing [SCCP-210](https://sips.synthetix.io/sccp/sccp-210/) there is a significant drop in atomic swap volume (~90%+ less).
-Changing the atomic fee to 15bp should in theory make the atomic swaps competetive again and result in even higher trading volume than before.
-Since the change is drastic (1.66x less, 25 -> 15bp), volume would need to be 1.66x higher to bring in the same amount of fee rewards as before.
+So instead of lowering the atomic swap fees, which could turn out unfavourable for stakers, an optimal alternative is to revert back to the old oracle source.
+Furhter analysis would be done in order to find out the best outcome for stakers and traders as to changing atomic swap fee and oracle source pool.
 
 ## Copyright
 
