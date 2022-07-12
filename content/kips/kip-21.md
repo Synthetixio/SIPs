@@ -33,7 +33,7 @@ As a futures trader, I want:
 
 SynthSwap smart contracts utilize both 1inch and Synthetix to execute ERC20 token swaps. SynthSwap provides swap functionality for ETH and 1inch supported ERC20 tokens to synths and vice-versa. Swap aggregation data is generated off-chain via 1inch's API and used on-chain to efficiently execute token exchange through 1inch smart contracts. The Synthetix exchange fills in the last leg of the swap if needed (if swapping Synth <-> Synth). This allows for users to go from ETH to `sETH` in *one* transaction vs previously having to go from ETH to `sUSD` and then a separate transaction for `sUSD` to `sETH`.
 
-SynthSwap NPM Package: npmjs.com/package/@kwenta/synthswap
+SynthSwap NPM Package: npmjs.com/package/@kwenta/synthswap <br>
 Kwenta aggregator contracts: github.com/Kwenta/synthswap
 
 ## Copyright
