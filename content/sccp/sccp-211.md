@@ -3,7 +3,7 @@ sccp: 211
 network: Ethereum & Optimism
 title: Increase target staking ratio and lower adjustments and decay rate
 author: Danijel
-status: Draft
+status: Implemented
 created: 2022-07-07
 type: Governance
 proposal: >-

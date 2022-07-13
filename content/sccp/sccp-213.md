@@ -3,9 +3,11 @@ sccp: 213
 network: Ethereum
 title: Change Oracle Source To 30BP ETH/USDC
 author: Degen(@CasualDegen)
-status: Draft
+status: Implemented
 created: 2022-07-11
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/bafkreictpalfyvwczwdq6c4xhlw3px4gebseulqh2ucfd6eewcfk4p2ikq
 ---
 
 ## Simple Summary
