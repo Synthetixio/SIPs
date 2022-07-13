@@ -18,7 +18,7 @@ This SCCP proposes to increase maker/taker fees on silver futures to 20 and 25 b
 
 ## Motivation
 
-The reason behind the fee increase is the inherent latency in commodity feeds, vis-a-vis their cryto market counterparts. Raising fees reduces the chance of latency arbitrages.
+The reason behind the fee increase is the inherent latency in commodity feeds, vis-a-vis their crypto market counterparts. Raising fees reduces the chance of latency arbitrages.
 
 ## Copyright
 
