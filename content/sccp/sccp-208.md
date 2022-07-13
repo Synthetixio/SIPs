@@ -3,7 +3,7 @@ sccp: 208
 network: Ethereum & Optimism
 title: Lower target staking ratio
 author: kain (@kaiynne)
-status: Approved
+status: Implemented
 created: 2022-07-05
 type: Governance
 proposal: >-
