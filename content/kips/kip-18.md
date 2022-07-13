@@ -68,7 +68,7 @@ A positive size Δ will increase the notional size of a position and negative si
 
 ### Fee Structure
 
-Fees are charged on the rebalancing of margin. When margin is moved either from a trader's margin account to a position, from a position to a margin account, or between two positions fees will be applied to the sum of margin transferred. The fee parameter will be controlled through governance by the Elite Council. The initial fee is 5bp and initial revenue will be sent to the treasury.
+Fees will be charged on all trades placed through the cross margin contract. Fees are additive on top of Synthetix base fees. The fee will be controlled through governance. The fee will initially be set at 2 basis points and revenue will be sent to the treasury.
 
 ### Caveats
 
