@@ -2,7 +2,7 @@
 kip: 19
 title: Advanced Orders
 status: Draft
-author: Jeremy Chiaramonte
+author: Jeremy Chiaramonte (@JChiaramonte7)
 created: 2022-06-30
 ---
 

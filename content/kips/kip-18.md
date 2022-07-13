@@ -2,7 +2,7 @@
 kip: 18
 title: Cross Margin
 status: Draft
-author: Jeremy Chiaramonte
+author: Jeremy Chiaramonte (@JChiaramonte7)
 created: 2022-06-30
 ---
 
