@@ -14,7 +14,7 @@ This SCCP proposes to increase maker/taker fees on silver futures to 20 and 25 b
 
 ## Abstract
 
-`makerFeePrice` and `takerFeePrice` are the fees paid by traders when filled for next price futures orders.
+`makerFeePrice` and `takerFeePrice` are the fees paid by traders when filled for futures orders.
 
 ## Motivation
 
