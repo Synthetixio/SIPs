@@ -23,7 +23,7 @@ This means that small next-price orders aren't viable when executed by keepers (
 
 ## Motivation
 
-The reason behind the decrease is because of the low cost of executing transactions on optimism, which results in keepers neeing to be paid far less in order to fulfill next price orders and liquidations.
+The reason behind the decrease is because of the low cost of executing transactions on optimism, which results in keepers needing to be paid far less in order to fulfill next price orders and liquidations.
 
 ## Copyright
 
