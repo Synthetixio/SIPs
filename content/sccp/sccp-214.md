@@ -1,7 +1,7 @@
 ---
 sccp: 214
 network: Optimism
-title: Update Fees on Silver Future Fees
+title: Update Fees on Silver Futures
 author: Kaleb (@kaleb-keny)
 status: Draft
 created: 2022-07-13
