@@ -1,7 +1,7 @@
 ---
 kip: 21
 title: SynthSwap
-status: Draft
+status: Implemented
 author: Marko Roy (@marko-roy), Jared Borders (@JaredBorders)
 created: 2022-07-11
 ---
