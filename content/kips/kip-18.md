@@ -2,7 +2,7 @@
 kip: 18
 title: Cross Margin
 status: Draft
-author: Jeremy Chiaramonte (@JChiaramonte7)
+author: Jeremy Chiaramonte (@JChiaramonte7), Jared Borders (@JaredBorders)
 created: 2022-06-30
 ---
 
@@ -56,7 +56,6 @@ struct UpdateMarketPositionSpec {
         bytes32 marketKey;
         int256 marginDelta;
         int256 sizeDelta;
-        bool isClosing;
 }
 ```
 
@@ -64,11 +63,11 @@ A positive margin Δ will deposit margin into a specified market and a negative 
 
 A positive size Δ will increase the notional size of a position and negative size Δ will decrease the notional size or invert the direction of a position (long vs. short).
 
-*Note that positions can still be closed if the passed size Δ is the exact inverse of the current size. 
+A position can be closed if the passed size Δ is the exact inverse of the current size. When closing a position, all margin in that market will be withdrawn back to the user's margin account in a single transaction.
 
 ### Fee Structure
 
-Fees will be charged on all trades placed through the cross margin contract. Fees are additive on top of Synthetix base fees. The fee will be controlled through governance. The fee will initially be set at 2 basis points and revenue will be sent to the treasury.
+Fees will be charged on all trades placed through the cross margin contract. Fees are additive on top of Synthetix base fees. The fee will be controlled through governance. The fee will initially be set at 2 basis points and revenue will be sent to the treasury. The fee will be a function of size delta but not margin delta.
 
 ### Caveats
 
