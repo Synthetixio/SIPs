@@ -3,7 +3,7 @@ sccp: 212
 network: Optimism
 title: Raise the skew scale
 author: Burt Rock (@BurtRock)
-status: Vote_Pending
+status: Implemented
 created: 2022-07-09
 type: Governance
 proposal: >-

@@ -3,7 +3,9 @@ sccp: 216
 network: Ethereum & Optimism
 title: Raising the target c-ratio to 400% and decreasing liquidation ratio to 145%
 author: Gauntlet
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/bafkreih62j4xs3lbys7jc2w3fuh5t66jjffzxijh56j4ntmefvhr5jt4bu
 created: 2022-07-14
 type: Governance
 ---
