@@ -67,7 +67,7 @@ A position can be closed if the passed size Δ is the exact inverse of the curre
 
 ### Fee Structure
 
-Fees will be charged on all trades placed through the cross margin contract. Fees are additive on top of Synthetix base fees. The fee will be controlled through governance. The fee will initially be set at 2 basis points and revenue will be sent to the treasury. The fee will be a function of size delta but not margin delta.
+Fees will be charged on all trades placed through the cross margin contract. The fee will be a function of size delta but not margin delta. Fees are additive on top of Synthetix base fees. The fee will be controlled through governance. The fee will initially be set at 2 basis points and revenue will be sent to the treasury.
 
 ### Caveats
 
