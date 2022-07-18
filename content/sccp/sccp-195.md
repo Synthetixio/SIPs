@@ -3,7 +3,7 @@ sccp: 195
 network: Optimism
 title: Increase Max Initial Leverage
 author: Burt Rock (@BurtRock), Marko Roy (@Marko-roy), Kaleb (@kaleb-keny)
-status: Approved
+status: Implemented
 created: 2022-05-09
 type: Governance
 proposal: >-

@@ -3,7 +3,7 @@ sccp: 214
 network: Optimism
 title: Update Fees on Silver Futures
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-07-13
 type: Governance
 proposal: >-

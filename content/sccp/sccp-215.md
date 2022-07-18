@@ -3,7 +3,7 @@ sccp: 215
 network: Optimism
 title: Lower `minKeeperFee` to 1 sUSD
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-07-13
 type: Governance
 proposal: >-
