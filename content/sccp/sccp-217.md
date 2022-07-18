@@ -10,7 +10,7 @@ type: Governance
 
 ## Simple Summary
 
-This proposes to lower `atomicTwapWindow` to 60 seconds.
+This sccp proposes to lower `atomicTwapWindow` to 60 seconds.
 
 ## Abstract
 
@@ -18,8 +18,8 @@ The `atomicTwapWindow` is the twap window used when fetching the uniswap price.
 
 ## Motivation
 
-Until [SIP-258](https://sips.synthetix.io/sips/sip-258/) is implemented, the current twap mechanism gives traders a significant edge, above the normaly uniswap pool 30 bp arbitrage gap. Lowering the `atomicTwapWindow` reduces the twap impact on the trade price, as it converges towards spot.
-It is worth noting that Twap is not necessary to protect against flash attacks, given that the uniswap price used is that set at the begining of the block. Furthermore, chainlink protection limits the amount of upside exploiters can earn by moving the uniswap-v3 pool price for several consecutive blocks.
+Lowering the `atomicTwapWindow` reduces the twap impact on the traders price as it converges towards the spot exchange. This is necessary until [SIP-258](https://sips.synthetix.io/sips/sip-258/) is implemented.
+It is worth noting that Twap protection is not needed to protect against flash attacks, given that the uniswap price used is that set at the begining of the block. Furthermore, chainlink protection limits the amount of upside exploiters can earn by moving the uniswap-v3 pool price  for several consecutive blocks and makes such an attack unprofitable due to the cost of moving the univ3 pools.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
