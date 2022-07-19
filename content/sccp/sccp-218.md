@@ -1,4 +1,3 @@
-
 ---
 sccp: 218
 network: Optimism
