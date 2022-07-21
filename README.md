@@ -4,7 +4,7 @@ Synthetix Improvement Proposals (SIPs) describe standards for the Synthetix plat
 
 # Contributing
 
-1.  Review [SIP-1](sips/sip-1.md).
+1.  Review [SIP-1](content/sips/sip-1.md).
 2.  Fork the repository by clicking "Fork" in the top right.
 3.  Add your SIP to your fork of the repository. There is a [template SIP here](sip-x.md).
 4.  Submit a Pull Request to Synthetix's [SIPs repository](https://github.com/synthetixio/SIPs).
