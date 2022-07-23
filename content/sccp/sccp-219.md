@@ -29,7 +29,7 @@ Implement the following:
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The motivation is the recent volume due to latency arbitrages which have been seen on chain. Update the oracle to a lower latency price source helps lean against latency arbitrage and allows us to lower fees as well. The `atomicTwapWindow` decrease is due to the decreased reliance on twap in order to obtain a more precise measurement of the latest on-chain price.
+The motivation is the recent volume due to latency arbitrages which have been seen on chain. Updating the uniswap pool to point to a lower fee tier pool helps lean against latency arbitrage and allows us to lower fees on synth exchanges. The `atomicTwapWindow` decrease decreases our reliance on twap in order to obtain a more precise measurement of the latest on-chain price.
 
 ## Copyright
 
