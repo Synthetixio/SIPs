@@ -1,5 +1,5 @@
 ---
-sccp: 218
+sccp: 219
 network: Ethereum
 title: Update Atomic Swaps
 author: Kaleb (@kaleb-keny)
