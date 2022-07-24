@@ -3,9 +3,11 @@ sccp: 219
 network: Ethereum
 title: Update Atomic Swaps
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-07-23
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xcb00b93e631c8505b67763bbc19db4643dc0cbacf85dd43e8db4d87aca9a10a7
 ---
 
 ## Simple Summary
