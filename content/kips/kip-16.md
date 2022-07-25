@@ -1,7 +1,7 @@
 ---
 kip: 16
 title: OP Token Phase 0 Proposal 
-status: Draft
+status: Approved
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-05-09
 ---
