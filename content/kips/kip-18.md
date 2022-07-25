@@ -1,7 +1,7 @@
 ---
 kip: 18
 title: Cross Margin
-status: Draft
+status: Approved
 author: Jeremy Chiaramonte (@JChiaramonte7), Jared Borders (@JaredBorders)
 created: 2022-06-30
 ---
