@@ -1,7 +1,7 @@
 ---
 kip: 20
 title: KWENTA Token Launch Date
-status: Draft
+status: Approved
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-07-06
 ---
