@@ -3,8 +3,10 @@ sccp: 217
 network: Ethereum
 title: Lower Atomic Twap Window
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-07-18
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/bafkreifjfpqag7spyytkzrjeliik43ze4lxicvecty2yypizfmn27g3eju
 type: Governance
 ---
 
