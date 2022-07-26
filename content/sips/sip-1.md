@@ -139,6 +139,8 @@ The current SIP editors are
 ` * Danijel (@dgornjakovic)`
 
 ` * Afif (@abandek)`
+  
+` * TerraBellus (@terrabellus)`
 
 ## SIP Editor Responsibilities
 
