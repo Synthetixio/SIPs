@@ -1,5 +1,5 @@
 ---
-kip: 24
+kip: 25
 title: Automated Voting Mechanism
 status: Draft
 author: Andrew Trudel (@Andrew-Synthetix)
