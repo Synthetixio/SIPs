@@ -1,10 +1,10 @@
 ---
 sip: 256
-title: Decentralized PSM for sUSD
+title: Delta neutral ETH > sUSD issuer
 network: Optimism
 status: Draft
 type: Governance
-author: 
+author: Afif (@aband1)
 implementor: 
 release: 
 implementation-date:
