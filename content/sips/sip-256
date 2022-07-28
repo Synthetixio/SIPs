@@ -5,13 +5,7 @@ network: Optimism
 status: Draft
 type: Governance
 author: Afif (@aband1)
-implementor: 
-release: 
-implementation-date:
-discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here>
-proposal: <snapshot.org proposal link> (*optional)
-created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
-requires: <SIP number(s)> (*optional)
+created: 2022-07-28
 ---
 
 ## Simple Summary
