@@ -3,7 +3,7 @@ sccp: 218
 network: Ethereum
 title: Update ETH Wrapper Parameters
 author: Burt Rock (@BurtRock)
-status: Vote_Pending
+status: Rejected
 created: 2022-07-19
 type: Governance
 proposal: >-
