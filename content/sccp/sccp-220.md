@@ -3,9 +3,11 @@ sccp: 220
 network: Optimism
 title: Revert SCCP-216 Parameter Changes for Optimism
 author: Gauntlet
-status: Draft
+status: Rejected
 created: 2022-07-27
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x47fab44b042ea9a3f5ae6d5b695138ae924718e77f0143c8fa6145717c0fb1e7
 ---
 
 ## Simple Summary

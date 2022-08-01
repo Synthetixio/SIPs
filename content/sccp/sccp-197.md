@@ -3,7 +3,7 @@ sccp: 197
 network: Ethereum & Optimism
 title: Define Voting Strategy for Election Module
 author: Andy T CF (@andytcf)
-status: Draft
+status: Rejected
 created: 2022-05-11
 type: Meta-Governance
 ---
