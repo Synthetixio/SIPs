@@ -20,7 +20,7 @@ By enabling the Core Contributors to gain a degree of control over who will mana
 
 ## Specification
 
-Moving forward, the Core Contributors will have the ability to reach consensus over one of the seats on the adminDAO, the Management Contributors will have the ability to reach consensus over one of the seats on the adminDAO, and the Elite Council will have the ability to reach consensus over one of the seats on the adminDAO. Since adminDAO membership is not epoch-dependent, this KIP would go into effect as soon the adminDAO reaches the implemented phase. The EC would lose the ability to appoint someone directly to the CC or MC adminDAO seats. 
+Moving forward, the Core Contributors will have the ability to reach consensus over one of the seats on the adminDAO, the Management Contributors will have the ability to reach consensus over one of the seats on the adminDAO, and the Elite Council will have the ability to reach consensus over one of the seats on the adminDAO. Since adminDAO membership is not epoch-dependent, this KIP would go into effect as soon the adminDAO reaches the implemented phase. The EC would lose the ability to appoint someone directly to the CC or MC adminDAO seats. If the CCs and/or MCs are unable to select someone for their adminDAO seat, the EC will select someone for them.
 
 ## Copyright
 
