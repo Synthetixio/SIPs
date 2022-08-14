@@ -34,7 +34,7 @@ This SCCP proposes to implement the following:
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 The deteriorating situation on the liquidity of these tokens, which can be visualized [here](https://www.dropbox.com/s/3dm1c6pjknjzrf7/futures.csv?dl=0) opens up the risk of manipulation of token prices as to profit from the infinite liquidity and no slippage trades. Hence increasing fees and lowering the open interest leans against these risks.
-Futures V2 includes a slippage parameter and therefore helps lean against these risks by increasing the slippage amount per time frame.
+Futures V2 includes a slippage parameter and therefore helps better manage these risks without resorting to baseFee and open interest adjustment.
 
 ## Copyright
 
