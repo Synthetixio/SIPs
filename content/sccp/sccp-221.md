@@ -38,6 +38,7 @@ This SCCP proposes to implement the following changes:
 | **Sol**    	| maxMarketValueUSD  	| 3m$                	| 1m$                	| +2m$       	| Optimism    	|
 | **Avax**   	| maxMarketValueUSD  	| 3m$                	| 1m$                	| +2m$       	| Optimism    	|
 | **Matic**  	| maxMarketValueUSD  	| 3m$                	| 1m$                	| +2m$       	| Optimism    	|
+
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
