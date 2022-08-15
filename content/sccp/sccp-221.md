@@ -31,7 +31,7 @@ This SCCP proposes to implement the following changes:
 | **Aave**   	| takerFee           	| 75 bp              	| 45 bp              	| +30 bp     	| Optimism    	|
 | **Aave**   	| makerFeeNextPrice  	| 55 bp              	| 35 bp              	| + 20 bp    	| Optimism    	|
 | **Aave**   	| takerFeeNextPrice  	| 60 bp              	| 35 bp              	| + 25 bp    	| Optimism    	|
-| **Aave**   	| maxMarketValueUSD  	| 100k$              	| 1m$                	| -0.9m$     	| Optimism    	|
+| **Aave**   	| maxMarketValueUSD  	| 300k$              	| 1m$                	| -0.7m$     	| Optimism    	|
 | **Aave**   	| feeRateForExchange 	| 100 bp             	| 55 bp              	| +45 bp     	| Optimism    	|
 | **Aave**   	| feeRateForExchange 	| 100 bp             	| 70 bp              	| +30 bp     	| Ethereum    	|
 | **Btc**    	| maxMarketValueUSD  	| 5m$                	| 3m$                	| +2m$       	| Optimism    	|
