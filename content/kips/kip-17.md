@@ -1,7 +1,7 @@
 ---
 kip: 17
 title: Product Elites 2.0
-status: Approved
+status: Implemented
 author: Marko Roy, Andrew Trudel (Andotlas) 
 created: 2022-05-10
 ---
