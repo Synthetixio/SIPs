@@ -3,9 +3,11 @@ sccp: 221
 network: Ethereum & Optimism
 title: Update Futures & Spot Price Parameters
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-08-14
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xe4d1534adef5739b980b8570714fe887f85a8fdc14b529c20b5aaeb2811d9177
 ---
 
 ## Simple Summary
