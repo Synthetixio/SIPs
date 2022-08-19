@@ -1,7 +1,7 @@
 ---
 kip: 24
 title: Amended Kwenta Governance Framework
-status: Draft
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix), JVK (@JVK-6935)
 created: 2022-07-27
 ---

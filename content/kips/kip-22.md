@@ -1,7 +1,7 @@
 ---
 kip: 22
 title: Advanced Decentralized Deployment 
-status: Draft
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix), Jeremy Chiaramonte 
 created: 2022-07-13
 ---

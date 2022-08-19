@@ -1,7 +1,7 @@
 ---
 ktr: 7
 title: Polynomial OP Distribution
-status: Approved
+status: Implemented
 author: yashar (@asherism)
 created: <2022-08-15>
 ---
