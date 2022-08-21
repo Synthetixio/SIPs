@@ -21,15 +21,16 @@ This SIP proposes to create a new pricing methodology denoted `swapAtomicallyBes
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SIP is implemented, not *why* it should be done or *how* it will be done. If the SIP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-A pricing model is proposed in the form of a simple function `f(x)`, which adjusts the fill price for a given amount of cumulative volume executed since the last cumulative volume reset block: 
+A pricing model is proposed in the form of a simple function `f(x)`, which adjusts the fill price for a given amount of cumulative volume executed: 
 
 `f(x) = a + bx^(0.5) + cx + dx^2`
 
-- `x` being the cumulative volume traded since the last pricing reset block
+- `x` being the cumulative volume traded since the last trade reset block
 - `a`, `b`, `c` and `d` are configurable per synth via SCCP
 
-It is important to mention that the number of blocks required, in order for cumulative volume to be reset, denoted `k` and should be configurable via SCCP per synth.
-**All trades with `swapAtomicallyBestExecution` have to go through `sUSD` in order to trade with `swapAtomicallyBestExecution`**. This goes in line with what is expected to be the case for uniswap-v3.
+It is important to mention that the number of blocks required, in order for cumulative volume to be reset, denoted `k` and is configurable via SCCP per synth.
+
+All trades within `swapAtomicallyBestExecution` universe have to go through `sUSD` in order to trade with `swapAtomicallyBestExecution`. This goes in line with the spirit of Synthetix V3 product offering.
 
 ## Motivation
 <!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
@@ -62,11 +63,12 @@ The specification includes two fundamental variable structures:
 ### Cumulative Volume Structure
 `cumulativeVolume` is a nested structure that takes the following form:
 ```
-{'currencyKey': 
+{currencyKey: 
   {'blockNumber': blockNumber,
    'cumulativeVolume':cumulativeVolume}}
 ```
-Each time someone trades a synth, the first thing done is that the volume traded in `sUSD` is computed using the price obtained with `atomicPrice` methodology denoted in [SIP-158](https://sips.synthetix.io/sips/sip-258/). In case, more than `k` block have passed since the last time the structure is updated, where `cumulativeVolume` is reset to zero for that synth and then the structure is updated with the latest cumulative volume. In case less than `k` blocks have passed since the current blockNumber, `cumulativeVolume` is updated cumulatively (i.e. add on to prevailing volume), for the `synth` being traded into or out from. In case of trades into a synth from `sUSD` the number incorporated into `cumulativeVolume` is a positive number, otherwise it's a negative number. Hence trades within the same `k` blocks in the other direction would leads to a reduction of slippage incurred.
+Each time someone trades a synth, the first thing done is that the volume traded in `sUSD` is computed using the price obtained with `atomicPrice` methodology denoted in [SIP-158](https://sips.synthetix.io/sips/sip-258/). In case more than `k` block have passed since the last time the structure is updated, then the `cumulativeVolume` is reset to zero for that synth and then the structure is updated with the latest volume being traded. In case less than `k` blocks have passed between the current blockNumber and the blockNumber available in the nested structure, `cumulativeVolume` is updated cumulatively (i.e. add on to prevailing volume) for the `synth` being traded into or out from. In case of trades into a synth from `sUSD` the number incorporated into `cumulativeVolume` is a positive number, otherwise it's a negative number. Hence trades within the same `k` blocks in the other direction of previous trades, would leads to a reduction in the slippage incurred.
+
 As an example, assume Alice trades 1m$ at blockNumber 1 from sUSD to sETH and Bob trades 3m$ in the same block from sETH to sUSD.
 
 **Following Alice's trade:**
@@ -85,20 +87,23 @@ As an example, assume Alice trades 1m$ at blockNumber 1 from sUSD to sETH and Bo
 ### Best Execution Functional Parameters
 `functionalParameters` is a nested structure that takes the following form:
 ```
-{'currencyKey': 
+{currencyKey: 
   {'a': A,
    'a': B
    `c`: C
    `d`: D}}
 ```
-The parameters of the best execution function are saved in a structure and configurable via SCCP. Whenever a user trades a given amount of synth, the cumulative volume is updated and then the number in that volume structure (denoted `x`) is used to to retrieve slippage incurred:
+The parameters of the best execution function are saved in a structure and configurable via SCCP. Whenever a user trades a given amount of synth, the cumulative volume is updated and then the number in that `Cumulative Volume Structure` (denoted as `x`) is used to to retrieve slippage applied:
 `f(x) = a + bx^(0.5) + cx + dx^2`
+
 Note that the cumulative volume passed into the best execution pricing function is an absolute number. Hence after Bob's trade, denoted earlier, `f(2)` is used to retrieve the amount of price adjustment incorporated into the trade.
 
 ### Pricing Methodology
 The fill price builds on the methodologies denoted in [SIP-198](https://sips.synthetix.io/sips/sip-198) and [SIP-258](https://sips.synthetix.io/sips/sip-258) in order to obtain a `atomicPrice` using the worse fill between `Uniswap-v3`, `Chainlink` and `TWAP`. Assuming that the atomic price in `USD` terms, denoted as P, then the best execution fill amount is obtained with the following computation:
 - if the sourceCurrencyKey is `sUSD`:
+
 `SrcAmount * 1/P * (1- fee) * [1-f(x)] => DestAmount`
+
 - Otherwise:
 `SrcAmount * P * (1- fee) * [1-f(x)] => DestAmount`
 
