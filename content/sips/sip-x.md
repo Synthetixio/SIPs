@@ -105,6 +105,7 @@ The fill price builds on the methodologies denoted in [SIP-198](https://sips.syn
 `SrcAmount * 1/P * (1- fee) * [1-f(x)] => DestAmount`
 
 - Otherwise:
+
 `SrcAmount * P * (1- fee) * [1-f(x)] => DestAmount`
 
 ### Technical Specification
