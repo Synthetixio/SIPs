@@ -1,5 +1,5 @@
 ---
-sip: X
+sip: 271
 title: Atomic Swaps - Best Execution Pricing
 network: Ethereum
 status: Draft
@@ -42,7 +42,7 @@ From Synthetix's perspective, attempts at this problem were designed keeping in 
 The second iteration was the original atomic mechanism, which uses uni-v3 as an additional lively oracle source. Although uniswap, is a very effective low-latency oracle source, it still suffers from the fact of having a 1 block delay which opens up a small gap for oracle front-running. Therefore, we are currently at the limits of what can be reasonably expected from blockchain latency,and incorporating slippage based model is crucial if we are ever going to move forward in the development of the protocol.
 
 This [figure](https://ibb.co/dPvmcP7) shows the slippage incurred from executing orders of different sizes. This is calculated taking into account the delta between the best spot price prevailing at a given moment and the price that would be expected after executing a order of a certain size (shown in the x-axis). The `Uni 5bp` line is the slippage from trading on the uniswap 5 bp USDC/ETH pool, while cex is the one from trading on the ETH/USDT orderbook on binance.
-The function `f(x)` can be used to both replicate a uni-v3 order book, as well as a centralized exchange order book, by changing the coefficients of the function (`a`,`b`,`c`,`d`). The best execution function can replicate any order book to a certain degree of precision with the help of the least squares optimization algorithm, an implementation demonstrating this capability is available in this [repository](insert link to repo). 
+The function `f(x)` can be used to both replicate a uni-v3 order book, as well as a centralized exchange order book, by changing the coefficients of the function (`a`,`b`,`c`,`d`). The best execution function can replicate any order book to a certain degree of precision with the help of the least squares optimization algorithm, an implementation demonstrating this capability is available in this [repository](https://github.com/kaleb-keny/synthetix_slippage_calibration_sip_271). 
 It is important to mention that no slippage can be still configured into the trade by simply setting the functional parameters (`a`, `b`, `c`, `d`) to zero, which might be useful in situations of dealing with stables.
 
 
