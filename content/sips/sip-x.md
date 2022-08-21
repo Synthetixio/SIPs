@@ -67,7 +67,10 @@ The specification includes two fundamental variable structures:
   {'blockNumber': blockNumber,
    'cumulativeVolume':cumulativeVolume}}
 ```
-Each time someone trades a synth, the first thing done is that the volume traded in `sUSD` is computed using the price obtained with `atomicPrice` methodology denoted in [SIP-158](https://sips.synthetix.io/sips/sip-258/). In case more than `k` block have passed since the last time the structure is updated, then the `cumulativeVolume` is reset to zero for that synth and then the structure is updated with the latest volume being traded. In case less than `k` blocks have passed between the current blockNumber and the blockNumber available in the nested structure, `cumulativeVolume` is updated cumulatively (i.e. add on to prevailing volume) for the `synth` being traded into or out from. In case of trades into a synth from `sUSD` the number incorporated into `cumulativeVolume` is a positive number, otherwise it's a negative number. Hence trades within the same `k` blocks in the other direction of previous trades, would leads to a reduction in the slippage incurred.
+Each time someone trades a synth, the first thing done is that the volume traded in `sUSD` is computed using the price obtained with `atomicPrice` methodology denoted in [SIP-158](https://sips.synthetix.io/sips/sip-258/). 
+The following logic is applied on updating the structure:
+- In case more than `k` block have passed since the last time the structure is updated, then the `cumulativeVolume` is first reset to zero for that synth, then updated with the latest volume being traded. 
+- otherwise, the `cumulativeVolume` is updated cumulatively for the `synth` being traded into or out from. In case the direction of the trade is into a synth the number incorporated into structure is a positive number, otherwise it's a negative number. Hence trades within the same `k` blocks in different direction cancel out the the slippage applied.
 
 As an example, assume Alice trades 1m$ at blockNumber 1 from sUSD to sETH and Bob trades 3m$ in the same block from sETH to sUSD.
 
