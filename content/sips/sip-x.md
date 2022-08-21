@@ -97,6 +97,7 @@ As an example, assume Alice trades 1m$ at blockNumber 1 from sUSD to sETH and Bo
    `d`: D}}
 ```
 The parameters of the best execution function are saved in a structure and configurable via SCCP. Whenever a user trades a given amount of synth, the cumulative volume is updated and then the number in that `Cumulative Volume Structure` (denoted as `x`) is used to to retrieve slippage applied:
+
 `f(x) = a + bx^(0.5) + cx + dx^2`
 
 Note that the cumulative volume passed into the best execution pricing function is an absolute number. Hence after Bob's trade, denoted earlier, `f(2)` is used to retrieve the amount of price adjustment incorporated into the trade.
