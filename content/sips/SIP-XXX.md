@@ -64,7 +64,7 @@ To oversee this risk framework will be a Risk Chief (RC) will lead efforts to re
 
 The Risk Chief (RC) will be responsible for managing and operating a risk framework appropriate for the Synthetix Protocol. The RC will operate across financial, non-financial, and strategic risk domains. More specifically the RC will initially be responsible for:
 
-## Risk Framework*
+## Risk Framework
 Maintaining the foundations of designing, implementing, monitoring, reviewing, and continually improving risk management throughout the SNX ecosystem. The risk framework describes how risk is to be assessed. This also includes specifying and ensuring that a risk management process is appropriate for SNX.
 
 ## Risk Identification, assessment, and evaluation*
@@ -84,12 +84,12 @@ The RC shall maintain inventory of current risks. The RC shall prepare regular r
 The RC will be responsible for an additional step in the SIP workflow which will run in parallel with the engineering "feasibility". In this step, the RC will conduct an in-depth risk analysis to provide to the Spartan Council to utilise during their debating and voting process.
 Each SIP will be assigned an extra status decided on by the RC. This status shall indicate the highest risk associated with that change, utilising the SNX risk appetite, from the following (assuming 5x5 matrix):
 
--Very Low
--Low 
--Medium
--High
--Very High
--Extreme
+- Very Low
+- Low 
+- Medium
+- High
+- Very High
+- Extreme
 
 The assignment of each label will be based on a 2/3 majority vote; if all members wish to assign a separate label to a SIP they must each present their reasoning in an individual report to the Spartan Council prior to the SIP being presented.
 
