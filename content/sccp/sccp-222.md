@@ -6,6 +6,8 @@ author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2022-08-18
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x0e351641f3afdf4be4c31932aa97dd00dc1fdec573f3e20a9755236ff0da2415
 ---
 
 ## Simple Summary
@@ -21,7 +23,7 @@ The DOGE and BNB markets would take on the following parameters, while the DebtR
 |   **BNB**  	|        takerFee        	|        35 bp       	|
 |   **BNB**  	|    makerFeeNextPrice   	|        20 bp       	|
 |   **BNB**  	|    takerFeeNextPrice   	|        25 bp       	|
-|   **BNB**  	|    maxMarketValueUSD   	|         4m$        	|
+|   **BNB**  	|    maxMarketValueUSD   	|         1m$        	|
 |   **BNB**  	| nextPriceConfirmWindow 	|          2         	|
 |   **BNB**  	|       maxLeverage      	|         25         	|
 |   **BNB**  	|     maxFundingRate     	|         10%        	|
@@ -30,7 +32,7 @@ The DOGE and BNB markets would take on the following parameters, while the DebtR
 |  **DOGE**  	|        takerFee        	|        40 bp       	|
 |  **DOGE**  	|    makerFeeNextPrice   	|        25 bp       	|
 |  **DOGE**  	|    takerFeeNextPrice   	|        30 bp       	|
-|  **DOGE**  	|    maxMarketValueUSD   	|         4m$        	|
+|  **DOGE**  	|    maxMarketValueUSD   	|         1m$        	|
 |  **DOGE**  	| nextPriceConfirmWindow 	|          2         	|
 |  **DOGE**  	|       maxLeverage      	|         10         	|
 |  **DOGE**  	|     maxFundingRate     	|         10%        	|
