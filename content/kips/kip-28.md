@@ -26,11 +26,11 @@ Rewards will follow the below outline.
 
 Wallets that have never interacted with Kwenta before will be eligible for a one time KWENTA reward if they do each of the following, all must be completed to qualify: 
 
-Deposit a minimum of 1k sUSD the cross margin wallet.
-Traders must make 10 trades with open interest for a minimum of 24 hours, 2 of which must be stop losses or limit orders, with minimum position size of $100 sUSD. 
-Have a PnL of 10% on their total portfolio (minimum of 1k sUSD) in either direction.
-(Eventually, Copy Trade someone for 100 sUSD for minimum of 24 hours)
-Join Discord and verify authenticity.
+- Deposit a minimum of 1k sUSD the cross margin wallet.
+- Traders must make 10 trades with open interest for a minimum of 24 hours, 2 of which must be stop losses or limit orders, with minimum position size of $100 sUSD. 
+- Have a PnL of 10% on their total portfolio (minimum of 1k sUSD) in either direction.
+- (Eventually, Copy Trade someone for 100 sUSD for minimum of 24 hours)
+- Join Discord and verify authenticity.
 
 The current bounty is 1 KWENTA for completing this list however note that this checklist and the reward can be freely updated by a majority vote in the Elite Council at any time. Withdrawing from the 1k sUSD deposit erases their progress from completing the above list. withdrawal nulls this score. Min expectation is a deposit of 1k, 10 trades, 10% gain or loss. 1 KWENTA will be available for each trader within a cap of 1% of all monthly inflation, once this cap is reached all traders will be diluted proportionally to all the users who joined in the affected month. If a Discord account is flagged as a bot or malicious, the incentives will be halted for that address. 
 
