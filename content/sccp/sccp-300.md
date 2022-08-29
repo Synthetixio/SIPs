@@ -3,7 +3,7 @@ sccp: 300
 network: Optimism
 title: Set council minimumActiveMembers to n-1
 author: Ethernaut (@theethernaut.eth)
-status: Approved
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x8a7aeb398dfa590b46ddcd548f211ac0dd00732a7771074f74cba983a2fe51ca
 created: 2022-07-05

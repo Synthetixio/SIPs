@@ -3,7 +3,7 @@ sccp: 222
 network: Optimism
 title: Unpause Futures Markets - DebtRatio ,DOGE & BNB
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-08-18
 type: Governance
 proposal: >-
