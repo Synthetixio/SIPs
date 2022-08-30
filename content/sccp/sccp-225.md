@@ -4,7 +4,6 @@ network: Ethereum & Optimism
 title: Raising the target c-ratio to 450%
 author: Gauntlet
 status: Draft
-proposal: TBD 
 created: 2022-08-29
 type: Governance
 
