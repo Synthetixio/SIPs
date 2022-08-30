@@ -8,11 +8,11 @@ created: 2022-06-30
 
 ## Summary
 
-Advanced orders to make possible new trading strategies for futures.
+Advanced orders enable new trading strategies for futures.
 
 ## Abstract
 
-Leveraging Gelato's keeper system, Kwenta will enable the automation of orders for futures. The first two products to come of this will be Limit Orders & Stop Market Orders. 
+Leveraging Gelato's keeper system, Kwenta will automate specialized orders for futures. The first two products to come of this will be limit orders and stop orders. 
 
 ## Motivation
 
@@ -50,15 +50,18 @@ Users specify a price for the execution of their order, however trades are alway
 
 All advanced orders are indexed by market key. This means there can only be one order per market. There are three key functions for interacting with advanced orders:
 
-- Placing an order. This stores the order onchain until execution or cancellation. 
+- Placing an order. This stores the order onchain until execution or cancellation.
 ```
 function placeOrder(
     address market, 
     int256 marginDelta, 
     int256 sizeDelta, 
-    uint256 givenPrice
-) external onlyOwner;
+    uint256 targetPrice,
+    OrderTypes orderType // LIMIT or STOP
+) payable external onlyOwner;
 ```
+*This function is payable because a trader is responsible for providing ETH to their margin accounts to pay for Gelato executed transactions. Note that the margin account must have a minimum of 0.1 ETH before orders can be placed*
+
 - Cancelling an order. This removes an order for a given market.
 ```
 function cancelOrder(address market) external onlyOwner;
@@ -74,14 +77,25 @@ When an order is placed margin is committed to that order. This prevents weird U
 function freeMargin() public view returns (uint256);
 ```
 
+Additionally, due to the volatility and unpredictablity of the [dynamic fee](https://sips.synthetix.io/sips/sip-184/), orders can specify a cap on the dynamic fee that can be charged to a position modification. This is enabled through a separate order placement function:
+
+```
+function placeOrderWithFeeCap(
+        ...,
+        uint256 maxDynamicFee
+) payable external onlyOwner;
+```
+
 ### Fee Structure
 
 Fees are charged for each advanced order executed. There are two new fees users are accountable for, the keeper fee (gelato) and the Kwenta fee. Kwenta fee parameters will be controlled through governance. Fees will initially be sent to the treasury.
 
+At the start these fees will be set to 0. All advanced orders are subject to cross margin fees when executed.
+
 | Order Type  | Kwenta Fee | Keeper Fee |
 | ----------- | ---------- | ---------- |
-| Limit       | 5bp        | Dependent on network congestion (ETH)  |
-| Stop        | 5bp        | Dependent on network congestion (ETH)  |
+| Limit       | 3bp        | Dependent on network congestion (ETH)  |
+| Stop        | 3bp        | Dependent on network congestion (ETH)  |
 
 ## Copyright
 
