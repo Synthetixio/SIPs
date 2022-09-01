@@ -6,7 +6,7 @@ const kebabStatuses = statuses.map(kebabCase)
 
 const Frontmatter = `
   fragment Frontmatter on MarkdownRemarkFrontmatter {
-    sip
+    sep
     sccp
     title
     author
@@ -20,13 +20,13 @@ const Frontmatter = `
     status
   }
 `
-const allSipsQuery = `
+const allSepsQuery = `
   ${Frontmatter}
-  query allSips {
+  query allSeps {
     allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "/sips/" }
-        frontmatter: { sip: { ne: null } }
+        fileAbsolutePath: { regex: "/seps/" }
+        frontmatter: { sep: { ne: null } }
       }
     ) {
       group(field: frontmatter___status) {
@@ -45,7 +45,7 @@ const allSipsQuery = `
 
 const allSccpQuery = `
   ${Frontmatter}
-  query allSips {
+  query allSeps {
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/sccp/" }
@@ -67,14 +67,14 @@ const allSccpQuery = `
 `
 
 exports.onPostBuild = async ({ graphql }) => {
-  const allSips = await graphql(allSipsQuery)
+  const allSeps = await graphql(allSepsQuery)
   const allSccp = await graphql(allSccpQuery)
 
-  const sipsPath = './public/api/sips'
+  const sepsPath = './public/api/seps'
   const sccpPath = './public/api/sccp'
 
   ;[
-    { path: sipsPath, result: allSips },
+    { path: sepsPath, result: allSeps },
     { path: sccpPath, result: allSccp },
   ].forEach(({ path, result }) => {
     if (!fs.existsSync(path)) fs.mkdirSync(path, { recursive: true })
