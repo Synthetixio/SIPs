@@ -15,7 +15,7 @@ const Main: React.FC = ({ children }) => {
             _paq.push(['trackPageView']);
             _paq.push(['enableLinkTracking']);
             (function() {
-              var u="https://analytics.synthetix.io/";
+              var u="https://";
               _paq.push(['setTrackerUrl', u+'matomo.php']);
               _paq.push(['setSiteId', '5']);
               var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -27,7 +27,7 @@ const Main: React.FC = ({ children }) => {
       <header className="site-header" role="banner">
         <div className="wrapper">
           <a className="site-title" rel="author" href="/">
-            SIPs
+            SEPs
           </a>
           <nav className="site-nav">
             <input type="checkbox" id="nav-trigger" className="nav-trigger" />
@@ -40,8 +40,8 @@ const Main: React.FC = ({ children }) => {
             </label>
 
             <div className="trigger">
-              <a className="page-link" href="/all-sip">
-                All SIPs
+              <a className="page-link" href="/all-sep">
+                All SEPs
               </a>
               <a className="page-link" href="/all-sccp">
                 All SCCPs
@@ -57,27 +57,27 @@ const Main: React.FC = ({ children }) => {
 
       <footer className="site-footer h-card">
         <div className="wrapper">
-          <h2 className="footer-heading">SIPs</h2>
+          <h2 className="footer-heading">SEPs</h2>
 
           <div className="footer-col-wrapper">
             <div className="footer-col footer-col-1">
               <ul className="contact-list">
-                <li className="p-name">SIPs</li>
+                <li className="p-name">SEPs</li>
               </ul>
             </div>
 
             <div className="footer-col footer-col-2">
               <ul className="social-media-list">
                 <li>
-                  <a href="https://github.com/Synthetixio/SIPs">
+                  <a href="https://github.com/softdao/SEPs">
                     <GithubIcon className="svg-icon" />
-                    <span className="username">Synthetixio/SIPs</span>
+                    <span className="username">softdao/SEPs</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/synthetix_io">
+                  <a href="https://twitter.com/mdudas">
                     <TwitterIcon className="svg-icon" />
-                    <span className="username">synthetix_io</span>
+                    <span className="username"mdudas</span>
                   </a>
                 </li>
               </ul>
@@ -85,8 +85,8 @@ const Main: React.FC = ({ children }) => {
 
             <div className="footer-col footer-col-3">
               <p>
-                Synthetix Improvement Proposals (SIPs) describe standards for
-                the Synthetix platform, including core protocol specifications,
+                Soft Enhancement Proposals (SEPs) describe standards for
+                the Soft platform, including core protocol specifications,
                 client APIs, and contract standards.
               </p>
             </div>

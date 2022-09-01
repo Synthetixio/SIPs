@@ -26,10 +26,10 @@ const commonValidationSchema = Yup.object().shape({
   'discussions-to': Yup.string().nullable(),
 })
 
-const sipValidationSchema = commonValidationSchema
+const sepValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
-      sip: Yup.number().required(),
+      sep: Yup.number().required(),
       network: Yup.string().required(),
     }),
   )
@@ -47,16 +47,16 @@ const sccpValidationSchema = commonValidationSchema
 
 ;(async () => {
   try {
-    const sips = await g('./content/sips/*.md')
+    const seps = await g('./content/seps/*.md')
     const sccp = await g('./content/sccp/*.md')
 
-    // SIP
+    // SEP
     await Promise.all(
-      sips.map(async (file) => {
+      seps.map(async (file) => {
         const content = await fs.readFile(file, 'utf-8')
         const { attributes } = fm(content)
-        const castValues = sipValidationSchema.cast({ file, ...attributes })
-        return await sipValidationSchema.validate(castValues)
+        const castValues = sepValidationSchema.cast({ file, ...attributes })
+        return await sepValidationSchema.validate(castValues)
       }),
     )
     // SCCP

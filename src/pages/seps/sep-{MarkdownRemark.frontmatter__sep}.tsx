@@ -5,12 +5,12 @@ import { Helmet } from 'react-helmet'
 import Main from '../../layout/Main'
 import FrontmatterTable from '../../components/FrontmatterTable'
 import SourceIcon from '../../icons/Source'
-import { SccpPageQuery } from '../../../types/gql'
+import { SepPageQuery } from '../../../types/gql'
 import { getGithubLink } from '../../components/utils'
 
 interface Props {
   frontmatter__sep: number
-  data: SccpPageQuery
+  data: SepPageQuery
 }
 
 const Template: React.FC<Props> = ({ data }) => {
@@ -19,10 +19,10 @@ const Template: React.FC<Props> = ({ data }) => {
   const githubLink = getGithubLink(fileAbsolutePath)
   return (
     <Main>
-      <Helmet title={`SCCP-${frontmatter.sccp}: ${frontmatter.title}`} />
+      <Helmet title={`SEP-${frontmatter.sep}: ${frontmatter.title}`} />
       <h1 className="page-heading">
         <a href={githubLink} className="inline-block">
-          SCCP-{frontmatter.sccp}: {frontmatter.title} <SourceIcon />
+          SEP-{frontmatter.sep}: {frontmatter.title} <SourceIcon />
         </a>
       </h1>
       <FrontmatterTable frontmatter={frontmatter} />
@@ -37,8 +37,8 @@ const Template: React.FC<Props> = ({ data }) => {
 export default Template
 
 export const pageQuery = graphql`
-  query sccpPage($frontmatter__sccp: Int) {
-    markdownRemark(frontmatter: { sccp: { eq: $frontmatter__sccp } }) {
+  query sepPage($frontmatter__sep: Int) {
+    markdownRemark(frontmatter: { sep: { eq: $frontmatter__sep } }) {
       fileAbsolutePath
       frontmatter {
         ...Frontmatter

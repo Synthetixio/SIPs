@@ -1,4 +1,4 @@
-When opening a pull request to submit a new SIP, please use the suggested template: https://github.com/Synthetixio/SIPs/blob/master/sip-X.md
+When opening a pull request to submit a new SEP, please use the suggested template: https://github.com/softdao/SEPs/blob/master/sep-X.md
 
 We have a GitHub bot that automatically merges some PRs. It will merge yours immediately if certain criteria are met:
 

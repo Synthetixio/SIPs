@@ -3,8 +3,8 @@ module.exports = {
     DEV_SSR: true
   },
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
-    title: 'Synthetix SIPs & SCCPs',
+    siteUrl: 'https://www.softdao.ch',
+    title: 'Soft DAO SEPs & SCCPs',
   },
   plugins: [
     'gatsby-plugin-typescript',
