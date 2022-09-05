@@ -5,7 +5,7 @@ title: Increase Atomic Exchange Fees - ETH
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x0f1ba773197f1418d518bc05b7ec19fae038682a2d2bd12197cab15596e2311f
+  https://snapshot.org/#/snxgov.eth/proposal/0x6a0f5f3098ab4dccf1e952633828b7e996526f6af8a3de2e7e3fbfd238d6975b
 created: 2022-09-05
 type: Governance
 ---
