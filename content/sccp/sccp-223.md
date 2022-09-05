@@ -3,7 +3,7 @@ sccp: 223
 network: Optimism
 title: Increase Max Initial Leverage on Traditional Markets
 author: Burt Rock (@BurtRock)
-status: Vote_Pending
+status: Approved
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x034db5ded913dfd717cbc83e6383711bec1a917f611acecedd51fb362c1fc238
 created: 2022-08-19
