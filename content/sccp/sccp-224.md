@@ -3,7 +3,7 @@ sccp: 224
 network: Ethereum
 title: Lower Max Atomic Volume Per Block
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Rejected
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x724c60efdcb11a68359ad7dde35df3b3752564f5c69886e024c816f230c5e572
 created: 2022-08-19

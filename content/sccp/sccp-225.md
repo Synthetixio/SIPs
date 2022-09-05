@@ -3,7 +3,9 @@ sccp: 225
 network: Ethereum & Optimism
 title: Raising the target c-ratio to 450%
 author: Gauntlet
-status: Draft
+status: Rejected
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xb4536e52f3f21d5bb3501cda634d172d4bc51df8c47654915654691860589b17
 created: 2022-08-29
 type: Governance
 
