@@ -14,7 +14,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to increase atomic twap window from 1 minute to 30 minutes.
+This SCCP proposes to increase atomic twap window to 30 minutes from 1 minute.
 
 
 ## Abstract
