@@ -1,5 +1,5 @@
 ---
-sccp: 227
+sccp: 228
 network: Optimism
 title: Unpause XMR Market
 author: Kaleb (@kaleb-keny)
