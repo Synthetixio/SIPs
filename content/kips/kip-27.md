@@ -1,7 +1,7 @@
 ---
 kip: 27
 title: Add Web Analytics
-status: Draft
+status: Rejected
 author: Burt Rock (@BurtRock)
 created: 2022-07-25
 ---
