@@ -3,7 +3,7 @@ sccp: 228
 network: Optimism
 title: Unpause XMR Market
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xd4ffbcd61c75a9c7ecac5d621c59d8d3738cd34ea3cd6f44a9fe5fadad41d02c
 created: 2022-09-05
