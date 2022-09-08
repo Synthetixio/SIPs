@@ -5,7 +5,7 @@ title: Lower Minimum Collateralization Ratio - 350%
 author: Samantha
 status: Vote_Pending
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0xd4ffbcd61c75a9c7ecac5d621c59d8d3738cd34ea3cd6f44a9fe5fadad41d02c
+  https://snapshot.org/#/snxgov.eth/proposal/0x1017e8aea24bf8ed407384e411673b1e697bcfbfc4a309a00ba003ed2d7c12c8
 created: 2022-09-08
 type: Governance
 ---
