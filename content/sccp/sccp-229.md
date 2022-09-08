@@ -26,7 +26,7 @@ The min collateralization ratio is the minimum ratio required to be able to clai
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The main motivation is to help the peg, which is currently at 1.01, mainly due to the inherent difficulty, if not impossibility of making decentralized stables scale.
+The main motivation is to help the peg, which is currently at 1.01.
 The min collateralization  ratio would be lifted back up to 400% in a separately created SCCP, should SNX price reach 3.5$ or the escrow liquidation sip is live.
 
 ## Copyright
