@@ -3,7 +3,7 @@ sccp: 226
 network: Ethereum
 title: Increase Atomic Exchange Fees - ETH
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x6a0f5f3098ab4dccf1e952633828b7e996526f6af8a3de2e7e3fbfd238d6975b
 created: 2022-09-05
