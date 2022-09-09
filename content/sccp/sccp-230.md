@@ -1,6 +1,6 @@
 ---
 sccp: 230
-network: Ethereum <> Optimism
+network: Ethereum & Optimism
 title: Increase number of serving Ambassadors 
 author: Millie, Matt, Mojo
 status: Draft
