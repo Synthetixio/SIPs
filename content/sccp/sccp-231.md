@@ -3,8 +3,7 @@ sccp: 231
 network: Ethereum
 title: Temporarily Lower Max Atomic Volume Per Block
 author: Afif (@aband1)
-status: 
-proposal: 
+status: Draft
 created: 2022-09-10
 type: Governance
 ---
