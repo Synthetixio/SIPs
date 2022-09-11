@@ -5,7 +5,7 @@ title: Increase number of serving Ambassadors
 author: Millie, Matt, Mojo
 status: Draft
 created: 2022-09-09
-type: Meta Governance
+type: Meta-Governance
 ---
 
 ## Simple Summary
