@@ -45,7 +45,7 @@ The parameter descriptions are as follows:
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The primary motivation is to launch the Op market for trading.
+The primary motivation is to launch the OP market for trading.
 
 ## Copyright
 
