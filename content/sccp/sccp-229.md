@@ -3,7 +3,9 @@ sccp: 229
 network: Ethereum & Optimism
 title: Lower Target Collateralization Ratio 350% from 400%
 author: Burt Rock (@BurtRock)
-status: Draft
+status: Rejected
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x1017e8aea24bf8ed407384e411673b1e697bcfbfc4a309a00ba003ed2d7c12c8
 created: 2022-09-07
 type: Governance
 ---
