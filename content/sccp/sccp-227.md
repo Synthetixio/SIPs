@@ -3,7 +3,7 @@ sccp: 227
 network: Ethereum
 title: Increase Atomic Twap Window - Atomic Swaps
 author: Kaleb (@kaleb-keny)
-status: Rejected
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x7e20d74ef3941aaaa30dd278dbc7d8d49e08da5845eb33659dde85402676ffdf
 created: 2022-09-05

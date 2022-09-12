@@ -3,9 +3,11 @@ sccp: 230
 network: Ethereum & Optimism
 title: Increase number of serving Ambassadors 
 author: Millie, Matt, Mojo
-status: Draft
+status: Vote_Pending
 created: 2022-09-09
 type: Meta-Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xe7a2517f5710c5676921dc6b02c158a564b4b07a43697d1072c1edea71f71a49
 ---
 
 ## Simple Summary
