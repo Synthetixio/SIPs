@@ -48,7 +48,7 @@ Users specify a price for the execution of their order, however trades are alway
 
 ### Technical Specification
 
-All advanced orders are indexed by market key. This means there can only be one order per market. There are three key functions for interacting with advanced orders:
+All advanced orders are indexed by `orderId`. `orderId` is a counter that starts from 0 and increments with each order placed. There are three key functions for interacting with advanced orders:
 
 - Placing an order. This stores the order onchain until execution or cancellation.
 ```
