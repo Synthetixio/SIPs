@@ -1,7 +1,7 @@
 ---
 sccp: 233
 network: Optimism
-title: Unpause Op Market
+title: Unpause OP Market
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 proposal: >-
@@ -14,7 +14,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to unpause the XMR market with the following parameters:
+This SCCP proposes to unpause the OP market with the following parameters:
 
 |   **Parameter Name**   	| **Parameter** 	|
 |:----------------------:	|:-------------:	|
