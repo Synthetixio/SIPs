@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Given the need to temporarily lower the atomic twap volume per block ahead of the [POS](https://sips.synthetix.io/sccp/sccp-231/), this SCCP proposes to experiment with lower the `atomicExchangeFeeRate` on trades into sETH, which are proposed to be lowered to 10 bp.
+Given the need to temporarily lower the atomic volume per block ahead of the [POS](https://sips.synthetix.io/sccp/sccp-231/), this SCCP proposes to experiment with lower the `atomicExchangeFeeRate` on trades into sETH, which are proposed to be lowered to 10 bp.
 
 ## Abstract
 
