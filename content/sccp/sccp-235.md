@@ -24,7 +24,7 @@ The `atomicExchangeFeeRate` is the fee levied on trades into a synths atomically
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The average fee on trades into `ETH` on chain is around 10 bp on chain, whether on uniswap or curve. Lowering the fee to 10 bp while maintaining the upper bound on `maxAtomicVolumePerBlock` allows the protocol to capture more of the organic on-chain volume through partner aggregator integrations. Nevertheless, the frequency of latency arbitrages would increase as a result of the decrease in fees, however, the low `maxAtomicVolumePerBlock` constrains the profitability of latency arbitrage bots considerably.
+The average fee on trades into `ETH` on chain is around 10 bp, whether on uniswap or curve. Lowering the fee to 10 bp while maintaining the upper bound on `maxAtomicVolumePerBlock` allows the protocol to capture more of the organic on-chain volume through partner aggregator integrations. Nevertheless, the frequency of latency arbitrages would increase as a result of the decrease in fees, however, the low `maxAtomicVolumePerBlock` constrains the profitability of latency arbitrage bots considerably.
 The volume would be assessed and more SCCP's would be proposed based on the observed nature of the volume taking place on chain.
 
 ## Copyright
