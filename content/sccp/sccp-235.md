@@ -3,8 +3,10 @@ sccp: 235
 network: Ethereum
 title: Update Atomic Swap Parameters
 author: Kaleb Keny (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-09-13
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x33429cb50c02583d48ecc10edc8f7ad4353b3eb427b983df8f868f37995bfeb9
 type: Governance
 ---
 

@@ -3,7 +3,7 @@ sccp: 233
 network: Optimism
 title: Unpause OP Market
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x2d3c241d29bae50d7dab0e4cb0041c852b21c748f3c5c2236cd259f310e5d20f
 created: 2022-09-12
