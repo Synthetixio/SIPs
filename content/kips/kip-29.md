@@ -31,7 +31,7 @@ By offering lucrative first steps which lower trading requirements, we can incre
 
 Amount: 200,000 $OP
 
-Reward per wallet for full completion: 100 $OP
+Reward per wallet for full completion: 80 $OP
 
 Required actions:
 
@@ -43,7 +43,7 @@ Required actions:
 
 Amount: 200,000 $OP
 
-Reward per wallet for full completion: 100 $OP
+Reward per wallet for full completion: 80 $OP
 
 Required actions:
 
@@ -51,29 +51,30 @@ Required actions:
 - Make at least 4 additional trades of at least $100 notional volume each trade
 - At least 2 total trades must be triggered stop loss or limit orders
 - Generate a realized PnL of at least $100 in either direction
+- Tier 2 actions must be completed within 21 days of the completion of Tier 1 actions
 
 **Bonus A - DYDX Trader Boost**
 
 Amount: 100,000 $OP
 
-Max reward per wallet: 50 $OP
+Max reward per wallet: 40 $OP
 
 Required actions:
 
-- Complete Tier 1 requirements using a wallet which interacted with DYDX prior to September 1st, 2022 to earn 25 $OP. 
-- Complete Tier 2 requirements from a wallet which interacted with DYDX prior to September 1st, 2022 to earn 25 additional $OP.
+- Complete Tier 1 requirements using a wallet which interacted with DYDX prior to September 1st, 2022 to earn 20 $OP. 
+- Complete Tier 2 requirements from a wallet which interacted with DYDX prior to September 1st, 2022 to earn 20 additional $OP.
 *September 1st, 2022 will be defined as beginning with ETH mainnet block 15449618.
 
 **Bonus B - Optimism Quest Boost**
 
 Amount: 100,000 $OP
 
-Max reward per wallet: 50 $OP
+Max reward per wallet: 40 $OP
 
 Required actions:
 
-- Complete Tier 1 requirements using a wallet which completed the Optimism Quest and received the NFT to earn 25 $OP
-- Complete Tier 2 requirements from a wallet which completed the Optimism Quest and received the NFT to earn 25 additional $OP
+- Complete Tier 1 requirements using a wallet which completed the Optimism Quest and received the NFT to earn 20 $OP
+- Complete Tier 2 requirements from a wallet which completed the Optimism Quest and received the NFT to earn 20 additional $OP
 
 # Additional Specifications
 
@@ -96,7 +97,11 @@ The following actions may result in a wallet being permanently disqualified from
 
 **Maximum eligible users**
 
-Rewards from each tier will be distributed to the first 2,000 unique users to complete each individual bounty, or collect each bonus. In the case that $OP tokens have not been claimed 180 days after the launch of the incentive program, tokens may be clawed back and used at the discretion of the treasury for future incentive programs or marketing initiatives.
+Rewards from Tier 1 and Tier 2 will be awarded to the first 2,500 unique users to complete each individual bounty or bonus. Users must be eligiible to recieve rewards from Tier 1 in order to qualify for Tier 1 bonuses or Tier 2 rewards. Users must be eligible to recieve rewards from Tier 2 in order to be eligible for Tier 2 bonuses. 
+
+In the case that 2,500 eligible users have completed Tier 1 actions and 21 days has passed, unallocated $OP may be reallocated to this program, or other incetive programs or marketing initiatives at the discretion of the treasury.
+
+In the case that $OP tokens have not been claimed 180 days after the launch of the incentive program, tokens may be clawed back and used at the discretion of the treasury for future incentive programs or marketing initiatives.
 
 ## Copyright 
 
