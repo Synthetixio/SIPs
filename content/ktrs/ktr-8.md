@@ -1,7 +1,7 @@
 ---
 ktr: 8
 title: adminDAO funding
-status: Draft
+status: Implemented
 author: Marko
 created: 2022-09-20
 ---
@@ -16,7 +16,7 @@ This asks that fifty thousand sUSD in funding be sent from the Kwenta treasury t
 
 ## Address
 
-Optimism ETH Address: 0x08e30BFEE9B73c18F9770288DDd13203A4887460
+Optimism ETH Address: 0xF510a2Ff7e9DD7e18629137adA4eb56B9c13E885
 
 ## Rationale
 
