@@ -3,8 +3,10 @@ sccp: 236
 network: Optimism
 title: Update Futures Markets Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-09-20
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xc41e60e9242882fbc60f94ec722266d1f0f7e14506489d96fd45f9d8e02eedbb
 type: Governance
 ---
 

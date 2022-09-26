@@ -3,7 +3,9 @@ sccp: 234
 network: Ethereum & Optimism
 title: Addressing an Issue in SNX Inflation Released on 07/09/2022
 author: TerraBellus (@TerraBellus), Kaleb Keny (@kaleb-keny)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x011773a92006a5174a4e8de5c7366034315fd2f8cd244d29cc7bd816457f9b36
 created: 2022-09-13
 type: Governance
 ---
