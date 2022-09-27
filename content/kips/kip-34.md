@@ -40,10 +40,6 @@ Users which meet the criterion outlined in KIP-13 will be able to participate in
 
 Once the pool concludes, the KWENTA token will go live and the token launch will be completed.
 
-**The Lono Clause**
-
-If an eligible address is found to have participated in the previous Aelin pool for a minimum of 10000 sUSD, the user will automatically receive their alottment as they have already demonstrated conviction. 
-
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
