@@ -1,7 +1,7 @@
 ---
 kip: 31
 title: Decentralized Repository for Kwenta
-status: Draft
+status: Approved 
 author: Platschi (@platschi)
 created: 2022-09-12
 ---
