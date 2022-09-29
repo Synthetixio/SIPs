@@ -43,16 +43,16 @@ There will be a factory contract (MarginAccountFactory) that creates new margin 
 
 The current architecture relies on [MinimalProxies](https://eips.ethereum.org/EIPS/eip-1167) where each margin account is a minimal proxy. This substantially decreases the gas costs of account creation at the expense of slightly increased interaction cost. Events are emitted on account creation and these are expected to be indexed by a subgraph. 
 
-`distributeMargin` is the core function of Cross Margin and accepts an array of `UpdateMarketPositionSpec` structs. 
+`distributeMargin` is the core function of Cross Margin and accepts an array of `NewPosition` structs. 
 
 ```solidity
-function distributeMargin(UpdateMarketPositionSpec[] memory _newPositions);
+function distributeMargin(NewPosition[] memory _newPositions);
 ``` 
 
-Each spec will specify the market, margin Δ (delta), size Δ, and optional* boolean to denote positions being closed. 
+Each position defined via `NewPosition` will specify the market, margin Δ (delta), and size Δ.
 
 ```solidity
-struct UpdateMarketPositionSpec {
+struct NewPosition {
         bytes32 marketKey;
         int256 marginDelta;
         int256 sizeDelta;
@@ -61,13 +61,13 @@ struct UpdateMarketPositionSpec {
 
 A positive margin Δ will deposit margin into a specified market and a negative margin delta will withdraw margin from a specified market. 
 
-A positive size Δ will increase the notional size of a position and negative size Δ will decrease the notional size or invert the direction of a position (long vs. short).
+A positive size Δ will increase the notional size of a position. A negative size Δ will decrease the notional size of a position. A sufficiently large size Δ may invert the direction of a position (long vs. short).
 
 A position can be closed if the passed size Δ is the exact inverse of the current size. When closing a position, all margin in that market will be withdrawn back to the user's margin account in a single transaction.
 
 ### Fee Structure
 
-Fees will be charged on all trades placed through the cross margin contract. The fee will be a function of size delta but not margin delta. Fees are additive on top of Synthetix base fees. The fee will be controlled through governance. The fee will initially be set at 2 basis points and revenue will be sent to the treasury.
+Fees can be imposed on all trades placed through the cross margin contract. The fee will be a function of size delta but not margin delta. Fees are additive on top of Synthetix base fees. The fee will be controlled through governance. The fee will initially be set at 2 basis points and revenue will be sent to the treasury.
 
 ### Caveats
 
