@@ -1,7 +1,7 @@
 ---
 kip: 29
 title: Establish $OP Incentive Program 
-status: Draft
+status: Approved
 author: Burt Rock (@BurtRock)
 created: 2022-09-09
 ---

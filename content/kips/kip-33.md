@@ -1,7 +1,7 @@
 ---
 kip: 33
 title: Roadmap Development Process KIP
-status: Draft
+status: Approved
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-09-06
 ---
