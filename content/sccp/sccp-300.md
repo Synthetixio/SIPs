@@ -15,7 +15,7 @@ type: Meta-Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 Set all councils' `minimumActiveMembers` setting to `n-1`, where `n` represents each council's current seat count.
-* Ambassador council: `2/3`
+* Ambassador council: `4/5`
 * Grants council: `4/5`
 * Spartan council: `7/8`
 * Treasury council: `3/4`
