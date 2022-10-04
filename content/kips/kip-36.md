@@ -1,5 +1,5 @@
 ---
-kip: ##
+kip: 36
 title: KIP Completion Incentives
 status: Draft
 author: Andrew Trudel (@Andrew-Synthetix)
