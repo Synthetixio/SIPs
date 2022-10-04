@@ -36,6 +36,9 @@ On the 14th day, the Aelin pool will conclude and any unpurchased tokens will be
 
 Users which meet the criterion outlined in KIP-13 will be able to participate in the distribution.
 
+**Lono Clause**
+In the event an address which participated in the initial Aelin pool qualifies for the SNX staker and Synth trader distribution, they would automatically have access to their allotment of tokens without the need to purchase them. 
+
 **KWENTA Live**
 
 Once the pool concludes, the KWENTA token will go live and the token launch will be completed.
