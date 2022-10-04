@@ -22,36 +22,36 @@ By rewarding DAO roles in a predictable manner, members will be driven to take i
 
 The rewards system will follow the below outline. 
 
-Elite Council Members:
-2.5k USD in KWENTA each month.
-2.5k USD in KWENTA for the President.
+**Elite Council Members:**
+- 2.5k USD in KWENTA each month.
+- An additional 2.5k USD in KWENTA for the President.
 
-treasuryDAO:
-2.5k USD in KWENTA each month.
+**treasuryDAO:**
+- 2.5k USD in KWENTA each month.
 
-adminDAO members 3: 
-1k USD om KWENTA each month.
+**adminDAO members:**
+- 1k USD om KWENTA each month.
 
-Management Contributor: 
-1k USD in KWENTA each month.
+**Management Contributor:**
+- 1k USD in KWENTA each month.
 
-Core Contributors: 
-Negotiated salary via the adminDAO 
-Negotiated Kwenta package via the adminDAO 
+**Core Contributors:**
+- Negotiated salary via the adminDAO 
+- Negotiated Kwenta package via the adminDAO 
 
-devDAO PM:
-Negotiated salary via the adminDAO
-Negotiated Kwenta package via the adminDAO
+**devDAO PM:**
+- Negotiated salary via the adminDAO
+- Negotiated Kwenta package via the adminDAO
 
-marketingDAO PM: 
-Negotiated salary via the adminDAO
-Negotiated Kwenta package via the adminDAO
+**marketingDAO PM:** 
+- Negotiated salary via the adminDAO
+- Negotiated Kwenta package via the adminDAO
 
-Variable Upside Bonuses for Core Contributors:
-The adminDAO will receive 1% of all inflation and 1% of all fees each month and reallocate these bonuses to the Core Contributors as they see fit. 
+**Variable Upside Bonuses for Core Contributors:**
+- The adminDAO will receive 1% of all inflation and 1% of all fees each month and reallocate these bonuses to the Core Contributors as they see fit. 
 
-Milestones Bonuses
-As milestones are reached on the roadmap, the Core Contributors will earn milestone bonuses (See KIP 33). The treasuryDAO will determine a budget for each epoch's milestone bounties. The adminDAO will be tasked with distributing a completed milestones bonus to relevant contributors. 
+**Milestones Bonuses:**
+- As milestones are reached on the roadmap, the Core Contributors will earn milestone bonuses (See KIP 33). The treasuryDAO will determine a budget for each epoch's milestone bounties. The adminDAO will be tasked with distributing a completed milestones bonus to relevant contributors. 
 
 This KIP overrules the amount of compensation set aside for the Elite Council in KIP-2. 
 
