@@ -1,5 +1,5 @@
 ---
-kip: 36
+kip: 35
 title: Decentralization Usage Acknowledgement
 status: Draft
 author: Andrew Trudel (@Andrew-Synthetix)
