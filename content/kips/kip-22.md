@@ -22,9 +22,11 @@ By providing the Elite Council with control over what version of Kwenta’s code
 
 There are a few steps for this proposal to be executed: 
 
-1. Give the Elite Council and Core Contributors a multisig which requires either 2/6 votes, 5 of which are Elite Council members and 1 of which is for the Core Contributors (any Core Contributor). 
+1. Give the Elite Council and Core Contributors a multisig which requires either 3/6* votes, 5 of which are Elite Council members and 1 of which is for the Core Contributors (any Core Contributor). 
 2. Enable transaction-based execution for directing which version of code the official Kwenta ENS is pointing to on IPFS. 
-3. Change the main domain of Kwenta to: kwenta.eth.link
+3. Change the main domain of Kwenta to: kwenta.eth.limo
+
+\* Determined in feasibility that 3/6 was more secure than the originally proposed 2/6.
 
 ## Copyright
 
