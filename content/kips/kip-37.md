@@ -30,10 +30,11 @@ The rewards system will follow the below outline.
 - 2.5k USD in KWENTA each month.
 
 **adminDAO members:**
-- 1k USD om KWENTA each month.
+- 1k USD in KWENTA each month.
 
 **Management Contributor:**
 - 1k USD in KWENTA each month.
+Note that only Core Contributors are elibile for this position. Management Contributor rewards are in addition to existing grants. 
 
 **Core Contributors:**
 - Negotiated salary via the adminDAO 
@@ -53,7 +54,7 @@ The rewards system will follow the below outline.
 **Milestones Bonuses:**
 - As milestones are reached on the roadmap, the Core Contributors will earn milestone bonuses (See KIP 33). The treasuryDAO will determine a budget for each epoch's milestone bounties. The adminDAO will be tasked with distributing a completed milestones bonus to relevant contributors. 
 
-This KIP overrules the amount of compensation set aside for the Elite Council in KIP-2. 
+This KIP overrules the amount of compensation set aside for the Elite Council in KIP-2. All KWENTA distributed in this KIP follows the infaltionary reward vesting model (1-year lock up with burn-to-vest clause) aside from the negotiated Kwenta packages. 
 
 ## Copyright
 
