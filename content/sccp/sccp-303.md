@@ -16,7 +16,7 @@ This SCCP proposes to update the OP-PERP market max open interest as per the bel
 
 | **CurrencyKey**  | **Proposed OI**  | **Current OI**  |
 |----------------- |-------------------- |------------------- |
-|    **sOP**    |          500k          |         100k          |
+|    **sOP**    |          200k          |         100k          |
 
 ## Abstract
 
