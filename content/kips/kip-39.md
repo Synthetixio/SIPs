@@ -1,5 +1,5 @@
 ---
-kip: 38
+kip: 39
 title: Kwenta Legal Counsel
 status: Draft
 author: Andrew Trudel (@Andrew-Synthetix)
