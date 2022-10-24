@@ -18,5 +18,5 @@ Individual members of the four councils have expressed the opinion that the thre
 
 # Copyright
 
-undefined
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
