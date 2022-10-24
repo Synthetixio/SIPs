@@ -1,7 +1,7 @@
 ---
 kip: 35
 title: Decentralization Usage Acknowledgement
-status: Draft
+status: Approved
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-10-04
 ---
