@@ -1,5 +1,5 @@
 ---
-sccp: 304
+sccp: 237
 network: Optimism
 title: Update Debt-PERP Market Parameters
 author: Synthquest (@Synthquest)
