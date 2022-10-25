@@ -3,7 +3,7 @@ sccp: 238
 network: Optimism
 title: Increase BTC Futures Market Open Interest
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-10-05
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x9e844bc0167738f1f714ce4655962e84bd9a443ec737c8c2968ad59ae05e621a
