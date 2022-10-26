@@ -1,7 +1,4 @@
-# SCCP
-
 ---
-
 sccp: 241
 network: Ethereum & Optimism
 title: Distribute owed SNX liquidation rewards to L2 stakers following SIP 252
@@ -14,13 +11,11 @@ type: Governance
 
 ## Simple Summary
 
-A proposal to reduce inflation on L1 by the amount of SNX rewards owed to L2 stakers after the implementation and subsequent liquidation of escrow SNX over a 4-week period.
+A proposal to reduce inflation on L1 by the amount of SNX rewards owed to L2 stakers after the implementation and subsequent liquidation of escrow SNX over a 1-week period.
 
 ## Abstract
 
-The total amount of SNX liquidation rewards owed to L2 stakers is 383,177 SNX as of Oct 24th, this proposal proposes to distribute these rewards to L2 inflation over a 4-week period by reducing L1 inflation by the same amount. 
-
-In three of these weeks, 100,000 SNX, will be distributed and the fourth week will distribute 83,177 SNX to L2 inflation.
+The total amount of SNX liquidation rewards owed to L2 stakers is 383,177 SNX as of Oct 24th, this proposal proposes to distribute these rewards to L2 inflation in the next staking rewards distribution.
 
 ## Motivation
 
