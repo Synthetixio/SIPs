@@ -5,9 +5,7 @@ title: Extend Governance Epoch Duration from Three to Four Months
 author: TerraBellus, CT, Artsychoke, MiLLiΞ
 status: Draft
 created: 2022-10-26T06:53:24.962Z
-updated: 2022-10-26
-type: Governance
-requires: 78
+type: Meta-Governance
 ---
 
 
