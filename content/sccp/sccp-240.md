@@ -1,5 +1,5 @@
 ---
-sccp: 239
+sccp: 240
 network: Ethereum & Optimism
 title: Raising the target c-ratio to 400%
 author: Gauntlet
