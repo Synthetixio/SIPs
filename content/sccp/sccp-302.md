@@ -22,9 +22,43 @@ The recent passing of [SIP-278: Enable nominations during voting period](https:/
 
 The above would be achieved by:
 
-- Setting the `nominationPeriodStartDate` to 14 days prior `epochEnd`
+- Calling `tweakEpochSchedule` on the four councils for two variable changes.
 
-- Setting the `votingPeriodStartDate` to 10 days prior to `epochEnd`
+```solidity
+    function tweakEpochSchedule(
+        uint64 newVotingPeriodStartDate,
+        uint64 newEpochEndDate
+    ) external override onlyOwner onlyInPeriod(ElectionPeriod.Administration) {
+```
+
+- The current values would then be altered to the new, desired values.
+
+```solidity
+    "votingPeriodStartDate": "1671359097", // Sun Dec 18 2022 10:24:57 GMT+0000
+    "epochEndDate": "1672568697", // Sun Jan 01 2023 10:24:57 GMT+0000
+```
+
+```solidity
+    "votingPeriodStartDate": "1671667200", // Thu Dec 22 2022 00:00:00 GMT+0000
+    "epochEndDate": "1672531199", // Sat Dec 31 2022 23:59:59 GMT+0000
+```
+
+- In order to adjust the third necessary value, used to alter the nomination period, an alternative call would be used on the four councils, `modifyEpochSchedule`. This is used in this case because the change is greater than the current `maxAdjustmentTolerance`, which is set at 604800 seconds (7 days). Usually such a change would be made within a SIP but due to these three changes being made with the same objective and conducted through a meta-gov SCCP, this SCCP proposes initiating the changes through this SCCP only.
+
+```solidity
+    function modifyEpochSchedule(
+        uint64 newNominationPeriodStartDate,
+    ) external override onlyOwner onlyInPeriod(ElectionPeriod.Administration) {
+```
+
+- The current values would then be altered to the new, desired values.
+
+```solidity
+    "nominationPeriodStartDate": "1670754297", // Sun Dec 11 2022 10:24:57 GMT+0000
+    "nominationPeriodStartDate": "1671321600", // Sun Dec 18 2022 00:00:00 GMT+0000
+```
+    
+- Combined, these changes would would set the `nominationPeriodStartDate` to 14 days prior to the `epochEndDate` and the `votingPeriodStartDate` to 10 days prior to the `epochEndDate`, with the `epochEndDate` falling at 23:59:29 on December 31st, 2022.
 
 ## Motivation
 
