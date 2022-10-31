@@ -3,7 +3,9 @@ sccp: 239
 network: Optimism
 title: Update OP-PERP Market Parameters
 author: Platschi (@platschi)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x2f5ab993f2bbcdd5b10e2cfc2263542507323cacdb041c9c1ebf0a276e86aadd
 created: 2022-10-21
 type: Governance
 ---
