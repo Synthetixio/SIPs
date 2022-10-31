@@ -1,5 +1,5 @@
 ---
-sccp: 240
+sccp: 241
 network: Optimism
 title: Update DOGE Futures Parameters
 author: Kaleb (@kaleb-keny)
