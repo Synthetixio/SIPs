@@ -6,7 +6,6 @@ author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2022-10-31
 type: Governance
-
 ---
 
 ## Simple Summary
