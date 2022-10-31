@@ -16,7 +16,6 @@ Increase DOGE Futures makerFee and takerFee to 60 and 65 bp, from 35 and 40 bp.
 
 ## Abstract
 
-
 makerFee and takerFee are the fees paid by traders when filled immediately.
 
 ## Motivation
