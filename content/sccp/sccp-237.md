@@ -3,7 +3,9 @@ sccp: 237
 network: Optimism
 title: Update Debt-PERP Market Parameters
 author: Synthquest (@Synthquest)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x7bbc6aa212928bfafcbfd91da417c25847e86072806bf5b40fcc07a5467682bf
 created: 2022-10-25
 type: Governance
 ---
