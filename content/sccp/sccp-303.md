@@ -3,7 +3,7 @@ sccp: 303
 network: Ethereum & Optimism
 title: Extend Governance Epoch Duration from Three to Four Months
 author: TerraBellus, CT, Artsychoke, MiLLiΞ
-status: Draft
+status: Rejected
 created: 2022-10-29T14:15:09.929Z
 type: Governance
 requires: 78
