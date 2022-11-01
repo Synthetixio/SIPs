@@ -3,7 +3,7 @@ sccp: 302
 network: Ethereum & Optimism
 title: Reduction in the Length of Council Election Periods
 author: TerraBellus (@TerraBellus)
-status: Draft
+status: Rejected
 created: 2022-10-11
 type: Meta-Governance
 ---
