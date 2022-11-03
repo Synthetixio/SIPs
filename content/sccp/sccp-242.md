@@ -10,7 +10,7 @@ type: Governance
 
 ## Simple Summary
 
-Increase the standard atomic exchange fee that does not go throught direct integration, on sETH and sBTC to `40 bp` and `35 bp` respectively.
+Increase the standard atomic exchange fee that does not go throught direct integration, on sETH and sBTC to `40 bp` and `35 bp` respectively, from `10 bp` on both.
 
 ## Abstract
 
