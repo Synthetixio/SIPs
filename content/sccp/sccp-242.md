@@ -20,4 +20,5 @@ The `atomicExchangeFee` is the fee levied on trades into the repsective synth.
 
 Given the recent release of [SIP-267](https://sips.synthetix.io/sips/sip-267/) as well as the 1inch integration [SCCP-288](https://sips.synthetix.io/sips/sip-288/), the standard atomic exchange fees can be increased, given that users that utilize synth exchanges over 1inch benefit from the overriden parameters. This sccp, helps lean against the 1 block uniswap latency.
  
-## CopyrightCopyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+## Copyright
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
