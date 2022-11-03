@@ -4,7 +4,7 @@ network: Ethereum
 title: Update Atomic Swap Fees
 author: Kaleb (@kaleb-keny)
 status: Draft
-created: 2022-10-31
+created: 2022-11-03
 type: Governance
 ---
 
