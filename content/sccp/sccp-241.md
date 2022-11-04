@@ -3,7 +3,7 @@ sccp: 241
 network: Optimism
 title: Update DOGE Futures Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x5aa4f9b3ae8a05a412c113cc5021c2445c5dcef5d1e98cfd7d92e7c953eb663f
 created: 2022-10-31

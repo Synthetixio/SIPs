@@ -3,8 +3,10 @@ sccp: 242
 network: Ethereum
 title: Update Atomic Swap Fees
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-11-03
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x6b5fa95da6b551dbd6b5b9ff4925e56815a1c6693a73c1681f33a9ddeef712ec
 type: Governance
 ---
 
