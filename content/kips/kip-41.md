@@ -12,7 +12,7 @@ A methodology in which to reward Kwenta community involvement.
 
 ## Abstract
 
-Upon the launch of the Kwenta token, the only ecosystem members that will receive rewards are Synthetix stakers and early synth traders (KIP-4). This distribution model does not address rewarding individuals that have supported the development of Kwenta through community involvement. This KIP proposes an additional distribution model that will fairly reward community involvement. 
+Upon the launch of the Kwenta token, the only ecosystem members that will receive rewards are Synthetix stakers and early synth traders (KIP-4). This distribution model does not address rewarding individuals that have supported the development of Kwenta through community involvement. This KIP proposes an additional distribution model that will fairly reward community involvement. The cut off date for inclusion is November 1st, 2022.
 
 ## Motivation
 
