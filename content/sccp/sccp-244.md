@@ -25,8 +25,7 @@ This SCCP proposes to increase exchange fees for sSOL to 200 bp.
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Global liquidity for SOL is lower than that of other assets supported on Synthetix. This decrease in liquidity creates an opportunity for market manipulation and presents a risk to stakers. 
-This SCCP proposes to increase exchange fees such that the cost of large trades more closely reflects current market conditions, while still providing far better trade execution than any other venue.
+Global liquidity for SOL is lower than that of other assets supported on Synthetix. This decrease in liquidity creates an opportunity for market manipulation and presents a risk to stakers. This SCCP proposes to increase exchange fees such that the cost of large trades more closely reflects current market conditions.
 
 ## Copyright
 
