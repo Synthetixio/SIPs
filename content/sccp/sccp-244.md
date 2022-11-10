@@ -1,7 +1,8 @@
 ---
-sccp: 129
+sccp: 244
 network: Ethereum & Optimism
 title: SCCP-244 Increase exchange fees for sSOL
+author: Ksett (@ksett737)
 status: Draft
 created: 2022-11-10
 type: Governance
