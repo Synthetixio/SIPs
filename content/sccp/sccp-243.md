@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to update the DEBT-PERP `maxMarketValueUSD` from 3M to 200k sUSD.
+This SCCP proposes to update the SOL-PERP `maxMarketValueUSD` from 3M to 200k sUSD.
 
 ## Abstract
 
