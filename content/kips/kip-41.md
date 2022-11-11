@@ -27,7 +27,7 @@ Below is a list of the roles that have provided value to the Kwenta DAO’s deve
 * Elite Council (5) - 750 $KWENTA 
 * Treasury Council (3) - 450 $KWENTA 
 * Macro Token Audit (1) - 60 $KWENTA 
-* Admirals (6) - 195 $KWENTA 
+* Admirals (7) - 225 $KWENTA 
 * Product Elites (5) - 200 $KWENTA 
 * OG Product Elites (3) - 21 $KWENTA 
 * Bounty Hunters (30) - 210 $KWENTA 
@@ -36,7 +36,7 @@ Below is a list of the roles that have provided value to the Kwenta DAO’s deve
 * Kwenta Advisors (3) - 380 $KWENTA 
 * Kwenta Elites (30) - 900 $KWENTA 
 * Kwenta Competition NFT Holders (12) - 60 $KWENTA
-* OG POAP (87) - 87 $KWENTA
+* OG POAP (63) - 63 $KWENTA
 * Marketing Ticket Completors (9) - 63 $KWENTA
 
 
