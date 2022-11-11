@@ -20,7 +20,7 @@ Increase exchange fees for sSOL
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-This SCCP proposes to increase exchange fees for sSOL from 25 bp to 200 bp.
+This SCCP proposes to increase exchange fees for sSOL from 35 bp to 200 bp.
 
 ## Motivation
 
