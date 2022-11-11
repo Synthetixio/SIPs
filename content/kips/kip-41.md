@@ -1,7 +1,7 @@
 ---
 kip: 41
 title: Community Rewards
-status: Draft
+status: Approved
 author: Kwenta adminDAO
 created: 2021-10-26
 ---

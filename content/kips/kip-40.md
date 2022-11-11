@@ -1,7 +1,7 @@
 ---
 kip: 40
 title: KIP Process Restructuring
-status: Draft
+status: Approved
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-10-27
 ---

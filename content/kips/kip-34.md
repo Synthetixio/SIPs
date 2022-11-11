@@ -1,7 +1,7 @@
 ---
 kip: 34
 title: SNX Staker and Trader KWENTA Distribution Amendment
-status: Approved
+status: Implemented
 author: Kain Warwick (@kaiynne), Andrew Trudel (@Andrew-Synthetix)
 created: 2022-09-21
 ---

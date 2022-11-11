@@ -1,7 +1,7 @@
 ---
 kip: 23
 title: adminDAO Seat System
-status: Approved
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix), Jeremy Chiaramonte  
 created: 2022-07-13
 ---

@@ -1,7 +1,7 @@
 ---
 kip: 32
 title: Change KWENTA Burning Mechanism to Treasury Reclamation 
-status: Approved
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-09-13
 ---

@@ -1,7 +1,7 @@
 ---
 kip: 19
 title: Advanced Orders
-status: Approved
+status: Implemented
 author: Jeremy Chiaramonte (@JChiaramonte7)
 created: 2022-06-30
 ---

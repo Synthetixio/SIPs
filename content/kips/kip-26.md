@@ -1,7 +1,7 @@
 ---
 kip: 26
 title: Kwenta Sovereignty Phase Update
-status: Approved
+status: Implemented
 author: Marko Roy (@Marko-Roy)
 created: 2022-08-08
 ---

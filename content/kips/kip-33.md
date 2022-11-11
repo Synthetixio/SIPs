@@ -1,7 +1,7 @@
 ---
 kip: 33
 title: Roadmap Development Process KIP
-status: Approved
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-09-06
 ---
@@ -12,7 +12,7 @@ A process for developing the Kwenta roadmap.
 
 ## Abstract
 
-The Elite Council will collaborate with the Core Contributors to create a roadmap for each epoch. 
+The Elite Council will collaborate with the Core Contributors to create a roadmap for each epoch.
 
 ## Motivation
 

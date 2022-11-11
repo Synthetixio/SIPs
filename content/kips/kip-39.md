@@ -1,7 +1,7 @@
 ---
 kip: 39
 title: Kwenta Legal Counsel
-status: Draft
+status: Approved
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-10-24
 ---
