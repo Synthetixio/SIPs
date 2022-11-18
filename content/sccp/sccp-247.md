@@ -28,12 +28,6 @@ The `atomicExchangeFee` is the fee applied on trades into a certain synth:
  'atomicMaxVolumePerBlock': 3m$,
  'atomicVolatilityUpdateThreshold': 10,
  'atomicExchangeFeeRate': 25 bp}
-
-{'currencyKey': 'sBTC',
- 'dexPriceAggregator': '0x9645C7de2DBe8AAda01868cAa393cB7e5253268c' (uses 30 bp uni pool),
- 'atomicMaxVolumePerBlock': 3m$,
- 'atomicVolatilityUpdateThreshold': 10,
- 'atomicExchangeFeeRate': 25 bp}
 ```
 
 ## Motivation
