@@ -1,7 +1,7 @@
 ---
 sccp: 247
 network: Ethereum
-title: Update Atomic Exchange Fees
+title: Update Atomic Exchange Fees / 1inch Integration
 author: Kaleb (@kaleb-keny)
 status: Draft
 created: 2022-11-18
@@ -14,7 +14,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Lower the atomic exchange fee on trades towards sETH, with respect to the 1inch integration addresses specified in [SIP-288](https://sips.synthetix.io/sips/sip-288/), to 25 bp from 35 bp. 
+Lower the atomic exchange fee on trades into sETH, with respect to the 1inch integration addresses specified in [SIP-288](https://sips.synthetix.io/sips/sip-288/), to 25 bp from 35 bp. 
 
 ## Abstract
 
