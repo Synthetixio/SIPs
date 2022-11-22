@@ -6,7 +6,7 @@ author: Kaleb (@kaleb-keny)
 status: Implemented
 created: 2022-11-18
 proposal: >-
-  https://gov.synthetix.io/#/proposal/0x253fb59f2a05bf05035aef0dedb36dbb5a238cd07f1df1f36d2e6ae658751719
+  https://snapshot.org/#/snxgov.eth/proposal/0x253fb59f2a05bf05035aef0dedb36dbb5a238cd07f1df1f36d2e6ae658751719
 type: Governance
 ---
 
