@@ -3,7 +3,9 @@ sccp: 245
 network: Optimism
 title: Update SOL perp parameters
 author: Afif (@aband1)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xc8fa08d577d297a8affd2fa6d3a65152e75bb12a103e203f09a400f0d1bf69d3
 created: 2022-11-11
 type: Governance
 ---
