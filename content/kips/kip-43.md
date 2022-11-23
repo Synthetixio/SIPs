@@ -21,7 +21,7 @@ Wihtout a competitive product, trading rewards are being wasted. Wiht the launch
 ## Specification
 
 1. Alter trading rewards to 5% of all inflation and move the remaining 15% into the treasury for future trading rewards. 
-2. Limit futures trading reward eligibility to trades made using a Kwenta cross margin account.
+2. Limit all trading reward eligibility to trades made using a Kwenta cross margin account.
 
 ## Copyright
 
