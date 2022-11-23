@@ -3,7 +3,7 @@ sccp: 247
 network: Ethereum
 title: Update Atomic Exchange Fees / 1inch Integration
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2022-11-18
 type: Governance
 ---
