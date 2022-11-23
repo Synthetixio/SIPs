@@ -1,5 +1,5 @@
 ---
-kip: 42
+kip: 43
 title: Adjust Trading Incentives Allocation 
 status: Draft
 author: Andrew Trudel (@Andrew-Synthetix)
