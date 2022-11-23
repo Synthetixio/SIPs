@@ -8,7 +8,7 @@ created: 2022-11-22
 
 ## Summary
 
-Reduce the proportion of inflation being directed to staking rewards and instead hold the funds in the treasury for future use.
+Reduce the proportion of inflation being directed to trading rewards and instead hold the funds in the treasury for future use.
 
 ## Abstract
 
