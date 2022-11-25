@@ -1,10 +1,12 @@
 ---
-sccp: 304
+sccp: 250
 network: Optimism
 title: Update Open Interest Limits
 author: Synthquest
 status: Draft
 created: 2022-11-23T21:32:53.938Z
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x925b96f33d110dd8dc58be744a468e26e76916a2321732224f9bcf40cc4c5f29
 type: Governance
 requires: 
 ---
