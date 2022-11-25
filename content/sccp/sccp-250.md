@@ -1,5 +1,5 @@
 ---
-sccp: 304
+sccp: 250
 network: Optimism
 title: Update Open Interest Limits
 author: Synthquest
