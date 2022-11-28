@@ -41,7 +41,6 @@ Below are the `DirectIntegration` parameters of the 1inch addresses, specified i
 {'currencyKey': 'sUSD',
  'dexPriceAggregator': '0x9645C7de2DBe8AAda01868cAa393cB7e5253268c' (uses 30 bp uni pool),
  'atomicMaxVolumePerBlock': 5m$,
- 'atomicVolatilityUpdateThreshold': 10,
  'atomicExchangeFeeRate': 0 bp}
 ```
 
