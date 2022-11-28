@@ -16,7 +16,7 @@ type: Governance
 
 - Lower the `maxTokenAmount` on the ETH Wrapper to 0 on both Ethereum and Optimism, from 5000 and 3700 ETH respectively.
 - Lower the `burnFeeRate` on the ETH wrappr to 0 on Optimism, from 5 bp.
-- Lower the `burnFeeRate` on the ETH wrappr to 0 on Ethereum , decreasing gradually by 25 bp every week until the latter reaches zero. Note that the `burnFeeRate` will cease to be decreased every week should the amount wrapped reach zero.
+- Lower the `burnFeeRate` on the ETH wrappr to 0 on Ethereum , decreasing it gradually by 25 bp every week until the latter reaches zero. Note that the `burnFeeRate` will cease to be decreased every week should the amount wrapped reach zero.
 
 ## Abstract
 
