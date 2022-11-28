@@ -22,7 +22,7 @@ type: Governance
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The `maxTokenAmount` is the max amount allowed to be used to issue a synth with a underlying specified in the wrapper contract, in this case it's LUSD.
+The `maxTokenAmount` is the max amount allowed to be used to issue a synth with a underlying specified in the wrapper contract, in this case it's WETH.
 The `burnFeeRate` determines the fee that is paid when burning sUSD to release the wrapped underlying.
 
 ## Motivation
