@@ -1,7 +1,7 @@
 ---
 kip: 13
 title: KWENTA Launch Distribution 
-status: Approved
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-02-17
 ---
