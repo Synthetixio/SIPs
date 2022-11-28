@@ -1,7 +1,7 @@
 ---
 kip: 43
 title: Adjust Trading Incentives Allocation 
-status: Draft
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix), Troy (@tburm)
 created: 2022-11-22
 ---
