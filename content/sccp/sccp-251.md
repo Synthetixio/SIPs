@@ -25,7 +25,7 @@ Increase the `atomicMaxVolumePerBlock` to 5m sUSD from 3m sUSD on sETH and sUSD.
 
 The parameters being changed are as follows:
 - The `atomicExchangeFee` is the fee applied on trades into a certain synth.
-- The `atomicMaxVolumePerBlcok` check is done on the source  currency key.
+- The `atomicMaxVolumePerBlock` check is done on the source  currency key.
 
 Below are the `DirectIntegration` parameters of the 1inch addresses, specified in [SIP-288](https://sips.synthetix.io/sips/sip-288/):
 
