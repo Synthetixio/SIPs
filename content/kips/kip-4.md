@@ -1,7 +1,7 @@
 ---
 kip: 4
 title: Kwenta Tokenomics
-status: Approved
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2021-11-08
 ---
