@@ -14,7 +14,8 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Lower the `maxTokenAmount` on the LUSD Wrapper to 0, from 100m LUSD currently, and decrease the `burnFeeRate`, currently at 5%, by 20 bp every week until the latter reaches zero. Note that the `burnFeeRate` will cease to be decreased every week should the amount wrapped reach zero.
+- Lower the `maxTokenAmount` on the LUSD Wrapper to 0, from 100m LUSD currently
+- Lower the `burnFeeRate`, currently at 5%, by 20 bp every week until the latter reaches zero. Note that the `burnFeeRate` will cease to be decreased every week should the amount wrapped reach zero.
 
 
 ## Abstract
