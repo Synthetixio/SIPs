@@ -1,7 +1,7 @@
 ---
 kip: 3
 title: Kwenta Staking Mechanism
-status: Approved
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2021-11-08
 ---
