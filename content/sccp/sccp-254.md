@@ -14,13 +14,15 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Lower the `exchangeFeeRate` on sETH to 5 bp
+- Lower the `exchangeFeeRate` on sETH to 10 bp from 25 bp. 
+- Increase the standard `atomicExchangeFeeRate` on trades to sETH  to 50 bp from 40 bp.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The `exchangeFeeRate` is the fee paid on swaps towards sETH which have fee reclamation.
+The `exchangeFeeRate` is the fee rate applied on swaps towards sETH which incorporate a fee reclamation adjustment.
+The `atomicExchangeFeeRate` is the fee rate paid on swaps towards sETH which do not incorporate any fee reclamation adjustment.
 
 ## Motivation
 
