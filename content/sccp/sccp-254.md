@@ -1,10 +1,12 @@
 ---
-sccp: 253
-network: Ethereum & Optimism
-title: Update ETH Wrapper Parameters
+sccp: 254
+network: Ethereum
+title: Update ETH Exchange Fee
 author: Kaleb (@kaleb-keny)
-status: Draft
-created: 2022-11-28
+status: Vote_Pending
+created: 2022-11-30
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x36f8f17ce0f9e2a14b1a6f459b8f5c23347b9d23a392b194f5f11b4ce5383996
 type: Governance
 ---
 
@@ -14,22 +16,21 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-- Lower the `maxTokenAmount` on the ETH Wrapper to 0 on both Ethereum and Optimism, from 5000 and 3700 ETH respectively.
-- Lower the `burnFeeRate` on the ETH wrappr to 0 on Optimism, from 5 bp.
-- Lower the `burnFeeRate` on the ETH wrappr to 0 on Ethereum, from 5%, decreasing it gradually by 25 bp every week until the latter reaches zero. Note that the `burnFeeRate` will cease to be decreased every week should the amount wrapped reach zero.
+- Lower the `exchangeFeeRate` on sETH to 10 bp from 25 bp. 
+- Increase the standard `atomicExchangeFeeRate` on trades to sETH  to 50 bp from 40 bp.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The `maxTokenAmount` is the max amount allowed to be used to issue a synth with a underlying specified in the wrapper contract, in this case it's WETH.
-The `burnFeeRate` determines the fee that is paid when burning sUSD to release the wrapped underlying.
+The `exchangeFeeRate` is the fee rate applied on swaps towards sETH which incorporate a fee reclamation adjustment.
+The `atomicExchangeFeeRate` is the fee rate paid on swaps towards sETH which do not incorporate any fee reclamation adjustment. Note that the fee change here does not affect fees configured  on sETH in the `DirectIntegrationManager`.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The primary motivation allowing for gradual unwind of synths issued from wrappers in order to facilitate the transaition towards the Synthetix v3.
+The primary motivation is to facilitate arbitrage between the different Curve pools, especially after large atomic exchanges have taken place that tilt the imbalance between the components of the curve pools.
 
 ## Copyright
 
