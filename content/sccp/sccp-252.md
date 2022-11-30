@@ -3,7 +3,7 @@ sccp: 252
 network: Ethereum
 title: Update LUSD Wrapper Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Draft
 created: 2022-11-28
 type: Governance
 ---
