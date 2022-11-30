@@ -22,7 +22,7 @@ type: Governance
 <!--A short (~200 word) description of the variable change proposed.-->
 
 The `exchangeFeeRate` is the fee rate applied on swaps towards sETH which incorporate a fee reclamation adjustment.
-The `atomicExchangeFeeRate` is the fee rate paid on swaps towards sETH which do not incorporate any fee reclamation adjustment.
+The `atomicExchangeFeeRate` is the fee rate paid on swaps towards sETH which do not incorporate any fee reclamation adjustment. Note that the fee change here does not affect fees configured  on sETH in the `DirectIntegrationManager`.
 
 ## Motivation
 
