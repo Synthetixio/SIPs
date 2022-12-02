@@ -3,7 +3,7 @@ sccp: 254
 network: Ethereum
 title: Update ETH Exchange Fee
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-11-30
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x36f8f17ce0f9e2a14b1a6f459b8f5c23347b9d23a392b194f5f11b4ce5383996
