@@ -15,7 +15,7 @@ type: Governance
 ## Simple Summary
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-The below parameter changes are applied with respect to the 1inch integration:
+The below parameter changes are proposed:
 - Update the fee tier of the wETH/wUSDC pool from the [30 bp pool](https://etherscan.io/address/0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8) to the [5 bp pool](https://etherscan.io/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640). This is done by calling the [`setPoolForRoute`](https://etherscan.io/address/0x9645C7de2DBe8AAda01868cAa393cB7e5253268c#writeContract#F3), taking in arguments of the [wETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) and [USDC](https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) addresses as well as the address of the [5 bp pool](https://etherscan.io/address/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640).
 - Lower the sETH `atomicExchangeFeeRate` on 1inch integration addresses, mentioned in [SIP-288](https://sips.synthetix.io/sips/sip-288/) to 7 bp.
 
