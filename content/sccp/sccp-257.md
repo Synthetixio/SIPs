@@ -19,7 +19,7 @@ The below parameter changes are proposed on the  [1inch integration addresses](h
 - Lower the atomic exchange fee from 15 bp to 7 bp on trade to/from sETH
 - Increase the atomic exchange volume between sETH, sBTC and sUSD to 5 million
 
-Note that these changes are to be implemented once curve implements the curve fee proposals [here](https://gov.curve.fi/t/update-seth-susd-curve-pool-parameters-atomic-swaps/4592/5) and here. Also this SCCP supercedes the changes denoted in SCCP-255.
+Note that these changes are to be implemented once curve implements the curve fee and A coefficient proposals outlined [here](https://gov.curve.fi/t/update-seth-susd-curve-pool-parameters-atomic-swaps/4592/5) and here. Also this SCCP supercedes the changes denoted in SCCP-255.
 
 ## Abstract
 
