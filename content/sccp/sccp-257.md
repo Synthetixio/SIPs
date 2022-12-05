@@ -38,7 +38,7 @@ Below are the `DirectIntegration` parameters overrides applied on the 1inch inte
  'dexPriceAggregator': '0x687e6a7b99b0a8cd8785a12a30901af03489639d',
  'atomicMaxVolumePerBlock': 5m$,
  'atomicVolatilityUpdateThreshold': 10,
- 'atomicExchangeFeeRate': 10 bp}
+ 'atomicExchangeFeeRate': 7 bp}
 
 {'currencyKey': 'sUSD',
  'dexPriceAggregator': '0x687e6a7b99b0a8cd8785a12a30901af03489639d',
