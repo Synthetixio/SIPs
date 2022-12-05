@@ -15,7 +15,7 @@ type: Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 The below parameter changes are proposed on the  [1inch integration addresses](https://sips.synthetix.io/sips/sip-288/):
 - Switch to the a new [dex price aggregator](https://etherscan.io/address/0x687e6a7b99b0a8cd8785a12a30901af03489639d), which automatically routes throught 5 bp uniswap pools
-- Lower the atomic exchange fee from 35 bp to 10 bp on trade to/from sBTC
+- Lower the atomic exchange fee from 35 bp to 7 bp on trade to/from sBTC
 - Lower the atomic exchange fee from 15 bp to 7 bp on trade to/from sETH
 - Increase the atomic exchange volume between sETH, sBTC and sUSD to 5 million
 
