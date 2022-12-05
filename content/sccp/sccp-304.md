@@ -1,5 +1,5 @@
 ---
-sccp: 237
+sccp: 304
 network: Optimism
 title: Update Debt-PERP Market Parameters
 author: troy (@tburm)
