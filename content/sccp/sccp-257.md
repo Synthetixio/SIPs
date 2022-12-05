@@ -45,7 +45,7 @@ Below are the `DirectIntegration` parameters overrides applied on the 1inch inte
  'atomicMaxVolumePerBlock': 5m$}
 
 {'currencyKey': 'sETH',
- 'dexPriceAggregator': '0x9645C7de2DBe8AAda01868cAa393cB7e5253268c',
+ 'dexPriceAggregator': '0x687e6a7b99b0a8cd8785a12a30901af03489639d',
  'atomicMaxVolumePerBlock': 5m$,
  'atomicVolatilityUpdateThreshold': 10,
  'atomicExchangeFeeRate': 7 bp}
