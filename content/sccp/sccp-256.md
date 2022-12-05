@@ -27,7 +27,7 @@ The parameters being changed are as follows:
 
 - The `dexPriceAggregator` is the contract used to get the relevant uniswap prices from the chain.
 - The `atomicExchangeFeeRate` is the fee levied on trades into or from a certain synth.
-- The `atomicMaxVolumePerBlock` is the maximum volume possible to trade atomically within a signle block.
+- The `atomicMaxVolumePerBlock` is the maximum volume possible to trade atomically within a single block.
 
 
 
