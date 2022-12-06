@@ -1,7 +1,7 @@
 ---
 sccp: 257
 network: Ethereum
-title: Update Atomic Swap Parameters - 1inch Integration
+title: Update Cross Asset Swaps - 1inch Integration
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2022-12-05
