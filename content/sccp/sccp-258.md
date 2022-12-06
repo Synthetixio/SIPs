@@ -4,7 +4,6 @@ network: Optimism
 title: Update Debt-PERP Market Parameters
 author: troy (@tburm)
 status: Draft
-proposal: Governance 
 created: 2022-12-05
 type: Governance
 ---
