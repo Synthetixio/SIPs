@@ -1,10 +1,10 @@
 ---
-sccp: 304
+sccp: 258
 network: Optimism
 title: Update Debt-PERP Market Parameters
 author: troy (@tburm)
 status: Draft
-proposal: 
+proposal: Governance 
 created: 2022-12-05
 type: Governance
 ---
