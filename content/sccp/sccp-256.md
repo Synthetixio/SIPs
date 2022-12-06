@@ -14,7 +14,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 The below parameter changes are proposed:
-- Switch to the a new [dex price aggregator](https://etherscan.io/address/0x687e6a7b99b0a8cd8785a12a30901af03489639d), which automatically routes throught 5 bp uniswap pools.
+- Switch to the a new [dex price aggregator](https://etherscan.io/address/0x228bCc970003Ca7588337604AFD9Fc5d92bF1C8B), which automatically routes throught 5 bp uniswap pools.
 - Increase the standard sBTC `atomicExchangeFeeRate` to 50 bp from 35 bp.
 - Increase the atomic exchange volume to sUSD 5 million from sUSD 100k 
 
