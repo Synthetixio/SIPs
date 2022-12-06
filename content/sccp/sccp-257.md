@@ -14,12 +14,12 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 The below parameter changes are proposed on the  [1inch integration addresses](https://sips.synthetix.io/sips/sip-288/):
-- Switch to the a new [dex price aggregator](https://etherscan.io/address/0x687e6a7b99b0a8cd8785a12a30901af03489639d), which automatically routes throught 5 bp uniswap pools
-- Lower the atomic exchange fee from 35 bp to 7 bp on trade to/from sBTC
+- Switch to the a new [dex price aggregator](https://etherscan.io/address/0x228bCc970003Ca7588337604AFD9Fc5d92bF1C8B), which automatically routes throught 5 bp uniswap pools
+- Lower the atomic exchange fee from 35 bp to 10 bp on trade to/from sBTC
 - Lower the atomic exchange fee from 15 bp to 7 bp on trade to/from sETH
-- Increase the atomic exchange volume between sETH, sBTC and sUSD to 5 million
+- Increase the maximum atomic exchange volume between sBTC and sUSD to 5 million
 
-Note that these changes are to be implemented once curve implements the curve fee and A coefficient proposals outlined [here](https://gov.curve.fi/t/update-seth-susd-curve-pool-parameters-atomic-swaps/4592/5) and here. Also this SCCP supercedes the changes denoted in [SCCP-255](https://sips.synthetix.io/sccp/sccp-255/).
+Note that these changes are to be implemented once curve implements the curve fee and A coefficient proposals outlined [here](https://gov.curve.fi/t/update-seth-susd-curve-pool-parameters-atomic-swaps/4592/5). Also this SCCP supercedes the changes denoted in [SCCP-255](https://sips.synthetix.io/sccp/sccp-255/).
 
 ## Abstract
 
@@ -35,17 +35,17 @@ Below are the `DirectIntegration` parameters overrides applied on the 1inch inte
 
 ```
 {'currencyKey': 'sBTC',
- 'dexPriceAggregator': '0x687e6a7b99b0a8cd8785a12a30901af03489639d',
+ 'dexPriceAggregator': '0x228bCc970003Ca7588337604AFD9Fc5d92bF1C8B',
  'atomicMaxVolumePerBlock': 5m$,
  'atomicVolatilityUpdateThreshold': 10,
- 'atomicExchangeFeeRate': 7 bp}
+ 'atomicExchangeFeeRate': 10 bp}
 
 {'currencyKey': 'sUSD',
- 'dexPriceAggregator': '0x687e6a7b99b0a8cd8785a12a30901af03489639d',
+ 'dexPriceAggregator': '0x228bCc970003Ca7588337604AFD9Fc5d92bF1C8B',
  'atomicMaxVolumePerBlock': 5m$}
 
 {'currencyKey': 'sETH',
- 'dexPriceAggregator': '0x687e6a7b99b0a8cd8785a12a30901af03489639d',
+ 'dexPriceAggregator': '0x228bCc970003Ca7588337604AFD9Fc5d92bF1C8B',
  'atomicMaxVolumePerBlock': 5m$,
  'atomicVolatilityUpdateThreshold': 10,
  'atomicExchangeFeeRate': 7 bp}
