@@ -1,6 +1,6 @@
 ---
 sccp: 260
-network: Etheruem & Optimism
+network: Ethereum & Optimism
 title: Update Synthetix Liquidations
 author: Kaleb (@kaleb-keny), Afif ⚽ (@aband1)
 status: Vote_Pending
