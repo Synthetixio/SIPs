@@ -1,7 +1,7 @@
 ---
 sccp: 260
 network: Ethereum & Optimism
-title: Update Synthetix Liquidations
+title: Update Synthetix Liquidation Parameters
 author: Kaleb (@kaleb-keny), Afif ⚽ (@aband1)
 status: Vote_Pending
 created: 2022-12-07
