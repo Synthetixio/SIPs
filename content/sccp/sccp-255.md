@@ -3,7 +3,7 @@ sccp: 255
 network: Ethereum
 title: Update Atomic Swap Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Rejected
 created: 2022-12-02
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x3118bd14114a11e58b6a16232225031394eb64e0ca8b84b49aef35cbd24e52b5
@@ -47,6 +47,8 @@ Below are the `DirectIntegration` parameters of the 1inch addresses, specified i
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
 The primary motivation is to boost the atomic exchange volume, taking into account protection against latency attacks via the curve slippage.
+
+Superceded by [SCCP-257](https://sips.synthetix.io/sccp/sccp-257/)
 
 ## Copyright
 

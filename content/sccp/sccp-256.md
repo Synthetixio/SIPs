@@ -3,7 +3,9 @@ sccp: 256
 network: Ethereum
 title: Update Atomic Swap Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xc336aec051699eccaa2d5ed45b79abdc36452cf1a181c30ab5065742dac9698d
 created: 2022-12-05
 type: Governance
 ---
