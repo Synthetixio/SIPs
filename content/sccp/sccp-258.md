@@ -22,7 +22,7 @@ This SCCP proposes to update the DEBT-PERP market max open interest as per the b
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Raise the open interest cap for the DEBT-PERP market to $600 to allow traders to close short positions. With the current OI cap of $0 these traders are prevented from closing by a smart contract bug.
+Raise the open interest cap for the DEBT-PERP market to $6000 to allow traders to close short positions. With the current OI cap of $0 these traders are prevented from closing by a smart contract bug.
 
 ## Motivation
 
