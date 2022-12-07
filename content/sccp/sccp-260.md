@@ -4,6 +4,8 @@ network: Ethereum & Optimism
 title: Update Synthetix Liquidation Parameters
 author: Kaleb (@kaleb-keny), Afif ⚽ (@aband1)
 status: Vote_Pending
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x1dae66ba639ce2014aeb040ad23a89566f9ee0e3ca9a50e0f0cf773fec9b3e2d
 created: 2022-12-07
 type: Governance
 ---
