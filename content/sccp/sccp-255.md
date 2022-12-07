@@ -48,7 +48,7 @@ Below are the `DirectIntegration` parameters of the 1inch addresses, specified i
 
 The primary motivation is to boost the atomic exchange volume, taking into account protection against latency attacks via the curve slippage.
 
-Superceded by 257
+Superceded by [SCCP-257](https://sips.synthetix.io/sccp/sccp-257/)
 
 ## Copyright
 
