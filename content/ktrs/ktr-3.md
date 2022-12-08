@@ -1,7 +1,7 @@
 ---
 ktr: 3
 title: KWENTA Community Raise NFT Rewards
-status: Approved 
+status: Implemented 
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-02-27
 ---
