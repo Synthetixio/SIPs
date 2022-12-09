@@ -1,5 +1,5 @@
 ---
-sccp: 260
+sccp: 261
 network: Optimism
 title: Increase Max Initial Leverage Slightly on All Markets
 author: Burt Rock (@BurtRock)
