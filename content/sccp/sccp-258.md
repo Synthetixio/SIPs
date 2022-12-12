@@ -3,8 +3,10 @@ sccp: 258
 network: Optimism
 title: Update Debt-PERP Market Parameters
 author: troy (@tburm)
-status: Draft
+status: Implemented
 created: 2022-12-05
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x4a29228ff79bdfa1da74ce4c2fd79a7981764830f6c405d988c3a86fa9ea2d30
 type: Governance
 ---
 
