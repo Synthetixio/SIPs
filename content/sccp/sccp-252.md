@@ -1,7 +1,7 @@
 ---
 sccp: 252
 network: Ethereum
-title: Update LUSD Wrapper Parameters
+title: LUSD Unwrap
 author: Kaleb (@kaleb-keny)
 status: Draft
 created: 2022-11-28
@@ -13,10 +13,11 @@ type: Governance
 ## Simple Summary
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-
-- Lower the `maxTokenAmount` on the LUSD Wrapper to 0, from 100m LUSD currently
-- Lower the `burnFeeRate`, currently at 5%, by 20 bp every week until the latter reaches zero. Note that the `burnFeeRate` will cease to be decreased every week should the amount wrapped reach zero.
-
+This SIP proposes that the following plan be implemented:
+- Lower the `burnFeeRate`, currently at 5%, to zero.
+- Burn `sUSD` funded by the Treasury Council, to release the LUSD.
+- Increase the `burnFeeRate` back to the previous levels.
+- Lower the `maxTokenAmount` to zero.
 
 ## Abstract
 

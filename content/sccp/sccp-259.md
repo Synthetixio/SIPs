@@ -3,7 +3,7 @@ sccp: 259
 network: Optimism
 title: Update Dynamic Fee Rounds
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Rejected
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x2720fd8be623b20a39493c855d55dde468a77f52f5e062de356274a6c4556c90
 created: 2022-12-07

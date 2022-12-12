@@ -3,7 +3,7 @@ sccp: 257
 network: Ethereum
 title: Update Cross Asset Swaps - 1inch Integration
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2022-12-05
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xc53fb10a7e2dc3effc19ae1352dc550faac5f5c56f45784e7000a08ee11625a1

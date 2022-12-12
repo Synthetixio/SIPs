@@ -15,8 +15,7 @@ type: Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 - Lower the `maxTokenAmount` on the ETH Wrapper to 0 on both Ethereum and Optimism, from 5000 and 3700 ETH respectively.
-- Lower the `burnFeeRate` on the ETH wrappr to 0 on Optimism, from 5 bp.
-- Lower the `burnFeeRate` on the ETH wrappr to 0 on Ethereum, from 5%, decreasing it gradually by 25 bp every week until the latter reaches zero. Note that the `burnFeeRate` will cease to be decreased every week should the amount wrapped reach zero.
+- Lower the `burnFeeRate` on the ETH wrappr to 0, from 5 bp on optimism and 5% on ethereum.
 
 ## Abstract
 
