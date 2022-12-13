@@ -14,14 +14,11 @@ This KIP proposes a one-month continuation of liquidity mining on Arrakis (UNI-V
 
 Initial liquidity for KWENTA was established on Uniswap V3 (Optimism) through a one-month incentivized KWENTA/ETH Arrakis Finance liquidity pool. The pool was set to run between November 19 and December 18, 2022. A total of 783.43 KWENTA (0.25% of the initial supply) was allocated to incentivize the pool, being made available as liquid KWENTA. 
 
-Following approval of KIP-46, liquidity mining for KWENTA is due to be trialled on Velodrome Finance. This proposal would allow for liquidity mining to continue on Arrakis throughout the velodrome trial. It proposes to use the same amount of liquid KWENTA as the first month's program (783.43), dividing this equally between Arrakis and Velodrome. 
-
-
-*Note: this proposal does not negatively impact the plan outlined in KIP-46, in which a total amount of 391.71625 KWENTA was proposed to be directed towards Velodrome liquidity mining.*
+Following approval of KIP-46, liquidity mining for KWENTA is due to be trialled on Velodrome Finance. This proposal would allow for liquidity mining to continue on Arrakis throughout the Velodrome trial, incentivized with a total of 195.8575 liquid KWENTA.
 
 ## Motivation
 
-Dividing 783.43 KWENTA equally across Arrakis and Velodrome for a one month trial will:
+Dividing KWENTA incentives across Arrakis and Velodrome for a one month trial will:
 
 * Allow for a comparison between the two platforms to be made
 * Ensure that comparisons are like-for-like (i.e. that both trials occur in the same market conditions and at the same point in the KWENTA token's lifecycle post-launch) 
@@ -31,7 +28,7 @@ Dividing 783.43 KWENTA equally across Arrakis and Velodrome for a one month tria
 
 ## Specification
 
-Continue the existing Arrakis LP program, but halve the rewards from 783.43 liquid KWENTA per month to 391.71625 liquid KWENTA per month. Direct the other 391.71625 liquid KWENTA to the Velodrome trial as per KIP-46. Undertake a review at the end of this trial month to compare the results of both platforms. 
+Continue the existing Arrakis LP program, but lower the rewards from 783.43 liquid KWENTA to 195.8575 liquid KWENTA for the second month. Direct the other 391.71625 liquid KWENTA to the Velodrome trial as per KIP-46. Undertake a review at the end of this trial month to compare the results of both platforms. 
 
 
 ## Copyright
