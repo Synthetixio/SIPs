@@ -13,7 +13,7 @@ type: Governance
 ## Simple Summary
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-This SIP proposes that the following plan be implemented:
+This SCCP proposes that the following plan be implemented:
 - Lower the `burnFeeRate`, currently at 5%, to zero.
 - Burn `sUSD` funded by the Treasury Council, to release the LUSD.
 - Increase the `burnFeeRate` back to the previous levels.
@@ -30,7 +30,7 @@ The `burnFeeRate` determines the fee that is paid when burning sUSD to release t
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The primary motivation allowing for gradual unwind of synths issued from wrappers in order to facilitate the transaition towards the Synthetix v3. Note that currently 14m LUSD is wrapped.
+The primary motivation allowing for gradual unwind of synths issued from wrappers in order to facilitate the transaition towards the Synthetix v3. 
 
 ## Copyright
 
