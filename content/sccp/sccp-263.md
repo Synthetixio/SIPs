@@ -12,7 +12,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to lower the `atomicTwapWindow` on 1inch's atomic exchange integration to 60 from 1800 seconds.
+This SCCP proposes to lower the `atomicTwapWindow` on 1inch's atomic exchange integration [addresses](https://sips.synthetix.io/sips/sip-288/) to 60 from 1800 seconds.
 
 ## Abstract
 
