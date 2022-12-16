@@ -31,7 +31,7 @@ Set the parameters on ethereum and [optimism](https://optimistic.etherscan.io/ad
 - `createWrapper` creates a wrapper by assigning a mapping of synth to token.
 - `maxTokenAmount` is the maximum amount that can be wrapped with a designated token underlying.
 - `mintFeeRate` is the minting fee rate applied when wrapping a token to mint the equivalent synth.
-- `burnFeeRate` is the burning fee rate applied when wrapping a token by burning the equivalent synth.
+- `burnFeeRate` is the burning fee rate applied when unwrapping a token by burning the equivalent synth.
  
 ## Motivation
  
