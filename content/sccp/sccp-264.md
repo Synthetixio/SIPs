@@ -46,7 +46,7 @@ The motivation behind this are as follows:
 - Fragmentation will only increase when sUSD/sETH are migrated to snxUSD/snxETH
 - Incentives and bribes do not in principle increase the supply of synths
  
-It is important to mention that this is a temporary scaling solution and that DAI Wrappers will need to be unwound in the next 6 months in order to fully migrate to v3, hence unwind on V2x is a technical guarantee. Alternative scaling solutions would have materialized by then in the form of [SIP-256](https://sips.synthetix.io/sips/sip-256/) and on-boarding other collaterals such as ETH for issuance, furthermore, 6 months from now `GHO` and `crvUSD` might offer wrapping alternatives. The full plan for DAI unwind will be laid out within the V3 transition sip.
+It is important to mention that this is a temporary scaling solution and that DAI Wrappers will need to be unwound in the next 6 months in order to fully migrate to v3, hence unwind on V2x is a technical guarantee. Alternative scaling solutions would have materialized by then in the form of [SIP-256](https://sips.synthetix.io/sips/sip-256/) and on-boarding other collaterals such as ETH for issuance. Furthermore, 6 months from now `GHO` and `crvUSD` might offer wrapping alternatives. The full plan for DAI unwind will be laid out within the V3 transition sip.
  
  
  
