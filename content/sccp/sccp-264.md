@@ -48,7 +48,7 @@ The motivation behind this are as follows:
  
 It is important to mention that this is a temporary scaling solution and that DAI Wrappers will need to be unwound in the next 6 months in order to fully migrate to v3, hence unwind on V2x is a technical guarantee. Alternative scaling solutions would have materialized by then in the form of [SIP-256](https://sips.synthetix.io/sips/sip-256/) and on-boarding other collaterals such as ETH for issuance. The precise details of DAI unwind will be laid out when the pertinent v3 SIPs are ready for release.
 
-One final point, more scaling might be required to be laid out in futures SCCP's based the demand for sUSD. This will take the form of a combination of DAI and ETH wrapper capacity increases in order to control the skeweness of the debt pool.
+One final point, more scaling might be required, to be laid out in futures SCCP's, based the demand for sUSD and the peg. This will take the form of a combination of DAI and ETH wrapper capacity increases in order to control the skeweness of the debt pool.
  
  
 ## Copyright
