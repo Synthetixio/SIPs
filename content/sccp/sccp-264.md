@@ -14,18 +14,15 @@ type: Governance
  
 This SCCP proposes to implement the following:
 
-- Create DAI wrapper on ethereum by calling [createWrapper](https://etherscan.io/address/0x02f9bC46beD33acdB9cb002fe346734CeF8a9480#writeContract) with the following parameters:
- 
- a) token: `0x5155319e66DF10366C049515c29FC937d2a45e55`
- 
- b) currencyKey: `sUSD`
- 
- c) synthContractName: `SynthsUSD`
+Create DAI wrapper on ethereum by calling [createWrapper](https://etherscan.io/address/0x02f9bC46beD33acdB9cb002fe346734CeF8a9480#writeContract) with the following parameters:
+ - token: `0x5155319e66DF10366C049515c29FC937d2a45e55`
+ - currencyKey: `sUSD`
+ - synthContractName: `SynthsUSD`
 
-- Set the parameters on ethereum and [optimism](https://optimistic.etherscan.io/address/0xad32aa4bff8b61b4ae07e3ba437cf81100af0cd7#readContract) DAI wrappers to the following:
- - `maxTokenAmount` 20m DAI
- - `burnFeeRate` 10 bp
- - `mintFeeRate` Peg (around 1%) and lower it gradually until we reach 25 bp in incremental steps
+Set the parameters on ethereum and [optimism](https://optimistic.etherscan.io/address/0xad32aa4bff8b61b4ae07e3ba437cf81100af0cd7#readContract) DAI wrappers to the following:
+- `maxTokenAmount` 20m DAI
+- `burnFeeRate` 10 bp
+- `mintFeeRate` Peg (around 1%) and lower it gradually until we reach 25 bp in incremental steps
  
 ## Abstract
  
