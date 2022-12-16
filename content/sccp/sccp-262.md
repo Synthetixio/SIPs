@@ -3,7 +3,7 @@ sccp: 262
 network: Optimism
 title: Increase Spot sETH Fees
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Approved
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x096e0c0e7f22b1cfeed5e33d25ea94db2be936aa37161b857273906f8274794d
 created: 2022-12-14
