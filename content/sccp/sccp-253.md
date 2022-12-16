@@ -3,7 +3,7 @@ sccp: 253
 network: Ethereum & Optimism
 title: Update ETH Wrapper Parameters
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Rejected
 created: 2022-11-28
 type: Governance
 ---
