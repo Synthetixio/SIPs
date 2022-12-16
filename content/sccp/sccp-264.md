@@ -48,8 +48,16 @@ The motivation behind this are as follows:
 - Fragmentation will only increase when sUSD/sETH are migrated to snxUSD/snxETH
 - Incentives and bribes do not in principle increase the supply of synths
  
-It is important to mention that this is a temporary scaling solution and that DAI Wrappers will need to be unwound in the next 6 months in order to fully migrate to v3, hence unwind on V2x is a technical guarantee. Alternative scaling solutions would have materialized by then in the form of [SIP-256](https://sips.synthetix.io/sips/sip-256/) and on-boarding other collaterals such as ETH for issuance. The precise details of DAI unwind will be laid out when the pertinent v3 SIPs are ready for release.
+It is important to mention that this is a temporary scaling solution and that DAI Wrappers will need to be unwound in the next 6 months in order to fully migrate to v3, hence unwind on V2x is a technical guarantee. Alternative scaling solutions would have materialized by then in the form of [SIP-256](https://sips.synthetix.io/sips/sip-256/) and on-boarding other collaterals such as ETH for issuance. 
 
+### Dai Unwind 
+The precise details of DAI unwind will be laid out when the pertinent v3 SIPs are ready for release, but it could take the following form:
+- set DAI wrapper `burnFeeRate` to e.g. -5bps and limit to 0 DAI so it winds down in one direction
+- allow snxUSD to be interconverted to sUSD
+- this creates an arb to do: snxUSD > sUSD > DAI > sUSD > snxUSD 
+Although this will cost the protocol, on the order of $100k, more than offset by the fees that will be earned while DAI is wrapped
+
+### Further Scaling
 One final point, more scaling might be required, to be laid out in futures SCCP's, based the demand for sUSD and the peg. This will take the form of a combination of DAI and ETH wrapper capacity increases in order to control the skeweness of the debt pool.
  
  
