@@ -1,7 +1,7 @@
 ---
 kip: 46
 title: Trial Liquidity Mining on Velodrome  
-status: Draft
+status: Implemented
 author: bangrygoose
 created: 2022-11-27
 ---
