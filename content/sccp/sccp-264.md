@@ -15,7 +15,7 @@ type: Governance
 This SCCP proposes to implement the following:
 
 Create DAI wrapper on ethereum by calling [createWrapper](https://etherscan.io/address/0x02f9bC46beD33acdB9cb002fe346734CeF8a9480#writeContract) with the following parameters:
- - token: `0x5155319e66DF10366C049515c29FC937d2a45e55`
+ - token: `0x6B175474E89094C44Da98b954EedeAC495271d0F`
  - currencyKey: `sUSD`
  - synthContractName: `SynthsUSD`
 
