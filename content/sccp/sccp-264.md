@@ -13,10 +13,14 @@ type: Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
  
 This SCCP proposes to implement the following:
+
 - Create DAI wrapper on ethereum by calling [createWrapper](https://etherscan.io/address/0x02f9bC46beD33acdB9cb002fe346734CeF8a9480#writeContract) with the following parameters:
- - token: `0x5155319e66DF10366C049515c29FC937d2a45e55`
- - currencyKey: `sUSD`
- - synthContractName: `SynthsUSD`
+ 
+ a) token: `0x5155319e66DF10366C049515c29FC937d2a45e55`
+ 
+ b) currencyKey: `sUSD`
+ 
+ c) synthContractName: `SynthsUSD`
 
 - Set the parameters on ethereum and [optimism](https://optimistic.etherscan.io/address/0xad32aa4bff8b61b4ae07e3ba437cf81100af0cd7#readContract) DAI wrappers to the following:
  - `maxTokenAmount` 20m DAI
