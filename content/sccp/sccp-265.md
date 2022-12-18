@@ -5,6 +5,8 @@ title: Update ETH Wrapper Parameters
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2022-12-18
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xbefe8e0526da71a865ab3eb16fd83dbee08c0be6395d945285b2f366c48d853b
 type: Governance
 ---
 
