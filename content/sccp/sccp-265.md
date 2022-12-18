@@ -15,7 +15,7 @@ type: Governance
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
 - Increase the `maxTokenAmount` on the ETH Wrapper to 15k ETH on both Ethereum and Optimism, from 5000 and 3700 ETH respectively.
-- Increase the `burnFeeRate` on the ETH wrappr to 10 bp, from 5 bp on optimism and 5% on ethereum.
+- Alter the `burnFeeRate` on the ETH wrappr to 10 bp, from 5 bp on optimism and 5% on ethereum.
 - Lower the `mintFeeRate` on the ETH wrappr from the market rate to 25 bp in iterative steps.
 
 ## Abstract
