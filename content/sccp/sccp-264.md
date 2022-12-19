@@ -3,7 +3,7 @@ sccp: 264
 network: Ethereum & Optimism
 title: DAI Wrapper
 author: Kaleb (@kaleb-keny), Afif (@aband1)
-status: Vote_Pending
+status: Approved
 created: 2022-12-16
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x32ac4e8699e02d5f4d32c53b213f3666f693660f55abc8b6b50dff8600c7226b
