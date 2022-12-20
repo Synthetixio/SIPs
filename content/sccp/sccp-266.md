@@ -22,7 +22,7 @@ Lower  the `mintFeeRate` on the DAI wrappr to 10 bp, from 25 bp.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-- The `mintFeeRate` determines the fee that is paid when minting sUSD by locking up ETH in the ETH wrapper.
+- The `mintFeeRate` determines the fee that is paid when minting sUSD by locking up ETH in the DAI wrapper.
 
 ## Motivation
 
