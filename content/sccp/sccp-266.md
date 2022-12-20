@@ -24,12 +24,11 @@ type: Governance
 
 - The `mintFeeRate` determines the fee that is paid when minting sUSD by locking up ETH in the ETH wrapper.
 
-
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The primary motivation is to encourage arbs that result in a positive skew. Having a 10 bp minting fee, help encourage `DAI > sUSD > sETH > ETH` trades, which would be more favorable in terms of wrapper pricing then `ETH > sETH > sUSD > DAI`
+The primary motivation is to encourage arbs that result in a positive skew on the debt pool. Having a 10 bp minting fee, help favor `DAI > sUSD > sETH > ETH` trades, over `ETH > sETH > sUSD > DAI`
 
 
 ## Copyright
