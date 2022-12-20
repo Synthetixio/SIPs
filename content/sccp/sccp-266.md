@@ -16,7 +16,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-- Change the `mintFeeRate` on the DAI wrappr to 10 bp, from 25 bp.
+Lower  the `mintFeeRate` on the DAI wrappr to 10 bp, from 25 bp.
 
 ## Abstract
 
