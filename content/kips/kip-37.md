@@ -1,7 +1,7 @@
 ---
 kip: 37
 title: DAO Role Compensation Streams 
-status: Approved
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-07-27
 ---

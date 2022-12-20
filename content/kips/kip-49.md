@@ -1,7 +1,7 @@
 ---
 kip: 49
 title: One month extension of incentivized Arrakis (UNI-V3) LP pool
-status: Draft
+status: Implemented
 author: SteveNX
 created: 2022-12-09
 ---
