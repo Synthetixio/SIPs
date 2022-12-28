@@ -22,7 +22,7 @@ Add the below addresses as 1inch integration contracts with the same parameters 
 
 The `DirectIntegration` addresses are contracts setup by integrators, that are allowed to trade at specialized fees and parameters, given that they satisfy certain conditions. In 1inch's case, they abide by the CRV <> SNX <> CRV trading route.
 
-The full set of 1inch addresses, for future reference, is as follows:
+The full set of 1inch `DirectIntegration` addresses, for future reference, is as follows:
 - `0xcc0333574bac61e0d891053083465ef68f544d2e`
 - `0x15a3c296eae49734bc467f95815f6dea9a3de233` 
 - `0xf021f084477242fe6835c67234b4345de4db19e1`
