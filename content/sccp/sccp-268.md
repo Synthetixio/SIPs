@@ -3,7 +3,7 @@ sccp: 268
 network: Ethereum & Optimism
 title: Update staking liquidation parameters 
 author: Afif (@aband1)
-status: Implemented
+status: Draft
 created: 2022-12-29
 type: Governance
 ---
