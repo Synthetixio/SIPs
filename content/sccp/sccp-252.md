@@ -3,7 +3,7 @@ sccp: 252
 network: Ethereum
 title: LUSD Unwrap
 author: Kaleb (@kaleb-keny)
-status: Approved
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x100febcc91c0282db007645cc535ffcbc603f2f6aa3868e0949273ef6016bb21
 created: 2022-11-28

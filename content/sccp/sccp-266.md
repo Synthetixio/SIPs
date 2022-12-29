@@ -3,7 +3,9 @@ sccp: 266
 network: Ethereum & Optimism
 title: Parameter Changes for the Liquidation Ratio, Liquidation Penalty, and Self Liquidation Penalty
 author: Gauntlet
-status: Draft
+status: Rejected
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xc9efec772370298862f9da70a3791f1565b8dc0bda23539c55f7d6b7839799c2
 created: 2022-12-21
 type: Governance
 
