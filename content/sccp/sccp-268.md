@@ -14,10 +14,10 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-- Reduce `liquidationPenalty` to 75% from 60%  
-- Reduce `selfLiquidationPenalty` to 70% from 50%
+- Reduce `liquidationPenalty` from 75% to 60%  
+- Reduce `selfLiquidationPenalty` from 70% to 50%
 - Reduce `liquidationRatio` from 175% to 160%
-- Reduce `liquidationEscrowDuration` to 6 months from 12 months  
+- Reduce `liquidationEscrowDuration` from 12 months to 6 months  
 
 ## Abstract
 
