@@ -1,7 +1,7 @@
 ---
 kip: 36
 title: KIP Completion Incentives
-status: Approved
+status: Implemented
 author: Andrew Trudel (@Andrew-Synthetix)
 created: 2022-10-04
 ---
