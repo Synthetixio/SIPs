@@ -29,7 +29,7 @@ The `maxMarketValueUSD` is the maximum open interest position on a given market.
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The planned deprecation of the market, as the last users had already exited the market. Reference to [SCCP-258](https://sips.synthetix.io/sccp/sccp-258/) and [SCCP-237](https://sips.synthetix.io/sccp/sccp-237/).
+The planned deprecation of the market, as the last users had already exited. Reference to [SCCP-258](https://sips.synthetix.io/sccp/sccp-258/) and [SCCP-237](https://sips.synthetix.io/sccp/sccp-237/).
 
 ## Copyright
 
