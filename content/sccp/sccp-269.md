@@ -16,7 +16,7 @@ proposal: >-
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the `exchangeFeeRate` on forex synths (sEUR,sJPY,sCHF,SAUD,sKRW and sGBP) to 15 bp from 5 bp.
+Increase the `exchangeFeeRate` on forex synths (sEUR,sJPY,sCHF,SAUD,sKRW and sGBP) to 15 bp from 5 bp. Note this change does not affect atomic spot forex exchanges.
 
 ## Abstract
 
@@ -29,7 +29,7 @@ The `exchangeFeeRate` is the fee rate paid on exchanges into a given synths.
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The main reason is to lean against the economic arbitrage that results from  chainlink having a high threshold for which a price updates are pushed, of 20 to 30 bp vis-a-vis the low fee being charged of 5 bp.
+The main reason is to lean against the economic arbitrage that results from  chainlink having a high threshold for which price updates are pushed, around 20 to 30 bp, relative to the low fee being charged of 5 bp.
 
 ## Copyright
 
