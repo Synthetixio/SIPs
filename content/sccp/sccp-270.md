@@ -1,5 +1,5 @@
 ---
-sccp: 269
+sccp: 270
 network: Optimism
 title: Lower Max Market Value USD - sDebtRatio
 author: Kaleb (@kaleb-keny)
