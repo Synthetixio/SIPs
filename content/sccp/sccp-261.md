@@ -3,7 +3,9 @@ sccp: 261
 network: Optimism
 title: Increase Max Initial Leverage Slightly on All Markets
 author: Burt Rock (@BurtRock)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x6a517f598a79f8c4f0804333ba39f3c156680608ffa2cd04e22cf09ea40c5d69
 created: 2022-12-08
 type: Governance
 ---
