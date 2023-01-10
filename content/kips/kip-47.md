@@ -1,7 +1,7 @@
 ---
 kip: 47
 title: Use Reclaimed Trade Rewards to hold Monthly Trade Contests
-status: Draft
+status: Rejected
 author: Kethic (@kethcode)
 created: 2022-12-04
 revised: 2023-01-07
