@@ -1,5 +1,5 @@
 ---
-kip: 
+kip: 55
 title: Cross-Margin v2.0.0 (CMv2)
 status: Draft
 author: Jared Borders (@jaredborders), Jeremy Chiaramonte (@jchiaramonte7)
@@ -74,9 +74,3 @@ CMv2 will implement new functions that allow complex order composition that comb
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
-
-
-
-
-
