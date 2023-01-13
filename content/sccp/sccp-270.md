@@ -3,11 +3,11 @@ sccp: 270
 network: Optimism
 title: Lower Max Market Value USD - sDebtRatio
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Approved
 created: 2022-01-09
 type: Governance
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0xaeafaf7c99d01b0f6a71bfec09777b9bd1179d24137b6011425db32b27d058eb
+  https://snapshot.org/#/snxgov.eth/proposal/0xa75779adc31d136182195000262bebea40e049b5144fe96c7579bd83e624eddc
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->

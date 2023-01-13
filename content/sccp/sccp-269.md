@@ -3,7 +3,7 @@ sccp: 269
 network: Ethereum
 title: Update Fees - Spot Exchanges
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Approved
 created: 2022-01-09
 type: Governance
 proposal: >-
