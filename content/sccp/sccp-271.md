@@ -3,9 +3,11 @@ sccp: 271
 network: Optimism
 title: Increase PerpsV2 Keeper Incentives
 author: David (@davidvuong)
-status: Draft
+status: Approved
 created: 2023-01-11
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xa438a8474207688b7ee31fb3c5c437d7c97b907f3922affbc3e3360c9ce9e80d
 ---
 
 # Simple Summary
