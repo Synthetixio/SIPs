@@ -39,7 +39,7 @@ The new full set of 1inch DirectIntegration addresses is as follows:
 
 # Motivation
 
-The main motivation is that fusion mode is a better UX overally, as it provides MEV protection to users. Furthermore, putting the transaction execution in the hands of the 1inch solvers / settlement bots incorporates a small but important amount of latency which allows us to lower fees further.
+The main motivation is that fusion mode is a better UX overally, as it offers MEV protected zero gas fee transactions. Furthermore, putting the transaction execution in the hands of the 1inch solvers / settlement bots incorporates a small but important amount of latency which allows us to lower fees further.
 
 # Copyright
 
