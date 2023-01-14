@@ -12,6 +12,7 @@ type: Governance
 
 Switch the 1inch Direct Integration addresses to utilize the [Fusion](https://1inch.io/fusion/) offering and lower the fee on exchanges to `sETH` and `sBTC` to 5 bp from 7 bp and 10 bp respectively:
 
+```
 {'currencyKey': 'sBTC',
  'dexPriceAggregator': '0x228bCc970003Ca7588337604AFD9Fc5d92bF1C8B',
  'atomicMaxVolumePerBlock': 5m$,
@@ -27,7 +28,7 @@ Switch the 1inch Direct Integration addresses to utilize the [Fusion](https://1i
  'atomicMaxVolumePerBlock': 5m$,
  'atomicVolatilityUpdateThreshold': 10,
  'atomicExchangeFeeRate': 5 bp}
-
+```
 
 # Abstract
 
