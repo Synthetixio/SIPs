@@ -3,7 +3,7 @@ sccp: 270
 network: Optimism
 title: Lower Max Market Value USD - sDebtRatio
 author: Kaleb (@kaleb-keny)
-status: Approved
+status: Implemented
 created: 2022-01-09
 type: Governance
 proposal: >-
