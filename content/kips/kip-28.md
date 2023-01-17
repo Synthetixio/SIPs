@@ -1,7 +1,7 @@
 ---
 kip: 28
 title: Trading Incentives 
-status: Approved
+status: Rejected
 author: Andrew Trudel (@Andrew-Synthetix), Burt Rock (@BurtRock)
 created: 2022-08-17
 ---
