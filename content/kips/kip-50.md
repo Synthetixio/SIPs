@@ -1,7 +1,7 @@
 ---
 kip: 50
 title: Velodrome/Uniswap Liquidity Mining Test 2
-status: Draft
+status: Implemented
 author: John Wineman (@jwineman)
 created: 2023-01-01
 ---
