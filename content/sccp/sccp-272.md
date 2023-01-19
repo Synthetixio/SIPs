@@ -3,7 +3,7 @@ sccp: 272
 network: Ethereum & Optimism
 title: Update Wrapper Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2023-01-14
 type: Governance
 proposal: >-

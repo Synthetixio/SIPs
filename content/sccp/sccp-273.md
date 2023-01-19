@@ -3,7 +3,9 @@ sccp: 273
 network: Ethereum & Optimism
 title: Pause new loans 
 author: Afif (@aband1)
-status: Vote_Pending
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x8e76ede3443ef6f6b20d26c734989d0f8916ab033833c764cd65dfffac6e9f66
 created: 2023-01-14
 type: Governance
 ---
