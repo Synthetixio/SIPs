@@ -32,7 +32,7 @@ Add the [fusion-enabled](https://1inch.io/fusion/) 1inch contract `0xa77c88abcaa
 
 # Abstract
 
-The DirectIntegration addresses are contracts setup by integrators, that are allowed to trade at specialized fees and parameters, given that they satisfy certain conditions. In 1inch's case, they abide by the CRV <> SNX <> CRV trading route. The following variables were defined under 1inch integration:
+The DirectIntegration addresses are contracts setup by integrators, that are allowed to trade at specialized fees and parameters, given that they satisfy certain conditions. In 1inch's case, they abide by the CRV <> SNX <> CRV trading route. Below are the variables being configured in this SCCP:
 
 - `dexPriceAggregator` is the uniswap aggregator being used pointing towards the uniswap 5 bp pools.
 - `atomicMaxVolumePerBlock` is the maximum volume, in sUSD, allowed per block.
