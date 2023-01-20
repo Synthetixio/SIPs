@@ -38,6 +38,7 @@ The DirectIntegration addresses are contracts setup by integrators, that are all
 - `atomicMaxVolumePerBlock` is the maximum volume, in sUSD, allowed per block.
 - `atomicExchangeFeeRate` is the fee rate paid on exchanges into a specific synth.
 
+Note that given the recent 1inch contract update, historical 1inch addresses are no longer be operational. 
 
 # Motivation
 
