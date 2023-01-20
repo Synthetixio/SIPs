@@ -10,7 +10,7 @@ type: Governance
 
 # Simple Summary
 
-Add the [fusion-enabled](https://1inch.io/fusion/) 1inch Direct-Integration contract `0xa77c88abcaa770c54a6cfbfd0c586a475537bbc1` to the DirectIntegration manager, with the following parameter set:
+Add the [fusion-enabled](https://1inch.io/fusion/) 1inch contract `0xa77c88abcaa770c54a6cfbfd0c586a475537bbc1` to Synthetix's DirectIntegration, with the following parameter set:
 
 ```
 {'currencyKey': 'sBTC',
