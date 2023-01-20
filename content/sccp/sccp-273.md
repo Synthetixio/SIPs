@@ -1,16 +1,16 @@
 ---
-sccp: 273
+sccp: 274
 network: Ethereum
-title: Update 1inch Direct Integration Cross Asset Swaps / Fusion Mode
+title: Add 1inch Direct Integration Cross Asset Swaps / Fusion Mode
 author: Kaleb (@kaleb-keny)
-status: Draft
-created: 2023-01-14
+status: Vote_Pending
+created: 2023-01-20
 type: Governance
 ---
 
 # Simple Summary
 
-Switch the 1inch Direct Integration addresses to utilize the [Fusion](https://1inch.io/fusion/) offering and lower the fee on exchanges to `sETH` and `sBTC` to 5 bp from 7 bp and 10 bp respectively:
+Add the [fusion-enabled](https://1inch.io/fusion/) 1inch Direct-Integration contract `0xa77c88abcaa770c54a6cfbfd0c586a475537bbc1` to the DirectIntegration manager, with the following parameter set:
 
 ```
 {'currencyKey': 'sBTC',
@@ -32,14 +32,16 @@ Switch the 1inch Direct Integration addresses to utilize the [Fusion](https://1i
 
 # Abstract
 
-The DirectIntegration addresses are contracts setup by integrators, that are allowed to trade at specialized fees and parameters, given that they satisfy certain conditions. In 1inch's case, they abide by the CRV <> SNX <> CRV trading route.
+The DirectIntegration addresses are contracts setup by integrators, that are allowed to trade at specialized fees and parameters, given that they satisfy certain conditions. In 1inch's case, they abide by the CRV <> SNX <> CRV trading route. The following variables were defined under 1inch integration:
 
-The new full set of 1inch DirectIntegration addresses is as follows:
--  `ADDRESS_HERE`
+- `dexPriceAggregator` is the uniswap aggregator being used pointing towards the uniswap 5 bp pools.
+- `atomicMaxVolumePerBlock` is the maximum volume, in sUSD, allowed per block.
+- `atomicExchangeFeeRate` is the fee rate paid on exchanges into a specific synth.
+
 
 # Motivation
 
-The main motivation is that fusion mode is a better UX overally, as it offers MEV protected, zero gas fee transactions to users. Furthermore, putting the transaction execution in the hands of the 1inch solvers and settlement bots incorporates a small but important amount of latency which allows us to lower fees further.
+The main motivation is to boost volume, as fusion mode incorporates a small amount of latency, due to trade the trade being executed by 1inch keepers. Hence, we should be able to provide more competitive fees.
 
 # Copyright
 
