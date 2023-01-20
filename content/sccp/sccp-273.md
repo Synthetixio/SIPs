@@ -40,7 +40,7 @@ The DirectIntegration addresses are contracts setup by integrators, that are all
 
 # Motivation
 
-The main motivation is to boost volume, as fusion mode incorporates a small amount of latency, due to trade the trade being executed by 1inch keepers. Hence, we should be able to provide more competitive fees.
+The main motivation is to boost volume, as fusion mode incorporates a small amount of latency, due to the trade being executed by 1inch keepers. Hence, we should be able to provide more competitive fees.
 
 # Copyright
 
