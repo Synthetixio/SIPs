@@ -5,6 +5,8 @@ title: Add 1inch Direct Integration Cross Asset Swaps / Fusion Mode
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2023-01-20
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xaf93b1a51f63d4f98c207beaf34e6a894ff67f90980c82ad47bfa21fb0c65ce2
 type: Governance
 ---
 
