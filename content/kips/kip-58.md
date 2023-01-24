@@ -36,7 +36,7 @@ uint256 lastStakeTime; // reset to current block timestamp when KWENTA is staked
 
 ### Historical Staked Amounts (Checkpointing) 
 
-Additionally, a checkpointing system will be added to StakingRewards to keep track of staked balances and total staked balances over time. The checkpointing system records whenever staked amounts change (ie. staking/unstaking). This also encompases staked escrow and the total staked amounts in the contract. The mechanism was inspired by the various [ve](https://curve.readthedocs.io/dao-vecrv.html) tokens. 
+Additionally, a checkpointing system will be added to StakingRewards to keep track of staked balances and total staked balances over time. The checkpointing system records whenever staked amounts change (ie. staking/unstaking). This also encompases staked escrow and the total staked amounts in the contract. The mechanism was inspired by the various [VE](https://curve.readthedocs.io/dao-vecrv.html) tokens. 
 
 Each time a token holder stakes, a new entry is added to a list (array) of new **total** amount staked and the block height at which this change was made. The same is done when unstaking, but the total balance is subtracted from instead. This list is effectively an onchain changelog for the entire balance history of an account. 
 
@@ -79,7 +79,7 @@ Current `balanceOf()`, `escrowedBalanceOf()`, `totalSupply()` lookups will conti
 - [KIP-42: Implement getRewardOnBehalf and stakeEscrowOnBehalf methods to KWENTA staking contracts](./kip-42.md)
     - `getRewardOnBehalf(address)` will be added to allow 3rd party services to claim rewards on your behalf
 - [KIP-45: Adjust allocation of KWENTA forfeited through early vesting](./kip-45.md)
-    - faciliated by checkpointed balances
+    - can be faciliated through checkpointed balances
 
 ### Migration
 
@@ -90,6 +90,12 @@ The mapping of staked escrowed balances will be copied over from the StakingRewa
 The V1 staking contract will continue to function, without rewards, to allow people to migrate or claim their remaining rewards at their own pace. Only the migration of staked escrowed balances will be automatic. 
 
 Inflation will be directed to the new V2 staking contract incentivizing immediate migration. 
+
+### Why not veKWENTA?
+
+A tempting upgrade would be to switch KWENTA to a vote escrow model (VE). The idea being that longer term locking of KWENTA would increase staking weight -- incentivizing higher conviction, longer term decision makers. An upgrade of this type would require a full rewrite of the Staking contract which would be costly, time intensive, and mostly out of roadmap scope at this time.
+
+The proposed solution here is a hybrid approach which approximates the architecture of a VE system with minimal changes to the current contracts. This allows us to build up modules (onchain voting, fee distribution, exit fee redistribution) around staking. And if the DAO in the future decides to switch to veKWENTA, the modules developed here will be able to easily interface with a full VE system.
 
 ## Copyright
 
