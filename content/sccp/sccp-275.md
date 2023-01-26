@@ -13,8 +13,8 @@ type: Governance
 # Simple Summary
 
 This SCCP proposes to implement the following:
-  - Increase the WETH wrapper `burnFeeRate` on ETH to 50 bp from 10 bp
-  - Lower the the DAI wrapper `burnFeeRate` on ETH to 5 bp from 10 bp
+  - Increase the WETH wrapper `burnFeeRate`  to 50 bp from 10 bp
+  - Lower the the DAI wrapper `burnFeeRate`  to 5 bp from 10 bp
 
 # Abstract
 
@@ -22,7 +22,7 @@ The `burnFeeRate` is a parameter that determines the fee to be paid in order to 
 
 # Motivation
 
-The main motivation is to lean against the increasing ETH skew in the debt pool, by reducing the chance that arbitrage bots would reverse sUSD to sETH trade flow with exchanges, rather than with bruning sETH to receive WETH from the wrapper.
+The main motivation is to lean against the increasing ETH skew in the debt pool, by increasing the chance that arbitrage bots would reverse sUSD to sETH trade flow imbalance in the curve pools with synth exchanges, rather than using the ETH wrapper.
 
 # Copyright
 
