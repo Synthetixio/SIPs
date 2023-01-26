@@ -1,6 +1,6 @@
 ---
 sccp: 274
-network: Ethereum
+network: Ethereum & Optimism
 title: Update Wrapper Parameters
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
