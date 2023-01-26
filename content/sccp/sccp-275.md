@@ -1,5 +1,5 @@
 ---
-sccp: 274
+sccp: 275
 network: Ethereum & Optimism
 title: Update Wrapper Parameters
 author: Kaleb (@kaleb-keny)
