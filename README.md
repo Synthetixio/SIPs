@@ -1,4 +1,4 @@
-# SEPs [![Discord](https://img.shields.io/discord/413890591840272394.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discordapp.com/channels/413890591840272394/) [![Twitter Follow](https://img.shields.io/twitter/follow/synthetix_io.svg?label=synthetix_io&style=social)](https://twitter.com/synthetix_io)
+# SEPs [![Discord](https://img.shields.io/discord/966432149022593074.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discordapp.com/channels/thesoftdao/) [![Twitter Follow](https://img.shields.io/twitter/follow/thesoftdao.svg?label=Soft DAO&style=social)](https://twitter.com/thesoftdao)
 
 Soft Improvement Proposals (SEPs) describe standards for the Soft platform, including core protocol specifications and contract standards.
 
@@ -17,7 +17,7 @@ When you believe your SEP is mature and ready to progress past the Draft phase, 
 
 Once assessed, a SEP is moved into `Feasibility` and a Core Contributor is assigned. The Core Contributor will work with the author to conduct a feasibility study. Once the Author and the Core Contributor are satisfied, a SEP is moved to `SC Review Pending`. Once the Soft Council has formally reviewed the SEP during the SEP presentation they can either move it to a vote or send it back to `Feasability`. A vote is conducted within the `INSERT ENS` snapshot space. If a vote by the Soft Council reaches quorum the SEP is moved to `Approved`, otherwise it is `Rejected`.
 
-Once the SEP has been implemented by either the protocol DAO or the SEP author and relevant parties, the SEP is assigned the `Implemented` status. There is a 500 sUSD bounty for proposing a SEP that reaches the `Implemented` phase.
+Once the SEP has been implemented by either the protocol DAO or the SEP author and relevant parties, the SEP is assigned the `Implemented` status. 
 
 # SEP Statuses
 
