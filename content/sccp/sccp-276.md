@@ -5,8 +5,6 @@ title: Update 1inch Fusion Contracts
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2023-02-03
-proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x70c0f866dee5b94d6a0bac937e67bcd48c8f6a624ade3a0a06031750be10b2a2
 type: Governance
 ---
 
