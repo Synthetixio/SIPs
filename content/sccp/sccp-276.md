@@ -10,7 +10,7 @@ type: Governance
 
 # Simple Summary
 
-This SCCP proposes to revert `0xa77c88abcaa770c54a6cfbfd0c586a475537bbc1` access the standard fees until 1inch updates their contracts, expected early next week.
+This SCCP proposes to revert `0xa77c88abcaa770c54a6cfbfd0c586a475537bbc1` access the DirectIntegration fees mentioned below until 1inch updates their contracts, expected early next week.
 
 ```
 {'currencyKey': 'sBTC',
@@ -32,11 +32,11 @@ This SCCP proposes to revert `0xa77c88abcaa770c54a6cfbfd0c586a475537bbc1` access
 
 # Abstract
 
-The contract setup by 1inch is no longer suitable, as it does not have the necessary fusion-mode protections that enforce trade delay. A new contract is being created for the atomic exchange offering and is expected to be integrated the coming few days.
+The contract setup by 1inch is no longer suitable for atomic swaps, as it does not have the necessary fusion protections that enforce a trade delay. A new contract is being worked on specifically for the atomic exchange offering by the 1inch team and is expected to be integrated the coming few days.
 
 # Motivation
 
-The main motivation is to lean against latency attacks where the proposed low fees were proposed with the assumption that fusion trades would be performed. Without the latter assurances, the protocol could be exposed to latency attacks.
+The main motivation is to lean against latency attacks where the proposed low fees are not appropriate for non-fusion based trades. Hence, reverting access to the previous contract would reduce the change of latency attacks on the protocol.
 
 
 # Copyright
