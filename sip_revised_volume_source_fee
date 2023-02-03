@@ -1,0 +1,58 @@
+---
+sip: 2002
+title: Revised Volume Source Fee Program
+network:  Optimism
+status: Draft
+type: Governance
+author: Mike
+---
+
+## Simple Summary
+Establish a program administered by the Treasury Council to reward Synthetix integrators who drive volume through Synthetix.
+
+
+## Abstract
+This SIP proposes a tiered system for volume rebates paid by the Treasury Council to integrators. 
+
+## Motivation
+The current volume source fee program from SIP-132 does not include Synthetix perps and is limited in its ability to provide an effective and sustainable incentive structure for integrators. With the launch of Perps V2 and the eventual proliferation of new instruments built on Synthetix V3, the protocol should establish resources and incentives for new partners to integrate Synthetix contracts and promote network activity. 
+
+
+## Specification
+
+### Overview
+
+The implementation of this volume program will establish discrete tiers of rewards to be distributed to partners based on total activity. These fees will be paid out by the Synthetix treasury in SNX on a monthly basis. 
+    Tier 1 (<$1M fees generated) - 10% Variable Fee Rate
+    Tier 2: ($1M - $5M fees generated) - 7.5% Variable Fee Rate
+    Tier 3: (>$5M fees generated) - 5% Variable Fee Rate 
+
+### Rationale
+Uncapped incentives that are directly proportional to volume driven by each partner maintains a cost effective sustainable incentive mechanism for the protocol to reward new and existing partners.
+
+### Technical Specification
+
+**Partner Variable Rewards**
+
+The total new partner variable rewards will be distributed monthly
+
+Each partner will then earn a variable fee based on the cumulative fee tier they fall in, starting with 10% of fees generated and ending with a terminal rate of 5% of fees generated. 
+    Tier 1 (<$1M fees generated) - 10% Variable Fee Rate
+    Tier 2: ($1M - $5M fees generated) - 7.5% Variable Fee Rate
+    Tier 3: (>$5M fees generated) - 5% Variable Fee Rate 
+
+This SIP initially applies to Synthetix Perps Markets, but additional _Qualifying Markets_ may be added via SCCP. 
+
+## Test Cases
+
+n/a
+
+## Configurable Values (Via SCCP)
+
+Qualifying Markets
+Variable Fee Rate
+Cumulative Fee Tier Thresholds
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
