@@ -32,7 +32,7 @@ This SCCP proposes to revert `0xa77c88abcaa770c54a6cfbfd0c586a475537bbc1` access
 
 # Abstract
 
-The contract setup by 1inch is no longer suitable for atomic swaps, as it does not have the necessary fusion protections that enforce a trade delay. A new contract is being worked on specifically for the atomic exchange offering by the 1inch team and is expected to be integrated the coming few days.
+The contract setup by 1inch is no longer suitable for atomic swaps, as it does not have the necessary fusion-only protections that enforce a trade delay. A new contract is being worked by the 1inch team, that incorporates those protections and is expected to be integrated the coming few days.
 
 # Motivation
 
