@@ -5,6 +5,8 @@ title: Enable Perps V2 Markets / Update Parameters
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2023-02-07
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x28217f9baa471f9498ee0e671600e3f867cdc3b87baf39eab1d3d653877b6e3a
 type: Governance
 ---
 
