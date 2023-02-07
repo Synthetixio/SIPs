@@ -73,7 +73,7 @@ The parameters configurations description is as follows:
 
 # Motivation
 
-The main motivation is finalize the launch of the markets specified in [SIP-295](https://sips.synthetix.io/sips/sip-295/) and [SIP-2000](https://sips.synthetix.io/sips/sip-2000/).
+The main motivation is to finalize the launch of the markets specified in [SIP-295](https://sips.synthetix.io/sips/sip-295/) and [SIP-2000](https://sips.synthetix.io/sips/sip-2000/).
 
 
 # Copyright
