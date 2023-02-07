@@ -10,7 +10,7 @@ type: Governance
 
 # Simple Summary
 
-This SCCP proposes unpause the below markets and specify/update the parameters to the below at launch:
+This SCCP proposes unpause the below perp markets (except ETH which was is not paused) and specify/update the parameters to the below at launch:
 
 | Ticker | makerFeeBp | takerFeeBp | takerFeeDelayedOrderBp | makerFeeDelayedOrderBp | takerFeeOffchainDelayedOrderBp | makerFeeOffchainDelayedOrderBp | maxMarketValue | skewScale      |
 | ------ | ---------- | ---------- | ---------------------- | ---------------------- | ------------------------------ | ------------------------------ | -------------- | -------------- |
