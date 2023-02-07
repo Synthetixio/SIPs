@@ -61,7 +61,7 @@ The parameters configurations description is as follows:
 - skewScale is the scaling factor of the relevant market in the underlying currency
 - liquidationBufferRatio and liquidationRatioMultiplier consists of the safety buffer on liquidations
 - nextPriceConfirmWindow is the window in chainlink rounds in which next price delayed orders can be triggered
-- delayedOrderConfirmWindow is the period in seconds during which next price delayed orders can be triggered without waiting for a new chainlink price push
+- delayedOrderConfirmWindow is the minimum number of seconds after which next price delayed orders can be triggered if no new chainlink rounds are available
 - minDelayTimeDelta is the minimum period after which delayed orders can be executed
 - maxDelayTimeDelta is the maximum period before which delayed orders can be executed
 - offchainDelayedOrderMinAge is the minimum delay before which offchain orders can be executed
