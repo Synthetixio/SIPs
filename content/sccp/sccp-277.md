@@ -62,16 +62,16 @@ The parameters configurations description is as follows:
 - maker/taker delayed fees pertain to fees for trades at the next chainlink price
 - maker/taker offchain delayed orders pertain to fees charged with the pyth offchain route
 - maxMarketValue is the max market value of the relevant market in the underlying currency
-- skewScale is the scaling factor of the relevant market in the underlying currency
+- skewScale is the scaling factor of the relevant market in the underlying currency for computing PD and Funding Rates
 - liquidationBufferRatio and liquidationRatioMultiplier consists of the safety buffer on liquidations
-- nextPriceConfirmWindow is the window in chainlink rounds in which next price delayed orders can be triggered
+- nextPriceConfirmWindow is the window, in chainlink rounds, in which next price delayed orders can be triggered
 - delayedOrderConfirmWindow is the minimum number of seconds after which next price delayed orders can be triggered if no new chainlink rounds are available
 - minDelayTimeDelta is the minimum period after which delayed orders can be executed
 - maxDelayTimeDelta is the maximum period before which delayed orders can be executed
 - offchainDelayedOrderMinAge is the minimum delay before which offchain orders can be executed
-- offchainDelayedOrderMaxAge is the maximum delay after which offchain orders can be executed
+- offchainDelayedOrderMaxAge is the maximum delay after which offchain orders cannot be executed
 - maxFundingVelocity is the main parameter that allows to nudge funding rates
-- offchainPriceDivergence is the maximum allowable delta from chainlink prices
+- offchainPriceDivergence is the maximum allowable delta between chainlink and pyth prices
 - setting dynamicFeeRounds and maxDynamicFeeRate to the above specified parameters, via DirectIntegrationManager, effectively disables dynamic fees on perp markets
 
 
