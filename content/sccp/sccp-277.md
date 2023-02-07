@@ -51,6 +51,7 @@ Aside from these changes, the perps markets will have the following configuratio
 - offchainDelayedOrderMaxAge: 120 seconds
 - maxFundingVelocity: 3%
 - offchainPriceDivergence: 2%
+- dynamicFeeRounds: 1
 
 
 # Abstract
@@ -70,6 +71,7 @@ The parameters configurations description is as follows:
 - offchainDelayedOrderMaxAge is the maximum delay after which offchain orders can be executed
 - maxFundingVelocity is the main parameter that allows to nudge funding rates
 - offchainPriceDivergence is the maximum allowable delta from chainlink prices
+- setting dynamicFeeRounds, via DirectIntegrationManager, to 1 disables dynamic fees on the respective market
 
 
 
