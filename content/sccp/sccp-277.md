@@ -1,6 +1,6 @@
 ---
 sccp: 277
-network: Ethereum
+network: Optimism
 title: Enable Perps V2 Markets / Update Parameters
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
