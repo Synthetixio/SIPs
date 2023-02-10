@@ -3,7 +3,7 @@ sccp: 278
 network: Optimism
 title: Unwind Perps V1 Markets
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2023-02-08
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x0e26409b6e50ab74c8867341ef131cbe25ae6a32e2ddfeb73fc4a961f46c0a44
