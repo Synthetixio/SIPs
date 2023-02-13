@@ -20,7 +20,7 @@ The `maxTokenAmount` is the max amount allowed to be used to issue a synth with 
 
 # Motivation
 
-The main motivation is to lean against the positive skew ETH on the debt pool, which is around 45%, taking into account the current ETH wrapper being at capacity on the ethereum network and the sUSD peg at a slight premium. Note that if the 5K ETH get wrapped and sent to sUSD the skew would be lowered to 40%.
+The main motivation is to lean against the positive skew ETH on the debt pool, which is around 45%. It is worth noting that currently ETH and DAI wrappers are at full capacity on the ethereum network and the sUSD/sETH pegs at a slight premium. Note that if the 5K ETH get wrapped and sent to sUSD the skew would be lowered to around 40%.
 
 # Copyright
 
