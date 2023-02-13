@@ -6,7 +6,7 @@ author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2023-02-13
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x0e26409b6e50ab74c8867341ef131cbe25ae6a32e2ddfeb73fc4a961f46c0a44
+  https://snapshot.org/#/snxgov.eth/proposal/0x1cf48f2e059c02d1cbad3bbce3e0c3af38ba7025bb34b86bdf4268f008e9326b
 type: Governance
 ---
 
