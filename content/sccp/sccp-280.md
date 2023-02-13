@@ -1,7 +1,7 @@
 ---
 sccp: 280
 network: Optimism
-title: Increase the 
+title: Increase the `rateStalePeriod`
 author: Kaleb (@kaleb-keny)
 status: Implemented
 created: 2023-02-13
