@@ -16,11 +16,11 @@ This SCCP proposes to increase the `rateStalePeriod` on optimism from 5400 secon
 
 # Abstract
 
-The `rateStalePeriod` is the number of seconds since the last chainlink price push beyound which exchanges and perps interactions are disabled.
+The `rateStalePeriod` is the number of seconds since the last chainlink price push beyond which exchanges and perps interactions are disabled.
 
 # Motivation
 
-The main motivation is to accomodate new perp markets that have a higher chainlink heartbeat. Note that the risk on the debt pool and traders is minimal due to the low deviations (20 bp) on most [chainlink feeds](https://docs.chain.link/data-feeds/price-feeds/addresses?network=optimism).
+The main motivation is to accomodate the new perp markets that have a higher chainlink heartbeat. Note that the risk on the debt pool and traders is minimal due to the low deviations (20 bp) on all [chainlink feeds](https://docs.chain.link/data-feeds/price-feeds/addresses?network=optimism).
 
 # Copyright
 
