@@ -12,7 +12,7 @@ type: Governance
 
 # Simple Summary
 
-This SCCP proposes to increase the maxTokenAmount on the ETH wrapper from 15k ETH to 20k ETH.
+This SCCP proposes to increase the maxTokenAmount on the [ETH wrapper](https://etherscan.io/address/0xCea392596F1AB7f1d6f8F241967094cA519E6129) from 15k ETH to 20k ETH.
 
 # Abstract
 
