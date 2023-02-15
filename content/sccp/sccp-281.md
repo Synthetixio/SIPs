@@ -25,8 +25,8 @@ The parameter descriptions is as follows:
 
 # Motivation
 
-Currently the atomic price is quoted using the worse price between chainlink, uniswap-twap and uniswap-spot. Hence, lowering the `atomicTwapWindow` would result in better prices for traders being quoted in the atomic swap function.
-The `atomicVolatilityUpdateThreshold` was originally set to 10 minutes, as a precautionary measure of having too much chainlink volatility and using prices with slight delay. However given the use case for atomic swaps that builds upong cowswap and 1inch, this measure can be lowered to zero safely. The impact of this change is it results in a significant saving in gas and hence allow for more smaller sized trades.
+Currently the atomic price is quoted using the worse price between chainlink, uniswap-twap and uniswap-spot. Hence, lowering the `atomicTwapWindow` would result in better execution for traders overall.
+While the `atomicVolatilityUpdateThreshold`, originally set to 10 minutes, as a precautionary measure in order to lean againstm extreme market volatility. However given the emerging use case for atomic swaps, that builds on top of cowswap and 1inch fusion offerings, this precautionary measure can be removed altogther. The impact of this change is a significant saving in gas and hence allows for smaller sized trades.
 
 # Copyright
 
