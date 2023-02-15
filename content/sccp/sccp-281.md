@@ -14,7 +14,7 @@ type: Governance
 
 This SCCP proposes to implement the following:
 - Lower the default `atomicTwapWindow` from 600 seconds to 60 seconds.
-- Lower the default `considerationWindow` to 0 seconds to 600 seconds on both `sETH` and `sBTC`.
+- Lower the default `considerationWindow` to 0 seconds from 600 seconds on both `sETH` and `sBTC`.
 
 # Abstract
 
