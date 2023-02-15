@@ -20,13 +20,14 @@ This SCCP proposes to implement the following:
 
 The parameter descriptions is as follows:
 - The `atomicTwapWindow` represents the length of time, where the relevant uniswap average price is fetched.
-- The `considerationWindow` is the length of time, in which chainlink price updates are counted in order to trigger the circuit breaker
+- The `considerationWindow` is the length of time, in which chainlink price updates are counted in order to trigger the circuit breaker when `atomicVolatilityUpdateThreshold` is exceeded.
 
 
 # Motivation
 
-Currently the atomic price is quoted using the worse price between chainlink, uniswap-twap and uniswap-spot. Hence, lowering the `atomicTwapWindow` would result in better execution for traders overall.
-While the `atomicVolatilityUpdateThreshold`, originally set to 10 minutes, as a precautionary measure in order to lean againstm extreme market volatility. However given the emerging use case for atomic swaps, that builds on top of cowswap and 1inch fusion offerings, this precautionary measure can be removed altogther. The impact of this change is a significant [saving in gas](https://github.com/Synthetixio/synthetix/blob/develop/contracts/ExchangeRatesWithDexPricing.sol#L225) and allows smaller sized trades to be priced-in.
+Pertaining to the first parameter chance, currently the atomic price is quoted using the worse price between chainlink, uniswap-twap and uniswap-spot. Hence, lowering the `atomicTwapWindow` would result in better execution for traders overall.
+
+While `atomicVolatilityUpdateThreshold`, was originally set to 10 minutes, as a precautionary measure in order to lean againstm extreme market volatility. However given the emerging use case for atomic swaps, that builds on top of cowswap and 1inch-fusion offerings, this precautionary measure can be disabled.  The impact of this change is a significant [saving in gas](https://github.com/Synthetixio/synthetix/blob/develop/contracts/ExchangeRatesWithDexPricing.sol#L225) and allows smaller sized trades to be priced-in.
 
 # Copyright
 
