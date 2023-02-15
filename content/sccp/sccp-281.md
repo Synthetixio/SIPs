@@ -18,7 +18,7 @@ This SCCP proposes to implement the following:
 
 # Abstract
 
-The parameter descriptions is as follows:
+The parameters are described as follows:
 - The `atomicTwapWindow` represents the length of time, during which the relevant uniswap average price is computed.
 - The `considerationWindow` is the length of time, during which chainlink price updates are counted in order to determine whether the volatility circuit breaker is broken.
 
