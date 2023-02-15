@@ -14,7 +14,7 @@ type: Governance
 
 This SCCP proposes to implement the following:
 - Lower the default `atomicTwapWindow` from 600 seconds to 60 seconds.
-- Lower the default `considerationWindow` to 0 seconds to 600 seconds.
+- Lower the default `considerationWindow` to 0 seconds to 600 seconds on both `sETH` and `sBTC`.
 
 # Abstract
 
@@ -26,7 +26,7 @@ The parameter descriptions is as follows:
 # Motivation
 
 Currently the atomic price is quoted using the worse price between chainlink, uniswap-twap and uniswap-spot. Hence, lowering the `atomicTwapWindow` would result in better execution for traders overall.
-While the `atomicVolatilityUpdateThreshold`, originally set to 10 minutes, as a precautionary measure in order to lean againstm extreme market volatility. However given the emerging use case for atomic swaps, that builds on top of cowswap and 1inch fusion offerings, this precautionary measure can be removed altogther. The impact of this change is a significant saving in gas and hence allows for smaller sized trades.
+While the `atomicVolatilityUpdateThreshold`, originally set to 10 minutes, as a precautionary measure in order to lean againstm extreme market volatility. However given the emerging use case for atomic swaps, that builds on top of cowswap and 1inch fusion offerings, this precautionary measure can be removed altogther. The impact of this change is a significant [saving in gas](https://github.com/Synthetixio/synthetix/blob/develop/contracts/ExchangeRatesWithDexPricing.sol#L225) and allows smaller sized trades to be priced-in.
 
 # Copyright
 
