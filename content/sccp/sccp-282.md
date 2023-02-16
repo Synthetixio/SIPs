@@ -33,7 +33,7 @@ This SCCP proposes to apply the below `DirectIntegration` parameters on the new 
 
 # Abstract
 
-The DirectIntegration addresses are contracts setup by integrators, that are allowed to trade at specialized fees and parameters, given that they satisfy certain conditions. In 1inch's case, they abide going throught the fusion offering which incorporates around a block delay in order to fill:
+The DirectIntegration addresses are contracts setup by integrators, that are allowed to trade at specialized fees and parameters, given that they satisfy certain conditions. In 1inch's case, they abide going throught the fusion offering which incorporates around a block delay for filling an order which leads to fresh uniswap prices being used:
 - `dexPriceAggregator` is the uniswap aggregator in operation, it would be pointed towards the uniswap 5 bp pools.
 - `atomicMaxVolumePerBlock` is the maximum sUSD volume allowed per block.
 - `atomicExchangeFeeRate` is the fee rate paid on exchanges into a specific synth.
