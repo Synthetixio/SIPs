@@ -3,7 +3,7 @@ sccp: 281
 network: Ethereum
 title: Update Atomic Swap Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2023-02-15
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xee957aa073f08675ee8a4a08e628065f23aa28dc45b784bfff3989aaeb46c551
