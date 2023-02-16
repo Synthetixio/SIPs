@@ -1,7 +1,7 @@
 ---
 sccp: 282
 network: Ethereum
-title: Update Atomic Swap Parameters
+title: Update 1inch Cross Asset Swap Address
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2023-02-16
