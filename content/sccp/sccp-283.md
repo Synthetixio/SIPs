@@ -27,7 +27,7 @@ This SCCP proposes to update the skew parameters on the perp markets as per the 
 
 # Abstract
 
-The SkewScale is the primary scaling parameter, that normalizes the skew of the market in order to determine the prevailing premium/discount in a given market as well as it's funding rate velocity.
+The SkewScale is the primary scaling parameter, that normalizes the skew of the market in order to determine the prevailing premium/discount as well as it's funding rate velocity.
 Note that the cex parameters shown in the table above are an estimate obtained using the combined orderbooks of major exchanges.
 
 # Motivation
