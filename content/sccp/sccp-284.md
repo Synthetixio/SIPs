@@ -21,7 +21,7 @@ The `exchangeFeeRate` is the fee applied on trades into a given currency key.
 
 # Motivation
 
-The main motivation is the chainlink heartbeat of 50 bp, vis-a-vis the low trading fees being offered on exchanges to sETH and sBTC, opening up a gap for latency arbitrage.
+The main motivation is the chainlink heartbeat of [50 bp](https://docs.chain.link/data-feeds/price-feeds/addresses), vis-a-vis the low trading fees being offered on exchanges to sETH and sBTC, opening up a gap for latency arbitrage.
 
 
 # Copyright
