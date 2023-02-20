@@ -1,7 +1,7 @@
 ---
 sccp: 284
 network: Ethereum
-title: Update Fee Reclamation Fees
+title: Update ExchangeFeeRate
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2023-02-20
