@@ -1,12 +1,12 @@
 ---
 sccp: 284
 network: Ethereum
-title: Update ExchangeFeeRate
+title: Update ExchangeFeeRate - Non Atomic Trades
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2023-02-20
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0xc8b69c824f31ed5b5734e5baa343a0c9496114ec089486f3cde6a8a2e2ebf012
+  https://snapshot.org/#/snxgov.eth/proposal/0x656c57c31e6e2ab0ec002c8a8e5e186df0305a6bf0d98cd72796448c57d8ddf5
 type: Governance
 ---
 
