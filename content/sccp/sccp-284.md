@@ -16,7 +16,7 @@ This SCCP proposes to increase the non-atomic `exchangeFeeRate` on trades to sET
 
 # Abstract
 
-The `exchangeFeeRate` is the fee applied on trades into a given currencyKey, which incorporates the 6 minute fee reclamation.
+The `exchangeFeeRate` is the fee applied on trades into a given currency key.
 
 
 # Motivation
