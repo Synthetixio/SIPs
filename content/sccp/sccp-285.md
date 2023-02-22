@@ -26,8 +26,6 @@ Increase the minimum C-ratio to 500% for SNX stakers.
 
 In order to improve network health, the minimum C-ratio should be increase to 500%. 
 
-The SCCP was withdrawn by the author.
-
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
