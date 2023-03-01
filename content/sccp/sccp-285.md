@@ -3,7 +3,9 @@ sccp: 285
 network: Ethereum & Optimism
 title: Increase minimum C-ratio to 500%
 author: William87, Alpha003, poilk
-status: Draft 
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xf18142796286da1b7b686141b4ac8646d5490492801c19834a261bc3a19d1eab
+status: Implemented 
 created: 2023-02-22
 type: Governance
 ---
