@@ -3,7 +3,7 @@ sccp: 283
 network: Optimism
 title: Update Perp Markets Skew Scale
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Rejected
 created: 2023-02-18
 type: Governance
 ---
