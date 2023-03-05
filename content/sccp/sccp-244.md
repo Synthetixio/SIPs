@@ -1,10 +1,12 @@
 ---
 sccp: 244
-network: Ethereum & Optimism
+network: Optimism
 title: Increase exchange fees for sSOL
 author: Ksett (@ksett737)
-status: Draft
+status: Implemented
 created: 2022-11-10
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x6b644a688a5d3e60de5dac4953f7dfe7f83962eeb7d42517535508d7257628c7
 type: Governance
 ---
 

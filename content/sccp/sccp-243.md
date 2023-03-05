@@ -3,7 +3,9 @@ sccp: 243
 network: Optimism
 title: Update SOL-PERP
 author: Burt Rock (@BurtRock)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x6b644a688a5d3e60de5dac4953f7dfe7f83962eeb7d42517535508d7257628c7
 created: 2022-11-9
 type: Governance
 ---

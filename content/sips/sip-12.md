@@ -4,7 +4,7 @@ network: Ethereum
 title: Max gas price for exchange transactions
 status: Implemented
 author: >-
-  Bojan Kiculovic (@kicul88), Justin J Moses (@justinjmoses), Kain Warwick
+  Bojan, Justin J Moses (@justinjmoses), Kain Warwick
   (@kaiynne)
 created: 2019-06-24T00:00:00.000Z
 type: Governance

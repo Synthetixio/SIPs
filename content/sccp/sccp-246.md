@@ -3,8 +3,10 @@ sccp: 246
 network: Ethereum & Optimism
 title: Update staking liquidation parameters 
 author: Afif (@abanda1)
-status: Draft
+status: Implemented
 created: 2022-11-11
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x3c1ae8f64c436d8492bd684bd4fcb2d15c424f070bae1c75bd61cda624b9ea63
 type: Governance
 ---
 
