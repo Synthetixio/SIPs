@@ -4,7 +4,7 @@ network: Optimism
 title: Increase OI Perp Caps on ETH and BTC
 author: KALEB
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x8b83ff6bfed2a8e1905db9fb3901c587e0e9e02b5b63b426727ce1839590e80d
+  https://snapshot.org/#/snxgov.eth/proposal/0x943b305d72065c1523053f7d86daae0d903117ceb1870e32efe711f2a595d9f1
 status: Vote_Pending 
 created: 2023-03-07
 type: Governance
