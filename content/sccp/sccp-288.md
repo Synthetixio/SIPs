@@ -1,5 +1,5 @@
 ---
-sccp: 287
+sccp: 288
 network: Optimism
 title: Increase Max Initial Leverage on BTC and ETH Markets
 author: William87, Alpha003, poilk
