@@ -26,7 +26,7 @@ The `issueFeeRate` is the rate paid on opening or drawing on a short position.
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Currently shorts are exclusively used by the lyra contracts, although the lyra protocol will switch over to the perps implementation the parameter change will help reduce the cost and retain users on the lyra platform.
+Currently shorts are exclusively used by the lyra contracts, although the lyra protocol will switch over to the perps implementation in the coming months, the proposed parameter changes will help reduce the cost on lyra users and improve the user experience.
 
 
 ## Copyright
