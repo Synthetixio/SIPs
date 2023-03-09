@@ -30,7 +30,7 @@ This SCCP proposes to implement the following on both the Ethereum and Optimism 
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Currently the wrappers are at full capacity on optimism and near full capacity on Ethereum, hence the need to increase the `maxTokenAmount`. The primary reason behind the changes proposed in the `burnFeeRate` and `mintFeeRate` is to facilitate a gradual unwind in the skew as well as promote an increase in sUSD liquidity needed for the continued scaling of perps v2 product line.
+Currently the wrappers are at full capacity on optimism and near full capacity on Ethereum, hence the need to increase the `maxTokenAmount`. The primary reason behind the changes proposed in the `burnFeeRate` and `mintFeeRate` is to facilitate a gradual unwind in the skew as well as promote an increase in sUSD liquidity, needed for the continued scaling of perps v2 product line.
 It is worth mentioning that should the entire supply of ETH be minted, the debt pool would still be skewed by around 38% long.
 
 ## Copyright
