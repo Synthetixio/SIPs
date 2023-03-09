@@ -2,10 +2,10 @@
 sccp: 287
 network: Optimism
 title: Increase OI Perp Caps on ETH and BTC
-author: KALEB
+author: KALEB (@kaleb-keny)
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x943b305d72065c1523053f7d86daae0d903117ceb1870e32efe711f2a595d9f1
-status: Vote_Pending 
+status: Implemented 
 created: 2023-03-07
 type: Governance
 ---

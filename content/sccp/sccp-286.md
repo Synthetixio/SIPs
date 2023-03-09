@@ -5,7 +5,7 @@ title: Increase OI Perp Caps on ETH and BTC
 author: William87, Alpha003, poilk
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x8b83ff6bfed2a8e1905db9fb3901c587e0e9e02b5b63b426727ce1839590e80d
-status: Approved 
+status: Implemented 
 created: 2023-02-22
 type: Governance
 ---
