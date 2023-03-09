@@ -1,7 +1,7 @@
 ---
-sccp: 287
+sccp: 288
 network: Optimism
-title: Update Issue Fee Rate
+title: Update Issue Fee Rate - Shorts
 author: KALEB (@kaleb-keny)
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x943b305d72065c1523053f7d86daae0d903117ceb1870e32efe711f2a595d9f1
