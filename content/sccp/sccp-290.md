@@ -1,7 +1,7 @@
 ---
 sccp: 290
 network:  Optimism
-title: Update Perp Market Open Interest
+title: Increase Perp Max Market Value
 author: William87, Alpha003, poilk
 status: Draft 
 created: 2023-03-13
