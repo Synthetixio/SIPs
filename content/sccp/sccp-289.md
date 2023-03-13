@@ -3,7 +3,9 @@ sccp: 289
 network: Ethereum & Optimism
 title: Update Wrapper Parameters
 author: KALEB (@kaleb-keny)
-status: Draft 
+status: Rejected 
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x97f7259bd25e0dd267b53c4c19eb584af709fdba61560a9022bb818559afa317
 created: 2023-03-09
 type: Governance
 ---

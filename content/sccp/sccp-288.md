@@ -5,7 +5,7 @@ title: Update Issue Fee Rate - Shorts
 author: KALEB (@kaleb-keny)
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xd500020e901321d7fe9ab281e027c09d3f068a5108b3c0b8f6f5a65c28d42b7f
-status: Vote_Pending 
+status: Implemented 
 created: 2023-03-09
 type: Governance
 ---
