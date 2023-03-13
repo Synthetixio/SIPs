@@ -32,7 +32,7 @@ This SCCP proposes to increase the `maxMarketValue` as per the following:
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The `maxMarketValue` can be raised without concern on these markets given the large skew scale and the low volatility of these markets.
+The `maxMarketValue` can be raised without concern on these markets given the large skew scale and the low volatility of commodities and stables.
 
 ## Copyright
 
