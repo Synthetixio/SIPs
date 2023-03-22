@@ -5,7 +5,7 @@ title: Increase Perp Max Market Value
 author: William87, Alpha003, poilk
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xa4ad9b8d92e4edaa64848895af5a3e38dd3a5e03e3d676ac9e0f0c93c084a326
-status: Draft 
+status: Implemented
 created: 2023-03-13
 type: Governance
 ---
