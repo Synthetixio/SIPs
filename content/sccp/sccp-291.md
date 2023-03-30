@@ -4,7 +4,7 @@ network:  Optimism
 title: Increase Max `exchangeMaxDynamicFee`
 author: Kaleb
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0xa4ad9b8d92e4edaa64848895af5a3e38dd3a5e03e3d676ac9e0f0c93c084a326
+  https://snapshot.org/#/snxgov.eth/proposal/0x9994cbb013235baa5638729f5e9036bde905d24906d0d880afb48c6dccca7bb8
 status: Vote_Pending
 created: 2023-03-30
 type: Governance
