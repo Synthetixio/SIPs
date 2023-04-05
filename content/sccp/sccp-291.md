@@ -5,7 +5,7 @@ title: Increase Max `exchangeMaxDynamicFee`
 author: Kaleb
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x9994cbb013235baa5638729f5e9036bde905d24906d0d880afb48c6dccca7bb8
-status: Vote_Pending
+status: Implemented
 created: 2023-03-30
 type: Governance
 ---
