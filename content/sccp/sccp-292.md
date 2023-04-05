@@ -1,7 +1,7 @@
 ---
 sccp: 292
 network: Ethereum
-title: Update 1inch Cross Asset Swap Address
+title: Update 1inch Cross Asset Swap Direct Integration
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2023-04-05
