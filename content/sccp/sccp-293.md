@@ -49,7 +49,6 @@ This SCCP proposes to update the perp-v2 parameters as per the below configurati
 |  **sDOGE** |   5,000,000  |  70,000,000  | +65,000,000 |
 |  **sFTM**  |   1,500,000  |   3,000,000  |  +1,500,000 |
 |  **sATOM** |    75,000    |    100,000   |   +25,000   |
-|  **sAVAX** |    80,000    |    80,000    |      0      |
 |  **sARB**  |   1,500,000  |   3,000,000  |  +1,500,000 |
 |   **sOP**  |    300,000   |    700,000   |   +400,000  |
 |  **sAPE**  |    150,000   |    400,000   |   +250,000  |
@@ -165,39 +164,39 @@ This SCCP proposes to update the perp-v2 parameters as per the below configurati
 |  **sXAG**  |       3      |       1      |     -2     |
 |  **sEUR**  |       3      |       1      |     -2     |
 
-## Liquidation `maxPD` & `maxLiquidationDelta`
+## Max Premium Discount` & Max Liquidation Delta
 - maxPD is set to 2 * (offchain maker fee + offchain taker fee)
 - maxLiquidationDelta is set to offchain maker + offchain taker fees
 
 # Abstract
 
 Below is a description on the parameters being updated:
-- `makerFeeOffchainDelayedOrder` and `takerFeeOffchainDelayedOrder` are the fee rates applied on maker & taker off-chain orders in bp.
-- `maxMarketValue` is the maximum amount of open interest allowed on long and short positions in a given perp market.
-- `skewScale` is a scaling parameter that helps calibrate the amount of slippage (or price improvement) a position received when opening a position that increases (or decreases) the skew. It also is a parameter that affects the speed by which funding rate changes.
-- `maxLeverage` is the max leverage a position is allowed to take on. Any changes to existing positions that result in the leverage going above `maxLeverage` would revert.
+- `makerFeeOffchainDelayedOrder` and `takerFeeOffchainDelayedOrder` are the fee rates applied on maker & taker off-chain orders in bp
+- `maxMarketValue` is the maximum amount of open interest allowed on long and short positions in a given perp market
+- `skewScale` is a scaling parameter that helps calibrate the amount of slippage (or price improvement) a position receives when a position is modified. It also is a parameter that affects the speed by which funding rate changes
+- `maxLeverage` is the max leverage a position is allowed to take on. Any changes to existing positions that result in the leverage going above `maxLeverage` would revert
 - `liquidationBufferRatio` is the penalty imposed on a position when it is liquidated. The penalty is calculated as follows: `buffer * P * S`
-- `LiquidationPremiumMultiplier` or `LPM` is additional margin required to be set aside when an account opens position with larger size. The `liquidationPremium` is calculated as follows: `LPM * (S /Scale) * P*S` 
-- `maxFundingVelocity` is the parameter that helps calibrate the speed by which funding rate changes for a given level of skew & skew scale.
-- `maxPD` (MPD) and `maxLiquidationDelta` (MLD) are parameters introduced  in [SIP-2005](https://sips.synthetix.io/sips/sip-2005/) and they are typically set as described above. These parameters determine whether an account can be liquidated spontaneously or exclusively by endorsed Liquidators.
+- `LiquidationPremiumMultiplier` or `LPM` is an additional margin required to be set aside when an account opens position with larger size. The `liquidationPremium` is calculated as follows: `LPM * (S /Scale) * P * S` 
+- `maxFundingVelocity` is the parameter that helps calibrate the speed by which funding rate changes for a given level of skew & skew scale
+- `maxPD` (MPD) and `maxLiquidationDelta` (MLD) are parameters introduced  in [SIP-2005](https://sips.synthetix.io/sips/sip-2005/) and they are typically set as described above. These parameters determine whether an account can be liquidated spontaneously or exclusively by endorsed Liquidators
 
 
 # Motivation
 
-The primary motivation behind these parameter changes, is that with the release of SIP-2004 & 2005:
-- Front-ends can be free to set their own leverage
-- OI caps can be increased taking into account the risk associated with opening positions. The lifting of open interest is batched with liquidation buffer & liquidation premium multiplier changes in order to constrain the size of single positions and therefore reduce the market impact on the debt pool from significant price changes.
-- Fees are changed to drive more volume to the protocol with focus on arbitrage bots playing a role in helping balance out the skew
-- Skew Scale is modified on few markets in order to align with the scaling factor derivative seen on centralized exchanges.
-- Max funding velocity is finally updated in order to help promote skew balancing on alt coins and make the funding rate on Forex & commodities more appealing.
+The primary motivation behind these parameter changes:
+- OI caps can be increased taking into account the risk associated with opening positions. The lifting of open interest is batched with liquidation buffer & liquidation premium multiplier changes in order to constrain the size of single positions and therefore reduce the market impact on the debt pool from significant price changes
+- Front-ends can be free to set their own leverage and the previously configured leverage at the contract level was done so in order to temporarily patch issues with the previous contracts when accounts attempted to close existing positions
+- Fees are changed to drive more volume to the protocol with focus on arbitrageurs playing a role in helping balance out the skew
+- Skew Scale is modified on few markets in order to align with the scaling factor derivative seen on centralized exchanges
+- Max funding velocity is finally updated in order to help promote skew balancing on alt coins and make the funding rate on Forex & Commodities more appealing
 
 # Configuration Details
 
 Please note the below important specifications on the timing of the parameter updates:
-- Fees, oi caps, max leverage, MPD and MLD, max funding velocity can be changed immediately.
-- Skew scale can be changed by at most 10% per day until it reaches the target specified in this SCCP. However, if the existing market is utilized by more than 90% of the prevailing open interest, then the skew scale parameter can be updated immediately.
-- `liquidationBufferRatio` can only be changed only by at most 25% of the prevailing configuration, every 5 days until it reaches it's target.
-- `liquidationPremiumMultiplier` can only be changed by at most 25% of the prevailing configuration, every 5 days until it reaches it's target.
+- Fees, oi caps, max leverage, MPD and MLD, max funding velocity can be changed immediately
+- Skew scale can be changed by at most 10% per day until it reaches the target specified in this SCCP. However, if the existing market is utilized by more than 90% of the prevailing open interest, then the skew scale parameter can be updated immediately
+- `liquidationBufferRatio` can only be changed only by at most 25% of the prevailing configuration, every 5 days until it reaches it's target
+- `liquidationPremiumMultiplier` can only be changed by at most 25% of the prevailing configuration, every 5 days until it reaches it's target
 
 
 # Copyright
