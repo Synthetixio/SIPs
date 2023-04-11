@@ -185,8 +185,8 @@ Below is a description on the parameters being updated:
 
 The primary motivation behind these parameter changes:
 - OI caps can be increased taking into account the risk associated with opening positions. The lifting of open interest is batched with liquidation buffer & liquidation premium multiplier changes in order to constrain the size of single positions and therefore reduce the market impact on the debt pool from significant price changes
-- Front-ends can be free to set their own leverage and the previously configured leverage at the contract level was done so in order to temporarily patch issues with the previous contracts when accounts attempted to close existing positions
-- Fees are changed to drive more volume to the protocol with focus on arbitrageurs playing a role in helping balance out the skew
+- Users can now specify any leverage they aim for, note that the previously configured leverage levels although configured at the contract level, front-ends were asked to constrain them to 25x as a safety precaution. This was done so in order to temporarily patch issues with the previous contracts when accounts attempted to close existing positions
+- Fees are changed to drive more volume to the protocol with focus on arbitrageurs playing a role in helping balance out the skew (i.e. relieve the debt pool from impact of price changes)
 - Skew Scale is modified on few markets in order to align with the scaling factor derivative seen on centralized exchanges
 - Max funding velocity is finally updated in order to help promote skew balancing on alt coins and make the funding rate on Forex & Commodities more appealing
 
@@ -194,9 +194,9 @@ The primary motivation behind these parameter changes:
 
 Please note the below important specifications on the timing of the parameter updates:
 - Fees, oi caps, max leverage, MPD and MLD, max funding velocity can be changed immediately
+- `liquidationBufferRatio` can only be changed only by at most 10% of the prevailing configuration, once every week until it reaches it's target. To illustrate,with an example assuming the prevailing buffer is 100 bp and the target is 75 bp, buffer could be changed by 10 bp in the first week 9 bp in the second week and so on, until the 75 bp target is achieved
 - Skew scale can be changed by at most 10% per day until it reaches the target specified in this SCCP. However, if the existing market is utilized by more than 90% of the prevailing open interest, then the skew scale parameter can be updated immediately
-- `liquidationBufferRatio` can only be changed only by at most 25% of the prevailing configuration, every 5 days until it reaches it's target
-- `liquidationPremiumMultiplier` can only be changed by at most 25% of the prevailing configuration, every 5 days until it reaches it's target
+- `liquidationPremiumMultiplier` can only be changed by at most 25% of the prevailing configuration, once every week  until it reaches it's target
 
 
 # Copyright
