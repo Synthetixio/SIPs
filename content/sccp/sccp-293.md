@@ -205,7 +205,7 @@ c) 111 to 122 bp in the third week
 
 d) 122 bp to 125 bp in the fourth week
 
-- Skew scale can be changed by at most 10% per day (whether up or down) until it reaches the target specified in this SCCP. However, if the existing market is utilized by more than 90% of the prevailing open interest, then the skew scale parameter can be updated immediately
+- Skew scale can be changed by at most 10% per day (whether up or down) until it reaches the target specified in this SCCP. However, if the existing market is utilized by more than 90% of the prevailing open interest (on both long and short sides), then the skew scale parameter can be updated immediately
 - `liquidationPremiumMultiplier` can only be changed upward by at most 25% of the prevailing configuration, once every week  until it reaches it's target. However it can be lowered immediately
 
 
