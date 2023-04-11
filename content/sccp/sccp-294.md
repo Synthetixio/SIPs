@@ -1,5 +1,5 @@
 ---
-sccp: 304
+sccp: 294
 network: Ethereum & Optimism
 title: Pause Decrease in SNX Base Inflation
 author: TerraBellus (@TerraBellus)
