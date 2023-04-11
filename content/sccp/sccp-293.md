@@ -191,6 +191,8 @@ The primary motivation behind these parameter changes, is that with the release 
 - Skew Scale is modified on few markets in order to align with the scaling factor derivative seen on centralized exchanges.
 - Max funding velocity is finally updated in order to help promote skew balancing on alt coins and make the funding rate on Forex & commodities more appealing.
 
+# Configuration Details
+
 Please note the below important specifications on the timing of the parameter updates:
 - Fees, oi caps, max leverage, MPD and MLD, max funding velocity can be changed immediately.
 - Skew scale can be changed by at most 10% per day until it reaches the target specified in this SCCP. However, if the existing market is utilized by more than 90% of the prevailing open interest, then the skew scale parameter can be updated immediately.
