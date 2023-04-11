@@ -194,9 +194,12 @@ The primary motivation behind these parameter changes:
 
 Please note the below important specifications on the timing of the parameter updates:
 - Fees, oi caps, max leverage, MPD and MLD, max funding velocity can be changed immediately
-- `liquidationBufferRatio` can only be changed only by at most 10% of the prevailing configuration, once every week until it reaches it's target. To illustrate,with an example assuming the prevailing buffer is 100 bp and the target is 75 bp, buffer could be changed by 10 bp in the first week 9 bp in the second week and so on, until the 75 bp target is achieved
-- Skew scale can be changed by at most 10% per day until it reaches the target specified in this SCCP. However, if the existing market is utilized by more than 90% of the prevailing open interest, then the skew scale parameter can be updated immediately
-- `liquidationPremiumMultiplier` can only be changed by at most 25% of the prevailing configuration, once every week  until it reaches it's target
+- `liquidationBufferRatio` can only be changed upward by at most 10% of the prevailing configuration, once every week until it reaches it's target. However it can be lowered immediately.  To illustrate, with an example assuming the prevailing buffer is 100 bp and the target is 125 bp, buffer could be changed as follows
+a) 100 bp to 110 bp in the first week
+b) 110 bp to 121 bp in the second week
+c) 111 to 125 bp in the third week
+- Skew scale can be changed by at most 10% per day (whether up or down) until it reaches the target specified in this SCCP. However, if the existing market is utilized by more than 90% of the prevailing open interest, then the skew scale parameter can be updated immediately
+- `liquidationPremiumMultiplier` can only be changed upward by at most 25% of the prevailing configuration, once every week  until it reaches it's target. However it can be lowered immediately
 
 
 # Copyright
