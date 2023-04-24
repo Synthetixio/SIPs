@@ -3,7 +3,9 @@ sccp: 294
 network: Ethereum & Optimism
 title: Pause Decrease in SNX Base Inflation
 author: TerraBellus (@TerraBellus)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x873d9b7bc8b18aa6cb5f08bb874fd84ca946162a2c4e08e96b6fec27659fc318
 created: 2023-04-11
 type: Governance
 ---
