@@ -25,7 +25,7 @@ The `liquidationFeeRatio` is fee rate applied on the position size for flagging 
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The fee should be lowered in order to align the structure the incentive of keepers to liquidate large positions first. Currently the 35 bp fee would treat all positions with a size above 28k$ similarly, lowering that fee to 2 bp would result in incentivization of large r positions (up to 500k$) with priority.
+The fee should be lowered in order to incentivize keepers to liquidate large positions with priority. Currently the 35 bp fee would treat all positions with a size above 28k$ with equal priority, lowering that fee to 2 bp would result in incentivization of large positions (up to 500k$) with higher priority due to the larger fee that could be earned.
 
 ## Copyright
 
