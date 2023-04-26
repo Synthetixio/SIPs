@@ -26,7 +26,7 @@ With [SCCP-293](https://sips.synthetix.io/sccp/sccp-293/) set to be implemented 
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The main motivation is to help promote arbitrages of the skew, by allowing funding to settle back into neutrality at a faster pace, when outsized positions are executed on the debt pool that flip the skew from short to long.
+The main motivation is to help promote arbitrages of the skew, by allowing funding to settle back into neutrality at a faster pace, when outsized positions are executed on the debt pool that flip the skew from short to long or vice-versa.
 
 ## Copyright
 
