@@ -5,7 +5,7 @@ title: Lower Max Liquidation Fee
 author: Kaleb (@kaleb-keny)
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x174375e209eb511990d2d727ae7ebdb48935292f864f6c3071a04dba953808ed
-status: Vote_Pending
+status: Approved
 created: 2023-04-24
 type: Governance
 ---
