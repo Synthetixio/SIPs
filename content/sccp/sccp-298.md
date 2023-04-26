@@ -4,7 +4,7 @@ network: Optimism
 title: Increase Max Funding Velocity 
 author: Fifa
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0xc843e455bac322436c46097982052442f14723d31fb2eb02506ad8b5ed8cc73d
+  https://snapshot.org/#/snxgov.eth/proposal/0xe831b7cebdce20c0f0a1bf158e6c3b62e87da2c07264e06d45fec38b6f4de344
 status: Vote_Pending
 created: 2023-04-26
 type: Governance
