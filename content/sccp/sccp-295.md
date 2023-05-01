@@ -3,7 +3,7 @@ sccp: 295
 network: Optimism
 title: Deter Trading with Atomic & Delayed Orders
 author: Kaleb (@kaleb-keny)
-status: Approved
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xf217bc6d127fd29440cdb347518d2d2627eb030f4c4f59d7196c6b8521091ee9
 created: 2023-04-13
