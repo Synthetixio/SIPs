@@ -5,7 +5,7 @@ title: Lower Liquidator Fee Ratio
 author: Fifa
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xc843e455bac322436c46097982052442f14723d31fb2eb02506ad8b5ed8cc73d
-status: Approved
+status: Implemented
 created: 2023-04-24
 type: Governance
 ---

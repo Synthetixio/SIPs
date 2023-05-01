@@ -5,7 +5,7 @@ title: Increase Max Funding Velocity
 author: Fifa
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xe831b7cebdce20c0f0a1bf158e6c3b62e87da2c07264e06d45fec38b6f4de344
-status: Approved
+status: Implemented
 created: 2023-04-26
 type: Governance
 ---
