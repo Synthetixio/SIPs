@@ -36,8 +36,8 @@ Functions should be invoked on the spot market system unless otherwise noted.
   - URL: https://api.synthetix.io/pyth-mainnet/api/get_vaa_ccip?data={data}
   - Settlement Reward: 0
   - Price Deviation Tolerance: 5%
-  - Minimum USD Exchange Amount: TBD
-  - Max Rounding Loss: TBD
+  - Minimum USD Exchange Amount: bn(0.000001)
+  - Max Rounding Loss: bn(0.000001)
   - Disabled: false
 - Invoke `setAsyncFixedFee` with 0.1%
 - Invoke `configureMaximumMarketCollateral` (on the core system) with 100 ETH.
