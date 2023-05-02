@@ -41,7 +41,8 @@ Functions should be invoked on the spot market system unless otherwise noted.
   - Max Rounding Loss: bn(0.000001)
   - Disabled: false
 - Invoke `setAsyncFixedFee` with 0.1%
-- Invoke `configureMaximumMarketCollateral` (on the core system) with 100 ETH.
+- Invoke `configureMaximumMarketCollateral` (on the core system) with 100 wETH.
+- Invoke `setWrapper` with maximum 100 wETH.
 - Invoke `setMarketSkewScale` with 100,000 ETH.
 - Invoke `setWrapperFees` with 0.01% for wrap and unwrap.
 - Invoke `setPoolConfiguration` with the new market ID on the preferred pool using a weight and maximum debt share value of 1.
