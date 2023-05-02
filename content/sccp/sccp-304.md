@@ -26,14 +26,14 @@ Functions should be invoked on the spot market system unless otherwise noted.
 - Invoke `registerSynth` with name _Synthetic ETH_ and symbol _snxETH_.
 - Invoke `registerNode` (on the oracle manager) to generate an ID for a Chainlink Node which retrieves the price for ETH from the aggregator contract 0x13e3Ee699D1909E989722E753853AE30b17e08c5
 - Invoke `updatePriceData` to use the resulting node ID for both buy and sell price feeds.
-- **TBD**: Temporarily turn off atomic orders or set `setAtomicFixedFee` to max int value.
+- Invoke `setAtomicFixedFee` to the maximum integer value (effectively disabling it for now).
 - Invoke `addSettlementStrategy` with the following data:
   - Strategy Type: PYTH
   - Settlement Delay: 15 seconds
   - Settlement Window Duration: 60 seconds
   - Price Verification Contract: 0xff1a0f4744e8582DF1aE09D5611b887B6a12925C
   - Feed ID: 0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace
-  - URL: TBD
+  - URL: https://api.synthetix.io/pyth-mainnet/api/get_vaa_ccip?data={data}
   - Settlement Reward: 0
   - Price Deviation Tolerance: 5%
   - Minimum USD Exchange Amount: TBD
