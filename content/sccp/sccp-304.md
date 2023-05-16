@@ -5,7 +5,7 @@ title: snxETH V3 Spot Market
 author: Afif, Noah
 created: 2023-05-01
 type: Governance
-status: Draft
+status: Approved
 ---
 
 # Simple Summary
