@@ -4,8 +4,10 @@ network: Optimism
 title: snxETH V3 Spot Market
 author: Afif, Noah
 created: 2023-05-01
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xb45112f20f0181eb7cf50227e98659009232d88dd2b7a28626237885f72c465d
 type: Governance
-status: Draft
+status: Vote_Pending
 ---
 
 # Simple Summary
