@@ -46,6 +46,9 @@ const Main: React.FC = ({ children }) => {
               <a className="page-link" href="/all-sccp">
                 All SCCPs
               </a>
+              <a className="page-link" href="/all-stp">
+                All STPs
+              </a>
             </div>
           </nav>
         </div>
