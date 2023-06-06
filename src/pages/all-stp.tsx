@@ -21,8 +21,6 @@ const Template: React.FC<Props> = ({ data: { allMarkdownRemark } }) => {
     sortBy(({ fieldValue }) => statuses.indexOf(fieldValue)),
   )(group) as AllSipsQuery['allMarkdownRemark']['group']
 
-  console.log('columns', columns)
-
   return (
     <Main>
       <Helmet title="All STPs" />
@@ -32,8 +30,6 @@ const Template: React.FC<Props> = ({ data: { allMarkdownRemark } }) => {
       <div className="post-content">
         {columns.map((g) => {
           const rows = sortBy('frontmatter.stp')(g.nodes)
-          console.log('rows', rows)
-          console.log('g', g)
           return (
             <div key={g.fieldValue}>
               <StatusLabel label={g.fieldValue} />
