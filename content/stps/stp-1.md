@@ -3,7 +3,7 @@ stp: 1
 network: Ethereum & Optimism
 title: STP Purpose and Guidelines
 status: Draft
-author: [Kain Warwick](https://github.com/kaiynne), [Carrot Anderson](https://github.com/carrotanderson), Elliptic Curve, Spartan Glory
+author: 'Kain Warwick (@kaiynne), Carrot Anderson (@carrotanderson), Elliptic Curve, Spartan Glory'
 created: 2023-05-5T00:00:00.000Z
 proposal: '' # https://snapshot.org/#/snxgov.eth/proposal/xxx
 type: Governance
