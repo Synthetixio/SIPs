@@ -36,6 +36,16 @@ const sipValidationSchema = commonValidationSchema
   .noUnknown()
   .strict()
 
+const stpValidationSchema = commonValidationSchema
+  .concat(
+    Yup.object().shape({
+      stp: Yup.number().required(),
+      network: Yup.string().required(),
+    }),
+  )
+  .noUnknown()
+  .strict()
+
 const sccpValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
@@ -48,6 +58,7 @@ const sccpValidationSchema = commonValidationSchema
 ;(async () => {
   try {
     const sips = await g('./content/sips/*.md')
+    const stps = await g('./content/stps/*.md')
     const sccp = await g('./content/sccp/*.md')
 
     // SIP
@@ -57,6 +68,16 @@ const sccpValidationSchema = commonValidationSchema
         const { attributes } = fm(content)
         const castValues = sipValidationSchema.cast({ file, ...attributes })
         return await sipValidationSchema.validate(castValues)
+      }),
+    )
+
+    // STP
+    await Promise.all(
+      stps.map(async (file) => {
+        const content = await fs.readFile(file, 'utf-8')
+        const { attributes } = fm(content)
+        const castValues = stpValidationSchema.cast({ file, ...attributes })
+        return await stpValidationSchema.validate(castValues)
       }),
     )
     // SCCP
