@@ -3,7 +3,7 @@ sccp: 299
 network: Ethereum
 title: Update 1inch Cross Asset Swap Direct Integration
 author: Kaleb (@kaleb-keny)
-status: Implemented
+status: Deprecated
 created: 2023-04-27
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xdf6ce3aba80af607207c88c9132cfe49dfa1384b13d51241f8bcdbe7c3399ba6

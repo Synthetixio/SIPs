@@ -3,7 +3,7 @@ sccp: 251
 network: Ethereum
 title: Update Atomic Exchange Parameters - 1inch Integration
 author: Kaleb (@kaleb-keny)
-status: Implemented
+status: Deprecated
 created: 2022-11-28
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xb97c17a34289b76ccc19222ec4202dd268e159bf755a49e0f8124dedeca10932

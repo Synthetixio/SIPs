@@ -3,7 +3,7 @@ sccp: 282
 network: Ethereum
 title: Update 1inch Cross Asset Swap Address
 author: Kaleb (@kaleb-keny)
-status: Implemented
+status: Deprecated
 created: 2023-02-16
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xc8b69c824f31ed5b5734e5baa343a0c9496114ec089486f3cde6a8a2e2ebf012
