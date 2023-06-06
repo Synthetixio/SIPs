@@ -3,7 +3,7 @@ sccp: 267
 network: Ethereum
 title: 1inch Integration - Cross Asset Atomic Swaps
 author: Kaleb (@kaleb-keny
-status: Implemented
+status: Deprecated
 created: 2022-12-28
 type: Governance
 proposal: >-

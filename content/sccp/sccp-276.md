@@ -3,7 +3,7 @@ sccp: 276
 network: Ethereum
 title: Update 1inch Fusion Contracts
 author: Kaleb (@kaleb-keny)
-status: Implemented
+status: Deprecated
 created: 2023-02-03
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xf6126518af4d3e91698935837e7c72cd99df684336e82bea34a39edb72b84025
