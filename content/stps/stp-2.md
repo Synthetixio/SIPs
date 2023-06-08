@@ -75,3 +75,4 @@ Data analytics has been challenging for Synthetix in the past, due to technical 
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
