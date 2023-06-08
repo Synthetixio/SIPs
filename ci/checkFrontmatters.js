@@ -48,7 +48,7 @@ const sccpValidationSchema = commonValidationSchema
 const stpValidationSchema = Yup.object()
   .shape({
     file: Yup.string().required(),
-    stp: Yup.number.required(),
+    stp: Yup.number().required(),
     title: Yup.string().required(),
     status: Yup.string().oneOf(statuses),
     author: Yup.string().required(),
