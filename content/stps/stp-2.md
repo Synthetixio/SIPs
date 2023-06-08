@@ -4,7 +4,7 @@ title: Data Analytics Working Group
 status: Draft
 author: Carrot Anderson (@carrotanderson), Kain Warwick (@kaiynne)
 implementation-date: TBA
-discussions-to: [TC Discord channel](https://discord.com/channels/413890591840272394/893670832906338364)
+discussions-to: TC Discord channel
 created: 2023-06-07
 ---
 
