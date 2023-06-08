@@ -5,7 +5,6 @@ status: <Draft>
 author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 implementation-date:
 discussions-to: <TC Discord Channel>
-proposal: <link to snapshot. Remove this line completely if the STP is in draft and there is no snapshot link yet>: https://snapshot.org/#/snxgov.eth/proposal/xxx 
 created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
 ---
 
