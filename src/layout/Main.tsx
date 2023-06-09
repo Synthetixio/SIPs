@@ -1,9 +1,35 @@
 import React from 'react'
+import { useEffect } from 'react';
 
 import GithubIcon from '../icons/Github'
 import TwitterIcon from '../icons/Twitter'
+import LightModeIcon from '../icons/LightMode'
+import DarkModeIcon from '../icons/DarkMode'
+
+const toggleTheme = (e) => {
+  e.preventDefault();
+  const element = document.body;
+  document.getElementById("theme-toggle-dark-icon")?.classList.toggle("hidden");
+  document.getElementById("theme-toggle-light-icon")?.classList.toggle("hidden");
+  const result = element.classList.toggle("dark");
+  localStorage.setItem('theme', result ? 'dark' : 'light');
+}
+
+const initTheme = () => {
+  const element = document.body;
+  if(element.classList.contains('dark')) {
+    document.getElementById("theme-toggle-light-icon")?.classList.remove("hidden");
+  }
+  else {
+    document.getElementById("theme-toggle-dark-icon")?.classList.remove("hidden");
+  }
+}
 
 const Main: React.FC = ({ children }) => {
+  useEffect(() => {
+    initTheme();
+  }, []);
+
   return (
     <main>
       {/* matomo */}
@@ -65,7 +91,15 @@ const Main: React.FC = ({ children }) => {
           <div className="footer-col-wrapper">
             <div className="footer-col footer-col-1">
               <ul className="contact-list">
-                <li className="p-name">SIPs</li>
+                <li className="p-name">
+                  SIPs
+                </li>
+                <li className="p-name">
+                  <a href="#" className="page-link inline-block align-middle" onClick={toggleTheme}>
+                    <span id="theme-toggle-dark-icon" className="hidden"><DarkModeIcon className="svg-icon" /></span>
+                    <span id="theme-toggle-light-icon" className="hidden"><LightModeIcon className="svg-icon" /></span>
+                  </a>
+                </li>
               </ul>
             </div>
 
