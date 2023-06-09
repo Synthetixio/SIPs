@@ -3,7 +3,7 @@ sccp: 247
 network: Ethereum
 title: Update Atomic Exchange Fees / 1inch Integration
 author: Kaleb (@kaleb-keny)
-status: Implemented
+status: Deprecated
 created: 2022-11-18
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x253fb59f2a05bf05035aef0dedb36dbb5a238cd07f1df1f36d2e6ae658751719
