@@ -55,6 +55,7 @@ const stpValidationSchema = Yup.object()
     [`implementation-date`]: Yup.string().nullable(),
     [`discussions-to`]: Yup.string().nullable(),
     created: Yup.date().nullable(),
+    requires: Yup.mixed().nullable(),
   })
   .noUnknown()
   .strict()
