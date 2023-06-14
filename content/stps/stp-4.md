@@ -6,7 +6,7 @@ author: Kain (@kaiynne), Cav (@Cavelier)
 implementation-date: TBA
 discussions-to: TC Discord Channel
 created: 2023-06-09
-requires: SIP-325, SIP-326
+requires: SIP-324, SIP-326
 ---
 
 ## Simple Summary
