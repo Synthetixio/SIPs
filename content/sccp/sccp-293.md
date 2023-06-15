@@ -3,7 +3,7 @@ sccp: 293
 network: Optimism
 title: Update Perp Parameters
 author: Kaleb (@kaleb-keny), Fifa (@aband1)
-status: Approved
+status: Implemented
 created: 2023-04-11
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x207b502fc7e38cdc9276e29d72d592d4cff121eae74fe238d517c60041cab4f1
