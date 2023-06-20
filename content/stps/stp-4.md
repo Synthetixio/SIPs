@@ -29,11 +29,11 @@ The proposed SNX staking pool will be created using the new Synthetix V3 platfor
 
 ### Rationale
 
-Creating a trial staking pool on the Synthetix V3 platform provides a valuable opportunity to understand the system's dynamics, behavior, and potential issues before the full-scale launch. This process will minimize the risks associated with migrating to the new protocol and ensure a smoother transition for all stakeholders.
+Creating a trial staking pool on the Synthetix V3 platform provides a valuable opportunity to understand the system's dynamics, behaviour, and potential issues before the full-scale launch. This process will minimize the risks associated with migrating to the new protocol and ensure a smoother transition for all stakeholders.
 
 ### Financial Specification
 
-The precise amount of funding to be allocated from the Synthetix treasury will be determined and specified following further discussions within the community and an in-depth analysis of the necessary resources. The funds will be used for the creation and management of the trial SNX staking pool, as well as any associated costs, such as rewards for stakers in the pool.
+200k SNX will be allocated to this pool for a trial of 10 weeks.
 
 ## Copyright
 
