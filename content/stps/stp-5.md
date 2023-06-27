@@ -9,7 +9,7 @@ created: 2023-06-14
 ---
 
 ## Simple Summary
-This STP proposes an allocation of $500k to establish a Development/Sales Working Group for a trial period of 6 months. The group will function as a sophisticated white-glove service to onboard high-level traders and funds onto the Synthetix platform, offering incentives, technical support, and ongoing correspondence.
+This STP proposes an allocation of $500k to establish a Development/Sales Working Group for a trial period of 6 months. The group will function as a sophisticated white-glove service to onboard high-level traders and funds onto the Synthetix platform, offering incentives, technical support, and ongoing correspondence. See [job description](assets/stp-5/bd-job-description.md).
 
 ## Abstract
 This STP suggests investing $500k to form a Development/Sales Working Group for a trial duration of 6 months. The group will have the primary role of engaging with sophisticated traders and funds, aiding in their onboarding onto the Synthetix platform, and providing continuous support. The group will offer incentives and technical support, alongside maintaining ongoing communication.
@@ -30,6 +30,8 @@ This team will focus on:
 - Technical Integration and Support
 - Incentives
 - Ongoing Support and Direct Comm’s
+
+See [job description](assets/stp-5/bd-job-description.md) for more details.
 
 ### Rationale
 Attracting traders and funds to the Synthetix platform necessitates a dedicated and skilled group that can engage effectively with these entities, providing necessary incentives and support. The proposed working group will fill this need, hence driving platform growth and usage. 
