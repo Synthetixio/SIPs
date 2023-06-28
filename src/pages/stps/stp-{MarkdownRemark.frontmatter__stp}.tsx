@@ -19,7 +19,7 @@ const Template: React.FC<Props> = ({ data }) => {
   const githubLink = getGithubLink(fileAbsolutePath)
   return (
     <Main>
-      <Helmet title={`SIP-${frontmatter.stp}: ${frontmatter.title}`} />
+      <Helmet title={`STP-${frontmatter.stp}: ${frontmatter.title}`} />
       <h1 className="page-heading">
         <a href={githubLink} className="inline-block">
           STP-{frontmatter.stp}: {frontmatter.title} <SourceIcon />
