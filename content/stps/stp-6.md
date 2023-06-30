@@ -1,6 +1,6 @@
 ---
 stp: 6
-title: Repayment of Fees for CryptoMoonKing
+title: Partial Repayment of Fees for CryptoMoonKing
 status: Implemented
 author: Carrot Anderson (@carrotanderson)
 implementation-date: 2023-07-29
