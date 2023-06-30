@@ -4,7 +4,7 @@ module.exports = {
   },
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
-    title: 'Synthetix SIPs & SCCPs',
+    title: 'Synthetix SIPs, STPs & SCCPs',
   },
   plugins: [
     'gatsby-plugin-typescript',
