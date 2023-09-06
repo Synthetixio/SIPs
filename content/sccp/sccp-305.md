@@ -1,8 +1,8 @@
 ---
 sccp: 305
 title: BetSwirl - Create Pool and register Market
-network: <Ethereum | Optimism | Ethereum & Optimism>
-author: Romauld Hog, Cavalier (@cavalier_eth)
+network: Optimism
+author: Romauld Hog (@RomauldH), Cavalier (@cavalier_eth)
 status: <Draft>
 created: 2023-09-01
 ---
