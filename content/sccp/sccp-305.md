@@ -4,6 +4,7 @@ title: BetSwirl - Create Pool and register Market
 network: Ethereum
 author: Romauld Hog (@RomauldH), Cavalier (@cavalier_eth)
 status: Draft
+type: Governance
 created: 2023-09-01
 ---
 
