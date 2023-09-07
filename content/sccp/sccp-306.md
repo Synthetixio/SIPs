@@ -5,6 +5,7 @@ network: Optimism
 author: Jeremy (@jchiaramonte7), Cavalier (@cavalier_eth)
 status: Draft
 created: 2023-09-06
+type: Governance
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->
@@ -33,3 +34,6 @@ As per [KIP-95](https://gov.kwenta.eth.limo/kips/kip-095/), Kwenta will directly
 
 It is expected that the Kwenta Pool will initially delegate collateral to Perps v3, which Kwenta are integrating with.
 
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
