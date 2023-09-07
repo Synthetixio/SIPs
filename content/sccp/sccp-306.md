@@ -3,7 +3,7 @@ sccp: 306
 title: Thales - Create Pool and register Market
 type: Governance
 network: Optimism
-author: Cavalier (@cavalier_eth)
+author: cyberduck, Cavalier (@cavalier_eth)
 status: Draft
 created: 2023-09-07
 ---
