@@ -1,5 +1,5 @@
 ---
-sccp: 2041
+sccp: 306
 title: Create the Kwenta Pool 
 network: Optimism
 author: Jeremy (@jchiaramonte7), Cavalier (@cavalier_eth)
