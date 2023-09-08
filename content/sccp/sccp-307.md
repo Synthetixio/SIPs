@@ -1,5 +1,5 @@
 ---
-sccp: 306
+sccp: 307
 title: Thales - Create Pool and register Market
 type: Governance
 network: Optimism
