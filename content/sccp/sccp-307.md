@@ -46,6 +46,8 @@ The proposal aims to connect Synthetix v3 LPs with Thales and Overtime AMMs, whi
 
 The Thales Pool will be configured to delegate collateral to the three Markets. The three Markets will act as intermediaries, drawing from the Thales Pool and distributing collateral to the respective Thales and Overtime AMMs. This setup will mitigate front-running risks by exposing collateral to all Thales and Overtime AMMs.
 
+
+
 At any given time, a keeper can invoke a `rebalance` function to:
 
 - Assess credit capacity delta and signal deposit or withdrawal intentions to the Thales or Overtime AMMs.
