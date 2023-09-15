@@ -25,6 +25,8 @@ Create a new v3 Pool called “Kwenta”, controlled by Kwenta treasury, in line
 
 > 6 is the next free `poolId`
 
+The owner of the Kwenta pool will be the Kwenta treasuryDAO `oeth:0x82d2242257115351899894eF384f779b5ba8c695`
+
 
 ## Motivation
 
