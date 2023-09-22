@@ -2,8 +2,8 @@
 stp: 1
 network: Ethereum & Optimism
 title: STP Purpose and Guidelines
-status: Draft
-author: 'Kain Warwick (@kaiynne), Carrot Anderson (@carrotanderson), Elliptic Curve, Spartan Glory'
+status: Approved
+author: 'Kain Warwick (@kaiynne), Carrot Anderson (@carrotanderson), Elliptic Crv, Spartan Glory'
 created: 2023-05-5T00:00:00.000Z
 type: Meta-Governance
 ---
