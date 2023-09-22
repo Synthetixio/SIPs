@@ -1,7 +1,7 @@
 ---
 stp: 3
 title: Synthetix Ecosystem Fund
-status: Draft
+status: Approved
 author: Kain (@kaiynne), SpartanGlory (@spartanglory)
 implementation-date: TBC
 discussions-to: TC Discord Channel

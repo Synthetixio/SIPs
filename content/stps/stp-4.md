@@ -1,7 +1,7 @@
 ---
 stp: 4
 title: V3 SNX Staking Pool
-status: Draft
+status: Approved
 author: Kain (@kaiynne), Cav (@Cavelier)
 implementation-date: TBA
 discussions-to: TC Discord Channel
@@ -33,7 +33,7 @@ Creating a trial staking pool on the Synthetix V3 platform provides a valuable o
 
 ### Financial Specification
 
-200k SNX will be allocated to this pool for a trial of 10 weeks.
+80k SNX will be allocated to this pool for a trial of 10 weeks. During the trial period this figure adjusted or extended by the treasury council.
 
 ## Copyright
 
