@@ -32,9 +32,9 @@ A short (~200 word) description of the proposed change, the abstract should clea
 
 ## Motivation
 
-<!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
+<!--This is the problem statement. This is the *why* of the SIP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SIP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the SIP will address the issue!-->
 
-This is the problem statement. This is the _why_ of the SIP. It should clearly explain _why_ the current state of the protocol is inadequate. It is critical that you explain _why_ the change is needed, if the SIP proposes changing how something is calculated, you must address _why_ the current calculation is innaccurate or wrong. This is not the place to describe how the SIP will address the issue!
+This is the problem statement. This is the _why_ of the SIP. It should clearly explain _why_ the current state of the protocol is inadequate. It is critical that you explain _why_ the change is needed, if the SIP proposes changing how something is calculated, you must address _why_ the current calculation is inaccurate or wrong. This is not the place to describe how the SIP will address the issue!
 
 ## Specification
 
