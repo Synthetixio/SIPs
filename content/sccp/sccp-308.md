@@ -14,7 +14,7 @@ created: 2023-09-29
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SIP proposes using a chainlink node with a staleness check on SNX v3 staking.
+This SCCP proposes to incorporate a stalenss check on the chainlink node used for SNX staking in the V3 system.
 
 ## Abstract
 
