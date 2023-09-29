@@ -20,16 +20,16 @@ This SCCP proposes to incorporate a stalenss check on the chainlink node used fo
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The chainlink node would have a staleness check incoporated based on the [heartbeat](https://docs.chain.link/data-feeds/price-feeds/addresses?network=ethereum&page=1&search=snx) of the respective network. The configuration would be 129600 seconds on ethereum and 3600 seconds on optimism.
+The chainlink node would have a staleness check incoporated based on the chainlink [heartbeat](https://docs.chain.link/data-feeds/price-feeds/addresses?network=ethereum&page=1&search=snx) of the respective network. The configuration would be 129,600 seconds (1.5 days) on ethereum and 3,600 seconds on optimism.
 
-Note that the proposed changes herein are currently classfied as an SCCP, as opposed to a SIP, since with respect to v3 oracles with restrictions/filters on those oracles can be done via configuration changes without any new contracts being deployed, further reference can be found [here](https://github.com/Synthetixio/synthetix-v3/tree/main/protocol/oracle-manager).
+Note that the proposed changes herein are currently proposed under SCCPs, since with respect to v3 oracles restrictions and filters on existing oracles can be performed via configuration changes, further reference can be found [here](https://github.com/Synthetixio/synthetix-v3/tree/main/protocol/oracle-manager).
 
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Currently the configured chainlink node does not incorporate any stalenss check. However, it is considered best practice that prices are checked for staleness before being consumed in staking, unstaking and liquidation . Hence, in case the oracle is stale activity that touches the oracle would revert.
+Currently the configured chainlink node does not incorporate any stalenss check. However, it is considered best practice that prices are checked for staleness before being consumed in staking, unstaking and liquidation. Hence, in case the oracle is stale, all activity that touches the oracle would revert (e.g. staking, unstaking and liquidations).
 
 
 ## Copyright
