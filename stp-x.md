@@ -26,9 +26,9 @@ A short (~200 word) description of the proposal, the abstract should clearly des
 
 ## Motivation
 
-<!--This is the problem statement. This is the *why* of the STP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the STP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the STP will address the issue!-->
+<!--This is the problem statement. This is the *why* of the STP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the STP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the STP will address the issue!-->
 
-This is the problem statement. This is the _why_ of the STP. It should clearly explain _why_ the current state of the protocol is inadequate. It is critical that you explain _why_ the change is needed, if the STP proposes changing how something is calculated, you must address _why_ the current calculation is innaccurate or wrong. This is not the place to describe how the STP will address the issue!
+This is the problem statement. This is the _why_ of the STP. It should clearly explain _why_ the current state of the protocol is inadequate. It is critical that you explain _why_ the change is needed, if the STP proposes changing how something is calculated, you must address _why_ the current calculation is inaccurate or wrong. This is not the place to describe how the STP will address the issue!
 
 ## Specification
 

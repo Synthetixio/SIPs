@@ -84,7 +84,7 @@ const IndexPage = () => (
       satisfied, a SIP is moved to <code>SC Review Pending</code>. Once the
       Spartan Council has formally reviewed the SIP during the SIP presentation
       they can either move it to a vote or send it back to{' '}
-      <code>Feasability</code>. A vote is conducted within the{' '}
+      <code>Feasibility</code>. A vote is conducted within the{' '}
       <code>spartancouncil.eth</code> snapshot space connected on the
       <a href="https://staking.synthetix.io/"> staking </a> dApp. If a vote by
       the Spartan Council reaches a super majority, the SIP is moved to{' '}
@@ -106,7 +106,7 @@ const IndexPage = () => (
       </li>
       <li>
         <strong>Feasibility</strong> - a SIP that is being assessed for
-        feasability with an assigned Core Contributor
+        feasibility with an assigned Core Contributor
       </li>
       <li>
         <strong>SC Review Pending</strong> - a SIP that is awaiting a Spartan
