@@ -1,6 +1,6 @@
 ---
 sccp: 307
-title: Thales - Create Pool and register Market
+title: Thales - Create Pool and register Markets
 type: Governance
 network: Optimism
 author: cyberduck, Cavalier (@cavalier_eth)
@@ -14,7 +14,7 @@ created: 2023-09-07
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Create a Thales Pool and register the Thales Market on Synthetix v3, enabling SNX LPs to gain exposure to Thales and Overtime AMMs and their respective yields.
+Create a Thales Pool and register three Markets on Synthetix v3, enabling SNX LPs to gain exposure to Thales and Overtime AMMs and their respective yields.
 
 ## Abstract
 
@@ -24,12 +24,14 @@ Create a new v3 Pool, “Thales Pool”, controlled by Thales treasury, in line 
 - `createPool(7,[ThalesPoolOwnerAddress])`
 - `setPoolName(7, “Thales Pool”)`
 
-Register a new v3 Market, “Thales Market”, to be collateralized by the Thales Pool:
+Register three new v3 Markets, “Thales Market”, "Overtime Singles Market" and "Overtime Parlays Market" to be collateralized by the Thales Pool:
 - `registerMarket([addressOfNewThalesMarket])`
+- `registerMarket([addressOfNewOvertimeSinglesMarket])`
+- `registerMarket([addressOfNewOvertimeParlayssMarket])`
 - `setMarketMinDelegateTime` = 2 weeks
 - `minimumCredit` = capital utilization rate of underlying AMM * amount deposited to the AMM by the v3 market
 
-The Thales Market will leverage sUSD credit against the Thales Pool collateral, despoit it into the underlying AMMs as an LP position, and periodically distribute yield or loss back to the Thales Pool.
+Each of the three Markets will leverage sUSD credit against the Thales Pool collateral, desposit it into the underlying AMMs as LP positions, and periodically distribute yields or losses back to the Thales Pool.
 
 
 ## Motivation
@@ -42,12 +44,14 @@ The proposal aims to connect Synthetix v3 LPs with Thales and Overtime AMMs, whi
 - Overtime Singles AMM: +51.89% lifetime yield over 25 weeks
 - Overtime Parlays AMM: 7.89% lifetime yield over 11 weeks
 
-The Thales Market will act as an intermediary, drawing from the Thales Pool and distributing collateral to Thales and Overtime AMMs based on configurable weights. This setup will mitigate front-running risks by exposing collateral to all Thales and Overtime AMMs.
+The Thales Pool will be configured to delegate collateral to the three Markets. The three Markets will act as intermediaries, drawing from the Thales Pool and distributing collateral to the respective Thales and Overtime AMMs. This setup will mitigate front-running risks by exposing collateral to all Thales and Overtime AMMs.
+
+![Diagram](./asset/sccp-307/SCCP-307.jpg)
 
 At any given time, a keeper can invoke a `rebalance` function to:
 
-- Assess credit capacity delta and signal deposit or withdrawal intentions to the Thales AMM.
-- Collect yields, withdraw from Thales AMM, invoke `depositMarketUsd` on the v3 core system, and deposit the yield to the Thales Pool.
+- Assess credit capacity delta and signal deposit or withdrawal intentions to the Thales or Overtime AMMs.
+- Collect yields, withdraw from Thales and Overtime AMMs, invoke `depositMarketUsd` on the v3 core system, and deposit the yields to the Thales Pool.
 
 ## Copyright
 
