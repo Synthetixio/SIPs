@@ -53,7 +53,7 @@ Beginning July 2024, partners achieving specified average daily volumes will be 
 
 - 1 million SNX for $250 million average daily volume sustained over 90 days.
 - 2 million SNX for $500 million average daily volume sustained over 180 days.
-- 2 million SNX for $750 million average daily volume sustained over 270 days.
+- 3 million SNX for $750 million average daily volume sustained over 270 days.
 
 <!-- Each $100m daily volume earns approx $1.25m in fees per month. At approx 30% of staked SNX, this equates to $375k fees to TC per month-->
 
