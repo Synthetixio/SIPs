@@ -2,7 +2,7 @@
 stp: 8
 title: V3 Integrator alignment
 status: Draft
-author: Cavalier (@cavalier_eth)
+author: Cavalier (@cavalier_eth), Kain Warwick (@kaiynne)
 implementation-date: 
 discussions-to: TC Discord Channel
 created: 2023-10-12
