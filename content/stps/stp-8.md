@@ -1,6 +1,6 @@
 ---
 stp: 8
-title: V3 Integrator alignment
+title: SNX incentives for integrators
 status: Draft
 author: Cavalier (@cavalier_eth), Kain Warwick (@kaiynne)
 implementation-date: 
@@ -11,7 +11,7 @@ created: 2023-10-12
 ## Simple Summary
 <!--You can leave these HTML comments in your merged STP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new STPs. Note that  an STP number will be assigned by an editor. When opening a pull request to submit your STP, please use an abbreviated title in the filename, `stp-draft_title_abbrev.md`. The title should be 44 characters or less.-->
 
-Reward outstanding Synthetix integrators with escrowed SNX grants from the treasury, increasing the role of long term partners in the protocol.
+Allocate up to 10m SNX from the Treasury to reward outstanding Synthetix integrators with escrowed SNX grants, increasing the role of long term partners in the protocol.
 
 ## Abstract
 
@@ -24,7 +24,7 @@ This proposal introduces a structured incentive mechanism for Synthetix integrat
 
 <!--This is the problem statement. This is the *why* of the STP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the STP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the STP will address the issue!-->
 
-Robust and lasting integrations are key to the success of the Synthetix ecosystem. Building integrations is a commitment, and the absence of a well-defined incentive structure could impede the number and quality of integrators. Establishing a structured incentive mechanism is essential to cultivating the right calibre of lasting partnerships.
+Robust and lasting integrations are key to the success of the Synthetix ecosystem. Building integrations is a commitment, and the absence of a well-defined incentive structure could impede the number and quality of integrators. Establishing a structured incentive mechanism is essential to cultivating the right calibre of lasting integrator partnerships.
 
 ## Specification
 
@@ -38,13 +38,15 @@ Robust and lasting integrations are key to the success of the Synthetix ecosyste
 ### Overview
 
 <!--This is a high level overview of *how* the STP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
-Award escrowed SNX grants to high-performing partners based on achieved volume targets.
+Award escrowed SNX grants to high-performing partners based on sustained volume targets. The targets should be designed to bring significant value to the platform, and
 
 ### Rationale
 
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose this use of funds – what were the considerations. The rationale fleshes out the motivation and reasoning behind decisions that were made. It should describe any alternate ideas that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
 
 Establishing a direct financial incentive for integrators aligns their success with the broader Synthetix ecosystem. Sharing governance privileges and fee revenue ensures that significant fee contributors are duly rewarded, fostering a mutually beneficial relationship and protocol growth.
+
+The TC debt is currently approximately $20.7m. At $2 SNX price, debt would need to be reduced by approximately $5m in order to release 1m staked SNX for first trache. Given the first tranche would reduce debt by approximately $3m, and additional $2m would be required.
 
 ### Financial Specification
 
