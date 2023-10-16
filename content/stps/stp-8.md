@@ -49,15 +49,21 @@ Establishing a direct financial incentive for integrators aligns their success w
 ### Financial Specification
 
 <!--The financial specification should outline the the tokens, amounts, destinations, and schedule of funds to be moved. If appropriate, any technical considerations should also be included here – that is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
+
 Beginning July 2024, partners achieving specified average daily volumes will be granted the following escrowed SNX grants:
 
-- 1 million SNX for $250 million average daily volume sustained over 90 days.
-- 2 million SNX for $500 million average daily volume sustained over 180 days.
-- 3 million SNX for $750 million average daily volume sustained over 270 days.
+| Average Daily Volume  | Minimum Time in Days | Escrowed SNX Grant   | Cumulative Fees to TC*  | Effective SNX Cost at Grant** |
+|-----------------------|-----------------------|-----------------------|-------------------------|----------------------|
+| $250 million         | 90                   | 1 million SNX        | $2,812,500                | $2.80                |
+| $500 million         | 180                  | 2 million SNX        | $11,250,000               | $4.23                |
+| $750 million         | 270                  | 2 million SNX        | $25,312,500               | $5.63                |
 
-<!-- Each $100m daily volume earns approx $1.25m in fees per month. At approx 30% of staked SNX, this equates to $375k fees to TC per month-->
+*Cumulative fees to TC are based on the assumption that $100 million daily volume results in $1.25 million total fees per month, with the TC earning 30% of the fees.
+**SNX price at grant is an estimate using cumulative fees earned by the Treasury Council
 
 Each grant milestone is cumulative but can only be achieved once. The grants will be escrowed for 24 months, with a 12-month cliff, followed by a 12-month linear monthly unlock.
+
+
 
 ## Copyright
 
