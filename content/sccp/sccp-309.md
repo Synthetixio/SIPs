@@ -1,6 +1,6 @@
 ---
 sccp: 309
-title: Configure Base Andromeda
+title: Enable USDC for Synthetix Andromeda on Base
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
@@ -13,7 +13,7 @@ created: 2023-10-27
 ## Simple Summary
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
-Configure the Andromeda Base deployment with V3 and Perps V3 in a conservative manner, for USDC collateral.
+Configure the Andromeda Base V3 deployment to accept USDC collateral, and enable ETH and BTC markets on Perps V3.
 
 ## Abstract
 
@@ -25,7 +25,7 @@ Markets require at least 125% collateralization
 minimum deposit time is 24 hours
 - `account_timeout_withdraw` = 1 day
 
-Enable USDC as collateral, $1 price, $1m cap, cratio 150%, 101% liquidation, minting disabled
+Enable USDC as collateral, $1 fixed price, $1m cap, 101% liquidation, minting disabled
 - `usdc_address` = 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
 - `registerNode` = CONSTANT NODE, 1
 - `synthUsdcMaxMarketCollateral` = 1000000
@@ -57,8 +57,8 @@ Configure ETH and BTC Perps Markets
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
-
-
+Andromeda is the combination of V3 Core + Perps V3 + USDC and ETH collateral. This proposal enables and configures all of Andromeda on Base, except ETH as collateral, so that the appetite for USDC can be tested and scaled up first.
+USDC is treated as a constant value of $1, with spot market wrapper creating the 1:1 redeemable synth sUSDC, used to trade Perps.
 
 ## Copyright
 
