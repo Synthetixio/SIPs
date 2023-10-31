@@ -57,8 +57,9 @@ Configure ETH and BTC Perps Markets
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
-Andromeda is the combination of V3 Core + Perps V3 + USDC and ETH collateral. This proposal enables and configures all of Andromeda on Base, except ETH as collateral, so that the appetite for USDC can be tested and scaled up first.
-USDC is treated as a constant value of $1, with spot market wrapper creating the 1:1 redeemable synth sUSDC, used to trade Perps.
+Andromeda is the combination of V3 Core + Perps V3 + USDC and ETH collateral. This proposal enables and configures all of Andromeda on Base, except ETH as collateral, so that the appetite for USDC can be cautiously tested and scaled up first.
+USDC is treated as a constant value of $1, with spot market wrapper creating the 1:1 redeemable synth sUSDC, used to trade Perps. USDC is limited to $1m of LP, and minting is disabled to increase the liquidity available to Perps Market.
+Assets tradable on Perps are limited to ETH and BTC, to reduce complexity and keep the first deployment conservative. Further markets can be added through governance.
 
 ## Copyright
 
