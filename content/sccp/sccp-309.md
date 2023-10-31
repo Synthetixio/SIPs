@@ -1,6 +1,6 @@
 ---
 sccp: 309
-title: Enable USDC for Synthetix Andromeda on Base
+title: Enable USDC for Andromeda on Base
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
