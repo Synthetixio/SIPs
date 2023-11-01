@@ -4,7 +4,7 @@ module.exports = {
   },
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
-    title: 'Synthetix SIPs, STPs & SCCPs',
+    title: 'Infinex XIPs',
   },
   plugins: [
     'gatsby-plugin-typescript',

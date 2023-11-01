@@ -26,73 +26,51 @@ const commonValidationSchema = Yup.object().shape({
   'discussions-to': Yup.string().nullable(),
 })
 
-const sipValidationSchema = commonValidationSchema
+const xipValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
-      sip: Yup.number().required(),
+      /*
+        xip: <to be assigned>
+        title: <XIP title>
+        author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
+        discussions-to: <Create a new thread on https://research.infinex.io and drop the link here>
+        status: <Draft>
+        created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+        updated: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+        requires: <XIP number(s)> (*optional)
+        resolution: <a url pointing to the resolutioon of this XIP>
+        type: <Meta-Governance | Governance>
+        parameter-changes: <a list of the parameter changes that are being proposed, or “None” if no protocol parameters are being changed in the specification>
+        network: <Ethereum | Optimism | Base | Ethereum & Optimism | Ethereum, Optimism & Base>
+
+        implementor: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
+        release: (Release Name)
+        proposal: <snapshot.org proposal link> (*optional)
+
+        implementation-date: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+      */  
+      xip: Yup.number().required(),
       network: Yup.string().required(),
     }),
   )
   .noUnknown()
   .strict()
 
-const sccpValidationSchema = commonValidationSchema
-  .concat(
-    Yup.object().shape({
-      sccp: Yup.number().required(),
-    }),
-  )
-  .noUnknown()
-  .strict()
-
-const stpValidationSchema = Yup.object()
-  .shape({
-    file: Yup.string().required(),
-    stp: Yup.number().required(),
-    title: Yup.string().required(),
-    status: Yup.string().oneOf(statuses),
-    author: Yup.string().required(),
-    [`implementation-date`]: Yup.string().nullable(),
-    [`discussions-to`]: Yup.string().nullable(),
-    created: Yup.date().nullable(),
-    requires: Yup.mixed().nullable(),
-  })
-  .noUnknown()
-  .strict()
 
 ;(async () => {
   try {
-    const sips = await g('./content/sips/*.md')
-    const stps = await g('./content/stps/*.md')
-    const sccp = await g('./content/sccp/*.md')
+    const xips = await g('./content/xips/*.md')
 
-    // SIP
+    // XIP
     await Promise.all(
-      sips.map(async (file) => {
+      xips.map(async (file) => {
         const content = await fs.readFile(file, 'utf-8')
         const { attributes } = fm(content)
-        const castValues = sipValidationSchema.cast({ file, ...attributes })
-        return await sipValidationSchema.validate(castValues)
+        const castValues = xipValidationSchema.cast({ file, ...attributes })
+        return await xipValidationSchema.validate(castValues)
       }),
     )
-    // STP
-    await Promise.all(
-      stps.map(async (file) => {
-        const content = await fs.readFile(file, 'utf-8')
-        const { attributes } = fm(content)
-        const castValues = stpValidationSchema.cast({ file, ...attributes })
-        return await stpValidationSchema.validate(castValues)
-      }),
-    )
-    // SCCP
-    await Promise.all(
-      sccp.map(async (file) => {
-        const content = await fs.readFile(file, 'utf-8')
-        const { attributes } = fm(content)
-        const castValues = sccpValidationSchema.cast({ file, ...attributes })
-        return await sccpValidationSchema.validate(castValues)
-      }),
-    )
+  
   } catch (error) {
     console.log(error)
     console.error({

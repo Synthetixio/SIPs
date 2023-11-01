@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 function presetTheme() {
-  const dark = localStorage.getItem("theme") === "dark";
+  // const dark = localStorage.getItem("theme") === "dark";
 
-  if (dark) {
+  // if (dark) {
     document.body.classList.add("dark");
-  }
+  // }
 }
 
 const themeScript = `(() => { ${presetTheme.toString()}; presetTheme() })()`;

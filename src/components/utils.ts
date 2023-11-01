@@ -6,5 +6,5 @@ export const getGithubLink = (fileAbsolutePath: string): string => {
     takeRight(3),
     join('/'),
   )(fileAbsolutePath)
-  return `https://github.com/Synthetixio/SIPs/blob/master/${relativePath}`
+  return `https://github.com/infinex-io/XIPs/blob/master/${relativePath}`
 }
