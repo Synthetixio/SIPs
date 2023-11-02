@@ -10,6 +10,7 @@ function SvgDiscord(
       clipRule="evenodd"
       strokeLinejoin="round"
       strokeMiterlimit={1.414}
+      verticalAline="middle"
       width={25}
       height={25}
       xmlns="http://www.w3.org/2000/svg"
