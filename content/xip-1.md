@@ -1,13 +1,12 @@
 ---
 xip: 1
-network: Ethereum & Optimism
 title: XIP Purpose and Guidelines
-status: Implemented
-author: Kain Warwick (@kaiynne)
-created: 2019-06-10T00:00:00.000Z
-proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/Qme74DFFv2CZDENkuD2HqYndFzAUtozFsn4U8khGeKfJsi
-type: Governance
+author: ' Bilby (@michaelcarrotanderson), Kmao (@kmaox), Jerry (@spinxho)'
+network: Ethereum & Optimism
+status: Draft
+created: 2022-11-02
+updated: 2022-11-02
+type: meta-governance
 ---
 
 ## What are XIPs?
@@ -41,22 +40,24 @@ The author of the XIP proposal is responsible for building consensus within the 
 Once a `Draft` is believed to be mature enough and ready to progress, it must be `Approved` to be executed. Approval of an XIP will be granted through:
 
 - Consultation with at least one member of the Infinex council, found through the Infinex Discord. They will assess whether the proposal needs a ‘Feasibility study’.
-- If it does need a ‘Feasibility Study’, the XIP will progress to the `Feasibility` stage. It will then be assigned a CC who will work with the author to conduct a ‘Feasibility study’. Once all parties are satisfied, the XIP is moved to `IC Review Pending` where it will be discussed and then voted upon.
-- If it does not need a ‘Feasibility Study’, the XIP will progress straight to `IC Review Pending` where it will be discussed and then voted upon.
+- If it does need a ‘Feasibility Study’, the XIP will progress to the `Feasibility` stage. It will then be assigned a CC who will work with the author to conduct a ‘Feasibility study’. Once all parties are satisfied, the XIP is moved to `IC Review Pending` where it will be discussed.
+- If it does not need a ‘Feasibility Study’, the XIP will progress straight to `IC Review Pending` where it will be discussed. 
 - The Infinex council can send it back to the `Draft` or `Feasibility` stage if they believe more edits are required, if not, it will enter the next stage
 
 3. Approval
 
-XIPs will be voted on by the Infinex Council (`IC Vote Pending`), and proposals will be passed only under a majority decision. Approved XIPs are moved to `Approved`, and then `Implemented` by the Infinex Council, protocol CCs, or community members. Otherwise, it is `Rejected`.
+XIPs will be voted on by the Infinex Council (`IC Vote Pending`) for five days, and proposals will be passed only under a majority decision. Approved XIPs are moved to `Approved`, and then `Implemented` once executed by the Infinex Council, protocol CCs, or community members. Otherwise, it is `Rejected`.
 
 
-- **Draft** -- This XIP is work-in-progress and being reviewed by a Spartan Council member with the champion.
-- **Feasibility** -- This XIP is assigned with a Core Contributor and underdoing a feasibility study.
-- **SC Review Pending** -- This XIP is being formally reviewed by the Spartan Council to decide on voting or sent back for feasibility study.
-- **Vote Pending** -- This XIP is scheduled for voting on [staking](https://staking.infinex.io/)
-- **Approved** -- This XIP has passed community governance and is now being prioritised for development.
-- **Rejected** -- This XIP has failed to reach community consensus.
-- **Implemented** -- This XIP has been implemented and deployed to mainnet.
+## XIP status terms
+
+- **Draft** - The initial state of a new XIP before the Infinex Council and core contributors have assessed it.
+- **Feasibility** - a XIP that is being assessed for feasibility with an assigned Core Contributor.
+- **IC Review Pending** - a XIP that is awaiting a Infinex Council Review after the Author and Core Contributor are satisfied with feasibility.
+- **Vote Pending** - a XIP that is awaiting a vote.
+- **Approved** - a XIP that has successfully reached a majority Infinex Council vote in favour.
+- **Rejected** - a XIP that has failed to reach a majority Infinex Council vote in favour.
+- **Implemented** - a XIP that has been released and implemented.
 
 ## What belongs in a successful XIP?
 
@@ -130,7 +131,7 @@ if the email address is not given.
 
 #### `discussions-to` header
 
-While an XIP is in **Draft** or **Feasibility** status, a `discussions-to` header will indicate the URL at [research.infinex.io](https://research.infinex.io/) where the XIP is being discussed.
+While an XIP is in **Draft** or **Feasibility** status, a `discussions-to` header will indicate the URL for [Discord](https://research.infinex.io/) where the XIP is being discussed.
 
 #### `created` header
 
@@ -163,7 +164,7 @@ XIPs may include auxiliary files such as diagrams. Such files must be named XIP-
 
 The current XIP editors are
 
-` * Kmao (@kmao37)`
+` * Kmao (@kmaox)`
 
 ## XIP Editor Responsibilities
 
@@ -177,7 +178,7 @@ If the XIP isn't ready, the editor will send it back to the author for revision,
 
 Once the XIP is ready for the repository, the XIP editor will:
 
-- Assign an XIP number (generally the PR number or, if preferred by the author, the Issue # if there was discussion in the Issues section of this repository about this SIP)
+- Assign an XIP number (generally the PR number or, if preferred by the author, the Issue # if there was discussion in the Issues section of this repository about this XIP)
 - Merge the corresponding pull request
 - Assign a Core Contributor to conduct a feasibility study on the XIP.
 - Send a message back to the XIP author with the next step.
