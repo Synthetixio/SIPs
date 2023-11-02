@@ -194,16 +194,6 @@ This XIP document was derived heavily from the SIP Synthetix Improvement Proposa
 - *“The SIP document was derived heavily from the EIP Ethereum Improvement Proposal document. In many places text was simply copied and modified. Any comments about the SIP document should be directed to the SIP editors. The history of the EIP is quoted below from the EIP document for context:”*
     - *"This document (EIP) was derived heavily from [Bitcoin's BIP-0001](https://github.com/bitcoin/bips) written by Amir Taaki which in turn was derived from [Python's PEP-0001](https://www.python.org/dev/peps/). In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."* *
 
-June 6, 2023: XIP 1 has been drafted and submitted as a PR.
-
-### Bibliography
-
-[the infinex discord]: https://discord.gg/infinex
-[pull request]: https://github.com/infinex-io/XIPs/pulls
-[markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-[bitcoin's bip-0001]: https://github.com/bitcoin/bips
-[python's pep-0001]: https://www.python.org/dev/peps/
-[synthetix engineering team]: https://github.com/orgs/infinex-io/people
 
 ## Copyright
 
