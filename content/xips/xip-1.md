@@ -4,8 +4,8 @@ title: XIP Purpose and Guidelines
 author: ' Bilby (@bilb-y), Kmao (@kmaox), Jerry (@spinxho)'
 network: Ethereum & Optimism
 status: Draft
-created: 2022-11-02
-updated: 2022-11-02
+created: 2023-11-02
+updated: 2023-11-02
 type: meta-governance
 ---
 
