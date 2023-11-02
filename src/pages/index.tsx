@@ -40,13 +40,8 @@ const IndexPage = () => (
       <li>
         Add your XIP to your fork of the repository. There is a{' '}
         <a href="https://github.com/infinex-io/XIPs/blob/master/xip-x.md">
-          template XIP here
-        </a>{' '}
-        and a{' '}
-        <a href="https://github.com/infinex-io/XIPs/blob/master/stp-x.md">
-          template STP here
+          template XIP here.
         </a>
-        .
       </li>
       <li>
         Submit a Pull Request to Infinex's{' '}
@@ -69,6 +64,23 @@ const IndexPage = () => (
       image in the XIP, use relative links such as{' '}
       <code>../assets/xip-X/image.png</code>.
     </p>
+    <ol>
+        <li>Creation</li>
+        <p>Once submitted, every XIP will begin as a `Draft`. It must then meet specific formatting criteria (largely, correct metadata in the header which will be discussed later), and be manually approved by an editor for further community discussion and consideration.
+          <br/> <br/> The author of the XIP proposal is responsible for building consensus within the community and documenting dissenting opinions. Authors must include a link to where people should continue discussing your XIP.</p>
+        <li>Voting</li>
+        <p>Once a Draft is believed to be mature enough and ready to progress, it must be Approved to be executed. Approval of an XIP will be granted through:
+            <ul>
+              <li>Consultation with at least one member of the Infinex council, found through the Infinex Discord. They will assess whether the proposal needs a ‘Feasibility study’.</li>
+              <li>If it does need a ‘Feasibility Study’, the XIP will progress to the Feasibility stage. It will then be assigned a CC who will work with the author to conduct a ‘Feasibility study’. Once all parties are satisfied, the XIP is moved to IC Review Pending where it will be discussed and then voted upon.</li>
+              <li>If it does not need a ‘Feasibility Study’, the XIP will progress straight to IC Review Pending where it will be discussed and then voted upon.</li>
+              <li>The Infinex council can send it back to the Draft or Feasibility stage if they believe more edits are required, if not, it will enter the next stage</li>
+            </ul>
+        </p>
+        <li>Approval</li>
+        <p>XIPs will be voted on by the Infinex Council (IC Vote Pending) for 5 days, and proposals will be passed only under a majority decision. Approved XIPs are moved to Approved, and then Implemented by the Infinex Council, protocol CCs, or community members. Otherwise, it is Rejected.</p>
+    </ol>
+    {/*}
     <p>
       When you believe your XIP is mature and ready to progress past the{' '}
       <code>Draft</code> phase, you should reach out to a Spartan Council member
@@ -96,7 +108,7 @@ const IndexPage = () => (
       author and relevant parties, the XIP is assigned the{' '}
       <code>Implemented</code> status. Community members who successfully reach
       this stage are entitled to a reward from the Infinex Protocol.
-    </p>
+    </p> */}
 
     <h2>XIP status terms</h2>
     <ul>
