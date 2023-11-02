@@ -131,7 +131,7 @@ if the email address is not given.
 
 #### `discussions-to` header
 
-While an XIP is in **Draft** or **Feasibility** status, a `discussions-to` header will indicate the URL for [Discord](https://research.infinex.io/) where the XIP is being discussed.
+While an XIP is in **Draft** or **Feasibility** status, a `discussions-to` header will indicate the URL for [Discord](https://discord.gg/infinex) where the XIP is being discussed.
 
 #### `created` header
 
@@ -196,11 +196,9 @@ This XIP document was derived heavily from the SIP Synthetix Improvement Proposa
 
 June 6, 2023: XIP 1 has been drafted and submitted as a PR.
 
-See [the revision history for further details](https://github.com/Synthetixio/), which is also available by clicking on the History button in the top right of the XIP.
-
 ### Bibliography
 
-[the synthetix discord]: https://discord.gg/a2E6uxk
+[the infinex discord]: https://discord.gg/infinex
 [pull request]: https://github.com/infinex-io/XIPs/pulls
 [markdown]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 [bitcoin's bip-0001]: https://github.com/bitcoin/bips
