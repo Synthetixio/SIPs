@@ -23,8 +23,6 @@ Parties involved in the process include the _author_, the [_XIP editors_](#xip-e
 
 Given the decentralized nature of the Infinex development process, anyone within the Infinex community is welcome to submit an XIP. However, to foster a collaborative environment, it is strongly encouraged that proposers engage in discussions within the Infinex Discord community before formally submitting their proposals. This preliminary discourse allows for the exchange of ideas, feedback, and refinement of concepts, ultimately leading to more robust and well-considered XIPs.
 
-![XIP-workflow.png](https://github.com/infinex-io/XIPs/blob/master/static/xip-workflow.png?raw=true)
-
 Progression through the XIP workflow is requested by the XIP author through a pull request, and reviewed by the XIP editors. 
 
  The XIP workflow comprises three main stages:
