@@ -1,7 +1,7 @@
 ---
 xip: 1
 title: XIP Purpose and Guidelines
-author: ' Bilby (@michaelcarrotanderson), Kmao (@kmaox), Jerry (@spinxho)'
+author: ' Bilby (@bilb-y), Kmao (@kmaox), Jerry (@spinxho)'
 network: Ethereum & Optimism
 status: Draft
 created: 2022-11-02
