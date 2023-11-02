@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react';
+import { Link } from 'gatsby'
 
 import GithubIcon from '../icons/Github'
 import TwitterIcon from '../icons/Twitter'
@@ -41,7 +42,7 @@ const Main: React.FC = ({ children }) => {
             _paq.push(['trackPageView']);
             _paq.push(['enableLinkTracking']);
             (function() {
-              var u="https://analytics.synthetix.io/";
+              var u="https://analytics.infinex.io/";
               _paq.push(['setTrackerUrl', u+'matomo.php']);
               _paq.push(['setSiteId', '5']);
               var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -53,7 +54,7 @@ const Main: React.FC = ({ children }) => {
       <header className="site-header" role="banner">
         <div className="wrapper">
           <a className="site-title" rel="author" href="/">
-            SIPs
+            XIPs
           </a>
           <nav className="site-nav">
             <input type="checkbox" id="nav-trigger" className="nav-trigger" />
@@ -66,15 +67,9 @@ const Main: React.FC = ({ children }) => {
             </label>
 
             <div className="trigger">
-              <a className="page-link" href="/all-sip">
-                All SIPs
-              </a>
-              <a className="page-link" href="/all-sccp">
-                All SCCPs
-              </a>
-              <a className="page-link" href="/all-stp">
-                All STPs
-              </a>
+              <Link className="page-link" to="/all-xip" activeClassName="active">
+                All XIPs
+              </Link>
             </div>
           </nav>
         </div>
@@ -86,13 +81,13 @@ const Main: React.FC = ({ children }) => {
 
       <footer className="site-footer h-card">
         <div className="wrapper">
-          <h2 className="footer-heading">SIPs</h2>
+          <h2 className="footer-heading">XIPs</h2>
 
           <div className="footer-col-wrapper">
             <div className="footer-col footer-col-1">
               <ul className="contact-list">
                 <li className="p-name">
-                  SIPs
+                  XIPs
                 </li>
                 <li className="p-name">
                   <a href="#" className="page-link inline-block align-middle" onClick={toggleTheme}>
@@ -106,15 +101,15 @@ const Main: React.FC = ({ children }) => {
             <div className="footer-col footer-col-2">
               <ul className="social-media-list">
                 <li>
-                  <a href="https://github.com/Synthetixio/SIPs">
+                  <a href="https://github.com/infinex-io/XIPs">
                     <GithubIcon className="svg-icon" />
-                    <span className="username">Synthetixio/SIPs</span>
+                    <span className="username">infinex-io/XIPs</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/synthetix_io">
+                  <a href="https://twitter.com/infinex_app">
                     <TwitterIcon className="svg-icon" />
-                    <span className="username">synthetix_io</span>
+                    <span className="username">infinex_app</span>
                   </a>
                 </li>
               </ul>
@@ -122,8 +117,8 @@ const Main: React.FC = ({ children }) => {
 
             <div className="footer-col footer-col-3">
               <p>
-                Synthetix Improvement Proposals (SIPs) describe standards for
-                the Synthetix platform, including core protocol specifications,
+                Synthetix Improvement Proposals (XIPs) describe standards for
+                the Infinex platform, including core protocol specifications,
                 client APIs, and contract standards.
               </p>
             </div>

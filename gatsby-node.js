@@ -6,8 +6,7 @@ const kebabStatuses = statuses.map(kebabCase)
 
 const Frontmatter = `
   fragment Frontmatter on MarkdownRemarkFrontmatter {
-    sip
-    sccp
+    xip
     title
     author
     network
@@ -20,36 +19,13 @@ const Frontmatter = `
     status
   }
 `
-const allSipsQuery = `
+const allXipsQuery = `
   ${Frontmatter}
-  query allSips {
+  query allXips {
     allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "/sips/" }
-        frontmatter: { sip: { ne: null } }
-      }
-    ) {
-      group(field: frontmatter___status) {
-        fieldValue
-        nodes {
-          frontmatter {
-            ...Frontmatter
-          }
-          md: rawMarkdownBody
-          html
-        }
-      }
-    }
-  }
-`
-
-const allSccpQuery = `
-  ${Frontmatter}
-  query allSips {
-    allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "/sccp/" }
-        frontmatter: { sccp: { ne: null } }
+        fileAbsolutePath: { regex: "/xips/" }
+        frontmatter: { xip: { ne: null } }
       }
     ) {
       group(field: frontmatter___status) {
@@ -67,15 +43,12 @@ const allSccpQuery = `
 `
 
 exports.onPostBuild = async ({ graphql }) => {
-  const allSips = await graphql(allSipsQuery)
-  const allSccp = await graphql(allSccpQuery)
+  const allXips = await graphql(allXipsQuery)
 
-  const sipsPath = './public/api/sips'
-  const sccpPath = './public/api/sccp'
+  const xipsPath = './public/api/xips'
 
   ;[
-    { path: sipsPath, result: allSips },
-    { path: sccpPath, result: allSccp },
+    { path: xipsPath, result: allXips },
   ].forEach(({ path, result }) => {
     if (!fs.existsSync(path)) fs.mkdirSync(path, { recursive: true })
 

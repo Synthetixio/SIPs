@@ -97,13 +97,13 @@ a {
   text-decoration: none;
 }
 .dark a  {
-  color: #2a7ae2;
+  color: #ff9b69;
 }
 a:visited {
   color: #1756a9;
 }
 .dark a:visited {
-  color: #1756a9;
+  color: #cf7446;
 }
 a:hover {
   color: #111;
@@ -243,14 +243,14 @@ table td {
 
 /** Site header */
 .site-header {
-  border-top: 5px solid #424242;
+  border-top: 5px solid #ff9b69;
   border-bottom: 1px solid #e8e8e8;
   min-height: 55.95px;
   position: relative;
 }
 .dark .site-header {
-  border-top: 5px solid #bdbdbd;
-  border-bottom: 1px solid #171717;
+  border-top: 5px solid #ff9b69;
+  border-bottom: 1px solid #1f2937;
 }
 
 .site-title {
@@ -289,6 +289,9 @@ table td {
 }
 .site-nav .page-link:not(:last-child) {
   margin-right: 20px;
+}
+.active {
+  color: #ff9b69;
 }
 @media screen and (max-width: 600px) {
   .site-nav {

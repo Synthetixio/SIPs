@@ -1,9 +1,9 @@
 {
-  "name": "snx-sips",
+  "name": "infinex-xips",
   "version": "1.0.0",
   "private": true,
-  "description": "snx-sips",
-  "author": "SynthetixIo",
+  "description": "infinex-xips",
+  "author": "InfinexIo",
   "keywords": [
     "gatsby"
   ],
