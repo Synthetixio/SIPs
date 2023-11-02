@@ -1,4 +1,4 @@
-# XIPs [![Discord](https://img.shields.io/discord/413890591840272394.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discordapp.com/channels/413890591840272394/) [![Twitter Follow](https://img.shields.io/twitter/follow/synthetix_io.svg?label=synthetix_io&style=social)](https://twitter.com/infinex_app)
+# XIPs [![Discord](https://img.shields.io/discord/413890591840272394.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discord.com/channels/1128911960004644894/1147748302557827163) [![Twitter Follow](https://img.shields.io/twitter/follow/synthetix_io.svg?label=synthetix_io&style=social)](https://twitter.com/infinex_app)
 
 Infinex Improvement Proposals (XIPs) describe standards for the Synthetix platform, including core protocol specifications, client APIs, and contract standards.
 
@@ -9,7 +9,7 @@ Infinex Improvement Proposals (XIPs) describe standards for the Synthetix platfo
 3.  Add your XIP to your fork of the repository. There is a [template XIP here](xip-x.md) and a [template STP here](stp-x.md).
 4.  Submit a Pull Request to Infinex's [XIPs repository](https://github.com/infinex-io/XIPs).
 
-Your first PR should be a first draft of the final XIP. It must meet the formatting criteria enforced by the build (largely, correct metadata in the header). An editor will manually review the first PR for a new XIP and assign it a number before merging it. Make sure you include a `discussions-to` header with the URL to a new thread on [research.infinex.io](https://research.infinex.io) where people can discuss the XIP as a whole.
+Your first PR should be a first draft of the final XIP. It must meet the formatting criteria enforced by the build (largely, correct metadata in the header). An editor will manually review the first PR for a new XIP and assign it a number before merging it. Make sure you include a `discussions-to` header with the URL to a new thread on [Discord](https://research.infinex.io) where people can discuss the XIP as a whole.
 
 If your XIP requires images, the image files should be included in a subdirectory of the `assets` folder for that XIP as follow: `assets/xip-X` (for xip **X**). When linking to an image in the XIP, use relative links such as `../assets/xip-X/image.png`.
 

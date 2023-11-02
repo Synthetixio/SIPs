@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Link } from 'gatsby'
 
 import GithubIcon from '../icons/Github'
-import TwitterIcon from '../icons/Twitter'
+import SvgX from '../icons/Twitter'
 import LightModeIcon from '../icons/LightMode'
 import DarkModeIcon from '../icons/DarkMode'
 
@@ -108,7 +108,7 @@ const Main: React.FC = ({ children }) => {
                 </li>
                 <li>
                   <a href="https://twitter.com/infinex_app">
-                    <TwitterIcon className="svg-icon" />
+                    <SvgX className="svg-icon" />
                     <span className="username">infinex_app</span>
                   </a>
                 </li>
@@ -117,7 +117,7 @@ const Main: React.FC = ({ children }) => {
 
             <div className="footer-col footer-col-3">
               <p>
-                Synthetix Improvement Proposals (XIPs) describe standards for
+                Infinex Improvement Proposals (XIPs) describe standards for
                 the Infinex platform, including core protocol specifications,
                 client APIs, and contract standards.
               </p>
