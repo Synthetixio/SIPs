@@ -12,7 +12,7 @@ const commonValidationSchema = Yup.object().shape({
   file: Yup.string().required(),
   title: Yup.string().required(),
   type: Yup.string().oneOf(['meta-governance', 'core-upgrade','parameter-change', "integration-upgrade"]).required(),
-  proposal: Yup.string().matches(snapshotIdRegex),// check that this is optional
+  resolution: Yup.string().matches(snapshotIdRegex),// check that this is optional
   status: Yup.string().oneOf(statuses),
   author: Yup.string().required(),
   network: Yup.string()
@@ -23,7 +23,6 @@ const commonValidationSchema = Yup.object().shape({
   updated: Yup.date().required(),
   requires: Yup.mixed().nullable(),
   'discussions-to': Yup.string().nullable(),
-  resolution: Yup.string().nullable(),
   'parameter-changes': Yup.string().nullable(),
   'implementation-date': Yup.date().nullable(),
 })

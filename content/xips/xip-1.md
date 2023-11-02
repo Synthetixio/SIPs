@@ -2,7 +2,7 @@
 xip: 1
 title: XIP Purpose and Guidelines
 author: ' Bilby (@bilb-y), Kmao (@kmaox), Jerry (@spinxho)'
-network: Ethereum & Optimism
+network: Optimism
 status: Draft
 created: 2023-11-02
 updated: 2023-11-02
@@ -51,13 +51,13 @@ XIPs will be voted on by the Infinex Council (`IC Vote Pending`) for five days, 
 
 ## XIP status terms
 
-- **Draft** - The initial state of a new XIP before the Infinex Council and core contributors have assessed it.
-- **Feasibility** - a XIP that is being assessed for feasibility with an assigned Core Contributor.
-- **IC Review Pending** - a XIP that is awaiting a Infinex Council Review after the Author and Core Contributor are satisfied with feasibility.
-- **Vote Pending** - a XIP that is awaiting a vote.
-- **Approved** - a XIP that has successfully reached a majority Infinex Council vote in favour.
-- **Rejected** - a XIP that has failed to reach a majority Infinex Council vote in favour.
-- **Implemented** - a XIP that has been released and implemented.
+- **Draft** – The initial state of a new XIP before the Infinex Council and core contributors have assessed it.
+- **Feasibility** – a XIP that is being assessed for feasibility with an assigned Core Contributor.
+- **IC Review Pending** – a XIP that is awaiting a Infinex Council Review after the Author and Core Contributor are satisfied with feasibility.
+- **Vote Pending** – a XIP that is awaiting a vote.
+- **Approved** – a XIP that has successfully reached a majority Infinex Council vote in favour.
+- **Rejected** – a XIP that has failed to reach a majority Infinex Council vote in favour.
+- **Implemented** – a XIP that has been released and implemented.
 
 ## What belongs in a successful XIP?
 
@@ -107,8 +107,6 @@ Each XIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style
 
 `implementor:  ` \ <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName foo@bar.com, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 
-`* proposal: ` \<snapshot.org proposal link>
-
 Headers that permit lists must separate elements with commas.
 
 Headers requiring dates will always do so in the format of ISO 8601 (yyyy-mm-dd).
@@ -150,8 +148,6 @@ The `type` header specifies the category of the XIP to which it belongs. The cat
 - `core-upgrade` (pertaining to proposed protocol upgrades)
 - `integration-upgrade` (for introducing new features to the protocol).
 
-If the drafted XIP doesn’t align with any existing categories, it is labelled as `misc`.
-
 #### `requires` header
 
 XIPs may have a `requires` header, indicating the XIP numbers that this XIP depends on.
@@ -159,12 +155,6 @@ XIPs may have a `requires` header, indicating the XIP numbers that this XIP depe
 ## Auxiliary Files
 
 XIPs may include auxiliary files such as diagrams. Such files must be named XIP-XXXX-Y.ext, where “XXXX” is the XIP number, “Y” is a serial number (starting at 1), and “ext” is replaced by the actual file extension (e.g. “png”).
-
-## XIP Editors
-
-The current XIP editors are
-
-` * Kmao (@kmaox)`
 
 ## XIP Editor Responsibilities
 
