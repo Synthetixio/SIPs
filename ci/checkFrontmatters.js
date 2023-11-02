@@ -11,46 +11,28 @@ const snapshotIdRegex = /^https?:\/\/(snapshot.org).*\/([A-z0-9]{7,})$/
 const commonValidationSchema = Yup.object().shape({
   file: Yup.string().required(),
   title: Yup.string().required(),
-  type: Yup.string().oneOf(['Meta-Governance', 'Governance']).required(),
-  proposal: Yup.string().matches(snapshotIdRegex),
+  type: Yup.string().oneOf(['meta-governance', 'core-upgrade','parameter-change', "integration-upgrade"]).required(),
+  proposal: Yup.string().matches(snapshotIdRegex),// check that this is optional
   status: Yup.string().oneOf(statuses),
   author: Yup.string().required(),
   network: Yup.string()
     .oneOf(['Ethereum', 'Optimism', 'Ethereum & Optimism','Base','Ethereum, Optimism & Base'])
     .required(),
-  implementor: Yup.string().nullable(),
-  release: Yup.string().nullable(),
-  created: Yup.date().nullable(),
-  updated: Yup.date().nullable(),
+  implementor: Yup.string().required(),
+  created: Yup.date().required(),
+  updated: Yup.date().required(),
   requires: Yup.mixed().nullable(),
   'discussions-to': Yup.string().nullable(),
+  resolution: Yup.string().nullable(),
+  'parameter-changes': Yup.string().nullable(),
+  'implementation-date': Yup.date().nullable(),
 })
 
+// Specific validation for Xip, can extend to other types
 const xipValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
-      /*
-        xip: <to be assigned>
-        title: <XIP title>
-        author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
-        discussions-to: <Create a new thread on https://research.infinex.io and drop the link here>
-        status: <Draft>
-        created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
-        updated: <date created on, in ISO 8601 (yyyy-mm-dd) format>
-        requires: <XIP number(s)> (*optional)
-        resolution: <a url pointing to the resolutioon of this XIP>
-        type: <Meta-Governance | Governance>
-        parameter-changes: <a list of the parameter changes that are being proposed, or “None” if no protocol parameters are being changed in the specification>
-        network: <Ethereum | Optimism | Base | Ethereum & Optimism | Ethereum, Optimism & Base>
-
-        implementor: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
-        release: (Release Name)
-        proposal: <snapshot.org proposal link> (*optional)
-
-        implementation-date: <date created on, in ISO 8601 (yyyy-mm-dd) format>
-      */  
       xip: Yup.number().required(),
-      network: Yup.string().required(),
     }),
   )
   .noUnknown()
