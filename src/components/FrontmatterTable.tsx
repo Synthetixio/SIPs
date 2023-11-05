@@ -87,6 +87,7 @@ export const query = graphql`
     created
     updated
     status
+    theme
   }
 `
 
