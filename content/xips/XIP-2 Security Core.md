@@ -1,4 +1,13 @@
-# XIP-2 (working)
+---
+xip: 2
+title: Security Core
+author: ' Bilby (@bilb-y), Kmao (@kmaox), Spinxho (@spinxho)'
+network: Optimism
+status: Draft
+created: 2023-11-05
+updated: 2023-11-05
+type: meta-governance
+---
 
 # Simple Summary
 
