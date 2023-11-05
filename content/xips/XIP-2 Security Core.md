@@ -1,12 +1,12 @@
 ---
 xip: 2
 title: Security Core
-author: ' Bilby (@bilb-y), Kmao (@kmaox), Spinxho (@spinxho)'
+author: ' Bilby (@bilb-y), Spinxho (@spinxho), Kmao (@kmaox)'
 network: Optimism
 status: Draft
 created: 2023-11-05
 updated: 2023-11-05
-type: meta-governance
+type: core-upgrade
 ---
 
 # Simple Summary
@@ -21,7 +21,7 @@ Infinex requires the implementation of a security system that blends robust, mul
 
 In order to understand the problems that this proposal aims to solve with the Infinex security core architecture, we will explore stylised examples with a user, Bob, who is new to the space.
 
-![Untitled](XIP-2%20(working)%201c2afbcd2aeb4eba995c37b4a402bed8/Untitled.png)
+![Untitled](assets/xip2-1.png)
 
 Bob is trying to decide whether he should sign up to trade on a centralised exchange, or onboard himself into DeFi.
 
@@ -29,7 +29,7 @@ Bob is trying to decide whether he should sign up to trade on a centralised exch
 
 To onboard into DeFi, Bob can create a wallet on Ethereum, and transfer his funds into it.
 
-![Untitled](XIP-2%20(working)%201c2afbcd2aeb4eba995c37b4a402bed8/Untitled%201.png)
+![Untitled](assets/xip2-2.png)
 
 Bob learns that this solution has some interesting advantages:
 
@@ -46,7 +46,7 @@ Beyond the initial onboarding, Bob doesn’t have to manage much – the exchang
 
 One day, Bob forgets his password. How does he go about resetting it? Let’s imagine there’s a security guard sitting inside the exchange, called the Authenticator. He’s got a picture of Bob pinned to his wall. When Bob comes to the exchange and asks to access his account, he has to convince this security guard that he is indeed the same Bob as is in the picture.
 
-![Untitled](XIP-2%20(working)%201c2afbcd2aeb4eba995c37b4a402bed8/Untitled%202.png)
+![Untitled](assets/xip2-3.png)
 
 He does this by providing them with his username and password, or via some social sign-in. When Bob tries to do something particularly sensitive, the authenticator has the discretion to double check that he is really Bob – he can ask for one or multiple one time passwords from Bob, depending on Bob’s security preferences.
 
@@ -64,7 +64,7 @@ The Infinex security module aims to replicate the architecture of the CeFi solut
 
 Here’s what that would look like:
 
-![Untitled](XIP-2%20(working)%201c2afbcd2aeb4eba995c37b4a402bed8/Untitled%203.png)
+![Untitled](assets/xip2-4.png.png)
 
 From top-left to right:
 
@@ -75,7 +75,7 @@ From top-left to right:
 
 A simple withdrawal flow would therefore work like this:
 
-![Untitled](XIP-2%20(working)%201c2afbcd2aeb4eba995c37b4a402bed8/Untitled%204.png)
+![Untitled](assets/xip2-5.png)
 
 The important piece of this puzzle is in decoupling the authenticator from the key management system (KMS), while preventing the KMS operators from accessing Bob’s key (unless they are Bob). This sounds like magic, but has become possible in recent months.
 
@@ -134,7 +134,7 @@ The Lit action contains logic for releasing signatures to user authenticated by 
 
 The diagram below demonstrates how these pieces fit together for Bob, who would like to withdraw some money from his onchain smart account:
 
-![Untitled](XIP-2%20(working)%201c2afbcd2aeb4eba995c37b4a402bed8/Untitled%205.png)
+![Untitled](assets/xip2-6.png)
 
 The flow is easiest to comprehend when starting with the end goal:
 
@@ -148,7 +148,7 @@ When Bob requests a signature from his MFA key or their recovery key, or to chan
 
 A more detailed specification for how a user would create a new account and then change his email address is outlined in the following sequence diagram:
 
-![Untitled](XIP-2%20(working)%201c2afbcd2aeb4eba995c37b4a402bed8/Untitled%206.png)
+![Untitled](assets/xip2-7.png)
 
 ### Upgrading a Lit action
 
