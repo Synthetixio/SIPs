@@ -78,17 +78,20 @@ For liquidating a non-flagged account we need to compute the cost of flagging th
 
 where `N` is the number of feeds that need to be updated (all collaterals types and positions an account has without taking into account snxUSD). We'll use this formula to calculate the cost of flagging and liquidating a non-flagged account.
 
-4- We then need to guarantee a minimum of rewards to keepers (`minKeeperRewardCap`), proportional to the cost of execution, or a minimum set. The minimum rewards are configurable by gobernance. We calculate the minimum rewards as:
+4- We then need to guarantee a minimum of rewards to keepers (`minimumKeeperRewardCap`), proportional to the cost of execution, or a minimum set. The minimum rewards are configurable by gobernance. We calculate the minimum rewards as:
 
-`minKeeperRewardCap = max(costOfExecutionGrossUsd + profitMarginUSD , costOfExecutionGrossUsd * (1 + profitMarginPercent)`
+`minimumKeeperRewardCap = max(costOfExecutionGrossUsd + minKeeperRewardUsd , costOfExecutionGrossUsd * (1 + minKeeperProfitRatioD18)`
 
-where `profitMarginUSD` and `profitMarginPercent` are configurable by governance.
+where `minKeeperRewardUsd` and `minKeeperProfitRatioD18` are configurable by governance.
 
-5- We also need to guarantee a maximum of rewards to keeper(`maxKeeperRewardCap`), in order to limit the effect it has on users in case we have a temporary surge in base fee gas prices, which result in liquidations of small positions, as we’ve experienced in PerpsV2. The cap will be the minimum of an absolute cap and a variable cap. The variable cap will be based on the size `availableMarginInUSD` meaning a larger margin allows for more tolerance of gas price surges. We calculate the maximum as:
+5- We also need to guarantee a maximum of rewards to keeper(`maximumKeeperRewardCap`), in order to limit the effect it has on users in case we have a temporary surge in base fee gas prices, which result in liquidations of small positions, as we’ve experienced in PerpsV2. The cap will be the minimum of an absolute cap and a variable cap. The variable cap will be based on the size `availableMarginInUSD` meaning a larger margin allows for more tolerance of gas price surges. We calculate the maximum as:
 
-`maxKeeperRewardCap = min(availableMarginInUSD  * scaling , absoluteCapInUSD)`
+`maximumKeeperRewardCap = min(availableMarginInUSD * maxKeeperScalingRatioD18 , maxKeeperRewardUsd)`
+or 
+`maximumKeeperRewardCap = maxKeeperRewardUsd` if `availableMarginInUSD` is zero (it means the account was already flagged)
 
-where `scaling` and `absoluteCapInUSD` are configurable by governance.
+
+where `maxKeeperScalingRatioD18` and `maxKeeperRewardUsd` are configurable by governance.
 
 6- Finally, we calculate the rewards for keepers, depending on the kind of transaction as the `costs + profit` (based on the kind of transaction) and bounded by the minimum and maximum rewards:
 
@@ -108,7 +111,7 @@ The node will be registered with the following parameters:
 
 For settelemts we use the `l1SettleGasUnits` and `l2SettleGasUnits` to calculate the transaction gas costs `costOfExecutionGrossUsd`. The rewards for keepers are calculated as:
 
-`settlementKeeperReward = minKeeperRewardCap < costOfExecutionGrossUsd + settlementStrategy.settlementReward< maxKeeperRewardCap`
+`settlementKeeperReward = min(max(minimumKeeperRewardCap, costOfExecutionGrossUsd + settlementStrategy.settlementReward), maximumKeeperRewardCap)`
 
 ### Liquidations
 
@@ -124,7 +127,7 @@ In this case we use the `l1FlagGasUnits` and `l2FlagGasUnits` and `N number of f
 
 `flagReward = sumOfPositions(notional * liquidationRewardRatioD18)`
 
-`flagAndLiquidateKeeperReward = minKeeperRewardCap < costOfExecutionGrossUsd + flagReward < maxKeeperRewardCap`
+`flagAndLiquidateKeeperReward = min(max(minimumKeeperRewardCap, costOfExecutionGrossUsd + flagReward), maximumKeeperRewardCap)`
 
 
 #### Flagged liquidations
@@ -135,7 +138,7 @@ The rewards for the keeper will be the sum of the liquidation rewards for each a
 In this case, for each liquidated account, we use the `l1LiquidateGasUnits` and `l2LiquidateGasUnits` to calculate the transaction gas costs `costOfExecutionGrossUsd`. The rewards for keepers are calculated as:
 
 
-`liquidateKeeperReward = minKeeperRewardCap < costOfExecutionGrossUsd  < maxKeeperRewardCap`
+`liquidateKeeperReward = min(max(minimumKeeperRewardCap, costOfExecutionGrossUsd), maximumKeeperRewardCap)`
 
 ### Minimum Required Margin
 In order to find if a position can be liquidated, we need to calculate the minimum required margin required to pay the keeper rewards to completely liquidate the position. 
@@ -159,6 +162,28 @@ TBD but all the different caps and parameters can be tested with the different s
 <!--Please list all values configurable via SCCP under this implementation.-->
 
 Please list all values configurable via SCCP under this implementation.
+
+#### Caps related
+- `minKeeperRewardUsd`,
+- `minKeeperProfitRatioD18`,
+- `maxKeeperRewardUsd`,
+- `maxKeeperScalingRatioD18`
+
+are set via `setKeeperRewardGuards()`
+
+#### Transaction costs related
+- l1SettleGasUnits,
+- l2SettleGasUnits,
+- l1FlagGasUnits,
+- l2FlagGasUnits,
+- l1LiquidateGasUnits,
+- l2LiquidateGasUnits
+
+are set when registering the external node `TxGasPriceOracle` in oracle manager.
+
+#### Other parameters
+- Settlement strategy: `settlementStrategy.settlementReward`
+- Market: `liquidationRewardRatioD18`
 
 ## Copyright
 
