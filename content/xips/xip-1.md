@@ -3,7 +3,7 @@ xip: 1
 title: XIP Purpose and Guidelines
 author: ' Bilby (@bilb-y), Kmao (@kmaox), Spinxho (@spinxho)'
 network: Optimism
-status: Draft
+status: approved
 created: 2023-11-02
 updated: 2023-11-02
 type: meta-governance
