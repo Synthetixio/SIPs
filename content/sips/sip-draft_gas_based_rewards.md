@@ -1,11 +1,11 @@
 ---
 sip: <to be assigned>
-title: Transaction cost Based Rewards
+title: Transaction Costs based Rewards
 network: Optimism & Base
 status: Draft
 type: Governance
-author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
-implementor: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
+author: Kaleb Keny (@kaleb-keny), Leo Massazza (@leomassazza)
+implementor: Leo Massazza (@leomassazza)
 release: (Release Name)
 implementation-date:
 discussions-to: <Create a new thread on https://research.synthetix.io and drop the link here>
