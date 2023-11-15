@@ -127,7 +127,15 @@ The keys that control a users smart account will be able to be changed through a
 
 This customizability offers a gradient of control for advanced users who want more or less responsibility of managing their own keys. It also allows for social recovery (Alice’s hardware wallet could be added as a recovery signer for Bob’s account)
 
-[Key configuration (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Key%20configuration%20(1)%2052b54da0ca3f4bf4ac8c340e1e2abb00.csv)
+|Name|Requires|Notes|
+|:----|:----|:----|
+|Add browser key|Recovery key signature| |
+|Remove browser key|Active browser key signature| |
+|Activate browser key|recoveryDelay period, or active browser key signature|While any browser key can be used to trade, only an active browser key can be used as a second factor for sensitive actions (like withdrawing)|
+|Add, remove, or change recovery key|Active browser key signature and (MFA key or recover key) signature| |
+|Add, remove, or change MFA key|Active browser key signature and (MFA key or recover key) signature| |
+|Add emergency withdrawal address|Active browser key signature and MFA key signature| |
+
 
 ## Each key is gated by trustless off-chain security
 
