@@ -209,12 +209,13 @@ Additional goals for the security model are
 To achieve these goals, we firstly apply a general ruleset for off-chain security actions:
 
 |Security Action|Requirement/Rule|
+|:----|:----|
 |Reset Password|All Enabled Security Methods ex. 1 **and** Email OTP|
 |Add MFA Method (Authenticator, Mobile SMS, Passkey)|All Enabled MFA Methods and Email OTP **or** Ethereum Signer|
 |Get MFA Signature (Strict)|All Enabled MFA Methods and Email OTP **or** Ethereum Signer|
 |Get MFA Signature (Relaxed I)|All Enabled Security Methods ex. 1 **and** Email OTP **or** Ethereum Signer|
 |Get MFA Signature (Relaxed II)|All Enabled MFA Methods ex. 1 **and** Email OTP|
-|or Ethereum SignerActivate Active Browser Key (ABK)|MFA Signature **and** 7 Day Delay <br> **or** MFA Signature **and** ABK Signature|
+|or Ethereum SignerActivate Active Browser Key (ABK)|MFA Signature **and** 7 Day Delay <br> **or** MFA Signature *and* ABK Signature|
 
 
 Here, ***All Enabled Security Methods ex. 1***, refers to the user condition in which they possess all but one of the security methods enabled on their account. 
