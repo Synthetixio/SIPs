@@ -241,7 +241,7 @@ Exhaustive tables of user loss and hack states.
 ### **Bucket Level 3**
 
 #### High Security User w/ Ethereum Signer [2x MFA Methods + Ethereum Signer]
-##### Hack States [New User]
+##### Hack States [High Security User w/ Ethereum Signer]
 | Hacker Initial States | Action Path |
 | ----------- | ----------- |
 | Hacker Steals Credentials + Ethereum Signer | Login → Get Ethsig → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
@@ -251,7 +251,7 @@ Exhaustive tables of user loss and hack states.
 | Hacker Steals Email + [2x MFA Methods] | Reset Password → Login → Get MFA Signature → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
 | Hacker Steals Ethereum Signer + [2x MFA Methods] | Get Ethsig → Change Email → Reset Password → Login → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
 
-##### Loss States [New User]
+##### Loss States [High Security User w/ Ethereum Signer]
 | Loss State | 
 | ----------- |
 |Lose [Active Device, Credentials, Email] + Lose [1x MFA Methods] + Lose Ethereum Signer|
