@@ -320,13 +320,21 @@ We have developed an exhaustive list of account loss states for users of all buc
 
 ************************************************************Loss State Table Example: Security Bucket Level 0************************************************************
 
-[Loss States (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Loss%20States%20(1)%205e2e9df2ff90463a813a84aba74536ee.csv)
+### Loss States
+|Loss State|Notes| 
+|:----|:----|
+|Lose Email|Recoverable by Email Providers, e.g. Google, Microsoft, etc.|
 
 ************************************************************Loss State Table Example: Security Bucket Level 4************************************************************
 
-[Loss States (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Loss%20States%20(1)%20856bb00825ea4f3b9f5c4b3977317ff0.csv)
+### Loss States
+|Loss State|
+|:----|
+|Lose [3x MFA Methods]|
+|Lose [2x MFA Methods] + Lose [Credentials or Ethereum Signer] Lose Credentials + Lose [1x MFA Methods] + Lose [Email or Ethereum Signer]|
+|Lose Email + Lose Ethereum Signer + Lose [Credentials or Device]|
 
-The full tables of loss states in the [auxiliary file](https://www.notion.so/da5121d8bc6f4b2fb8ae4def6d3f8b47?pvs=21).
+The full tables of loss states in the [auxiliary file](assets/OffchainSecurityModelAuxiliaryFile.md).
 
 ### Security
 
@@ -334,13 +342,26 @@ Accepting that the most crucial point of security is the off-chain MFA configura
 
 ************************************************************Hack State Table Example: Security Bucket Level 0************************************************************
 
-[Hack States (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Hack%20States%20(1)%20ce8f1fad3e3f480d9e580a8d79494938.csv)
+### Hack States
+| Hacker Initial States | Action Path|
+| ----------- | ----------- |
+| Hacker Steals Email | -> Reset Password <br> -> Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
 
 ************************************************************Hack State Table Example: Security Bucket Level 4************************************************************
 
-[Hack States (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Hack%20States%20(1)%2098111b42166f43e4917b16a75b157c47.csv)
+### Hack States
+| Hacker Initial States | Action Path|
+| ----------- | ----------- |
+| Hacker Steals Credentials + Ethereum Signer + [1x MFA Methods] | -> Login <br> -> Get Ethsig <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Active Device + Credentials + [2x MFA Methods] | -> Login <br> -> Change Email <br> -> Get MFA Signature <br> -> **DRAIN** |
+| Hacker Steals Credentials + Email + [2x MFA Methods] | Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Email + Ethereum Signer + [2x MFA Methods] | -> Reset Password <br> -> Login <br> -> Get Ethsig <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Email + [3x MFA Methods] | -> Reset Password <br> -> Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Ethereum Signer + [3x MFA Methods] #1 | -> Get Ethsig <br> -> Change Email <br> -> Reset Password <br> -> Login <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Ethereum Signer + [3x MFA Methods] #2 | -> Change Email <br> -> Get MFA Signature <br> -> Reset Password <br> -> Login <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
 
-The full tables of hack states can be found in the [auxillary file](https://www.notion.so/da5121d8bc6f4b2fb8ae4def6d3f8b47?pvs=21).
+
+The full tables of hack states can be found in the [auxillary file](assets/OffchainSecurityModelAuxiliaryFile.md).
 
 # Parameters
 
