@@ -208,6 +208,7 @@ Additional goals for the security model are
 
 To achieve these goals, we firstly apply a general ruleset for off-chain security actions:
 
+### General Ruleset
 |Security Action|Requirement/Rule|
 |:----|:----|
 |Reset Password|All Enabled Security Methods ex. 1 **and** Email OTP|
@@ -215,7 +216,7 @@ To achieve these goals, we firstly apply a general ruleset for off-chain securit
 |Get MFA Signature (Strict)|All Enabled MFA Methods and Email OTP **or** Ethereum Signer|
 |Get MFA Signature (Relaxed I)|All Enabled Security Methods ex. 1 **and** Email OTP **or** Ethereum Signer|
 |Get MFA Signature (Relaxed II)|All Enabled MFA Methods ex. 1 **and** Email OTP|
-|or Ethereum SignerActivate Active Browser Key (ABK)|MFA Signature **and** 7 Day Delay <br> **or** MFA Signature *and* ABK Signature|
+|or Ethereum SignerActivate Active Browser Key (ABK)|MFA Signature **and** 7 Day Delay <br> **or** MFA Signature **and** ABK Signature|
 
 
 Here, ***All Enabled Security Methods ex. 1***, refers to the user condition in which they possess all but one of the security methods enabled on their account. 
@@ -242,11 +243,19 @@ Moreover, we have also detailed two “relaxations” for users to retrieve thei
 
 We bucket users by their security configurations, from least secure to most secure:
 
-[Security Buckets (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Security%20Buckets%20(1)%20b0d8e74827044fdc8255c3836ab632ac.csv)
+### Security Buckets
+|Level|Descriptor|Methods Enabled|
+|:----|:----|:----|
+|Level 0|No Security Methods Enabled| |
+|Level 1|1x Security Methods Enabled|[Mobile SMS], [Authenticator], [Passkey], [Ethereum Signer]|
+|Level 2|2x Security Methods Enabled|[Passkey, Ethereum Signer], [Mobile SMS, Ethereum Signer], <br> [Mobile SMS, Passkey], [Authenticator, Ethereum Signer] <br> [Authenticator, Passkey], [Mobile SMS, Authenticator]|
+|Level 3|3x Security Methods Enabled|[Mobile SMS, Passkey, Ethereum Signer], <br> [Mobile, Passkey, Authenticator], <br> [Passkey, Authenticator, Ethereum Signer], <br> [Mobile SMS, Authenticator, Ethereum Signer]|
+|Level 4|4x Security Methods Enabled|[Mobile SMS, Authenticator, Passkey, Ethereum Signer]|
 
 Below is the relaxation allocation, with respect to the security buckets,
 
-[Relaxation Allocation (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Relaxation%20Allocation%20(1)%20f6ef16e3ac3e4905993ad74ea5e7b760.csv)
+### Relaxation Allocation
+
 
 To each bucket we then apply a points-threshold security system. For each security bucket, a **points map** and a **requirements map** are defined, and configured to achieve the goals outlined above. To achieve a security action defined below, the user needs to satisfy the points requirement **and** the requirements outlined in the general ruleset.
 
