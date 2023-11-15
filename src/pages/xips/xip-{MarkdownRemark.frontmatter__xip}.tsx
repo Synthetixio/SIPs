@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
@@ -14,9 +14,20 @@ interface Props {
 }
 
 const Template: React.FC<Props> = ({ data }) => {
+ 
   const { markdownRemark } = data
   const { frontmatter, html, fileAbsolutePath } = markdownRemark
   const githubLink = getGithubLink(fileAbsolutePath)
+
+  useEffect(() => {
+    console.log("frontmatter", frontmatter)
+    if (frontmatter.theme === "dark") {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, []); 
+
   return (
     <Main>
       <Helmet title={`XIP-${frontmatter.xip}: ${frontmatter.title}`} />

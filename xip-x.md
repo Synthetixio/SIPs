@@ -17,6 +17,7 @@ release: (Release Name)
 proposal: <snapshot.org proposal link> (*optional)
 
 implementation-date: <date created on, in ISO 8601 (yyyy-mm-dd) format>
+theme: <light | dark> to set the theme of your specific xip (*optional)
 ---
 
 <!--You can leave these HTML comments in your merged XIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new XIPs. Note that an XIP number will be assigned by an editor. When opening a pull request to submit your XIP, please use an abbreviated title in the filename, `xip-draft_title_abbrev.md`. The title should be 44 characters or less.-->

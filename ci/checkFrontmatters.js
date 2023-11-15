@@ -25,6 +25,7 @@ const commonValidationSchema = Yup.object().shape({
   'discussions-to': Yup.string().nullable(),
   'parameter-changes': Yup.string().nullable(),
   'implementation-date': Yup.date().nullable(),
+  theme: Yup.string().nullable(),
 })
 
 // Specific validation for Xip, can extend to other types
