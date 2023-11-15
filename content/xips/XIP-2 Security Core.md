@@ -266,17 +266,45 @@ To each bucket we then apply a points-threshold security system. For each securi
 
 **Example Security Methods Points Map: Bucket Level 1** 
 
-[Security Method Points Map (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Security%20Method%20Points%20Map%20(1)%20dad88b2e916d4a4fb81dfb2a7b85b8c6.csv)
+### Security Method Points Map
+| Name      | Points |
+| ----------- | ----------- |
+|Active Browser Key (ABK)|20.0|
+|Email OTP |5.0|
+|Authenticated Credentials|1.0|
+|Authenticator MFA|10.0|
+|Mobile SMS MFA|10.0|
+|Passkey MFA|10.0|
+|Ethereum Signer|10.0|
+
 
 **Example Points Map: Bucket Level 0**
 
-[Points Ruleset Map (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Points%20Ruleset%20Map%20(1)%204198d95c1343410dade372f4b44c1643.csv)
+### Points Ruleset Map
+| Security Action      | (Points) Requirement |
+| ----------- | ----------- |
+|Login|5.0|
+|Reset Password|5.0|
+|Add Authenticator|26.0|
+|Add Mobile SMS|26.0|
+|Add Passkey|26.0|
+|Change Email |26.0|
+|Get MFA Signature|6.0|
 
-The full table pairs for all security levels can be found in the [auxiliary file](https://www.notion.so/da5121d8bc6f4b2fb8ae4def6d3f8b47?pvs=21).
+
+The full table pairs for all security levels can be found in the [auxiliary file](assets/OffchainSecurityModelAuxiliaryFile.md)
 
 To minimise the protocols net loss and hack states, the Infinex UI will usher users into security buckets based on the value of their deposits:
 
-[Security Bucket Enforcement (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Security%20Bucket%20Enforcement%20(1)%2093662949e59e4b34b20f84e7d3109d16.csv)
+### Security Bucket Enforcement
+|Name|Account Value|Tags| 
+|:----|:----|:----|
+|Low Risk|> $0|Level 1 Encouraged|
+|Medium Risk (I)|≥ $10k|Level 1 Enforced|
+|Medium Risk (II)|≥ $25k|Level 2 Encouraged|
+|High Risk|≥ $50k|Level 2 Enforced|
+
+
 
 # Rationale
 
