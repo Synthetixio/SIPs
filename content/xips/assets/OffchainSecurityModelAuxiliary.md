@@ -276,7 +276,8 @@ Exhaustive tables of user loss and hack states.
 | ----------- |
 |Lose [3x MFA Methods]|
 |Lose [Active Device, Credentials, Email] + Lose [2x MFA Methods]|
-|Lose Credentials + Lose Email + Lose [1x MFA Methods]Lose Device + Lose Email + Lose [1x MFA Methods]|
+|Lose Credentials + Lose Email + Lose [1x MFA Methods]| 
+|Lose Device + Lose Email + Lose [1x MFA Methods]|
 
     
 
@@ -299,7 +300,6 @@ Exhaustive tables of user loss and hack states.
 | Loss State |
 | ----------- | 
 |Lose [3x MFA Methods]|
-|:----|
 |Lose [Credentials, Ethereum Signer] + Lose [2x MFA Methods] |
 |Lose Credentials + Lose [Email, Ethereum Signer] + Lose [1x MFA Methods]|
 |Lose [Credentials, Device] + Lose Email + Lose Ethereum Signer|
