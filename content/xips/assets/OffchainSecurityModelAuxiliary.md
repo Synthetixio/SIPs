@@ -243,7 +243,7 @@ Exhaustive tables of user loss and hack states.
 #### Maximum Security User [All Security Methods Enabled]
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 
 ##### Loss States [New User]
 | Loss State | Notes |
