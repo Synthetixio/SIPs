@@ -17,7 +17,7 @@
 | Passkey MFA      | 0.0   |
 | Ethereum Signer      | 0.0      |
 
-##### Security Method Points Map
+##### Points Ruleset Map
 |Security Action|(Points) Requirement|Notes|
 | ----------- | ----------- | ----------- |
 |Login|5.0| |
@@ -34,10 +34,33 @@
 
 #### **Bucket Level 1**
 
-[Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20d41c09a36a4c443898911bb92ff218e7.csv)
+##### Security Method Points Map
+| Name      | Points |
+| ----------- | ----------- |
+|Active Browser Key (ABK)|20.0|
+|Email OTP |5.0|
+|Authenticated Credentials|1.0|
+|Authenticator MFA|10.0|
+|Mobile SMS MFA|10.0|
+|Passkey MFA|10.0|
+|Ethereum Signer|10.0|
 
-[Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%200caa52d96abb444aa0b5a94fc7364c18.csv)
-    
+
+##### Points Ruleset Map
+|Security Action|(Points) Requirement|Notes|
+| ----------- | ----------- | ----------- |
+|Login|5.0|
+|Reset Password|15.0|
+|Add Authenticator|30.0|
+|Add Mobile SMS|30.0|
+|Add Passkey|30.0|
+|Change Email |30.0|
+|Change Authenticator|26.0|
+|Change Mobile SMS|26.0|
+|Change Passkey|26.0|
+|Get MFA Signature|7.0|
+
+
 #### **Bucket Level 2**
     
 [Security Method Points Map ](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%2034d28fbd4f2e447db36dabebfc559853.csv)
