@@ -22,7 +22,7 @@ Centralized exchanges all employ a tried and tested security model that achieves
 
 In order to outline the problems that this proposal aims to solve with the Infinex security core architecture, we will explore stylized examples with a user, Bob, who is new to the space.
 
-![Untitled](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Untitled.png)
+![Untitled](assets/xip2-1.png)
 
 Bob is trying to decide whether he should sign up to trade on a centralized exchange, or onboard himself into DeFi.
 
