@@ -132,7 +132,7 @@ This customizability offers a gradient of control for advanced users who want mo
 |:----|:----|:----|
 |Add browser key|Recovery key signature| |
 |Remove browser key|Active browser key signature| |
-|Activate browser key|recoveryDelay period, or active browser key signature|While any browser key can be used to trade, only an active browser key can be used as a second factor for sensitive actions (like withdrawing)|
+|Activate browser key|`recoveryDelay` period, or active browser key signature|While any browser key can be used to trade, only an active browser key can be used as a second factor for sensitive actions (like withdrawing)|
 |Add, remove, or change recovery key|Active browser key signature and (MFA key or recover key) signature| |
 |Add, remove, or change MFA key|Active browser key signature and (MFA key or recover key) signature| |
 |Add emergency withdrawal address|Active browser key signature and MFA key signature| |
@@ -208,7 +208,14 @@ Additional goals for the security model are
 
 To achieve these goals, we firstly apply a general ruleset for off-chain security actions:
 
-[General Ruleset (1)](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/General%20Ruleset%20(1)%20da3e60c2b92a4e2ebcb934fbfb90af48.csv)
+|Security Action|Requirement/Rule|
+|Reset Password|All Enabled Security Methods ex. 1 **and** Email OTP|
+|Add MFA Method (Authenticator, Mobile SMS, Passkey)|All Enabled MFA Methods and Email OTP **or** Ethereum Signer|
+|Get MFA Signature (Strict)|All Enabled MFA Methods and Email OTP **or** Ethereum Signer|
+|Get MFA Signature (Relaxed I)|All Enabled Security Methods ex. 1 **and** Email OTP **or** Ethereum Signer|
+|Get MFA Signature (Relaxed II)|All Enabled MFA Methods ex. 1 **and** Email OTP|
+|or Ethereum SignerActivate Active Browser Key (ABK)|MFA Signature **and** 7 Day Delay <br> **or** MFA Signature **and** ABK Signature|
+
 
 Here, ***All Enabled Security Methods ex. 1***, refers to the user condition in which they possess all but one of the security methods enabled on their account. 
 
