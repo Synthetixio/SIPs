@@ -283,10 +283,23 @@ Exhaustive tables of user loss and hack states.
 ### **Bucket Level 4**
 
 #### Maximum Security User [All Security Methods Enabled]
-##### Hack States [New User]
-| Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- | ----------- |
-
-##### Loss States [New User]
-| Loss State | Notes |
+##### Hack States [Maximum Security User]
+| Hacker Initial States | Action Path |
 | ----------- | ----------- |
+| Hacker Steals Credentials + Ethereum Signer + [1x MFA Methods] | Login → Get Ethsig → Add New Browser Key **(Inactive)** → Wait 7 Days **(Activate Browser Key)** → **DRAIN** |
+| Hacker Steals Active Device + Credentials + [2x MFA Methods] | Login → Change Email → Get MFA Signature → **DRAIN** |
+| Hacker Steals Credentials + Email + [2x MFA Methods] | Login → Get MFA Signature → Add New Browser Key **(Inactive)** → Wait 7 Days **(Activate Browser Key)** → **DRAIN** |
+| Hacker Steals Email + Ethereum Signer + [2x MFA Methods] | Reset Password → Login → Get Ethsig → Add New Browser Key **(Inactive)** → Wait 7 Days **(Activate Browser Key)** → **DRAIN** |
+| Hacker Steals Email + [3x MFA Methods] | Reset Password → Login → Get MFA Signature → Add New Browser Key **(Inactive)** → Wait 7 Days **(Activate Browser Key)** → **DRAIN** |
+| Hacker Steals Ethereum Signer + [3x MFA Methods] #1 | Get Ethsig → Change Email → Reset Password → Login → Add New Browser Key **(Inactive)** → Wait 7 Days **(Activate Browser Key)** → **DRAIN** |
+| Hacker Steals Ethereum Signer + [3x MFA Methods] #2 | → Change Email → Get MFA Signature → Reset Password → Login → Add New Browser Key **(Inactive)** → Wait 7 Days **(Activate Browser Key)** → **DRAIN** |
+
+
+##### Loss States [Maximum Security User]
+| Loss State |
+| ----------- | 
+|Lose [3x MFA Methods]|
+|:----|
+|Lose [Credentials, Ethereum Signer] + Lose [2x MFA Methods] |
+|Lose Credentials + Lose [Email, Ethereum Signer] + Lose [1x MFA Methods]|
+|Lose [Credentials, Device] + Lose Email + Lose Ethereum Signer|
