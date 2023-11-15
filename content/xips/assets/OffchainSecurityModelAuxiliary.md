@@ -18,10 +18,10 @@
 | Ethereum Signer      | 0.0      |
 
 ##### Security Method Points Map
-| Name      | 5.0 |  |
+| Security Action      | (Points) Requirement | Notes |
 | Login      | 5.0 |  |
-| Reset Password      | 26.0 | Requires all security measures to add an MFA method: user will need to be on an active device. |
-| Add Authenticator      | 26.0 |  |
+| Reset Password      | 5.0 | |
+| Add Authenticator      | 26.0 | Requires all security measures to add an MFA method: user will need to be on an active device. |
 | Add Mobile SMS      | 26.0 |  |
 | Add Passkey      | 26.0 |  |
 | Change Email       | 26.0 |  |
@@ -31,7 +31,6 @@
 | Get MFA Signature      | 6.0 | Ensures Bucket 0 Requires Credentials + Email OTP |
 
 
-    
 #### **Bucket Level 1**
 
 [Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20d41c09a36a4c443898911bb92ff218e7.csv)
