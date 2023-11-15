@@ -1,0 +1,34 @@
+﻿Hacker Initial States,Action Path
+Hacker Steals Credentials + Ethereum Signer + [1x MFA Method],"→ Login
+→ Get Ethsig
+→ Add New Browser Key (inactive)
+→ Wait 7 Days (Activate Browser Key)
+→ DRAIN"
+Hacker Steals Active Device + Credentials + [2x MFA Method],"→ Login
+→ Change Email
+→ Get MFA Signature
+→ DRAIN"
+Hacker Steals Credentials + Email + [2x MFA Methods],"→ Login
+→ Get MFA Signature
+→ Add New Browser Key (inactive)
+→ Wait 7 Days (Activate Browser Key)
+→ DRAIN"
+Hacker Steals Email + Ethereum Signer + [2x MFA Methods],"→ Reset Password
+→ Login
+→ Get Ethsig
+→ Add New Browser Key (inactive)
+→ Wait 7 Days (Activate Browser Key)
+→ DRAIN"
+Hacker Steals Email + [3x MFA Methods],"→ Reset Password
+→ Login
+→ Get MFA Signature
+→ Add New Browser Key (inactive)
+→ Wait 7 days (Activate Browser Key)
+→ DRAIN"
+Hacker Steals Ethereum Signer + [3x MFA Methods],"→ Change Email
+→ Get MFA Signature
+→ Reset Password
+→ Login
+→ Add New Browser Key (inactive)
+→ Wait 7 days (Activate Browser Key)
+→ DRAIN"

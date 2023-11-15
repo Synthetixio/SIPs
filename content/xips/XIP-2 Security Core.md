@@ -1,16 +1,14 @@
-# 
+# Markdown for Kmao
 
 | Author | Bilby, Spinxho, Harry |
 | --- | --- |
 | Status | Draft |
-| Type | core-upgrade |
+| Type | [insert type] |
 | Network | Ethereum & Optimism |
 | Implementor | TBD |
 | Release | TBD |
-| Created | 2023-11-05 |
-| Updated | 2023-11-15 |
-
-
+| Proposal |  |
+| Created | 15-11-2023 |
 
 # Simple Summary
 
