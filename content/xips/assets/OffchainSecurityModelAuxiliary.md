@@ -167,7 +167,7 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
 | ----------- | ----------- | ----------- |
-| Hacker Steals Email | Reset Password \n -> Login \n -> Get MFA Signature \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** | We can’t protect them beyond this, because ABK is encrypted and we can only gate that with password or OTP. So, email OTP will always be the point of failure |
+| Hacker Steals Email | Reset Password <br> -> Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** | We can’t protect them beyond this, because ABK is encrypted and we can only gate that with password or OTP. So, email OTP will always be the point of failure |
 
 ##### Loss States [New User]
 | Loss State | Notes |
@@ -180,9 +180,9 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [Low Security User]
 | Hacker Initial States | Action Path | Notes |
 | ----------- | ----------- | ----------- |
-| Hacker Steals Email + [1x MFA Methods] | Reset Password \n -> Login \n -> Get MFA Signature \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** | Note that correlation is gonna depend on how the user chooses to set up their L2 MFA. Therefore, we should recommend the first L2 they add is yubikey or Google authenticator. |
-| Hacker Steals Active Device + Credentials + [1x MFA Methods] | Login \n -> Change Email \n -> Get MFA Signature \n -> **DRAIN** | 
-| Hacker Steals Active Device + Credentials + Email | Login \n -> Change MFA **Other** Method  \n -> Get MFA Signature \n -> **DRAIN** |
+| Hacker Steals Email + [1x MFA Methods] | Reset Password <br> -> Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** | Note that correlation is gonna depend on how the user chooses to set up their L2 MFA. Therefore, we should recommend the first L2 they add is yubikey or Google authenticator. |
+| Hacker Steals Active Device + Credentials + [1x MFA Methods] | Login <br> -> Change Email <br> -> Get MFA Signature <br> -> **DRAIN** | 
+| Hacker Steals Active Device + Credentials + Email | Login <br> -> Change MFA **Other** Method  <br> -> Get MFA Signature <br> -> **DRAIN** |
 
 ##### Loss States [Low Security User]
 | Loss State | Notes |
@@ -194,8 +194,8 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [Ethereum Signer Only User]
 | Hacker Initial States | Action Path | Notes |
 | ----------- | ----------- | ----------- |
-| Hacker Steals Credentials + Ethereum Signer | Login \n -> Get Ethsig \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** | Don’t store seed in 1P with your password | 
-| Hacker Steals Email + Ethereum Signer | Get Ethsig \n -> Reset Password \n -> Login \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
+| Hacker Steals Credentials + Ethereum Signer | Login <br> -> Get Ethsig <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** | Don’t store seed in 1P with your password | 
+| Hacker Steals Email + Ethereum Signer | Get Ethsig <br> -> Reset Password <br> -> Login <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
 
 ##### Loss States [Ethereum Signer Only User]
 | Loss State | Notes |
@@ -209,10 +209,10 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [Medium Security User]
 | Hacker Initial States | Action Path |
 | ----------- | ----------- |
-| Hacker Steals Credentials + Ethereum Signer | Login \n -> Get Ethsig \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Active Device + Credentials + [1x MFA Methods] | Login \n -> Change Email \n -> Get MFA Signature \n -> **DRAIN** |
-| Hacker steals Email + [1x MFA Methods] | Reset Password \n -> Login \n -> Get MFA Signature \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Email + Ethereum Signer | Reset Password \n -> Login \n -> Get Ethsig \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
+| Hacker Steals Credentials + Ethereum Signer | Login <br> -> Get Ethsig <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Active Device + Credentials + [1x MFA Methods] | Login <br> -> Change Email <br> -> Get MFA Signature <br> -> **DRAIN** |
+| Hacker steals Email + [1x MFA Methods] | Reset Password <br> -> Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Email + Ethereum Signer | Reset Password <br> -> Login <br> -> Get Ethsig <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
 
 
 ##### Loss States [Medium Security User]
@@ -227,9 +227,9 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [Medium Security User]
 | Hacker Initial States | Action Path |
 | ----------- | ----------- |
-| Hacker Steals Active Device + Credentials + [1x MFA Methods] | Login \n -> Change Email \n -> Change **Other** MFA Method \n -> Get MFA Signature \n -> **DRAIN** |
-| Hacker steals Active Device + Email + [1x MFA Methods] | Reset Password \n -> Login \n -> Change **Other** MFA Method \n -> Get MFA Signature \n -> **DRAIN** |
-| Hacker steals Email + [2x MFA Methods] | Reset Password \n -> Login \n -> Get MFA Signature \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
+| Hacker Steals Active Device + Credentials + [1x MFA Methods] | Login <br> -> Change Email <br> -> Change **Other** MFA Method <br> -> Get MFA Signature <br> -> **DRAIN** |
+| Hacker steals Active Device + Email + [1x MFA Methods] | Reset Password <br> -> Login <br> -> Change **Other** MFA Method <br> -> Get MFA Signature <br> -> **DRAIN** |
+| Hacker steals Email + [2x MFA Methods] | Reset Password <br> -> Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
 
 ##### Loss States [Medium Security User]
 | Loss State |
@@ -245,12 +245,12 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [High Security User w/ Ethereum Signer]
 | Hacker Initial States | Action Path |
 | ----------- | ----------- |
-| Hacker Steals Credentials + Ethereum Signer | Login \n -> Get Ethsig \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Active Device + Credentials + Email + [1x MFA Methods] | Login \n -> Change **Other** MFA Method \n -> Get MFA Signature \n -> **DRAIN** |
-| Hacker Steals Active Device + Credentials  + [2x MFA Methods] | Login \n -> Change Email \n -> Get MFA Signature \n -> **DRAIN** |
-| Hacker Steals Email + Ethereum Signer + [1x MFA Methods] | Reset Password \n -> Login \n -> Get Ethsig \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Email + [2x MFA Methods] | Reset Password \n -> Login \n -> Get MFA Signature \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Ethereum Signer + [2x MFA Methods] | Get Ethsig \n -> Change Email \n -> Reset Password \n -> Login \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
+| Hacker Steals Credentials + Ethereum Signer | Login <br> -> Get Ethsig <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Active Device + Credentials + Email + [1x MFA Methods] | Login <br> -> Change **Other** MFA Method <br> -> Get MFA Signature <br> -> **DRAIN** |
+| Hacker Steals Active Device + Credentials  + [2x MFA Methods] | Login <br> -> Change Email <br> -> Get MFA Signature <br> -> **DRAIN** |
+| Hacker Steals Email + Ethereum Signer + [1x MFA Methods] | Reset Password <br> -> Login <br> -> Get Ethsig <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Email + [2x MFA Methods] | Reset Password <br> -> Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Ethereum Signer + [2x MFA Methods] | Get Ethsig <br> -> Change Email <br> -> Reset Password <br> -> Login <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
 
 ##### Loss States [High Security User w/ Ethereum Signer]
 | Loss State | 
@@ -265,10 +265,10 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [High Security User]
 | Hacker Initial States | Action Path |
 | ----------- | ----------- |
-| Hacker Steals Active Device + Credentials + Email + [1x MFA Methods] | Login \n -> Change **Other** MFA Method \n -> Get MFA Signature \n -> **DRAIN** |
-| Hacker Steals Email + [2x MFA Methods] | Reset Password \n -> Login \n -> Get MFA Signature \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Active Device + Credentials + [2x MFA Methods] | Login \n -> Change Email \n -> Get MFA Signature \n -> **DRAIN** |
-| Hacker Steals [3x MFA Methods] | Change Email \n -> Get MFA Signature \n -> Reset Password \n -> Login \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN**|
+| Hacker Steals Active Device + Credentials + Email + [1x MFA Methods] | Login <br> -> Change **Other** MFA Method <br> -> Get MFA Signature <br> -> **DRAIN** |
+| Hacker Steals Email + [2x MFA Methods] | Reset Password <br> -> Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Active Device + Credentials + [2x MFA Methods] | Login <br> -> Change Email <br> -> Get MFA Signature <br> -> **DRAIN** |
+| Hacker Steals [3x MFA Methods] | Change Email <br> -> Get MFA Signature <br> -> Reset Password <br> -> Login <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN**|
 
 
 ##### Loss States [High Security User]
@@ -287,13 +287,13 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [Maximum Security User]
 | Hacker Initial States | Action Path |
 | ----------- | ----------- |
-| Hacker Steals Credentials + Ethereum Signer + [1x MFA Methods] | Login \n -> Get Ethsig \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Active Device + Credentials + [2x MFA Methods] | Login \n -> Change Email \n -> Get MFA Signature \n -> **DRAIN** |
-| Hacker Steals Credentials + Email + [2x MFA Methods] | Login \n -> Get MFA Signature \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Email + Ethereum Signer + [2x MFA Methods] | Reset Password \n -> Login \n -> Get Ethsig \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Email + [3x MFA Methods] | Reset Password \n -> Login \n -> Get MFA Signature \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Ethereum Signer + [3x MFA Methods] #1 | Get Ethsig \n -> Change Email \n -> Reset Password \n -> Login \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
-| Hacker Steals Ethereum Signer + [3x MFA Methods] #2 | \n -> Change Email \n -> Get MFA Signature \n -> Reset Password \n -> Login \n -> Add New Browser Key **(Inactive)** \n -> Wait 7 Days **(Activate Browser Key)** \n -> **DRAIN** |
+| Hacker Steals Credentials + Ethereum Signer + [1x MFA Methods] | Login <br> -> Get Ethsig <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Active Device + Credentials + [2x MFA Methods] | Login <br> -> Change Email <br> -> Get MFA Signature <br> -> **DRAIN** |
+| Hacker Steals Credentials + Email + [2x MFA Methods] | Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Email + Ethereum Signer + [2x MFA Methods] | Reset Password <br> -> Login <br> -> Get Ethsig <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Email + [3x MFA Methods] | Reset Password <br> -> Login <br> -> Get MFA Signature <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Ethereum Signer + [3x MFA Methods] #1 | Get Ethsig <br> -> Change Email <br> -> Reset Password <br> -> Login <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
+| Hacker Steals Ethereum Signer + [3x MFA Methods] #2 | <br> -> Change Email <br> -> Get MFA Signature <br> -> Reset Password <br> -> Login <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
 
 
 ##### Loss States [Maximum Security User]
