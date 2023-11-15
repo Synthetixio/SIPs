@@ -160,64 +160,93 @@ Exhaustive tables of user loss and hack states.
 
 **********NB (V):********** “**Other** MFA Method” refers to any MFA method not in the hacker’s possession 
 
-#### **Bucket Level 0**
+### **Bucket Level 0**
 
 #### New User [No Security Methods]
 
-[Hack States [New User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Hack%20States%20%5BNew%20User%5D%204d48fa08685f4db8b1c667fa4eed0d52.csv)
+##### Hack States [New User]
+| Hacker Initial States | Action Path | Notes |
+| ----------- | ----------- |
 
-[Loss States [New User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Loss%20States%20%5BNew%20User%5D%20806f089cb07f4037b3e04713204482af.csv)
-    
+##### Loss States [New User]
+| Loss State | Notes |
+| ----------- | ----------- |
 
-#### **Bucket Level 1**
+### **Bucket Level 1**
 
 #### Low Security User [1x MFA Methods]
-    
-    [Hack States [Low Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Hack%20States%20%5BLow%20Security%20User%5D%2055e85fb940634d3e8f7e91bb65245702.csv)
-    
-    [Loss States [Low Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Loss%20States%20%5BLow%20Security%20User%5D%20513b77a8b7ee483ebbf390a4db9df1ed.csv)
+##### Hack States [New User]
+| Hacker Initial States | Action Path | Notes |
+| ----------- | ----------- |
+
+##### Loss States [New User]
+| Loss State | Notes |
+| ----------- | ----------- |
+
     
 #### Ethereum Signer Only User [1x Ethereum Signer]
-    
-    [Hack States [Ethereum Signer Only User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Hack%20States%20%5BEthereum%20Signer%20Only%20User%5D%2047938677b3aa4ba2a6acacafe6a672dc.csv)
-    
-    [Loss States [Ethereum Signer Only User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Loss%20States%20%5BEthereum%20Signer%20Only%20User%5D%20f25fc965575042138a90fa329295561b.csv)
-    
+##### Hack States [New User]
+| Hacker Initial States | Action Path | Notes |
+| ----------- | ----------- |
 
-#### **Bucket Level 2**
+##### Loss States [New User]
+| Loss State | Notes |
+| ----------- | ----------- |
+
+
+### **Bucket Level 2**
 
 #### Medium Security User w/ Ethereum Signer [1x MFA Methods + 1x Ethereum Signer]
-    
-    [Hack States [Medium Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Hack%20States%20%5BMedium%20Security%20User%5D%203640eb53a3264f27a1443403f0635589.csv)
-    
-    [Loss States [Medium Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Loss%20States%20%5BMedium%20Security%20User%5D%20f6f88914d6e646178595fdd9c69d43aa.csv)
+##### Hack States [New User]
+| Hacker Initial States | Action Path | Notes |
+| ----------- | ----------- |
+
+##### Loss States [New User]
+| Loss State | Notes |
+| ----------- | ----------- |
+
     
 #### Medium Security User [2x MFA Methods]
-    
-    [Hack States [Medium Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Hack%20States%20%5BMedium%20Security%20User%5D%2006aa6029f87b4e93b2e6d67f27c77f1d.csv)
-    
-    [Loss States [Medium Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Loss%20States%20%5BMedium%20Security%20User%5D%20fc4f11575cb94680881fe6654f4b6aeb.csv)
+##### Hack States [New User]
+| Hacker Initial States | Action Path | Notes |
+| ----------- | ----------- |
+
+##### Loss States [New User]
+| Loss State | Notes |
+| ----------- | ----------- |
+
     
 
-#### **Bucket Level 3**
+### **Bucket Level 3**
 
 #### High Security User w/ Ethereum Signer [2x MFA Methods + Ethereum Signer]
-    
-    [Hack States [High Security User w/ Ethereum Signer]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Hack%20States%20%5BHigh%20Security%20User%20w%20Ethereum%20Signer%5D%2040990409803943459a3b0bddcf1ce240.csv)
-    
-    [Loss States [High Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Loss%20States%20%5BHigh%20Security%20User%5D%20b0f10b86fb0b4a84a6e38e0815774255.csv)
+##### Hack States [New User]
+| Hacker Initial States | Action Path | Notes |
+| ----------- | ----------- |
+
+##### Loss States [New User]
+| Loss State | Notes |
+| ----------- | ----------- |
+
     
 #### High Security User [3x MFA Methods]
-    
-    [Hack States [High Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Hack%20States%20%5BHigh%20Security%20User%5D%20d24fc4a1723b4f1fbc76161b4a1ca07b.csv)
-    
-    [Loss States [High Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Loss%20States%20%5BHigh%20Security%20User%5D%204cd83c59eeaf4480ab882b4b865d27d4.csv)
+##### Hack States [New User]
+| Hacker Initial States | Action Path | Notes |
+| ----------- | ----------- |
+
+##### Loss States [New User]
+| Loss State | Notes |
+| ----------- | ----------- |
+
     
 
-#### **Bucket Level 4**
+### **Bucket Level 4**
 
 #### Maximum Security User [All Security Methods Enabled]
-    
-    [Hack States [Maximum Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Hack%20States%20%5BMaximum%20Security%20User%5D%200737e670db9e4fb0a4be883c59cf6220.csv)
-    
-    [Loss States [Maximum Security User]](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Loss%20States%20%5BMaximum%20Security%20User%5D%2037b9aa71212b44a0a6ddd37102bd3fea.csv)
+##### Hack States [New User]
+| Hacker Initial States | Action Path | Notes |
+| ----------- | ----------- |
+
+##### Loss States [New User]
+| Loss State | Notes |
+| ----------- | ----------- |
