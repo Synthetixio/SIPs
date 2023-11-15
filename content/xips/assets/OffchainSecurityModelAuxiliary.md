@@ -179,14 +179,15 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
 | ----------- | ----------- | ----------- |
-| Hacker Steals Email + [1x MFA Methods] | → Reset Password → Login → Get MFA Signature → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** | Note that correlation is gonna depend on how the user chooses to set up their L2 MFA. Therefore, we should recommend the first L2 they add is yubikey or Google authenticator. |
-| Hacker Steals Active Device + Credentials + [1x MFA Methods] | → Login → Change Email → Get MFA Signature → **DRAIN** | 
-| Hacker Steals Active Device + Credentials + Email | → Login → Change MFA Other Method  → Get MFA Signature → **DRAIN** |
+| Hacker Steals Email + [1x MFA Methods] | Reset Password → Login → Get MFA Signature → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** | Note that correlation is gonna depend on how the user chooses to set up their L2 MFA. Therefore, we should recommend the first L2 they add is yubikey or Google authenticator. |
+| Hacker Steals Active Device + Credentials + [1x MFA Methods] | Login → Change Email → Get MFA Signature → **DRAIN** | 
+| Hacker Steals Active Device + Credentials + Email | Login → Change MFA Other Method  → Get MFA Signature → **DRAIN** |
 
 ##### Loss States [New User]
 | Loss State | Notes |
 | ----------- | ----------- |
-
+| Lose [Active Device, Credentials, Email] + Lose [1x MFA Methods] | Most correlated items would be iPhone (SMS + Device ABK) —discouraging users from SMS as their only MFA method is preferable.| 
+| Lose Email + Lose [Credentials, Device] |
     
 #### Ethereum Signer Only User [1x Ethereum Signer]
 ##### Hack States [New User]
