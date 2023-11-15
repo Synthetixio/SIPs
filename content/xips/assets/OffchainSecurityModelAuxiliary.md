@@ -4,8 +4,9 @@
 
 **NB:** ABK points can only be applied after verifying credentials (logging in)
 
-<h3>Bucket Level 0</h3>	
+#### **Bucket Level 0**
 
+##### Security Method Points Map
 | Name      | Points |
 | ----------- | ----------- |
 | Active Browser Key      | 20.0       |
@@ -16,30 +17,44 @@
 | Passkey MFA      | 0.0   |
 | Ethereum Signer      | 0.0      |
 
+##### Security Method Points Map
+| Name      | 5.0 |  |
+| Login      | 5.0 |  |
+| Reset Password      | 26.0 | Requires all security measures to add an MFA method: user will need to be on an active device. |
+| Add Authenticator      | 26.0 |  |
+| Add Mobile SMS      | 26.0 |  |
+| Add Passkey      | 26.0 |  |
+| Change Email       | 26.0 |  |
+| Change Authenticator      | 999999.0 |  |
+| Change Mobile SMS      | 999999.0 |  |
+| Change Passkey      | 999999.0 |  |
+| Get MFA Signature      | 6.0 | Ensures Bucket 0 Requires Credentials + Email OTP |
+
+
     
 #### **Bucket Level 1**
-    
-    [Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20d41c09a36a4c443898911bb92ff218e7.csv)
-    
-    [Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%200caa52d96abb444aa0b5a94fc7364c18.csv)
+
+[Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20d41c09a36a4c443898911bb92ff218e7.csv)
+
+[Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%200caa52d96abb444aa0b5a94fc7364c18.csv)
     
 #### **Bucket Level 2**
     
-    [Security Method Points Map ](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%2034d28fbd4f2e447db36dabebfc559853.csv)
+[Security Method Points Map ](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%2034d28fbd4f2e447db36dabebfc559853.csv)
     
-    [Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%20b9b86389276e42b69099069db9f3dfe2.csv)
+[Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%20b9b86389276e42b69099069db9f3dfe2.csv)
     
 #### **Bucket Level 3**
     
-    [Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20c954c163ed9f4bfdaeccc2f7239a0f89.csv)
+[Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20c954c163ed9f4bfdaeccc2f7239a0f89.csv)
     
-    [Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%20d3bea8a591d942b987b7524a29bc0d03.csv)
+[Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%20d3bea8a591d942b987b7524a29bc0d03.csv)
     
 #### **Bucket Level 4**
     
-    [Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20715cc869578b465baefdc921e99763df.csv)
+[Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20715cc869578b465baefdc921e99763df.csv)
     
-    [Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%202861f8f181bd46d78cec73681bcba37e.csv)
+[Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%202861f8f181bd46d78cec73681bcba37e.csv)
     
 
 ## User Security States
