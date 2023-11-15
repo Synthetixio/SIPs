@@ -163,21 +163,20 @@ Exhaustive tables of user loss and hack states.
 ### **Bucket Level 0**
 
 #### New User [No Security Methods]
-
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 
 ##### Loss States [New User]
 | Loss State | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | 
 
 ### **Bucket Level 1**
 
 #### Low Security User [1x MFA Methods]
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 
 ##### Loss States [New User]
 | Loss State | Notes |
@@ -187,7 +186,7 @@ Exhaustive tables of user loss and hack states.
 #### Ethereum Signer Only User [1x Ethereum Signer]
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 
 ##### Loss States [New User]
 | Loss State | Notes |
@@ -199,7 +198,7 @@ Exhaustive tables of user loss and hack states.
 #### Medium Security User w/ Ethereum Signer [1x MFA Methods + 1x Ethereum Signer]
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 
 ##### Loss States [New User]
 | Loss State | Notes |
@@ -209,30 +208,29 @@ Exhaustive tables of user loss and hack states.
 #### Medium Security User [2x MFA Methods]
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 
 ##### Loss States [New User]
 | Loss State | Notes |
 | ----------- | ----------- |
 
-    
 
 ### **Bucket Level 3**
 
 #### High Security User w/ Ethereum Signer [2x MFA Methods + Ethereum Signer]
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 
 ##### Loss States [New User]
 | Loss State | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | 
 
     
 #### High Security User [3x MFA Methods]
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 
 ##### Loss States [New User]
 | Loss State | Notes |
