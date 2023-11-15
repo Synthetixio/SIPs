@@ -14,7 +14,8 @@ A backend API is also needed to orchestrate the creation of this private key usi
 
 Here is the architecture overview of the system:
 
-[https://lh7-us.googleusercontent.com/vfpt7wiH-ZfPL-vNvySea4dLLR4wNzAwL8FFH2fwZ1hBB6-cngMHsRZBMXeQgBwk_gJPHSyQ2N50HMv6fCYJ1vvi2che71tWTtsTB6dPgKKiVpID-1PmfJzTS6sT6pXWyXlX3HCGjlW2hP0b](https://lh7-us.googleusercontent.com/vfpt7wiH-ZfPL-vNvySea4dLLR4wNzAwL8FFH2fwZ1hBB6-cngMHsRZBMXeQgBwk_gJPHSyQ2N50HMv6fCYJ1vvi2che71tWTtsTB6dPgKKiVpID-1PmfJzTS6sT6pXWyXlX3HCGjlW2hP0b)
+![stytch](xip2-stytch1.png)
+
 
 ### System Responsibilities:
 
@@ -40,11 +41,11 @@ This will not be used within the system, and the number of admins with access to
 
 Here is a secret shown as clear text in the Stytch admin area:
 
-[https://lh7-us.googleusercontent.com/w9QxSkam8RDGcVIEQzNlHcuCXWUzQ2ITeTvFZot6Akb_vdmMQKoe6CTDsu3t_CKdTFuKRrFpnBsvLQVzyp7yKf8vgJAGwglrilXN0lQCYfpWrq4znS1szO71pAFdAbl2fw269yMy1_8LzLuD](https://lh7-us.googleusercontent.com/w9QxSkam8RDGcVIEQzNlHcuCXWUzQ2ITeTvFZot6Akb_vdmMQKoe6CTDsu3t_CKdTFuKRrFpnBsvLQVzyp7yKf8vgJAGwglrilXN0lQCYfpWrq4znS1szO71pAFdAbl2fw269yMy1_8LzLuD)
+![stytch](xip2-stytch2.png)
 
 Next, let’s look at a sequence diagram that shows how the Sign Up user flow will work for Infinex:
 
-[https://lh7-us.googleusercontent.com/mjadgslDZrhN-5kKBVXVPqKwviOFwEg2g33jcOEpxs9W-IvcJBV3XGv4OnUFtE47sl4adMSEJ4eV-O25nCiVkCLo_kb4gh2iDYF-IjjN4BzL-OVRcCyszeq-zbMfpJwGp1Blvk0_2729kGXC](https://lh7-us.googleusercontent.com/mjadgslDZrhN-5kKBVXVPqKwviOFwEg2g33jcOEpxs9W-IvcJBV3XGv4OnUFtE47sl4adMSEJ4eV-O25nCiVkCLo_kb4gh2iDYF-IjjN4BzL-OVRcCyszeq-zbMfpJwGp1Blvk0_2729kGXC)
+![stytch](xip2-stytch3.png)
 
 As you can see in the above flow, the front-end code sends a create request to Stytch. Stytch will then send a verification email to the end user.
 
@@ -52,7 +53,7 @@ Once the user clicks the confirmation link, Stytch verifies it, and the user is 
 
 To customise any email sent from Stytch you can login to the Stytch admin area:
 
-[https://lh7-us.googleusercontent.com/lrc_effx6M6Ar9iZkloyqze80M6JepFcYtA8yDvMBgf9JBn-1wdb2mvSIkGqiLwsQ5n9c_p_X4iUzM2HS4e_a0EB9qUMnAPXWbp7lth51YiJl2pKtclNm7qxL68oOHbrf5O3vkBQ01RX3YJf](https://lh7-us.googleusercontent.com/lrc_effx6M6Ar9iZkloyqze80M6JepFcYtA8yDvMBgf9JBn-1wdb2mvSIkGqiLwsQ5n9c_p_X4iUzM2HS4e_a0EB9qUMnAPXWbp7lth51YiJl2pKtclNm7qxL68oOHbrf5O3vkBQ01RX3YJf)
+![stytch](xip2-stytch4.png)
 
 Once the user is authenticated and verified they are an authenticated user in Stytch.
 
@@ -143,7 +144,7 @@ To add a TOTP device we want to make sure that the user is not only authenticate
 
 To do that, we can run the Lit Action with the currently logged-in user and check the authentication payload:
 
-[https://lh7-us.googleusercontent.com/YmNA4uxtxpArVHOZOaxo-p1ExPgNzyBgl2LbvqNZxgxY_sHQL0nzIjqh4yUxrlD0FfO7dlY2Cc8JhHp4Mvzv7ACfIRPZFvfPNksrD1PH-3vLM375kRk7Pfv1ASFVyE5WC03Zo5Dd3GPria_W](https://lh7-us.googleusercontent.com/YmNA4uxtxpArVHOZOaxo-p1ExPgNzyBgl2LbvqNZxgxY_sHQL0nzIjqh4yUxrlD0FfO7dlY2Cc8JhHp4Mvzv7ACfIRPZFvfPNksrD1PH-3vLM375kRk7Pfv1ASFVyE5WC03Zo5Dd3GPria_W)
+![stytch](xip2-stytch5.png)
 
 As you can see, we have authenticated with two factors: Email and Webauthn (Webauthn is used here as an example second MFA). In our Lit Action, we can check for these authentication factors and run rules.
 
@@ -285,8 +286,8 @@ A user may also want to remove an authentication method. When this happens a sim
 
 First, the authentication factor is removed from Stytch, then, the authentication method will be removed from the PKP.
 
-[https://lh7-us.googleusercontent.com/1Bcf44AWtxGnCWtleYrJrnq5aIsflfP1P_sAVAfwaI217yN3Grhg_vSKTwvA_ASLx6SVbXWb3ZGIt4va-KvF4QGzrnY4JZkKgTjP-MGhoJszN9-YeCzrRj1ezqogs9xys9FtaOELbKOtAzrD](https://lh7-us.googleusercontent.com/1Bcf44AWtxGnCWtleYrJrnq5aIsflfP1P_sAVAfwaI217yN3Grhg_vSKTwvA_ASLx6SVbXWb3ZGIt4va-KvF4QGzrnY4JZkKgTjP-MGhoJszN9-YeCzrRj1ezqogs9xys9FtaOELbKOtAzrD)
+![stytch](xip2-stytch6.png)
 
 Upgrade Flow
 
-[https://lh7-us.googleusercontent.com/qlg5DpKYSOTkELWERzdUTnRIo_SHPJqxB-aMaz_GvoylSGhCaHNFbfBEoLBEK_FZzS8XtqfO4tb_iYFD7IsfKWQfruUv4M3VxKfgoTgcs4lXSPdvrbwiw39uAyd4QOBkhNny-tZXCqQXCtnW](https://lh7-us.googleusercontent.com/qlg5DpKYSOTkELWERzdUTnRIo_SHPJqxB-aMaz_GvoylSGhCaHNFbfBEoLBEK_FZzS8XtqfO4tb_iYFD7IsfKWQfruUv4M3VxKfgoTgcs4lXSPdvrbwiw39uAyd4QOBkhNny-tZXCqQXCtnW)
+![stytch](xip2-stytch7.png)

@@ -22,7 +22,7 @@ Centralized exchanges all employ a tried and tested security model that achieves
 
 In order to outline the problems that this proposal aims to solve with the Infinex security core architecture, we will explore stylized examples with a user, Bob, who is new to the space.
 
-![Untitled](assets/xip2-1.png)
+![Bob](assets/xip2-1.png)
 
 Bob is trying to decide whether he should sign up to trade on a centralized exchange, or onboard himself into DeFi.
 
@@ -30,7 +30,7 @@ Bob is trying to decide whether he should sign up to trade on a centralized exch
 
 To onboard into DeFi, Bob can create a wallet on Ethereum, and transfer his funds into it.
 
-![Untitled](assets/xip2-2.png)
+![BobOnboarding](assets/xip2-2.png)
 
 Bob learns that this solution has some interesting advantages:
 
@@ -45,7 +45,7 @@ Bob proceeds to create an account with a centralized exchange (CEX). He selects 
 
 Imagine a figurative security guard sitting inside a CEX, called the Authenticator. This entity possesses a digital representation of Bob, informed by the information he provided upon creating an account (imagine a picture of Bob on the authenticator’s office wall). Upon Bob’s request to access his account, he must convince the Authenticator that he is indeed the same Bob. This is achieved by providing his username and password, or via some social-sign. See below for a visual representation:
 
-![Untitled](assets/xip2-3.png)
+![BobCefi](assets/xip2-3.png)
 
 However, if Bob seeks to do something more sensitive, such as change his password due to forgetfulness, the Authenticator has the descretion to reconfirm his identity. This may involve requesting one or multiple one-time paswords from Bob, depending his specified security prefernces.
 
@@ -63,7 +63,7 @@ The Infinex security module endeaovurs to emulate the structural architecture of
 
 Here’s what this ideal system would look like:
 
-![Untitled](assets/xip2-4.png)
+![BobChallenge](assets/xip2-4.png)
 
 From top-left to right:
 
@@ -74,7 +74,7 @@ From top-left to right:
 
 A simple withdrawal flow would therefore work like this:
 
-![Untitled](assets/xip2-5.png)
+![BobWithdrawal](assets/xip2-5.png)
 
 An important piece of this map is in decoupling the authenticator from the key management system (KMS), while preventing the KMS operators from accessing Bob’s key (unless they are Bob). This sounds like magic, but has become possible in recent months.
 
