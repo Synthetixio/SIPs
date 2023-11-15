@@ -74,11 +74,11 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   const typeDefs = [
     `
     type MarkdownRemarkFrontmatter implements Node {
-      title: String!
+      title: String
       type: String
       network: String
-      status: String!
-      author: String!
+      status: String
+      author: String
       implementor: String
       proposal: String
       release: String
