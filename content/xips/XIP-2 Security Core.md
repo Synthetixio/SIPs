@@ -255,6 +255,11 @@ We bucket users by their security configurations, from least secure to most secu
 Below is the relaxation allocation, with respect to the security buckets,
 
 ### Relaxation Allocation
+|Relaxation Level|Security Levels|
+|:----|:----|
+|Strict|Level 0, Level 1, Level 2|
+|Relaxed I| Level 3|
+|Relaxed II| Level 4|
 
 
 To each bucket we then apply a points-threshold security system. For each security bucket, a **points map** and a **requirements map** are defined, and configured to achieve the goals outlined above. To achieve a security action defined below, the user needs to satisfy the points requirement **and** the requirements outlined in the general ruleset.
