@@ -74,7 +74,7 @@ From top-left to right:
 
 A simple withdrawal flow would therefore work like this:
 
-![Untitled](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Untitled%204.png)
+![Untitled](assets/xip2-5.png)
 
 An important piece of this map is in decoupling the authenticator from the key management system (KMS), while preventing the KMS operators from accessing Bob’s key (unless they are Bob). This sounds like magic, but has become possible in recent months.
 
@@ -84,7 +84,7 @@ The aspect of **marginal responsibility** beyond Bob’s off-chain authenticatio
 
 ## Auxiliary files
 
-- [Stytch and lit](https://www.notion.so/Stytch-and-Lit-Auxiliary-file-f71a9cb8b3ca48ec97b0193c7dd0924d?pvs=21)
+- [Stytch and lit](StytchandLitAuxiliaryFile.md)
 - [Offchain security model](https://www.notion.so/da5121d8bc6f4b2fb8ae4def6d3f8b47?pvs=21)
 - [Browser key storage](https://www.notion.so/Browser-Key-Storage-Auxiliary-File-49842d8375d140caa9ebd5766ee4b891?pvs=21)
 
