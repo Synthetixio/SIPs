@@ -4,7 +4,7 @@
 
 **NB:** ABK points can only be applied after verifying credentials (logging in)
 
-#### **Bucket Level 0**
+### **Bucket Level 0**
 
 ##### Security Method Points Map
 | Name      | Points |
@@ -32,7 +32,7 @@
 |Get MFA Signature|6.0|Ensures Bucket 0 Requires Credentials + Email OTP|
 
 
-#### **Bucket Level 1**
+### **Bucket Level 1**
 
 ##### Security Method Points Map
 | Name      | Points |
@@ -61,19 +61,19 @@
 |Get MFA Signature|7.0|
 
 
-#### **Bucket Level 2**
+### **Bucket Level 2**
     
 [Security Method Points Map ](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%2034d28fbd4f2e447db36dabebfc559853.csv)
     
 [Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%20b9b86389276e42b69099069db9f3dfe2.csv)
     
-#### **Bucket Level 3**
+### **Bucket Level 3**
     
 [Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20c954c163ed9f4bfdaeccc2f7239a0f89.csv)
     
 [Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%20d3bea8a591d942b987b7524a29bc0d03.csv)
     
-#### **Bucket Level 4**
+### **Bucket Level 4**
     
 [Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20715cc869578b465baefdc921e99763df.csv)
     
