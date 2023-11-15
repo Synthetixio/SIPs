@@ -5,10 +5,17 @@
 **NB:** ABK points can only be applied after verifying credentials (logging in)
 
 - **Bucket Level 0**
-    
-    [Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20acab634af19547729829cff897e0b0d6.csv)
-    
-    [Points Ruleset Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Points%20Ruleset%20Map%207759c79d12cb4b64af566edf5c5a1314.csv)
+
+| Name      | Points |
+| ----------- | ----------- |
+| Active Browser Key      | 20.0       |
+| Email OTP   | 5.0        |
+| Authenticated Credentials      | 1.0       |
+| Authenticator MFA      | 0.0       |
+| Mobile SMS MFA      | 0.0       |
+| Passkey MFA      | 0.0   |
+| Ethereum Signer      | 0.0      |
+
     
 - **Bucket Level 1**
     
