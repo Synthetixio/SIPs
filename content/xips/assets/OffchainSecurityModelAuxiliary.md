@@ -271,8 +271,8 @@ Exhaustive tables of user loss and hack states.
 
 
 ##### Loss States [High Security User]
-| Loss State | Notes |
-| ----------- | ----------- |
+| Loss State |
+| ----------- |
 |Lose [3x MFA Methods]|
 |Lose [Active Device, Credentials, Email] + Lose [2x MFA Methods]|
 |Lose Credentials + Lose Email + Lose [1x MFA Methods]Lose Device + Lose Email + Lose [1x MFA Methods]|
