@@ -242,12 +242,22 @@ Exhaustive tables of user loss and hack states.
 
 #### High Security User w/ Ethereum Signer [2x MFA Methods + Ethereum Signer]
 ##### Hack States [New User]
-| Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- | ----------- |
+| Hacker Initial States | Action Path |
+| ----------- | ----------- |
+| Hacker Steals Credentials + Ethereum Signer | Login → Get Ethsig → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
+| Hacker Steals Active Device + Credentials + Email + [1x MFA Methods] | Login → Change Other MFA Method → Get MFA Signature → **DRAIN** |
+| Hacker Steals Active Device + Credentials  + [2x MFA Methods] | Login → Change Email → Get MFA Signature → **DRAIN** |
+| Hacker Steals Email + Ethereum Signer + [1x MFA Methods] | Reset Password → Login → Get Ethsig → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
+| Hacker Steals Email + [2x MFA Methods] | Reset Password → Login → Get MFA Signature → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
+| Hacker Steals Ethereum Signer + [2x MFA Methods] | Get Ethsig → Change Email → Reset Password → Login → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
 
 ##### Loss States [New User]
-| Loss State | Notes |
-| ----------- | ----------- | 
+| Loss State | 
+| ----------- |
+|Lose [Active Device, Credentials, Email] + Lose [1x MFA Methods] + Lose Ethereum Signer|
+|Lose Ethereum Signer + Lose Email + Lose [Credentials, Active Device]|
+|Lose [Credentials, Ethereum Signer] + Lose [2x MFA Methods]|
+|Lose Credentials + Lose Email + Lose [1x MFA Methods]|
 
     
 #### High Security User [3x MFA Methods]
