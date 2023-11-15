@@ -127,6 +127,7 @@ The keys that control a users smart account will be able to be changed through a
 
 This customizability offers a gradient of control for advanced users who want more or less responsibility of managing their own keys. It also allows for social recovery (Alice’s hardware wallet could be added as a recovery signer for Bob’s account)
 
+### Key configuration
 |Name|Requires|Notes|
 |:----|:----|:----|
 |Add browser key|Recovery key signature| |
