@@ -166,12 +166,7 @@ Exhaustive tables of user loss and hack states.
 ##### Hack States [New User]
 | Hacker Initial States | Action Path | Notes |
 | ----------- | ----------- | ----------- |
-| Hacker Steals Email | → Reset Password
-→ Login
-→ Get MFA Signature
-→ Add New Browser Key (Inactive)
-→ Wait 7 Days (Activate Browser Key)
-→ DRAIN | We can’t protect them beyond this, because ABK is encrypted and we can only gate that with password or OTP. 
+| Hacker Steals Email | Reset Password → Login → Get MFA Signature → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → DRAIN | We can’t protect them beyond this, because ABK is encrypted and we can only gate that with password or OTP. 
 
 So, email OTP will always be the point of failure |
 
