@@ -95,7 +95,8 @@
 ##### Security Method Points Map
 | Name      | Points |Notes|
 | ----------- | ----------- | ----------- |
-|Active Browser Key (ABK)|15.0|Reduced too — want slightly more influence on MFA, why else would user have 3x?Email OTP|1.0|Considered unsecure|
+|Active Browser Key (ABK)|15.0|Reduced too — want slightly more influence on MFA, why else would user have 3x? |
+|Email OTP|1.0|Considered unsecure|
 |Authenticated Credentials|1.0| |
 |Authenticator MFA|11.5| |
 |Mobile SMS MFA|11.5| |
