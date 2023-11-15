@@ -1,5 +1,0 @@
-﻿Loss State,Notes
-Lose [3x MFA Methods],
-"Lose [2x MFA Methods] + Lose [Credentials or Ethereum Signer] ",
-" Lose Credentials + Lose [1x MFA Methods] + Lose [Email or Ethereum Signer]",
-Lose Email + Lose Ethereum Signer + Lose [Credentials or Device],

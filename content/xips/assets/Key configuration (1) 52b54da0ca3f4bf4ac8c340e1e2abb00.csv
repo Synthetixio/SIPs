@@ -1,7 +1,0 @@
-﻿Name,Requires,Notes
-Add browser key,Recovery key signature,
-Remove browser key,Active browser key signature,
-Activate browser key,"recoveryDelay period, or active browser key signature","While any browser key can be used to trade, only an active browser key can be used as a second factor for sensitive actions (like withdrawing)"
-"Add, remove, or change recovery key",Active browser key signature and (MFA key or recover key) signature,
-"Add, remove, or change MFA key",Active browser key signature and (MFA key or recover key) signature,
-Add emergency withdrawal address,Active browser key signature and MFA key signature,

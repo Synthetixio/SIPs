@@ -1,7 +1,0 @@
-﻿Hacker Initial States,Action Path
-Hacker Steals Email,"→ Reset Password
-→ Login
-→ Get MFA Signature
-→ Add New Browser Key (inactive)
-→ Wait 7 Days (Activate Browser Key)
-→ DRAIN"
