@@ -171,7 +171,7 @@ A more detailed specification for how a user would create a new account and then
 
 ![untitled](assets/xip2-7.png)
 
-More sequence diagrams can be found in the [auxiliary file](https://www.notion.so/Stytch-and-Lit-Auxiliary-file-f71a9cb8b3ca48ec97b0193c7dd0924d?pvs=21).
+More sequence diagrams can be found in the [auxiliary file](assets/StytchandLitAuxiliaryFile.md).
 
 ### Upgrading a Lit action
 
