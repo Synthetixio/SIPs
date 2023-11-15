@@ -1,8 +1,0 @@
-﻿Security Action,(Points) Requirement
-Login,5.0
-Reset Password,5.0
-Add Authenticator,26.0
-Add Mobile SMS,26.0
-Add Passkey,26.0
-"Change Email ",26.0
-Get MFA Signature,6.0
