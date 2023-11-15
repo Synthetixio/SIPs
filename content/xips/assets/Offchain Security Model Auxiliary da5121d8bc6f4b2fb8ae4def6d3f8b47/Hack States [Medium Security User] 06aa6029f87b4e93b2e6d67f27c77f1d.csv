@@ -1,0 +1,17 @@
+﻿Hacker Initial States,Action Path
+Hacker Steals Active Device + Credentials + [1x MFA Methods],"→ Login
+→ Change Email
+→ Change Other MFA Method
+→ Get MFA Signature
+→ DRAIN"
+Hacker steals Active Device + Email + [1x MFA Methods],"→ Reset Password
+→ Login
+→ Change Other MFA Method
+→ Get MFA Signature
+→ DRAIN"
+Hacker steals Email + [2x MFA Methods],"→ Reset Password
+→ Login
+→ Get MFA Signature
+→ Add New Browser Key (Inactive)
+→ Wait 7 Days (Activate Browser Key)
+→ DRAIN"

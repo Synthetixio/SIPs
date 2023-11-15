@@ -1,0 +1,11 @@
+﻿Security Action,(Points) Requirement,Notes
+Login,5.0,
+Reset Password,5.0,
+Add Authenticator,26.0,Requires all security measures to add an MFA method: user will need to be on an active device.
+Add Mobile SMS,26.0,
+Add Passkey,26.0,
+"Change Email ",26.0,
+Change Authenticator,999999.0,
+Change Mobile SMS,999999.0,
+Change Passkey,999999.0,
+Get MFA Signature,6.0,Ensures Bucket 0 Requires Credentials + Email OTP

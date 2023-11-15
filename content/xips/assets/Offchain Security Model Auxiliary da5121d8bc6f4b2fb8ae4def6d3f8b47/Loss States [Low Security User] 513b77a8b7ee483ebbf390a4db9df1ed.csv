@@ -1,0 +1,3 @@
+﻿Loss State,Notes
+" Lose [Active Device, Credentials, Email] + Lose [1x MFA Methods]",Most correlated items would be iPhone (SMS + Device ABK) —discouraging users from SMS as their only MFA method is preferable.
+"Lose Email + Lose [Credentials, Device]",

@@ -1,0 +1,11 @@
+﻿Name,(Points) Requirement
+Login,6.0
+Reset Password,15.0
+Add Authenticator,30.0
+Add Mobile,30.0
+Add Passkey,30.0
+Change Email,31.0
+Change Authenticator,28.0
+Change Mobile,28.0
+Change Passkey,28.0
+Get MFA Signature,9.0
