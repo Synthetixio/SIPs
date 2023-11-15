@@ -205,23 +205,37 @@ Exhaustive tables of user loss and hack states.
 ### **Bucket Level 2**
 
 #### Medium Security User w/ Ethereum Signer [1x MFA Methods + 1x Ethereum Signer]
-##### Hack States [New User]
-| Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- | ----------- |
-
-##### Loss States [New User]
-| Loss State | Notes |
+##### Hack States [Medium Security User]
+| Hacker Initial States | Action Path |
 | ----------- | ----------- |
+| Hacker Steals Credentials + Ethereum Signer | Login → Get Ethsig → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
+| Hacker Steals Active Device + Credentials + [1x MFA Methods] | Login → Change Email → Get MFA Signature → **DRAIN** |
+| Hacker steals Email + [1x MFA Methods] | Reset Password → Login → Get MFA Signature → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
+| Hacker Steals Email + Ethereum Signer | Reset Password → Login → Get Ethsig → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
+
+
+##### Loss States [Medium Security User]
+| Loss State |
+| ----------- |
+| Lose Ethereum Signer + Lose [1x MFA Method] |
+| Lose Credentials + Lose Email |
+| Lose Active Device + Lose Email + Lose Ethereum Signer |
 
     
 #### Medium Security User [2x MFA Methods]
-##### Hack States [New User]
-| Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- | ----------- |
-
-##### Loss States [New User]
-| Loss State | Notes |
+##### Hack States [Medium Security User]
+| Hacker Initial States | Action Path |
 | ----------- | ----------- |
+| Hacker Steals Active Device + Credentials + [1x MFA Methods] | Login → Change Email → Change Other MFA Method → Get MFA Signature → **DRAIN** |
+| Hacker steals Active Device + Email + [1x MFA Methods] | Reset Password → Login → Change Other MFA Method → Get MFA Signature → **DRAIN** |
+| Hacker steals Email + [2x MFA Methods] | Reset Password → Login → Get MFA Signature → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
+
+##### Loss States [Medium Security User]
+| Loss State |
+| ----------- |
+| Lose Active Device + Lose [1x MFA Methods] |
+| Lose Email + Lose [Active Device, Credentials] |
+| Lose [2x MFA Methods] |
 
 
 ### **Bucket Level 3**
