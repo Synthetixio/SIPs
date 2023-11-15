@@ -1,0 +1,5 @@
+﻿Name,Account Value,Tags
+Low Risk,> $0,Level 1 Encouraged
+Medium Risk (I),≥ $10k,Level 1 Enforced
+Medium Risk (II),≥ $25k,Level 2 Encouraged
+High Risk,≥ $50k,Level 2 Enforced

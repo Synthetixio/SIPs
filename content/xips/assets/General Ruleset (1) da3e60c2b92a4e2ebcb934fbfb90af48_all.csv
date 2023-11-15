@@ -1,0 +1,12 @@
+﻿Security Action,Requirement/Rule
+Reset Password,All Enabled Security Methods ex. 1 and Email OTP
+"Add MFA Method (Authenticator, Mobile SMS, Passkey)","All Enabled MFA Methods and Email OTP
+or Ethereum Signer"
+Get MFA Signature (Strict),"All Enabled MFA Methods and Email OTP
+or Ethereum Signer"
+Get MFA Signature (Relaxed I),"All Enabled Security Methods ex. 1 and Email OTP
+or Ethereum Signer "
+Get MFA Signature (Relaxed II),"All Enabled MFA Methods ex. 1 and Email OTP
+or Ethereum Signer "
+Activate Active Browser Key (ABK),"MFA Signature and 7 Day Delay 
+or MFA Signature and ABK Signature"
