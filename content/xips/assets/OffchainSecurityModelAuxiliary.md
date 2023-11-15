@@ -261,13 +261,21 @@ Exhaustive tables of user loss and hack states.
 
     
 #### High Security User [3x MFA Methods]
-##### Hack States [New User]
-| Hacker Initial States | Action Path | Notes |
-| ----------- | ----------- | ----------- |
+##### Hack States [High Security User]
+| Hacker Initial States | Action Path |
+| ----------- | ----------- |
+| Hacker Steals Active Device + Credentials + Email + [1x MFA Methods] | Login → Change Other MFA Method → Get MFA Signature → **DRAIN** |
+| Hacker Steals Email + [2x MFA Methods] | Reset Password → Login → Get MFA Signature → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN** |
+| Hacker Steals Active Device + Credentials + [2x MFA Methods] | Login → Change Email → Get MFA Signature → **DRAIN** |
+| Hacker Steals [3x MFA Methods] | Change Email → Get MFA Signature → Reset Password → Login → Add New Browser Key (Inactive) → Wait 7 Days (Activate Browser Key) → **DRAIN**|
 
-##### Loss States [New User]
+
+##### Loss States [High Security User]
 | Loss State | Notes |
 | ----------- | ----------- |
+|Lose [3x MFA Methods]|
+|Lose [Active Device, Credentials, Email] + Lose [2x MFA Methods]|
+|Lose Credentials + Lose Email + Lose [1x MFA Methods]Lose Device + Lose Email + Lose [1x MFA Methods]|
 
     
 
