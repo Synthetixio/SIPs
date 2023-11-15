@@ -19,6 +19,7 @@
 
 ##### Security Method Points Map
 |Security Action|(Points) Requirement|Notes|
+| ----------- | ----------- | ----------- |
 |Login|5.0| |
 |Reset Password|5.0| |
 |Add Authenticator|26.0|Requires all security measures to add an MFA method: user will need to be on an active device.|
