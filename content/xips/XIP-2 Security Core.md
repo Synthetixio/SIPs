@@ -144,7 +144,8 @@ This customizability offers a gradient of control for advanced users who want mo
 
 The browser key will be encrypted on the users device by an encryption key gated behind the Infinex backend. The key is also included in the browser via cross-domain iframe architecture, protecting the user from cross site scripting attacks.
 
-For more information on browser key storage, see the [auxiliary file](https://www.notion.so/Browser-Key-Storage-Auxiliary-File-49842d8375d140caa9ebd5766ee4b891?pvs=21).
+For more information on browser key storage, see the [auxiliary file](assets/BrowserKeyStorageAuxiliaryFile%20.md).
+
 
 ### Off-chain authentication
 
@@ -154,7 +155,7 @@ The Lit action contains logic for releasing signatures to user authenticated by 
 
 The diagram below demonstrates how these pieces would fit together for Bob, who would like to withdraw money from his onchain smart account:
 
-![Untitled](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Untitled%205.png)
+![untitled](assets/xip2-6.png)
 
 The flow is easiest to comprehend when considering Bob’s end goal – to withdraw funds.
 
@@ -168,7 +169,7 @@ When Bob requests a signature from his MFA key or their recovery key, or to chan
 
 A more detailed specification for how a user would create a new account and then change his email address is outlined in the following sequence diagram:
 
-![Untitled](Markdown%20for%20Kmao%2021ed70e53fdd4c55a8df3623eb416fa0/Untitled%206.png)
+![untitled](assets/xip2-7.png)
 
 More sequence diagrams can be found in the [auxiliary file](https://www.notion.so/Stytch-and-Lit-Auxiliary-file-f71a9cb8b3ca48ec97b0193c7dd0924d?pvs=21).
 
