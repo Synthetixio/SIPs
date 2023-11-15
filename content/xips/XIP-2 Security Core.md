@@ -1,13 +1,15 @@
-| Author | Bilby, Spinxho, Harry |
-| --- | --- |
-| Status | Draft |
-| Type | core-upgrade |
-| Network | Ethereum & Optimism |
-| Implementor | TBD |
-| Release | TBD |
-| Created | 2023-11-05 |
-| Updated | 2023-11-15 |
-
+---
+xip: 2
+title: XIP-2 Security Core
+author: 'Bilby (@bilb-y), Spinxho (@spinxho), Harry (@harry)'
+network: Ethereum & Optimism
+status: Draft
+type: core-upgrade
+implementor: TBD
+release: TBD
+created: 2023-11-05
+updated: 2023-11-15
+---
 # Simple Summary
 
 This XIP proposes the framework for the security module that will secure user funds on Infinex.
