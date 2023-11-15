@@ -119,10 +119,33 @@
 
 ### **Bucket Level 4**
     
-[Security Method Points Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Security%20Method%20Points%20Map%20715cc869578b465baefdc921e99763df.csv)
-    
-[Requirements Map](Offchain%20Security%20Model%20Auxiliary%20da5121d8bc6f4b2fb8ae4def6d3f8b47/Requirements%20Map%202861f8f181bd46d78cec73681bcba37e.csv)
-    
+##### Security Method Points Map
+| Name      | Points |
+| ----------- | ----------- |
+|Active Browser Key (ABK)|15.0|
+|Email OTP |0.5|
+|Authenticated Credentials|1.0|
+|Authenticator MFA|10.0|
+|Mobile SMS MFA|10.0|
+|Passkey MFA|10.0|
+|Ethereum Signer|9.0|
+
+
+##### Points Ruleset Map
+|Security Action|(Points) Requirement|
+| ----------- | ----------- |
+|Login|10.0|
+|Reset Password|24.0|
+|Add Authenticator|0.0|
+|Add Mobile SMS|0.0|
+|Add Passkey|0.0|
+|Change Email |32.0|
+|Change Authenticator|27.0|
+|Change Mobile SMS|27.0|
+|Change Passkey|27.0|
+|Get MFA Signature|6.0|
+
+
 
 ## User Security States
 
