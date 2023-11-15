@@ -47,8 +47,8 @@
 
 
 ##### Points Ruleset Map
-|Security Action|(Points) Requirement|Notes|
-| ----------- | ----------- | ----------- |
+|Security Action|(Points) Requirement|
+| ----------- | ----------- |
 |Login|5.0|
 |Reset Password|15.0|
 |Add Authenticator|30.0|
@@ -76,8 +76,8 @@
 
     
 ##### Points Ruleset Map
-|Security Action|(Points) Requirement|Notes|
-| ----------- | ----------- | ----------- |
+|Security Action|(Points) Requirement|
+| ----------- | ----------- |
 |Login|6.0|
 |Reset Password|15.0|
 |Add Authenticator|30.0|
@@ -93,8 +93,8 @@
 ### **Bucket Level 3**
     
 ##### Security Method Points Map
-| Name      | Points |
-| ----------- | ----------- |
+| Name      | Points |Notes|
+| ----------- | ----------- | ----------- |
 |Active Browser Key (ABK)|15.0|Reduced too — want slightly more influence on MFA, why else would user have 3x?Email OTP|1.0|Considered unsecure|
 |Authenticated Credentials|1.0| |
 |Authenticator MFA|11.5| |
