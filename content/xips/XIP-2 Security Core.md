@@ -142,9 +142,9 @@ This customizability offers a gradient of control for advanced users who want mo
 
 ## Each key is gated by trustless off-chain security
 
-### Browser key encryption
+### Browser key storage
 
-The browser key will be encrypted on the users device by an encryption key gated behind the Infinex backend. The key is also included in the browser via cross-domain iframe architecture, protecting the user from cross site scripting attacks.
+The browser key will be accessible from the frontend via a cross-domain iframe architecture. This forms a “service within a service” separation, preventing frontend code from accessing the keys directly, while still allowing it to request signatures from the service. Furthermore, browser keys are encrypted with the user’s smart account contract address, so that a scanner looking for private keys on a compromised hard drive would be unable to find them. Keys persist unless the user clears their browser application storage for the key storage domain.
 
 For more information on browser key storage, see the [auxiliary file](assets/Browser_Key_Storage_Auxiliary_File.pdf).
 
