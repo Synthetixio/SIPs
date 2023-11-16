@@ -394,11 +394,11 @@ If user credentials are lost, users will have the ability to reset their credent
 
 *Compromised hard drive*
 
-Since all browser keys are encrypted via the users JWT ID, decryption of the key will require authentication of the user. The dual safeguard of encryption and login authentication ensures that keys remain secure and that user data is protected, even in the event of a compromised hard drive.
+Since all browser keys are encrypted via the users smart account contract address, decryption of the key will require knowledge of the users trading account. This provides an extra layer of difficulty for an attacker over storing the keys in plain text.
 
 *Cross-site scripting (XSS)*
 
-XSS is another risk associated with the browser key. To mitigate this threat, a cross-domain iframe architecture to create a “service within a service” separation would be adopted. This will prevent frontend code of the site that is affected from directly accessing private keys, thereby mitigating XSS risks. Furthermore, private keys will be encrypted using the user's email address and password, adding another of security by making it difficult for attackers to access keys without the user’s email address.
+XSS is another risk associated with the browser key. To mitigate this threat, a cross-domain iframe architecture to create a “service within a service” separation would be adopted. This will prevent frontend code of the site that is affected from directly accessing private keys, thereby mitigating XSS risks. Furthermore, private keys will be encrypted using the user's smart account contract address, meaning an attacker would also have to know the users onchain behaviour to do anything with the key.
 
 *Hacked recovery key*
 
