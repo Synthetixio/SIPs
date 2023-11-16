@@ -1,6 +1,6 @@
 ---
 xip: 2
-title: XIP-2 Security Core
+title: Security Core
 author: 'Bilby (@bilb-y), Spinxho (@spinxho), Harry (@harry)'
 network: Ethereum & Optimism
 status: Draft
@@ -86,9 +86,9 @@ The aspect of **marginal responsibility** beyond Bob’s off-chain authenticatio
 
 ## Auxiliary files
 
-- [Stytch and lit](assets/StytchandLitAuxiliaryFile.md)
-- [Offchain security model](assets/OffchainSecurityModelAuxiliaryFile.md)
-- [Browser key storage](assets/BrowserKeyStorageAuxiliaryFile%20.md)
+- [Stytch and lit](assets/Stytch_and_Lit_Auxiliary_file.pdf)
+- [Offchain security model](assets/Offchain_Security_Model_Auxiliary.pdf)
+- [Browser key storage](assets/Browser_Key_Storage_Auxiliary_File.pdf)
 
 ## **Overview**
 
@@ -146,7 +146,7 @@ This customizability offers a gradient of control for advanced users who want mo
 
 The browser key will be encrypted on the users device by an encryption key gated behind the Infinex backend. The key is also included in the browser via cross-domain iframe architecture, protecting the user from cross site scripting attacks.
 
-For more information on browser key storage, see the [auxiliary file](assets/BrowserKeyStorageAuxiliaryFile%20.md).
+For more information on browser key storage, see the [auxiliary file](assets/Browser_Key_Storage_Auxiliary_File.pdf).
 
 
 ### Off-chain authentication
@@ -173,7 +173,7 @@ A more detailed specification for how a user would create a new account and then
 
 ![untitled](assets/xip2-7.png)
 
-More sequence diagrams can be found in the [auxiliary file](assets/StytchandLitAuxiliaryFile.md).
+More sequence diagrams can be found in the [auxiliary file](assets/Stytch_and_Lit_Auxiliary_file.pdf).
 
 ### Upgrading a Lit action
 
@@ -294,7 +294,7 @@ To each bucket we then apply a points-threshold security system. For each securi
 |Get MFA Signature|6.0|
 
 
-The full table pairs for all security levels can be found in the [auxiliary file](assets/OffchainSecurityModelAuxiliaryFile.md)
+The full table pairs for all security levels can be found in the [auxiliary file](assets/Offchain_Security_Model_Auxiliary.pdf)
 
 To minimise the protocols net loss and hack states, the Infinex UI will usher users into security buckets based on the value of their deposits:
 
@@ -336,7 +336,7 @@ We have developed an exhaustive list of account loss states for users of all buc
 |Lose [2x MFA Methods] + Lose [Credentials or Ethereum Signer] Lose Credentials + Lose [1x MFA Methods] + Lose [Email or Ethereum Signer]|
 |Lose Email + Lose Ethereum Signer + Lose [Credentials or Device]|
 
-The full tables of loss states in the [auxiliary file](assets/OffchainSecurityModelAuxiliaryFile.md).
+The full tables of loss states in the [auxiliary file](assets/Offchain_Security_Model_Auxiliary.pdf).
 
 ### Security
 
@@ -363,7 +363,7 @@ Accepting that the most crucial point of security is the off-chain MFA configura
 | Hacker Steals Ethereum Signer + [3x MFA Methods] #2 | -> Change Email <br> -> Get MFA Signature <br> -> Reset Password <br> -> Login <br> -> Add New Browser Key **(Inactive)** <br> -> Wait 7 Days **(Activate Browser Key)** <br> -> **DRAIN** |
 
 
-The full tables of hack states can be found in the [auxillary file](assets/OffchainSecurityModelAuxiliaryFile.md).
+The full tables of hack states can be found in the [auxillary file](assets/Offchain_Security_Model_Auxiliary.pdf).
 
 # Parameters
 
