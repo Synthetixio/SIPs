@@ -1,7 +1,7 @@
 ---
 xip: 2
 title: Security Core
-author: 'Bilby (@bilb-y), Spinxho (@spinxho), Harry (@harry)'
+author: 'Bilby (@bilb-y), Spinxho (@spinxho), Harry (@tannutuva2)'
 network: Ethereum & Optimism
 status: Draft
 type: core-upgrade
