@@ -86,8 +86,8 @@ The aspect of **marginal responsibility** beyond Bob’s off-chain authenticatio
 
 ## Auxiliary files
 
-- [Stytch and lit](assets/Stytch_and_Lit_Auxiliary_file.pdf.md)
-- [Offchain security model](assets/Offchain_Security_Model_Auxiliary.pdf.md)
+- [Stytch and lit](assets/Stytch_and_Lit_Auxiliary_file.pdf)
+- [Offchain security model](assets/Offchain_Security_Model_Auxiliary.pdf)
 - [Browser key storage](assets/Browser_Key_Storage_Auxiliary_File.pdf)
 
 ## **Overview**
