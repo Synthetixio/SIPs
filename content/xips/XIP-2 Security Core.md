@@ -78,7 +78,7 @@ A simple withdrawal flow would therefore work like this:
 
 ![BobWithdrawal](assets/xip2-5.png)
 
-An important piece of this map is in decoupling the authenticator from the key management system (KMS), while preventing the KMS operators from accessing Bob’s key (unless they are Bob). This sounds like magic, but has become possible in recent months.
+An important piece of this map is in decoupling the authenticator from the key management system (KMS), while preventing the KMS operators from accessing Bob’s key (unless they are Bob). This sounds like magic, but has become possible in recent months with the Lit protocol's use of AMD SEV-SNP compute to build the first known trustless, generalised KMS.
 
 The aspect of **marginal responsibility** beyond Bob’s off-chain authentication is the blue key that he holds on his device. To avoid making this a single point of failure, this key needs to be recoverable, and thus the scope of it’s authorization on Bob’s account must be limited. It should be easily duplicatable, so that Bob can switch devices. It also has to be resistant to cross-site scripting attacks. The UX of using this key should be seemless, such that Bob doesn’t need to know there is a key on his device.
 
@@ -177,7 +177,7 @@ More sequence diagrams can be found in the [auxiliary file](assets/Stytch_and_Li
 
 ### Upgrading a Lit action
 
-The Lit node operators run encrypted virtual machines to house **programmable key pairs** (PKPs) and execute Lit action code, meaning the node operators cannot modify the logic of the Lit action without acquiring a signature via the Lit action itself.
+The Lit node operators run encrypted virtual machines ([AMD SEV-SNP](https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf)) to house **programmable key pairs** (PKPs) and execute Lit action code, meaning the node operators cannot modify the logic of the Lit action without acquiring a signature via the Lit action itself.
 
 Infinex governance can upgrade Lit actions by deploying new code to IPFS, and having the user request that the Lit action points to the new IPFS ID (the `litActionIPFSID`). This means that Infinex Governance can’t upgrade the Lit action logic without the users consent.
 
