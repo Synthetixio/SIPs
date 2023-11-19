@@ -61,7 +61,7 @@ The disadvantages of this approach are obvious: Bob’s savings are held by an o
 
 ### The challenge, therefore
 
-The Infinex security module endeaovurs to emulate the structural architecture of the CeFi solution in a trustless and decentralized fashion. This is seen as ideal, and can be achieved by deconstruction the constitutent actors and functions in CeFi security architecture. For the Infinex security module to be deemed successful, Bob would maintain sole ownership over his funds while maintaing the composability with the rest of Ethereum.
+The Infinex security module will emulate the structural interface of the CeFi solution in a trustless and decentralized fashion. This can be achieved by deconstruction of the constitutent actors and functions in CeFi security architecture. For the Infinex security module to be deemed successful, Bob would maintain sole ownership over his funds while maintainng the composability with the rest of Ethereum.
 
 Here’s what this ideal system would look like:
 
