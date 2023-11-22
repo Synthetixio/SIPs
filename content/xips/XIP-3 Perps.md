@@ -39,11 +39,9 @@ With the integration of Synthetix v3, this XIP now outlines the order types and 
 
 ### Trade execution
 
-Infinex's trade execution protocol will be designed to prevent unauthorized access to user funds by necessitating user-signed messages for trade confirmations, thereby ensuring that only the user can initiate transactions. The platform employs a browser key for transaction signing. This key is encrypted and housed in a cross-domain iFrame, also mitigating the risk of cross-site scripting attacks.
+Infinex's trade execution protocol will be designed to prevent unauthorized access to user funds by necessitating user-signed messages for trade authentication, thereby ensuring that only the user can initiate transactions. The platform employs a browser key for transaction signing. This key is encrypted and housed in a cross-domain iFrame, also mitigating the risk of cross-site scripting attacks.
 
-Infinex will implement the EIP-2771 standard (OpenZepplin) to enable users to sign a message instead of a transaction which verifies their intent to trade. A third-party “relayer” will then confirm the message as correctly signed before facilitating trades on behalf of the user, strictly adhering to the user’s directives without holding any discretionary power over the user’s assets. This process not only secures user intent verification but also relieves users from transaction signing, therefore facilitating a more seamless UX. Additionally, this relayer will also be responsible for paying transaction fees which allows users to easily interact with smart contracts without holding Ether. 
-
-Importantly, by sending stored messages in a database and sending it to the relayer, this system will prevent the platform from generating unauthorized messages or trading with user funds, reinforcing trust and security within the Infinex ecosystem.
+Infinex will implement the EIP-2771 standard (OpenZepplin) to enable users to sign a message instead of a transaction which verifies their intent to trade. A third-party “relayer” will then confirm the message as correctly signed before facilitating trades on behalf of the user, strictly adhering to the user’s directives without holding any discretionary power over the user’s assets. This process not only secures user intent verification but also relieves users from manual transaction signing, therefore facilitating a more seamless UX. Additionally, this relayer will also be responsible for paying transaction fees which allows users to easily interact with smart contracts without holding Ether.
 
 ### Order Types
 
@@ -87,9 +85,7 @@ Infinex's cross margin mechanism will deploy the entire available balance of a S
 
 Hence, cross margin positions all share a single leverage, calculated by:
 
-$$
-\texttt{crossLeverage} = \texttt{CrossPositionsValue} / \texttt{crossAccountMarginValue}
-$$
+\\[\texttt{crossLeverage} = \texttt{CrossPositionsValue} / \texttt{crossAccountMarginValue}\\]
 
 A key distinction of Infinex's approach versus typical centralized exchanges lies in its handling of leverage within cross margin positions. On Infinex, all positions within a cross margin setup will share the same leverage level. Consequently, if liquidation is triggered, it affects all positions because the Synthetix Perps V3 contracts mandate the liquidation of the entire cross margin account, not just individual positions.
 
@@ -199,9 +195,7 @@ The available balance represents the portion of a trader's account that is not t
 
 Margin ratio indicates the robustness of a trade position against market fluctuations and potential liquidation scenarios. It is defined as the total margin required to keep all positions open, calculated using the following formula:
 
-$$
-\texttt{marginRatio} = \texttt{totalAssetValueOfAccount} / \text{usedMarginInPositions}
-$$
+\\(\texttt{marginRatio} = \texttt{totalAssetValueOfAccount} / \text{usedMarginInPositions}\\)
 
 Where:
 
