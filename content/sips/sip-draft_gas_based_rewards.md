@@ -1,5 +1,5 @@
 ---
-sip: <to be assigned>
+sip: 351
 title: Transaction Costs based Rewards
 network: Optimism & Base
 status: Draft
