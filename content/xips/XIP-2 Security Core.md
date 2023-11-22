@@ -1,14 +1,14 @@
 ---
 xip: 2
 title: Security Core
-author: 'Bilby (@bilb-y), Spinxho (@spinxho), Harry (@tannutuva2)'
+author: 'Bilby (@bilb-y), Spinxho (@spinxho), Tannutuva2 (@tannutuva2)'
 network: Ethereum & Optimism
 status: Draft
 type: core-upgrade
 implementor: TBD
 release: TBD
 created: 2023-11-05
-updated: 2023-11-15
+updated: 2023-11-22
 ---
 # Simple Summary
 
@@ -70,7 +70,7 @@ Here’s what this ideal system would look like:
 From top-left to right:
 
 1. The authenticator does nothing but authenticate Bob and sign attestations that he has authenticated via any specified combination of factors.
-2. A decentralized KMS holds Bob’s key, can only release a signature if Bob’s security settings (stored in IPFS and run on encrypted machines)
+2. A decentralized key management system (KMS) holds Bob’s key, and can only release a signature if Bob’s security settings allows it (stored in IPFS and run on encrypted machines).
 3. Bob holds a key on his device.
 4. Bob’s onchain smart account requires signatures from both the blue key and the cantaloupe key for sensitive transactions.
 
@@ -204,7 +204,7 @@ Any signature from a key kept on the Lit network (a users’ MFA signer or recov
 Additional goals for the security model are
 
 1. **Positive marginal security**: if a user has configured more authentication methods, either the risk of loss state and hack state should be reduced
-2. **Users suffering hack or loss state should be unreasonably unlucky**: ****achieving loss state should require losing access to uncorrelated security artifacts (for example, losing access to your laptop, password, and email all at once). A measure of what is ‘reasonable’ will of course be influenced by how well-secured their account is.
+2. **Users suffering hack or loss state should be unreasonably unlucky**: achieving loss state should require losing access to uncorrelated security artifacts (for example, losing access to your laptop, password, and email all at once). A measure of what is ‘reasonable’ will of course be influenced by how well-secured their account is.
 3. **Minimal UX burden**: Two solutions with the same ramifications on loss and hack state exist, the one with less user action required is preferred.
 4. **Resistant to cascading attacks**: Let’s say you’re trying to secure a castle with a door that can be unlocked by a key, and next door to the castle there’s a golden key factory. Breaking into the key factory should be more complicated for an intruder than entering the castle with a key in hand. In practical terms, resetting Bob’s TOTP should be harder for an intruder than using his TOTP to get an MFA signature.
 
