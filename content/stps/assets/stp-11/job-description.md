@@ -1,12 +1,5 @@
 # Position: Operations Analyst
 
-### Location: 
-Remote
-### Compensation: 
-$70,000 annual stipend in stablecoins + SNX token grant (vested over a specified period)
-### Reports to:
-Synthetix Treasury Council
-
 ## Treasury Council:
 The Treasury Council (TC) is responsible for managing the treasury of the Synthetix protocol. The Council undergoes periodic member re-elections by SNX token holders, and requires operational support.
 
@@ -28,7 +21,7 @@ We are seeking a dedicated Treasury Operations Analyst to bolster the operationa
 - Familiarity with governance structures and processes in decentralized organizations.
 - An understanding of the Synthetix ecosystem is advantageous.
 
-## Application process:
-To apply, please submit your resume and a brief cover letter outlining your experience and interest in the role. Applications should be directed to the TC Discord Channel.
-
-Application Deadline: [Insert Deadline]
+### Compensation: 
+$70,000 annual stipend in stablecoins + SNX token grant (vested over a specified period)
+### Reports to:
+Synthetix Treasury Council
