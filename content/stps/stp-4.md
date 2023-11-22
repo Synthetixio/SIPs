@@ -2,7 +2,7 @@
 stp: 4
 title: V3 SNX Staking Pool
 status: Approved
-author: Kain (@kaiynne), Cav (@Cavelier)
+author: Kain (@kaiynne), Cav (@Cavalier)
 implementation-date: TBA
 discussions-to: TC Discord Channel
 created: 2023-06-09
