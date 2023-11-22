@@ -1,6 +1,6 @@
 ---
 stp: 11
-title: Appoint Treasury operations role
+title: Appoint TC Operations Analyst role
 status: Draft
 author: Cavalier (@cavalier_eth), SpartanGlory (@spartanglory)
 implementation-date: 
