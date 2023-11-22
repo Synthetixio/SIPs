@@ -7,4 +7,10 @@ window.MathJax = {
   svg: {
     fontCache: 'global',
   },
+  'HTML-CSS': {
+    linebreaks: { automatic: true },
+  },
+  SVG: {
+    linebreaks: { automatic: true },
+  },
 }

@@ -85,7 +85,7 @@ Infinex's cross margin mechanism will deploy the entire available balance of a S
 
 Hence, cross margin positions all share a single leverage, calculated by:
 
-\\[\texttt{crossLeverage} = \texttt{CrossPositionsValue} / \texttt{crossAccountMarginValue}\\]
+\\[\texttt{crossLeverage} = \texttt{crossPositionsValue} / \texttt{crossAccountMarginValue}\\]
 
 A key distinction of Infinex's approach versus typical centralized exchanges lies in its handling of leverage within cross margin positions. On Infinex, all positions within a cross margin setup will share the same leverage level. Consequently, if liquidation is triggered, it affects all positions because the Synthetix Perps V3 contracts mandate the liquidation of the entire cross margin account, not just individual positions.
 
@@ -99,17 +99,13 @@ Since Synthetix has no concept of positions in the Perps V3 contracts, in order 
 
 The value of a position is:
 
-$$
-\texttt{value} = |\texttt{size}| \times \texttt{markPrice}
-$$
+\\[\texttt{value} = |\texttt{size}| \times \texttt{markPrice}\\]
 
 *Unrealized PnL*
 
 The unrealized PnL of a position is the amount of profit a trader would receive from closing the position at that point in time.
 
-$$
-\texttt{unrealisedPnl} = \left(\texttt{pythPrice} \times \texttt{size} \right) - \left(\texttt{averageEntryPrice} \times \texttt{size}\right)
-$$
+\\[\texttt{unrealisedPnl} = \left(\texttt{pythPrice} \times \texttt{size} \right) - \left(\texttt{averageEntryPrice} \times \texttt{size}\right)\\]
 
 *Realized PnL*
 
@@ -117,9 +113,7 @@ The realized PnL of a position is the amount of profit a trader has received fro
 
 Note: “prior” meaning before the closing of a trade. 
 
-$$
-\texttt{realisedPnl} = \left(\texttt{closingTradeFillPrice} \times \texttt{closingTradeSize} \right) - \left(\texttt{priorAverageEntryPrice} \times \texttt{priorSize}\right) + \texttt{accruedFunding}
-$$
+\\[\texttt{realisedPnl} = \left(\texttt{closingTradeFillPrice} \times \texttt{closingTradeSize} \right) - \left(\texttt{priorAverageEntryPrice} \times \texttt{priorSize}\right) + \texttt{accruedFunding}\\]
 
 *Entry Price*
 
@@ -133,9 +127,7 @@ The exit price of a position is the average of the fill price of trades which de
 
 The Synthetix Perps V3 contracts have no concept of liquidation price, hence Infinex will infer a liquidation price for UI/UX purposes. In the Synthetix PerpsV3 contracts, the condition for liquidation is when:
 
-$$
-\texttt{int}(\texttt{requiredMaintenanceMargin} + \texttt{liquidationReward}) > \texttt{availableMargin} \\ \iff \\\texttt{int}\left[\texttt{requiredMaintenanceMargin} + \texttt{liquidationReward}\right] -   \texttt{availableMargin}> 0
-$$
+\\(\texttt{int}(\texttt{requiredMaintenanceMargin} + \texttt{liquidationReward}) > \texttt{availableMargin} \\)
 
 Hence, we can solve for the index price in order to calculate the liquidation price of a position if all other market conditions remain same. This will be expanded on upon further community discussion.
 
@@ -183,9 +175,7 @@ Will allow users a granular understanding of their margins and margin health.
 
 Equity in Infinex accounts is a comprehensive measure of a trader's financial standing within the platform. It encompasses various elements, calculated as follows:
 
-$$
-\texttt{Equity} = \texttt{marginInPositions} + \texttt{currentAvailableBalance} + \texttt{unrealisedPnL}
-$$
+\\[\texttt{Equity} = \texttt{marginInPositions} + \texttt{currentAvailableBalance} + \texttt{unrealisedPnL}\\]
 
 *Available balance*
 
@@ -195,7 +185,7 @@ The available balance represents the portion of a trader's account that is not t
 
 Margin ratio indicates the robustness of a trade position against market fluctuations and potential liquidation scenarios. It is defined as the total margin required to keep all positions open, calculated using the following formula:
 
-\\(\texttt{marginRatio} = \texttt{totalAssetValueOfAccount} / \text{usedMarginInPositions}\\)
+\\[\texttt{marginRatio} = \texttt{totalAssetValueOfAccount} / \texttt{usedMarginInPositions}\\]
 
 Where:
 
