@@ -6,8 +6,6 @@ status: Draft
 type: Governance
 author: Kaleb Keny (@kaleb-keny), Leo Massazza (@leomassazza)
 implementor: Leo Massazza (@leomassazza)
-implementation-date:
-proposal: <snapshot.org proposal link> (*optional)
 created: 2023-11-07
 ---
 
