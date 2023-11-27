@@ -1,7 +1,7 @@
 ---
 sip: 351
 title: Transaction Costs based Rewards
-network: Optimism & Base
+network: Base
 status: Draft
 type: Governance
 author: Kaleb Keny (@kaleb-keny), Leo Massazza (@leomassazza)
