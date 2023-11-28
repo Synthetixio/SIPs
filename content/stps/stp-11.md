@@ -1,7 +1,7 @@
 ---
 stp: 11
 title: Appoint TC Operations Analyst role
-status: Draft
+status: Approved
 author: Cavalier (@cavalier_eth), SpartanGlory (@spartanglory)
 implementation-date: 
 discussions-to: TC Discord Channel
