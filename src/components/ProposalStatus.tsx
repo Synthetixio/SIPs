@@ -4,17 +4,18 @@ import { request } from 'graphql-request'
 import useSWR from 'swr'
 import { flow, countBy, mapKeys } from 'lodash/fp'
 
-const fetcher = (query: string) => request('https://hub.snapshot.org/graphql', query)
+const fetcher = (query: string) =>
+  request('https://hub.snapshot.org/graphql', query)
 
 const snapshotIdRegex = /^https?:\/\/(snapshot.org).*\/([A-z0-9]{7,})$/
 
 const ProposalStatus: React.FC<{ url: string }> = ({ url }) => {
   const matches = snapshotIdRegex.exec(url)
-  let id = null
+  let id: string | null = null
   if (matches && matches[2]) {
     id = matches[2]
   }
-  const { data } = useSWR(
+  const { data } = useSWR<any>(
     `{
       proposal(id: "${id}") {
         state
@@ -33,26 +34,28 @@ const ProposalStatus: React.FC<{ url: string }> = ({ url }) => {
         choice
       }
     }`,
-    fetcher
+    fetcher,
   )
   const isLoading = !data
   if (isLoading) return <>Loading status...</>
   if (!data?.proposal?.state) return <>Error loading status</>
 
-  const choices = flow(countBy('choice'), mapKeys(k => data.proposal.choices[k - 1]))(data.votes)
-  console.log({ choices })
+  const choices = flow(
+    countBy('choice'),
+    mapKeys((k) => data.proposal.choices[k - 1]),
+  )(data.votes)
+
   return (
     <div>
-
       <a href={url} target="_blank" rel="noreferrer noopener">
-        {startCase(data.proposal.state)}
-        {' '}&ndash;{' '}
-        {data.votes.length} vote(s)
+        {startCase(data.proposal.state)} &ndash; {data.votes.length} vote(s)
       </a>
       <div>
-        {Object.keys(choices).map(key =>
-          <span key={key}>{key} - {choices[key]}</span>
-        )}
+        {Object.keys(choices).map((key) => (
+          <span key={key}>
+            {key} - {choices[key]}
+          </span>
+        ))}
       </div>
     </div>
   )

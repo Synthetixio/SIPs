@@ -1,22 +1,24 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
-import Main from '../../layout/Main'
-import FrontmatterTable from '../../components/FrontmatterTable'
-import SourceIcon from '../../icons/Source'
-import { SipPageQuery } from '../../../types/gql'
-import { getGithubLink } from '../../components/utils'
+import Main from '../../layout/Main';
+import FrontmatterTable from '../../components/FrontmatterTable';
+import SourceIcon from '../../icons/Source';
+import { SipPageQuery } from '../../../types/gql';
+import { getGithubLink } from '../../components/utils';
 
 interface Props {
-  frontmatter__sip: number
-  data: SipPageQuery
+  frontmatter__sip: number;
+  data: SipPageQuery;
 }
 
 const Template: React.FC<Props> = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html, fileAbsolutePath } = markdownRemark
-  const githubLink = getGithubLink(fileAbsolutePath)
+  const { markdownRemark } = data;
+  const { frontmatter, html, fileAbsolutePath } = markdownRemark;
+
+  const githubLink = getGithubLink(fileAbsolutePath);
+
   return (
     <Main>
       <Helmet title={`SIP-${frontmatter.sip}: ${frontmatter.title}`} />
@@ -31,10 +33,10 @@ const Template: React.FC<Props> = ({ data }) => {
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Main>
-  )
-}
+  );
+};
 
-export default Template
+export default Template;
 
 export const pageQuery = graphql`
   query sipPage($frontmatter__sip: Int) {
@@ -46,4 +48,4 @@ export const pageQuery = graphql`
       html
     }
   }
-`
+`;

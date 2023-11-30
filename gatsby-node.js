@@ -1,8 +1,8 @@
-const fs = require('fs')
-const kebabCase = require('lodash/kebabCase')
-const statuses = require('./ci/statuses')
+const fs = require('fs');
+const kebabCase = require('lodash/kebabCase');
+const statuses = require('./ci/statuses');
 
-const kebabStatuses = statuses.map(kebabCase)
+const kebabStatuses = statuses.map(kebabCase);
 
 const Frontmatter = `
   fragment Frontmatter on MarkdownRemarkFrontmatter {
@@ -19,7 +19,7 @@ const Frontmatter = `
     updated
     status
   }
-`
+`;
 const allSipsQuery = `
   ${Frontmatter}
   query allSips {
@@ -41,7 +41,7 @@ const allSipsQuery = `
       }
     }
   }
-`
+`;
 
 const allSccpQuery = `
   ${Frontmatter}
@@ -64,39 +64,39 @@ const allSccpQuery = `
       }
     }
   }
-`
+`;
 
 exports.onPostBuild = async ({ graphql }) => {
-  const allSips = await graphql(allSipsQuery)
-  const allSccp = await graphql(allSccpQuery)
+  const allSips = await graphql(allSipsQuery);
+  const allSccp = await graphql(allSccpQuery);
 
-  const sipsPath = './public/api/sips'
-  const sccpPath = './public/api/sccp'
+  const sipsPath = './public/api/sips';
+  const sccpPath = './public/api/sccp';
 
-  ;[
+  [
     { path: sipsPath, result: allSips },
     { path: sccpPath, result: allSccp },
   ].forEach(({ path, result }) => {
-    if (!fs.existsSync(path)) fs.mkdirSync(path, { recursive: true })
+    if (!fs.existsSync(path)) fs.mkdirSync(path, { recursive: true });
 
     // Initialize all statuses with empty array
     kebabStatuses.forEach((status) =>
       fs.writeFileSync(`${path}/${status}.json`, JSON.stringify([])),
-    )
+    );
 
     result.data.allMarkdownRemark.group.forEach((group) => {
-      const status = kebabCase(group.fieldValue)
+      const status = kebabCase(group.fieldValue);
       const data = group.nodes.map(({ frontmatter, ...node }) => ({
         ...frontmatter,
         ...node,
-      }))
-      fs.writeFileSync(`${path}/${status}.json`, JSON.stringify(data))
-    })
-  })
-}
+      }));
+      fs.writeFileSync(`${path}/${status}.json`, JSON.stringify(data));
+    });
+  });
+};
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
   const typeDefs = [
     `
     type MarkdownRemarkFrontmatter implements Node {
@@ -112,26 +112,6 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       updated: Date
     }
   `,
-    // schema.buildObjectType({
-    //   name: 'Frontmatter',
-    //   fields: {
-    //     tags: {
-    //       type: 'String!',
-    //       resolve(source, args, context, info) {
-    //         const { tags } = source
-    //         console.log(source)
-    //         switch (source[info.fieldName]) {
-    //           case 'type':
-    //             return 'TBD'
-    //           case 'implementor':
-    //             return 'TBD'
-    //           default:
-    //             return tags
-    //         }
-    //       },
-    //     },
-    //   },
-    // }),
-  ]
-  createTypes(typeDefs)
-}
+  ];
+  createTypes(typeDefs);
+};

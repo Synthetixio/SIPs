@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Helmet } from 'react-helmet'
+import * as React from 'react';
+import { Helmet } from 'react-helmet';
 
-import Main from '../layout/Main'
+import Main from '../layout/Main';
 
 // markup
 const IndexPage = () => (
@@ -129,6 +129,6 @@ const IndexPage = () => (
       </li>
     </ul>
   </Main>
-)
+);
 
-export default IndexPage
+export default IndexPage;

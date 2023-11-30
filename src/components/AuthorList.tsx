@@ -2,7 +2,7 @@ import React from 'react'
 import { flow, trim, split, uniq, map } from 'lodash/fp'
 
 interface Props {
-  author: string
+  author?: string
 }
 
 const AuthorList: React.FC<Props> = ({ author }) => {

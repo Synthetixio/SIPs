@@ -1,12 +1,10 @@
-const Yup = require('yup')
-const glob = require('glob')
-const fm = require('front-matter')
-const statuses = require('./statuses')
-const fs = require('fs/promises')
-const { promisify } = require('util')
-const g = promisify(glob)
+const Yup = require('yup');
+const fm = require('front-matter');
+const statuses = require('./statuses');
+const fs = require('fs/promises');
+const { glob } = require('glob');
 
-const snapshotIdRegex = /^https?:\/\/(snapshot.org).*\/([A-z0-9]{7,})$/
+const snapshotIdRegex = /^https?:\/\/(snapshot.org).*\/([A-z0-9]{7,})$/;
 
 const commonValidationSchema = Yup.object().shape({
   file: Yup.string().required(),
@@ -16,7 +14,13 @@ const commonValidationSchema = Yup.object().shape({
   status: Yup.string().oneOf(statuses),
   author: Yup.string().required(),
   network: Yup.string()
-    .oneOf(['Ethereum', 'Optimism', 'Ethereum & Optimism','Base','Ethereum, Optimism & Base'])
+    .oneOf([
+      'Ethereum',
+      'Optimism',
+      'Ethereum & Optimism',
+      'Base',
+      'Ethereum, Optimism & Base',
+    ])
     .required(),
   implementor: Yup.string().nullable(),
   release: Yup.string().nullable(),
@@ -24,7 +28,7 @@ const commonValidationSchema = Yup.object().shape({
   updated: Yup.date().nullable(),
   requires: Yup.mixed().nullable(),
   'discussions-to': Yup.string().nullable(),
-})
+});
 
 const sipValidationSchema = commonValidationSchema
   .concat(
@@ -34,7 +38,7 @@ const sipValidationSchema = commonValidationSchema
     }),
   )
   .noUnknown()
-  .strict()
+  .strict();
 
 const sccpValidationSchema = commonValidationSchema
   .concat(
@@ -43,7 +47,7 @@ const sccpValidationSchema = commonValidationSchema
     }),
   )
   .noUnknown()
-  .strict()
+  .strict();
 
 const stpValidationSchema = Yup.object()
   .shape({
@@ -58,47 +62,50 @@ const stpValidationSchema = Yup.object()
     requires: Yup.mixed().nullable(),
   })
   .noUnknown()
-  .strict()
+  .strict();
 
-;(async () => {
+// This function reads all sips, stps and sccps and validates them with the above schemas
+async function main() {
   try {
-    const sips = await g('./content/sips/*.md')
-    const stps = await g('./content/stps/*.md')
-    const sccp = await g('./content/sccp/*.md')
+    const sips = await glob('./content/sips/*.md');
+    const stps = await glob('./content/stps/*.md');
+    const sccp = await glob('./content/sccp/*.md');
 
     // SIP
     await Promise.all(
       sips.map(async (file) => {
-        const content = await fs.readFile(file, 'utf-8')
-        const { attributes } = fm(content)
-        const castValues = sipValidationSchema.cast({ file, ...attributes })
-        return await sipValidationSchema.validate(castValues)
+        const content = await fs.readFile(file, 'utf-8');
+        const { attributes } = fm(content);
+        const castValues = sipValidationSchema.cast({ file, ...attributes });
+        return await sipValidationSchema.validate(castValues);
       }),
-    )
+    );
     // STP
     await Promise.all(
       stps.map(async (file) => {
-        const content = await fs.readFile(file, 'utf-8')
-        const { attributes } = fm(content)
-        const castValues = stpValidationSchema.cast({ file, ...attributes })
-        return await stpValidationSchema.validate(castValues)
+        const content = await fs.readFile(file, 'utf-8');
+        const { attributes } = fm(content);
+        const castValues = stpValidationSchema.cast({ file, ...attributes });
+        return await stpValidationSchema.validate(castValues);
       }),
-    )
+    );
     // SCCP
     await Promise.all(
       sccp.map(async (file) => {
-        const content = await fs.readFile(file, 'utf-8')
-        const { attributes } = fm(content)
-        const castValues = sccpValidationSchema.cast({ file, ...attributes })
-        return await sccpValidationSchema.validate(castValues)
+        const content = await fs.readFile(file, 'utf-8');
+        const { attributes } = fm(content);
+        const castValues = sccpValidationSchema.cast({ file, ...attributes });
+        return await sccpValidationSchema.validate(castValues);
       }),
-    )
+    );
   } catch (error) {
-    console.log(error)
+    console.log(error);
     console.error({
       value: error.value,
       errors: error.errors,
-    })
-    process.exit(1)
+    });
+    process.exit(1);
   }
-})()
+}
+
+main();

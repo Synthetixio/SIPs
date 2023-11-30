@@ -1,25 +1,25 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { sortBy, filter, flow } from 'lodash/fp'
-import { Helmet } from 'react-helmet'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { sortBy, filter, flow } from 'lodash/fp';
+import { Helmet } from 'react-helmet';
 
-import statuses from '../../ci/statuses'
-import { AllSccpQuery } from '../../types/gql'
-import Main from '../layout/Main'
-import { StatusTable } from '../components/StatusTable'
-import { StatusLabel } from '../components/StatusLabel'
+import statuses from '../../ci/statuses';
+import { AllSccpQuery } from '../../types/gql';
+import Main from '../layout/Main';
+import { StatusTable } from '../components/StatusTable';
+import { StatusLabel } from '../components/StatusLabel';
 
 interface Props {
-  data: AllSccpQuery
+  data: AllSccpQuery;
 }
 
 const Template: React.FC<Props> = ({ data: { allMarkdownRemark } }) => {
-  const { group } = allMarkdownRemark
+  const { group } = allMarkdownRemark;
 
   const columns = flow(
     filter(({ fieldValue }) => statuses.indexOf(fieldValue) > -1),
     sortBy(({ fieldValue }) => statuses.indexOf(fieldValue)),
-  )(group) as AllSccpQuery['allMarkdownRemark']['group']
+  )(group) as AllSccpQuery['allMarkdownRemark']['group'];
 
   return (
     <Main>
@@ -29,20 +29,20 @@ const Template: React.FC<Props> = ({ data: { allMarkdownRemark } }) => {
       </header>
       <div className="post-content">
         {columns.map((g) => {
-          const rows = sortBy('frontmatter.sccp')(g.nodes)
+          const rows = sortBy('frontmatter.sccp')(g.nodes);
           return (
             <div key={g.fieldValue}>
               <StatusLabel label={g.fieldValue} />
               <StatusTable rows={rows as any} />
             </div>
-          )
+          );
         })}
       </div>
     </Main>
-  )
-}
+  );
+};
 
-export default Template
+export default Template;
 
 export const pageQuery = graphql`
   query allSccp {
@@ -63,4 +63,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

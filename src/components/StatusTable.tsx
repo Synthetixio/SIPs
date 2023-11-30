@@ -19,26 +19,26 @@ const StatusTable: React.FC<Props> = ({ rows }) => {
       </thead>
 
       <tbody>
-        {rows.map((row) => (
+        {rows?.map((row) => (
           <tr key={row.id}>
             <td className="sipnum">
-              {row.frontmatter.sip ? (
+              {row?.frontmatter?.sip ? (
                 <a href={`/sips/sip-${row.frontmatter.sip}`}>
                   {row.frontmatter.sip}
                 </a>
-              ) : row.frontmatter.stp ? (
+              ) : row?.frontmatter?.stp ? (
                 <a href={`/stps/stp-${row.frontmatter.stp}`}>
                   {row.frontmatter.stp}
                 </a>
               ) : (
-                <a href={`/sccp/sccp-${row.frontmatter.sccp}`}>
-                  {row.frontmatter.sccp}
+                <a href={`/sccp/sccp-${row?.frontmatter?.sccp}`}>
+                  {row?.frontmatter?.sccp}
                 </a>
               )}
             </td>
-            <td className="title">{row.frontmatter.title}</td>
+            <td className="title">{row?.frontmatter?.title}</td>
             <td className="author">
-              <AuthorList author={row.frontmatter.author} />
+              <AuthorList author={row?.frontmatter?.author} />
             </td>
           </tr>
         ))}

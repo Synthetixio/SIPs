@@ -1,5 +1,5 @@
-import './tailwind.css'
-import './old.css'
+import './tailwind.css';
+import './old.css';
 
 // export const onRouteUpdate = ({ location }) => {
 //   if (window.MathJax !== undefined) {

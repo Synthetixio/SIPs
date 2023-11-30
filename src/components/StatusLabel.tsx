@@ -1,12 +1,12 @@
-import React from 'react'
-import { flow, split, join } from 'lodash/fp'
+import React from 'react';
+import { flow, split, join } from 'lodash/fp';
 
 interface Props {
-  label: string
+  label?: string | null;
 }
 
-const StatusLabel: React.FC<Props> = ({ label }) => (
+const StatusLabel = ({ label }: Props) => (
   <h2>{flow(split('_'), join(' '))(label)}</h2>
-)
+);
 
-export { StatusLabel }
+export { StatusLabel };
