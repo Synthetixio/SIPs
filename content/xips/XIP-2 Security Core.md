@@ -3,7 +3,7 @@ xip: 2
 title: Security Core
 author: 'Bilby (@bilb-y), Spinxho (@spinxho), Tannutuva2 (@tannutuva2)'
 network: Ethereum & Optimism
-status: Draft
+status: Approved
 type: core-upgrade
 implementor: TBD
 release: TBD
