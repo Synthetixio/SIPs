@@ -1,7 +1,7 @@
 ---
 xip: 1
 title: XIP Purpose and Guidelines
-author: ' Bilby (@bilb-y), Kmao (@kmaox), Spinxho (@spinxho)'
+author: ' Bilby (@bilb-y), kmao (@kmaox), Spinxho (@spinxho)'
 network: Optimism
 status: Approved
 created: 2023-11-02

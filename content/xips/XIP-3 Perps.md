@@ -3,7 +3,7 @@ xip: 3
 title: Perps
 author: 'Jumbo (@jamest0), Spinxho (@spinxho), Tannutuva2 (@tannutuva2)'
 network: Base
-status: Draft
+status: Approved
 type: integration-upgrade
 implementor: TBD
 release: TBD
