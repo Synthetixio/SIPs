@@ -10,11 +10,11 @@ created: 2023-12-27
 
 ## Abstract
 
-[STP-2](https://sips.synthetix.io/stps/stp-2/) outlined the Treasury Council'92s mandate to allocate $250,000 to a Synthetix data analytics working group. The first priority for this initiative is to build a canonical source of truth for the protocol that can be relied upon by builders in the community.
+From the $250,000 allocated to a Synthetix data analytics working group in [STP-2](https://sips.synthetix.io/stps/stp-2/) this proposal allocates $182,000 to upfront development, medium term ongoing costs and ecosystem incentives. 
 
-This STP proposes that $53,000 USD used to procure Gateway.fm to build and host an open-source Synthetix V3 API to provide visibility into the V3 Andromeda delpoyment on Base and serve as a source of truth for Synthetix data analytics efforts. The Gateway team have already built an open source [Perps V3 API](https://api.infinex.gateway.fm/api/v1/docs) for Infinex, so this extension will form the Synthetix V3 API.
+The first priority for this initiative is to build a canonical source of truth for the protocol that can be relied upon by builders in the community. This STP proposes that $57,000 USD used to procure Gateway.fm to build and host an open-source Synthetix V3 API to provide visibility into the V3 Andromeda delpoyment on Base and serve as a source of truth for Synthetix data analytics efforts. The Gateway team have already built an open source [Perps V3 API](https://api.infinex.gateway.fm/api/v1/docs) for Infinex, so this extension will form the Synthetix V3 API.
 
-A further $20,000 sUSD will be set aside for a trial period of three months, and can be used to maintain the V3 API in the event of breaking upgrades to the V3 contracts. These funds will assure backwards compatibility for data analytics artefacts built on top of the API.
+A further $20,000 sUSD will be set aside for a trial period of three months, and can be used to maintain the V3 API in the event of breaking upgrades to the V3 contracts. These funds will assure backwards compatibility for data analytics artefacts built on top of the API. Once complete, $100,000 will be available as incentives for the ecosystem to build on the API.
 
 ## Motivation
 
@@ -28,11 +28,11 @@ However, there are limitations to the the community approach that the this STP w
 - Without incentives for long-term ownership over community projects, they are at risk of being abandoned in the long run
 - Having disparate sources of information makes it difficult to ascertain which is the source of truth, and which are the most up-to-date
 
-The funding allocated for data analytics aims to establish ownership at the data source level, establishing a data analytics '91source of truth'92 that the community can depend on and in turn build atop of it.
+The funding allocated for data analytics aims to establish ownership at the data source level, establishing a data analytics source of truth that the community can depend on and in turn build atop of it.
 
 ## Rationale
 
-The launch of V3 will be a pivotal moment for Synthetix and will make the data analytics of the protocol more complex. Infinex has currently procured Gateway.fm an DAO Infrastructure provider, to build a [PerpsV3 API](https://api.infinex.gateway.fm/api/v1/docs) that will be used by the Infinex frontend. This presents an opportunity for the TC to expand the PerpsV3 API into a generalised Synthetix V3 API while Gateway have momentum and context.
+The launch of V3 will be a pivotal moment for Synthetix and will make the data analytics of the protocol more complex. Infinex has currently procured Gateway.fm a DAO Infrastructure provider, to build a [PerpsV3 API](https://api.infinex.gateway.fm/api/v1/docs) that will be used by the Infinex frontend. This presents an opportunity for the TC to expand the PerpsV3 API into a generalised Synthetix V3 API while Gateway have momentum and context.
 
 ## Financial Specification
 
@@ -40,7 +40,7 @@ The launch of V3 will be a pivotal moment for Synthetix and will make the data a
     - $37,000 will be paid in USDC
     - $20,000 will be paid in SNX
     
-    $20,000 will be set aside for maintenance of the data layer, consumed as needed and only if needed
+- $20,000 will be set aside for maintenance of the data layer, consumed as needed and only if needed
     
 - $5,000 will be set aside to operate the infrastructure. The Gateway team will pass the costs onto the council at a variable rate.
 
@@ -59,10 +59,10 @@ The Gateway team will design an API schema that represents the following entitie
 | Pools | Each pool takes in collateral deposits and allocates credit to markets. | Historical: CoreProxy.PoolCreated. Pool names can be fetched from CoreProxy.getPoolName(poolId) |
 | Markets | Each market uses credit from pools to offer some product to end users, like perps. | Historical: CoreProxy.MarketRegistered |
 | Accounts | Users create accounts represented as an NFT to track their collateral and debt. | Historical: CoreProxy.AccountCreated |
-| Liquidations | A user'92s collateral can be liquidated when their collateral ratio is too low. | Historical: CoreProxy.Liquidation |
+| Liquidations | A user's collateral can be liquidated when their collateral ratio is too low. | Historical: CoreProxy.Liquidation |
 | Reward claims | An account can claim the rewards distributed by pools, mainly from fees collected on markets. | Historical: CoreProxy.RewardsClaimed |
 | Reward distribution | A distribution of rewards is triggered by privileged accounts. | Historical: CoreProxy.RewardsDistributed |
-| Vault Liquidations | A systemwide liquidation event which fixes the entire pool'92s collateral ratio. | Historical: CoreProxy.VaultLiquidation |
+| Vault Liquidations | A systemwide liquidation event which fixes the entire pool's collateral ratio. | Historical: CoreProxy.VaultLiquidation |
 
 ### **************Metrics**************
 
@@ -87,7 +87,7 @@ The entities and metrics detailed above will exist alongside the PerpsV3 API (do
 
 The Gateway team have reviewed the data dictionary provided by the Synthetix Core Contributors and responded with the [project plan and API schema](https://pyrite-yumberry-ec6.notion.site/Development-Specification-ae2c792b9d424bc380a711dbe3a22542). Once this STP has been approved, the project will be underway.
 
-The Treasury Council will seek to hire a member from the community to liaise between the treasury council, the core contributors, and the Gateway team with respect to the development and maintenance of the V3 API.
+The Treasury Council will seek to appoint a member from the community to liaise between the Treasury Council, the core contributors, and the Gateway team with respect to the development and maintenance of the V3 API.
 
 ## Copyright
 
