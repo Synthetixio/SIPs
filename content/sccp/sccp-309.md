@@ -28,7 +28,7 @@ Increase maximum USDC LP cap from $50k to $1m by setting
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Base Andromeda has been operating in since early December using the configuration from [SIP-348](https://sips.synthetix.io/sips/sip-348/) and is ready to be slowly scaled up. The current 50k USDC LP cap only enables OI limits of 10k on ETH and BTC, which limits trader activity. Once LP caps are increased, Perps v3 open interest caps can be raised.
+Base Andromeda has been operating in since early December using the configuration from [SIP-348](https://sips.synthetix.io/sips/sip-348/) and is ready to be slowly scaled up. The current 50k USDC LP cap only enables OI limits of $10k on ETH and BTC, which limits trader activity. Once LP caps are increased, Perps v3 open interest caps can be raised.
 
 
 ## Copyright
