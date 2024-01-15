@@ -24,13 +24,13 @@ Increase maximum Open Interest (OI) caps on both ETH and BTC from $10k to $1m, b
 - `perpsEthMaxMarketSize` = 385
 - `perpsBtcMaxMarketSize` = 22
 
-`MaxMarketSize` is denominated in native units and determines both long and short, so if both sides of ETH and BTC markets are full, the total OI is approx $4m.
+`MaxMarketSize` is denominated in native units and determines both long and short, so if both sides of ETH and BTC markets are full, the total OI is approx $4m. 
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-Base Andromeda has been operating in since early December using the configuration from [SIP-348](https://sips.synthetix.io/sips/sip-348/) and is ready to be slowly scaled up. The LP limit has been increased to $1m by [SCCP-309](https://sips.synthetix.io/sccp/sccp-309/), so open interest caps can be increased accordingly.
+Base Andromeda has been operating in since early December using the configuration from [SIP-348](https://sips.synthetix.io/sips/sip-348/) and is ready to be slowly scaled up. The LP limit has been increased to $1m by [SCCP-309](https://sips.synthetix.io/sccp/sccp-309/), and once at least 80% full, open interest caps can be increased accordingly.
 
 
 ## Copyright
