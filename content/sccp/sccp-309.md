@@ -21,7 +21,10 @@ Increase the maximum amount of liquidity that can be provided to Base Andromeda 
 <!--A short (~200 word) description of the variable change proposed.-->
 Increase maximum USDC LP cap from $50k to $1m by setting
 
-`synthUsdcMaxMarketCollateral` = 1,000,000
+- `system.CoreProxy.configureMaximumMarketCollateral(uint128 marketId,address collateralType,uint256 amount)` = [1, 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 1000000000000000000000000]
+- `spotFactory.SpotMarketProxy.setWrapper(uint128 marketId,address wrapCollateralType,uint256 maxWrappableAmount)` = [1, 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 1000000000000000000000000]
+
+The Cannon transaction that will be executed is https://usecannon.com/deploy/txn/8453/0xbb63CA5554dc4CcaCa4EDd6ECC2837d5EFe83C82/12/0x6434899772bd9e0a903d1d08747a83567f5ac2436ac37406953574f5bcfbd82d?chainId=8453&address=0xbb63CA5554dc4CcaCa4EDd6ECC2837d5EFe83C82
 
 
 ## Motivation
