@@ -16,13 +16,13 @@ In order to facilitate access to markets data for integrators and developers, th
 
 ## Motivation
 
-The primary motivation is to answer integrators and developers' needs for data access. The added views will simplify operations without requiring to depend on quering historical events or do manual calculations for the data they need that is already in the contracts.
+The primary motivation is to answer integrators and developers' needs for data access. The added views will simplify operations for integrators and developers by allowing them to access data directly from the contracts instead of having to query historical events or do manual calculations.
 
 ## Specification
 
 ### Overview
 
-The new view functions proposed are:
+The new getter view functions proposed are:
 - `getPriceData(marketId)`: that will return the configured price data for the market that was configured with `updatePriceData`
 - `getWrapper(marketId)`: that will return the wrapper address and max wrappable amount for the market that was set with `setWrapper`
 - `getMarketSkew(marketId)`: that will return the current market skew for the market
