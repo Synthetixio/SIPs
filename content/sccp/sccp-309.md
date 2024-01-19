@@ -4,7 +4,9 @@ title: Increase Base LP limit to 1m USDC
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xaf1166b43c9f5127ce87851794c2ca3786a8f9e82317df5d33ae6bca4e985b2a
 created: 2024-01-09
 ---
 
