@@ -23,8 +23,12 @@ Increase the maximum market size for ETH and BTC perp markets to $1m USDC each.
 <!--A short (~200 word) description of the variable change proposed.-->
 Increase maximum Open Interest (OI) caps on both ETH and BTC from $10k to $1m, by setting
 
-- `perpsEthMaxMarketSize` = 385
-- `perpsBtcMaxMarketSize` = 22
+- `perpsFactory.PerpsMarketProxy.setMaxMarketSize(uint128 marketId,uint256 maxMarketSize) = [100, 385000000000000000000]` # 385ETH
+
+- `perpsFactory.PerpsMarketProxy.setMaxMarketSize(uint128 marketId,uint256 maxMarketSize) = [200, 22000000000000000000]` # 22 BTC
+
+
+The cannon txn that will be executed is https://usecannon.com/deploy/txn/8453/0xbb63CA5554dc4CcaCa4EDd6ECC2837d5EFe83C82/13/0x31aec5ebff677329906aa611bbfc1e72a599239d863c5f5a487d5f62b13036cb?chainId=8453&address=0xbb63CA5554dc4CcaCa4EDd6ECC2837d5EFe83C82
 
 `MaxMarketSize` is denominated in native units and determines both long and short, so if both sides of ETH and BTC markets are full, the total OI is approx $4m. 
 
