@@ -1,0 +1,32 @@
+---
+sccp: 2084
+network: Optimism
+title: Reduce offchainDelayedOrderMaxAge from all PerpV2 markets
+author: 'Makarid (@makarid), Kaleb (@kaleb-keny)'
+status: Draft
+created: 2024-02-28T21:00:00.000Z
+type: Governance
+---
+
+## Simple Summary
+
+<!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
+
+I propose to reduce the offChainDelayedOrderMaxAge from 60 to 30, for all PerpV2 markets in order to reduce execution of timed-out orders because of high volatility.
+
+## Abstract
+
+<!--A short (~200 word) description of the variable change proposed.-->
+
+Reduce offChainDelayedOrderMaxAge from 60 to 30 for all PerpV2 markets.
+
+## Motivation
+
+<!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
+
+On a volatile market it is possible that an order will be executed from a Keeper after more than 30 secs. A user may doesn't want his/her order to get executed after such a delay for various reasons.
+I think it is best to reduce this param, so that the user can cancel the order after 30 secs.
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
