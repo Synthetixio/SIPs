@@ -14,7 +14,7 @@ This STP allocates SNX to kick start liquidity provision on Base Andromeda.
 
 ## Abstract
 
-Allocate 35k SNX over 8 weeks to incentivize USDC deposits on Base Andromdeda.
+Allocate 49k SNX over 8 weeks to incentivize USDC deposits on Base Andromdeda.
 
 ## Motivation
 
@@ -24,24 +24,24 @@ Base Andromeda is ready scale up, and in order to reach its potential requires a
 
 ### Overview
 
-This STP allocates 35k SNX over 8 weeks to incentivize USDC deposits. A rewardsDistributor contract will be required to be deployed and registered, and will be defined by the appropriate SCCP.
+This STP allocates 49k SNX over 8 weeks to incentivize USDC deposits. A rewardsDistributor contract will be required to be deployed and registered, and will be defined by the appropriate SCCP.
 
 ### Rationale
 
-Incentivizing the Spartan Council pool is expected to attract more USDC, which in turn allows perp Open Interest caps to be increased, attracting traders and kickstarting the organic fee yield. Weeks 3-8 at current SNX price would yield 15% APR on ~$5.5m USDC.
+Incentivizing the Spartan Council pool is expected to attract more USDC, which in turn allows perp Open Interest caps to be increased, attracting traders and kickstarting the organic fee yield. Weeks 3-8 at current SNX price would yield 20% APR on $7.28m USDC.
 
 ### Financial Specification
 
-35k SNX will be allocated to this pool for a trial of 8 weeks. During the trial period this figure may be adjusted or extended by the treasury council.
+49k SNX will be allocated to this pool for a trial of 8 weeks. During the trial period this figure may be adjusted or extended by the treasury council.
 
-| Interval  | Reward         | LP for 15% APR, $SNX @ $3.20     |
+| Interval  | Reward         | LP for 20% APR, $SNX @ $4     |
 |-----------|----------------|-------------------------------------|
-| Week 1    | 2k SNX/week    | $ 2,218,666.67                        |
-| Week 2    | 3k SNX/week    | $ 3,328,000.00                        |
-| Weeks 3-8 | 5k SNX/week    | $ 5,546,666.67                        |
-| Total     | 35k SNX        |                                     |
+| Week 1    | 3k SNX/week    | $ 3,120,000
+| Week 2    | 4k SNX/week    | $ 4,160,000
+| Weeks 3-8 | 6k SNX/week    | $ 7,248,000
+| Total     | 49k SNX        |                                     |
 
-The TC will send 35k SNX to the deployed and registered rewardsDistributor contract.
+The TC will send 49k SNX to the deployed and registered rewardsDistributor contract.
 
 
 ## Copyright
