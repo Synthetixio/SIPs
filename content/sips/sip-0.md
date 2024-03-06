@@ -1,12 +1,12 @@
 ---
 sip: 0
-title: testttt
+title: testtttasdsa
 network: Ethereum & Optimism
 status: Draft
 type: Governance & Meta-Governance
 author: ttttttttasd
 implementor: asfatest
-created: 2024-03-06
+created: 0001-02-01
 requires: 11111
 ---
 
