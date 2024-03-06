@@ -1,13 +1,13 @@
 ---
 sip: 0
-title: testtttasdsa
-network: Ethereum & Optimism
+title: test
+network: Ethereum
 status: Draft
-type: Governance & Meta-Governance
-author: ttttttttasd
-implementor: asfatest
-created: 0001-02-01
-requires: 11111
+type: Meta-Governance
+author: test
+implementor: test
+created: 2024-03-06
+requires: 1111
 ---
 
 # Simple Summary
@@ -23,11 +23,11 @@ requires: 11111
 
 ### Overview
 
-<p>testtss</p>
+<p>test</p>
 
 ### Rationale
 
-<p>teststs</p>
+<p>test</p>
 
 ### Test Cases
 
