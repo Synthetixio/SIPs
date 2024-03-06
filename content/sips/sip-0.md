@@ -1,39 +1,39 @@
 ---
 sip: 0
-title: asd
-network: Optimism
+title: testttt
+network: Ethereum & Optimism
 status: Draft
-type: undefined
-author: asd
-implementor: asda
-created: 2022-10-30
-requires: 
+type: Governance & Meta-Governance
+author: ttttttttasd
+implementor: asfatest
+created: 2024-03-06
+requires: 11111
 ---
 
 # Simple Summary
 
-<p>asdsad</p>
+<p>test</p>
 
 # Abstract
 
-<p>asd</p>
+<p>test</p>
 
 # Specification
 
 
 ### Overview
 
-<blockquote>asd</blockquote>
+<p>testtss</p>
 
 ### Rationale
 
-<p>asd</p>
+<p>teststs</p>
 
 ### Test Cases
 
-<p>ad</p>
+<p>test</p>
 
 
 ### Configurable Values (Via SCCP)
 
-<p>as</p>
+<p>test</p>
