@@ -44,13 +44,13 @@ To date, it has not been made sufficiently clear what these growth contraints ar
 
 Upon attempting to integrate with the Synthetix v3 system, each application will submit a report with details including:
 
-1) Expectations on what Wintermute can trade realistically, on a 3, 6 and 12 month time frame, with supporting rational
+1) Expectations on what the trading firm can trade realistically, on a 3, 6 and 12 month time frame, with supporting rational
 
 2) Data analytics, trade impact measurement & microstructure analysis
 
 3) Barriers to trading (technical, economic or otherwise)
 
-4) Short term and long term wishlist for integration support, including specifics of what Wintermute needs from our SDK 
+4) Short term and long term wishlist for integration support, including specifics of what the trading firm needs from our SDK 
 
 Note: Perps v3 is in limited Beta on Base and its contracts are currently accessible through (a) direct onchain access, (b) an SDK or (c) the public Kwenta Beta. The applicant can trade on (integrate with) any of these interfaces.
 
