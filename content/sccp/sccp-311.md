@@ -3,8 +3,10 @@ sccp: 311
 title: Increase Base LP limit to 10m USDC
 type: Governance
 network: Base
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x9f1ad9f65d64b929df0f379670c30dc1c65f633181d404a26a5028889a8ae77a
 author: Cavalier (@cavalier_eth)
-status: Draft
+status: Vote_Pending
 created: 2024-02-15
 ---
 
