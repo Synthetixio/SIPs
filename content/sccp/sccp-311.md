@@ -6,7 +6,7 @@ network: Base
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x9f1ad9f65d64b929df0f379670c30dc1c65f633181d404a26a5028889a8ae77a
 author: Cavalier (@cavalier_eth)
-status: Vote_Pending
+status: Implemented
 created: 2024-02-15
 ---
 
