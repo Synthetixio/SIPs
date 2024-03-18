@@ -1,6 +1,6 @@
 ---
 sccp: 308
-title: Update L1 and L2 Gas Units
+title: Update Perps V3 - L1 and L2 Gas Units
 type: Governance
 network: Base
 author: Kaleb (@kalek-keny)
@@ -14,14 +14,13 @@ created: 2024-03-18
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to update the L1 and L2 gas unit parameters to reflect the post-ecotone parameters as incorporated in this [PR](https://github.com/Synthetixio/synthetix-deployments/pull/154/files).
-
+This SCCP proposes to update the L1 and L2 gas unit parameters as per the following [PR](https://github.com/Synthetixio/synthetix-deployments/pull/154/files).
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The L1 and L2 gas units are configured as per the keeper cost function + profit function implemented as per [SIP-362](https://sips.synthetix.io/sips/sip-362/). The represent the base gas units used to compute the compensation to keepers for executing liquidations and trade settlements.  
+The L1 and L2 gas units are configured  in order to covers keepers' cost of executing transactions, as described in detail under [SIP-362](https://sips.synthetix.io/sips/sip-362/). The units represent the base gas units that usually are used in order to perform trade settlement, flagging of accounts for liquidation and eventually executing the liquidation that closes the users' liquidated position.  
 
 ## Motivation
 
