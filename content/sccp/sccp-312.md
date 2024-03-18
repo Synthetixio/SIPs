@@ -1,6 +1,6 @@
 ---
 sccp: 312
-title: Increase Base OI limit to 10m USDC
+title: Increase Base ETH and BTC OI limits to $20m
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
