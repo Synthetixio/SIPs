@@ -14,27 +14,25 @@ created: 2024-03-08
 requires: x
 ---
 
-<!--You can leave these HTML comments in your merged SEP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SEPs. Note that an SEP number will be assigned by an editor. When opening a pull request to submit your SEP, please use an abbreviated title in the filename, `sep-draft_title_abbrev.md`. The title should be 42.0 characters or less.-->
-
-This is the suggested template for new SEPs. Note that an SEP number will be assigned by an editor. When opening a pull request to submit your SEP, please use an abbreviated title in the filename, `sep-draft_title_abbrev.md`. The title should be 42.0 characters or less.
-
 ## Simple Summary
 
-<!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed changes intends to achieve. This should be non-technical and accessible to a casual community member.-->
+An SDK facilitating the deployment and management of cross-chain airdrops and token claims, offering user-friendly interfaces for both developers and end-users.
 
-"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed change intends to achieve. This should be non-technical and accessible to a casual community member.
 
 ## Abstract
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SEP is implemented, not *why* it should be done or *how* it will be done. If the SEP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what _will_ be done if the SEP is implemented, not _why_ it should be done or _how_ it will be done. If the SEP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".
+This SEP proposes the creation of a Cross-Chain Distributor SDK designed to enable simple and efficient management of airdrops and token claims across various blockchain networks. The SDK will provide tools for deploying contracts, configuring airdrops, managing token claims, and ensuring seamless interoperability between chains. By implementing this SEP, we aim to deploy a toolkit that simplifies cross-chain distributions, enhancing accessibility and user engagement within the DeFi ecosystem.
+
+
 
 ## Motivation
 
 <!--This is the problem statement. This is the *why* of the SEP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the SEP proposes changing how something is calculated, you must address *why* the current calculation is innaccurate or wrong. This is not the place to describe how the SEP will address the issue!-->
 
-This is the problem statement. This is the _why_ of the SEP. It should clearly explain _why_ the current state of the protocol is inadequate. It is critical that you explain _why_ the change is needed, if the SEP proposes changing how something is calculated, you must address _why_ the current calculation is innaccurate or wrong. This is not the place to describe how the SEP will address the issue!
+The rapid growth of the decentralized ecosystem has highlighted significant challenges in interoperability and the user experience, particularly regarding cross-chain transactions and airdrop participation. Current solutions are often cumbersome, requiring extensive technical knowledge and manual intervention. This SEP seeks to address these issues by introducing an SDK that simplifies the process, making it more accessible and efficient. The motivation is to lower barriers to entry, encourage broader participation, and foster innovation by streamlining cross-chain interactions within the DeFi space.
+
 
 ## Specification
 
