@@ -11,13 +11,13 @@ created: 2023-11-21
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed change intends to achieve. This should be non-technical and accessible to a casual community member.-->
-This proposal authorizes the Treasury Council (TC) to allocate up to 500,000 SNX for discretionary rebates to perp traders who exceed $300m monthly notional trade volume. The goal of the program is to reduce effective Maker fees by 1.5bps to 0.5bps, and Taker fees by 4bps to 2bps for qualifying traders.
+This proposal authorizes the Treasury Council (TC) to allocate up to 500,000 SNX for discretionary rebates to perp traders who exceed $100m monthly notional trade volume. The goal of the program is to reduce effective Maker fees by 1.5bps to 0.5bps, and Taker fees by 4bps to 2bps for qualifying traders.
 
 ## Abstract
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what _will_ be done if the STP is implemented, not _why_ it should be done or _how_ it will be done. If the STP proposes sending X tokens to Y each week, write, "we propose to send X tokens to Y each week".-->
 
-Allocate up to 500k SNX to rebate Maker fees by 1.5ps and Taker by 4bps for, approved traders with over $300m notional volume per month on eligible markets.
+Allocate up to 500k SNX to rebate Maker fees by 1.5ps and Taker by 4bps for, approved traders with over $100m notional volume per month on eligible markets.
 
 
 ## Motivation
@@ -38,7 +38,7 @@ In order to maintain neutral skew with growing volume and open interest caps, la
 ### Overview
 
 <!--This is a high level overview of *how* the STP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
-This proposal seeks to allocate up to 500k SNX for fee rebates for qualifying traders. Traders expecting to trade more than $300m notional per month can apply to the TC. Upon reaching $300m notional trading volume per month, the TC will at its discretion rebate 1.5bps of Maker fees and 4bps of Taker fees in SNX to the trading address. Front ends will not be eligible to claim the rebate, but could do so on behalf of their qualifying users. Eligible markets are BTC, ETH, XRP, USDT, SOL, BNB, DOGE, ETHBTC.
+This proposal seeks to allocate up to 500k SNX for fee rebates for qualifying traders. Traders expecting to trade more than $100m notional per month can apply to the TC. Upon reaching $100m notional trading volume per month, the TC will at its discretion rebate 1.5bps of Maker fees and 4bps of Taker fees in SNX to the trading address. Front ends will not be eligible to claim the rebate, but could do so on behalf of their qualifying users. Eligible markets are BTC, ETH, XRP, USDT, SOL, BNB, DOGE, ETHBTC.
 
 ### Rationale
 
@@ -54,10 +54,13 @@ Reducing the effective fees will attract large volume traders and improve the re
 
 <!--The financial specification should outline the the tokens, amounts, destinations, and schedule of funds to be moved. If appropriate, any technical considerations should also be included here – that is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 
-1. Allocate up to 500k SNX for fee rebates for approved traders on eligible markets
-2. Each month use the fee/volume tool to calculate trading volumes
-3. Begin the first month a wallet trades more than $300m notional and continue until the 500k allocation is consumed
-4. Use SNX 7 day TWAP price at UTC midnight of final night to rebate Maker/Taker fees 0.5/2bps for approved wallets that traded more than $300m in the month
+The applicable period for this incentive program will be split into discrete months.
+
+Upon agreement with each trader, this STP will allow for up to 83,000 SNX per trader, per 30 days of trading, starting with the first trade from the wallet address provided by the trader. Continuation past each 30-day period will be subject to mutual agreement. 
+
+In total, this STP allows for up to 500k SNX for fee rebates to approved traders. The fee/volume tool will be used to calculate trading volumes. The SNX 7-day TWAP price at UTC midnight of final night will be used to rebate Maker/Taker fees to 0.5/2bps.
+
+If it is determined that bad behavior is undertaken, putting at risk the integrity or the stability of the Synthetix protocol, the Treasury Council has the right to unilaterally suspend fee rebates.
 
 
 ## Copyright
