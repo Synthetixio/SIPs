@@ -74,6 +74,17 @@ The decentralized ecosystem's expansion has accentuated the need for seamless in
 4. **Claim Process**: Users interact with a straightforward interface to claim tokens, supported by the SDK's cross-chain capabilities.
 
 
+```plaintext
+[SDK User Interface] --> [SDK Core]
+[SDK Core] --> [Contract Deployment Module]
+[Contract Deployment Module] --> [Satellite.sol]
+[Contract Deployment Module] --> [CrosschainTrancheVestingMerkle.sol]
+[SDK Core] --> [Airdrop Management Module]
+[SDK Core] --> [Token Claiming Module]
+[Airdrop Management Module] <--> [Token Distribution Logic]
+[Token Claiming Module] <--> [Cross-Chain Communication]
+```
+
 This UML diagram serves as a high-level representation of how the SDK facilitates interaction with the underlying contracts, streamlining the process of deploying and managing cross-chain airdrops and token claims.
 
 ### Milestones
