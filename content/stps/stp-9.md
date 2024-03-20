@@ -39,7 +39,7 @@ While the TC has adequate stablecoin reserves and a positive fee revenue balance
 
 <!--This is a high level overview of *how* the STP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
-The proposal allows the TC to use up to 4 million SNX tokens as collateral to issue debt. The loan-to-value (LTV) issuance ratio is capped at 50%, with variable interest rates determined by market conditions, but not exceeding 30%. The debt issuance mechanism should be transparent, open-source, and prevent third-party borrowing or short-selling of the SNX collateral. The debt can be tradeable in the open market, and should be issued on Optimism. Liquidation criteria should be based on the total debt notional, set at 110%, rather than the market-to-market price of SNX. The TC is committed to repaying at least 4% of the issued debt every quarter, managed through a 3/4 multisig address.
+The proposal allows the TC to use up to 4 million SNX tokens as collateral to issue debt. The loan-to-value (LTV) issuance ratio is capped at 50%, with variable interest rates determined by market conditions, but not exceeding 30%. The debt issuance mechanism should be transparent, open-source, and prevent third-party borrowing or short-selling of the SNX collateral. The debt can be tradeable in the open market, and should be issued on Optimism. Liquidation criteria should be based on the *current* total debt notional, set at 110% *of total debt notional at time of issuance*, rather than the market-to-market price of SNX. The TC is committed to repaying at least 4% of the issued debt every quarter, managed through a 3/4 multisig address.
 
 
 ### Rationale
