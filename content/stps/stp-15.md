@@ -1,7 +1,7 @@
 ---
 stp: 15
 title: Incentivize Perps v3 trading during scaleup
-status: Draft
+status: Implemented
 author: Cavalier (@cavalier_eth)
 implementation-date: TBA
 discussions-to: TC Discord Channel
