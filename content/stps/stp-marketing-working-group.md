@@ -25,7 +25,7 @@ This STP proposes the creation of a Marketing Workgroup with the responsibility 
 
 <!--This is the problem statement. This is the *why* of the STP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the STP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the STP will address the issue!-->
 
-In recent times, Synthetix has identified a pressing need for more cohesive and aggressive marketing efforts to stay competitive and relevant in the fast-evolving DeFi landscape. The establishment of a Marketing Workgroup is critical for consolidating marketing efforts, fostering innovation, and driving the adoption of Synthetix platforms and products.
+In recent times, TC has identified a pressing need for more cohesive and aggressive marketing efforts to stay competitive and relevant in the fast-evolving DeFi landscape. The establishment of a Marketing Workgroup is critical for consolidating marketing efforts, fostering innovation, and driving the adoption of Synthetix platforms and products.
  
 
 ## Specification
