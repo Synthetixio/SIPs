@@ -1,6 +1,6 @@
 ---
 sccp: 313
-title: Register Rewards Distributor
+title: Register Rewards Distributor on SC Pool
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
