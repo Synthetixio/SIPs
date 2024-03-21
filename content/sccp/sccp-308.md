@@ -16,7 +16,7 @@ created: 2024-03-18
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to update the L1 and L2 gas unit parameters as per the following [PR](https://github.com/Synthetixio/synthetix-deployments/pull/154/files).
+This SCCP proposes to update the L1 and L2 gas unit parameters as per the following [PR](https://github.com/Synthetixio/synthetix-deployments/pull/157/files).
 
 ## Abstract
 
