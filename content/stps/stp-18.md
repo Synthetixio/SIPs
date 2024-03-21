@@ -37,7 +37,7 @@ In recent times, the TC has identified a pressing need for more cohesive and agg
 4. Configurable Values
 -->
 - **Workgroup Structure:** The Marketing Workgroup shall consist of a Lead Marketer, Content Creator(s) and a Social Media Manager(MEME KING).
-- **Budget and Funding:** An initial budget of $500,000 will be allocated for the first six (6) months, covering salaries, marketing tools, advertising, and promotional activities.
+- **Budget and Funding:** An initial budget of $500,000 will be allocated for the first twelve (12) months, covering salaries, marketing tools, advertising, and promotional activities.
 - **Goals and Objectives:** To develop a marketing strategy that aligns with Synthetix's vision, increase engagement across social platforms, and drive traffic and adoption.
 
 ### Overview
