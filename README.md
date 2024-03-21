@@ -1,4 +1,4 @@
-# SEPs [![Discord](https://img.shields.io/discord/966432149022593074.svg?color=768AD4&label=discord&logo=https%3A%2F%2Fdiscordapp.com%2Fassets%2F8c9701b98ad4372b58f13fd9f65f966e.svg)](https://discordapp.com/channels/thesoftdao/) [![Twitter Follow](https://img.shields.io/twitter/follow/thesoftdao.svg?label=Soft DAO&style=social)](https://twitter.com/thesoftdao)
+# SEPs
 
 Soft Improvement Proposals (SEPs) describe standards for the Soft platform, including core protocol specifications and contract standards.
 
