@@ -11,7 +11,7 @@ created: 2024-03-21
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed change intends to achieve. This should be non-technical and accessible to a casual community member.-->
-To enhance the effectiveness of Synthetix's marketing efforts, improve community engagement, and increase brand awareness, this proposal suggests the formation of a dedicated Marketing Workgroup. This group will focus on developing and executing a comprehensive marketing strategy.
+To enhance the effectiveness of Synthetix's marketing efforts, improve community engagement,increase brand awareness and drive TV, this proposal suggests the formation of a dedicated Marketing Workgroup. This group will focus on developing and executing a comprehensive marketing strategy.
 
 
 ## Abstract
@@ -25,7 +25,7 @@ This STP proposes the creation of a Marketing Workgroup with the responsibility 
 
 <!--This is the problem statement. This is the *why* of the STP. It should clearly explain *why* the current state of the protocol is inadequate.  It is critical that you explain *why* the change is needed, if the STP proposes changing how something is calculated, you must address *why* the current calculation is inaccurate or wrong. This is not the place to describe how the STP will address the issue!-->
 
-In recent times, TC has identified a pressing need for more cohesive and aggressive marketing efforts to stay competitive and relevant in the fast-evolving DeFi landscape. The establishment of a Marketing Workgroup is critical for consolidating marketing efforts, fostering innovation, and driving the adoption of Synthetix platforms and products.
+In recent times, the TC has identified a pressing need for more cohesive and aggressive marketing efforts to stay competitive and relevant in the fast-evolving DeFi landscape. The establishment of a Marketing Workgroup is critical for consolidating marketing efforts, fostering innovation, and driving the adoption of Synthetix platforms and products.
  
 
 ## Specification
@@ -36,15 +36,25 @@ In recent times, TC has identified a pressing need for more cohesive and aggress
 3. Financial Specification
 4. Configurable Values
 -->
-- **Workgroup Structure:** The Marketing Workgroup shall consist of a Lead Marketer, Content Creators, Social Media Managers, and Analysts.
-- **Budget and Funding:** An initial budget of $xxx will be allocated for the first [Specify Duration], covering salaries, marketing tools, advertising, and promotional activities.
+- **Workgroup Structure:** The Marketing Workgroup shall consist of a Lead Marketer, Content Creator(s) and a Social Media Manager(MEME KING).
+- **Budget and Funding:** An initial budget of $500,000 will be allocated for the first six (6) months, covering salaries, marketing tools, advertising, and promotional activities.
 - **Goals and Objectives:** To develop a marketing strategy that aligns with Synthetix's vision, increase engagement across social platforms, and drive traffic and adoption.
 
 ### Overview
 
 <!--This is a high level overview of *how* the STP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
+### Overview
 
+The Synthetix Marketing Workgroup (SMW) will be established as a dedicated team with the express purpose of revitalizing and strategically steering Synthetix's marketing endeavors to better position it within the competitive DeFi landscape. The approach to solving Synthetix's current marketing challenges and achieving heightened brand visibility, community engagement, and user adoption is threefold:
+
+1. **Team Formation and Resource Allocation:** The first step involves curating a team of skilled marketing professionals, including a Lead Marketer, Content Creator, and Social Media Manager, each bringing a wealth of experience and a fresh perspective to the table. The selection process will emphasize not only expertise in their respective fields but also a deep understanding of the DeFi ecosystem and a passion for Synthetix's mission. Concurrently, resources will be allocated from the Synthetix Treasury to fund this initiative, ensuring that the workgroup has the necessary tools and budget to execute their strategies effectively.
+
+2. **Strategic Marketing Initiatives:** Upon formation, the SMW will embark on developing a comprehensive marketing strategy that encompasses a variety of initiatives designed to bolster Synthetix's presence both online and offline. These will include targeted campaigns, engaging social media content, informative and educational content creation, and participation in key DeFi and cryptocurrency events. A significant focus will be placed on leveraging data analytics to guide these marketing efforts, ensuring that strategies are adaptable and responsive to market dynamics and community feedback.
+
+3. **Community Engagement and Collaboration:** Recognizing the importance of a vibrant and active community in the DeFi space, the SMW will implement programs and initiatives aimed at fostering community involvement and loyalty. This includes organizing community events, AMAs (Ask Me Anything), and other interactive sessions that provide value to both new and existing members of the Synthetix community. Additionally, the SMW will seek to establish partnerships with other DeFi projects and platforms, exploring synergies that can lead to mutual growth and increased visibility for Synthetix.
+
+Through this multi-pronged approach, the Synthetix Marketing Workgroup aims to not only solve the immediate marketing challenges faced by Synthetix but also lay the groundwork for sustained growth and success in the DeFi ecosystem. This initiative represents a strategic investment in Synthetix's future, with the ultimate goal of establishing Synthetix as a leading and innovative force in decentralized finance.
 
 ### Rationale
 
