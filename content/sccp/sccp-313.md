@@ -1,6 +1,6 @@
 ---
 sccp: 313
-title: Register Rewards Distributor on SC Pool
+title: USDC LP incentives for Base
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
@@ -14,7 +14,7 @@ created: 2024-03-21
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Register a Rewards Distributor to the Spartan Council pool on Base, so that rewards and incentives can be distributed to LPs.
+Register a USDC Rewards Distributor to the Spartan Council pool on Base, so that USDC incentives can be distributed to LPs.
 
 ## Abstract
 
@@ -25,7 +25,7 @@ Register a Rewards Distributor to the Spartan Council pool on Base, so that rewa
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
-The Base deployment is ready to scale up, and both SNX and USDC incentives are expected for LPs in the Spartan Council pool.
+The Base deployment is ready to scale up, and USDC incentives are expected for LPs in the Spartan Council pool.
 
 ## Copyright
 
