@@ -45,7 +45,7 @@ This proposal allocates up to 500k SNX for fee rebates on eligible markets. The 
 
 Reducing the effective fees attracts traders to try Synthetix perps on Base:
 - Perp fees are currently 2bp Maker and 6bps Taker on popular markets like ETH and BTC
-- Assuming an average of 4 bps fees per trade, 8,000 SNX @$5 will fully rebate the fees on $100m in trading volume
+- Assuming an average of 4 bps fees per trade, $100m of trading volume can be fully rebated with 8,000 SNX @$5 
 - 500k SNX @ $5 will rebate the fees on approximately $6.25b in trading volume, aproximately double the monthly volume currently traded on Optimism Perps v2
 
 ### Financial Specification
