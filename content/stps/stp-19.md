@@ -11,14 +11,13 @@ created: 2024-03-25
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed change intends to achieve. This should be non-technical and accessible to a casual community member.-->
-This proposal authorizes the Treasury Council (TC) to allocate up to 500,000 SNX for perp trading incentives on Base. At current SNX prices, this proposal could rebate the trading fees of approximately $6b of volume.
+This proposal allocates up to 500,000 SNX from the Treasury for perp trading incentives on Base. At current SNX prices, this proposal could rebate the trading fees of approximately $6b of volume.
 
 ## Abstract
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what _will_ be done if the STP is implemented, not _why_ it should be done or _how_ it will be done. If the STP proposes sending X tokens to Y each week, write, "we propose to send X tokens to Y each week".-->
 
-Allocate up to 500k SNX from the Treasury to rebate trading fees on eligible perp markets on Base. Trading fees will be retroactively rebated each week directly to the trading wallet.
-
+Allocate up to 500k SNX from the Treasury to rebate trading fees on eligible perp markets on Base. Trading fees will be retroactively rebated each week directly to the trading wallet, on eligible markets that include BTC and ETH.
 
 ## Motivation
 
