@@ -14,7 +14,7 @@ This STP allocates SNX to kick start liquidity provision on Base Andromeda.
 
 ## Abstract
 
-Allocate 250k SNX over 10 weeks to incentivize USDC deposits on Base Andromdeda.
+Allocate 225k SNX over 10 weeks to incentivize USDC deposits on Base Andromdeda.
 
 ## Motivation
 
@@ -24,7 +24,7 @@ Base Andromeda is ready scale up, and in order to reach its potential requires a
 
 ### Overview
 
-This STP allocates 250k SNX over 10 weeks to incentivize USDC deposits. A rewardsDistributor contract will be required to be deployed and registered, and will be defined by SCCP-313.
+This STP allocates 225k SNX over 10 weeks to incentivize USDC deposits. A rewardsDistributor contract will be required to be deployed and registered, and will be defined by SCCP-313.
 
 ### Rationale
 
@@ -32,15 +32,15 @@ Incentivizing the Spartan Council pool is expected to attract more USDC, which i
 
 ### Financial Specification
 
-250k SNX will be allocated to this pool for a trial of 10 weeks. During the trial period this figure may be adjusted or extended by the treasury council. 50k SNX will be distributed to existing LPs who have taken the losses of early trading, and then 20k SNX per week for 10 weeks.
+225k SNX will be allocated to this pool for a trial of 10 weeks. During the trial period this figure may be adjusted or extended by the treasury council. 25k SNX will be distributed to existing LPs who have taken the losses of early trading during alpha testing, and then 20k SNX per week for 10 weeks.
 
 | Interval  | Reward         |                                     |
 |-----------|----------------|-------------------------------------|
-| Week 0    | 50k SNX        | Once off retroactive for existing LPs        |
+| Week 0    | 25k SNX        | Once off retroactive for existing LPs        |
 | Weeks 1-10 | 20k SNX/week  | ~20% APY on $ 26m of LP             |
-| Total     | 250k SNX       |                                     |
+| Total     | 225k SNX       |                                     |
 
-The TC will send 250k SNX to the deployed and registered rewardsDistributor contract
+The TC will send 225k SNX to the deployed and registered rewardsDistributor contract on Base.
 
 
 ## Copyright
