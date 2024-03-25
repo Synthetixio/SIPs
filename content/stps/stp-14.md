@@ -1,7 +1,7 @@
 ---
 stp: 14
 title: Incentivize USDC LP on Base Andromeda
-status: Draft
+status: Approved
 author: Cavalier (@cavalier_eth)
 implementation-date: TBA
 discussions-to: TC Discord Channel
