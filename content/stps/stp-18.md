@@ -23,7 +23,7 @@ Expansion of Synthetix to new users and communities increases the reach and scal
 Allocate 430,000 SNX and 400,000 USDC to fund the development, deployment and operation of Synthetix Perps on Solana for a period of 12 months.
 
 Responsibilities of the working group include but are not limited to
-- Adapting Synthetix Perps v3 smart contracts for Move
+- Adapting Synthetix Perps v3 smart contracts for SVM
 - Overseeing the implementation and support of a front end
 - Preparing appropriate governance proposals for its release
 - Ongoing maintenance and performance improvements to remain competitive
