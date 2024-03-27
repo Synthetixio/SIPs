@@ -11,7 +11,7 @@ created: 2024-03-25
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed change intends to achieve. This should be non-technical and accessible to a casual community member.-->
-This proposal allocates up to 500,000 SNX from the Treasury for perp trading incentives on Base. At current SNX prices, this proposal could rebate the trading fees of approximately $6b of volume.
+This proposal allocates up to 500,000 SNX from the Treasury for perp trading incentives on Base. At the current SNX price, this proposal could rebate the trading fees of approximately $6.25b of volume.
 
 ## Abstract
 
@@ -51,9 +51,9 @@ Reducing the effective fees attracts traders to try Synthetix perps on Base:
 
 <!--The financial specification should outline the the tokens, amounts, destinations, and schedule of funds to be moved. If appropriate, any technical considerations should also be included here – that is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 
-In total, this STP allows for up to 500k SNX for fee rebates. The maximum fee rebate to any trader will be the total cost of fees paid, using SNX 7-day TWAP price at UTC midnight of final night of each rebate period.
+In total, this STP allows for up to 500k SNX for fee rebates. The maximum fee rebate to any trader will be the total cost of fees paid, using the SNX 7-day TWAP price at UTC midnight of final night of each rebate period.
 
-The Treasury Council retains the right to unilaterally suspend fee rebates to traders determined to be putting at risk the integrity or the stability of the Synthetix protocol.
+The Treasury Council retains the right to unilaterally suspend or withholw fee rebates to traders determined to be putting at risk the integrity or stability of the Synthetix protocol.
 
 
 ## Copyright
