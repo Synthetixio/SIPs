@@ -1,7 +1,7 @@
 ---
 stp: 17
 title: Sui Perps Working Group
-status: Draft
+status: Approved
 author: Cavalier
 implementation-date: TBA
 discussions-to: TC Discord Channel
