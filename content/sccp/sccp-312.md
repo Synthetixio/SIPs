@@ -4,8 +4,10 @@ title: Increase Base ETH and BTC OI limits to $20m
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
-status: Draft
+status: Vote_Pending
 created: 2024-03-18
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x5609720943e5c47f1e7f14b2d3c8b8a88f661f1526ecc44a67a38c769856b7a7
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->

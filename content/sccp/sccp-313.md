@@ -4,9 +4,9 @@ title: USDC LP incentives for Base
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
-status: Approved
-proposal: >- 
-https://snapshot.org/#/snxgov.eth/proposal/0x1c3c6e84226e95de05bed1104b8c1808b020f9b94cbf39343c8f688d589428dd
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x1c3c6e84226e95de05bed1104b8c1808b020f9b94cbf39343c8f688d589428dd
 created: 2024-03-21
 ---
 
