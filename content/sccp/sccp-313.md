@@ -21,12 +21,14 @@ Register a USDC Rewards Distributor to the Spartan Council pool on Base, so that
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
+
 1. Deploy a [rewards distributor contract](https://github.com/Synthetixio/rewards-distributors) controlled by the pdao and register it on the Spartan Council Pool `id =1`.
 2. Configure the Rewards Distributor to distrubute rewards on the schedules defined by Treasury Council STPs or partners who incentivize LPs in the Spartan Council pool.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
+
 The Base deployment is ready to scale up, and USDC incentives are expected for LPs in the Spartan Council pool.
 
 ## Copyright
