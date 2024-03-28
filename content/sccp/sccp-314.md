@@ -6,7 +6,7 @@ network: Base
 author: Cavalier (@cavalier_eth)
 status: Approved
 proposal: >-
-https://snapshot.org/#/snxgov.eth/proposal/0xce3a01a7586477e5a8c3f904ed3db289d4c5f8554890ff36dffd5748ac0977b8
+  https://snapshot.org/#/snxgov.eth/proposal/0xce3a01a7586477e5a8c3f904ed3db289d4c5f8554890ff36dffd5748ac0977b8
 created: 2024-03-21
 ---
 
