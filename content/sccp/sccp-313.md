@@ -4,7 +4,7 @@ title: USDC LP incentives for Base
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
-status: Draft
+status: Approved
 created: 2024-03-21
 ---
 
