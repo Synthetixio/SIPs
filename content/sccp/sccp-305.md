@@ -1,7 +1,7 @@
 ---
 sccp: 305
 title: BetSwirl - Create Pool and register Market
-network: Ethereum
+network: Base
 author: Romauld Hog (@RomualdH), Cavalier (@cavalier_eth)
 status: Draft
 type: Governance

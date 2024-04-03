@@ -1,13 +1,13 @@
 ---
-sccp: 311
-title: Increase Base LP limit to 10m USDC
+sccp: 314
+title: SNX LP incentives for Base
 type: Governance
 network: Base
-proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x9f1ad9f65d64b929df0f379670c30dc1c65f633181d404a26a5028889a8ae77a
 author: Cavalier (@cavalier_eth)
 status: Implemented
-created: 2024-02-15
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xce3a01a7586477e5a8c3f904ed3db289d4c5f8554890ff36dffd5748ac0977b8
+created: 2024-03-21
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->
@@ -16,23 +16,18 @@ created: 2024-02-15
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the maximum amount of liquidity that can be provided to Base Andromeda to 10m USDC.
+Register an SNX Rewards Distributor to the Spartan Council pool on Base, so that SNX incentives can be distributed to LPs.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
-Increase maximum USDC LP cap from $1m to $10m by setting
-
-- `system.CoreProxy.configureMaximumMarketCollateral(uint128 marketId,address collateralType,uint256 amount)` = [1, 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 10000000000000000000000000]
-- `spotFactory.SpotMarketProxy.setWrapper(uint128 marketId,address wrapCollateralType,uint256 maxWrappableAmount)` = [1, 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 10000000000000000000000000]
-
+1. Deploy a [rewards distributor contract](https://github.com/Synthetixio/rewards-distributors) controlled by the pdao and register it on the Spartan Council Pool `id =1`.
+2. Configure the Rewards Distributor to distrubute rewards on the schedules defined by Treasury Council STPs or partners who incentivize LPs in the Spartan Council pool.
 
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
-
-Base Andromeda has been operating in since early December and is ready to be scaled up further. The current $1m USDC LP cap has been filled and stable. With increasing LP, the OI caps can be increased.
-
+The Base deployment is ready to scale up, and SNX incentives are expected for LPs in the Spartan Council pool.
 
 ## Copyright
 
