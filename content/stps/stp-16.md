@@ -1,7 +1,7 @@
 ---
 stp: 16
 title: Research grant for delta neutral traders
-status: Draft
+status: Implemented
 author: ml_sudo (@michlai)
 implementation-date: 
 discussions-to: TC Discord Channel
