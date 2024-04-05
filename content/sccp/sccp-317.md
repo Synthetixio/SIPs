@@ -5,8 +5,6 @@ title: Update Perps V3 Gas Units
 author: Kaleb (@kaleb-keny)
 status: Implemented
 created: 2024-04-05
-proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x02cff99410a1e97b06f17e2ec47df1b3c1165b48de927c3c9e52fd6924405bbd
 type: Governance
 ---
 
