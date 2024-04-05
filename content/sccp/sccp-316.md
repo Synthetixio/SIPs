@@ -37,9 +37,9 @@ Aside from the changes above, the perps markets will have the following configur
 # Abstract
 
 The parameters configurations description is as follows:
-- initialMarginRatio: scalar applied on the minimumInitialMarginRatio
-- maintenanceMarginScalar: scalar applied on the initialMarginRatio in order to obtain the maintenanceMargin
-- skewScale is the scaling factor of the relevant market in the underlying currency for computing PD and Funding Rates
+- initialMarginRatio is a scalar applied on the minimumInitialMarginRatio to determine the minimum initial margin required to support a given portfolio of positions
+- maintenanceMarginScalar is a scalar applied on the initialMarginRatio in order to obtain the maintenanceMargin. When traders fall below the maintenance margin, they head to the oubliette.
+- skewScale is the scaling factor of the relevant market in the underlying currency for computing price impact and funding rates
 - maxMarketSize is the max market value of the relevant market in the underlying currency
 - maxMarketValue is the max market value of the relevant market in USD
 - maker/taker fees pertain to fees charged when trading
@@ -50,7 +50,6 @@ The parameters configurations description is as follows:
 - maxLiquidationPD is the minimum pd that triggers a reset of the liquidation capacity
 - flagRewardRatio is the reward paid to the flagger, capped at 100 snxUSD per account liquidated
 - endorsedLiquidator is a liquidator address that can bypass the rate limit
-
 
 # Motivation
 
