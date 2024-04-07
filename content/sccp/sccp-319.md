@@ -1,6 +1,6 @@
 ---
 sccp: 319
-title: Increase Base LP limit to 20m USDC
+title: Increase Base LP limit to 21.92m USDC
 type: Governance
 network: Base
 author: Noisekit
@@ -14,15 +14,15 @@ created: 2024-02-15
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Increase the maximum amount of liquidity that can be provided to Base Andromeda to 20m USDC.
+Increase the maximum amount of liquidity that can be provided to Base Andromeda to 21.92m USDC.
 
 ## Abstract
 
 <!--A short (~200 word) description of the variable change proposed.-->
-Increase maximum USDC LP cap from $10m to $20m by setting
+Increase maximum USDC LP cap from $10m to $21.92m by setting
 
-- `system.CoreProxy.configureMaximumMarketCollateral(uint128 marketId,address collateralType,uint256 amount)` = [1, 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 20000000000000000000000000]
-- `spotFactory.SpotMarketProxy.setWrapper(uint128 marketId,address wrapCollateralType,uint256 maxWrappableAmount)` = [1, 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 20000000000000000000000000]
+- `system.CoreProxy.configureMaximumMarketCollateral(uint128 marketId,address collateralType,uint256 amount)` = [1, 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 21920000000000000000000000]
+- `spotFactory.SpotMarketProxy.setWrapper(uint128 marketId,address wrapCollateralType,uint256 maxWrappableAmount)` = [1, 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913, 21920000000000000000000000]
 
 
 ## Motivation
