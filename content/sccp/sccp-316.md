@@ -7,7 +7,7 @@ status: Vote_Pending
 created: 2024-04-05
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xa91ace8abb27f8edb96db0e581cf18245d3775a74fae4412c9deeb1ab0a6fc1b
-type: Governance
+type: Implemented
 ---
 
 # Simple Summary
