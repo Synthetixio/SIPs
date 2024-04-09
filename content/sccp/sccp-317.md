@@ -3,7 +3,7 @@ sccp: 317
 network: Base
 title: Update Perps V3 Gas Units
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x54a0f98ccd78624a9f5843f76df785c6197faf1ea44f5a56d38fa3dc2cc4c640
 created: 2024-04-05
