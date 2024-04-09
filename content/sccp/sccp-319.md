@@ -3,6 +3,8 @@ sccp: 319
 title: Increase Base LP limit to 21.92m USDC
 type: Governance
 network: Base
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x8849fca61c095d1ff55eca1e6dc7f97af9c8675a2091e39fe659b2f8958be65c
 author: Noisekit
 status: Vote_Pending
 created: 2024-02-15
