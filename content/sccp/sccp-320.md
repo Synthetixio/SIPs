@@ -19,7 +19,7 @@ This SCCP proposes to update the perps v3 parameters as per the below:
 |     ETH    |      500,000      |       350,000      |         1.54         |          2.20         |       1.09       |
 |      W     |     8,750,000     |     26,250,000     |        459.24        |         153.08        |       61.89      |
 
-** Slippage number above refer to a trade o 500k$ worth**
+*The Slippage figures above consider a trade of size 500k$*
 
 ## Maker Fee
 
