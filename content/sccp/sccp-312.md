@@ -4,7 +4,7 @@ title: Increase Base ETH and BTC OI limits to $20m
 type: Governance
 network: Base
 author: Cavalier (@cavalier_eth)
-status: Vote_Pending
+status: Implemented
 created: 2024-03-18
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x5609720943e5c47f1e7f14b2d3c8b8a88f661f1526ecc44a67a38c769856b7a7
