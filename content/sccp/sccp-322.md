@@ -25,7 +25,8 @@ The cap is determined by the minimum between the `maxMarketValue` (in USD) and t
 
 # Motivation
 
-This sccp introduces that maxMarketValue feature on ETH and BTC, which was kept at the default value of zero when [SIP-361](https://sips.synthetix.io/sips/sip-361/).  The cap on WIF was bumped following increased utilization of this markets and it's high turnover, while the cap on SOL was also increased due to the recent price action that resulted in a significant portion of the open interest (500K$) being reduced.
+This sccp introduces that `maxMarketValue` feature on ETH and BTC, which was kept at the default value of zero when [SIP-361](https://sips.synthetix.io/sips/sip-361/) was implemented.  
+The cap on WIF was bumped following increased utilization of this markets and it's high turnover, while the cap on SOL was also increased due to the recent price action that resulted in a significant portion of the open interest (500K$) being reduced.
 
 
 # Copyright
