@@ -3,7 +3,7 @@ sccp: 324
 network: Base
 title: Increase Max Perp Positions Per Account - Perps V3
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Draft
 created: 2024-04-16
 type: Governance
 ---

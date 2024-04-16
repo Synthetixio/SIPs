@@ -3,7 +3,7 @@ sccp: 322
 network: Base
 title: Update Perps V3 Parameters - maxMarketValue
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Draft
 created: 2024-04-16
 type: Governance
 ---
