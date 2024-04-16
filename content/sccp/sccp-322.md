@@ -1,7 +1,7 @@
 ---
 sccp: 322
 network: Base
-title: Update Perps V3 Parameters - maxMarketValue
+title: Update Perps V3 Parameters
 author: Kaleb (@kaleb-keny)
 status: Draft
 created: 2024-04-16
@@ -10,15 +10,23 @@ type: Governance
 
 # Simple Summary
 
-This SCCP proposes to incorporate a `maxMarketValue` of 7m$ on ETH and BTC perp markets.
+This SCCP proposes to updates the Perps V3 MaxMarketValue (in Dollars) and MaxMarketSize (in the markets' native currency), as per the below: 
+
+| **Markets** | **Current MMS** | **New MMS** | **Current MMV** | **New MMV** |
+|:-----------:|:---------------:|:-----------:|:---------------:|:-----------:|
+|     btc     |    UNCHANGED    |  UNCHANGED  |        0        |  5,000,000  |
+|     eth     |    UNCHANGED    |  UNCHANGED  |        0        |  7,000,000  |
+|     wif     |     152,000     |   750,000   |     500,000     |  1,500,000  |
+|     sol     |      2,900      |    5,000    |    UNCHANGED    |  UNCHANGED  |
 
 # Abstract
 
-The ETH and BTC perp markets `maxMarketValue` is currently in a disabled state after the release of this feature in [SIP-361](https://sips.synthetix.io/sips/sip-361/). This sccp introduces that feature which caps the max size for a given market, denominated in USD.
+The cap is determined by the minimum between the `maxMarketValue` (in USD) and the value of `maxMarketSize` in USD, as per SIP-361. 
 
 # Motivation
 
-`maxMarketValue` is currently not capped due to the parameter being set at zero, as per the default value after the release of SIP-361. This SCCP updates that value to a starting point that can be updated at a later point, based on utilization.
+This sccp introduces that maxMarketValue feature on ETH and BTC, which was kept at the default value of zero when [SIP-361](https://sips.synthetix.io/sips/sip-361/).  The cap on WIF was bumped following increased utilization of this markets and it's high turnover, while the cap on SOL was also increased due to the recent price action that resulted in a significant portion of the open interest (500K$) being reduced.
+
 
 # Copyright
 
