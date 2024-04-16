@@ -1,5 +1,5 @@
 ---
-sccp: 320
+sccp: 321
 network: Base
 title: Update Perps V3 Parameters - MakerFee
 author: Kaleb (@kaleb-keny)
