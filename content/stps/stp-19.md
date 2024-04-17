@@ -1,7 +1,7 @@
 ---
 stp: 19
 title: Perp trading incentives on Base
-status: Draft
+status: Approved
 author: Cavalier (@cavalier_eth)
 implementation-date: 
 discussions-to: TC Discord Channel
@@ -11,7 +11,7 @@ created: 2024-03-25
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Simply describe the outcome the proposed change intends to achieve. This should be non-technical and accessible to a casual community member.-->
-This proposal allocates up to 500,000 SNX from the Treasury for perp trading incentives on Base. At the current SNX price, this proposal could rebate the trading fees of approximately $6.25b of volume.
+This proposal allocates up to 500,000 SNX from the Treasury for perp trading incentives on Base. At the current SNX price, this proposal could rebate the trading fees of approximately $3.75b of volume.
 
 ## Abstract
 
@@ -44,8 +44,8 @@ This proposal allocates up to 500k SNX for fee rebates on eligible markets. The 
 
 Reducing the effective fees attracts traders to try Synthetix perps on Base:
 - Perp fees are currently 2bp Maker and 6bps Taker on popular markets like ETH and BTC
-- Assuming an average of 4 bps fees per trade, $100m of trading volume can be fully rebated with 8,000 SNX @$5 
-- 500k SNX @ $5 will rebate the fees on approximately $6.25b in trading volume, aproximately double the monthly volume currently traded on Optimism Perps v2
+- Assuming an average of 4 bps fees per trade, $100m of trading volume can be fully rebated with 13.3k SNX @$3 
+- 500k SNX @ $3 will rebate the fees on approximately $3.75b in trading volume, aproximately double the monthly volume currently traded on Optimism Perps v2
 
 ### Financial Specification
 
