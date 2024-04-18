@@ -3,7 +3,7 @@ sccp: 323
 network: Base
 title: Enable Perps V3 Markets / Update Parameters
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2024-04-16
 type: Governance
 proposal: >-
