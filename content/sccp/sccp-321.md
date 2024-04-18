@@ -3,7 +3,7 @@ sccp: 321
 network: Base
 title: Update Perps V3 Parameters - MakerFee
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2024-04-16
 type: Governance
 proposal: >-

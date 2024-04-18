@@ -4,7 +4,7 @@ title: Update Perps V3 - L2 Gas Units
 type: Governance
 network: Base
 author: Kaleb (@kalek-keny)
-status: Draft
+status: Implemented
 created: 2024-04-16
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x7f7ca79940c3d0426cc8d9fdfe2b31866399a42cd4a31ab5f9b590fa4f977ee4
