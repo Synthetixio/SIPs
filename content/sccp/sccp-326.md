@@ -3,7 +3,7 @@ sccp: 326
 network: Base
 title: Update Perps V3 Parameters
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2024-04-22
 type: Governance
 proposal: >-
