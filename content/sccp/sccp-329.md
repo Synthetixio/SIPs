@@ -10,8 +10,8 @@ type: Governance
 # Simple Summary
 
 This SCCP proposes to implement following:
-- Increase the max number of positions per account from 4 o 10 and increase 
-- Increase the l2 gas units from 1.7m to 2.5m gas
+- Increase the max number of positions per account from 4 to 10
+- Increase the l2 gas units from 1.7m to 2.4m gas units
 
 # Abstract
 
