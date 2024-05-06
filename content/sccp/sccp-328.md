@@ -11,8 +11,6 @@ type: Governance
 
 This SCCP proposes to update the perps v2 parameters as per the below:
 
-The below parameters would be applied on the new markets:
-
 ## Max Market Value and Max Market Size
 
 | **ticker** | **Current MMV** | **Proposed MMV** | **Current MMS** | **Proposed MMS** |
