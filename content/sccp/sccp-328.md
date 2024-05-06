@@ -48,7 +48,7 @@ The parameters configurations description is as follows:
 
 # Motivation
 
-The motivation behind the changes to the scalar applied on the initial margin is to align the potential leverage base offers to those available on centralized exchange venues. While the update of max market value and max market size is done taking into current and expected rising amounts of liquidity provided as well as the open interest utilization on those markets. 
+The motivation behind the changes to the scalar applied on the initial margin is to align the potential leverage base we offer when compared to that obtained on centralized exchanges. While the update of max market value and max market size is done taking into current and expected rising amounts of liquidity provided as well as the open interest utilization on those markets. 
 
 # Copyright
 
