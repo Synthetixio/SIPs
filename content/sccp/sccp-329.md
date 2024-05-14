@@ -3,7 +3,9 @@ sccp: 329
 network: Base
 title: Increase Max Perp Positions Per Accounts - Perps V3
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x06e5b79c081b3965c3bb4486724df243bc636d5ab4e348c153fe8225849f58d1
 type: Governance
 ---
 
