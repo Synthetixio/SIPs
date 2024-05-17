@@ -1,25 +1,18 @@
 ---
-sip: <to be assigned>
+sip: 385
 title: SIP Deploy Synthetix V3 Core on Mode
 network: Mode
 status: Draft
 type: Governance
-author: Med Amine (@med-amiine), Deez <deez@mode.network>
-implementor:
-release: 
-implementation-date:
-discussions-to: 
-proposal: 
+author: Med Amine (@med-amiine), Deez
 created: 2024-05-17
-requires: 
 ---
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. -->
 
-
 ## Simple Summary
 
-"Deploy Synthetix V3 Core System on Mode, a modular L2 blockchain on the OP Superchain."
+Deploy Synthetix V3 Core System on Mode, a modular L2 blockchain on the OP Superchain.
 
 ## Abstract
 
