@@ -1,6 +1,6 @@
 ---
 sip: 386
-title: SIP Deploy Synthetix V3 Core on Mode
+title: Deploy SNX token on Mode via Mode Bridge
 network: Mode
 status: Draft
 type: Governance
