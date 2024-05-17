@@ -10,7 +10,6 @@ created: 2024-05-17
 
 <!--You can leave these HTML comments in your merged SIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. -->
 
-
 ## Simple Summary
 
 Deploy the SNX token on Mode via the Mode Bridge, enabling seamless transfer of SNX tokens between the Ethereum Mainnet and Mode.
