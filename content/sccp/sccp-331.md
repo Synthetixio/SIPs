@@ -14,7 +14,7 @@ created: 2024-05-17
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-Raise the limit of the the maximum amount of USDC liquidity that can be provided to Base Andromeda to 100 million.
+Raise the USDC liquidity cap on Andromeda to 100 million.
 
 ## Abstract
 
