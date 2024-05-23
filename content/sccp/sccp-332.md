@@ -11,7 +11,7 @@ type: Governance
 
 # Simple Summary
 
-This SCCP proposes to update the perps v2 parameters as per the below:
+This SCCP proposes to update the perps v3 parameters as per the below:
 
 ## Max Market Value and Max Market Size
 
