@@ -3,13 +3,15 @@ sccp: 332
 network: Base
 title: Update Perps V3 Parameters
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x607560c8d0800ed2d55c281afc7b122aa27ed810a163c1e95461f70d9f2be83b
 type: Governance
 ---
 
 # Simple Summary
 
-This SCCP proposes to update the perps v2 parameters as per the below:
+This SCCP proposes to update the perps v3 parameters as per the below:
 
 ## Max Market Value and Max Market Size
 
