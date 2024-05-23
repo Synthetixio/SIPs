@@ -1,5 +1,5 @@
 ---
-sccp: 332
+sccp: 333
 network: Arbitrum
 title: Increase Arbitrum LP caps
 author: Cavalier

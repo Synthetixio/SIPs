@@ -3,7 +3,9 @@ sccp: 332
 network: Base
 title: Update Perps V3 Parameters
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x607560c8d0800ed2d55c281afc7b122aa27ed810a163c1e95461f70d9f2be83b
 type: Governance
 ---
 
