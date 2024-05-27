@@ -1,5 +1,5 @@
 ---
-sccp: 2115
+sccp: 335
 network: Base
 title: Update Perps V3 Parameters
 author: Kaleb (@kaleb-keny)
