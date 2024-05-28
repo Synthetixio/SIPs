@@ -9,7 +9,7 @@ type: Governance
 
 # Simple Summary
 
-This SCCP proposes to reconfigure the LP caps for Arbitrum as the system prepares to scale up; $10m for UARB, ETH and USDC as collateral and Wrapper, and remove DAI as collateral and Wrapper.
+This SCCP proposes to reconfigure the LP caps for Arbitrum as the system prepares to scale up; $10m for ARB, ETH and USDC as collateral and Wrapper, and remove DAI as collateral and Wrapper.
 
 # Abstract
 
