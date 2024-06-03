@@ -3,8 +3,10 @@ sccp: 337
 network: Arbitrum
 title: Update name of Arbitrum Stablecoin
 author: Cavalier
-status: Draft
+status: Approved
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xdaf12da674b97b982dea16dd69f3dadfd17ae6e5b3b87965fff4929a84fcb393
 ---
 
 # Simple Summary
