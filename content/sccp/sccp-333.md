@@ -5,6 +5,8 @@ title: Increase Arbitrum LP caps
 author: Cavalier
 status: Rejected
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x97aabccee172afe1fbea37e4d4aab91f0a04fa905f09d43da60de92b68689cf8
 ---
 
 # Simple Summary

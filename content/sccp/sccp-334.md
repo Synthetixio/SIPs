@@ -5,6 +5,8 @@ title: Update name of Arbitrum Stablecoin
 author: Cavalier
 status: Rejected
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xb13e36eebd93c6288f750161bd0b4243bae4dbf280e79f6194632341d1ca2edc
 ---
 
 # Simple Summary
