@@ -3,7 +3,7 @@ sccp: 334
 network: Arbitrum
 title: Update name of Arbitrum Stablecoin
 author: Cavalier
-status: Draft
+status: Rejected
 type: Governance
 ---
 

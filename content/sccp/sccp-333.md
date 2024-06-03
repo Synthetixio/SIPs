@@ -3,7 +3,7 @@ sccp: 333
 network: Arbitrum
 title: Increase Arbitrum LP caps
 author: Cavalier
-status: Draft
+status: Rejected
 type: Governance
 ---
 
