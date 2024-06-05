@@ -2,7 +2,7 @@
 sccp: <to be assigned>
 title: <SCCP title>
 network: <Ethereum | Polygon | Avalanche>
-author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName (foo@bar.com), FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
+author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 discussions-to: <Forum Post Link>
 status: <Draft>
 created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
