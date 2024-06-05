@@ -1,6 +1,6 @@
 ---
 sep: 0002
-title SEP Purpose and Guidelines
+title: SEP Purpose and Guidelines
 author:  けつばん
 network: Unknown
 comments-uri: https://forum.softdao.ch/t/softprovement-proposal-ideas
