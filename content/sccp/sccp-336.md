@@ -3,8 +3,10 @@ sccp: 336
 network: Arbitrum
 title: Update Arbitrum LP caps
 author: Cavalier, Millie
-status: Draft
+status: Approved
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x2807ee25aa897dbca13e72d44e287bddcf54b5b096a8fbb9c655658842d1e077
 ---
 
 # Simple Summary
