@@ -1,5 +1,5 @@
 ---
-sep: <to be assigned>
+sep: 0003
 title: SOFT Fee Switch Enhancement Proposal
 network: Ethereum
 status: Draft
@@ -53,4 +53,3 @@ Test cases will be developed as part of the implementation phase and shared with
 **Copyright**
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-

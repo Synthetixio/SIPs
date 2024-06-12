@@ -77,7 +77,7 @@ const Main: React.FC = ({ children }) => {
                 <li>
                   <a href="https://twitter.com/mdudas">
                     <TwitterIcon className="svg-icon" />
-                    <span className="username"mdudas</span>
+                    <span className="username">mdudas</span>
                   </a>
                 </li>
               </ul>
@@ -85,9 +85,9 @@ const Main: React.FC = ({ children }) => {
 
             <div className="footer-col footer-col-3">
               <p>
-                Soft Enhancement Proposals (SEPs) describe standards for
-                the Soft platform, including core protocol specifications,
-                client APIs, and contract standards.
+                Soft Enhancement Proposals (SEPs) describe standards for the
+                Soft platform, including core protocol specifications, client
+                APIs, and contract standards.
               </p>
             </div>
           </div>

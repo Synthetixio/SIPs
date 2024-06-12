@@ -1,14 +1,13 @@
 ---
 sep: 0001
 title: SEP Purpose and Guidelines
-autor:  けつばん
+author: けつばん
 network: Unknown
 comments-uri: https://forum.softdao.ch/t/softprovement-proposal-ideas
 type: Process
 status: Proposed
 created: 2016-10-06T00:00:00.000Z
-proposal: 
-type: Governance
+proposal:
 ---
 
 ## Who:
@@ -32,44 +31,44 @@ SCCP stands for Soft Configuration Change Proposal, it has been adapted from the
 1. Review SEP-001 [ADD LINK] and comment with your favorite sentence and why.
 2. Log into your Github account.
 3. Go the the SEPs repo [ADD LINK] and click "Fork" on the top right of the screen.
-4. First, take a look at the [template SEP](INSERT LINK). 
+4. First, take a look at the [template SEP](INSERT LINK).
 5. Create a folder for the next sequential SEP.
 6. Copy this template into this folder and name the file accordingly.
 7. Finalize your SEP and have it peer-reviewed by a few industry colleagues.
 8. Submit a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to the host SEP repository.
 
-*Before submitting your pull request, please ensure*:
-* It meets the formatting criteria enforced by the build manager. [ADD LINK]
-* Ensure the preamble [INSERT LINK] is fully and properly formatted.
-* Your ```discussions-to``` header points to a forum post on the [Soft Forums](https://forum.softdao.ch/).
+_Before submitting your pull request, please ensure_:
+
+- It meets the formatting criteria enforced by the build manager. [ADD LINK]
+- Ensure the preamble [INSERT LINK] is fully and properly formatted.
+- Your `discussions-to` header points to a forum post on the [Soft Forums](https://forum.softdao.ch/).
 
 ## What Belongs in a SEP:
 
 Each proposed SEP should contain:
 
-* **Preamble**: RFC 822 style headers containing metadata about the SEP, including: 
-   * *As a header*:  
-     * The SEP number
-     * A descriptive title (less than 42.0 characters).
-  * *As a two-column table*:
-    *  SEP Number
-    * Author: <INSERT NAME, USERNAME, PSEUDONYM>
-    * Status: 
-      * Draft
-      * Technical Review
-      * Economic Analysis
-      * Review Pending
-      * Vote Pending
-      * Approved
-      * Rejected
-      * Implemented
-* **Simple Summary**: Provide a simplified explanation of the SEP.
-* **Abstract**: A short (~200 word) description of the technical issue being addressed.
-* **Specification**: The technical specification should describe the syntax and semantics of any new feature.
-* **Motivation**: The motivation fleshes out the specification by describing what motivated the design and why particular design decisions are being suggested. It should describe alternate designs that were considered. 
-* **Test Cases**: Test cases may be added during the implementation phase but are required before implementation.
-* **License**: <INSERT> 
-
+- **Preamble**: RFC 822 style headers containing metadata about the SEP, including:
+  - _As a header_:
+    - The SEP number
+    - A descriptive title (less than 42.0 characters).
+  - _As a two-column table_:
+    - SEP Number
+    - Author: <INSERT NAME, USERNAME, PSEUDONYM>
+    - Status:
+      - Draft
+      - Technical Review
+      - Economic Analysis
+      - Review Pending
+      - Vote Pending
+      - Approved
+      - Rejected
+      - Implemented
+- **Simple Summary**: Provide a simplified explanation of the SEP.
+- **Abstract**: A short (~200 word) description of the technical issue being addressed.
+- **Specification**: The technical specification should describe the syntax and semantics of any new feature.
+- **Motivation**: The motivation fleshes out the specification by describing what motivated the design and why particular design decisions are being suggested. It should describe alternate designs that were considered.
+- **Test Cases**: Test cases may be added during the implementation phase but are required before implementation.
+- **License**: <INSERT>
 
 ## Auxiliary Files
 
@@ -78,44 +77,47 @@ SEPs may include auxiliary files such as diagrams. Such files must be named SEP-
 ## SEP Editors
 
 The current SEP editors are:
-* 0x4408127D1F216594078553562dDA66844fb22923
-* 0xaAE4B976655579361C899eb79a6dD5a0d3C3FA2e
-* 0x8Ef43179eA4D257E6C748189b42B189C45471055
-* 0x57AD77cD24b5B300eC7Dec330c61BdA2800870e4
-* 0x7f3DB8af806315531d7C14B35f4af1DF78F887E0
-* 0x491C6b8830dBD3663A28A3Fda42494Ad49bb4ECa
-* 0x35976F99eC647f863EF1795e5eE145439d796cB7
-* 0x47D794e5F534f8442030f4F4C7513c9CE144B4aE
-* 0xD95e1A8c7cdf0947032f4E9B7477191F004ab7Eb
-* 0x5a0dC15c9EceCeded97c7B1121461EDc623a0349
-* 0x3f4905b73d9176774ef1fE702EDC98D62a953E9d
-* 0xE049bD3BCe9Db6fe1CB8eC95CaEB73e69Ed6d443
+
+- 0x4408127D1F216594078553562dDA66844fb22923
+- 0xaAE4B976655579361C899eb79a6dD5a0d3C3FA2e
+- 0x8Ef43179eA4D257E6C748189b42B189C45471055
+- 0x57AD77cD24b5B300eC7Dec330c61BdA2800870e4
+- 0x7f3DB8af806315531d7C14B35f4af1DF78F887E0
+- 0x491C6b8830dBD3663A28A3Fda42494Ad49bb4ECa
+- 0x35976F99eC647f863EF1795e5eE145439d796cB7
+- 0x47D794e5F534f8442030f4F4C7513c9CE144B4aE
+- 0xD95e1A8c7cdf0947032f4E9B7477191F004ab7Eb
+- 0x5a0dC15c9EceCeded97c7B1121461EDc623a0349
+- 0x3f4905b73d9176774ef1fE702EDC98D62a953E9d
+- 0xE049bD3BCe9Db6fe1CB8eC95CaEB73e69Ed6d443
 
 ## SEP Editor Responsibilities
 
 For each new SEP that comes in, an editor does the following:
 
-* Read the SEP to check if it is ready for review. 
-  * The SEP should use complete sentences
-  * The SEP should not seem rushed or short on context
-  * The SEP should include technical analysis where warranted
-  * The SEP should include economic analysis (spreadsheets or matlab simulations) where warranted
-* If a SEP is not ready, an editor should provide ample detail with feedback on how to improve the SEP in order to respect the SEP authors time and effort
+- Read the SEP to check if it is ready for review.
+  - The SEP should use complete sentences
+  - The SEP should not seem rushed or short on context
+  - The SEP should include technical analysis where warranted
+  - The SEP should include economic analysis (spreadsheets or matlab simulations) where warranted
+- If a SEP is not ready, an editor should provide ample detail with feedback on how to improve the SEP in order to respect the SEP authors time and effort
 
 Once the SEP is ready, a SEP editor will:
-* Correct or approve the SEP number provided by the author
-* Merge the corresponding pull request
-* Thank the author for their time, effort and contribution
+
+- Correct or approve the SEP number provided by the author
+- Merge the corresponding pull request
+- Thank the author for their time, effort and contribution
 
 All SEPs shall be treated with the same level of attentiveness and effort, as any and all contributions are welcome.
 
 ## History
 
 This SEP process derives inspiration or is adapted from:
-* [Python's PEP-0001](https://peps.python.org/pep-0001/) written by Barry Warsaw, Jeremy Hylton, David Goodger, Nick Coghlan
-* [Bitcoin's BIP-0001](https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki) written by Amir Taaki.
-* [Bitcoin's BIP-0002](https://github.com/bitcoin/bips/blob/master/bip-0002.mediawiki) written by Luke Dashjr.
-* [Synthetix' SIP-0001](https://sips.synthetix.io/sips/sip-1/) written by Kain Warwick
+
+- [Python's PEP-0001](https://peps.python.org/pep-0001/) written by Barry Warsaw, Jeremy Hylton, David Goodger, Nick Coghlan
+- [Bitcoin's BIP-0001](https://github.com/bitcoin/bips/blob/master/bip-0001.mediawiki) written by Amir Taaki.
+- [Bitcoin's BIP-0002](https://github.com/bitcoin/bips/blob/master/bip-0002.mediawiki) written by Luke Dashjr.
+- [Synthetix' SIP-0001](https://sips.synthetix.io/sips/sip-1/) written by Kain Warwick
 
 ## License
 
