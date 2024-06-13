@@ -3,6 +3,8 @@ import React from 'react'
 import GithubIcon from '../icons/Github'
 import TwitterIcon from '../icons/Twitter'
 
+const BASE_URL = 'https://softdao.github.io/SEPs'
+
 const Main: React.FC = ({ children }) => {
   return (
     <main>
@@ -26,11 +28,7 @@ const Main: React.FC = ({ children }) => {
       />
       <header className="site-header" role="banner">
         <div className="wrapper">
-          <a
-            className="site-title"
-            rel="author"
-            href="https://softdao.github.io/SEPs/"
-          >
+          <a className="site-title" rel="author" href={`${BASE_URL}/`}>
             SEPs
           </a>
           <nav className="site-nav">
@@ -44,16 +42,10 @@ const Main: React.FC = ({ children }) => {
             </label>
 
             <div className="trigger">
-              <a
-                className="page-link"
-                href="https://softdao.github.io/SEPs/all-sep"
-              >
+              <a className="page-link" href={`${BASE_URL}/all-sep`}>
                 All SEPs
               </a>
-              <a
-                className="page-link"
-                href="https://softdao.github.io/SEPs/all-sccp"
-              >
+              <a className="page-link" href={`${BASE_URL}/all-sccp`}>
                 All SCCPs
               </a>
             </div>
