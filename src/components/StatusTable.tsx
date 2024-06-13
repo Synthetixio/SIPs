@@ -12,7 +12,7 @@ const StatusTable: React.FC<Props> = ({ rows }) => {
     <table className="siptable">
       <thead>
         <tr>
-          <th className="sipnum">Number</th>
+          <th className="sepnum">Number</th>
           <th className="title w-2/3">Title</th>
           <th className="author w-1/3">Author</th>
         </tr>
@@ -21,10 +21,10 @@ const StatusTable: React.FC<Props> = ({ rows }) => {
       <tbody>
         {rows.map((row) => (
           <tr key={row.id}>
-            <td className="sipnum">
-              {row.frontmatter.sip ? (
-                <a href={`/sips/sip-${row.frontmatter.sip}`}>
-                  {row.frontmatter.sip}
+            <td className="sepnum">
+              {row.frontmatter.sep ? (
+                <a href={`/seps/sep-${row.frontmatter.sep}`}>
+                  {row.frontmatter.sep}
                 </a>
               ) : (
                 <a href={`/sccp/sccp-${row.frontmatter.sccp}`}>
@@ -32,7 +32,17 @@ const StatusTable: React.FC<Props> = ({ rows }) => {
                 </a>
               )}
             </td>
-            <td className="title">{row.frontmatter.title}</td>
+            <td className="title">
+              {row.frontmatter.sep ? (
+                <a href={`/seps/sep-${row.frontmatter.sep}`}>
+                  SEP-{row.frontmatter.sep}
+                </a>
+              ) : (
+                <a href={`/sccp/sccp-${row.frontmatter.sccp}`}>
+                  SCCP-{row.frontmatter.sccp}
+                </a>
+              )}
+            </td>
             <td className="author">
               <AuthorList author={row.frontmatter.author} />
             </td>

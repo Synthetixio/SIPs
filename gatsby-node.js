@@ -110,6 +110,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       release: String
       created: Date
       updated: Date
+      sep: Int
     }
   `,
     // schema.buildObjectType({
