@@ -26,7 +26,11 @@ const Main: React.FC = ({ children }) => {
       />
       <header className="site-header" role="banner">
         <div className="wrapper">
-          <a className="site-title" rel="author" href="/">
+          <a
+            className="site-title"
+            rel="author"
+            href="https://softdao.github.io/SEPs/"
+          >
             SEPs
           </a>
           <nav className="site-nav">
@@ -40,10 +44,16 @@ const Main: React.FC = ({ children }) => {
             </label>
 
             <div className="trigger">
-              <a className="page-link" href="/all-sep">
+              <a
+                className="page-link"
+                href="https://softdao.github.io/SEPs/all-sep"
+              >
                 All SEPs
               </a>
-              <a className="page-link" href="/all-sccp">
+              <a
+                className="page-link"
+                href="https://softdao.github.io/SEPs/all-sccp"
+              >
                 All SCCPs
               </a>
             </div>
