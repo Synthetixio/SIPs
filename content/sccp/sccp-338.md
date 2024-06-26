@@ -5,6 +5,8 @@ network: Arbitrum
 status: Draft
 type: Governance
 author: Matt, DSacks
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xba8d6e26fedc3c6b2b3fab0d6f1844f62d659d2776b9e55a78e2d2d9eed957ba
 ---
 # Simple Summary
 This SCCP proposes to configure the LP & issuance caps for Arbitrum as the system prepares to support yield-generating collateral from AAVE stata tokens, Lido-wrapped staked ETH, and Etherfi’s LRT.
