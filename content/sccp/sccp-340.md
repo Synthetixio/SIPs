@@ -10,7 +10,7 @@ type: Governance
 
 # Simple Summary
 
-This SCCP specifies the parameters of [SIP-386](https://sips.synthetix.io/sips/sip-370/) 
+This SCCP specifies the parameters of [SIP-386](https://sips.synthetix.io/sips/sip-386/) 
 
 The below parameters would be applied on the new markets:
 
