@@ -3,7 +3,7 @@ sccp: 330
 title: StataUSDC 5m LP cap
 network: Base 
 author: Matt
-status: Approved
+status: Implemented
 type: Governance
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xd29eeff4780e1d1bf691dea6f96d333e302da27c10240eab75c5daf4391d0628
