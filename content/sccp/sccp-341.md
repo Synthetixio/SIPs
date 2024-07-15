@@ -3,9 +3,11 @@ sccp: 341
 network: Base
 title: Lower maxMarketValue and maxMarketSize RNDR to zero
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
 created: 2024-07-11
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x244fcdd9c8434190758dc1391845faa6ab785863ecdc83ec6c8f422937b8e74c
 ---
 
 # Simple Summary
