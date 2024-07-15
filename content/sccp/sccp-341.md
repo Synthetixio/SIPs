@@ -1,7 +1,7 @@
 ---
 sccp: 341
 network: Base
-title: Lower maxMarketValue RNDR to zero
+title: Lower maxMarketValue and maxMarketSize RNDR to zero
 author: Kaleb (@kaleb-keny)
 status: Draft
 created: 2024-07-11
@@ -10,11 +10,12 @@ type: Governance
 
 # Simple Summary
 
-This SCCP proposes to lower the `maxMarketValue` on RNDR to zero (i.e. close mode), given the  upcoming token swap.
+This SCCP proposes to lower the `maxMarketValue` and `maxMarketSize` on RNDR to zero (i.e. close mode), given the  upcoming token swap.
 
 # Abstract
 
 The `maxMarketValue` governs the US Dollar maximum open interest possible for that market.
+The `maxMarketSize` governs the maximum open interest denominated in the market's currencyKey.
 
 # Motivation
 
