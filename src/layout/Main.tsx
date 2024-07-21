@@ -77,9 +77,9 @@ const Main: React.FC = ({ children }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/mdudas">
+                  <a href="https://twitter.com/softprotocol">
                     <TwitterIcon className="svg-icon" />
-                    <span className="username">mdudas</span>
+                    <span className="username">softprotocol</span>
                   </a>
                 </li>
               </ul>
