@@ -9,7 +9,7 @@ implementor: <a list of the author's or authors' name(s) and/or username(s), or 
 release: (Release Name)
 implementation-date:
 discussions-to: <Create a new thread on https://forums.softdao.ch and drop the link here>
-proposal: <snapshot.org proposal link> (*optional)
+proposal: <tally.xyz proposal link> (*optional)
 created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
 requires: <SEP number(s)> (*optional)
 ---
