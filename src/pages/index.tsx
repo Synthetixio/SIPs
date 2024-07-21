@@ -9,7 +9,7 @@ const BASE_URL = 'https://softdao.github.io/SEPs'
 const IndexPage = () => (
   <Main>
     <Helmet title="Soft Improvement Proposals" />
-    <h1 className="page-heading">Soft Improvement Proposals</h1>
+    <h1 className="page-heading">Soft Enhancement Proposals</h1>
     <p>
       Soft Enahancement Proposals (SEPs) describe standards for the Soft
       platform, including core protocol specifications, client APIs, and
