@@ -8,7 +8,7 @@ const BASE_URL = 'https://softdao.github.io/SEPs'
 // markup
 const IndexPage = () => (
   <Main>
-    <Helmet title="Soft Improvement Proposals" />
+    <Helmet title="Soft Enhancement Proposals" />
     <h1 className="page-heading">Soft Enhancement Proposals</h1>
     <p>
       Soft Enahancement Proposals (SEPs) describe standards for the Soft
