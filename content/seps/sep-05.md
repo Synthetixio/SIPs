@@ -45,7 +45,7 @@ Every piece of software should contain an economic incentive layer in order to f
 
 <!--This is a high level overview of *how* the SEP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
-As Soft Protocol continues to support new launches onchain, it’s critical to incorporate an economic incentive layer. This ensures sustained protocol operations & longevity of the Soft treasury. By implementing the changes outlined below, Soft can capture fees and continue to thrive. New contracts will be deployed, with corresponding interface changes to reflect the new feature.
+As Soft Protocol continues to support new launches onchain, it’s critical to incorporate an economic incentive layer. This can ensure sustained protocol operations & longevity of the Soft treasury. By implementing the changes outlined below, Soft can capture fees and continue to thrive. New contracts will be deployed, with corresponding interface changes to reflect the new feature.
 
 
 ### Rationale
