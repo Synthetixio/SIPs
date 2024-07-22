@@ -1,6 +1,6 @@
 ---
 sep: 0005
-title: Fee Switch - Sales
+title: Fee Collection - Sales
 network: Cross-Chain
 status: Proposed
 type: Software
@@ -16,13 +16,13 @@ requires: x
 
 ## Simple Summary
 
-A protocol fee switch will help to generate transaction fees into the DAO. This can open the door to substantiating the economic value of the DAO so it can be measured in comparable ways to Layer 1 blockchains and Layer 2 app-chains. This SEP concerns only the sales that occur using the contracts. A customer may fundraise a given quantity in various coins such as Ethereum and USDC, this SEP outlines a manner in which a portion of the fundraiser can be routed into the DAO smart contract to provide economic value to the protocol in exchange for use of the software. Just like Bitcoin!
+A protocol fee collection will help to generate transaction fees that give back to the DAO. This can open the door to substantiating the economic value of the DAO so it can be measured in comparable ways to Layer 1 blockchains and Layer 2 app-chains. This SEP concerns only the sales that occur using the contracts. A customer may fundraise a given quantity in various coins such as Ethereum and USDC, this SEP outlines a manner in which a portion of the funds can be routed into the DAO smart contract to provide economic value to the protocol in exchange for use of the software. Just like Bitcoin!
 
 ## Abstract
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SEP is implemented, not *why* it should be done or *how* it will be done. If the SEP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-This SEP proposes a DAO controlled configuration which sets the number of payment or native tokens to pull into the DAO per purchase. The Flat Price Sale will reference the DAO-controlled configuration and the SOFT Staking contract at purchase-time to determine the percentage of purchase amount that is sent to the configured recipient, in this case the Governor.
+This SEP proposes a DAO-controlled configuration which sets the number of payment or native tokens to pull into the DAO per-purchase. The Flat Price Sale contract will reference the DAO-controlled configuration _and_ the SOFT Staking contract at purchase-time to determine the percentage of purchase amount that is sent to the configured recipient, in this case the DAO Governor.
 
 The percentage is a combination of the total percentage, determined by the configuration, and the "fee switch" which determines a fee discount corresponding to the user's amount of staked SOFT.
 
@@ -57,19 +57,9 @@ Every piece of software should contain an economic incentive layer in order to f
 
 <!--The technical specification should outline the public API of the changes proposed. That is, changes to any of the interfaces Soft currently exposes or the creations of new ones.-->
 
-<!--
-- **Unified Interface**: Simplifies interactions with blockchain contracts, enhancing user experience and developer productivity.
-- **Contract Deployment Tools**: Streamlines the process of deploying `Satellite.sol` and `CrosschainTrancheVestingMerkle.sol` contracts, making them accessible to a wider audience.
-- **Airdrop Configuration and Management**: Provides customizable templates and management tools for airdrop campaigns, reducing the operational complexity.
-- **Cross-Chain Token Claiming**: Facilitates a user-friendly process for claiming tokens on different chains, improving accessibility for non-technical users.
-- **Comprehensive Documentation**: Offers detailed guides and examples, enabling developers to leverage the SDK's full potential.
--->
-### High-Level SDK Workflow
+This proposal includes a new contract, called a `NetworkConfig` (also referred to as the "network configuration") which will be a Governor-owned configuration contract, which can later be changed through the use of a SOFT Configuration Change Proposal. Our first iteration of the `NetworkConfig` will include the official address of our SOFT Staking Contract, as well as the official address of our DAO Governor Contract (referred to as the "fee recipient"), which is where the fees are sent. Additionally, the `NetworkConfig` will include the global fee amount, stored as a quantity of "bips" (basis points) that reflect a percentage of the purchase volume for purchases from `FlatPriceSale` contracts.
 
-
-### Milestones
-
-## Conclusion
+This proposal will require us to author a new version of our `FlatPriceSale` contract, which will include the network configuration. With this proposal, during a purchase from a `FlatPriceSale`, the contract will lookup the staking contract, as configured by the network configuration, and use the `getFeeLevel` method to determine the purchaser's fee level for SOFT. The contract will also lookup the configured global fee amount, configured by the network configuration. Using the fee amount and fee level, the contract will know the percentage of the purchase amount that will become a fee payment. The contract will finally send this amount of the purchase to the configured fee recipient before sending the remaining purchase amount to the sale itself.
 
 
 ## Copyright
