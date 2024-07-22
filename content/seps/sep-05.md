@@ -1,13 +1,12 @@
 ---
 sep: 0005
 title: Fee Collection - Sales
-network: Cross-Chain
+author: masonicgit
 status: Proposed
 type: Software
-author: masonicgit
+network: Cross-Chain
 implementor: TBD
-release: N/A
-implementation-date:
+release: TBD
 discussions-to: https://forum.thesoftdao.com/t/activate-protocol-fee-switch
 proposal: <snapshot.org proposal link> (*optional)
 created: 2024-07-21
