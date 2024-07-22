@@ -45,10 +45,14 @@ Every piece of software should contain an economic incentive layer in order to f
 
 <!--This is a high level overview of *how* the SEP will solve the problem. The overview should clearly describe how the new feature will be implemented.-->
 
+As Soft Protocol continues to support new launches onchain, it’s critical to incorporate an economic incentive layer. This ensures sustained protocol operations & longevity of the Soft treasury. By implementing the changes outlined below, Soft can capture fees and continue to thrive. New contracts will be deployed, with corresponding interface changes to reflect the new feature.
+
 
 ### Rationale
 
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose to implement the change in this way, what were the considerations and trade-offs. The rationale fleshes out what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
+
+In order to make fee collection robust and transparent, it's necessary to implement at the contract layer, rather than the application layer. Integrating fee collection at the application layer would allow savvy users to bypass fee collection by merely writing directly to a sale contract.
 
 
 
