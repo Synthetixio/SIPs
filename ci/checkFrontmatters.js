@@ -5,14 +5,12 @@ const statuses = require('./statuses')
 const fs = require('fs/promises')
 const { promisify } = require('util')
 const g = promisify(glob)
-
 const snapshotIdRegex = /^https?:\/\/(snapshot.org).*\/([A-z0-9]{7,})$/
-
 const commonValidationSchema = Yup.object().shape({
   file: Yup.string().required(),
   title: Yup.string().required(),
   type: Yup.string().oneOf(['Meta-Governance', 'Governance']).required(),
-  proposal: Yup.string().matches(snapshotIdRegex),
+  proposal: Yup.string().matches(snapshotIdRegex).nullable(), // Made optional
   status: Yup.string().oneOf(statuses),
   author: Yup.string().required(),
   network: Yup.string()
@@ -25,7 +23,6 @@ const commonValidationSchema = Yup.object().shape({
   requires: Yup.mixed().nullable(),
   'discussions-to': Yup.string().nullable(),
 })
-
 const sepValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
@@ -35,7 +32,6 @@ const sepValidationSchema = commonValidationSchema
   )
   .noUnknown()
   .strict()
-
 const sccpValidationSchema = commonValidationSchema
   .concat(
     Yup.object().shape({
@@ -44,12 +40,10 @@ const sccpValidationSchema = commonValidationSchema
   )
   .noUnknown()
   .strict()
-
 ;(async () => {
   try {
     const seps = await g('./content/seps/*.md')
     const sccp = await g('./content/sccp/*.md')
-
     // SEP
     await Promise.all(
       seps.map(async (file) => {
