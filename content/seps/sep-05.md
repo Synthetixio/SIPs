@@ -23,7 +23,7 @@ A protocol fee collection will help to generate transaction fees that give back 
 
 This SEP proposes a DAO-controlled configuration which sets the number of payment or native tokens to pull into the DAO per-purchase. The Flat Price Sale contract will reference the DAO-controlled configuration at purchase-time to determine the percentage of purchase amount that is sent to the configured recipient, in this case the DAO Governor.
 
-The percentage is determined by the configuration, initialized at 1% (100 bps).
+The percentage is determined by the configuration, initialized to 1% (100 bps).
 
 ## Motivation
 
