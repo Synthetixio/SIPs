@@ -8,7 +8,7 @@ network: Cross-Chain
 implementor: TBD
 release: TBD
 discussions-to: https://forum.thesoftdao.com/t/activate-protocol-fee-switch
-proposal: <snapshot.org proposal link> (*optional)
+proposal: https://forum.thesoftdao.com/t/activate-protocol-fee-switch
 created: 2024-07-21
 requires: x
 ---
