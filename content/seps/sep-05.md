@@ -21,9 +21,9 @@ A protocol fee collection will help to generate transaction fees that give back 
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what *will* be done if the SEP is implemented, not *why* it should be done or *how* it will be done. If the SEP proposes deploying a new contract, write, "we propose to deploy a new contract that will do x".-->
 
-This SEP proposes a DAO-controlled configuration which sets the number of payment or native tokens to pull into the DAO per-purchase. The Flat Price Sale contract will reference the DAO-controlled configuration _and_ the SOFT Staking contract at purchase-time to determine the percentage of purchase amount that is sent to the configured recipient, in this case the DAO Governor.
+This SEP proposes a DAO-controlled configuration which sets the number of payment or native tokens to pull into the DAO per-purchase. The Flat Price Sale contract will reference the DAO-controlled configuration at purchase-time to determine the percentage of purchase amount that is sent to the configured recipient, in this case the DAO Governor.
 
-The percentage is a combination of the total percentage, determined by the configuration, and the "fee switch" which determines a fee discount corresponding to the user's amount of staked SOFT.
+The percentage is determined by the configuration, initialized at 1% (100 bps).
 
 ## Motivation
 
@@ -62,7 +62,7 @@ In order to make fee collection robust and transparent, it's necessary to implem
 
 This proposal includes a new contract, called a `NetworkConfig` (also referred to as the "network configuration") which will be a Governor-owned configuration contract, which can later be changed through the use of a SOFT Configuration Change Proposal. Our first iteration of the `NetworkConfig` will include the official address of our SOFT Staking Contract, as well as the official address of our DAO Governor Contract (referred to as the "fee recipient"), which is where the fees are sent. Additionally, the `NetworkConfig` will include the global fee amount, stored as a quantity of "bips" (basis points) that reflect a percentage of the purchase volume for purchases from `FlatPriceSale` contracts.
 
-This proposal will require us to author a new version of our `FlatPriceSale` contract, which will include the network configuration. With this proposal, during a purchase from a `FlatPriceSale`, the contract will lookup the staking contract, as configured by the network configuration, and use the `getFeeLevel` method to determine the purchaser's fee level for SOFT. The contract will also lookup the configured global fee amount, configured by the network configuration. Using the fee amount and fee level, the contract will know the percentage of the purchase amount that will become a fee payment. The contract will finally send this amount of the purchase to the configured fee recipient before sending the remaining purchase amount to the sale itself.
+This proposal will require us to author a new version of our `FlatPriceSale` contract, which will include the network configuration. With this proposal, during a purchase from a `FlatPriceSale`, the contract will charge a fee set by the configured global fee amount. Using the fee amount, the contract will know the percentage of the purchase amount that will become a fee payment. The contract will finally send this amount of the purchase to the configured fee recipient before sending the remaining purchase amount to the sale itself.
 
 
 ## Copyright
