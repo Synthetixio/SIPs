@@ -15,6 +15,12 @@ Chainlink exchange rate feed can be found here:
 
 https://data.chain.link/feeds/arbitrum/mainnet/ezeth-eth
 
+Liquidity Information for ezETH on Arbitrum: 
+
+1. $3m on Ramses ezETH/wETH - https://app.ramses.exchange/liquidity/v2/0x575f1691e6391a2fcf932f9b9dfd6dbfb4792c13
+2. $2m on Balancer ezETH/wstETH - https://app.balancer.fi/#/arbitrum/pool/0xb61371ab661b1acec81c699854d2f911070c059e000000000000000000000516
+3. $3m on Camelot ezETH/wETH - https://app.camelot.exchange/pools/0xaA45265A94C93802BE9511E426933239117E658f
+
 ## Test Cases
 N/A
 
