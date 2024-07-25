@@ -1,5 +1,5 @@
 ---
-sccp: 2128
+sccp: 343
 network: Ethereum
 title: Update Liquidation Ratio
 author: Cavalier, Kaleb
