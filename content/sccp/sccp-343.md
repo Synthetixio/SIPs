@@ -18,7 +18,7 @@ This SCCP proposes to decrease the SNX `liquidationRatio` from 160% to 120% on t
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-The `liquidationRatio` is the ratio below which SNX stakers staking v2x get liquidated. Since the implementation of [SIP-306](https://sips.synthetix.io/sips/sip-306/) on the ethereum network, accounts that are below that critical ratio, are immediately liquidated with the snx and debt socialized among stakers on v3. The liquidated snx is unlocked and immediately available for distribution.
+Since the implementation of [SIP-306](https://sips.synthetix.io/sips/sip-306/) on the ethereum network, accounts that are below the `liquidationRatio` ratio, are immediately liquidated with the snx and debt socialized among stakers on v3. The liquidated snx is unlocked and immediately available for distribution.
 
 ## Motivation
 
