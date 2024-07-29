@@ -9,20 +9,21 @@ proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xba8d6e26fedc3c6b2b3fab0d6f1844f62d659d2776b9e55a78e2d2d9eed957ba
 ---
 # Simple Summary
-This SCCP proposes to configure the LP & issuance caps for Arbitrum as the system prepares to support yield-generating collateral from AAVE stata tokens, Lido-wrapped staked ETH, and Etherfi’s LRT.
+This SCCP proposes to configure the LP & issuance caps for Arbitrum as the system prepares to support yield-generating collateral from AAVE stata USDT & USDC, Lido-wrapped staked ETH, and Etherfi's LRT.
+
 # Abstract
-The parameters configurations description is as follows. EST USD values updated as of June 10th, 2024:
+The parameters configurations description is as follows. EST USD values updated as of July 29th, 2024:
 
 |            Asset            |  Token | Maximum LP Amount (Native Units) | Maximum LP Amount (USD) |                            TVL on Platform                           | Issuance Ratio | Liquidation Ratio |
 |:---------------------------:|:------:|:--------------------------------:|:-----------------------:|:--------------------------------------------------------------------:|:--------------:|:-----------------:|
-| LIDO ARB Wrapped Staked ETH | wsteth |               1354               |       ~$5,000,000       | $187m on AAVE + 21m DEX Liquidity + Majority of liquidity on Mainnet |      200%      |        135%       |
-|      Aave Arbitrum wBTC     |  aWBTC |                143               |       ~$10,000,000      |                         $297,000,000 on AAVE                         |      200%      |        135%       |
-|      Aave Arbitrum ETH      |  aETH  |               2,709              |       ~$10,000,000      |                         $370,000,000 on AAVE                         |      200%      |        135%       |
-|      Aave Arbitrum USDT     |  aUSDT |             5,000,000            |        $5,000,000       |                          $65,000,000 on AAVE                         |      130%      |        105%       |
-|    EtherFi Arbitrum wEETH   |  wEETH |                261               |       ~$1,000,000       | $276m on AAVE + 13m DEX Liquidity + Majority of liquidity on Mainnet |      250%      |        150%       |
+| LIDO ARB Wrapped Staked ETH | wsteth |              2564                |       ~$10,000,000       | $174m on AAVE + 21m DEX Liquidity + Majority of liquidity on Mainnet |      200%      |        135%       |
+|      Aave Arbitrum USDT     |  aUSDT |           10,000,000              |        $10,000,000       |                          $85,000,000 on AAVE                         |      130%      |        110%       |
+|    EtherFi Arbitrum wEETH   |  wEETH |               289                |       ~$1,000,000       | $276m on AAVE + 13m DEX Liquidity + Majority of liquidity on Mainnet |      250%      |        150%       |
+|      AAVE Arbitrum USDC     | stataUSDC |            10,000,000            |        10,000,000       |                             $264m on AAVE                             |      130%      |        110%       |       
+
 
 # Motivation
-The Arbitrum deployment is ready to be configured for yield generating collateral types as defined by [SIP-388](https://sips.synthetix.io/sips/sip-388/) & [SIP-389](https://sips.synthetix.io/sips/sip-389/).
+The Arbitrum deployment is ready to be configured for yield generating collateral types as defined by [SIP-388](https://sips.synthetix.io/sips/sip-388/) & [SIP-389](https://sips.sinthetix.io/sips/sip-389/).
+
 # Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
