@@ -6,6 +6,7 @@ status: Draft
 type: Governance
 author: Matt, DSacks
 ---
+
 # Simple Summary
 This SCCP proposes to configure the LP & issuance caps for Arbitrum as the system prepares to support yield-generating collateral from AAVE stata USDT, Lido-wrapped staked ETH, and Etherfi's LRT.
 
@@ -15,8 +16,9 @@ The parameters configurations description is as follows. EST USD values updated 
 |            Asset            |  Token | Maximum LP Amount (Native Units) | Maximum LP Amount (USD) |                            TVL on Platform                           | Issuance Ratio | Liquidation Ratio |
 |:---------------------------:|:------:|:--------------------------------:|:-----------------------:|:--------------------------------------------------------------------:|:--------------:|:-----------------:|
 | LIDO ARB Wrapped Staked ETH | wsteth |              2564                |       ~$10,000,000       | $174m on AAVE + 21m DEX Liquidity + Majority of liquidity on Mainnet |      200%      |        135%       |
-|      Aave Arbitrum USDT     |  aUSDT |           10,000,000              |        $10,000,000       |                          $85,000,000 on AAVE                         |      130%      |        105%       |
+|      Aave Arbitrum USDT     |  aUSDT |           10,000,000              |        $10,000,000       |                          $85,000,000 on AAVE                         |      130%      |        110%       |
 |    EtherFi Arbitrum wEETH   |  wEETH |               289                |       ~$1,000,000       | $276m on AAVE + 13m DEX Liquidity + Majority of liquidity on Mainnet |      250%      |        150%       |
+|      AAVE Arbitrum USDC     | stataUSDC |            10,000,000            |        10,000,000       |                             $264m on AAVE                             |      130%      |        110%       |       
 
 
 # Motivation
