@@ -3,7 +3,9 @@ sccp: 343
 network: Ethereum
 title: Update Liquidation Ratio
 author: Cavalier, Kaleb
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x022ae7cdd5597088b5300cb9c397501adadccee712cc38175d610eea98647696
 created: 2024-07-25
 type: Governance
 ---
