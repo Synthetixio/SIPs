@@ -8,7 +8,7 @@ author: Matt, DSacks
 ---
 
 # Simple Summary
-This SCCP proposes to configure the LP & issuance caps for Arbitrum as the system prepares to support yield-generating collateral from AAVE stata USDT, Lido-wrapped staked ETH, and Etherfi's LRT.
+This SCCP proposes to configure the LP & issuance caps for Arbitrum as the system prepares to support yield-generating collateral from AAVE stata USDT & USDC, Lido-wrapped staked ETH, and Etherfi's LRT.
 
 # Abstract
 The parameters configurations description is as follows. EST USD values updated as of July 29th, 2024:
