@@ -1,6 +1,6 @@
 ---
 stp: 13
-status: Draft
+status: Approved
 title: V3 Data Analytics API
 author: Michael Carrot Anderson (@michaelcarrotanderson)
 implementation-date: 

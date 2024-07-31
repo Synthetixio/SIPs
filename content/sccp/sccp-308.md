@@ -4,7 +4,9 @@ title: Update Perps V3 - L1 and L2 Gas Units
 type: Governance
 network: Base
 author: Kaleb (@kalek-keny)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xe5781e33827b2f01ee6f8b12473c6c0545121426030b046b48b57293c2217722
 created: 2024-03-18
 ---
 
@@ -14,7 +16,7 @@ created: 2024-03-18
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to update the L1 and L2 gas unit parameters as per the following [PR](https://github.com/Synthetixio/synthetix-deployments/pull/154/files).
+This SCCP proposes to update the L1 and L2 gas unit parameters as per the following [PR](https://github.com/Synthetixio/synthetix-deployments/pull/157/files).
 
 ## Abstract
 

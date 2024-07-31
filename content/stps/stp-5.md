@@ -1,7 +1,7 @@
 ---
 stp: 5
 title: Development/Sales Working Group
-status: Approved
+status: Implemented
 author: Spartan Glory, Kain (@kaiynne), ML_sudo
 implementation-date: TBA
 discussions-to: TC Discord Channel

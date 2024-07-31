@@ -1,7 +1,7 @@
 ---
 stp: 2
 title: Data Analytics Working Group
-status: Approved
+status: Implemented
 author: Carrot Anderson (@carrotanderson), Kain Warwick (@kaiynne)
 implementation-date: TBA
 discussions-to: TC Discord channel

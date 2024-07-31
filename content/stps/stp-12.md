@@ -17,7 +17,7 @@ This STP allocates 100,000 USDC of budgeted 2024 funding to a dedicated multisig
 
 <!--A short (~200 word) description of the proposed change, the abstract should clearly describe the proposed change. This is what _will_ be done if the STP is implemented, not _why_ it should be done or _how_ it will be done. If the STP proposes sending X tokens to Y each week, write, "we propose to send X tokens to Y each week".-->
 
-Allocate a grant of up to 100,000 USDC per year to payment processor Skyline Digital AG, for operational costs. Use a 2/3 multisig with the signers being the CCC multisig, a Synthetix Operations Manager, and Skyline Digital AG.
+Allocate a grant of up to 100,000 USDC per year to payment processor Skyline Digital AG, for operational costs. Use a 2/2 multisig with the signers being the CCC multisig, a Synthetix Operations Manager, and Skyline Digital AG.
 
 ## Motivation
 
@@ -41,13 +41,13 @@ Some operational costs require fiat payment.
 
 ### Rationale
 <!--This is where you explain the reasoning behind how you propose to solve the problem. Why did you propose this use of funds – what were the considerations. The rationale fleshes out the motivation and reasoning behind decisions that were made. It should describe any alternate ideas that were considered and related work. The rationale may also provide evidence of consensus within the community, and should discuss important objections or concerns raised during discussion.-->
-A 2/3 multisig enables a payment processor entity, and the CCC or Synthetix Operations Manager to execute transactions to pay for fiat expenses.
+A 2/2 multisig enables a payment processor entity and Synthetix signer to execute transactions to pay for fiat expenses.
 
 
 ### Financial Specification
 <!--The financial specification should outline the the tokens, amounts, destinations, and schedule of funds to be moved. If appropriate, any technical considerations should also be included here – that is, changes to any of the interfaces Synthetix currently exposes or the creations of new ones.-->
 
-Once the CCC safe, Skyline AG and Synthetix Operations Manager are added to a dedicated 2/3 multisig at 0xbE6C8EE3cAd2E6DB7A423EA41dF8B0DA166F644F, transfer grant funds as needed.
+Once the Skyline AG and Synthetix signer are added to a dedicated 2/2 multisig at 0xbE6C8EE3cAd2E6DB7A423EA41dF8B0DA166F644F, transfer grant funds as needed.
 
 ## Copyright
 
