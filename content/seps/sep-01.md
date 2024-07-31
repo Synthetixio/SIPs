@@ -5,7 +5,7 @@ author: けつばん
 network: Unknown
 comments-uri: https://forum.softdao.ch/t/softprovement-proposal-ideas
 type: Process
-status: Proposed
+status: Implemented
 created: 2016-10-06T00:00:00.000Z
 proposal:
 ---
