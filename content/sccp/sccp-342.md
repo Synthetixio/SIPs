@@ -4,7 +4,9 @@ title: Increase ETH LP deposit cap to 5400 ETH on Arbitrum
 type: Governance
 network: Arbitrum
 author: GUNBOATs (@gunboatsss)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x777252eef2ebcded1f7a6dfadc88f18cac338f44a15fdfa0a1232affd30b2111
 created: 2024-07-23
 ---
 
@@ -21,10 +23,12 @@ Increase ETH LP deposit cap to 5400 ETH from 2700 ETH on Arbitrum.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-This proposal proposes following change in collateral cap for ETH on Arbitrum
+This proposal proposes following change in collateral cap for ETH on Arbitrum:
+
 | Current Value | New Value |
 |---------------|-----------|
 |           2700|       5400|
+
 ## Motivation
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
