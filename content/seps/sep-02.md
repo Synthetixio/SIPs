@@ -5,7 +5,7 @@ author:  けつばん
 network: Unknown
 comments-uri: https://forum.softdao.ch/t/softprovement-proposal-ideas
 type: Request for Enhancement
-status: Proposed
+status: Implemented
 created: 2017-11-07T00:00:00.000Z
 proposal: 
 note: This document has been translated from Japanese, please pardon any typos or grammatical errors.
