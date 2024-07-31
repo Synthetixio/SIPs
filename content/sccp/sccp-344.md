@@ -3,9 +3,11 @@ sccp: 344
 network: Base
 title: Update Perps V3 Parameters
 author: Kaleb
-status: Vote_Pending
+status: Implemented
 created: 2024-07-29
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x4107db01b643da4ce4fb576b26ba642affc6ebab9af325daca4f879d0b57f111
 ---
 
 ## Simple Summary
