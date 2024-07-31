@@ -1,5 +1,5 @@
 ---
-sip: 0004
+sep: 0004
 title: SoftSDK
 network: Cross-Chain
 status: Proposed
