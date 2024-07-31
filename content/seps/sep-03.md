@@ -1,5 +1,5 @@
 ---
-sep: 0006
+sep: 0003
 title: SOFT Fee Switch Enhancement Proposal
 network: Ethereum
 status: Proposed
