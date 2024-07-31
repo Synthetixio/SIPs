@@ -1,7 +1,7 @@
 ---
 sep: 0002
 title: SEP Purpose and Guidelines
-author:  けつばん
+author:  Community
 network: Unknown
 comments-uri: https://forum.softdao.ch/t/softprovement-proposal-ideas
 type: Request for Enhancement
