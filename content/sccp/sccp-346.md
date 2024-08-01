@@ -1,6 +1,6 @@
 ---
 sccp: 346
-title: Deploy Multicollateral Perps Abitrum
+title: Deploy Multicollateral Perps Arbitrum
 network: Arbitrum
 status: Draft
 type: Governance
@@ -40,14 +40,45 @@ Aside from the above parameters , the perps markets will have the following conf
 |     BTC    |        1.00%       |        7.50%       |             75            |
 |     USD    |          0         |          0         |             NA            |
 
-Aside from the above parameters, the `discountScalar` would be set to 1 for all margins and the collateral liquidation penalty is 3 bp.
+Aside from the above parameters, the following parameters apply:
+-  the `discountScalar` would be set to 1 for all margins 
+-  the collateral liquidation penalty is 3 bp (`collateralLiquidateRewardRatioD18`).
+
+## Assymetric Interest Rate:
+The assymetric  interest rate parameters would be disabled by setting the relevant parameters to zero.
 
 ## Keeper Parameters:
 
-
 It is important to mention that markets would be launched with 0 caps on the sizes and would be raised once a integrator gives the green light on their readiness to provide an interface for traders.
 
-Also worth pointing out that initially the assymetric funding rate would be disabled in the initial phase of the deployment by setting 
+
+## Account Caps:
+Accounts would be set to allow for 3 collaterals and 10 simultaneous positions
+
+## Keeper Reward Parameters:
+
+|     **Parameter**     | **Value** |
+|:---------------------:|:---------:|
+|       minReward       |     1     |
+|      profitRatio      |    30%    |
+| maxKeeperScalingRatio |    3 bp   |
+|       maxReward       |     30    |
+|      l1SettleGas      |   30,000  |
+|      l2SettleGas      |    2.5M   |
+|       l1FlagGas       |   31,000  |
+|       l2FalgGas       |   1.16M   |
+|     l1LiquidateGas    |   5,500   |
+|     l2LiquidateGas    |  600,000  |
+
+## Wrappers:
+
+The below wrappers would be setup with no fees, in order to allow traders to acquire snxETH and snxBTC which could be used as margin:
+
+| **Token** | **Cap** |
+|:---------:|:-------:|
+|    wETH   |   1000  |
+|    wBTC   |    75   |
+
 
 # Abstract
 
@@ -69,6 +100,10 @@ The parameters configurations description is as follows:
 - Max Collateral Amount is the maximum possible amount of margin that can be posted
 - discountScalar helps increase or decrease the price impact on an account's margin holding 
 - the collateral liquidation penalty is the penalty paid to the liquidator for executing a liquidation
+- minReward/maxReward is used to clamp the reward paid to the keeper for settling an order or liquidating
+- profitRatio is an additional profit rate added to the gas costs to increase the incentive to keepers to execute when gas costs rise.
+- maxKeeperScalingRatio is the reward paid to keepers for liquidating accounts that only have margin and debt (asking to the flagRewardRatio of 3 bp)
+
 
 # Motivation
 
