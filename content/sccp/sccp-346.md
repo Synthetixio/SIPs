@@ -13,16 +13,15 @@ This SCCP proposes to deploy multi-collateral [Perps V3](https://sips.synthetix.
 
 ## Markets:
 
-| **Market** | **InitialMarginRatio** | **minimumInitialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** |
-|:----------:|:----------------------:|:-----------------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|
-|     ETH    |          2.00%         |             0.744             |            0.333            |    350,000    |       15,000      |     40,000,000     |
-|     BTC    |          2.00%         |              1.07             |            0.333            |     35,000    |       1,200       |     50,000,000     |
-|     SOL    |          2.00%         |             5.503             |            0.333            |   1,406,250   |      270,000      |     40,000,000     |
-|     WIF    |          4.00%         |              1.00             |             0.5             |   15,000,000  |     2,500,000     |      3,000,000     |
+| **Market** | **InitialMarginRatio** | **minimumInitialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** | **takerFeeRatio**   |
+|:----------:|:----------------------:|:-----------------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|:-------------------:|
+|     ETH    |          2.00%         |             0.744             |            0.333            |    350,000    |       15,000      |     40,000,000     |        5  bp        |
+|     BTC    |          2.00%         |              1.07             |            0.333            |     35,000    |       1,200       |     50,000,000     |        5  bp        |
+|     SOL    |          2.00%         |             5.503             |            0.333            |   1,406,250   |      270,000      |     40,000,000     |        8  bp        |
+|     WIF    |          4.00%         |              1.00             |             0.5             |   15,000,000  |     2,500,000     |      3,000,000     |        10 bp        |
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
 - MakerFeeRatio: 0 bp
-- TakerFeeRatio: 5 bp (10 bp for WIF)
 - maxFundingVelocity: 9 (36 for WIF)
 - flagRewardRatio: 3 bp
 - minimumPositionMargin: 50
