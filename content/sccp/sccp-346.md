@@ -13,7 +13,7 @@ This SCCP proposes to deploy multi-collateral [Perps V3](https://sips.synthetix.
 
 ## Markets:
 
-| **Market** | **InitialMarginRatio** | **minimumInitialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** | **takerFeeRatio**   |
+| **Market** | **minimumInitialMarginRatio** | **InitialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** | **takerFeeRatio**   |
 |:----------:|:----------------------:|:-----------------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|:-------------------:|
 |     ETH    |          2.00%         |             0.744             |            0.333            |    350,000    |       15,000      |     40,000,000     |        5  bp        |
 |     BTC    |          2.00%         |              1.07             |            0.333            |     35,000    |       1,200       |     50,000,000     |        5  bp        |
