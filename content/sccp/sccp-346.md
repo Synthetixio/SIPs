@@ -33,7 +33,7 @@ Aside from the above parameters , the perps markets will have the following conf
 
 ## Margins:
 
-| **Margin** | **Discount Upper** | **Discount Lower** | **Max Collateral Amount** |
+| **Margin** | **Discount Lower** | **Discount Upper** | **Max Collateral Amount** |
 |:----------:|:------------------:|:------------------:|:-------------------------:|
 |     ETH    |        1.00%       |       10.00%       |           1,000           |
 |     BTC    |        1.00%       |        7.50%       |             75            |
