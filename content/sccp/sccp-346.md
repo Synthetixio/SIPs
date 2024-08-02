@@ -25,7 +25,7 @@ Aside from the above parameters , the perps markets will have the following conf
 - maxFundingVelocity: 9 (36 for WIF)
 - flagRewardRatio: 3 bp
 - minimumPositionMargin: 50
-- lockedOiRatio: 0.25 (0.5 for WIF)
+- lockedOiRatio: 0.25 (0.5 for WIF and SOL)
 - maxLiquidationLimitMultiplier: 1.5
 - maxLiquidationPD: 5 bp
 - endorsedLiquidator: "0x11233749514Ab8d00C0A5873DF7428b3db70030f"
