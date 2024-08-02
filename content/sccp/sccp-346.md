@@ -73,11 +73,11 @@ Accounts would be set to allow for 3 collaterals and 10 simultaneous positions
 
 The below wrappers would be setup with no fees, in order to allow traders to acquire xETH, xBTC and xUSD which could be used as margin:
 
-| **Token** |  **Cap**  |
-|:---------:|:---------:|
-|    wETH   |   1,000   |
-|    wBTC   |     75    |
-|    USDC   | 5,000,000 |
+| **Token** |  **Cap**   |
+|:---------:|:----------:|
+|    wETH   |   1,000    |
+|    wBTC   |     75     |
+|    USDC   | 10,000,000 |
 
 # Abstract
 
