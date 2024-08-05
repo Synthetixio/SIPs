@@ -5,7 +5,7 @@ network: Optimism
 status: Draft
 type: Governance
 author: utilmind
-implementor: utilmind
+implementor: TBD
 created: 2024-08-05
 requires: 
 ---
