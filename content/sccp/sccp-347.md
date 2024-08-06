@@ -1,5 +1,5 @@
 ---
-sccp: 346
+sccp: 347
 title: Deploy Multicollateral Perps Arbitrum
 network: Arbitrum
 status: Draft
@@ -46,10 +46,6 @@ Aside from the above parameters, the following parameters apply:
 ## Assymetric Interest Rate:
 The assymetric  interest rate parameters would be disabled by setting the relevant parameters to zero.
 
-## Keeper Parameters:
-
-It is important to mention that markets would be launched with 0 caps on the sizes and would be raised once a integrator gives the green light on their readiness to provide an interface for traders.
-
 
 ## Account Caps:
 Accounts would be set to allow for 3 collaterals and 10 simultaneous positions
@@ -79,6 +75,7 @@ The below wrappers would be setup with no fees, in order to allow traders to acq
 |    wBTC   |     75     |
 |    USDC   | 10,000,000 |
 
+
 # Abstract
 
 The parameters configurations description is as follows:
@@ -107,6 +104,11 @@ The parameters configurations description is as follows:
 # Motivation
 
 The main motivation is to launch perps v3 on arbitrum as specified in [SIP-367](https://sips.synthetix.io/sips/sip-367/).
+
+## Release notes:
+
+Markets would be launched to mainnet with 0 caps on position sizes and would be raised once a integrator gives the green light on their readiness to provide an interface for traders.
+Furthermore, the wETH and wBTC caps would be set to zero initially upon release and raised after the necessary fork tests are performed that ensure that liquidation rewards from the wETH and wBTC margins are distributed fairly on all LP's that provide liquidity.
 
 # Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
