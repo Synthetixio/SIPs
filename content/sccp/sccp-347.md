@@ -73,9 +73,10 @@ The below wrappers would be setup with no fees, in order to allow traders to acq
 | **Token** |  **Cap**   |
 |:---------:|:----------:|
 |    wETH   |   1,000    |
-|    wBTC   |     75     |
+|    BTC*   |     75     |
 |    USDC   | 10,000,000 |
 
+* The specification of the representative BTC token (wBTC or tBTC) which would be used in wrapping will be decided upon in a seperate vote. 
 
 # Abstract
 
