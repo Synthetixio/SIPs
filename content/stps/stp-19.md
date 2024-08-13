@@ -1,7 +1,7 @@
 ---
 stp: 19
 title: Perp trading incentives on Base
-status: Approved
+status: Implemented
 author: Cavalier (@cavalier_eth)
 implementation-date: 
 discussions-to: TC Discord Channel
