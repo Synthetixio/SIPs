@@ -5,6 +5,8 @@ network: Arbitrum
 status: Draft
 type: Governance
 created: 2024-08-12
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xac627121160fecf00f5751b694e3ac9804c53a9fa7cd7d997cb5756351d86b23
 author: Kaleb
 ---
 
