@@ -19,7 +19,7 @@ The previously configured feedId had been deprecated following the RNDR token mi
 
 # Motivation
 
-The emegency action was executed last week and this sccp ratifies that action. Future iterations of Peprs V3 aims at tackling that risk by updating the feed to constant price feed that resolves the last available price.
+The emergency action was executed last week and this sccp ratifies that action. Future iterations of Peprs V3 aims at tackling that risk by updating the feed to constant price feed that resolves the last available price.
 
 
 # Copyright
