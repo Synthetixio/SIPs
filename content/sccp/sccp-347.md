@@ -4,6 +4,8 @@ title: Deploy Multicollateral Perps Arbitrum
 network: Arbitrum
 status: Draft
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x2e2528343ec51eb6385a2922f6f7ec08a804bec0afdafff7c97d606ec539e44f
 created: 2024-08-06
 author: Kaleb
 ---
@@ -59,12 +61,12 @@ Accounts would be set to allow for 3 collaterals and 10 simultaneous positions
 |      profitRatio      |    30%    |
 | maxKeeperScalingRatio |    3 bp   |
 |       maxReward       |     30    |
-|      l1SettleGas      |   30,000  |
-|      l2SettleGas      |    2.5M   |
-|       l1FlagGas       |   31,000  |
-|       l2FalgGas       |   1.16M   |
+|      l1SettleGas      |   30k     |
+|      l2SettleGas      |    2M     |
+|       l1FlagGas       |   5,500   |
+|       l2FlagGas       |   850k    |
 |     l1LiquidateGas    |   5,500   |
-|     l2LiquidateGas    |  600,000  |
+|     l2LiquidateGas    |  550k     |
 
 ## Wrappers:
 
@@ -73,9 +75,10 @@ The below wrappers would be setup with no fees, in order to allow traders to acq
 | **Token** |  **Cap**   |
 |:---------:|:----------:|
 |    wETH   |   1,000    |
-|    wBTC   |     75     |
+|    BTC*   |     75     |
 |    USDC   | 10,000,000 |
 
+* The specification of the representative BTC token (wBTC or tBTC) which would be used in wrapping will be decided upon in a different vote. 
 
 # Abstract
 
