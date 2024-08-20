@@ -2,7 +2,7 @@
 sccp: <to be assigned>
 title: <SCCP title>
 type: <Meta-Governance | Governance>
-network: <Ethereum | Optimism | Base | Ethereum & Optimism | Ethereum, Optimism & Base | Ethereum & Base | Optimism & Base | Arbitrum | Ethereum, Optimism, Base & Arbitrum >
+network: <Ethereum | Optimism | Base | Ethereum & Optimism | Ethereum, Optimism & Base | Ethereum & Base | Optimism & Base | Arbitrum | Ethereum, Optimism, Base & Arbitrum, Ethereum & Arbitrum >
 author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 discussions-to: <Discord Channel>
 status: <Draft>
