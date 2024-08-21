@@ -2,7 +2,7 @@
 sccp: 339
 title: Reconfigure sUSDe Issuance Ratio
 network: Arbitrum
-status: Draft
+status: Approved
 type: Governance
 author: Matt
 proposal: >-

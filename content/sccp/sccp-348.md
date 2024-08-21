@@ -2,7 +2,7 @@
 sccp: 348
 title: Update RNDR Feed
 network: Arbitrum
-status: Draft
+status: Implemented
 type: Governance
 created: 2024-08-12
 proposal: >-
