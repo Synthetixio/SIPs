@@ -2,7 +2,7 @@
 sccp: 347
 title: Deploy Multicollateral Perps Arbitrum
 network: Arbitrum
-status: Draft
+status: Approved
 type: Governance
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x2e2528343ec51eb6385a2922f6f7ec08a804bec0afdafff7c97d606ec539e44f
