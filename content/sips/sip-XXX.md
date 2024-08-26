@@ -1,12 +1,12 @@
 ---
 sip: XXX
 title: Distribute fees to stakers
-network: Arbitrum
+network: Arbitrum, Base, Ethereum, Optimism
 status: Draft
 type: Governance
-author: cyberduck (@acyberduck)
+author: snxmaximalists.eth
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x3b3b4330ab41960df890e8e3bc80d5ac69a27105ebcd4e98151e1a271423378c
+  
 ---
 
 ## Simple Summary
