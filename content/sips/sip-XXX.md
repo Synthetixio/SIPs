@@ -10,22 +10,21 @@ proposal: >-
 ---
 
 ## Simple Summary
-This SIP introduces a universal fee-sharing mechanism between LPs, integrators and protocol.
+After SIP 385, fees will no longer be used to buy back and burn SNX; instead, they will be sent to the treasury for later use. This proposal suggests redirecting the fees allocated to the Synthetix Treasury to the v2 FeePool.
 
 ## Abstract
-Introduce a fee-sharing mechanism for liquidity providers, the protocol's treasury, and integrators of the Synthetix Perps v3 deployment on any existing and future chain. Liquidity providers will earn 40% of the fees, integrators will earn a 20% fee for trades processed through their integration, and the remaining 40% will be sent to Synthetix Treasury to hold onto for distribution to SNX stakers as instructed by Spartan Council in near future. 
+Building on the existing fee-sharing mechanism, this proposal redirects the fees sent to the Synthetix Treasury to be bridged, converted to sUSD, and deposited into the V2 FeePool. This approach ensures that the funds are effectively distributed to SNX stakers.
 
 ## Motivation
-This fee distribution model follows a proven model already in place on Synthetix's Base deployment, enabling increasing trading volumes by front-end integrators.
+By depositing the allocated fees into the FeePool, this proposal consolidates the funds in one location, simplifying the distribution process to SNX stakers and maintaining the integrity of the existing distribution system. While this may not be the most elegant solution, it should provide short-term benefits for stakers until a more permanent solution is implemented.
 
 ## Specification
-Configure a Fee collector for Perps Market on each chain where Perps v3 is deployed to collect SNXFeeShare = 50% of net fees (after integrator share)
-Fee Collector accrues USD denominated fees
+The fees allocated to the Synthetix Treasury from Perps v3 deployments across various chains will be bridged, swapped, and deposited into the v2 FeePool, depending on the needs of each specific deployment.
 
-Integrators will request a unique tracking code for each integration they wish to track and provide an address to which they will receive fees. A 20% fee relative to protocol fees earned, excluding gas, execution fees, or funding fees, will be directed to the corresponding address for all trades executed using an integrator tracking code.
+This process will occur at a fixed, TC-proposed time once a week, ensuring all participants know what to expect.
 
 ## Rationale
-Having a consistent and transparent fee structure across chains is key to attracting and retaining liquidity providers, integrators and Synthetix tokenholders alike.
+Consolidating and distributing the fees to SNX stakers ensures they receive their share, making staking more attractive.
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
