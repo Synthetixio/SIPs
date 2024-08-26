@@ -1,6 +1,6 @@
 ---
-sip: 385
-title: Universal perps v3 fee sharing model
+sip: XXX
+title: Distribute fees to stakers
 network: Arbitrum
 status: Draft
 type: Governance
