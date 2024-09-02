@@ -69,10 +69,6 @@ Aside from the above parameters, the following parameters apply:
 - the [bridged usde](https://arbiscan.io/token/0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34) token would be used
 - The tokens that could be used as margin would be the synth equivalent of the tokens noted above with no fee on wrapping being levied. The synth fee to sell the synth to USDx would be set to 2% to discourage swapping until [SIP-406](https://sips.synthetix.io/sips/sip-406/) is implemented
 
-
-## Account Caps:
-Accounts would be set to allow for 3 collaterals and 10 simultaneous positions
-
 # Abstract
 
 The parameters configurations description is as follows:
