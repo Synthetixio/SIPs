@@ -4,7 +4,7 @@ title: Deploy More Markets on Perps V3 Arbitrum
 network: Arbitrum
 status: Draft
 type: Governance
-created: 2024-08-06
+created: 2024-09-02
 author: Kaleb
 ---
 
