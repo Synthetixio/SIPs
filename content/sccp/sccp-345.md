@@ -2,7 +2,7 @@
 sccp: 345
 title: Reconfigure Arbitrum Collateral Issuance Parameters 
 network: Arbitrum
-status: Approved
+status: Implemented
 type: Governance
 author: Matt
 created: 2024-07-31
