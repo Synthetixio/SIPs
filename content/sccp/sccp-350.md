@@ -44,7 +44,7 @@ This SCCP proposes to deploy the below markets on the new Perps V3 deploy:
 |     XLM    |             0.50%             |          1.20          |             0.37            |    166,500,000    |     11,000,000    |      1,000,000     |
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
-- TakerFeeRatio: 8 bp
+- TakerFeeRatio: 10 bp
 - MakerFeeRatio: 0 bp
 - maxFundingVelocity: 36
 - flagRewardRatio: 3 bp
