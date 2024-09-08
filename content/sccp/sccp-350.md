@@ -60,14 +60,16 @@ Aside from the above parameters , the perps markets will have the following conf
 | **Margins** | **discountLower** | **discountUpper** | **maxCollateral** | **skewScale** |
 |:-----------:|:-----------------:|:-----------------:|:-----------------:|:-------------:|
 |     SOL     |       5.00%       |       15.00%      |       7,500       |   1,406,250   |
-|     USDe    |       0.50%       |       5.00%       |     5,000,000     |       0       |
+|     USDe    |       0.50%       |       0.51%       |     10,000,000    |   1 wei       |
 
 Aside from the above parameters, the following parameters apply:
 - the `discountScalar` would be set to 1 for all margins 
-- the collateral liquidation penalty is 3 bp (`collateralLiquidateRewardRatioD18`).
+- the collateral liquidation penalty is 3 bp (`collateralLiquidateRewardRatioD18`)
+- The `maxKeeperScalingRatio` would be set to 40%
 - the [wormhole sol](https://arbiscan.io/address/0xb74da9fe2f96b9e0a5f4a3cf0b92dd2bec617124) token would be used 
 - the [bridged usde](https://arbiscan.io/token/0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34) token would be used
-- The tokens that could be used as margin would be the synth equivalent of the tokens noted above with no fee on wrapping being levied. The synth fee to sell the synth to USDx would be set to 2% to discourage swapping until [SIP-406](https://sips.synthetix.io/sips/sip-406/) is implemented
+- The tokens that could be used as margin would be the synth equivalent of the tokens noted above with no fee on wrapping being levied
+- The synth fee to sell the synth to USDx (except on USDC) would be set to 30% to discourage swapping until [SIP-406](https://sips.synthetix.io/sips/sip-406/) is implemented
 
 # Abstract
 
@@ -91,7 +93,7 @@ The parameters configurations description is as follows:
 - the collateral liquidation penalty is the penalty paid to the liquidator for executing a liquidation
 - minReward/maxReward is used to clamp the reward paid to the keeper for settling an order or liquidating
 - profitRatio is an additional profit rate added to the gas costs to increase the incentive to keepers to execute when gas costs rise.
-- maxKeeperScalingRatio is the reward paid to keepers for liquidating accounts that only have margin and debt (asking to the flagRewardRatio of 3 bp)
+- maxKeeperScalingRatio is the cap on the reward paid to keepers, as a function of the size of the margin. It is intended to limit the situation where accounts are liquidated because of gas price surges
 
 
 # Motivation
