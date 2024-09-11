@@ -3,7 +3,9 @@ sccp: 349
 network: Base
 title: Perps V3 - Deprecate MATIC Market
 author: Kaleb (@kaleb-keny)
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xc24e8f82569eb592e8c5d4fec7933ed07c6fa10f2b2f026e68f792dad5104532
 created: 2024-08-29
 type: Governance
 ---
