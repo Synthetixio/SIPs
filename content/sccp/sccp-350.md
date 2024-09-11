@@ -10,7 +10,7 @@ author: Kaleb
 
 # Simple Summary
 
-This SCCP proposes to deploy the below markets on the new Perps V3 deploy:
+This SCCP proposes to deploy the below markets on the new Perps V3 deploy as well SOL and USDe for direct margining.
 
 ## Markets:
 
