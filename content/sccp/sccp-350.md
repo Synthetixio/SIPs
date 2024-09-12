@@ -10,7 +10,7 @@ author: Kaleb
 
 # Simple Summary
 
-This SCCP proposes to deploy the below markets on the new Perps V3 deploy:
+This SCCP proposes to deploy the below markets on the new Perps V3 deploy as well SOL and USDe for direct margining.
 
 ## Markets:
 
@@ -20,10 +20,10 @@ This SCCP proposes to deploy the below markets on the new Perps V3 deploy:
 |     ARB    |             0.33%             |          1.90          |             0.38            |     50,000,000    |     6,000,000     |      3,000,000     |
 |    DOGE    |             0.20%             |          1.60          |             0.36            |    789,000,000    |     51,000,000    |      5,000,000     |
 |     GMX    |             0.50%             |          1.20          |             0.4             |      250,000      |       20,000      |       500,000      |
-|    AAVE    |             0.50%             |          4.10          |            0.375            |      180,000      |       50,000      |      6,000,000     |
+|    AAVE    |             0.50%             |          4.10          |            0.375            |      180,000      |       50,000      |      3,000,000     |
 |    NEAR    |             0.50%             |          1.60          |             0.35            |     8,000,000     |      750,000      |      3,000,000     |
 |     UNI    |             0.50%             |          0.49          |             0.31            |     2,250,000     |      500,000      |      3,000,000     |
-|     XRP    |             0.50%             |          1.20          |             0.32            |    187,500,000    |     5,000,000     |      3,000,000     |
+|     XRP    |             0.50%             |          1.20          |             0.32            |    187,500,000    |     5,000,000     |      1,000,000     |
 |     LTC    |             0.20%             |          5.50          |             0.4             |     1,687,500     |       77,000      |      5,000,000     |
 |    ORDI    |             0.20%             |          1.16          |             0.38            |      870,000      |      100,000      |      3,000,000     |
 |     STX    |             0.50%             |          2.80          |             0.43            |     15,000,000    |      700,000      |      1,000,000     |
@@ -44,7 +44,7 @@ This SCCP proposes to deploy the below markets on the new Perps V3 deploy:
 |     XLM    |             0.50%             |          1.20          |             0.37            |    166,500,000    |     11,000,000    |      1,000,000     |
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
-- TakerFeeRatio: 8 bp
+- TakerFeeRatio: 10 bp
 - MakerFeeRatio: 0 bp
 - maxFundingVelocity: 36
 - flagRewardRatio: 3 bp
@@ -60,14 +60,16 @@ Aside from the above parameters , the perps markets will have the following conf
 | **Margins** | **discountLower** | **discountUpper** | **maxCollateral** | **skewScale** |
 |:-----------:|:-----------------:|:-----------------:|:-----------------:|:-------------:|
 |     SOL     |       5.00%       |       15.00%      |       7,500       |   1,406,250   |
-|     USDe    |       0.50%       |       5.00%       |     5,000,000     |       0       |
+|     USDe    |       0.50%       |       0.51%       |     10,000,000    |   1 wei       |
 
 Aside from the above parameters, the following parameters apply:
 - the `discountScalar` would be set to 1 for all margins 
-- the collateral liquidation penalty is 3 bp (`collateralLiquidateRewardRatioD18`).
+- the collateral liquidation penalty is 3 bp (`collateralLiquidateRewardRatioD18`)
+- The `maxKeeperScalingRatio` would be set to 40%
 - the [wormhole sol](https://arbiscan.io/address/0xb74da9fe2f96b9e0a5f4a3cf0b92dd2bec617124) token would be used 
 - the [bridged usde](https://arbiscan.io/token/0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34) token would be used
-- The tokens that could be used as margin would be the synth equivalent of the tokens noted above with no fee on wrapping being levied. The synth fee to sell the synth to USDx would be set to 2% to discourage swapping until [SIP-406](https://sips.synthetix.io/sips/sip-406/) is implemented
+- The tokens that could be used as margin would be the synth equivalent of the tokens noted above with no fee on wrapping being levied
+- The synth fee to sell the synth to USDx (except on USDC) would be set to 30% to discourage swapping until [SIP-406](https://sips.synthetix.io/sips/sip-406/) is implemented
 
 # Abstract
 
@@ -91,7 +93,7 @@ The parameters configurations description is as follows:
 - the collateral liquidation penalty is the penalty paid to the liquidator for executing a liquidation
 - minReward/maxReward is used to clamp the reward paid to the keeper for settling an order or liquidating
 - profitRatio is an additional profit rate added to the gas costs to increase the incentive to keepers to execute when gas costs rise.
-- maxKeeperScalingRatio is the reward paid to keepers for liquidating accounts that only have margin and debt (asking to the flagRewardRatio of 3 bp)
+- maxKeeperScalingRatio is the cap on the reward paid to keepers, as a function of the size of the margin. It is intended to limit the situation where accounts are liquidated because of gas price surges
 
 
 # Motivation
