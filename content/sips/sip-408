@@ -1,0 +1,38 @@
+---
+sip: 408
+title: Synthetix Referendum
+author: Fenway
+status: Draft
+created: 2024-09-17T00:00:00.000Z
+type: Meta-Governance
+---
+# Referendum SIP
+
+## Simple Summary
+Introducing the Synthetix Referendum (SR). The SR is an artifact used to describe proposed changes to Synthetix that are to be voted on by SNX token holders, not representative Council members.
+
+Currently, Synthetix operates under a delegated governance model. There is no defined mechanism in the Synthetix constitution for token holders to vote for change outside of the election system.
+
+This limits the power of the ultimate stakeholder of Synthetix, the SNX token holders, to enact significant protocol change if they collectively determine it to be required. 
+
+## Abstract
+The SIP aims to improve the governance structure of the Synthetix protocol by introducing a mechanism (i.e. a token holder Referendum) for token holders to directly vote on a proposal, constitution change or protocol issue. This is in contrast to delegated governance where representatives vote on proposals. A successful Referendum would require 68m SNX tokens to participate, and two-thirds majority to pass.
+
+## Motivation
+To make Synthetix governance more robust, there must be a mechanism for SNX token holders to vote on proposals (i.e. Referendums). There are two important scenarios where a referendum can be effective and improve the robustness of Synthetix Governance:
+--1. The Spartan Council can refer proposals of the utmost significance to the ultimate Synthetix stakeholder, the SNX token holder.
+--2. Proposals that may conflict with or not be aligned with the perspectives or motivations of the Spartan Council can be proposed via a referendum.
+
+## Specification
+A SNX token holder referendum can be proposed by any community member.
+
+SR’s will live on the same site as the [SIPs official site](https://sips.synthetix.io/) but follow a slightly different specification. 
+
+For a referendum, `1 SNX = 1 vote` (i.e. linear voting). Voting will take place on [Snapshot](https://snapshot.org/#/).
+
+Given the nature of referendums is to enact significant change, for the referendum to pass, it must meet two criteria:
+--1. A quorum, meaning the minimum number of SNX tokens that are required to partake in a referendum (vote yes, no or abstain), of 75m SNX tokens is required. The rationale for this number is outlined in _Note 1_ below. This represents half of the non-Treasury SNX stakers and is over 400% more SNX tokens than those that voted in the recent Spartan Council election.
+--2. Approval must be over two-thirds majority of the yes/no vote (i.e. 66.67% approval threshold, excluding abstention).
+These criteria can be voted on by governance with an SCCP.
+
+_Note 1 - There are ~150m staked SNX, excluding the Synthetix Treasury balance. Stakers are a representation of the more active component of the Synthetix community. 75m SNX tokens, or 50% of these community members, represent an adequate sample size of the community. Additionally, based on the recent election only ~17m SNX tokens partook in the Spartan Council election (<12.5m debt shares, with a debt per voting power of ~0.5, and an average c-ratio of <350% across Synthetix --> <$22m worth of SNX tokens, or <17m SNX tokens priced at $1.30). 75m SNX tokens represents over 400% of the community that recently partook in protocol governance._
