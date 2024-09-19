@@ -2,7 +2,9 @@
 sccp: 352
 title: Increase Issuance Ratios for LP Assets on Arbitrum
 network: Arbitrum
-status: Draft
+status: Vote_Pending
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xc252d640da2ff235a5d3555c1aa6ceabe70a7d1f551bc465263f9a76afd65f35
 type: Governance
 created: 2024-09-17
 author: Matt

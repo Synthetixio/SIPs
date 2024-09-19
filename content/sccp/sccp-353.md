@@ -2,7 +2,9 @@
 sccp: 353
 title: Update Arbitrum Keeper Gas Costs
 network: Arbitrum
-status: Draft
+status: Vote_Pending
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xdf6585bf2337b4c4e1897669e51bb9d598c1833ba46cb3b90dd30b8b01197323
 type: Governance
 created: 2024-09-19
 author: Matt
