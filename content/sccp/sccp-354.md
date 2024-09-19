@@ -4,7 +4,7 @@ title: Update Arbitrum Max Lp Amount - sUSDe
 network: Arbitrum
 status: Vote_Pending
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0xdf6585bf2337b4c4e1897669e51bb9d598c1833ba46cb3b90dd30b8b01197323
+  https://snapshot.org/#/snxgov.eth/proposal/0xe3634256bbf9e648c84f19eba3f308b97a9ad7045b2a0afc7122cc551060fd3c
 type: Governance
 created: 2024-09-19
 author: Matt
