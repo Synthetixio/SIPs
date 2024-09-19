@@ -12,7 +12,7 @@ author: Matt
 
 # Simple Summary
 
-This SCCP proposes to lower the sUSDe max lp amount to 10 million USD from 50 million USD configured under [SCCP-339](https://sips.synthetix.io/sccp/sccp-339/).
+This SCCP proposes to lower the sUSDe max lp amount to 10 million USD from the 50 million USD, previous voted on in [SCCP-339](https://sips.synthetix.io/sccp/sccp-339/).
 
 
 # Abstract

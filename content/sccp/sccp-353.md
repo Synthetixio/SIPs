@@ -20,6 +20,7 @@ This SCCP proposes to update the keeper gas parameters, initially outlined in [S
 |:---------------------:|:---------:|
 |      l1SettleGas      |   30k     |
 |      l2SettleGas      |    4M     |
+|       l1FlagGas       |   5.5k    |
 |       l2FlagGas       |   3.6M    |
 |     l1LiquidateGas    |   34k     |
 |     l2LiquidateGas    |  2.5M     |
