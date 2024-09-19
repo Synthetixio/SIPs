@@ -7,7 +7,7 @@ proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xe3634256bbf9e648c84f19eba3f308b97a9ad7045b2a0afc7122cc551060fd3c
 type: Governance
 created: 2024-09-19
-author: Matt
+author: Kaleb
 ---
 
 # Simple Summary
