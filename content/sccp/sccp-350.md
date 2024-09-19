@@ -2,7 +2,9 @@
 sccp: 350
 title: Deploy More Markets on Perps V3 Arbitrum
 network: Arbitrum
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x257e768d275d3a8a47277702c42807303d58e9c7e86b98ece26a0bafc38b1524
 type: Governance
 created: 2024-09-02
 author: Kaleb
