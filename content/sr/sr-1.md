@@ -5,6 +5,7 @@ status: Implemented
 author: Fenway
 created: 2024-09-24T00:00:00.000Z
 type: Governance
+network: Ethereum & Optimism
 ---
 
 ## What is an SR?
