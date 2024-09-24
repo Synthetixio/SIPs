@@ -41,6 +41,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { sr: { eq: $frontmatter__sr } }) {
       fileAbsolutePath
       frontmatter {
+        sr
         ...Frontmatter
       }
       html
