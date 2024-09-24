@@ -57,6 +57,7 @@ export const pageQuery = graphql`
         nodes {
           id
           frontmatter {
+            sr
             ...Frontmatter
           }
         }
