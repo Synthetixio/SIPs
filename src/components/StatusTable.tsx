@@ -31,7 +31,7 @@ const StatusTable: React.FC<Props> = ({ rows }) => {
                   {row.frontmatter.stp}
                 </a>
               ) : row.frontmatter.sr ? (
-                <a href={`/sr/sr-${row.frontmatter.sr}`}>
+                <a href={`/srs/sr-${row.frontmatter.sr}`}>
                   {row.frontmatter.sr}
                 </a>
               ) : (
