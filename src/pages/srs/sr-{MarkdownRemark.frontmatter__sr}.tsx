@@ -9,7 +9,7 @@ import { SrPageQuery } from '../../../types/gql'
 import { getGithubLink } from '../../components/utils'
 
 interface Props {
-  frontmatter__sip: number
+  frontmatter__sr: number
   data: SrPageQuery
 }
 
