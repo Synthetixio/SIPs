@@ -5,6 +5,7 @@ status: <Draft>
 author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 implementation-date:
 discussions-to: <Discord Channel>
+network: <Ethereum | Optimism | Base | Ethereum & Optimism | Ethereum, Optimism & Base | Ethereum & Base | Optimism & Base | Arbitrum | Ethereum, Optimism, Base & Arbitrum, Ethereum & Arbitrum >
 created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
 ---
 
