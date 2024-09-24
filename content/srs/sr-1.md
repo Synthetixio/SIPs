@@ -24,7 +24,7 @@ A SR must meet certain minimum criteria, as outlined in SIP-408. It must be a cl
 
 Parties involved in the process are the _author_, the [_SIP editors_](#sip-editors), and the [Spartan Council](https://governance.synthetix.io/#/councils/spartan).
 
-:warning: Before you begin, vet your idea, this will save you time. Ask the Synthetix community first if the proposed change is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will have the intend effect. The appropriate public forum to gauge interest around your SCCP is [the Synthetix Discord].
+:warning: Before you begin, vet your idea, this will save you time. Ask the Synthetix community first if the proposed change is original to avoid wasting time on something that will be rejected based on prior research (searching the Internet does not always do the trick). It also helps to make sure the idea is applicable to the entire community and not just the author. Just because an idea sounds good to the author does not mean it will have the intend effect. The appropriate public forum to gauge interest around your SR is [the Synthetix Discord].
 
 Your role as the champion is to write the SR using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea. Following is the process that a successful SR will move along:
 
@@ -53,7 +53,7 @@ Each SR should have the following parts:
 
 ## SR Formats and Templates
 
-SCCPs should be written in [markdown] format.
+SRs should be written in [markdown] format.
 Image files should be included in a subdirectory of the `assets` folder for that SR as follows: `assets/sr-X` (for sr **X**). When linking to an image in the SR, use relative links such as `../assets/sr-X/image.png`.
 
 ## SR Header Preamble
@@ -82,7 +82,7 @@ Headers requiring dates will always do so in the format of ISO 8601 (yyyy-mm-dd)
 
 #### `author` header
 
-The `author` header optionally lists the names, email addresses or usernames of the authors/owners of the SCCP. Those who prefer anonymity may use a username only, or a first name and a username. The format of the author header value must be:
+The `author` header optionally lists the names, email addresses or usernames of the authors/owners of the SR. Those who prefer anonymity may use a username only, or a first name and a username. The format of the author header value must be:
 
 > Random J. User &lt;address@dom.ain&gt;
 
@@ -106,11 +106,11 @@ The `created` header records the date that the SR was assigned a number. Both he
 
 #### `updated` header
 
-The `updated` header records the date(s) when the SR was updated with "substantial" changes. This header is only valid for SCCPs of Draft and Active status.
+The `updated` header records the date(s) when the SR was updated with "substantial" changes. This header is only valid for SRs of Draft and Active status.
 
 #### `requires` header
 
-SRs may have a `requires` header, indicating the SR numbers that this SCCP depends on.
+SRs may have a `requires` header, indicating the SR numbers that this SR depends on.
 
 ## Auxiliary Files
 
