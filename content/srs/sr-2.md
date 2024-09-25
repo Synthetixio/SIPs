@@ -14,7 +14,7 @@ type: Meta-Governance
 
 This proposal outlines a plan to overhaul and improve Synthetix’s governance and operations to ultimately improve the performance of the project. Additionally, it touches on a vision forward for Synthetix to regain prominence and significance within crypto and DeFi. Its primary aim is to reinvigorate the Synthetix ecosystem and return it to relevance, importance, and prominence within the DeFi ecosystem.
 
-__The outcome of this proposal should reflect the will of the SNX token holder__. Should token holders share similar frustrations at the project’s direction this last 12 months, the limited communications, the lack of vision (has anyone seen a team generated 2024 roadmap?) and the continued delays in development, this proposal provides an opportunity to act and bring about change.
+__The outcome of this proposal should reflect the will of the SNX token holder__. Should token holders share similar frustrations at the project’s direction this last 12 months, the limited communications, the lack of vision (has anyone seen a team-generated 2024 roadmap?) and the continued delays in development, this proposal provides an opportunity to act and bring about change.
 
 ## Motivation
 
@@ -35,7 +35,7 @@ Synthetix continues to become less and less relevant in DeFi and risks continuin
 
 __This referendum outlines a plan to reset, update and reinvigorate the project through streamlining governance, increasing accountability, improving transparency, revitalising culture, and aligning key stakeholders.__
 
-Should this referendum be ratified, Synthetix will undergo a significant transformation towards a much more efficient and effective structure with a defined vision, clear objectives, and outcomes, as well as accountability and more transparency to the community. The key short-term (2025) objectives to re-energise Synthetix are listed below. More details can be found in the 2025 Synthetix Vision Statement.
+Should this referendum be ratified, Synthetix will undergo a significant transformation towards a much more efficient and effective structure with a defined vision, clear objectives, and outcomes, as well as accountability and more transparency to the community. The key short-term (2025) objectives to re-energise Synthetix are listed below. More details can be found in this [2025 Synthetix Vision Statement](https://mirror.xyz/0xF0Ab6151b0705790378b4c3504918a85c5E39246/DEuFmBrXyjaxe7CFFhzrotdyZFsG9xnFpLd2t3TFAro).
 -	Put the SNX token back at the centre of Synthetix via a token redesign
 -	Operationalise SnaXchain – add functionality, migrate SNX, launch a new stablecoin
 -	Restart work on Synth Teleporters
@@ -87,11 +87,11 @@ To address the aforementioned key identified issues within Synthetix, the below 
 
 #### A refreshed vision and roadmap for Synthetix
 
-From the outside and from feedback amongst non-Synthetix investors, it seems like there has been a loss of focus and direction. New participants are unlikely to have heard of Synthetix and once aware are unsure what the project wishes to accomplish.
+From the outside and feedback amongst non-Synthetix investors, it seems like there has been a loss of focus and direction. New crypto participants are unlikely to have heard of Synthetix and once aware are unsure what the project wishes to accomplish.
 
 A new and refreshed roadmap / vision needs to be produced and socialised. This will help realign the efforts of key stakeholders (i.e. the Spartan Council, contributors, community members and integrators) and allow the external non-Synthetix community to better understand what path the project is on.
 
-Once the vision and roadmap are established, a streamlined communication plan should be designed, to create a more succinct vision, roadmap, and message for the market. This will include engaging with key front ends and products that can leverage Synthetix contracts to build awareness, increase integrations and further engrain Synthetix across the crypto ecosystem.
+In parallel with this referendum, this [2025 vision and roadmap has been proposed](https://mirror.xyz/0xF0Ab6151b0705790378b4c3504918a85c5E39246/DEuFmBrXyjaxe7CFFhzrotdyZFsG9xnFpLd2t3TFAro). Should this referendum pass, a streamlined communication plan should be designed to share Synthetix's clear vision, roadmap, and core messages with the broader crypto community. The focus will be to go to market with a succinct message to increase awareness, attract additional integrations and further engrain Synthetix across the crypto ecosystem.
 
 Forming a working group with a robust marketing function to execute on this and continue to drive the messaging is critical.
 
@@ -105,12 +105,12 @@ The proposed changes are as follows:
 -	As part of this referendum, SNX holders will also be voting in the founding members of the new Spartan Council. None of the proposed members were aware of their intended involvement prior to this announcement and will need to accept their roles.
 -	Founding constituents of the new Spartan Council will be:
     -	Strategy Seat – Benjamin Celermajer – Benjamin is a Synthetix OG, having invested in the Havven ICO in 2017 and remained in the community ever since. Before entering crypto professionally as an asset manager in 2017, he worked as a consultant, specifically working on strategy design and managing complex business transformations. Benjamin's knowledge of and experience in crypto, combined with his background managing complex business transitions, allows him to bring objective insight to Synthetix, enabling him to identify key challenges and design fresh and tailored solutions to successfully turn Synthetix around.
-    -	Ops Seat – Cav – Cav has been involved professionally in Synthetix as a CC for 3 years. His knowledge of Synthetix and decentralised systems is as strong as they come and will help ensure Synthetix continuity through the transition. His recently held the role of CC Lead, highlighting the respect he has within the CC group and with Synthetix partners/integrators – both of which will prove valuable during this period of change. 
-    -	Technical Seat – TBC – this is one of the more important roles, and without deep knowledge of the technical team within Synthetix it is hard to know who fits this bill. But technical expertise, the ability to distil complex technical problems simply, knowing how to cut to the core of difficult problems and the willingness to roll ones sleeves up to get sh*t done is what is needed here. 
-    -	Treasury Seat – coKaiynne  (OG Spartan) – coKaiynne invested in the Havven ICO and has remained close to the project ever since. Recognising the need for change he nominated for the Treasury Council and was elected at the start of 2024. He’s been instrumental in streamlining, organising and consolidating the Treasury so that management and operations are simpler, more transparent and moving forward. 
+    -	Ops Seat – Cav – Cav has been involved professionally in Synthetix as a CC for 3 years. His knowledge of Synthetix and decentralised systems is as strong as they come and will help ensure Synthetix's continuity through the transition. He recently held the role of CC Lead, highlighting the respect he has within the CC group and with Synthetix partners/integrators – both of which will prove valuable during this period of change. 
+    -	Technical Seat – TBC – this is one of the more important roles, and without deep knowledge of the technical team within Synthetix it is hard to know who fits this bill. But technical expertise, the ability to distill complex technical problems simply, knowing how to cut to the core of difficult problems and the willingness to roll ones sleeves up to get sh*t done is what is needed here. 
+    -	Treasury Seat – coKaiynne  (OG Spartan) – coKaiynne invested in the Havven ICO and has remained close to the project ever since. Recognising the need for change he nominated for the Treasury Council and was elected at the start of 2024. He’s been instrumental in streamlining, organising, and consolidating the Treasury so that management and operations are simpler and more transparent moving forward.
     -	Advisory Seat  – Kain Warwick (Synthetix Founder / OG Spartan / Infinex Founder) –The once benevolent dictator played an instrumental role in digging Synthetix out of the 2018 bear market, was the creator of yield farming and helped kick off DeFi summer. We’re hoping to lure him back as an advisor to kick of the Synthetix revenge arc!
     -	Advisory Seat  – Jordan Momtazi (Synthetix Founder / OG Spartan) – Jordan carries a wealth of Synthetix knowledge and continues to stay close to updates and get involved where he can help. Jordan’s history running commercial and BD functions and his connectivity to crypto and VC networks from running Bodhi Ventures will be core to this transition and executing on several 2025 vision agenda items. 
-    -	Advisory Seat  – Spartan Glory (OG Spartan) – SG is invested in the Havven ICO and has remained an active member in the community since 2017. Through his engagement on the Treasury Council, SG has developed a deep knowledge of Synthetix and will help maintain continuity in the operations and treasury management through the transition. Additionally, he has strong networks in the crypto community that will come in handy as we look to expand our footprint.
+    -	Advisory Seat  – Spartan Glory (OG Spartan) – SG invested in the Havven ICO and has remained an active member in the community since 2017. Through his engagement on the Treasury Council, SG has developed a deep knowledge of Synthetix and will help maintain continuity in operations and treasury management through the transition. Additionally, he has strong networks in the crypto community that will come in handy as we look to expand our footprint.
 -	All seats will carry an equal voting weight of 1.00
 -	Multisig signing for SIPs, SCCPs, STPs, and Treasury Transactions will continue similar to how  it has historically, just conducted by a single Council. All SIP/SCCP, STPs, and Treasury Transactions will require 4/7 signatures to be approved.
 -	The only exception will be that the Treasury Seat will be a required signer of all STPs and Treasury transactions, continuing to maintain Treasury independence from the broader Project.
@@ -119,15 +119,15 @@ The proposed changes are as follows:
 -	Elect seats have the power to hire/replace the non-elect seats (via council vote).
 -	Elected Seats will have a 6-month term, with elections to be held in the first two weeks of every October and April.
 -	For the first epoch, stipends will remain as they have been for previous Council members (i.e. 2,000 SNX per month), with a review to be conducted and a potentially new proposed incentive model moving forward. This will generate savings of 20,000 SNX per month for the Treasury.
--	The pDAO will continue to validate, stage, and execute upgrades to Synthetix in the short term with the scope to reconsider alternate models (e.g. Risk Council as proposed in SIP-401).
+-	The pDAO will continue to validate, stage, and execute upgrades to Synthetix in the short term with the scope to reconsider alternate models (e.g. Risk Council as proposed in [SIP-401](https://sips.synthetix.io/sips/sip-401/)).
 
 This proposed model has been designed to ensure key responsibilities are directly delegated to council members for which they are ultimately accountable. A consolidated council function will be nimbler, enact more rapid change and engage more actively with key stakeholders across the Synthetix protocol.
 
 #### Identification, Formation, and Operationalisation of Core Working Groups
 
-There is a lot of work to be done across many different workstreams to return Synthetix to its former glory days. To do so efficiently and effectively, core working groups will be defined and formed. Under this proposal and the attached vision, Synthetix will require several functions such as sales, customer support, analytics, development, etc. 
+There is a lot of work to be done across many different workstreams to return Synthetix to its former glory days. To do so efficiently and effectively, core working groups will be defined and formed. Under this proposal and the attached [2025 vision](https://mirror.xyz/0xF0Ab6151b0705790378b4c3504918a85c5E39246/DEuFmBrXyjaxe7CFFhzrotdyZFsG9xnFpLd2t3TFAro), Synthetix will require several functions such as sales, customer support, analytics, development, etc. 
 
-Each working group’s function, roles, and responsibilities will be directly aligned with the Synthetix 2025 vision. Importantly, Working Groups will be held accountable for the delivery of core workstreams and report to the Spartan Council. 
+Each working group’s function, roles, and responsibilities will be directly aligned with the [Synthetix 2025 vision](https://mirror.xyz/0xF0Ab6151b0705790378b4c3504918a85c5E39246/DEuFmBrXyjaxe7CFFhzrotdyZFsG9xnFpLd2t3TFAro). Importantly, Working Groups will be held accountable for the delivery of core workstreams and report to the Spartan Council. 
 
 As previously mentioned, the CC model of hiring over 20 globally remote individuals is resulting in mass inefficiencies. To overcome this, Working Group members will be co-located in the same time zone(s) to create an environment where team culture can grow, turnaround and iteration of work is rapid, team cohesion is strong, members become more accountable to one another, etc. One will be hired and operate out of Sydney, Australia with my oversight, with scope for another one (initially at least) in an additional geography.
 
@@ -146,13 +146,13 @@ This is simply aligning with a modern DAO approach that has been adopted by the 
 ## Next Steps
 
 -	25 September 21:00 UTC time – Referendum posted
--	27 September Friday 22:30 UTC time - Hold a town hall in discord to discuss the motivations for this change and the referendum with the Community
--	27 September 23:59 UTC - A snapshot to vote for the referendum will be released
--	2 October time TBC – second community town hall on Discord.
--	3 October 23:59 UTC – referendum vote concludes.
+-	27 September Friday 22:30 UTC time - Hold a town hall in Discord to discuss the motivations for this change and the referendum with the Community
+-	27 September 23:59 UTC - A snapshot to vote for the referendum will be released. Quorum is 75m SNX tokens and success is defined as >66.67% 'yes' as outlined in [SIP-408](https://sips.synthetix.io/sips/sip-408/)
+-	2 October time TBC – second community town hall on Discord
+-	3 October 23:59 UTC – referendum vote concludes
 
 #### Should the referendum fail
--	Carry on as is – no change.
+-	Carry on as is – no change
 
 #### Should this referendum be approved and ratified by a community vote:
 -	Hand over governance to the new council members
