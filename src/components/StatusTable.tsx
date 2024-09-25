@@ -30,6 +30,10 @@ const StatusTable: React.FC<Props> = ({ rows }) => {
                 <a href={`/stps/stp-${row.frontmatter.stp}`}>
                   {row.frontmatter.stp}
                 </a>
+              ) : row.frontmatter.sr ? (
+                <a href={`/srs/sr-${row.frontmatter.sr}`}>
+                  {row.frontmatter.sr}
+                </a>
               ) : (
                 <a href={`/sccp/sccp-${row.frontmatter.sccp}`}>
                   {row.frontmatter.sccp}
