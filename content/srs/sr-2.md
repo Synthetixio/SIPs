@@ -91,7 +91,7 @@ From the outside and feedback amongst non-Synthetix investors, it seems like the
 
 A new and refreshed roadmap / vision needs to be produced and socialised. This will help realign the efforts of key stakeholders (i.e. the Spartan Council, contributors, community members and integrators) and allow the external non-Synthetix community to better understand what path the project is on.
 
-In parallel with this referendum, this [2025 vision and roadmap has been proposed](https://mirror.xyz/0xF0Ab6151b0705790378b4c3504918a85c5E39246/DEuFmBrXyjaxe7CFFhzrotdyZFsG9xnFpLd2t3TFAro). Should this referendum pass, a streamlined communication plan should be designed to share Synthetix's clear vision, roadmap, and core messages with the broader crypto community. The focus will be to go to market with a succinct message to increase awareness, attract additional integrations and further engrain Synthetix across the crypto ecosystem.
+In parallel with this referendum, this [2025 vision has been proposed](https://mirror.xyz/0xF0Ab6151b0705790378b4c3504918a85c5E39246/DEuFmBrXyjaxe7CFFhzrotdyZFsG9xnFpLd2t3TFAro). Should this referendum pass, a streamlined communication plan should be designed to share Synthetix's clear vision, roadmap, and core messages with the broader crypto community. The focus will be to go to market with a succinct message to increase awareness, attract additional integrations and further engrain Synthetix across the crypto ecosystem.
 
 Forming a working group with a robust marketing function to execute on this and continue to drive the messaging is critical.
 
