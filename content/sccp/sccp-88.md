@@ -14,7 +14,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-The current cap was configured to sUSD 40 million in [SCCP-87](https://sips.synthetix.io/SCCP/sccp-87) of which sUSD 39 million is currently utilized in shorts and borrows, so there is not much room for new users to take loans or shorts.
+The current cap was configured to sUSD 40 million in [SCCP-87](https://sips.synthetix.io/sccp/sccp-87) of which sUSD 39 million is currently utilized in shorts and borrows, so there is not much room for new users to take loans or shorts.
 
 ## Abstract
 
