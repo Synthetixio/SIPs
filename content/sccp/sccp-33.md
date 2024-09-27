@@ -18,7 +18,7 @@ This is the template for SCCPs.
 
 If no bids have been placed yet the market creator should be able to undo the market and take back the sUSD he put into it.
 
-Superceded by [SIP-71](../SIPS/sip-71.md).
+Superceded by [SIP-71](https://sips.synthetix.io/sips/sip-71/).
 
 ## Abstract
 
