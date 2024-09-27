@@ -25,7 +25,7 @@ The responsibilities of the working group will be as follows:
 1. **Data sources and APIs**
    Managing the subgraph and APIs that are upstream of any data analytics artefacts. This data layer must be available and up to date after each protocol upgrade. It will become the source of truth for any analytics artefacts (Synthetix live dashboards, third party platforms, and direct data consumption) in turn ensuring information about Synthetix corroborates across the internet.
 2. **Official Synthetix artefacts**
-   Creating and maintaining Synthetix branded data analytics artefacts (like live dashboards and key metrics displayed on [synthetix.io](https://synthetix.io/dashboard)) as has previously been done by CCs and community members.
+   Creating and maintaining Synthetix branded data analytics artefacts (like live dashboards and key metrics displayed on [synthetix.io](https://synthetix.io/)) as has previously been done by CCs and community members.
 
 3. **Third party analytics**
    It will be the responsibility of the working group to coordinate with any third-party analytics providers that currently report on Synthetix (e.g. Token Terminal), or that should report on Synthetix but do not (e.g. CoinGecko [derivatives exchanges](https://twitter.com/kaiynne/status/1653784645006155781?s=20)). The working group should ensure these third parties are provided any data or endpoints needed to display accurate information about Synthetix.
