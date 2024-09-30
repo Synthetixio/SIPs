@@ -28,7 +28,7 @@ The fee can be decrease to 40 bp without exposing inefficiencies in the oracle p
 
 The fee were originally levied this high in order to counter a front-running gap. However with the price-adjustment waiting period increase to 6 minutes, the fees can be lowered safely without exposing minters to the risk of front-running.
 However, incoming data will be reviewed, and action will be taken by the council if front-running pockets were found.
-Note that this sccp supercedes [sccp-80](https://sips.synthetix.io/SCCP/sccp-80) on the iETH rate.
+Note that this sccp supercedes [sccp-80](https://sips.synthetix.io/sccp/sccp-80) on the iETH rate.
 
 ## Copyright
 

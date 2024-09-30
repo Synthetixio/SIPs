@@ -14,7 +14,7 @@ type: Governance
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-The [sETH arb pool](0xA6B5E74466eDc95D0b6e65c5CBFcA0a676d893a4) has been drained very quickly over the last few weeks. There are several reasons for this, the first is that some of the front-running bots are using it as a way of clearing out excess sETH profits they are holding. On the face of it this might seem like a less than ideal situation. But the reality is that the arb pool is absorbing excess supply directly that would otherwise be absorbed into the sETH pool itself impacting the peg. By increasing the supply to the arb contract we can more quickly absorb this excess supply of sETH and tighten the peg, in combination with proposal 1 to change the window where users can be undercollateralised without being penalised this should exert upward pressure on the peg.
+The sETH arb pool, 0xA6B5E74466eDc95D0b6e65c5CBFcA0a676d893a4, has been drained very quickly over the last few weeks. There are several reasons for this, the first is that some of the front-running bots are using it as a way of clearing out excess sETH profits they are holding. On the face of it this might seem like a less than ideal situation. But the reality is that the arb pool is absorbing excess supply directly that would otherwise be absorbed into the sETH pool itself impacting the peg. By increasing the supply to the arb contract we can more quickly absorb this excess supply of sETH and tighten the peg, in combination with proposal 1 to change the window where users can be undercollateralised without being penalised this should exert upward pressure on the peg.
 
 ## Abstract
 
