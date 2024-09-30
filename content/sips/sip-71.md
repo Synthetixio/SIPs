@@ -17,7 +17,7 @@ This SIP proposes several enhancements to binary option markets intended to furt
 The binary option market manager and factory will be replaced, and existing markets migrated over to the new manager. This SIP seeks to accomplish the following:
 
 * Remove the pool fee charge for market creators
-* Allow market creators to cancel a market if no bids have been placed on it yet (supercedes [SCCP-33](../SCCP/sccp-33.md))
+* Allow market creators to cancel a market if no bids have been placed on it yet (supercedes [SCCP-33](../sccp/sccp-33.md))
 * Allow market creators to disable bid withdrawals at market creation
 * Emit bid events for the initial capital at market creation
 * Fix a bug that prevents creators from exercising their options before expiry under certain circumstances

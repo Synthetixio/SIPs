@@ -10,7 +10,7 @@ type: Governance
 
 ## Simple Summary
 
-The current version of the iSynths (inverse price Synths) have price limits to protect the network, when these price limits are hit the Synth is frozen. [SIP-61](./sip-61/md) covers the roadmap for Keeper Synths. Phase 1 of the system will be allowing a public function to freeze iSynths.
+The current version of the iSynths (inverse price Synths) have price limits to protect the network, when these price limits are hit the Synth is frozen. [SIP-61](https://sips.synthetix.io/sips/sip-61/) covers the roadmap for Keeper Synths. Phase 1 of the system will be allowing a public function to freeze iSynths.
 
 ## Abstract
 
