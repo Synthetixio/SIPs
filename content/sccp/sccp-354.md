@@ -2,7 +2,7 @@
 sccp: 354
 title: Update Arbitrum Max Lp Amount - sUSDe
 network: Arbitrum
-status: Vote_Pending
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xe3634256bbf9e648c84f19eba3f308b97a9ad7045b2a0afc7122cc551060fd3c
 type: Governance
