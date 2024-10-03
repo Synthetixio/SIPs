@@ -18,7 +18,7 @@ The `collateralLeverage` is the number that constrains the ability of liquidity 
 
 # Motivation
 
-The parameters were originally configured to be at `1` on all spot markets (i.e. sUSDC, swSOL, stBTC, sETH). However, given that these synths would be used primarily for wrapping purposes, in order to be used as margin on the perps multicollateral markets, the leverage number can be relaxed. There is no material risk on the protocol, given that these synths won't be affecting the skew, since trading of spot synths is significantly restricted. 
+The parameters were originally configured to be at `1` on all spot markets (i.e. sUSDC, swSOL, stBTC, sETH and sUSDe). However, given that these synths would be used primarily for wrapping purposes, in order to be used as margin on the perps multicollateral markets, the leverage number can be relaxed. There is no material risk on the protocol, given that these synths won't be affecting the skew, since trading of spot synths is significantly restricted. 
 It is worth noting that the`lockedOiRatio` parameter would be used to limit the withdrawal of liquidity providers, given a level of open interest on the perp markets. 
 
 
