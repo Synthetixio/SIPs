@@ -15,6 +15,7 @@ This SCCP proposes to add the below margins to Perps V3 Implementation:
 | **Margin** | **Discount Lower** | **Discount Upper** | **Max Collateral Amount** | **SkewScale** |
 |:----------:|:------------------:|:------------------:|:-------------------------:|:-------------:|
 |    cbBTC   |        1.00%       |        7.50%       |            100            |     35,000    |
+|   cbETH    |        1.00%       |       10.00%       |           1,750           |    350,000    |
 |   wstETH   |        1.00%       |       10.00%       |           1,750           |    350,000    |
 
 - the `discountScalar` would be set to 1 for all margins
