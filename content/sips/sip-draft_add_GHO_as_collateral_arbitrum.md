@@ -29,7 +29,9 @@ GHO on Arbitrum is brought and secured through the Chainlink CCIP bridge with th
 Further details about GHO can be found [here](https://docs.gho.xyz/).
 
 
-The Aave Liquidity Committee (ALC) is eager to explore integrations that expected to drive GHO's expansion across various protocols and chains.
+With the initial phase of the launch complete, the Aave Liquidity Committee (ALC) is eager to explore integrations that are expected to drive GHO's expansion across various protocols and chains. Integrating GHO as a collateral asset into Synthetix v3 is a strategic move that supports this expansion.
+
+The ALC believes that the AAVE DAO and Synthetix DAO can benefit from close collaboration. Not only will GHO serve as pristine collateral with low risk to the Synthetix ecosystem, but this integration can serve as the start to further collaborations such as launching a GHO market and even Synthetix V3 serving as a GHO facilitator in the future.
 
 Further details about GHO can be found [here](https://docs.gho.xyz/).
 
