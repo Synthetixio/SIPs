@@ -60,6 +60,17 @@ Key technical features of stataTokens include:
 - Upgradeability via Aave governance
 - Powered by a stataToken Factory for permissionless deployment and token registry
 
+Below are the configurable values for GHO LP:
+
+| Parameter                       | Value |
+| ------------------------------- | ----- |
+| Maximum LP amount               | $10M  |
+| Issuance Ratio                  | 125%  |
+| Liquidation Ratio               | 105%  |
+| Liquidation Reward              | 100%  |
+| Spot Strict Staleness Tolerance | 60    |
+| Minimum Delegation              | 100   |
+
 ### Test Cases
 
 - Deploy and test the vault contract using Aave GHO and Aave GHO Arbitrum stataTokens.
