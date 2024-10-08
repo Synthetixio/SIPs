@@ -23,11 +23,9 @@ This SIP proposes to add support for GHO (Aave's GHO Stablecoin) and stataGHO (S
 
 ## Motivation
 
-GHO is a decentralized multi-collateral stablecoin that is fully backed, transparent, and native to the Aave Protocol, with over [155M](https://aave.tokenlogic.xyz/gho) in circulating supply.
+GHO is a highly secure, decentralized stablecoin. The backing is high quality and the collateral ratio exceeds [2.20](https://aave.tokenlogic.xyz/collateral) and consists of high-quality assets like wstETH and wETH making up [23.67%](https://aave.tokenlogic.xyz/gho) and [20.20%](https://aave.tokenlogic.xyz/gho) respectively of all collateral. The GHO peg has shown resiliency during market downturns and the increase of the GHO Stability Module will bring even more security.
 
-The collateral ratio for GHO exceeds [2.20](https://aave.tokenlogic.xyz/collateral) and consists of high-quality assets like wstETH and wETH, which make up [23.67%](https://aave.tokenlogic.xyz/gho) and [20.20%](https://aave.tokenlogic.xyz/gho) of the total collateral, respectively.
-
-The Aave Liquidity Committee (ALC) aims to expand GHO's reach across various protocols and chains. Additional details about GHO can be found [here](https://docs.gho.xyz/).
+GHO on Arbitrum is brought and secured through the Chainlink CCIP bridge with the highest security standards in the industry to prevent against overminting attacks. Since the launch on Arbitrum in July, nearly 20 Million GHO have been bridged to Arbitrum.
 
 The Chainlink CCIP bridge, deployed by Aave Governance, has been in production since early July. GHO has also been integrated into Aave v3 on Arbitrum. With the initial phase complete, it's time to accelerate GHO's growth on Arbitrum by integrating it as a collateral asset into Synthetix v3.
 
@@ -35,11 +33,15 @@ Adding stataGHO to Synthetix Arbitrum LP offers significant advantages due to it
 
 Using stataTokens addresses the challenges related to aTokens' rebasing nature, reducing implementation overhead and making it easier for Synthetix to integrate with Aave's GHO.
 
+With the initial phase of the launch complete, the Aave Liquidity Committee (ALC) is eager to explore integrations that are expected to drive GHO's expansion across various protocols and chains. Integrating GHO as a collateral asset into Synthetix v3 is a strategic move that supports this expansion.
+
+The ALC believes that the AAVE DAO and Synthetix DAO can benefit from close collaboration. Not only will GHO serve as pristine collateral with low risk to the Synthetix ecosystem, but this integration can serve as the start to further collaborations such as launching a GHO market and even Synthetix V3 serving as a GHO facilitator in the future.
+
 ## Specification
 
 ### Overview
 
-The implementation of this SIP will depend on the availability of a high-frequency GHO price oracle on Arbitrum, currently being developed by Chainlink.
+Implementation of this SIP can happen today through the available GHO Chainlink Data push Feed on Arbitrum. Chainlink Data Streams is also actively developing a GHO low latency pull feed for use on Synthetix markets.
 
 Below are the configurable values for GHO LP (Via SCCP):
 
