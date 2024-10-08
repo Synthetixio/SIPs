@@ -14,7 +14,7 @@ created: 2024-09-18
 
 ## Simple Summary
 
-This SIP proposes to add support for Aave's GHO Stablecoin (GHO) as LP collateral on Sinthetix v3 on Arbitrum.
+This SIP proposes to add support for Aave's GHO Stablecoin (GHO) as cross-margin LP collateral on Synthetix V3 on Arbitrum.
 
 ## Abstract
 
