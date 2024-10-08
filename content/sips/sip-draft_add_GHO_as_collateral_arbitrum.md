@@ -28,7 +28,6 @@ GHO on Arbitrum is brought and secured through the Chainlink CCIP bridge with th
 
 Further details about GHO can be found [here](https://docs.gho.xyz/).
 
-The collateral ratio exceeds [2.20](https://aave.tokenlogic.xyz/collateral) and is consists of by high-quality assets like wstETH and wETH making up [23.67%](https://aave.tokenlogic.xyz/gho) and [20.20%](https://aave.tokenlogic.xyz/gho) respectively of all collateral.
 
 The Aave Liquidity Committee (ALC) is eager to explore integrations that expected to drive GHO's expansion across various protocols and chains.
 
