@@ -35,7 +35,6 @@ The ALC believes that the AAVE DAO and Synthetix DAO can benefit from close coll
 
 
 
-With the initial phase of the launch complete, it's time to accelerate GHO's growth on Arbitrum. Integrating GHO as a collateral asset into Synthetix v3 is a strategic move that supports this expansion.
 
 ## Specification
 
