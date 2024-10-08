@@ -1,6 +1,6 @@
 ---
 sip: <to be assigned>
-title: Support GHO and stataGHO as LP Collateral on Arbitrum
+title: Add GHO (stataGHO) as a new collateral type to Synthetix V3 on Arbitrum
 network: Arbitrum
 status: Draft
 type: Governance
@@ -14,11 +14,10 @@ created: 2024-09-18
 
 ## Simple Summary
 
-This SIP proposes to add support for GHO (Aave's GHO Stablecoin) and stataGHO (Static Aave Arbitrum GHO) as LP collateral on Synthetix v3 on Arbitrum, enabling users to earn lending fees from Aave and trading rewards from Synthetix Perps.
+This proposal outlines a plan to add stataGHO (Static GHO) to the Spartan Council Pool on Synthetix V3 on Arbitrum, enabling users to earn lending fees from Aave and trading rewards from Synthetix Perps.
 
 ## Abstract
 
-- Support GHO as a collateral type for the Arbitrum V3 deployment with minting at a 125% collateral ratio (C-ratio) and a maximum LP cap of $50M.
 - Support stataGHO as Arbitrum LP collateral to provide Synthetix LPs with yield-generating collateral, enhancing liquidity and scaling capabilities of Synthetix V3 & Perps on Arbitrum. The use of stataTokens mitigates concerns associated with the rebasing nature of aTokens, facilitating smoother integration with Synthetix.
 
 ## Motivation
@@ -39,17 +38,13 @@ The ALC believes that the AAVE DAO and Synthetix DAO can benefit from close coll
 
 ## Specification
 
-### Overview
+Adding stataGHO to Synthetix V3 involves deploying a vault accepting static atokens to automatically manage the rebasing tokens and integrate them into the Arbitrum LP. This will enable users to deposit these assets, earn lending yields, and participate in perps trading while accounting for yield rebasing from lending markets.
 
-Implementation of this SIP can happen today through the available GHO Chainlink Data push Feed on Arbitrum. Chainlink Data Streams is also actively developing a GHO low latency pull feed for use on Synthetix markets.
+Synthetix will use the V3 vault manager to fetch the current ratio of statatokens / GHO, and then denominate the vault of statatokens in GHO. This will be used as the oracle price of GHO, as the rest of the Andromeda deployment is denominated in GHO.
 
-Below are the configurable values for GHO LP (Via SCCP):
+To maintain sufficient GHO liquidity for traders, the protocol will limit non-GHO collateral types to a maximum of 50% of the total LP collateral.
 
-| Parameter         | Value |
-| ----------------- | ----- |
-| Maximum LP amount | $50M  |
-| Issuance Ratio    | 125%  |
-| Liquidation Ratio | 105%  |
+Potential Risks - Aave insolvency (limited due to the over-collateralization and low-risk nature of GHO) - Despite these risks, the attractiveness of using stataGHO as collateral on Synthetix outweighs the potential drawbacks.
 
 ### Technical Specification
 
