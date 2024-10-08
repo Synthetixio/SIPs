@@ -40,7 +40,7 @@ The ALC believes that the AAVE DAO and Synthetix DAO can benefit from close coll
 
 ### Overview
 
-Implementation of this SIP will be contingent on the availability of a high frequency GHO price oracle on Arbitrum. This is actively being developed by Chainlink.
+Implementation of this SIP can happen today through the available GHO Chainlink Data push Feed on Arbitrum. Chainlink Data Streams is also actively developing a GHO low latency pull feed for use on Synthetix markets.
 
 The below details the GHO LP Configurable Values (Via SCCP)
 
