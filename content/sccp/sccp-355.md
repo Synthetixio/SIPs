@@ -2,7 +2,9 @@
 sccp: 355
 title: Update Leverage on Spot Synths
 network: Arbitrum
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x5a47e36209dd41c66578a155fe3249cc184c78fad8d0747a5802c64b6ea0b797
 type: Governance
 created: 2024-10-03
 author: Kaleb
