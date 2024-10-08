@@ -22,7 +22,11 @@ Add GHO as a supported collateral type for Arbitrum V3 deployment with minting a
 
 ## Motivation
 
-GHO is a decentralized multi-collateral stablecoin that is fully backed, transparent and native to the Aave Protocol with over [155M](https://aave.tokenlogic.xyz/gho) of circulating supply.
+GHO is a highly secure, decentralized stablecoin. The backing is high quality and the collateral ratio exceeds [2.20](https://aave.tokenlogic.xyz/collateral) and consists of high-quality assets like wstETH and wETH making up [23.67%](https://aave.tokenlogic.xyz/gho) and [20.20%](https://aave.tokenlogic.xyz/gho) respectively of all collateral. The GHO peg has shown resiliency during market downturns and the increase of the GHO Stability Module will bring even more security.
+
+GHO on Arbitrum is brought and secured through the Chainlink CCIP bridge with the highest security standards in the industry to prevent against overminting attacks. Since the launch on Arbitrum in July, nearly 20 Million GHO have been bridged to Arbitrum.
+
+Further details about GHO can be found [here](https://docs.gho.xyz/).
 
 The collateral ratio exceeds [2.20](https://aave.tokenlogic.xyz/collateral) and is consists of by high-quality assets like wstETH and wETH making up [23.67%](https://aave.tokenlogic.xyz/gho) and [20.20%](https://aave.tokenlogic.xyz/gho) respectively of all collateral.
 
