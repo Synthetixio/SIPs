@@ -33,7 +33,6 @@ With the initial phase of the launch complete, the Aave Liquidity Committee (ALC
 
 The ALC believes that the AAVE DAO and Synthetix DAO can benefit from close collaboration. Not only will GHO serve as pristine collateral with low risk to the Synthetix ecosystem, but this integration can serve as the start to further collaborations such as launching a GHO market and even Synthetix V3 serving as a GHO facilitator in the future.
 
-Further details about GHO can be found [here](https://docs.gho.xyz/).
 
 The Chainlink CCIP bridge was deployed by Aave Governance and has been in production since early July. GHO has also been integrated into Aave v3 on Arbitrum.
 
