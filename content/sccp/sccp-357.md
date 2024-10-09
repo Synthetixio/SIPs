@@ -17,6 +17,7 @@ This SCCP proposes to add the below margins to Perps V3 Implementation:
 |    cbBTC   |        1.00%       |        7.50%       |            100            |     35,000    |
 |   cbETH    |        1.00%       |       10.00%       |           1,750           |    350,000    |
 |   wstETH   |        1.00%       |       10.00%       |           1,750           |    350,000    |
+|   WETH     |        1.00%      |       10.00%       |           2,500           |    350,000    |
 
 - the `discountScalar` would be set to 1 for all margins
 - the collateral liquidation penalty is 3 bp (collateralLiquidateRewardRatioD18).
