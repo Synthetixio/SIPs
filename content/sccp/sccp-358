@@ -25,6 +25,9 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum.
 |    PEOPLE  |                               |                        |                             |                   |                   |                    |
 |    ZRO     |                               |                        |                             |                   |                   |                    |
 |    RENDER  |                               |                        |                             |                   |                   |                    |
+|    NOT     |                               |                        |                             |                   |                   |                    |
+|    SATS    |                               |                        |                             |                   |                   |                    |
+|    IO      |                               |                        |                             |                   |                   |                    |
 
 
 ## Arbitrum Markets:
@@ -79,6 +82,9 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum.
 |    PEOPLE  |                               |                        |                             |                   |                   |                    |
 |    ZRO     |                               |                        |                             |                   |                   |                    |
 |    RENDER  |                               |                        |                             |                   |                   |                    |
+|    NOT     |                               |                        |                             |                   |                   |                    |
+|    SATS    |                               |                        |                             |                   |                   |                    |
+|    IO      |                               |                        |                             |                   |                   |                    |
 
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
