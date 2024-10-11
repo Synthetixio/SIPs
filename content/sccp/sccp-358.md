@@ -41,6 +41,7 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum.
 |    AXL     |                               |                        |                             |                   |                   |                    |
 |    AXS     |                               |                        |                             |                   |                   |                    |
 |    BAL     |                               |                        |                             |                   |                   |                    |
+|    BCH     |                               |                        |                             |                   |                   |                    |
 |    BLUR    |                               |                        |                             |                   |                   |                    |
 |    BOME    |                               |                        |                             |                   |                   |                    |
 |    BONK    |                               |                        |                             |                   |                   |                    |
