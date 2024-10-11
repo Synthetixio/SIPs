@@ -5,7 +5,7 @@ network: Base, Arbitrum
 status: Draft
 type: Governance
 created: 2024-10-11
-author: @robin2192, Kaleb
+author: Robin (@robin2192), Kaleb
 ---
 
 # Simple Summary
