@@ -2,7 +2,7 @@
 sr: 2
 title: A Synthetix Reboot
 author: Benjamin Celermajer
-status: Draft
+status: Implemented
 created: 2024-09-25T00:00:00.000Z
 network: Ethereum & Optimism
 type: Meta-Governance
