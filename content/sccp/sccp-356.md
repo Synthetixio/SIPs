@@ -2,7 +2,7 @@
 sccp: 356
 title: Update Perps V3 Parameters - Base
 network: Base
-status: Draft
+status: Implemented
 type: Governance
 created: 2024-10-08
 author: Kaleb
