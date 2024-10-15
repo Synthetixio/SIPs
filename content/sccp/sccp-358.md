@@ -1,7 +1,7 @@
 ---
 sccp: 358
 title: Deploy More Markets on Perps V3 Base and Arbitrum
-network: Base & Arbitrum
+network: Arbitrum & Base
 status: Draft
 type: Governance
 created: 2024-10-11
