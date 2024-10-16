@@ -1,6 +1,6 @@
 ---
 sccp: 359
-title: Update Perp Market Parameters
+title: Update Perp Market Parameters - Max Funding Velocity
 network: Base
 status: Draft
 type: Governance
