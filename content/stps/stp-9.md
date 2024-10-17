@@ -1,7 +1,7 @@
 ---
 stp: 9
 title: Issue Treasury debt
-status: Draft
+status: Rejected
 author: Cavalier (@cavalier_eth)
 implementation-date: 
 discussions-to: TC Discord Channel
