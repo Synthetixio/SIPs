@@ -4,7 +4,7 @@ title: Thales - Create Pool and register Markets
 type: Governance
 network: Optimism
 author: cyberduck, Cavalier (@cavalier_eth)
-status: Draft
+status: Rejected
 created: 2023-09-07
 ---
 

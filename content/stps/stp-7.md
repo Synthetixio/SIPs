@@ -1,7 +1,7 @@
 ---
 stp: 7
 title: Create and fund the Innovation Pool
-status: Draft
+status: Rejected
 author: Cavalier (@cavalier_eth)
 implementation-date: 
 discussions-to: TC Discord Channel
