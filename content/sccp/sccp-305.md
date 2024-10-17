@@ -3,7 +3,7 @@ sccp: 305
 title: BetSwirl - Create Pool and register Market
 network: Arbitrum
 author: Romauld Hog (@RomualdH), Cavalier (@cavalier_eth)
-status: Draft
+status: Rejected
 type: Governance
 created: 2023-09-01
 ---
