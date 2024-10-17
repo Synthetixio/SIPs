@@ -3,7 +3,7 @@ sccp: 306
 title: Create the Kwenta Pool 
 network: Optimism
 author: Jeremy (@jchiaramonte7), Cavalier (@cavalier_eth)
-status: Draft
+status: Rejected
 created: 2023-09-06
 type: Governance
 ---
