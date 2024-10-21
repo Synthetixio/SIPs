@@ -1,6 +1,6 @@
 ---
 sccp: 355
-network: Base, Arbitrum
+network: Base & Arbitrum
 title: Creating referral code and tracking code for mass.money
 author: Robin (@robin2192), Rudy
 status: Draft
