@@ -5,8 +5,8 @@ network: Base
 status: Approved
 type: Governance
 created: 2024-10-08
-proposal: >- https://gov.synthetix.io/#/proposal/0xc14f719687bfee53b436957bda6d631bc3f1847ce11e3f76945d49d36d46adbd
-
+proposal: >-
+  https://gov.synthetix.io/#/proposal/0xc14f719687bfee53b436957bda6d631bc3f1847ce11e3f76945d49d36d46adbd
 author: Kaleb
 ---
 
