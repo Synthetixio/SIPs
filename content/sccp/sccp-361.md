@@ -1,6 +1,6 @@
 ---
 sccp: 361
-title: Deploy GOAT and MOODENG Markets to Perps V3 Base and Arbitrum
+title: Deploy More Markets to Perps V3 Base and Arbitrum
 network: Arbitrum & Base
 status: Draft
 type: Governance
@@ -18,6 +18,8 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum.
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------------:|:-----------------:|:------------------:|
 |    GOAT    |                               |                        |                             |                     |                   |                    |
 |    MOODENG |                               |                        |                             |                     |                   |                    |
+|    SAFE    |                               |                        |                             |                     |                   |                    |
+|    CAT     |                               |                        |                             |                     |                   |                    |
 
 
 ## Arbitrum Markets:
@@ -26,6 +28,8 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum.
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------------:|:-----------------:|:------------------:|
 |    GOAT    |                               |                        |                             |                     |                   |                    |
 |    MOODENG |                               |                        |                             |                     |                   |                    |
+|    SAFE    |                               |                        |                             |                     |                   |                    |
+|    CAT     |                               |                        |                             |                     |                   |                    |
 
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
