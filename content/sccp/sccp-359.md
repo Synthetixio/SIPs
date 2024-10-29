@@ -5,6 +5,8 @@ network: Base
 status: Draft
 type: Governance
 created: 2024-10-16
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xf9edb74411a559572e68f22f80aa0103530dc4b4bba8d7644b67755307d85d59
 author: Kaleb
 ---
 
