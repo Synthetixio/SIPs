@@ -12,28 +12,15 @@ author: Robin (@robin2192), Kaleb
 
 This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum.
 
-## Base Markets:
-
-| **Market** | **minimumInitialMarginRatio** | **InitialMarginRatio** | **maintenanceMarginScalar** |    **skewScale**    | **maxMarketSize** | **maxMarketValue** |
-|:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------------:|:-----------------:|:------------------:|
-|    GOAT    |                               |                        |                             |                     |                   |                    |
-|    MOODENG |                               |                        |                             |                     |                   |                    |
-|    SAFE    |                               |                        |                             |                     |                   |                    |
-|    CAT     |                               |                        |                             |                     |                   |                    |
-
-
-## Arbitrum Markets:
-
-| **Market** | **minimumInitialMarginRatio** | **InitialMarginRatio** | **maintenanceMarginScalar** |    **skewScale**    | **maxMarketSize** | **maxMarketValue** |
-|:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------------:|:-----------------:|:------------------:|
-|    GOAT    |                               |                        |                             |                     |                   |                    |
-|    MOODENG |                               |                        |                             |                     |                   |                    |
-|    SAFE    |                               |                        |                             |                     |                   |                    |
-|    CAT     |                               |                        |                             |                     |                   |                    |
-
+| **Market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** |
+|:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|
+|    GOAT    |               5%              |          2.459         |            0.317            |      20M      |     5,000,000     |      3,000,000     |
+|   MOODENG  |               5%              |          1.588         |            0.317            |      50M      |     17,000,000    |      3,000,000     |
+|    SAFE    |               5%              |          1.211         |            0.317            |       3M      |      500,000      |       500,000      |
+|     CAT    |               5%              |          1.575         |            0.328            |      250B     |   35,000,000,000  |      1,000,000     |
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
-- TakerFeeRatio: 10 bp
+- TakerFeeRatio: 10 bp (5 bp during the promotional period)
 - MakerFeeRatio: 0 bp
 - maxFundingVelocity: 9
 - flagRewardRatio: 3 bp
