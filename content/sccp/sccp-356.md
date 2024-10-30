@@ -4,6 +4,8 @@ title: Update Perps V3 Parameters - Base
 network: Base
 status: Implemented
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x2e5e46cbe9ee39851a34479f6ff7a88c92033e6f0096ec41819f60f78dc41a1d
 created: 2024-10-08
 proposal: >- 
   https://snapshot.org/#/snxgov.eth/proposal/0xc14f719687bfee53b436957bda6d631bc3f1847ce11e3f76945d49d36d46adbd
