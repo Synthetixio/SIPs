@@ -2,7 +2,7 @@
 sccp: 359
 title: Update Perp Market Parameters - Max Funding Velocity
 network: Arbitrum
-status: Draft
+status: Implemented
 type: Governance
 created: 2024-10-16
 proposal: >-
