@@ -3,7 +3,7 @@ sccp: 362
 title: Streamline governance presentations
 network: Ethereum
 status: Draft
-type: Metagovernance
+type: Meta-Governance
 created: 2024-10-31
 author: Cavalier
 ---
