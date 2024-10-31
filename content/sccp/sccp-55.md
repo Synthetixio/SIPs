@@ -20,7 +20,7 @@ This SCCP proposes changing the debt snapshot stale time to 12 hours.
 
 <!--A short (~200 word) description of the variable change proposed.-->
 
-Following on from [SCCP-52](sccp-52.md), the pDAO will call [`SystemSettings.setDebtSnapshotStaleTime(43800)`](https://etherscan.io/address/0x703D37fb776A4C905e28f7Ff23C73102ce36E08B#writeContract).
+Following on from [SCCP-52](https://sips.synthetix.io/sccp/sccp-52/), the pDAO will call [`SystemSettings.setDebtSnapshotStaleTime(43800)`](https://etherscan.io/address/0x703D37fb776A4C905e28f7Ff23C73102ce36E08B#writeContract).
 Note that the argument corresponds to 12 hours and 10 minutes, allows the keeper bot 10 minutes of leeway
 to mine transactions while maintaining a 12 hour snapshot frequency.
 The keeper bot will still take snapshots earlier than 12 hours if the deviation exceeds its configured

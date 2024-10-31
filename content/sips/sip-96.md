@@ -32,7 +32,7 @@ When a blockchain undergoes a hard fork, there could be two different versions o
 
 To protect traders and SNX stakers against this uncertainty, this framework proposes to suspend the affected Synths 72 hours before the hard fork event.
 
-In the case of contentious hard forks where there are two competing forks, a SIP could be proposed, for example in the case of the recent [BCH fork](.sip-95.md), to the community and stakers to delist the synths and then re-examine relisting the synths once the dominant fork and price feeds are established.
+In the case of contentious hard forks where there are two competing forks, a SIP could be proposed, for example in the case of the recent [BCH fork](https://sips.synthetix.io/sips/sip-95.md), to the community and stakers to delist the synths and then re-examine relisting the synths once the dominant fork and price feeds are established.
 
 ## Rationale
 

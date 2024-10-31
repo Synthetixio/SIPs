@@ -1,7 +1,7 @@
 ---
 stp: 12
 title: Designated multisig for fiat expenses
-status: Draft
+status: Rejected
 author: Cavalier (@cavalier_eth)
 implementation-date: 
 discussions-to: TC Discord Channel

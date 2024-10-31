@@ -30,7 +30,7 @@ The changes proposed are listed below:
 
 The monitoring of Chainlink oracles shows that it would be sufficient to mitigate frontrunning opportunities with a fee reclamation window of 3 minutes. The Chainlink team has worked to ensure that price deviations are updated within the reclamation window.
 
-The current fee reclamation window was set to 5 minutes in [SCCP-43](.sccp-43.md) to monitor the Chainlink oracles and was intended at the time to eventually reduce the window back to 3 minutes as soon as possible.
+The current fee reclamation window was set to 5 minutes in [SCCP-43](https://sips.synthetix.io/sccp/sccp-43/) to monitor the Chainlink oracles and was intended at the time to eventually reduce the window back to 3 minutes as soon as possible.
 
 A lower fee reclamation window improves the UX for traders trading on Synthetix exchange and other synth exchange products on L1.
 

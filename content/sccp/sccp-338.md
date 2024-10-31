@@ -2,7 +2,7 @@
 sccp: 338
 title: Set Arbitrum Yield-Generating Asset LP & Issuance Variables
 network: Arbitrum
-status: Draft
+status: Approved
 type: Governance
 author: Matt, DSacks
 proposal: >-

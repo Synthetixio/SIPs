@@ -45,6 +45,10 @@ const IndexPage = () => (
         and a{' '}
         <a href="https://github.com/Synthetixio/SIPs/blob/master/stp-x.md">
           template STP here
+        </a>{' '}
+        and a{' '}
+        <a href="https://github.com/Synthetixio/SIPs/blob/master/sr-x.md">
+          template SR here
         </a>
         .
       </li>

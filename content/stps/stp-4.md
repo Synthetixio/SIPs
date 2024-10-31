@@ -1,7 +1,7 @@
 ---
 stp: 4
 title: V3 SNX Staking Pool
-status: Approved
+status: Deprecated
 author: Kain (@kaiynne), Cav (@Cavalier)
 implementation-date: TBA
 discussions-to: TC Discord Channel

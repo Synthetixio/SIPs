@@ -16,7 +16,7 @@ const commonValidationSchema = Yup.object().shape({
   status: Yup.string().oneOf(statuses),
   author: Yup.string().required(),
   network: Yup.string()
-    .oneOf(['Ethereum', 'Optimism', 'Ethereum & Optimism','Base','Ethereum, Optimism & Base','Ethereum & Base','Optimism & Base','Arbitrum','Ethereum, Optimism, Base & Arbitrum'])
+    .oneOf(['Ethereum', 'Optimism', 'Ethereum & Optimism','Base','Ethereum, Optimism & Base','Ethereum & Base','Optimism & Base','Arbitrum','Ethereum, Optimism, Base & Arbitrum','Ethereum & Arbitrum','Arbitrum & Base'])
     .required(),
   implementor: Yup.string().nullable(),
   release: Yup.string().nullable(),
@@ -45,6 +45,16 @@ const sccpValidationSchema = commonValidationSchema
   .noUnknown()
   .strict()
 
+const srValidationSchema = commonValidationSchema
+  .concat(
+    Yup.object().shape({
+      sr: Yup.number().required(),
+    }),
+  )
+  .noUnknown()
+  .strict()
+
+
 const stpValidationSchema = Yup.object()
   .shape({
     file: Yup.string().required(),
@@ -65,6 +75,7 @@ const stpValidationSchema = Yup.object()
     const sips = await g('./content/sips/*.md')
     const stps = await g('./content/stps/*.md')
     const sccp = await g('./content/sccp/*.md')
+    const sr = await g('./content/sr/*.md')
 
     // SIP
     await Promise.all(
@@ -91,6 +102,15 @@ const stpValidationSchema = Yup.object()
         const { attributes } = fm(content)
         const castValues = sccpValidationSchema.cast({ file, ...attributes })
         return await sccpValidationSchema.validate(castValues)
+      }),
+    )
+    // SR
+    await Promise.all(
+      sr.map(async (file) => {
+        const content = await fs.readFile(file, 'utf-8')
+        const { attributes } = fm(content)
+        const castValues = srValidationSchema.cast({ file, ...attributes })
+        return await srValidationSchema.validate(castValues)
       }),
     )
   } catch (error) {

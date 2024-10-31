@@ -1,6 +1,6 @@
 ---
 stp: 13
-status: Approved
+status: Deprecated
 title: V3 Data Analytics API
 author: Michael Carrot Anderson (@michaelcarrotanderson)
 implementation-date: 
