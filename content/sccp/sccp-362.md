@@ -2,7 +2,9 @@
 sccp: 362
 title: Streamline governance presentations
 network: Ethereum
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xa25ebbbca24dd131a01424beb2c0a65b4ebc61df93cb949549e8b4b067789bb4
 type: Meta-Governance
 created: 2024-10-31
 author: Cavalier
