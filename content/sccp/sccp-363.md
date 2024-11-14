@@ -2,7 +2,9 @@
 sccp: 363
 title: Deploy PNUT On Perps V3
 network: Arbitrum & Base
-status: Draft
+status: Implemented
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x62d76524be2eb903c0f9ca307ac612ee8ae7886353bc7e5856150a697fdd6574
 type: Governance
 created: 2024-11-13
 author: Kaleb
