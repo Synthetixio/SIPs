@@ -4,7 +4,7 @@ title: Update Keeper Gas Units
 network: Arbitrum & Base
 status: Implemented
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x62d76524be2eb903c0f9ca307ac612ee8ae7886353bc7e5856150a697fdd6574
+  https://snapshot.org/#/snxgov.eth/proposal/0x9998aeb7cf3ea0cf077ae1b7b9f99c80b04ac60e47dc6aa68d93c0d90edffc75
 type: Governance
 created: 2024-11-14
 author: Kaleb
