@@ -1,6 +1,6 @@
 ---
 sccp: 366
-title: Lower the minInitialMargin
+title: Lower the minimum position margin
 network: Arbitrum & Base
 status: Vote_Pending
 type: Governance
