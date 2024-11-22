@@ -1,5 +1,5 @@
 ---
-sccp: 367
+sccp: 369
 network: Arbitrum
 title: Creating referral code and tracking code for Parifi
 author: Sudeep (@sudeepb02)
