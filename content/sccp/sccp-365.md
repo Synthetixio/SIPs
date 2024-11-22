@@ -2,7 +2,7 @@
 sccp: 365
 title: Update Keeper Settlement Reward
 network: Arbitrum & Base
-status: Vote_Pending
+status: Implemented
 type: Governance
 created: 2024-11-19
 author: Kaleb
