@@ -1,5 +1,5 @@
 ---
-sccp: 366
+sccp: 367
 title: Temporarily Lower the locked OI Ratio to 0.25
 network: Arbitrum
 status: Vote_Pending
