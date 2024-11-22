@@ -6,6 +6,8 @@ status: Vote_Pending
 type: Governance
 created: 2024-11-22
 author: Kaleb
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x2a190db6b1c38d2a5930f1efb4cec4af602e0eb8b697579edb6fe005543f60ad
 ---
 
 # Simple Summary
