@@ -14,9 +14,9 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum:
 
 | **Market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** |
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|
-|     CAT    |               5%              |          0.449         |            0.335            |  100 billion  |    50 trillion    |         1m         |
+|     CAT    |               5%              |          0.449         |            0.335            |  100 billion  |    50 trillion    |         2m         |
 |    DEGEN   |               5%              |          0.658         |            0.317            |  100 million  |    600 million    |         1m         |
-|    SLERF   |               5%              |          1.073         |            0.317            |   10 million  |     15 million    |        500k        |
+|    SLERF   |               5%              |          1.073         |            0.317            |    5 million  |     15 million    |        500k        |
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
 - TakerFeeRatio: 10 bp 
