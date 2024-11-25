@@ -2,7 +2,7 @@
 sccp: 366
 title: Lower the minimum position margin
 network: Arbitrum & Base
-status: Vote_Pending
+status: Implemented
 type: Governance
 created: 2024-11-19
 author: Kaleb
