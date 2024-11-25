@@ -3,8 +3,10 @@ sccp: 360
 network: Arbitrum & Base
 title: Creating referral code and tracking code for mass.money
 author: Robin (@robin2192), Rudy
-status: Draft
+status: Implemented
 created: 2024-09-25
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x4519112ecb368a1aab22f1f2cb48fcb7b2ba4a89650e90b003215c79047c5973
 type: Governance
 ---
 
