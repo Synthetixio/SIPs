@@ -26,7 +26,7 @@ This SCCP proposes to increase the cap on the LUSD wrappr to 50 million sUSD in 
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The DAI wrappr, which currently holds 30 million DAI, needs to be unwound as per [SCCP-150](https://sips-geil88lvh-synthetixio.vercel.app/sccp/sccp-150/). However, the LUSD wrappr capacity is around sUSD 25 million sUSD.
+The DAI wrappr, which currently holds 30 million DAI, needs to be unwound as per [SCCP-150](https://sips.synthetix.io/sccp/sccp-150/). However, the LUSD wrappr capacity is around sUSD 25 million sUSD.
 Therefore, this SCCP proposes to increase the LUSD wrappr to 50 million sUSD, which will allow us to unwind the collateral in the DAI wrappr while maintaining a certain amount of capacity buffer in the LUSD on-ramp.
 
 ## Copyright
