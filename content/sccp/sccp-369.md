@@ -3,8 +3,10 @@ sccp: 369
 network: Arbitrum
 title: Creating referral code and tracking code for Parifi
 author: Sudeep (@sudeepb02)
-status: Draft
+status: Implemented
 created: 2024-11-22
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x1acadc5fd1fcc3c34dc5b3e5b39fd5c5b8f107c201c81b1fca2b473e55e24330
 type: Governance
 ---
 

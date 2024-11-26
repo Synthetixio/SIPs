@@ -2,7 +2,7 @@
 sccp: 368
 title: Enable sUSDC to be used as margin on Arbitrum 
 network: Arbitrum
-status: Vote_Pending
+status: Implemented
 type: Governance
 created: 2024-11-22
 author: Kaleb
