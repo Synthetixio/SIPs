@@ -14,7 +14,7 @@ Create a new tracking code for Synthetix Exchange with the treasury multisafe as
 
 ## Abstract
 
-The referral address is 0xd25215758734dd3ade497ce04de1c35820964126, and we would like to use the following tracking code: “SYNTHETIX EXCHANGE”.
+The referral address is 0xd25215758734dd3ade497ce04de1c35820964126, and we would like to use the following tracking code: “SYNTHETIX_EXCHANGE”.
 
 ## Motivation
 
