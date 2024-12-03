@@ -3,7 +3,9 @@ sccp: 371
 network: Arbitrum & Base
 title: Creating tracking code for Synthetix Exchange
 author: Robin (@robin2192)
-status: Draft
+status: Vote_Pending
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x579911f893ca67464a0c103fa3974a858dd245baa02c334cb9478002a7c54b1a
 created: 2024-11-26
 type: Governance
 ---
