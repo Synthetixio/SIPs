@@ -2,7 +2,7 @@
 sccp: 357
 title: Support New Margins on Perps V3
 network: Base
-status: Approved
+status: Implemented
 type: Governance
 created: 2024-10-08
 proposal: >-
