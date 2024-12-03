@@ -2,7 +2,7 @@
 sccp: 361
 title: Deploy More Markets to Perps V3 Base and Arbitrum
 network: Arbitrum & Base
-status: Approved
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x5e7cf75d134a601387307761637ae1518d597ba3da6f48ea787149ed6ee62d18
 type: Governance
