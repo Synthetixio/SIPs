@@ -4,7 +4,7 @@ title: Deploy More Markets to Perps V3 Base and Arbitrum
 network: Arbitrum & Base
 status: Vote_Pending
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x178951ceb2c2ed2bbc4aeb1813bd63f34d2ab6383075df18fd5e285bfb22bea3
+  https://snapshot.org/#/snxgov.eth/proposal/0x7dfe429b79f136243c3a9821508aee40fd4c708ff2ccd9faac6a3e70335b20c5
 type: Governance
 created: 2024-12-04
 author: Kaleb
