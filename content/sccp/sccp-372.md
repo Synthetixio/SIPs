@@ -16,9 +16,9 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum:
 
 | **Market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** |
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|
-|   MORPHO   |               5%              |          1.12          |             0.32            |   1,000,000   |     1,000,000     |      1,000,000     |
-|  CHILLGUY  |               5%              |          2.78          |             0.32            |   16,000,000  |     6,000,000     |      3,000,000     |
-|    AERO    |               5%              |          0.62          |             0.32            |   10,000,000  |     1,000,000     |        300,000     |
+|   MORPHO   |               5%              |          1.36          |             0.317           |   2,000,000   |     1,000,000     |      1,000,000     |
+|  CHILLGUY  |               5%              |          1.36          |             0.317           |    8,000,000  |     6,000,000     |      2,000,000     |
+|    AERO    |               5%              |          0.322         |             0.317           |      500,000  |     1,000,000     |        300,000     |
 
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
