@@ -1,6 +1,6 @@
 ---
 sccp: 374
-title: Update Oi Multiplier Update
+title: Update Oi Multiplier
 network: Base
 status: Vote_Pending
 proposal: >-
