@@ -2,7 +2,7 @@
 sccp: 373
 title: Update Trading Fees Distribution
 network: Arbitrum & Base
-status: Vote_Pendin
+status: Vote_Pending
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0xc74f174587a81d63b6075efa7c25b013d9862c5981a77f7cfb18b923a37350e8
 type: Governance
