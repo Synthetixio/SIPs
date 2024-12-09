@@ -4,7 +4,7 @@ title: Update Trading Fees Distribution
 network: Arbitrum & Base
 status: Vote_Pendin
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x7dfe429b79f136243c3a9821508aee40fd4c708ff2ccd9faac6a3e70335b20c5
+  https://snapshot.org/#/snxgov.eth/proposal/0xc74f174587a81d63b6075efa7c25b013d9862c5981a77f7cfb18b923a37350e8
 type: Governance
 created: 2024-12-09
 author: Kaleb
@@ -20,10 +20,6 @@ This SCCP proposes to update the trading fee distribution split as per the below
 |    **V3 LPs**    |          40%         |           70%          |          60%          |
 |  **Integrators** |          20%         |           0%           |          20%          |
 
-Currently the split is configured as:
-- 40% LPs
-- 20% v2 Debt Burn
-- 20% Integrator
 
 # Configurations
 

@@ -4,7 +4,7 @@ title: Update Oi Multiplier
 network: Base
 status: Vote_Pending
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x7dfe429b79f136243c3a9821508aee40fd4c708ff2ccd9faac6a3e70335b20c5
+  https://snapshot.org/#/snxgov.eth/proposal/0xb5c4a70dc63a18baf1aa596850af0c54d613fe5adda36812a95d77009676e3e1
 type: Governance
 created: 2024-12-09
 author: Kaleb
