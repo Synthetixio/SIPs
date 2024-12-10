@@ -4,7 +4,7 @@ title: Update Oi Multiplier
 network: Arbitrum & Base
 status: Vote_Pending
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0xb5c4a70dc63a18baf1aa596850af0c54d613fe5adda36812a95d77009676e3e1
+  https://snapshot.org/#/snxgov.eth/proposal/0x7e58ff657ba13e1e2baa1523ab8dfff33f96e00821487cd69b96617dd1f80a93
 type: Governance
 created: 2024-12-09
 author: Kaleb
@@ -12,7 +12,7 @@ author: Kaleb
 
 # Simple Summary
 
-This SCCP proposes to reduce the locked oi ratio on all perp markets to 0.10. Note that the multiplier is set to 0.5 on all markets except ETH and BTC markets where it's set to 0.25.
+This SCCP proposes to reduce the locked oi ratio on all perp markets to 0.10.
 
 # Abstract
 
