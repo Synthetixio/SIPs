@@ -14,19 +14,13 @@ author: Kaleb
 
 This SCCP proposes to update the trading fee distribution split as per the below:
 
-|     **Split**    | **Existing Config.** | **Synthetix Exchange** | **Other Integrators** |
-|:----------------:|:--------------------:|:----------------------:|:---------------------:|
-| **v2 Debt Burn** |          20%         |           30%          |          20%          |
-|    **V3 LPs**    |          40%         |           70%          |          60%          |
-|  **Integrators** |          20%         |           0%           |          20%          |
+|     **Split**    | **Existing Config.** | **New Config.** |
+|:----------------:|:--------------------:|:---------------:|
+| **v2 Debt Burn** |          40%         |       20%       |
+|    **V3 LPs**    |          40%         |       60%       |
+|  **Integrators** |          20%         |       20%       |
 
-
-# Configurations
-
-Due to the specificity pertaining to this split, the below will be configured:
-- The [referrer](https://arbiscan.io/address/0xebAC8Fc8752A267A36cE683A867000F69Fd0e73d) of Synthetix tracking will be configured to 20% (along with other integrators).
-- The referrer to the collector (debt burn) will be configured to 25%. Please note that a 25% configuration is applied on the fee after taking out integrator fee. Therefore, 1$ trading fee, 80 cents remain after integrator and therefore 20 cents is sent to the [TC address](https://arbiscan.io/address/0xf2107A85d8b79CBd2c5b2Bb63CA73Fd068040b67), entirely used for v2 debt buy back and burn.
-- TC will use 50% of the funds received on [this](https://arbiscan.io/address/0xebAC8Fc8752A267A36cE683A867000F69Fd0e73d) address will be distributed to v3 stakers and 50% will be used to buy v2 sUSD and burn. 
+It is important to mention that Treasury, signaled their intention to help supplement the v3 lp apy, by using part of their integrator fees in order to partially settle the v3 lp's debt. This would be performed at Treasury's descrition.
 
 The above configuration and TC action, helps achieve the split shown in the table above.
 
