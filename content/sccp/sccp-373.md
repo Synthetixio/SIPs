@@ -22,8 +22,6 @@ This SCCP proposes to update the trading fee distribution split as per the below
 
 It is important to mention that Treasury, signaled their intention to help supplement the v3 lp apy, by using part of their integrator fees in order to partially settle the v3 lp's debt. This would be performed at Treasury's descrition.
 
-The above configuration and TC action, helps achieve the split shown in the table above.
-
 
 # Motivation
 
