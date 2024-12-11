@@ -2,7 +2,7 @@
 sccp: 374
 title: Update Oi Multiplier
 network: Arbitrum & Base
-status: Vote_Pending
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x7e58ff657ba13e1e2baa1523ab8dfff33f96e00821487cd69b96617dd1f80a93
 type: Governance
