@@ -14,7 +14,7 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum:
 
 | **Market** 	| **minimumInitialMarginRatio** 	| **initialMarginRatio** 	| **maintenanceMarginScalar** 	| **skewScale** 	| **maxMarketSize** 	| **maxMarketValue** 	|
 |:----------:	|:-----------------------------:	|:----------------------:	|:---------------------------:	|:-------------:	|:-----------------:	|:------------------:	|
-|   SOLETH   	|             5.00%             	|           5.5          	|            0.333            	|      160m     	|        125m       	|         5m         	|
+|   SOLETH   	|             5.00%             	|           5.5          	|            0.333            	|      4.5b     	|        125m       	|         5m         	|
 |   VIRTUAL  	|             5.00%             	|          1.264         	|            0.317            	|       2m      	|        0.5m       	|        0.7m        	|
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
