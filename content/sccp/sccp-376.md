@@ -1,7 +1,7 @@
 ---
-sccp: 375
-title: Deploy More Markets to Perps V3 Base and Arbitrum
-network: Arbitrum & Base
+sccp: 376
+title: Deploy PENGU to Perps V3 Base
+network: Base
 status: Vote_Pending
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x3072e4468de2762adb836febef5e68d343347c75c7004f6d01fe31f8359f6c73
@@ -12,12 +12,11 @@ author: Kaleb
 
 # Simple Summary
 
-This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum:
+This SCCP proposes to deploy the below markets on Perps V3 on Base:
 
 | **Market** 	| **minimumInitialMarginRatio** 	| **initialMarginRatio** 	| **maintenanceMarginScalar** 	| **skewScale** 	| **maxMarketSize** 	| **maxMarketValue** 	|
 |:----------:	|:-----------------------------:	|:----------------------:	|:---------------------------:	|:-------------:	|:-----------------:	|:------------------:	|
-|   SOLETH   	|             5.00%             	|           5.5          	|            0.333            	|      4.5b     	|        125m       	|         5m         	|
-|   VIRTUAL  	|             5.00%             	|          1.264         	|            0.317            	|       2m      	|        0.5m       	|        0.7m        	|
+|   PENGU   	|             5.00%             	|           2.543          	|            0.317            	|      300m     	|        2b       	    |         3m         	|
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
 - TakerFeeRatio: 10 bp 
