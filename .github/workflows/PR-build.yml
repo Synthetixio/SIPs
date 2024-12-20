@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          node-version: 20
       - uses: actions/setup-node@v2
+        with:
+          node-version: '20'
       - name: Get latest npm version
         run: npm install -g npm@latest --prefix .
       - name: Install dependencies
