@@ -1,6 +1,6 @@
 ---
 sccp: 376
-title: Deploy More Markets to Perps V3 Base
+title: Deploy PENGU to Perps V3 Base
 network: Base
 status: Vote_Pending
 type: Governance
