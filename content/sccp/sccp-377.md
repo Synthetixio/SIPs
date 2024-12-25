@@ -4,7 +4,7 @@ title: Deploy KMNO and FARTCOIN to Perps V3 Base
 network: Base
 status: Vote_Pending
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x3072e4468de2762adb836febef5e68d343347c75c7004f6d01fe31f8359f6c73
+  https://snapshot.org/#/snxgov.eth/proposal/0x4eeddcc48550ab14b335b43f22a58613225535be27b0dc0d23740672eab9d90b
 type: Governance
 created: 2024-12-25
 author: Kaleb
