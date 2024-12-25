@@ -2,7 +2,7 @@
 sccp: 375
 title: Deploy More Markets to Perps V3 Base and Arbitrum
 network: Arbitrum & Base
-status: Vote_Pending
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x3072e4468de2762adb836febef5e68d343347c75c7004f6d01fe31f8359f6c73
 type: Governance
