@@ -33,7 +33,7 @@ The `baseFee` is the fee charged for exchange into a particular synth, or establ
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The main reason for this change is to decrease the likelihood of latency arbitrage attacks. Given that futures provide significant liquidity efficiency advantages to traders, raising fees on sLINK is needed to lean against the higher risk of latency arbitrage. Futhermore, trading with sSOL and sAVAX, having larger amount of volatility requires that fees be raised enough as to counter any consistent price advantage traders can appropriate from the exchange.
+The main reason for this change is to decrease the likelihood of latency arbitrage attacks. Given that futures provide significant liquidity efficiency advantages to traders, raising fees on sLINK is needed to lean against the higher risk of latency arbitrage. Furthermore, trading with sSOL and sAVAX, having larger amount of volatility requires that fees be raised enough as to counter any consistent price advantage traders can appropriate from the exchange.
 
 ## Copyright
 
