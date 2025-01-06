@@ -2,7 +2,7 @@
 sccp: 377
 title: Deploy KMNO and FARTCOIN to Perps V3 Base
 network: Base
-status: Vote_Pending
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x4eeddcc48550ab14b335b43f22a58613225535be27b0dc0d23740672eab9d90b
 type: Governance
