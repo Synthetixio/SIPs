@@ -1,6 +1,6 @@
 ---
 sccp: 378
-network: Arbitrum, Base & Optimism
+network: Optimism & Base
 title: Update tracking code for Synthetix Exchange
 author: Robin (@robin2192)
 status: Draft
