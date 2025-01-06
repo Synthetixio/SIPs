@@ -2,7 +2,7 @@
 sccp: 381
 network: Base
 title: Decrease OI Caps on the FTM Market to zero
-author: Kaleb
+author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 type: Governance
 ---

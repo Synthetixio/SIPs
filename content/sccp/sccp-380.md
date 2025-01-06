@@ -2,7 +2,7 @@
 sccp: 380
 network: Arbitrum
 title: Decrease OI Caps on Arbitrum Perps to Zero
-author: Kaleb
+author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 type: Governance
 ---
