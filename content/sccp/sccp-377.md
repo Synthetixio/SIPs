@@ -1,12 +1,12 @@
 ---
-sccp: 376
-title: Deploy PENGU to Perps V3 Base
+sccp: 377
+title: Deploy KMNO and FARTCOIN to Perps V3 Base
 network: Base
-status: Implemented
+status: Vote_Pending
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x3072e4468de2762adb836febef5e68d343347c75c7004f6d01fe31f8359f6c73
+  https://snapshot.org/#/snxgov.eth/proposal/0x4eeddcc48550ab14b335b43f22a58613225535be27b0dc0d23740672eab9d90b
 type: Governance
-created: 2024-12-11
+created: 2024-12-25
 author: Kaleb
 ---
 
@@ -16,7 +16,8 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base:
 
 | **Market** 	| **minimumInitialMarginRatio** 	| **initialMarginRatio** 	| **maintenanceMarginScalar** 	| **skewScale** 	| **maxMarketSize** 	| **maxMarketValue** 	|
 |:----------:	|:-----------------------------:	|:----------------------:	|:---------------------------:	|:-------------:	|:-----------------:	|:------------------:	|
-|   PENGU   	|             5.00%             	|           2.543          	|            0.317            	|      300m     	|        2b       	    |         3m         	|
+|   FARTCOIN  |             5.00%             	|           2.809         |            0.317              |      7m     	  |        2.5m       	|         3m         	|
+|   KMNO   	  |             5.00%             	|           0.291         |            0.317            	|      5m     	  |        2m       	  |         200k        |
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
 - TakerFeeRatio: 10 bp 
