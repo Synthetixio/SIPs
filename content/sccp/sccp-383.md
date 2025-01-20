@@ -1,5 +1,5 @@
 ---
-sccp: 377
+sccp: 383
 title: Deploy TRUMP and MELANIA to Perps V3 Base
 network: Base
 status: Vote_Pending
