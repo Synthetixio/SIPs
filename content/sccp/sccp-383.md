@@ -14,8 +14,8 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base:
 
 | **Market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** |
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|
-|   MELANIA  |             1.811             |          5.00%         |            0.408            |    750,000    |    1,000,000.00   |      3,000,000     |
-|    TRUMP   |             14.837            |          5.00%         |            0.407            |    750,000    |     105,000.00    |      2,000,000     |
+|   MELANIA  |             1.811             |          5.00%         |            0.408            |    750,000    |    1,000,000.00   |      2,000,000     |
+|    TRUMP   |             14.837            |          5.00%         |            0.407            |    750,000    |     105,000.00    |      3,000,000     |
 
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
