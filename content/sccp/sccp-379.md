@@ -3,8 +3,10 @@ sccp: 379
 network: Optimism & Base
 title: Creating tracking code for Synthetix Leverage
 author: Robin (@robin2192)
-status: Draft
+status: Implemented
 type: Governance
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0x43d598920c4f91805965e875bffb8a29ad4719b8c08fb6f4b24ef91d519843e0
 ---
 
 ## Simple Summary
