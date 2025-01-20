@@ -1,33 +1,31 @@
 ---
-sccp: 361
-title: Deploy More Markets to Perps V3 Base and Arbitrum
-network: Arbitrum & Base
+sccp: 377
+title: Deploy KMNO and FARTCOIN to Perps V3 Base
+network: Base
 status: Implemented
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x5e7cf75d134a601387307761637ae1518d597ba3da6f48ea787149ed6ee62d18
+  https://snapshot.org/#/snxgov.eth/proposal/0x4eeddcc48550ab14b335b43f22a58613225535be27b0dc0d23740672eab9d90b
 type: Governance
-created: 2024-10-28
-author: Robin (@robin2192), Kaleb
+created: 2024-12-25
+author: Kaleb
 ---
 
 # Simple Summary
 
-This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum.
+This SCCP proposes to deploy the below markets on Perps V3 on Base:
 
-| **Market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** |
-|:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|
-|    GOAT    |               5%              |          2.459         |            0.317            |      20M      |     5,000,000     |      3,000,000     |
-|   MOODENG  |               5%              |          1.588         |            0.317            |      50M      |     17,000,000    |      3,000,000     |
-|    SAFE    |               5%              |          1.211         |            0.317            |       3M      |      500,000      |       500,000      |
-|     CAT    |               5%              |          1.575         |            0.328            |      250B     |   35,000,000,000  |      1,000,000     |
+| **Market** 	| **minimumInitialMarginRatio** 	| **initialMarginRatio** 	| **maintenanceMarginScalar** 	| **skewScale** 	| **maxMarketSize** 	| **maxMarketValue** 	|
+|:----------:	|:-----------------------------:	|:----------------------:	|:---------------------------:	|:-------------:	|:-----------------:	|:------------------:	|
+|   FARTCOIN  |             5.00%             	|           2.809         |            0.317              |      7m     	  |        2.5m       	|         3m         	|
+|   KMNO   	  |             5.00%             	|           0.291         |            0.317            	|      5m     	  |        2m       	  |         200k        |
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
-- TakerFeeRatio: 10 bp (5 bp during the promotional period)
+- TakerFeeRatio: 10 bp 
 - MakerFeeRatio: 0 bp
 - maxFundingVelocity: 9
 - flagRewardRatio: 3 bp
 - minimumPositionMargin: 50
-- lockedOiRatio: 0.5 
+- lockedOiRatio: 0.1
 - maxLiquidationLimitMultiplier: 1.5
 - maxLiquidationPD: 5 bp
 - endorsedLiquidator: "0x11233749514Ab8d00C0A5873DF7428b3db70030f"

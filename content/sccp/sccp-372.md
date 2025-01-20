@@ -1,28 +1,28 @@
 ---
-sccp: 361
+sccp: 372
 title: Deploy More Markets to Perps V3 Base and Arbitrum
 network: Arbitrum & Base
 status: Implemented
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0x5e7cf75d134a601387307761637ae1518d597ba3da6f48ea787149ed6ee62d18
+  https://snapshot.org/#/snxgov.eth/proposal/0x7dfe429b79f136243c3a9821508aee40fd4c708ff2ccd9faac6a3e70335b20c5
 type: Governance
-created: 2024-10-28
-author: Robin (@robin2192), Kaleb
+created: 2024-12-04
+author: Kaleb
 ---
 
 # Simple Summary
 
-This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum.
+This SCCP proposes to deploy the below markets on Perps V3 on Base and Arbitrum:
 
 | **Market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** |
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|
-|    GOAT    |               5%              |          2.459         |            0.317            |      20M      |     5,000,000     |      3,000,000     |
-|   MOODENG  |               5%              |          1.588         |            0.317            |      50M      |     17,000,000    |      3,000,000     |
-|    SAFE    |               5%              |          1.211         |            0.317            |       3M      |      500,000      |       500,000      |
-|     CAT    |               5%              |          1.575         |            0.328            |      250B     |   35,000,000,000  |      1,000,000     |
+|   MORPHO   |               5%              |          1.36          |             0.317           |   2,000,000   |     1,000,000     |      1,000,000     |
+|  CHILLGUY  |               5%              |          1.36          |             0.317           |    8,000,000  |     6,000,000     |      2,000,000     |
+|    AERO    |               5%              |          0.322         |             0.317           |      500,000  |     1,000,000     |        300,000     |
+
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
-- TakerFeeRatio: 10 bp (5 bp during the promotional period)
+- TakerFeeRatio: 10 bp 
 - MakerFeeRatio: 0 bp
 - maxFundingVelocity: 9
 - flagRewardRatio: 3 bp

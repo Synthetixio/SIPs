@@ -2,7 +2,7 @@
 sccp: 351
 title: Update Fee Structure - Promotional Period
 network: Arbitrum
-status: Approved
+status: Implemented
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x9eadc47c5b77dced3871087776bfaf1216c1401ae9c6fbd8e0ce53595c831ed8
 type: Governance
