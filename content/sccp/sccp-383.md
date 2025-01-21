@@ -4,6 +4,8 @@ title: Deploy TRUMP and MELANIA to Perps V3 Base
 network: Base
 status: Vote_Pending
 type: Governance
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0xfb2e7385229d57ae370d731f5be0ec118dea6bac1e4530ad3b9eabb141df0e77
 created: 2025-01-20
 author: Kaleb
 ---
@@ -15,7 +17,7 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base:
 | **Market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** |
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|
 |   MELANIA  |             1.811             |          5.00%         |            0.408            |    750,000    |    1,000,000.00   |      2,000,000     |
-|    TRUMP   |             14.837            |          5.00%         |            0.407            |    750,000    |     105,000.00    |      3,000,000     |
+|    TRUMP   |             14.837            |          5.00%         |            0.407            |   1,500,000   |     105,000.00    |      3,000,000     |
 
 
 Aside from the above parameters , the perps markets will have the following configurations as well:

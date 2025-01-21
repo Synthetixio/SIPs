@@ -5,6 +5,8 @@ title: Update Perps V3 Parameters
 author: Kaleb (@kaleb-keny)
 created: 2025-01-20
 status: Vote_Pending
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0x5209677161e659317ace75338b4cc23c57566f7ef720de6c63a62c002ef92a5b
 type: Governance
 ---
 
@@ -17,7 +19,7 @@ This SCCP proposes to update the perps v3 parameters as per the below:
 - Increase the velocity on other markets to 36, except for the ratio markets
 
 ### Maker Fees
-Increase the maker fees to 2 bp from 0 bp on eigen, io, mew, mkr, not, people, pol, popcat, render, sats, wld, zro, safe, goat, moodeng, pnut, cat, degen, slerf, morpho, chillguy, aero, soleth, pengu, virtual, kmno and fartcoin
+Increase the maker fees to 2 bp from 0 bp on eigen, io, mew, mkr, not, people, pol, popcat, render, sats, wld, zro, safe, goat, moodeng, pnut, cat, degen, slerf, morpho, chillguy, aero, pengu, virtual, kmno and fartcoin
 
 ### Skew Scale
 
