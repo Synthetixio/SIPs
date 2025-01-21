@@ -19,7 +19,7 @@ This SCCP proposes to update the perps v3 parameters as per the below:
 - Increase the velocity on other markets to 36, except for the ratio markets
 
 ### Maker Fees
-Increase the maker fees to 2 bp from 0 bp on eigen, io, mew, mkr, not, people, pol, popcat, render, sats, wld, zro, safe, goat, moodeng, pnut, cat, degen, slerf, morpho, chillguy, aero, soleth, pengu, virtual, kmno and fartcoin
+Increase the maker fees to 2 bp from 0 bp on eigen, io, mew, mkr, not, people, pol, popcat, render, sats, wld, zro, safe, goat, moodeng, pnut, cat, degen, slerf, morpho, chillguy, aero, pengu, virtual, kmno and fartcoin
 
 ### Skew Scale
 
