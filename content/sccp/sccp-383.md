@@ -2,7 +2,7 @@
 sccp: 383
 title: Deploy TRUMP and MELANIA to Perps V3 Base
 network: Base
-status: Vote_Pending
+status: Implemented
 type: Governance
 proposal: >-
  https://snapshot.org/#/snxgov.eth/proposal/0xfb2e7385229d57ae370d731f5be0ec118dea6bac1e4530ad3b9eabb141df0e77
