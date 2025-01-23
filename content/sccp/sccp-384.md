@@ -28,6 +28,7 @@ This SCCP proposes to update the perps v3 parameters as per the below:
 |   melania  |   1,500,000   |   3,730,900   |        58        |        232       |
 |     xrp    |   32,263,500  |   82,774,400  |         2        |        10        |
 
+*The slippage denoted above are on trades of size 500k$*
 
 ## Abstract
 
