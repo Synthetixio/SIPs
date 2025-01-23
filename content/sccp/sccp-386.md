@@ -31,7 +31,7 @@ With the above configuration the margin would have no discount imposed.
 
 # Motivation
 
-This was requested by a partner integrator who wishes to use sUSDC for margining in order to avoid having the procure snxUSD via a buy/sell in their implementation. Note that snxUSD can be swapped into sUSDC and back without any fees atomically at parity on base, but using sUSDC can facilitate the onboarding as the implementation would not need to buy snxUSD when adding as margin. Nevertheless, the protocol would have to deal with debt, as only snxUSD can be used to settle debt from losses in a perp position.
+This was requested by a partner integrator who wishes to use sUSDC for margining in order to avoid having the procure snxUSD via a buy/sell in their implementation. Note that snxUSD can be swapped into sUSDC and back without any fees atomically at parity on base, but using sUSDC can facilitate the onboarding as the implementation would not need to buy snxUSD when adding as margin. Nevertheless, the integrator would still have to deal with snx, as that is the only margin accepted to settle outstanding debt in order to withdraw a margin.
 
 # Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
