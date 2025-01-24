@@ -25,7 +25,7 @@ The main configurations of this margin are as follows:
 - maxCollateralAmount: 100m$
 - synth_usdc_upper_limit_discount: 0
 - synth_usdc_lower_limit_discount: 0
-- synth_usdc_discount_scalar: 1 wei
+- synth_usdc_discount_scalar: 1
 
 With the above configuration the margin would have no discount imposed.
 
