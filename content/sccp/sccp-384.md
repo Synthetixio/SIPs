@@ -16,7 +16,6 @@ This SCCP proposes to update the perps v3 parameters as per the below:
 
 | **market** |  **current**  |  **proposed** | **cex slippage** | **snx slippage** |
 |:----------:|:-------------:|:-------------:|:----------------:|:----------------:|
-|     sol    |    817,500    |   1,386,000   |         2        |         7        |
 |  fartcoin  |   5,094,000   |   8,710,600   |        49        |        198       |
 |     imx    |   5,304,800   |   9,217,700   |        58        |        232       |
 |   moodeng  |   28,071,600  |   50,595,000  |        83        |        332       |
@@ -27,6 +26,13 @@ This SCCP proposes to update the perps v3 parameters as per the below:
 |     tao    |     32,500    |     74,800    |        22        |        87        |
 |   melania  |   1,500,000   |   3,730,900   |        58        |        232       |
 |     xrp    |   32,263,500  |   82,774,400  |         2        |        10        |
+|    aero    |   1,429,300   |   2,407,400   |      245.56      |        982       |
+|    ordi    |   1,305,000   |   2,282,000   |       13.28      |        53        |
+|    pnut    |   54,128,800  |   95,366,700  |       18.57      |        74        |
+|     io     |   2,324,500   |   4,306,600   |       45.45      |        182       |
+|     ltc    |    469,000    |    982,900    |       5.38       |        22        |
+|    eigen   |   2,846,600   |   7,998,700   |       26.33      |        105       |
+|    trump   |    750,000    |   3,138,300   |       3.84       |        23        |
 
 *The slippage denoted above are on trades of size 500k$*
 
