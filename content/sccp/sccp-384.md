@@ -30,6 +30,16 @@ This SCCP proposes to update the perps v3 parameters as per the below:
 
 *The slippage denoted above are on trades of size 500k$*
 
+### Max Market Value
+
+| **market** | **current m$** | **proposed m$** | **cex m$** |
+|:----------:|:--------------:|:---------------:|:----------:|
+|     cat    |      2.00      |        1        |    10.64   |
+|    safe    |      0.41      |       0.25      |    2.02    |
+|    degen   |      1.00      |       0.5       |    4.65    |
+|    slerf   |      0.50      |       0.25      |    2.25    |
+
+
 ## Abstract
 
 
