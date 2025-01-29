@@ -4,7 +4,9 @@ network: Base
 title: Update Perps V3 Parameters
 author: Kaleb (@kaleb-keny)
 created: 2025-01-23
-status: Vote_Pending
+status: Implemented
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0x16d9dfcfc7877bacee2adb5c81ad2f79dd1a6d4f6d8a61a279dae36fd29d8963
 type: Governance
 ---
 
