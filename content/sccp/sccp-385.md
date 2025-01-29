@@ -2,8 +2,10 @@
 sccp: 385
 title: Deploy VELODROME and S to Perps V3 Base
 network: Base
-status: Vote_Pending
+status: Implemented
 type: Governance
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0x375be4a179d0718ef4daac1fa6e1cefd16e39ff15edad2b8472eec5b38d7f762
 created: 2025-01-23
 author: Kaleb
 ---

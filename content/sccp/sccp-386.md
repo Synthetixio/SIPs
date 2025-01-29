@@ -2,9 +2,11 @@
 sccp: 386
 title: Enable sUSDC As Margin
 network: Base
-status: Vote_Pending
+status: Implemented
 type: Governance
 created: 2025-01-23
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0xa683a7982d80db8bef1978953f6903e6b8b98a48169b5493946d448f4008196d
 author: Kaleb
 ---
 
