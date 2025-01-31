@@ -1,6 +1,6 @@
 ---
 sccp: 388
-title: Support sUSDS and stataUSDC as Margin on Perps V3
+title: Support sUSDS and stataBasUSDC as Margin on Perps V3
 network: Base
 status: Draft
 type: Governance
