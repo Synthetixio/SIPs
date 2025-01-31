@@ -12,22 +12,22 @@ author: Robin
 
 sUSDS is Spark's Savings USDS, which is an ERC-4626 representation of USDS in the Sky Savings Rate Module (SSR). sUSDS is redeemable for USDC via the Spark Peg Stability Module (PSM), which is currently integrated into 1inch on Base.
 
-Information on sUSDS and the Spark PSM can be found [here](https://docs.spark.fi/dev/savings/susds-token) and [here](https://docs.spark.fi/dev/savings/spark-psm), respectively.
+# Abstract
 
+Information on sUSDS and the Spark PSM can be found [here](https://docs.spark.fi/dev/savings/susds-token) and [here](https://docs.spark.fi/dev/savings/spark-psm), respectively.
 stataUSDC is a non-rebasing wrapper for Aave's USDC lending market. stataUSDC holders earn yield from Aave based on the USDC market's variable lending rate. 
 
 This SCCP proposes to add each collateral option as margin to Perps V3 on Base with the following implementation parameters:
 
 | **Margin** | **Discount Lower** | **Discount Upper** | **Max Collateral Amount** | **SkewScale** |
 |:----------:|:------------------:|:------------------:|:-------------------------:|:-------------:|
-|    sUSDS   |        TBD       |        TBD       |            TBD            |     TBD    |
-|  stataUSDC |        TBD       |        TBD       |            TBD            |     TBD    |
+|    [sUSDS](https://basescan.org/address/0x5875eee11cf8398102fdad704c9e96607675467a)   |        50 bp       |        51 bp       |             2m            |     1 wei     |
+|  [stataUSDC](https://basescan.org/address/0x4ea71a20e655794051d1ee8b6e4a3269b13ccacc) |        50 bp       |        51 bp       |            10m            |     1 wei     |
 
-sUSDS 
+
 - the `discountScalar` would be set to 1 for all margins
 - the collateral liquidation penalty is 3 bp (collateralLiquidateRewardRatioD18).
-- The caps would be set to allow for 3 simultaneous margins and 10 positions in any given account
-- The synth representation of the above margins would have a atomic swap fee of 30%, as a disincentive on swapping until [SIP](https://sips.synthetix.io/sips/sip-406/) is implemented
+- The synth representation of the above margins would have a atomic swap fee of 30%, as a disincentive on swapping until [SIP](https://sips.synthetix.io/sips/sip-406/) is implemented.
 
 # Motivation
 
