@@ -21,8 +21,8 @@ sUSDS and stataBasUSDC would be added as margin to Perps V3 on Base with the fol
 
 | **Margin** | **Discount Lower** | **Discount Upper** | **Max Collateral Amount** | **SkewScale** |
 |:----------:|:------------------:|:------------------:|:-------------------------:|:-------------:|
-|    [sUSDS](https://basescan.org/address/0x5875eee11cf8398102fdad704c9e96607675467a)   |        100 bp       |        101 bp       |             2m            |     1 wei     |
-|  [stataUSDC](https://basescan.org/address/0x4ea71a20e655794051d1ee8b6e4a3269b13ccacc) |        100 bp       |        101 bp       |            10m            |     1 wei     |
+|    [sUSDS](https://basescan.org/address/0x5875eee11cf8398102fdad704c9e96607675467a)   |        100 bp       |        101 bp       |             2m            |     1      |
+|  [stataUSDC](https://basescan.org/address/0x4ea71a20e655794051d1ee8b6e4a3269b13ccacc) |        100 bp       |        101 bp       |            10m            |     1      |
 
 
 - the `discountScalar` would be set to 1 for all margins
