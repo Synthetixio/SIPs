@@ -27,7 +27,7 @@ The `skewScale` is the parameter that determines the slippage incurred by the ma
 
 ## Motivation
 
-The main motivation behind this SCCP is to increase the incentive on arbitrageurs to balance out a skew that exposes to LP's to price action, given recent increased volatility of price moves. 
+The main motivation behind this SCCP is to increase the incentive on arbitrageurs to balance out a skew, given recent increased volatility of price moves. 
 
 ## Copyright
 
