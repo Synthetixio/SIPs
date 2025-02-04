@@ -16,8 +16,8 @@ This SCCP proposes to update the perps v3 parameters on the ETH and BTC Markets,
 
 | **Market** | **Current** | **Proposed** | **Cex Slippage** | **Snx Slippage** |
 |:----------:|:-----------:|:------------:|:----------------:|:----------------:|
-|     ETH    |  350,000 |  150,000  |       2.25       |         6        |
-|     BTC    |  35,000  |   5,000   |        0.8       |         5        |
+|     ETH    |   350,000   |    300,000   |       2.25       |         3        |
+|     BTC    |    35,000   |     12,500   |        0.8       |         2        |
 
 *Slippage denoted above are on trades of size 500k$*
 
