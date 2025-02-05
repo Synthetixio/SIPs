@@ -17,7 +17,7 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base:
 | **Market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketValue** | **maxMarketSize** |
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:------------------:|:-----------------:|
 |      S     |             5.00%             |          1.159         |            0.317            |   12,000,000  |      1,000,000     |     3,000,000     |
-|  Velodrome |             5.00%             |          0.437         |            0.317            |   12,000,000  |       300,000      |     6,000,000     |
+|  Velodrome |             5.00%             |          0.437         |            0.317            |   25,000,000  |       300,000      |     6,000,000     |
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
 - TakerFeeRatio: 10 bp 
