@@ -1,12 +1,12 @@
 ---
-sccp: 389
-title: Deploy VVV to Perps V3 Base
+sccp: 391
+title: Deploy BERA on Perps V3
 network: Base
 status: Implemented
 type: Governance
-created: 2025-01-31
 proposal: >-
- https://snapshot.org/#/snxgov.eth/proposal/0x130966f9c2415bd091b3baaaad4acc0f23fbbad09ed196d9a0d7ec180b4158ad
+ https://snapshot.org/#/snxgov.eth/proposal/0xb66691e8000fd7837f85825ded518803851eb0db6bb20ae2a6a89c8d4bb10df9
+created: 2025-02-07
 author: Kaleb
 ---
 
@@ -16,7 +16,8 @@ This SCCP proposes to deploy the below markets on Perps V3 on Base:
 
 | **Market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketValue** | **maxMarketSize** |
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:------------------:|:-----------------:|
-|    VVV     |             5.00%             |          1.278         |            0.408            |   1,000,000  |      1,000,000     |     500,000     |
+|   BERA     |             5.00%             |          1.363         |            0.6              |    2,000,000  |      3,000,000     |       650,000     |
+
 
 Aside from the above parameters , the perps markets will have the following configurations as well:
 - TakerFeeRatio: 10 bp 
