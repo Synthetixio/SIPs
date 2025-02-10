@@ -2,9 +2,11 @@
 sccp: 388
 title: Support sUSDS and stataBasUSDC as Margin on Perps V3
 network: Base
-status: Draft
+status: Vote_Pending
 type: Governance
 created: 2025-01-30
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0x53ca8f5898fb072ba49e519dda3aeebbe67a2dac73c992f9956606887e0345fc
 author: Robin
 ---
 

@@ -2,9 +2,11 @@
 sccp: 389
 title: Deploy VVV to Perps V3 Base
 network: Base
-status: Vote_Pending
+status: Implemented
 type: Governance
 created: 2025-01-31
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0x130966f9c2415bd091b3baaaad4acc0f23fbbad09ed196d9a0d7ec180b4158ad
 author: Kaleb
 ---
 
