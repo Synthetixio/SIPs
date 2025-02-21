@@ -5,7 +5,7 @@ type: Governance
 network: Base
 author: Kaleb (@kaleb-keny)
 proposal: >-
-  https://snapshot.org/#/snxgov.eth/proposal/0xaba20c7f9c31d970cc3c313231368b62f27178c29a41b13f75c8f5c811659e7f
+  https://snapshot.org/#/snxgov.eth/proposal/0x3c4bcef5d5e004d525ee6e4502bf31888576459c1c5cc4b25ec153e6ed3f73eb
 status: Vote_Pending
 created: 2025-02-21
 ---
