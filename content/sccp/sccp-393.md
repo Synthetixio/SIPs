@@ -1,6 +1,6 @@
 ---
 sccp: 393
-title: Update V3 Staleness
+title: Update V3 Staleness Tolerance
 type: Governance
 network: Base
 author: Kaleb (@kaleb-keny)
