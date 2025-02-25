@@ -6,7 +6,7 @@ network: Base
 author: Kaleb (@kaleb-keny)
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x3c4bcef5d5e004d525ee6e4502bf31888576459c1c5cc4b25ec153e6ed3f73eb
-status: Vote_Pending
+status: Implemented
 created: 2025-02-21
 ---
 
