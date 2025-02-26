@@ -5,7 +5,7 @@ network: Base
 status: Vote_Pending
 type: Governance
 proposal: >-
- https://snapshot.org/#/snxgov.eth/proposal/0xb66691e8000fd7837f85825ded518803851eb0db6bb20ae2a6a89c8d4bb10df9
+ https://snapshot.org/#/snxgov.eth/proposal/0xce0c65839f790d71d7c13b211e7b20210c11682839d876d14e3dc99f1623e8e1
 created: 2025-02-26
 author: Kaleb
 ---
