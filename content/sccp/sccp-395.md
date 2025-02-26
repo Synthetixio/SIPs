@@ -16,7 +16,7 @@ Following the implementation of [SIP-406](https://sips.synthetix.io/sips/sip-406
 
 # Abstract
 
-Atomic trading fees have been set to 30% as per [SCCP-357](https://sips.synthetix.io/sccp/sccp-357/). That fee is set at a high enough threshold to prevent users from swapping these tokens to other synths given the lack of an active spot market to rebalance the skew. This SCCP ensures that traders cannot atomically execute swap transaction, regardless of the fee imposed.
+Atomic trading fees have been set to 30% as per [SCCP-357](https://sips.synthetix.io/sccp/sccp-357/) given the lack of function to disable this kind of trading. This SCCP ensures that traders cannot atomically execute swap transaction, regardless of the fee imposed by switching `atomicOrdersEnabled` to a False state on these synths.
 
 # Motivation
 
