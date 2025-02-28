@@ -2,7 +2,7 @@
 sccp: 394
 title: Deploy IP, KAITO and OM on Perps V3
 network: Base
-status: Vote_Pending
+status: Implemented
 type: Governance
 proposal: >-
  https://snapshot.org/#/snxgov.eth/proposal/0xce0c65839f790d71d7c13b211e7b20210c11682839d876d14e3dc99f1623e8e1

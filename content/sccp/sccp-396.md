@@ -3,7 +3,9 @@ sccp: 396
 network: Ethereum & Optimism
 title: Temporarily pause SNX staking liquidations
 author: Fenway
-status: Draft
+status: Implemented
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0xd8e1ae5b85f8a2176643c1eb985248332dd9b2f7b3facebfc6aaaae64e534aa5
 created: 2025-02-27
 type: Governance
 ---
