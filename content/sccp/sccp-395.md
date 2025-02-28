@@ -2,7 +2,7 @@
 sccp: 395
 title: Disable Atomic Spot Trading on Spot Markets
 network: Base
-status: Vote_Pending
+status: Implemented
 type: Governance
 proposal: >-
  https://snapshot.org/#/snxgov.eth/proposal/0xd4f05a9650cce6e3d9c57990e6d5ad937d70524b4ba6d90ee0baa7bc7a31fc13
