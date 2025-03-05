@@ -3,7 +3,7 @@ sccp: 397
 author: Kaleb
 network: Base
 title: Lower OI on KAITO Perp Market
-status: Vote_Pending
+status: Implemented
 created: 2025-03-05
 proposal: >-
  https://snapshot.org/#/snxgov.eth/proposal/0x4de1820162d55fb22577cd2d676f1e0742f1bc47ee80806108263f18ff155ee1
