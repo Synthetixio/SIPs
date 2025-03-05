@@ -1,5 +1,6 @@
 ---
 sccp: 397
+author: Kaleb
 network: Base
 title: Lower OI on KAITO Perp Market
 status: Vote_Pending
