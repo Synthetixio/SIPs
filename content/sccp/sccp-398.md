@@ -6,6 +6,8 @@ network: Base
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2025-03-11
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0x9c9c502da8a6d544ce1b84f85d9ce090492230df90de4122d193f3c394d42c4e
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->

@@ -6,6 +6,8 @@ network: Ethereum & Optimism
 author: Kaleb (@kaleb-keny)
 status: Vote_Pending
 created: 2025-03-13
+proposal: >-
+ https://snapshot.org/#/snxgov.eth/proposal/0xc813b3586e2aa63fe83ae50329fb36895c772b122ba14e6352b436cb00f1a74a
 ---
 
 <!--You can leave these HTML comments in your merged SCCP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new SCCPs. Note that an SCCP number will be assigned by an editor. When opening a pull request to submit your SCCP, please use an abbreviated title in the filename, `sccp-draft_title_abbrev.md`. The title should be 44 characters or less.-->
