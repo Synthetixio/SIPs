@@ -16,7 +16,7 @@ proposal: >-
 
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the SCCP.-->
 
-This SCCP proposes to configure `0x3315af5BF3865D9D81E590C12Df3653b804Ad82e` as an integrator in the perps v3 system. 
+This SCCP proposes to configure `0xa09550489FF57fF4192cA14345ea3ED126B00492` as an integrator in the perps v3 system. 
 
 ## Abstract
 
@@ -28,7 +28,7 @@ The configuration will ensure that 20% of trading fees are sent to integrators a
 
 <!--The motivation is critical for SCCPs that want to update variables within Synthetix. It should clearly explain why the existing variable is not incentive aligned. SCCP submissions without sufficient motivation may be rejected outright.-->
 
-The main motivation is to configure the system to incentivize a new integrator Ezbot to provide more volume to perps v3.
+The main motivation is to configure the system as to incentivize the new integrator, Ezbot, to provide bring volume to perps v3.
 
 ## Copyright
 
