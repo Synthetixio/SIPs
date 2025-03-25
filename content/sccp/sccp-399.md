@@ -4,7 +4,7 @@ title: Update Minimum Liquidity Ratio
 type: Governance
 network: Ethereum & Optimism
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2025-03-13
 proposal: >-
  https://snapshot.org/#/snxgov.eth/proposal/0xc813b3586e2aa63fe83ae50329fb36895c772b122ba14e6352b436cb00f1a74a
