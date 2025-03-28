@@ -4,7 +4,7 @@ title: Add Ezbot Tracking
 type: Governance
 network: Base
 author: Kaleb (@kaleb-keny)
-status: Vote_Pending
+status: Implemented
 created: 2025-03-25
 proposal: >-
  https://snapshot.org/#/snxgov.eth/proposal/0xf2fe466b78820a5bf01888880b1e4a6846a7c360cd76b932642f469b5c3fa7bd

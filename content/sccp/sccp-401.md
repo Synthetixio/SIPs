@@ -3,7 +3,9 @@ sccp: 401
 network: Ethereum & Optimism
 title: Unpause SNX staking liquidations and return mainnet to 160%
 author: Fenway
-status: Draft
+status: Approved
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0x811d38666aebfa4ca51614514ea4a57c34fdd251aee0d28794e9e7100d063b9b
 created: 2025-03-24
 type: Governance
 ---
