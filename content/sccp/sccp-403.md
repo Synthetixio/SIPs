@@ -17,7 +17,7 @@ This sccp proposes to increase the liquidation ratio as per the below schedule:
 
 ## Abstract
 
-The liquidation ratio is the ratio at which accounts on v3 ethereum and optimism are deprecated. The SNX and debt are allocated to treasury when a liquidation is enacted.
+The liquidation ratio is the ratio at which accounts on v3 ethereum and optimism are liquidated. The SNX and debt are allocated to treasury when a liquidation is enacted.
 
 ## Motivation
 
