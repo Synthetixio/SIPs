@@ -21,7 +21,7 @@ The liquidation ratio is the ratio at which accounts on v3 ethereum and optimism
 
 ## Motivation
 
-The motivation is to deprecate solo staking in favor of  [420 POL staking](https://sips.synthetix.io/sips/sip-420). Note that solo stakers having a collateralization ratios well above 160% are able to claim back their snx and debt from Treasury within a 6 months period after the date of their liquidations. However the accounts' collateralization ratio needs to remain above the 160% during the grace period in order to be eligible. If the ratio dips below 160% up to claim date, the accounts' snx is considered to be forfeited.
+The motivation is to deprecate solo staking in favor of  [420 POL staking](https://sips.synthetix.io/sips/sip-420). Note that solo stakers having a collateralization ratios well above 160% are able to claim back their snx and debt from Treasury within a 6 months period after the date of their liquidations. However the accounts' collateralization ratio needs to remain above the 160% during the grace period in order to be eligible. If the ratio dips below 160% up during the grace period, the accounts' snx is considered to be forfeited.
 Users who are liquidated are encouraged to open tickets in [Synthetix Discord](https://discord.gg/HSgeHuVs) in order to claim back that liquidated snx.
 
 ## Copyright
