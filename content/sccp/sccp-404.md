@@ -14,7 +14,7 @@ This sccp proposes update the perps v3 parameters as per the below:
 
 ### Max Market Value
 
-| **ticker** | **Current MMV** | **Proposed MMV** | **cex** | **Current OI$M** |
+| **ticker** | **Current MMV** | **Proposed MMV** | **CEX OI** | **Current SNX OI** |
 |:----------:|:---------------:|:----------------:|:-------:|:----------------:|
 |     mew    |       1.00      |       0.50       |   5.78  |       0.30       |
 |     not    |       1.00      |       0.70       |   7.07  |       0.21       |
@@ -23,6 +23,8 @@ This sccp proposes update the perps v3 parameters as per the below:
 |    goat    |       3.00      |       0.50       |   6.15  |       0.50       |
 |     pol    |       3.00      |       1.50       |  14.24  |       1.37       |
 |     om     |       3.00      |       1.00       |  17.14  |       0.39       |
+
+*All amounts above are in dollar millions.*
 
 ### Skew Scale 
 
@@ -34,6 +36,8 @@ This sccp proposes update the perps v3 parameters as per the below:
 |     arb    |       60,186,800      |       120,373,600       |          138         |           69          |        16        |
 |     sol    |        817,500        |        1,635,000        |          23          |           12          |         2        |
 
+
+*Slippage above in bp, on 500k$ worth of volume*
 
 ### Initial Margin Ratio
 
