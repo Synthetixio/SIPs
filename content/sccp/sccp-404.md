@@ -53,7 +53,7 @@ The parameters being updated are described below;
 
 ## Motivation
 
-The motivation behind the Max Market Value update is related to the price pull back on these markets. These changes do not affect the current oi configured, given that the size parameter (maxMarketSize) plays the role to restrict the OI from a decrease in price. However,  in order to keep the Max Market Value parameter updated in case of future price volatility to the upside restricting the max market value is recommended in this SCCP.
+The motivation behind the Max Market Value update is related to the price pull back on these markets. These changes do not affect the current oi configured, given that the size parameter (maxMarketSize) plays the role to restrict the OI from a decrease in price. However, the change proposes in this sccp updates the max market value parameter as per the current oi offering in the most liquid centralized exchanges.
 
 The skew scale and initial margin ratio parameters aligns the slippage and margin requirement parameters with what is observed on centralized markets.
 
