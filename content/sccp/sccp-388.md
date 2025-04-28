@@ -2,7 +2,7 @@
 sccp: 388
 title: Support sUSDS and stataBasUSDC as Margin on Perps V3
 network: Base
-status: Vote_Pending
+status: Implemented
 type: Governance
 created: 2025-01-30
 proposal: >-
@@ -41,6 +41,7 @@ sUSDS and stataBasUSDC would be added as margin to Perps V3 on Base with the fol
 
 The main motivation is to add the first yield-bearing stablecoin options as margin on Perps v3 Base, so that users can earn yield while trading.
 
+Note: Implemented partially with `stataBasUSDC` done and sUSDS set aside for future iterations of perps.
 
 # Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

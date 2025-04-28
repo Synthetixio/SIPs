@@ -3,7 +3,7 @@ sccp: 404
 network: Base
 title: Update Perps V3 Parameters
 author: Kaleb
-status: Vote_Pending
+status: Implemented
 created: 2025-04-14
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x5472a83f6d88b24391c403b9ffb69d2d1c208964b39a2f1b66907771c51b7f75

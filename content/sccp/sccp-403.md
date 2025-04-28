@@ -3,7 +3,7 @@ sccp: 403
 network: Ethereum & Optimism
 title: Update Liquidation Ratio Schedule
 author: Kaleb
-status: Approved
+status: Implemented
 created: 2025-04-09
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x7b38742f5d455e0bba5a967bc965b7f1041bd983b1d057355d0da59dc2fecd2f

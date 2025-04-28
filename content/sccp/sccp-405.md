@@ -3,7 +3,7 @@ sccp: 405
 network: Base
 title: Deprecate BAL Market
 author: Kaleb
-status: Vote_Pending
+status: Implemented
 created: 2025-04-14
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x6daf67bc31dfe325bd40a4b0bcac88d8339eea322f3015d4932f644788c336ef
