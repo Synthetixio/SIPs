@@ -1,6 +1,6 @@
 ---
 sccp: 407
-title: Deploy XRM On Perps V3
+title: Deploy XMR On Perps V3
 network: Base
 status: Vote_Pending
 type: Governance
