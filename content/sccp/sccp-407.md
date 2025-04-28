@@ -10,7 +10,7 @@ author: Kaleb
 
 # Simple Summary
 
-This SCCP proposes to deploy XRM with the below parameters:
+This SCCP proposes to deploy XMR with the below parameters:
 
 | **market** | **minimumInitialMarginRatio** | **initialMarginRatio** | **maintenanceMarginScalar** | **skewScale** | **maxMarketSize** | **maxMarketValue** |
 |:----------:|:-----------------------------:|:----------------------:|:---------------------------:|:-------------:|:-----------------:|:------------------:|
