@@ -1,7 +1,7 @@
 ---
 sccp: 408
 title: Update low usage perp markets to close-only
-network: Base & Optimism
+network: Optimism & Base
 status: Draft
 type: Governance
 created: 2025-05-13
