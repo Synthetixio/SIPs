@@ -10,16 +10,16 @@ author: Cavalier
 
 # Simple Summary
 
-This SCCP proposes that perpetual futures markets with less than $10,000 in open interest, or zero 24-hour trading volume on Base and Optimism at time of writing are changed to become close-only. 
+This SCCP proposes that perpetual futures markets with less than $20,000 in open interest, or zero 24-hour trading volume on Base and Optimism at time of writing are changed to become close-only. 
 
 
 # Abstract
 
 Markets are moved into close-only mode by setting `maxMarketValue` to 0 for:
 
-Base: AAVE, ADA, AERO, AVAX, AXS, BCH, BERA, BLUR, BOME, CAT, CHILLGUY, COMP, CRV, DEGEN, DOGE, DOT, DYDX, EIGEN, ENA, ETHBTC, ETHFI, FARMS, FIL, FLOW, FXS, GALA, GMX, GOAT, GRT, ICP, IMX, IO, JTO, KAITO, KMNO, LDO, MEW, MEME, MOODENG, MORPHO, NEAR, NOT, OM, OP, PENDLE, PNut, PYTH, RENDER, SAFE, SATS, SHIB, SLERF, SNX, SOLETH, STRK, SUI, SUSHI, TAO, TIA, TON, TRUMP, TRX, UNI, VELO, VIRTUAL, W, WIF, WLD, XMR, ZRO.
+OP: 
 
-Optimism: AAVE, ADA, ALGO, APT, ARB, AVAX, AXS, BCH, BLUR, BNB, BONK, CRV, DYDX, EOS, ETHBTC, FIL, FLOW, INJ, LDO, LINK, MKR, NEAR, ORDI, PENDLE, PEPE, PYTH, RUNE, SEI, SHIB, SNX, STRK, SUSHI, TIA, TRX, USDT, WLD, XLM, XMR, XRP.
+Base: ADA, ALGO, APT, ARB, ARKM, ATOM, AVAX, AXL, AXS, BCH, BERA, BLUR, BNB, BOME, BONK, CAT, CHILLGUY, COMP, CRV, DEGEN, DOT, DYDX, EIGEN, ENA, EOS, ETC, ETHFI, FIL, FLOW, FTM, FXS, GALA, GMX, GOAT, GRT, ICP, IMX, INJ, IO, IP, JTO, JUP, KAITO, KMNO, LDO, LTC, MELANIA, MEME, MEW, MKR, MOODENG, MORPHO, NEAR, NOT, OM, ORDI, PENDLE, PEOPLE, PNUT, POL, POPCAT, PYTH, RENDER, RUNE, S, SAFE, SATS, SEI, SHIB, SLERF, SNX, SOLETH, STRK, STX, SUSHI, TAI, TIA, TON, TRUMP, TRX, UNI, VELO, VIRTUAL, VVV, W, WLD, XLM, YFI, ZRO.
 
 # Motivation
 
