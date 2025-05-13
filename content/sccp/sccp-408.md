@@ -10,7 +10,7 @@ author: Cavalier
 
 # Simple Summary
 
-This SCCP proposes that perpetual futures markets with less than $10,000 in open interest, or zero 24-hour trading volume on Base and Optimism are changed to become close-only. 
+This SCCP proposes that perpetual futures markets with less than $10,000 in open interest, or zero 24-hour trading volume on Base and Optimism at time of writing are changed to become close-only. 
 
 
 # Abstract
