@@ -2,8 +2,10 @@
 sccp: 407
 title: Deploy XMR On Perps V3
 network: Base
-status: Vote_Pending
+status: Implemented
 type: Governance
+proposal: >-
+  https://snapshot.org/#/snxgov.eth/proposal/0xd60b265ab12b5c359a2574b37a25e5649bd16bd13a59342d1a3aecfa7a56f3a8
 created: 2025-04-28
 author: Kaleb
 ---
