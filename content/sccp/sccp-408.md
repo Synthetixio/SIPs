@@ -2,7 +2,7 @@
 sccp: 408
 title: Deprecate EOS Perp Market
 network: Base
-status: Vote_Pending
+status: Implemented
 type: Governance
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x00c394e18bbc45fafd8434791723f9e0900b646c12de0a2a07603427ef77dd0c
