@@ -16,7 +16,7 @@ This SCCP proposes to increase the jubilee ratio (sUSD deposited in the 420 pool
 
 # Abstract
 
-The parameters from (SIP-421)[https://sips.synthetix.io/sips/sip-421/] being updated are described below;
+The parameters from [SIP-421](https://sips.synthetix.io/sips/sip-421/) being updated are described below;
 - Jubilee minimum ratio (`auxTokenInfo`) is being increased from 10% to 20%
 
 # Motivation
