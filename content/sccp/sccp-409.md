@@ -2,7 +2,7 @@
 sccp: 409
 title: Increase Jubilee ratio to 20% 
 network: Ethereum
-status: Vote_Pending
+status: Implemented
 type: Governance
 proposal: >-
   https://snapshot.org/#/snxgov.eth/proposal/0x2d5bccd8ef813230c313fa0d7a90179cdfa713ee63d20de6b73503f12c285458
