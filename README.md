@@ -36,9 +36,12 @@ SIPs must pass some validation tests.
 It is possible to run the SIP validator locally:
 
 ```
-npm install (if not done already)
-npm run test
+corepack enable        # one-time: activates the pinned pnpm version
+pnpm install           # if not done already
+pnpm test
 ```
+
+This repo uses **pnpm** and requires **Node.js 24+**. npm and Yarn are intentionally blocked. As supply-chain hardening, dependencies are gated to a 7-day minimum release age and dependency install scripts are disabled (see `pnpm-workspace.yaml`).
 
 # JSON API
 

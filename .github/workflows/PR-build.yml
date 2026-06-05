@@ -9,13 +9,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
-          node-version: '20'
-      - name: Get latest npm version
-        run: npm install -g npm@latest --prefix .
+          node-version: '24'
+      - name: Enable pnpm via corepack
+        run: corepack enable
       - name: Install dependencies
-        run: npm install --prefer-offline --no-audit
+        run: pnpm install --frozen-lockfile
       - name: Validate SIP, STP, SR & SCCP frontmatters
-        run: npm test
+        run: pnpm test

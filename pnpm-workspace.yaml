@@ -1,0 +1,17 @@
+# Supply-chain hardening: only install package versions at least 7 days old
+# (10080 minutes) and refuse to run dependency build scripts unless explicitly
+# allowed below. Gatsby 3 relies on a flat node_modules, so use the hoisted linker.
+minimumReleaseAge: 10080
+strictDepBuilds: true
+nodeLinker: hoisted
+registries:
+  default: https://registry.npmjs.org/
+# These dependencies ship install/postinstall scripts; none are required to build
+# the site (telemetry notices + an optional native file-watcher), so all are denied.
+allowBuilds:
+  core-js: false
+  core-js-pure: false
+  fsevents: false
+  gatsby: false
+  gatsby-cli: false
+  gatsby-telemetry: false
