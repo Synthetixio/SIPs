@@ -36,9 +36,16 @@ SIPs must pass some validation tests.
 It is possible to run the SIP validator locally:
 
 ```
-npm install (if not done already)
-npm run test
+corepack enable        # one-time: activates the pinned pnpm version
+pnpm install           # if not done already
+pnpm test
 ```
+
+This repo uses **pnpm** and requires **Node.js 24+**. npm and Yarn are intentionally blocked. As supply-chain hardening, dependencies are gated to a 7-day minimum release age and dependency install scripts are disabled (see `pnpm-workspace.yaml`).
+
+## Deploying on Vercel
+
+`vercel.json` pins the build to pnpm via Corepack (`ENABLE_EXPERIMENTAL_COREPACK=1`) so Vercel honours the `packageManager` version in `package.json` (pnpm 11) instead of its built-in pnpm 9. If a build still fails with `Detected pnpm "9.x" is not compatible with engines.pnpm`, add `ENABLE_EXPERIMENTAL_COREPACK=1` as a Project Environment Variable (Settings → Environment Variables) — Corepack detection does not always read the value from `vercel.json`. Also ensure the project's Node.js Version is set to 24.x.
 
 # JSON API
 
